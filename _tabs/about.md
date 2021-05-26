@@ -5,4 +5,39 @@ order: 4
 ---
 
 
-> **Note**: Add Markdown syntax content to file `_tabs/about.md` and it will show up on this page.
+# Hi~ 我是欧阳荣
+
+
+# 教育
+
+- 食品科学与工程 & 会计学 @江西农大 2009 ~ 2013
+- 高中 @安远一中 2005 ~ 2009
+- 初中 @新龙初中
+- 小学 @新龙中心小学
+
+
+# 旅行
+
+
+
+# 书籍
+
+
+
+# 影视
+
+
+
+# 旅行
+
+
+
+
+# 社交
+
+
+微信公众号：「欧生畅谈」（ID：oushengchangtan）
+
+
+# 活动
+
