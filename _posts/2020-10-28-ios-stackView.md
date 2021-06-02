@@ -12,7 +12,7 @@ tags: [UIStackView, UITableView]
 
 # 实现思路
 
-这个设置页面之前就是直接在UIViewController的XIB上布局的，一个设置选项就是一个UIView。现在新需求来了，多增加了几个设置选项，如果还这样直接在VC上加View的话，屏幕较小的手机就有可能显示不全。因此，我在VC上增加了一个UIView，然后，依此添加UIScrollView和UIStackView在其上，最后把这些充当Cell的UIView都添加到UIStackView上去。
+这个设置页面之前就是直接在UIViewController的XIB上布局的，一个设置选项就是一个UIView。现在新需求来了，多增加了几个设置选项，如果还这样直接在VC上加View的话，屏幕较小的手机就有可能显示不全。因此，我在VC上增加了一个UIView，然后，依次添加UIScrollView和UIStackView在其上，最后把这些充当Cell的UIView都添加到UIStackView上去。
 
 > 备注：这个UIScrollView布局出现了好些问题，报错提示说什么内容视图布局不清晰，后来去掉了内容布局，再加了一个UIView作为UIScrollView的父视图，才没报错。
 >
