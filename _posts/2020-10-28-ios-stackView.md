@@ -1,5 +1,5 @@
 ---
-title: Jekyll + Github Pages 搭建个人博客
+title: 设置页面用UIStackView布局多个UIView达到UITableView的效果
 author: Ouyang Rong
 date: 2020-10-28 16:14:00 +0800
 categories: [iOS, UI]
