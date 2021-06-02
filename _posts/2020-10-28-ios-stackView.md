@@ -1,7 +1,7 @@
 ---
 title: Jekyll + Github Pages 搭建个人博客
 author: Ouyang Rong
-date: 2021-05-26 16:14:00 +0800
+date: 2020-10-28 16:14:00 +0800
 categories: [iOS, UI]
 tags: [UIStackView, UITableView]
 ---
