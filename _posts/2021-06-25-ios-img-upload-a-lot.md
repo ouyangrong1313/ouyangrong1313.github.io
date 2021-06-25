@@ -277,8 +277,3 @@ dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAU
 ![作业图片3](https://tva1.sinaimg.cn/large/008i3skNgy1grunyk1yo5j30u01a27ar.jpg)
 
 ![作业图片4](https://tva1.sinaimg.cn/large/008i3skNgy1grunz8u60wj30xc02cjrd.jpg)
-
-
-# 参考文章
-
-[iOS 处理上传超过100张图片内存奔溃问题](https://www.jianshu.com/p/3bdc63797287?utm_campaign=maleskine&utm_content=note&utm_medium=seo_notes&utm_source=recommendation)
