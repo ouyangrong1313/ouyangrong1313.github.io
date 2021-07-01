@@ -505,7 +505,7 @@ It seems that Christmas time is here once again, and it is time again to bring i
 
 下午，去东区送一位同学，她今天要走了，听说去上海亲戚那。
 
-转了转，正要去财大转转，发现快两点半了，赶不上家教了，咋办？4
+转了转，正要去财大转转，发现快两点半了，赶不上家教了，咋办？
 
 看来又是两难，只好食言了，打电话给王，让她解决吧！
 
