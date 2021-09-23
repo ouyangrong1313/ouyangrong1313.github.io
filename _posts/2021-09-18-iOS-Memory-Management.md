@@ -1015,7 +1015,7 @@ __autoreleasing：表明传引用的参数(id *)在返回时是autorelease的，
 
 ARC下同样会有Retain Cycle的问题，解决方法见下面。
 
-## ARC 下的内存管理问题
+## ARC下的内存管理问题
 
 ### 循环引用（Reference Cycle）
 
@@ -1188,7 +1188,7 @@ Xcode 的 Instruments 工具集可以很方便的检测循环引用。为了测�
 
 ![内存管理-检测循环引用3](https://raw.githubusercontent.com/ouyangrong1313/MarkdownPhotos/master/img/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86-%E6%A3%80%E6%B5%8B%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A83.png)
 
-#### Core Foundation 对象的内存管理
+### Core Foundation 对象的内存管理
 
 下面我们就来简单介绍一下对底层 Core Foundation 对象的内存管理。底层的 Core Foundation 对象，在创建时大多以 XxxCreateWithXxx 这样的方式创建，例如：
 
@@ -1223,7 +1223,7 @@ CFRelease(fontRef);
 - `__bridge_transfer`：类型转换后，将该对象的引用计数交给 ARC 管理，Core Foundation 对象在不用时，不再需要调用 CFRelease 方法。
 我们根据具体的业务逻辑，合理使用上面的 3 种转换关键字，就可以解决 Core Foundation 对象与 Objective-C 对象相对转换的问题了。
 
-#### 关键字总结
+### 关键字总结
 
 上面关于关键字的说明有点零散，总结一下：
 
