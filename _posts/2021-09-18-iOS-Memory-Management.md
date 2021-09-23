@@ -16,7 +16,6 @@ tags: [ARC, MRC]
 
 ![内存管理](https://raw.githubusercontent.com/ouyangrong1313/MarkdownPhotos/master/img/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86.png)
 
-
 内存管理不是iOS特有，几乎所有程序员都会遇到内存管理的问题。内存分栈区和堆区，栈区靠操作系统申请释放无需程序员关心，需要关心的是堆区内存的申请和释放。
 
 原理说起来很容易就是申请和释放要配对出现，常见有三种释放内存的方式：
@@ -35,7 +34,6 @@ iOS一直不支持垃圾回收（OS X曾短暂支持过现已废弃），只支�
 栈里面存放的是值类型，堆里面存放的是对象类型。对象的引用计数是在堆内存中操作的。
 
 ## 堆是什么
-
 
 > 引自维基百科堆（英语：Heap）是计算机科学中一类特殊的数据结构的统称。堆通常是一个可以被看做一棵树的数组对象。在队列中，调度程序反复提取队列中第一个作业并运行，因为实际情况中某些时间较短的任务将等待很长时间才能结束，或者某些不短小，但具有重要性的作业，同样应当具有优先权。堆即为解决此类问题设计的一种数据结构。
 
@@ -58,7 +56,7 @@ iOS一直不支持垃圾回收（OS X曾短暂支持过现已废弃），只支�
 
 举个例子，一把54式手枪的子弹夹，你往里面装子弹，最先射击出来的子弹肯定是最后装进去的那一个。 这就是栈的结构，后进先出。
 
-栈中的每个元素称为一个frame。而最上层元素称为top frame。栈只支持三个操作， pop, top, push。
+栈中的每个元素称为一个frame。而最上层元素称为top frame。栈只支持三个操作：pop、top 和 push。
 
 - pop取出栈中最上层元素(8)，栈的最上层元素变为早先进入的元素(9)。
 - top查看栈的最上层元素(8)。
@@ -72,13 +70,13 @@ iOS一直不支持垃圾回收（OS X曾短暂支持过现已废弃），只支�
 
 **堆栈空间分配**
 
-> 栈（操作系统）：由操作系统自动分配释放 ，存放函数的参数值，局部变量的值等。其操作方式类似于数据结构中的栈。
-> 堆（操作系统）： 一般由程序员分配释放， 若程序员不释放，程序结束时可能由OS回收，分配方式倒是类似于链表。
+> 栈（操作系统）：由操作系统自动分配释放，存放函数的参数值，局部变量的值等。其操作方式类似于数据结构中的栈。
+> 堆（操作系统）： 一般由程序员分配释放，若程序员不释放，程序结束时可能由 OS 回收，分配方式倒是类似于链表。
 
 **堆栈缓存方式**
 
 > 栈使用的是一级缓存， 他们通常都是被调用时处于存储空间中，调用完毕立即释放。
-> 堆则是存放在二级缓存中，生命周期由虚拟机的垃圾回收算法来决定（并不是一旦成为孤儿对象就能被回收）。所以调用这些对象的速度要相对来得低一些。
+> 堆则是存放在二级缓存中，生命周期由虚拟机的垃圾回收算法来决定（并不是一旦成为孤儿对象就能被回收），所以，调用这些对象的速度要相对来得低一些。
 
 一般情况下程序存放在Rom（只读内存，比如硬盘）或Flash中，运行时需要拷到RAM（随机存储器RAM）中执行，RAM会分别存储不同的信息，如下图所示：
 
@@ -89,6 +87,7 @@ iOS一直不支持垃圾回收（OS X曾短暂支持过现已废弃），只支�
 栈中分配局部变量空间，堆区是向上增长的用于分配程序员申请的内存空间。另外还有静态区是分配静态变量，全局变量空间的；只读区是分配常量和程序代码空间的；以及其他一些分区。
 
 也就是说，在iOS中，我们的值类型是放在栈空间的，内存分配和回收不需要我们关系，系统会帮我处理。在堆空间的对象类型就要有程序员自己分配，自己释放了。
+
 
 # 引用计数
 
@@ -120,7 +119,6 @@ iOS一直不支持垃圾回收（OS X曾短暂支持过现已废弃），只支�
 
 然后，我们在中输入如下代码，可以通过 Log 看到相应的引用计数的变化。
 
-
 ```
 - (BOOL)application:(UIApplication *)application
        didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -143,7 +141,6 @@ iOS一直不支持垃圾回收（OS X曾短暂支持过现已废弃），只支�
 Reference Count = 1
 Reference Count = 2
 Reference Count = 1
-
 ```
 
 对 Linux 文件系统比较了解的同学可能发现，引用计数的这种管理方式类似于文件系统里面的硬链接。在 Linux 文件系统中，我们用 ln 命令可以创建一个硬链接（相当于我们这里的 retain)，当删除一个文件时（相当于我们这里的 release)，系统调用会检查文件的 link count 值，如果大于 1，则不会回收文件所占用的磁盘区域。直到最后一次删除前，系统发现 link count 值为 1，则系统才会执行直正的删除操作，把文件所占用的磁盘区域标记成未用。
@@ -169,9 +166,7 @@ Reference Count = 1
 
 这些有关Objective-C内存管理的方法，实际上不包括在该语言中，而是包含在Cocoa框架中用于macOS、iOS应用开发。Cocoa框架中Foundation框架类库的NSObject类担负内存管理的职责。Objective-C内存管理中的alloc/retain/release/dealloc方法分别指代NSObject类的alloc类方法、retain实例方法、release实例方法和dealloc实例方法。
 
-![](https://raw.githubusercontent.com/ouyangrong1313/MarkdownPhotos/master/img/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86-Cocoa%E6%A1%86%E6%9E%B6.jpg)
-
-Cocoa框架、Foundation框架和NSObject类的关系
+![Cocoa框架、Foundation框架和NSObject类的关系](https://raw.githubusercontent.com/ouyangrong1313/MarkdownPhotos/master/img/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86-Cocoa%E6%A1%86%E6%9E%B6.jpg)
 
 ## 我们为什么需要引用计数?
 
@@ -191,8 +186,112 @@ Cocoa框架、Foundation框架和NSObject类的关系
 
 ![引用计数-传递对象3](https://raw.githubusercontent.com/ouyangrong1313/MarkdownPhotos/master/img/%E5%BC%95%E7%94%A8%E8%AE%A1%E6%95%B0-%E4%BC%A0%E9%80%92%E5%AF%B9%E8%B1%A13.jpg)
 
-
 所以引用计数很好的解决了这个问题，在参数 M 的传递过程中，哪些对象需要长时间使用这个对象，就把它的引用计数加 1，使用完了之后再把引用计数减 1。所有对象都遵守这个规则的话，对象的生命期管理就可以完全交给引用计数了。我们也可以很方便地享受到共享对象带来的好处。
+
+## 浅拷贝和深拷贝
+
+既然讲到copy和mutableCopy，那就要谈一下深拷贝和浅拷贝的概念和实践。
+
+### 什么是浅拷贝、深拷贝？
+
+> 简单理解就是，浅拷贝是拷贝了指向对象的指针， 深拷贝不但拷贝了对象的指针，还在系统中再分配一块内存，存放拷贝对象的内容。
+
+- 浅拷贝：浅拷贝就是对内存地址的复制，让目标对象指针和源对象指向同一片内存空间，当内存销毁的时候，指向这片内存的几个指针需要重新定义才可以使用，要不然会成为野指针。浅拷贝就是拷贝指向原来对象的指针，使原对象的引用计数+1，可以理解为创建了一个指向原对象的新指针而已，并没有创建一个全新的对象。
+- 深拷贝：深拷贝是指拷贝对象的具体内容，而内存地址是自主分配的，拷贝结束之后，两个对象虽然存的值是相同的，但是内存地址不一样，两个对象也互不影响，互不干涉。深拷贝就是拷贝出和原来仅仅是值一样，但是内存地址完全不一样的新的对象，创建后和原对象没有任何关系。
+
+**浅拷贝就是指针拷贝，深拷贝就是内容拷贝。本质区别在于：**
+- 是否开启新的内存地址
+- 是否影响内存地址的引用计数
+
+#### 如何判断浅拷贝、深拷贝？
+
+> 深浅拷贝取决于拷贝后的对象的是不是和被拷贝对象的地址相同，如果不同，则产生了新的对象，则执行的是深拷贝，如果相同，则只是指针拷贝，相当于retain一次原对象, 执行的是浅拷贝。
+>
+
+![](https://raw.githubusercontent.com/ouyangrong1313/MarkdownPhotos/master/img/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86-%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D.png)
+
+**深拷贝和浅拷贝的判断要注意两点：**
+
+- 源对象类型是否是可变的
+- 执行的拷贝是copy还是mutableCopy
+
+### 浅拷贝深拷贝的实现
+
+- NSArray调用copy方法，浅拷贝
+
+```
+id obj = [NSArray array];
+id obj1 = [obj copy];
+
+NSLog(@"obj是%p", obj);
+NSLog(@"obj1是%p", obj1);
+```
+
+```
+打印结果：
+2018-03-29 20:48:56.087197+0800 ocram[5261:2021415] obj是0x1c0003920
+2018-03-29 20:48:56.087250+0800 ocram[5261:2021415] obj1是0x1c0003920
+```
+
+指针一样obj是浅拷贝。
+
+- NSArray调用mutableCopy方法，深拷贝
+
+```
+id obj = [NSArray array];
+id obj1 = [obj mutableCopy];
+
+NSLog(@"obj是%p", obj);
+NSLog(@"obj1是%p", obj1);
+```
+
+```
+打印结果：
+2018-03-29 20:42:16.508134+0800 ocram[5244:2018710] obj是0x1c00027d0
+2018-03-29 20:42:16.508181+0800 ocram[5244:2018710] obj1是0x1c0453bf0
+```
+
+指针不一样obj是深拷贝。
+
+- NSMutableArray调用copy方法，深拷贝
+
+```
+id obj = [NSMutableArray array];
+id obj1 = [obj copy];
+
+NSLog(@"obj是%p", obj);
+NSLog(@"obj1是%p", obj1);
+```
+
+```
+打印结果：
+2018-03-29 20:50:36.936054+0800 ocram[5265:2022249] obj是0x1c0443f90
+2018-03-29 20:50:36.936097+0800 ocram[5265:2022249] obj1是0x1c0018580
+```
+
+指针不一样obj是深拷贝。
+
+- 深拷贝的数组里面的元素依然是浅拷贝
+
+```
+id obj = [NSMutableArray arrayWithObject:@"test"];
+id obj1 = [obj mutableCopy];
+
+NSLog(@"obj是%p", obj);
+NSLog(@"obj内容是%p", obj[0]);
+NSLog(@"obj1是%p", obj1);
+NSLog(@"obj1内容是%p", obj1[0]);
+```
+
+```
+打印结果：
+2018-03-29 20:55:18.196597+0800 ocram[5279:2025743] obj是0x1c0255120
+2018-03-29 20:55:18.196647+0800 ocram[5279:2025743] obj内容是0x1c02551e0
+2018-03-29 20:55:18.196665+0800 ocram[5279:2025743] obj1是0x1c0255210
+2018-03-29 20:55:18.196682+0800 ocram[5279:2025743] obj1内容是0x1c02551e0
+```
+
+可以看到obj和obj1虽然指针是不一样的(深拷贝)，但是他们的元素的指针是一样的，所以数组里的元素依然是浅拷贝。
 
 
 # MRC
@@ -215,11 +314,9 @@ MRC（Manual Retain Count）手动引用计数，顾名思义就是程序员需�
 
 ```
 @property (nonatomic, assign) NSObject *parent;
-
 ```
 
 对于block：用__block修饰符来修饰使用到的变量
-
 
 顾名思义，MRC就是调用Objective-C的方法(alloc/new/copy/mutableCopy/retain/release等)实现引用计数的增加和减少。
 
@@ -296,14 +393,12 @@ copy方法利用基于NSCopying方法约定，由各类实现的copyWithZone:方
 }
 
 @end
-
 ```
 
 ```
 打印结果：
 2018-03-28 23:01:32.321661+0800 ocram[4466:1696414] p对象<Person: 0x1c0003320>
 2018-03-28 23:01:32.321778+0800 ocram[4466:1696414] obj对象<Person: 0x1c0003370>
-
 ```
 
 从打印可以看到obj是p对象的副本。两者的引用计数都是1。
@@ -357,110 +452,15 @@ copy方法利用基于NSCopying方法约定，由各类实现的copyWithZone:方
 @end
 ```
 
-> 打印结果：
-> 2018-03-28 23:08:17.382538+0800 ocram[4476:1699096] p对象<Person: 0x1c4003c20>
-> 2018-03-28 23:08:17.382592+0800 ocram[4476:1699096] obj对象<Person: 0x1c4003d70>
+```
+打印结果：
+2018-03-28 23:08:17.382538+0800 ocram[4476:1699096] p对象<Person: 0x1c4003c20>
+2018-03-28 23:08:17.382592+0800 ocram[4476:1699096] obj对象<Person: 0x1c4003d70>
+```
 
 从打印可以看到obj是p对象的副本。两者的引用计数都是1。
 
 copy和mutableCopy的区别在于，copy方法生成不可变更的对象，而mutableCopy方法生成可变更的对象。
-
-## 浅拷贝和深拷贝
-
-既然讲到copy和mutableCopy，那就要谈一下深拷贝和浅拷贝的概念和实践。
-
-### 什么是浅拷贝、深拷贝？
-
-> 简单理解就是，浅拷贝是拷贝了指向对象的指针， 深拷贝不但拷贝了对象的指针，还在系统中再分配一块内存，存放拷贝对象的内容。
-
-- 浅拷贝：浅拷贝就是对内存地址的复制，让目标对象指针和源对象指向同一片内存空间，当内存销毁的时候，指向这片内存的几个指针需要重新定义才可以使用，要不然会成为野指针。浅拷贝就是拷贝指向原来对象的指针，使原对象的引用计数+1，可以理解为创建了一个指向原对象的新指针而已，并没有创建一个全新的对象。
-- 深拷贝：深拷贝是指拷贝对象的具体内容，而内存地址是自主分配的，拷贝结束之后，两个对象虽然存的值是相同的，但是内存地址不一样，两个对象也互不影响，互不干涉。深拷贝就是拷贝出和原来仅仅是值一样，但是内存地址完全不一样的新的对象，创建后和原对象没有任何关系。
-
-**浅拷贝就是指针拷贝，深拷贝就是内容拷贝。本质区别在于：**
-- 是否开启新的内存地址
-- 是否影响内存地址的引用计数
-
-#### 如何判断浅拷贝、深拷贝？
-
-> 深浅拷贝取决于拷贝后的对象的是不是和被拷贝对象的地址相同，如果不同，则产生了新的对象，则执行的是深拷贝，如果相同，则只是指针拷贝，相当于retain一次原对象, 执行的是浅拷贝。
->
-
-![](https://raw.githubusercontent.com/ouyangrong1313/MarkdownPhotos/master/img/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86-%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D.png)
-
-**深拷贝和浅拷贝的判断要注意两点：**
-
-- 源对象类型是否是可变的
-- 执行的拷贝是copy还是mutableCopy
-
-### 浅拷贝深拷贝的实现
-
-- NSArray调用copy方法，浅拷贝
-
-```
-id obj = [NSArray array];
-id obj1 = [obj copy];
-
-NSLog(@"obj是%p", obj);
-NSLog(@"obj1是%p", obj1);
-```
-
-> 打印结果：
-> 2018-03-29 20:48:56.087197+0800 ocram[5261:2021415] obj是0x1c0003920
-> 2018-03-29 20:48:56.087250+0800 ocram[5261:2021415] obj1是0x1c0003920
-
-指针一样obj是浅拷贝。
-
-- NSArray调用mutableCopy方法，深拷贝
-
-```
-id obj = [NSArray array];
-id obj1 = [obj mutableCopy];
-
-NSLog(@"obj是%p", obj);
-NSLog(@"obj1是%p", obj1);
-```
-
-> 打印结果：
-> 2018-03-29 20:42:16.508134+0800 ocram[5244:2018710] obj是0x1c00027d0
-> 2018-03-29 20:42:16.508181+0800 ocram[5244:2018710] obj1是0x1c0453bf0
-
-指针不一样obj是深拷贝。
-
-- NSMutableArray调用copy方法，深拷贝
-
-```
-id obj = [NSMutableArray array];
-id obj1 = [obj copy];
-
-NSLog(@"obj是%p", obj);
-NSLog(@"obj1是%p", obj1);
-```
-
-> 打印结果：
-> 2018-03-29 20:50:36.936054+0800 ocram[5265:2022249] obj是0x1c0443f90
-> 2018-03-29 20:50:36.936097+0800 ocram[5265:2022249] obj1是0x1c0018580
-
-指针不一样obj是深拷贝。
-
-- 深拷贝的数组里面的元素依然是浅拷贝
-
-```
-id obj = [NSMutableArray arrayWithObject:@"test"];
-id obj1 = [obj mutableCopy];
-
-NSLog(@"obj是%p", obj);
-NSLog(@"obj内容是%p", obj[0]);
-NSLog(@"obj1是%p", obj1);
-NSLog(@"obj1内容是%p", obj1[0]);
-```
-
-> 打印结果：
-> 2018-03-29 20:55:18.196597+0800 ocram[5279:2025743] obj是0x1c0255120
-> 2018-03-29 20:55:18.196647+0800 ocram[5279:2025743] obj内容是0x1c02551e0
-> 2018-03-29 20:55:18.196665+0800 ocram[5279:2025743] obj1是0x1c0255210
-> 2018-03-29 20:55:18.196682+0800 ocram[5279:2025743] obj1内容是0x1c02551e0
-
-可以看到obj和obj1虽然指针是不一样的(深拷贝)，但是他们的元素的指针是一样的，所以数组里的元素依然是浅拷贝。
 
 ### 其他实现
 
@@ -513,7 +513,10 @@ NSLog(@"obj1内容是%p", obj1[0]);
 
 @end
 ```
-> 打印结果： 2018-03-28 23:33:37.044327+0800 ocram[4500:1706677] p对象<Person: 0x1c0013770>
+
+```
+打印结果： 2018-03-28 23:33:37.044327+0800 ocram[4500:1706677] p对象<Person: 0x1c0013770>
+```
 
 allocObject名称符合上面的命名规则，因此它与用alloc方法生成并持有对象的情况完全相同，所以使用allocObject方法也意味着“自己生成并持有对象”。
 
@@ -621,7 +624,7 @@ string = [NSString stringWithUTF8String:cstring];  // 方式二：工厂方法�
 
 其实程序员很少自己去手动创建AutoreleasePool，因为每个线程（包括主线程）都会拥有一个专属的NSRunLoop对象，并且会在有需要的时候自动创建。NSRunLoop对象的每个eventloop开始前，系统会自动创建一个AutoreleasePool，并在eventloop结束时drain。每一个线程都会维护自己的AutoreleasePool堆栈，即AutoreleasePool是与线程紧密相关的，每一个AutoreleasePool只对应一个线程。
 
-善用AutoRelease可以解决一些内存峰值问题，例如下面循环结束前是不会自动触发autorelease的，导致循环次数很多时，内存占用率高：
+善用AutoRelease可以解决一些内存峰值问题，例如下面循环结束前是不会自动触发autorelease的，导致循环次数很多时，内存占用率高。
 
 ```
 // 会有内存峰值问题
@@ -679,22 +682,16 @@ id obj = [[NSObject alloc] init];
 
 调用NSObject类的autorelease实例方法。
 
-
 ```
 [obj autorelease];
-
-
 ```
 
 调用autorelease方法的内部实现
-
 
 ```
 - (id) autorelease {
     [NSAutoreleasePool addObject: self];
 }
-
-
 ```
 
 autorelease实例方法的本质就是调用NSAutoreleasePool对象的addObject类方法。
@@ -703,13 +700,9 @@ autorelease实例方法的本质就是调用NSAutoreleasePool对象的addObject�
 
 autorelease是NSObject的实例方法，NSAutoreleasePool也是继承NSObject的类。那能不能调用autorelease呢？
 
-
 ```
 NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-
 [pool release];
-
-
 ```
 
 运行结果发生崩溃。通常在使用Objective-C，也就是Foundation框架时，无论调用哪一个对象的autorelease实例方法，实现上是调用的都是NSObject类的autorelease实例方法。但是对于NSAutoreleasePool类，autorelease实例方法已被该类重载，因此运行时就会出错。
@@ -719,14 +712,11 @@ NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 
 上面讲了“引用计数内存管理的思考方式”的本质部分在ARC中并没有改变。就像“自动引用计数”这个名称表示的那样，ARC只是自动地帮助我们处理“引用计数”的相关部分。
 
-
-编译器在编译时会帮我们自动插入，包括 retain、release、copy、autorelease、autoreleasepool
-
-
+编译器在编译时会帮我们自动插入，包括 retain、release、copy、autorelease、autoreleasepool。
 
 ## ARC有效的代码实现
 
-### 所有权修饰符
+**所有权修饰符**
 
 Objective-C编程中为了处理对象，可将变量类型定义为id类型或各种对象类型。 ARC中，id类型和对象类其类型必须附加所有权修饰符。
 
@@ -746,7 +736,6 @@ id __strong obj = [[NSObject alloc] init];
 ```
 
 __strong修饰符的变量obj在超出其变量作用域时，即在该变量被废弃时，会释放其被赋予的对象。 __strong修饰符表示对对象的“强引用”。持有强引用的变量在超出其作用域时被废弃，随着强引用的失效，引用的对象会随之释放。
-
 
 当然，__strong修饰符也可以用在Objective-C类成员变量和方法参数上。
 
@@ -812,18 +801,17 @@ __weak修饰符可以避免循环引用，与__strong修饰符相反，提供弱
 id __weak obj1 = nil;
 {
     id __strong obj0 = [[NSObject alloc] init];
-
     obj1 = obj0;
-
     NSLog(@"%@", obj1);
 }
-
 NSLog(@"%@", obj1);
 ```
 
-> 打印结果：
-> 2018-03-30 21:47:50.603814+0800 ocram[51624:22048320] <NSObject: 0x60400001ac10>
-> 2018-03-30 21:47:50.604038+0800 ocram[51624:22048320] (null)
+```
+打印结果：
+2018-03-30 21:47:50.603814+0800 ocram[51624:22048320] <NSObject: 0x60400001ac10>
+2018-03-30 21:47:50.604038+0800 ocram[51624:22048320] (null)
+```
 
 可以看到因为obj0超出作用域就被释放了，弱引用也被至为nil状态。
 
@@ -835,12 +823,9 @@ __unsafe_unretained修饰符是不安全的修饰符，尽管ARC式的内存管�
 id __unsafe_unretained obj1 = nil;
 {
     id __strong obj0 = [[NSObject alloc] init];
-
     obj1 = obj0;
-
     NSLog(@"%@", obj1);
 }
-
 NSLog(@"%@", obj1);
 ```
 
@@ -864,7 +849,6 @@ NSLog(@"%@", obj1);
 
 ```
 id __weak obj1 = obj0;
-
 id __autoreleasing tmp = obj1;
 ```
 
@@ -937,11 +921,8 @@ __unsafe_unretained修饰符的变量不属于编译器的内存管理对象。�
 
 ```
 id obj = [[NSObject alloc] init];
-
 void *p = obj;
-
 id o = p;
-
 [o release];
 ```
 
@@ -956,7 +937,7 @@ NSLog(@"class = %@", [(__bridge id)p class]);
 (void)(__bridge_transfer id)p;
 ```
 
-##  ARC内存的泄露和检测
+## ARC内存的泄露和检测
 
 ### ARC内存泄露常见场景
 
@@ -1034,17 +1015,23 @@ __autoreleasing：表明传引用的参数(id *)在返回时是autorelease的，
 
 ARC下同样会有Retain Cycle的问题，解决方法见下面。
 
-# 循环引用
+## ARC 下的内存管理问题
 
-多个对象相互之间有strong引用，不能释放让系统回收。避免循环引用的方式：
+### 循环引用（Reference Cycle）
 
-1.类属性：将strong改为weak引用
+对于 ARC 盲目依赖的 iOS 新人们，由于不知道引用计数，他们的问题主要体现在：
 
-2.delegate循环引用：一般在声明delegate的时候都要使用弱引用weak，或者assign。（weak和assign的区别见上面，MRC的话只能用assign，在ARC的情况下最好使用weak。）
+多个对象相互之间有strong引用，不能释放让系统回收。
 
-3.NSTimer循环引用：在控制器内，创建NSTimer作为其属性，由于定时器创建后也会强引用该控制器对象，这样该对象和定时器就相互循环引用了。需要我们手动断开循环引用：如果是不重复定时器，在回调方法里将定时器invalidate并置为nil。如果是重复定时器，在合适的位置将其invalidate并置为nil
+**避免循环引用的方式**：
 
-4.block循环引用：block会持有block中的对象，如果此时block中的对象又持有了该block，则会造成循环引用。解决方式用__weak或@weakify配合@strongify来修饰：
+1. 类属性：将strong改为weak引用
+
+2. delegate循环引用：一般在声明delegate的时候都要使用弱引用weak，或者assign。（weak和assign的区别见上面，MRC的话只能用assign，在ARC的情况下最好使用weak。）
+
+3. NSTimer循环引用：在控制器内，创建NSTimer作为其属性，由于定时器创建后也会强引用该控制器对象，这样该对象和定时器就相互循环引用了。需要我们手动断开循环引用：如果是不重复定时器，在回调方法里将定时器invalidate并置为nil。如果是重复定时器，在合适的位置将其invalidate并置为nil
+
+4. block循环引用：block会持有block中的对象，如果此时block中的对象又持有了该block，则会造成循环引用。解决方式用__weak或@weakify配合@strongify来修饰：
 
 ```
 // 错误代码，会有Retain Cycle的问题
@@ -1081,7 +1068,7 @@ ARC下同样会有Retain Cycle的问题，解决方法见下面。
 }
 ```
 
-## 循环引用常见有三种现象：
+#### 循环引用常见有三种现象：
 
 - 两个对象互相持有对象，这个可以设置弱引用解决。
 
@@ -1107,10 +1094,12 @@ obj.block = ^{
 
 - NSTimer的target持有self
 
+```
 NSTimer会造成循环引用，timer会强引用target即self，一般self又会持有timer作为属性，这样就造成了循环引用。
 那么，如果timer只作为局部变量，不把timer作为属性呢？同样释放不了，因为在加入runloop的操作中，timer被强引用。而timer作为局部变量，是无法执行invalidate的，所以在timer被invalidate之前，self也就不会被释放。
+```
 
-## 单例属性不释放
+#### 单例属性不释放
 
 严格来说这个不算是内存泄露，主要就是我们在单例里面设置一个对象的属性，因为单例是不会释放的，所以单例会有一直持有这个对象的引用。
 
@@ -1120,47 +1109,7 @@ NSTimer会造成循环引用，timer会强引用target即self，一般self又会
 
 可以看到单例持有了当前对象self，这个self就不会释放了。
 
-
-# 关键字总结
-
-上面关于关键字的说明有点零散，总结一下：
-
-strong：指向并持有该对象，引用计数会加1。引用计数为0销毁，可以通过将变量强制赋值nil来进行销毁。
-
-weak：指向但是并不持有该对象，引用计数不会加1。在Runtime中对该属性进行了相关操作，无需处理，可以自动销毁
-
-assign：assign主要用于修饰基本数据类型，例如NSInteger，CGFloat，存储在栈中，内存不用程序员管理
-
-copy：和strong类似，多用于修饰有可变类型的不可变对象上NSString，NSArray，NSDictionary上。例如
-
-```
-@property(nonatomic, strong) NSString *strongStr;
-@property(nonatomic, copy) NSString *copyyStr;
-
-// 当字符串是NSString时，由于是不可变字符串，所以，不管使用strong还是copy修饰，都是指向原来的对象，copy操作只是做了一次浅拷贝。
-// 当字符串是NSMutableString时，strong只是将源字符串的引用计数加1，而copy则是对原字符串做了次深拷贝，从而生成了一个新的对象，并且copy的对象指向这个新对象。
-// 即：如果字符串是NSMutableString，使用strong只会增加引用计数。但是copy会执行一次深拷贝，会造成不必要的内存浪费。而如果字符串是NSString时，strong和copy效果一样，就不会有这个问题。
-// 但通常我们声明NSString时，也不希望它改变，所以建议使用copy，这样可以避免NSMutableString带来的错误。
-```
-
-__unsafe_unretain：类似于weak，但是当对象被释放后，指针本身并不会自动销毁，这也就造成了野指针，访问被释放的地址就会Crash，所以说它是不安全的。但__weak在指向的内存销毁后，可以将指针变量置为nil，这样更加安全。
-
-atomic：这个属性是为了保证在多线程的情况下，编译器会自动生成一些互斥加锁的代码，避免该变量的读写不同步的问题。注意：atomic可以保证setter和getter存取的线程安全，但并不保证整个对象是线程安全的。例如，声明一个NSMutableArray的原子属性array，此时self.array和self.array = otherArray都是线程安全的。但是，使用[self.array objectAtIndex:index]就不是线程安全的，需要用锁来保证线程安全性。
-
-nonatomic：如果该对象无需考虑多线程的情况，这个属性会让编译器少生成一些互斥代码，可以提高效率。但在多线程设置属性时非常容易产生crash，因为nonatomic的属性被赋值后会将oldValue释放，如果两个线程同时设置nonatomic的属性后，会释放两次oldValue导致crash。所以多线程时属性要用atomic修饰。
-
-
-# ARC 下的内存管理问题
-
-ARC 能够解决 iOS 开发中 90% 的内存管理问题，但是另外还有 10% 内存管理，是需要开发者自己处理的，这主要就是与底层 Core Foundation 对象交互的那部分，底层的 Core Foundation 对象由于不在 ARC 的管理下，所以需要自己维护这些对象的引用计数。
-
-对于 ARC 盲目依赖的 iOS 新人们，由于不知道引用计数，他们的问题主要体现在：
-
-1. 过度使用 block 之后，无法解决循环引用问题。
-2. 遇到底层 Core Foundation 对象，需要自己手工管理它们的引用计数时，显得一筹莫展。
-
-
-## 循环引用（Reference Cycle）问题
+#### 循环引用问题分析
 
 引用计数这种管理内存的方式虽然很简单，但是有一个比较大的瑕疵，即它不能很好的解决循环引用问题。如下图所示：对象 A 和对象 B，相互引用了对方作为自己的成员变量，只有当自己销毁时，才会将成员变量的引用计数减 1。因为对象 A 的销毁依赖于对象 B 销毁，而对象 B 的销毁与依赖于对象 A 的销毁，这样就造成了我们称之为循环引用（Reference Cycle）的问题，这两个对象即使在外界已经没有任何指针能够访问到它们了，它们也无法被释放。
 
@@ -1170,7 +1119,7 @@ ARC 能够解决 iOS 开发中 90% 的内存管理问题，但是另外还有 10
 
 ![内存管理-循环引用2](https://raw.githubusercontent.com/ouyangrong1313/MarkdownPhotos/master/img/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A82.png)
 
-## 主动断开循环引用
+#### 主动断开循环引用
 
 解决循环引用问题主要有两个办法，第一个办法是我明确知道这里会存在循环引用，在合理的位置主动断开环中的一个引用，使得对象得以回收。如下图所示：
 
@@ -1196,13 +1145,13 @@ ARC 能够解决 iOS 开发中 90% 的内存管理问题，但是另外还有 10
 
 不过，主动断开循环引用这种操作依赖于程序员自己手工显式地控制，相当于回到了以前 “谁申请谁释放” 的内存管理年代，它依赖于程序员自己有能力发现循环引用并且知道在什么时机断开循环引用回收内存（这通常与具体的业务逻辑相关），所以这种解决方法并不常用，更常见的办法是使用弱引用 (weak reference) 的办法。
 
-## 使用弱引用
+#### 使用弱引用
 
 弱引用虽然持有对象，但是并不增加引用计数，这样就避免了循环引用的产生。在 iOS 开发中，弱引用通常在 delegate 模式中使用。举个例子来说，两个 ViewController A 和 B，ViewController A 需要弹出 ViewController B，让用户输入一些内容，当用户输入完成后，ViewController B 需要将内容返回给 ViewController A。这个时候，View Controller 的 delegate 成员变量通常是一个弱引用，以避免两个 ViewController 相互引用对方造成循环引用问题，如下所示：
 
 ![内存管理-循环引用4](https://raw.githubusercontent.com/ouyangrong1313/MarkdownPhotos/master/img/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86-%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A84.jpg)
 
-## 弱引用的实现原理
+**弱引用的实现原理**
 
 弱引用的实现原理是这样，系统对于每一个有弱引用的对象，都维护一个表来记录它所有的弱引用的指针地址。这样，当一个对象的引用计数为 0 时，系统就通过这张表，找到所有的弱引用指针，继而把它们都置成 nil。
 
@@ -1212,7 +1161,7 @@ ARC 能够解决 iOS 开发中 90% 的内存管理问题，但是另外还有 10
 2. 大部分 ViewController 的视图对象的生命周期与 ViewController 本身是一致的，没有必要额外做这个事情。
 3. 早先苹果这么设计，是有历史原因的。在早年，当时系统收到 Memory Warning 的时候，ViewController 的 View 会被 unLoad 掉。这个时候，使用 weak 的视图变量是有用的，可以保持这些内存被回收。但是这个设计已经被废弃了，替代方案是将相关视图的 CALayer 对应的 CABackingStore 类型的内存区会被标记成 volatile 类型。
 
-## 使用 Xcode 检测循环引用
+#### 使用 Xcode 检测循环引用
 
 Xcode 的 Instruments 工具集可以很方便的检测循环引用。为了测试效果，我们在一个测试用的 ViewController 中填入以下代码，该代码中的 `firstArray` 和 `secondArray` 相互引用了对方，构成了循环引用。
 
@@ -1239,7 +1188,7 @@ Xcode 的 Instruments 工具集可以很方便的检测循环引用。为了测�
 
 ![内存管理-检测循环引用3](https://raw.githubusercontent.com/ouyangrong1313/MarkdownPhotos/master/img/%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86-%E6%A3%80%E6%B5%8B%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A83.png)
 
-## Core Foundation 对象的内存管理
+#### Core Foundation 对象的内存管理
 
 下面我们就来简单介绍一下对底层 Core Foundation 对象的内存管理。底层的 Core Foundation 对象，在创建时大多以 XxxCreateWithXxx 这样的方式创建，例如：
 
@@ -1273,6 +1222,34 @@ CFRelease(fontRef);
 - `__bridge_retained`：类型转换后，将相关对象的引用计数加 1，原来的 Core Foundation 对象在不用时，需要调用 CFRelease 方法。
 - `__bridge_transfer`：类型转换后，将该对象的引用计数交给 ARC 管理，Core Foundation 对象在不用时，不再需要调用 CFRelease 方法。
 我们根据具体的业务逻辑，合理使用上面的 3 种转换关键字，就可以解决 Core Foundation 对象与 Objective-C 对象相对转换的问题了。
+
+#### 关键字总结
+
+上面关于关键字的说明有点零散，总结一下：
+
+strong：指向并持有该对象，引用计数会加1。引用计数为0销毁，可以通过将变量强制赋值nil来进行销毁。
+
+weak：指向但是并不持有该对象，引用计数不会加1。在Runtime中对该属性进行了相关操作，无需处理，可以自动销毁
+
+assign：assign主要用于修饰基本数据类型，例如NSInteger，CGFloat，存储在栈中，内存不用程序员管理
+
+copy：和strong类似，多用于修饰有可变类型的不可变对象上NSString，NSArray，NSDictionary上。例如
+
+```
+@property(nonatomic, strong) NSString *strongStr;
+@property(nonatomic, copy) NSString *copyyStr;
+
+// 当字符串是NSString时，由于是不可变字符串，所以，不管使用strong还是copy修饰，都是指向原来的对象，copy操作只是做了一次浅拷贝。
+// 当字符串是NSMutableString时，strong只是将源字符串的引用计数加1，而copy则是对原字符串做了次深拷贝，从而生成了一个新的对象，并且copy的对象指向这个新对象。
+// 即：如果字符串是NSMutableString，使用strong只会增加引用计数。但是copy会执行一次深拷贝，会造成不必要的内存浪费。而如果字符串是NSString时，strong和copy效果一样，就不会有这个问题。
+// 但通常我们声明NSString时，也不希望它改变，所以建议使用copy，这样可以避免NSMutableString带来的错误。
+```
+
+__unsafe_unretain：类似于weak，但是当对象被释放后，指针本身并不会自动销毁，这也就造成了野指针，访问被释放的地址就会Crash，所以说它是不安全的。但__weak在指向的内存销毁后，可以将指针变量置为nil，这样更加安全。
+
+atomic：这个属性是为了保证在多线程的情况下，编译器会自动生成一些互斥加锁的代码，避免该变量的读写不同步的问题。注意：atomic可以保证setter和getter存取的线程安全，但并不保证整个对象是线程安全的。例如，声明一个NSMutableArray的原子属性array，此时self.array和self.array = otherArray都是线程安全的。但是，使用[self.array objectAtIndex:index]就不是线程安全的，需要用锁来保证线程安全性。
+
+nonatomic：如果该对象无需考虑多线程的情况，这个属性会让编译器少生成一些互斥代码，可以提高效率。但在多线程设置属性时非常容易产生crash，因为nonatomic的属性被赋值后会将oldValue释放，如果两个线程同时设置nonatomic的属性后，会释放两次oldValue导致crash。所以多线程时属性要用atomic修饰。
 
 
 # 参考文章
