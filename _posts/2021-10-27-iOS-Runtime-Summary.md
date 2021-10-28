@@ -8,6 +8,7 @@ tags: [Objective-C, Runtime]
 
 `Runtime`的特性主要是消息(方法)传递，如果消息(方法)在对象中找不到，就进行转发，具体怎么实现的呢。我们从下面几个方面探寻`Runtime`的实现机制。
 
+
 # Runtime介绍
 
 `Objective-C` 扩展了 `C` 语言，并加入了面向对象特性和 `Smalltalk` 式的消息传递机制。而这个扩展的核心是一个用 `C` 和编译语言写的 `Runtime` 库。它是 `Objective-C` 面向对象和动态机制的基石。
