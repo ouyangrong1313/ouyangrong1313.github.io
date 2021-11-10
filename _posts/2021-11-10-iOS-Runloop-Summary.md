@@ -1200,7 +1200,6 @@ RunLoop运行的核心是一个do..while..循环，遍历所有需要处理的�
         /// 7. sleep to wait msg.
         mach_msg() -> mach_msg_trap();
 
-
         /// 8. 通知Observers，线程被唤醒
         __CFRUNLOOP_IS_CALLING_OUT_TO_AN_OBSERVER_CALLBACK_FUNCTION__(kCFRunLoopAfterWaiting);
 
