@@ -329,7 +329,7 @@ create table t_student(name text, age integer);
 下面的代码就是SQLite3的基本使用方法，带有详细注释。代码中用到了一个Student类，这个类有两个属性name和age。
 
 ```
-/sqliteTest.m
+// sqliteTest.m
 
 #import "sqliteTest.h"
 // 1.首先导入头文件
