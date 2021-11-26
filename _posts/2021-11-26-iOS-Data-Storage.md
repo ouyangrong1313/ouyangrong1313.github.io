@@ -76,7 +76,7 @@ NSLog(@"%@",result);
 
 # Preference偏好设置
 
-偏好设置的使用非常方便快捷，我们一般使用它来进行一些设置的记录，比如用户名，开关是否打开等设置。 Preference是通过NSUserDefaults来使用的，是通过键值对的方式记录设置。下面举个例子。
+偏好设置的使用非常方便快捷，我们一般使用它来进行一些设置的记录，比如用户名，开关是否打开等设置。Preference是通过NSUserDefaults来使用的，是通过键值对的方式记录设置。下面举个例子。
 
 利用NSUserDefaults判断APP是不是首次启动。
 
