@@ -146,16 +146,12 @@ NSURLSession 代理方法回调是异步的，所以收到回调时的线程模�
               task:(NSURLSessionTask *)task
 didCompleteWithError:(NSError *)error
 {
-
     ...
-
     // 如果请求成功，则在一个 AF 的并行 queue 中，去做数据解析等后续操作
     dispatch_async(url_session_manager_processing_queue(), ^{
         NSError *serializationError = nil;
         responseObject = [manager.responseSerializer responseObjectForResponse:task.response data:data error:&serializationError];
-
         ...
-
         dispatch_group_async(manager.completionGroup ?: url_session_manager_completion_group(), manager.completionQueue ?: dispatch_get_main_queue(), ^{
             if (self.completionHandler) {
                 self.completionHandler(task.response, responseObject, serializationError);
@@ -163,7 +159,6 @@ didCompleteWithError:(NSError *)error
             ...
         });
     });
-
     ...
 }
 ```
