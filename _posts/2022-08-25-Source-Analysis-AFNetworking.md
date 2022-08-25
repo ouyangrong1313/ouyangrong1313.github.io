@@ -486,12 +486,12 @@ Client |                  |               |                  |
 
 ### 1.7 Certificate Pinning 是什么？
 
-如果一个客户端通过 TLS 和服务器建立连接，操作系统会验证服务器证书的有效性（一般是按照[X.509](https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FX.509)标准）。当然，有很多手段可以绕开这个校验，最直接的是在 iOS 设备上安装证书并且将其设置为可信的。这种情况下，实施中间人攻击也不是什么难事。不过通过 Certificate Pinning 可以解决这个问题。
+如果一个客户端通过 TLS 和服务器建立连接，操作系统会验证服务器证书的有效性（一般是按照X.509标准）。当然，有很多手段可以绕开这个校验，最直接的是在 iOS 设备上安装证书并且将其设置为可信的。这种情况下，实施中间人攻击也不是什么难事。不过通过 Certificate Pinning 可以解决这个问题。
 
 > A client that does key pinning adds an extra step beyond the normal X.509 certificate validation.
 >             —— Wikipedia：Certificate Pinning
 
-[Certificate Pinning](https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTransport_Layer_Security%23Certificate_pinning)，可以理解为证书绑定，有时候又叫 SSL Pinning，其实更准确的叫法应该是 Public Key Pinning（公钥绑定）。证书绑定是一种检测和防止“中间人攻击”的方式，客户端直接保存服务端的证书，当建立 TLS 连接后，应立即检查服务器的证书，不仅要验证证书的有效性，还需要确定证书是不是跟客户端本地的证书相匹配。考虑到应用和服务器需要同时升级证书的要求，这种方式比较适合应用在访问自家服务器的情况下。
+Certificate Pinning，可以理解为证书绑定，有时候又叫 SSL Pinning，其实更准确的叫法应该是 Public Key Pinning（公钥绑定）。证书绑定是一种检测和防止“中间人攻击”的方式，客户端直接保存服务端的证书，当建立 TLS 连接后，应立即检查服务器的证书，不仅要验证证书的有效性，还需要确定证书是不是跟客户端本地的证书相匹配。考虑到应用和服务器需要同时升级证书的要求，这种方式比较适合应用在访问自家服务器的情况下。
 
 #### 为什么直接对比就能保证证书没问题？
 
