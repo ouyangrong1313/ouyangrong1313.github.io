@@ -132,10 +132,8 @@ NSURLSession 代理方法回调是异步的，所以收到回调时的线程模�
     ...
     self.operationQueue = [[NSOperationQueue alloc] init];
     self.operationQueue.maxConcurrentOperationCount = 1;  // 代理回调线程最大并发数为 1
-
     // 初始化 NSURLSession 对象
     self.session = [NSURLSession sessionWithConfiguration:self.sessionConfiguration delegate:self delegateQueue:self.operationQueue];
-
     ...
     return self;
 }
