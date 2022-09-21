@@ -9,6 +9,8 @@ tags: [图片, SDWebImage, 多线程]
 
 # 类的介绍（SDWebImage 3.8.1）
 
+![](https://raw.githubusercontent.com/ouyangrong1313/MarkdownPhotos/master/img/SDWebImage-%E8%BF%90%E8%A1%8C%E5%9B%BE.jpeg)
+
 - NSData+ImageContentType  通过 Image data 判断当前图片的格式
 
 - SDImageCache  缓存，定义了 Disk 和 memory 二级缓存（NSCache）负责管理 cache 单例
@@ -43,6 +45,8 @@ tags: [图片, SDWebImage, 多线程]
 
 
 # 核心类调用代码逻辑
+
+![](https://raw.githubusercontent.com/ouyangrong1313/MarkdownPhotos/master/img/SDWebImage-%E6%A0%B8%E5%BF%83%E7%B1%BB%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C%E5%9B%BE.png)
 
 ## 第一步（外部控件）
 
