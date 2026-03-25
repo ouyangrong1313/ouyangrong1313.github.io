@@ -2,7 +2,10 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
     <title>水墨俄罗斯</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,18 +15,28 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            touch-action: none;
+            position: fixed;
         }
 
         body {
             background: #1a1510;
-            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             font-family: 'Noto Serif SC', serif;
             color: #e8dcc8;
-            overflow: hidden;
-            position: relative;
+            padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
         }
 
         /* 水墨山水背景 */
@@ -38,47 +51,30 @@
             background: 
                 radial-gradient(ellipse 80% 50% at 20% 80%, rgba(60, 80, 100, 0.4) 0%, transparent 50%),
                 radial-gradient(ellipse 60% 40% at 80% 20%, rgba(80, 60, 50, 0.3) 0%, transparent 50%),
-                radial-gradient(ellipse 100% 60% at 50% 100%, rgba(40, 50, 40, 0.5) 0%, transparent 40%),
-                radial-gradient(ellipse 40% 30% at 10% 30%, rgba(50, 40, 40, 0.3) 0%, transparent 40%),
-                radial-gradient(ellipse 50% 40% at 90% 70%, rgba(60, 50, 40, 0.3) 0%, transparent 40%);
-        }
-
-        /* 祥云装饰 */
-        .cloud {
-            position: fixed;
-            opacity: 0.08;
-            z-index: 1;
-        }
-        .cloud-1 {
-            top: 10%;
-            left: 5%;
-            width: 200px;
-            height: 80px;
-            background: radial-gradient(ellipse 50% 100% at 50% 50%, #d4c4a8 0%, transparent 70%);
-            border-radius: 50%;
-        }
-        .cloud-2 {
-            top: 60%;
-            right: 8%;
-            width: 180px;
-            height: 70px;
-            background: radial-gradient(ellipse 50% 100% at 50% 50%, #c8b898 0%, transparent 70%);
-            border-radius: 50%;
+                radial-gradient(ellipse 100% 60% at 50% 100%, rgba(40, 50, 40, 0.5) 0%, transparent 40%);
         }
 
         .game-wrapper {
             display: flex;
-            gap: 25px;
-            padding: 25px;
+            gap: 15px;
+            padding: 15px;
             position: relative;
             z-index: 10;
+            align-items: flex-start;
+        }
+
+        .game-main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
         }
 
         .side-panel {
             display: flex;
             flex-direction: column;
-            gap: 18px;
-            min-width: 130px;
+            gap: 10px;
+            min-width: 90px;
         }
 
         /* 宣纸风格面板 */
@@ -86,7 +82,7 @@
             background: linear-gradient(145deg, #2a2318 0%, #1f1912 100%);
             border: 2px solid #8b6914;
             border-radius: 4px;
-            padding: 18px 15px;
+            padding: 12px 10px;
             text-align: center;
             position: relative;
             box-shadow: 
@@ -94,35 +90,31 @@
                 0 4px 15px rgba(0,0,0,0.4);
         }
 
-        /* 印章角标 */
         .panel-box::before {
             content: '';
             position: absolute;
             top: -6px;
             right: -6px;
-            width: 16px;
-            height: 16px;
+            width: 12px;
+            height: 12px;
             background: #c41e3a;
             border-radius: 2px;
             transform: rotate(45deg);
-            box-shadow: 0 0 8px rgba(196, 30, 58, 0.5);
         }
 
         .panel-box h3 {
             font-family: 'Ma Shan Zheng', cursive;
-            font-size: 20px;
+            font-size: 16px;
             color: #c9b896;
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-            letter-spacing: 3px;
+            margin-bottom: 5px;
+            letter-spacing: 2px;
         }
 
         .panel-box .value {
             font-family: 'Noto Serif SC', serif;
-            font-size: 28px;
+            font-size: 22px;
             font-weight: 700;
             color: #d4a853;
-            text-shadow: 0 0 15px rgba(212, 168, 83, 0.4);
         }
 
         .panel-box.high-score {
@@ -130,72 +122,40 @@
         }
         .panel-box.high-score .value {
             color: #ffd700;
-            text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
         }
 
         #next-preview {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             margin: 0 auto;
             display: block;
         }
 
-        .controls {
-            font-size: 12px;
-            text-align: left;
-            line-height: 2;
-            color: #a89878;
-        }
-
-        .controls kbd {
-            background: linear-gradient(145deg, #3d3428 0%, #2a2318 100%);
-            border: 1px solid #6b5a3a;
-            padding: 3px 8px;
-            border-radius: 3px;
-            font-family: inherit;
-            color: #e8dcc8;
-            margin-right: 4px;
-            box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        #game-container {
-            position: relative;
-        }
-
-        /* 印章风格游戏板边框 */
         #game-board {
             background: #1a1510;
-            border: 4px solid #8b2323;
+            border: 3px solid #8b2323;
             border-radius: 2px;
             display: block;
             box-shadow: 
                 0 0 0 1px #d4a853,
-                0 0 30px rgba(196, 30, 58, 0.3),
-                inset 0 0 50px rgba(0,0,0,0.8);
+                0 0 20px rgba(196, 30, 58, 0.3),
+                inset 0 0 30px rgba(0,0,0,0.8);
         }
 
-        #ghost-board {
-            position: absolute;
-            top: 4px;
-            left: 4px;
-            pointer-events: none;
-        }
-
-        /* 水墨遮罩 */
         .overlay {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(26, 21, 16, 0.92);
+            background: rgba(26, 21, 16, 0.95);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             border-radius: 2px;
             z-index: 10;
-            backdrop-filter: blur(2px);
+            padding: 20px;
         }
 
         .overlay.hidden {
@@ -204,54 +164,95 @@
 
         .overlay h2 {
             font-family: 'Ma Shan Zheng', cursive;
-            font-size: 48px;
+            font-size: 36px;
             color: #c41e3a;
-            margin-bottom: 20px;
-            text-shadow: 0 0 30px rgba(196, 30, 58, 0.6);
-            letter-spacing: 8px;
+            margin-bottom: 15px;
+            letter-spacing: 6px;
         }
 
         .overlay p {
-            font-size: 16px;
+            font-size: 14px;
             color: #a89878;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .overlay .final-score {
-            font-family: 'Noto Serif SC', serif;
-            font-size: 42px;
+            font-size: 32px;
             color: #d4a853;
-            margin: 20px 0;
-            text-shadow: 0 0 20px rgba(212, 168, 83, 0.5);
+            margin: 15px 0;
         }
 
-        /* 消除行动画 - 红色闪烁 */
-        @keyframes lineFlash {
-            0%, 100% { filter: brightness(1) sepia(0); }
-            50% { filter: brightness(2) sepia(0.5); }
+        /* 手机控制按钮 */
+        .mobile-controls {
+            display: none;
+            width: 100%;
+            max-width: 300px;
+            margin-top: 10px;
         }
 
-        .flash {
-            animation: lineFlash 0.15s ease-in-out 2;
+        .control-row {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 8px 0;
         }
 
-        /* 等级提升特效 */
-        @keyframes levelUp {
-            0% { box-shadow: inset 0 0 0 4px #d4a853; }
-            100% { box-shadow: inset 0 0 0 0 transparent; }
+        .ctrl-btn {
+            width: 60px;
+            height: 50px;
+            background: rgba(0, 255, 136, 0.15);
+            border: 2px solid #00ff88;
+            border-radius: 10px;
+            color: #00ff88;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.1s;
         }
 
-        .level-up {
-            animation: levelUp 0.6s ease-out;
+        .ctrl-btn:active {
+            background: rgba(0, 255, 136, 0.4);
+            transform: scale(0.95);
         }
 
-        /* Responsive scaling */
+        .ctrl-btn.action {
+            background: rgba(255, 107, 107, 0.15);
+            border-color: #ff6b6b;
+            color: #ff6b6b;
+        }
+
+        .ctrl-btn span {
+            font-size: 10px;
+            margin-left: 3px;
+        }
+
+        /* PC端操作说明 */
+        .controls-hint {
+            display: block;
+            font-size: 11px;
+            color: #a89878;
+            text-align: left;
+            line-height: 1.8;
+        }
+
+        .controls-hint kbd {
+            background: linear-gradient(145deg, #3d3428 0%, #2a2318 100%);
+            border: 1px solid #6b5a3a;
+            padding: 2px 6px;
+            border-radius: 3px;
+            color: #e8dcc8;
+            margin-right: 3px;
+        }
+
+        /* 响应式 - 手机端 */
         @media (max-width: 500px) {
             .game-wrapper {
                 flex-direction: column;
                 align-items: center;
-                gap: 12px;
-                padding: 12px;
+                padding: 10px;
+                gap: 10px;
             }
 
             .side-panel {
@@ -259,50 +260,69 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 min-width: auto;
-            }
-
-            .side-panel.left {
-                order: 1;
-            }
-
-            .side-panel.right {
-                order: 2;
-            }
-
-            #game-container {
-                order: 3;
+                width: 100%;
+                max-width: 320px;
             }
 
             .panel-box {
-                padding: 12px;
+                padding: 8px;
+                min-width: 70px;
             }
 
             .panel-box h3 {
-                font-size: 16px;
+                font-size: 14px;
             }
 
             .panel-box .value {
-                font-size: 20px;
+                font-size: 18px;
             }
 
-            .controls {
+            #next-preview {
+                width: 60px;
+                height: 60px;
+            }
+
+            .controls-hint {
                 display: none;
             }
 
+            .mobile-controls {
+                display: block;
+            }
+
             .overlay h2 {
-                font-size: 36px;
+                font-size: 28px;
+            }
+
+            .overlay .final-score {
+                font-size: 28px;
+            }
+        }
+
+        /* 更小屏幕 */
+        @media (max-width: 350px) {
+            .side-panel {
+                gap: 5px;
+            }
+
+            .panel-box {
+                min-width: 60px;
+                padding: 6px;
+            }
+
+            .ctrl-btn {
+                width: 50px;
+                height: 45px;
             }
         }
     </style>
 </head>
 <body>
     <div class="ink-background"></div>
-    <div class="cloud cloud-1"></div>
-    <div class="cloud cloud-2"></div>
 
     <div class="game-wrapper">
-        <!-- Left Panel -->
-        <div class="side-panel left">
+        <!-- 左侧面板 -->
+        <div class="side-panel">
             <div class="panel-box">
                 <h3>分数</h3>
                 <div class="value" id="score">0</div>
@@ -317,45 +337,62 @@
             </div>
         </div>
 
-        <!-- Game Board -->
-        <div id="game-container">
-            <canvas id="game-board"></canvas>
-            <canvas id="ghost-board" style="display:none;"></canvas>
+        <!-- 游戏主体 -->
+        <div class="game-main">
+            <div id="game-container" style="position: relative;">
+                <canvas id="game-board"></canvas>
 
-            <!-- Start Overlay -->
-            <div class="overlay" id="start-overlay">
-                <h2>水墨俄罗斯</h2>
-                <p>点击任意处开始</p>
+                <!-- 开始遮罩 -->
+                <div class="overlay" id="start-overlay">
+                    <h2>水墨俄罗斯</h2>
+                    <p>点击开始</p>
+                </div>
+
+                <!-- 暂停遮罩 -->
+                <div class="overlay hidden" id="pause-overlay">
+                    <h2>暂停</h2>
+                    <p>点击继续</p>
+                </div>
+
+                <!-- 游戏结束遮罩 -->
+                <div class="overlay hidden" id="gameover-overlay">
+                    <h2>游戏结束</h2>
+                    <p>最终得分</p>
+                    <div class="final-score" id="final-score">0</div>
+                    <p>点击重新开始</p>
+                </div>
             </div>
 
-            <!-- Pause Overlay -->
-            <div class="overlay hidden" id="pause-overlay">
-                <h2>暂停</h2>
-                <p>按 P 键继续</p>
-            </div>
-
-            <!-- Game Over Overlay -->
-            <div class="overlay hidden" id="gameover-overlay">
-                <h2>游戏结束</h2>
-                <p>最终得分</p>
-                <div class="final-score" id="final-score">0</div>
-                <p>按 R 键重新开始</p>
+            <!-- 手机虚拟按键 -->
+            <div class="mobile-controls">
+                <div class="control-row">
+                    <button class="ctrl-btn" data-action="rotate">↻<span>旋转</span></button>
+                </div>
+                <div class="control-row">
+                    <button class="ctrl-btn" data-action="left">⬅️</button>
+                    <button class="ctrl-btn" data-action="down">⬇️<span>下落</span></button>
+                    <button class="ctrl-btn" data-action="right">➡️</button>
+                </div>
+                <div class="control-row">
+                    <button class="ctrl-btn action" data-action="harddrop">⬇️<span>落底</span></button>
+                    <button class="ctrl-btn action" data-action="pause">⏸️<span>暂停</span></button>
+                </div>
             </div>
         </div>
 
-        <!-- Right Panel -->
-        <div class="side-panel right">
+        <!-- 右侧面板 -->
+        <div class="side-panel">
             <div class="panel-box">
                 <h3>下一个</h3>
                 <canvas id="next-preview"></canvas>
             </div>
             <div class="panel-box">
                 <h3>操作</h3>
-                <div class="controls">
+                <div class="controls-hint">
                     <kbd>←</kbd><kbd>→</kbd> 移动<br>
                     <kbd>↑</kbd> 旋转<br>
-                    <kbd>↓</kbd> 加速下落<br>
-                    <kbd>空格</kbd> 立即下落<br>
+                    <kbd>↓</kbd> 加速<br>
+                    <kbd>空格</kbd> 落底<br>
                     <kbd>P</kbd> 暂停
                 </div>
             </div>
@@ -363,92 +400,41 @@
     </div>
 
     <script>
-        // ============================================
-        // 水墨俄罗斯方块 - 中国风版本
-        // ============================================
-
         (function() {
             'use strict';
 
-            // ---------- 配置常量 ----------
             const COLS = 10;
             const ROWS = 20;
             const CELL_SIZE = 28;
 
-            // 中国传统矿物颜料色彩
             const COLORS = {
-                I: '#2d8a8a',   // 石青 - 沉稳典雅
-                O: '#d4a853',   // 藤黄 - 金色
-                T: '#8b4a6b',   // 胭脂 - 紫红
-                S: '#4a8b5a',   // 石绿 - 翠绿
-                Z: '#b54a3a',   // 朱砂 - 红色
-                J: '#3a6b9b',   // 花青 - 蓝青
-                L: '#c47a35'    // 赭石 - 橙褐
+                I: '#2d8a8a',
+                O: '#d4a853',
+                T: '#8b4a6b',
+                S: '#4a8b5a',
+                Z: '#b54a3a',
+                J: '#3a6b9b',
+                L: '#c47a35'
             };
 
-            // 中文数字映射
-            const CHINESE_NUMBERS = ['', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十', 
-                                     '十一', '十二', '十三', '十四', '十五', '十六', '十七', '十八', '十九', '二十'];
+            const CHINESE_NUMBERS = ['', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十'];
 
-            // 每个方块的形状定义
             const SHAPES = {
-                I: [
-                    [[0,0,0,0],[1,1,1,1],[0,0,0,0],[0,0,0,0]],
-                    [[0,0,1,0],[0,0,1,0],[0,0,1,0],[0,0,1,0]],
-                    [[0,0,0,0],[0,0,0,0],[1,1,1,1],[0,0,0,0]],
-                    [[0,1,0,0],[0,1,0,0],[0,1,0,0],[0,1,0,0]]
-                ],
-                O: [
-                    [[1,1],[1,1]],
-                    [[1,1],[1,1]],
-                    [[1,1],[1,1]],
-                    [[1,1],[1,1]]
-                ],
-                T: [
-                    [[0,1,0],[1,1,1],[0,0,0]],
-                    [[0,1,0],[0,1,1],[0,1,0]],
-                    [[0,0,0],[1,1,1],[0,1,0]],
-                    [[0,1,0],[1,1,0],[0,1,0]]
-                ],
-                S: [
-                    [[0,1,1],[1,1,0],[0,0,0]],
-                    [[0,1,0],[0,1,1],[0,0,1]],
-                    [[0,0,0],[0,1,1],[1,1,0]],
-                    [[1,0,0],[1,1,0],[0,1,0]]
-                ],
-                Z: [
-                    [[1,1,0],[0,1,1],[0,0,0]],
-                    [[0,0,1],[0,1,1],[0,1,0]],
-                    [[0,0,0],[1,1,0],[0,1,1]],
-                    [[0,1,0],[1,1,0],[1,0,0]]
-                ],
-                J: [
-                    [[1,0,0],[1,1,1],[0,0,0]],
-                    [[0,1,1],[0,1,0],[0,1,0]],
-                    [[0,0,0],[1,1,1],[0,0,1]],
-                    [[0,1,0],[0,1,0],[1,1,0]]
-                ],
-                L: [
-                    [[0,0,1],[1,1,1],[0,0,0]],
-                    [[0,1,0],[0,1,0],[0,1,1]],
-                    [[0,0,0],[1,1,1],[1,0,0]],
-                    [[1,1,0],[0,1,0],[0,1,0]]
-                ]
+                I: [[[0,0,0,0],[1,1,1,1],[0,0,0,0],[0,0,0,0]],[[0,0,1,0],[0,0,1,0],[0,0,1,0],[0,0,1,0]],[[0,0,0,0],[0,0,0,0],[1,1,1,1],[0,0,0,0]],[[0,1,0,0],[0,1,0,0],[0,1,0,0],[0,1,0,0]]],
+                O: [[[1,1],[1,1]],[[1,1],[1,1]],[[1,1],[1,1]],[[1,1],[1,1]]],
+                T: [[[0,1,0],[1,1,1],[0,0,0]],[[0,1,0],[0,1,1],[0,1,0]],[[0,0,0],[1,1,1],[0,1,0]],[[0,1,0],[1,1,0],[0,1,0]]],
+                S: [[[0,1,1],[1,1,0],[0,0,0]],[[0,1,0],[0,1,1],[0,0,1]],[[0,0,0],[0,1,1],[1,1,0]],[[1,0,0],[1,1,0],[0,1,0]]],
+                Z: [[[1,1,0],[0,1,1],[0,0,0]],[[0,0,1],[0,1,1],[0,1,0]],[[0,0,0],[1,1,0],[0,1,1]],[[0,1,0],[1,1,0],[1,0,0]]],
+                J: [[[1,0,0],[1,1,1],[0,0,0]],[[0,1,1],[0,1,0],[0,1,0]],[[0,0,0],[1,1,1],[0,0,1]],[[0,1,0],[0,1,0],[1,1,0]]],
+                L: [[[0,0,1],[1,1,1],[0,0,0]],[[0,1,0],[0,1,0],[0,1,1]],[[0,0,0],[1,1,1],[1,0,0]],[[1,1,0],[0,1,0],[0,1,0]]]
             };
 
             const SPAWN_POSITIONS = {
-                I: { x: 3, y: -1 },
-                O: { x: 4, y: 0 },
-                T: { x: 3, y: 0 },
-                S: { x: 3, y: 0 },
-                Z: { x: 3, y: 0 },
-                J: { x: 3, y: 0 },
-                L: { x: 3, y: 0 }
+                I: { x: 3, y: -1 }, O: { x: 4, y: 0 }, T: { x: 3, y: 0 },
+                S: { x: 3, y: 0 }, Z: { x: 3, y: 0 }, J: { x: 3, y: 0 }, L: { x: 3, y: 0 }
             };
 
-            // ---------- 游戏状态 ----------
             let canvas, ctx;
-            let ghostCanvas, ghostCtx;
             let previewCanvas, previewCtx;
             let board = [];
             let currentPiece = null;
@@ -460,8 +446,10 @@
             let highScore = 0;
             let gameState = 'ready';
             let lastDropTime = 0;
+            
+            let touchStartX = 0;
+            let touchStartY = 0;
 
-            // ---------- DOM元素 ----------
             const scoreEl = document.getElementById('score');
             const levelEl = document.getElementById('level');
             const highScoreEl = document.getElementById('high-score');
@@ -470,19 +458,14 @@
             const gameoverOverlay = document.getElementById('gameover-overlay');
             const finalScoreEl = document.getElementById('final-score');
 
-            // ---------- 初始化 ----------
             function init() {
                 canvas = document.getElementById('game-board');
                 ctx = canvas.getContext('2d');
-                ghostCanvas = document.getElementById('ghost-board');
-                ghostCtx = ghostCanvas.getContext('2d');
                 previewCanvas = document.getElementById('next-preview');
                 previewCtx = previewCanvas.getContext('2d');
 
                 canvas.width = COLS * CELL_SIZE;
                 canvas.height = ROWS * CELL_SIZE;
-                ghostCanvas.width = COLS * CELL_SIZE;
-                ghostCanvas.height = ROWS * CELL_SIZE;
                 previewCanvas.width = 100;
                 previewCanvas.height = 100;
 
@@ -494,18 +477,35 @@
                 document.addEventListener('click', handleClick);
                 window.addEventListener('resize', setupResponsive);
 
+                // 触摸滑动控制
+                canvas.addEventListener('touchstart', handleTouchStart, { passive: false });
+                canvas.addEventListener('touchend', handleTouchEnd, { passive: false });
+
+                // 手机按钮控制
+                document.querySelectorAll('.ctrl-btn').forEach(btn => {
+                    btn.addEventListener('touchstart', (e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        handleMobileAction(btn.dataset.action);
+                    }, { passive: false });
+                    
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        handleMobileAction(btn.dataset.action);
+                    });
+                });
+
                 requestAnimationFrame(render);
             }
 
-            // ---------- 响应式缩放 ----------
             function setupResponsive() {
                 const container = document.getElementById('game-container');
-                const maxWidth = window.innerWidth - 50;
+                const maxWidth = window.innerWidth - 30;
                 const maxHeight = window.innerHeight - 50;
 
                 let scale = 1;
-                const boardWidth = COLS * CELL_SIZE + 8;
-                const boardHeight = ROWS * CELL_SIZE + 8;
+                const boardWidth = COLS * CELL_SIZE + 6;
+                const boardHeight = ROWS * CELL_SIZE + 6;
 
                 if (boardWidth > maxWidth || boardHeight > maxHeight) {
                     const scaleX = maxWidth / boardWidth;
@@ -517,7 +517,6 @@
                 container.style.transformOrigin = 'top left';
             }
 
-            // ---------- 游戏板操作 ----------
             function resetBoard() {
                 board = [];
                 for (let r = 0; r < ROWS; r++) {
@@ -532,13 +531,8 @@
                         if (shape[r][c]) {
                             const newX = piece.x + c + offsetX;
                             const newY = piece.y + r + offsetY;
-
-                            if (newX < 0 || newX >= COLS || newY >= ROWS) {
-                                return false;
-                            }
-                            if (newY >= 0 && board[newY][newX]) {
-                                return false;
-                            }
+                            if (newX < 0 || newX >= COLS || newY >= ROWS) return false;
+                            if (newY >= 0 && board[newY][newX]) return false;
                         }
                     }
                 }
@@ -552,15 +546,12 @@
                         if (shape[r][c]) {
                             const boardY = currentPiece.y + r;
                             const boardX = currentPiece.x + c;
-                            if (boardY >= 0) {
-                                board[boardY][boardX] = currentPiece.type;
-                            }
+                            if (boardY >= 0) board[boardY][boardX] = currentPiece.type;
                         }
                     }
                 }
             }
 
-            // ---------- 7-bag随机生成 ----------
             function fillBag() {
                 bag = ['I', 'O', 'T', 'S', 'Z', 'J', 'L'];
                 for (let i = bag.length - 1; i > 0; i--) {
@@ -574,7 +565,6 @@
                 return bag.pop();
             }
 
-            // ---------- 方块操作 ----------
             function createPiece(type) {
                 return {
                     type: type,
@@ -613,28 +603,22 @@
                         return true;
                     }
                 }
-
                 return false;
             }
 
             function hardDrop() {
                 let dropDistance = 0;
-                while (movePiece(0, 1)) {
-                    dropDistance++;
-                }
+                while (movePiece(0, 1)) dropDistance++;
                 addScore(dropDistance * 2);
                 lockAndNext();
             }
 
             function getGhostY() {
                 let ghostY = currentPiece.y;
-                while (isValidPosition(currentPiece, 0, ghostY - currentPiece.y + 1)) {
-                    ghostY++;
-                }
+                while (isValidPosition(currentPiece, 0, ghostY - currentPiece.y + 1)) ghostY++;
                 return ghostY;
             }
 
-            // ---------- 计分系统 ----------
             function addScore(points) {
                 score += points;
                 scoreEl.textContent = score;
@@ -647,15 +631,15 @@
 
             function checkLines() {
                 const linesToClear = [];
-
                 for (let r = 0; r < ROWS; r++) {
-                    if (board[r].every(cell => cell !== null)) {
-                        linesToClear.push(r);
-                    }
+                    if (board[r].every(cell => cell !== null)) linesToClear.push(r);
                 }
 
                 if (linesToClear.length > 0) {
-                    clearLines(linesToClear);
+                    linesToClear.forEach(r => {
+                        board.splice(r, 1);
+                        board.unshift(new Array(COLS).fill(null));
+                    });
 
                     const lineScores = [0, 100, 300, 500, 800];
                     addScore(lineScores[linesToClear.length] * level);
@@ -664,37 +648,15 @@
                     const newLevel = Math.floor(lines / 10) + 1;
                     if (newLevel > level) {
                         level = newLevel;
-                        levelEl.textContent = CHINESE_NUMBERS[level] || level;
-                        document.getElementById('game-container').classList.add('level-up');
-                        setTimeout(() => {
-                            document.getElementById('game-container').classList.remove('level-up');
-                        }, 500);
+                        levelEl.textContent = CHINESE_NUMBERS[Math.min(level, 10)];
                     }
                 }
-            }
-
-            function clearLines(linesToClear) {
-                linesToClear.forEach(r => {
-                    for (let c = 0; c < COLS; c++) {
-                        const cell = document.querySelector(`[data-r="${r}"][data-c="${c}"]`);
-                        if (cell) cell.classList.add('flash');
-                    }
-                });
-
-                setTimeout(() => {
-                    linesToClear.sort((a, b) => b - a);
-                    linesToClear.forEach(r => {
-                        board.splice(r, 1);
-                        board.unshift(new Array(COLS).fill(null));
-                    });
-                }, 300);
             }
 
             function getDropInterval() {
                 return Math.max(100, 1000 - (level - 1) * 80);
             }
 
-            // ---------- 游戏流程 ----------
             function spawnPiece() {
                 currentPiece = nextPiece || createPiece(getNextPieceType());
                 nextPiece = createPiece(getNextPieceType());
@@ -757,15 +719,12 @@
             function gameLoop(timestamp) {
                 if (gameState === 'playing' && lastDropTime) {
                     if (timestamp - lastDropTime >= getDropInterval()) {
-                        if (!movePiece(0, 1)) {
-                            lockAndNext();
-                        }
+                        if (!movePiece(0, 1)) lockAndNext();
                         lastDropTime = timestamp;
                     }
                 }
             }
 
-            // ---------- 渲染 ----------
             function render(timestamp) {
                 gameLoop(timestamp);
                 draw();
@@ -773,11 +732,9 @@
             }
 
             function draw() {
-                // 深墨色背景
                 ctx.fillStyle = '#1a1510';
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-                // 水墨风格网格 - 更淡雅
                 ctx.strokeStyle = 'rgba(60, 50, 40, 0.4)';
                 ctx.lineWidth = 1;
                 for (let r = 0; r <= ROWS; r++) {
@@ -793,38 +750,29 @@
                     ctx.stroke();
                 }
 
-                // 绘制已固定的方块
                 for (let r = 0; r < ROWS; r++) {
                     for (let c = 0; c < COLS; c++) {
-                        if (board[r][c]) {
-                            drawCell(ctx, c, r, COLORS[board[r][c]]);
-                        }
+                        if (board[r][c]) drawCell(ctx, c, r, COLORS[board[r][c]]);
                     }
                 }
 
-                // 绘制幽灵方块
                 if (currentPiece && gameState === 'playing') {
                     const ghostY = getGhostY();
                     const shape = currentPiece.shape;
                     ctx.globalAlpha = 0.25;
                     for (let r = 0; r < shape.length; r++) {
                         for (let c = 0; c < shape[r].length; c++) {
-                            if (shape[r][c]) {
-                                drawCell(ctx, currentPiece.x + c, ghostY + r, COLORS[currentPiece.type]);
-                            }
+                            if (shape[r][c]) drawCell(ctx, currentPiece.x + c, ghostY + r, COLORS[currentPiece.type]);
                         }
                     }
                     ctx.globalAlpha = 1;
                 }
 
-                // 绘制当前方块
                 if (currentPiece && gameState === 'playing') {
                     const shape = currentPiece.shape;
                     for (let r = 0; r < shape.length; r++) {
                         for (let c = 0; c < shape[r].length; c++) {
-                            if (shape[r][c]) {
-                                drawCell(ctx, currentPiece.x + c, currentPiece.y + r, COLORS[currentPiece.type]);
-                            }
+                            if (shape[r][c]) drawCell(ctx, currentPiece.x + c, currentPiece.y + r, COLORS[currentPiece.type]);
                         }
                     }
                 }
@@ -836,22 +784,17 @@
                 const cy = y * CELL_SIZE + padding;
                 const size = CELL_SIZE - padding * 2;
 
-                // 主体颜色 - 矿物颜料质感
                 context.fillStyle = color;
                 context.fillRect(cx, cy, size, size);
 
-                // 水墨发光效果
                 context.shadowColor = color;
-                context.shadowBlur = 10;
+                context.shadowBlur = 8;
                 
-                // 右上高光 - 模拟矿物光泽
-                context.fillStyle = 'rgba(255, 250, 240, 0.35)';
-                context.fillRect(cx, cy, size, 3);
-                context.fillRect(cx, cy, 3, size);
+                context.fillStyle = 'rgba(255, 250, 240, 0.3)';
+                context.fillRect(cx, cy, size, 2);
+                context.fillRect(cx, cy, 2, size);
                 
                 context.shadowBlur = 0;
-
-                // 边框 - 淡金色
                 context.strokeStyle = 'rgba(212, 168, 83, 0.3)';
                 context.lineWidth = 1;
                 context.strokeRect(cx, cy, size, size);
@@ -864,7 +807,7 @@
                 if (!nextPiece) return;
 
                 const shape = SHAPES[nextPiece.type][0];
-                const previewSize = 22;
+                const previewSize = 20;
                 const offsetX = (100 - shape[0].length * previewSize) / 2;
                 const offsetY = (100 - shape.length * previewSize) / 2;
 
@@ -878,8 +821,8 @@
                             previewCtx.fillRect(x + 1, y + 1, previewSize - 2, previewSize - 2);
 
                             previewCtx.fillStyle = 'rgba(255, 250, 240, 0.3)';
-                            previewCtx.fillRect(x + 1, y + 1, previewSize - 2, 3);
-                            previewCtx.fillRect(x + 1, y + 1, 3, previewSize - 2);
+                            previewCtx.fillRect(x + 1, y + 1, previewSize - 2, 2);
+                            previewCtx.fillRect(x + 1, y + 1, 2, previewSize - 2);
 
                             previewCtx.strokeStyle = 'rgba(212, 168, 83, 0.3)';
                             previewCtx.lineWidth = 1;
@@ -889,18 +832,12 @@
                 }
             }
 
-            // ---------- 键盘控制 ----------
             function handleKeyDown(e) {
                 if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Space'].includes(e.code)) {
                     e.preventDefault();
                 }
 
-                if (gameState === 'ready') {
-                    startGame();
-                    return;
-                }
-
-                if (gameState === 'gameover' && e.code === 'KeyR') {
+                if (gameState === 'ready' || gameState === 'gameover') {
                     startGame();
                     return;
                 }
@@ -912,41 +849,97 @@
 
                 if (gameState === 'playing') {
                     switch (e.code) {
-                        case 'ArrowLeft':
-                            movePiece(-1, 0);
-                            break;
-                        case 'ArrowRight':
-                            movePiece(1, 0);
-                            break;
+                        case 'ArrowLeft': movePiece(-1, 0); break;
+                        case 'ArrowRight': movePiece(1, 0); break;
                         case 'ArrowDown':
                             if (movePiece(0, 1)) {
                                 addScore(1);
                                 lastDropTime = performance.now();
                             }
                             break;
-                        case 'ArrowUp':
-                            rotatePiece();
-                            break;
-                        case 'Space':
-                            hardDrop();
-                            break;
+                        case 'ArrowUp': rotatePiece(); break;
+                        case 'Space': hardDrop(); break;
                     }
                 }
             }
 
-            // ---------- 点击控制 ----------
             function handleClick(e) {
-                if (gameState === 'ready' || gameState === 'gameover') {
+                if (gameState === 'ready' || gameState === 'gameover' || gameState === 'paused') {
                     startGame();
                     return;
                 }
             }
 
-            // ---------- 本地存储 ----------
+            // 触摸滑动控制
+            function handleTouchStart(e) {
+                e.preventDefault();
+                if (gameState !== 'playing') {
+                    startGame();
+                    return;
+                }
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+            }
+
+            function handleTouchEnd(e) {
+                e.preventDefault();
+                if (gameState !== 'playing') return;
+                
+                const touchEndX = e.changedTouches[0].clientX;
+                const touchEndY = e.changedTouches[0].clientY;
+                
+                const deltaX = touchEndX - touchStartX;
+                const deltaY = touchEndY - touchStartY;
+                const minSwipe = 30;
+
+                if (Math.abs(deltaX) > Math.abs(deltaY)) {
+                    if (Math.abs(deltaX) > minSwipe) {
+                        movePiece(deltaX > 0 ? 1 : -1, 0);
+                    }
+                } else {
+                    if (deltaY > minSwipe) {
+                        // 向下滑动 - 加速下落
+                        if (movePiece(0, 1)) {
+                            addScore(1);
+                            lastDropTime = performance.now();
+                        }
+                    } else if (deltaY < -minSwipe) {
+                        // 向上滑动 - 旋转
+                        rotatePiece();
+                    }
+                }
+            }
+
+            // 手机按钮操作
+            function handleMobileAction(action) {
+                if (gameState === 'ready' || gameState === 'gameover') {
+                    startGame();
+                    return;
+                }
+
+                if (action === 'pause') {
+                    pauseGame();
+                    return;
+                }
+
+                if (gameState !== 'playing') return;
+
+                switch (action) {
+                    case 'left': movePiece(-1, 0); break;
+                    case 'right': movePiece(1, 0); break;
+                    case 'down':
+                        if (movePiece(0, 1)) {
+                            addScore(1);
+                            lastDropTime = performance.now();
+                        }
+                        break;
+                    case 'rotate': rotatePiece(); break;
+                    case 'harddrop': hardDrop(); break;
+                }
+            }
+
             function saveHighScore() {
-                try {
-                    localStorage.setItem('ink_tetris_high_score', highScore.toString());
-                } catch (e) {}
+                try { localStorage.setItem('ink_tetris_high_score', highScore.toString()); } catch (e) {}
             }
 
             function loadHighScore() {
@@ -959,9 +952,7 @@
                 } catch (e) {}
             }
 
-            // ---------- 启动 ----------
             init();
-
         })();
     </script>
 </body>
