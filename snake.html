@@ -133,11 +133,18 @@
         
         /* 虚拟方向键 - 移动端显示 */
         .d-pad {
-            display: none;
+            display: flex;
             margin-top: 15px;
             position: relative;
             width: 150px;
             height: 150px;
+        }
+        
+        /* PC端隐藏方向键 */
+        @media (min-width: 501px) {
+            .d-pad {
+                display: none;
+            }
         }
         
         .d-pad-btn {
