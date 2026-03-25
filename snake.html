@@ -62,48 +62,71 @@
         }
 
         .difficulty-btn {
-            padding: 6px 14px;
-            font-size: 13px;
+            padding: 10px 20px;
+            font-size: 15px;
             background: rgba(255,255,255,0.1);
             color: #888;
             border: 2px solid transparent;
-            border-radius: 15px;
+            border-radius: 25px;
             cursor: pointer;
-            transition: all 0.2s;
-            font-weight: 500;
+            transition: all 0.3s;
+            font-weight: 600;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            -webkit-tap-highlight-color: transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .difficulty-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent, rgba(255,255,255,0.1));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .difficulty-btn:hover::before {
+            opacity: 1;
         }
 
         .difficulty-btn:hover:not(.disabled) {
-            background: rgba(0, 255, 136, 0.1);
+            transform: scale(1.05);
         }
 
         .difficulty-btn.disabled {
-            opacity: 0.5;
+            opacity: 0.4;
             cursor: not-allowed;
         }
 
         .difficulty-btn.active {
-            background: rgba(0, 255, 136, 0.2);
-            color: #00ff88;
-            border-color: #00ff88;
+            transform: scale(1.05);
         }
 
         .difficulty-btn.easy.active {
-            background: rgba(0, 255, 136, 0.2);
+            background: rgba(0, 255, 136, 0.3);
             color: #00ff88;
             border-color: #00ff88;
+            box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
         }
 
         .difficulty-btn.medium.active {
-            background: rgba(255, 165, 0, 0.2);
+            background: rgba(255, 165, 0, 0.3);
             color: #ffa500;
             border-color: #ffa500;
+            box-shadow: 0 0 15px rgba(255, 165, 0, 0.4);
         }
 
         .difficulty-btn.hard.active {
-            background: rgba(255, 71, 87, 0.2);
+            background: rgba(255, 71, 87, 0.3);
             color: #ff4757;
             border-color: #ff4757;
+            box-shadow: 0 0 15px rgba(255, 71, 87, 0.4);
         }
         
         .score-board {
@@ -285,17 +308,32 @@
         
         /* 开始界面 */
         .start-screen {
-            position: absolute;
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.9);
+            background: rgba(0, 0, 0, 0.95);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             z-index: 100;
+            padding: 20px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* 隐藏游戏主界面的难度选择器，开始界面有独立的 */
+        @media (min-width: 501px) {
+            .game-wrapper .difficulty-selector {
+                display: none !important;
+            }
+        }
+
+        /* 确保开始界面按钮可点击 */
+        .start-screen .difficulty-btn {
+            pointer-events: auto;
         }
         
         .start-screen h2 {
@@ -331,6 +369,19 @@
                 max-width: 300px;
             }
 
+            /* 移动端难度选择器优化 - 放大按钮 */
+            .difficulty-selector {
+                gap: 12px;
+                margin-bottom: 15px;
+            }
+
+            .difficulty-btn {
+                padding: 10px 18px;
+                font-size: 15px;
+                min-width: 80px;
+                border-radius: 20px;
+            }
+
             /* 增大移动端按钮尺寸 */
             .btn {
                 padding: 16px 32px;
@@ -352,15 +403,17 @@
             }
 
             .start-screen .snake-icon {
-                font-size: 70px;
+                font-size: 60px;
+                margin-bottom: 10px;
             }
 
             .start-screen h2 {
-                font-size: 28px;
+                font-size: 24px;
+                margin-bottom: 15px;
             }
 
             .start-screen .btn {
-                padding: 18px 40px;
+                padding: 16px 40px;
                 font-size: 17px;
             }
 
@@ -379,6 +432,17 @@
 
             .score-board {
                 margin-bottom: 5px;
+            }
+
+            /* 竖屏难度选择器 */
+            .difficulty-selector {
+                gap: 10px;
+                margin-bottom: 8px;
+            }
+
+            .difficulty-btn {
+                padding: 8px 14px;
+                font-size: 14px;
             }
 
             .d-pad {
@@ -402,6 +466,15 @@
                 width: 45px;
                 height: 45px;
             }
+
+            .start-screen .snake-icon {
+                font-size: 50px;
+            }
+
+            .start-screen h2 {
+                font-size: 22px;
+                margin-bottom: 12px;
+            }
         }
 
         /* 超小屏幕优化 */
@@ -421,6 +494,19 @@
             .d-pad-down { bottom: 0; left: 51px; }
             .d-pad-left { top: 51px; left: 0; }
             .d-pad-right { top: 51px; right: 0; }
+
+            .difficulty-selector {
+                gap: 6px;
+            }
+
+            .difficulty-btn {
+                padding: 6px 10px;
+                font-size: 12px;
+            }
+
+            .start-screen .snake-icon {
+                font-size: 40px;
+            }
         }
 
         /* 微信提示样式 */
@@ -502,9 +588,9 @@
     <div class="game-wrapper">
         <h1>🐍 贪吃蛇</h1>
         <div class="difficulty-selector">
-            <button class="difficulty-btn easy active" data-speed="150" data-difficulty="easy">简单</button>
+            <button class="difficulty-btn easy active" data-speed="200" data-difficulty="easy">简单</button>
             <button class="difficulty-btn medium" data-speed="100" data-difficulty="medium">中等</button>
-            <button class="difficulty-btn hard" data-speed="60" data-difficulty="hard">困难</button>
+            <button class="difficulty-btn hard" data-speed="40" data-difficulty="hard">困难</button>
         </div>
         <div class="score-board">
             <span id="score">得分: 0</span>
@@ -537,9 +623,9 @@
         <div class="snake-icon">🐍</div>
         <h2>贪吃蛇</h2>
         <div class="difficulty-selector" style="margin-bottom: 15px;">
-            <button class="difficulty-btn easy active" data-speed="150" data-difficulty="easy">简单</button>
+            <button class="difficulty-btn easy active" data-speed="200" data-difficulty="easy">简单</button>
             <button class="difficulty-btn medium" data-speed="100" data-difficulty="medium">中等</button>
-            <button class="difficulty-btn hard" data-speed="60" data-difficulty="hard">困难</button>
+            <button class="difficulty-btn hard" data-speed="40" data-difficulty="hard">困难</button>
         </div>
         <button class="btn" id="startBtn2">开始游戏</button>
         <p style="margin-top: 15px;">👆 滑动屏幕 或 点击方向键 控制</p>
