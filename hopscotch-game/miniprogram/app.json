@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/rules/rules",
+    "pages/game/game",
+    "pages/result/result",
+    "pages/pk/pk"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFE4E1",
+    "navigationBarTitleText": "童年跳房子大挑战",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FFE4E1"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
