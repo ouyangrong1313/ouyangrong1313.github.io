@@ -15,10 +15,10 @@
 
 ## 最近更新
 
-- [[raw/学习笔记2025-index|学习笔记2025（343页AI学习手册）]] - 2026-04-26 ⭐
+- [[ai-agents/deep-research-stack|Deep Research Stack：开源深度研究方案]] - 2026-04-26 ⭐
+- [[raw/学习笔记2025-index|学习笔记2025（343页AI学习手册）]] - 2026-04-26
 - [[ai-agents/harness-engineering|Harness Engineering 工程化落地指南]] - 2026-04-26
 - [[ai-coding/cat-wu-interview|Cat Wu 访谈：AI时代PM的唯一护城河]] - 2026-04-26
-- [[ai-tech/ai-learning-path|AI 行业学习路线]] - 2026-04-24
 
 ## 标签索引
 

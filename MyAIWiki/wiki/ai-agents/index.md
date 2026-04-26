@@ -8,6 +8,7 @@
 - [[workflow-vs-agent]] - Workflow 与 Agent 的区别
 - [[harness-engineering]] - Harness Engineering 工程化落地指南 ⭐
 - [[agent-architectures]] - Agent 架构模式（ReAct/Plan-and-Execute）⭐
+- [[deep-research-stack]] - Deep Research Stack：开源深度研究方案 ⭐
 
 ## 关键论文
 
