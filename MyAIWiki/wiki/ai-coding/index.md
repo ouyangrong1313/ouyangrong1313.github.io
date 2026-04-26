@@ -7,6 +7,7 @@ AI 辅助编程的实战经验、提示词模板、工作流总结。
 ## 核心资源
 
 ### 提示词模板
+- [[prompt-engineering]] - Prompt Engineering 指南 ⭐
 - [[prompts/function-implementation]] - 功能实现提示词
 - [[prompts/code-review]] - 代码审查提示词
 - [[prompts/refactoring]] - 重构提示词
@@ -20,6 +21,7 @@ AI 辅助编程的实战经验、提示词模板、工作流总结。
 ### 实战案例
 - [[cases/54万行代码重构]] - 大规模代码重构案例
 - [[cases/ai-customer-service]] - AI 客服实战
+- [[cat-wu-interview]] - Cat Wu 访谈：AI时代PM的唯一护城河 ⭐
 
 ## 核心原则
 

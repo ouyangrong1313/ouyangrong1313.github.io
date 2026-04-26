@@ -6,6 +6,8 @@
 - [[tool-use]] - 工具调用机制
 - [[memory-systems]] - 记忆系统
 - [[workflow-vs-agent]] - Workflow 与 Agent 的区别
+- [[harness-engineering]] - Harness Engineering 工程化落地指南 ⭐
+- [[agent-architectures]] - Agent 架构模式（ReAct/Plan-and-Execute）⭐
 
 ## 关键论文
 

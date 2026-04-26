@@ -15,9 +15,10 @@
 
 ## 最近更新
 
+- [[raw/学习笔记2025-index|学习笔记2025（343页AI学习手册）]] - 2026-04-26 ⭐
+- [[ai-agents/harness-engineering|Harness Engineering 工程化落地指南]] - 2026-04-26
+- [[ai-coding/cat-wu-interview|Cat Wu 访谈：AI时代PM的唯一护城河]] - 2026-04-26
 - [[ai-tech/ai-learning-path|AI 行业学习路线]] - 2026-04-24
-- [[productivity/karpathy-knowledge-system|Karpathy 知识库系统]] - 2026-04-17
-- [[content-creation/ai-learning-path-analysis|拆解：AI行业学习路线文章]] - 写作手法分析
 
 ## 标签索引
 

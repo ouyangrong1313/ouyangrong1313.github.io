@@ -5,6 +5,7 @@
 - [[rag-vs-finetuning]] - RAG 与微调的区别
 - [[knowledge-base-design]] - 知识库设计原则
 - [[context-engineering]] - 上下文工程
+- [[rag-fundamentals]] - RAG 基础 ⭐
 
 ## 进阶主题
 
