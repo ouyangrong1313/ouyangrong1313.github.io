@@ -15,10 +15,10 @@
 
 ## 最近更新
 
-- [[ai-agents/deep-research-stack|Deep Research Stack：开源深度研究方案]] - 2026-04-26 ⭐
+- [[ai-coding/skills|Skills 命令手册]] - 2026-04-26 ⭐
+- [[productivity/obsidian-claude-code-os|Obsidian + Claude Code 工作流]] - 2026-04-26
+- [[ai-agents/deep-research-stack|Deep Research Stack：开源深度研究方案]] - 2026-04-26
 - [[raw/学习笔记2025-index|学习笔记2025（343页AI学习手册）]] - 2026-04-26
-- [[ai-agents/harness-engineering|Harness Engineering 工程化落地指南]] - 2026-04-26
-- [[ai-coding/cat-wu-interview|Cat Wu 访谈：AI时代PM的唯一护城河]] - 2026-04-26
 
 ## 标签索引
 

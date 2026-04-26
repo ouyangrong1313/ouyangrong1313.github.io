@@ -95,8 +95,6 @@
 
 - [[ai-agents/index]]
 - [[rag-systems/index]]
-- [[content-creation/curiosity-loop]]
-- [[content-creation/anxiety-resonance]]
 
 ## 标签
 

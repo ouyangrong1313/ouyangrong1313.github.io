@@ -6,6 +6,9 @@ AI 辅助编程的实战经验、提示词模板、工作流总结。
 
 ## 核心资源
 
+### Skills 命令
+- [[skills]] - Skills 命令手册（/compile /lint /summary /weekly）⭐
+
 ### 提示词模板
 - [[prompt-engineering]] - Prompt Engineering 指南 ⭐
 - [[prompts/function-implementation]] - 功能实现提示词

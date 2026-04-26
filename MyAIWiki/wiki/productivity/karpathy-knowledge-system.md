@@ -72,9 +72,7 @@ Ingest（摄入）→ Query（查询）→ Lint（体检）
 
 ## 相关链接
 
-- [[second-brain]]
-- [[knowledge-management]]
-- [[obsidian-setup]]
+- [[obsidian-claude-code-os]]
 
 ## 标签
 

@@ -85,5 +85,4 @@ head_i = Attention(QW_i^Q, KW_i^K, VW_i^V)
 
 ## 相关链接
 
-- [[transformer-attention|Transformer与Attention机制]]
-- [[llm-fundamentals|大语言模型基础]]
+- [[index]]

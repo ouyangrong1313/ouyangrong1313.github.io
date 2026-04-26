@@ -65,5 +65,4 @@ Thought → Action → Observation → Thought → ...
 
 ## 相关链接
 
-- [[wiki/ai-agents/agent-architectures|Agent架构模式]]
-- [[wiki/ai-tech/llm-fundamentals|大语言模型基础]]
+- [[agent-architectures]]

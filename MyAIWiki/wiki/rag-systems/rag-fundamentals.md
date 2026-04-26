@@ -93,4 +93,4 @@ Query → 检索 → Context → LLM → Response
 ## 相关链接
 
 - [[index]]
-- [[wiki/ai-coding/prompt-engineering|Prompt Engineering]]
+- [[wiki/ai-coding/prompt-engineering|Prompt Engineering]]（路径格式待修正）
