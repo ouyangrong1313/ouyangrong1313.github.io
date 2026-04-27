@@ -16,6 +16,10 @@
 - [[autogpt-analysis]] - AutoGPT 深度分析
 - [[openclaw-analysis]] - OpenClaw 分析
 
+## 记忆系统专题
+
+- [[记忆是-agent-基建]] - 记忆是 Agent 基建（对话 Calvin@Vida）⭐
+
 ## 相关标签
 
 #主题/AI Agents

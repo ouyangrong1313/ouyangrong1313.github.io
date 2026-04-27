@@ -25,6 +25,7 @@ AI 辅助编程的实战经验、提示词模板、工作流总结。
 - [[cases/54万行代码重构]] - 大规模代码重构案例
 - [[cases/ai-customer-service]] - AI 客服实战
 - [[cat-wu-interview]] - Cat Wu 访谈：AI时代PM的唯一护城河 ⭐
+- [[ai给自己出题]] - 聪明人用AI做的，是给自己出题
 
 ## 核心原则
 

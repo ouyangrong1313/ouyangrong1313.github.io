@@ -15,10 +15,12 @@
 
 ## 最近更新
 
+- [[ai-coding/ai给自己出题|聪明人用AI做的，是给自己出题]] - 2026-04-27
+- [[content-creation/乔布斯1995遗失访谈|乔布斯1995年"遗失的访谈"]] - 2026-04-27
+- [[ai-agents/记忆是-agent-基建|记忆，是 Agent 基建]] - 2026-04-27 ⭐
 - [[ai-coding/skills|Skills 命令手册]] - 2026-04-26 ⭐
 - [[productivity/obsidian-claude-code-os|Obsidian + Claude Code 工作流]] - 2026-04-26
 - [[ai-agents/deep-research-stack|Deep Research Stack：开源深度研究方案]] - 2026-04-26
-- [[raw/学习笔记2025-index|学习笔记2025（343页AI学习手册）]] - 2026-04-26
 
 ## 标签索引
 
