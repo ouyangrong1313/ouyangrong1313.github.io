@@ -15,7 +15,8 @@
 
 ## 最近更新
 
-- [[ai-coding/谷歌开源agent-skills|谷歌开源 Agent Skills]] - 2026-04-27 ⭐
+- [[ai-agents/AI时代给人类留了最后一份工作-是农民|AI时代给人类留了最后一份工作，是农民]] - 2026-04-27 ⭐
+- [[ai-coding/谷歌开源agent-skills|谷歌开源 Agent Skills]] - 2026-04-27
 - [[ai-coding/claude-code深度使用指南|Claude Code 深度使用指南]] - 2026-04-27
 - [[ai-coding/ai给自己出题|聪明人用AI做的，是给自己出题]] - 2026-04-27
 - [[content-creation/乔布斯1995遗失访谈|乔布斯1995年"遗失的访谈"]] - 2026-04-27
