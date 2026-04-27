@@ -42,6 +42,6 @@ Authority × Safety、Safety × Capability、Capability × Adaptability、Capabi
 
 ## 标签
 
-- #主题/AI-Coding
-- #手法/权威背书
-- #场景/技术博客
+#主题/AI-Coding
+#手法/权威背书
+#场景/技术博客
