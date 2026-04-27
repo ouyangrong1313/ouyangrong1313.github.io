@@ -2,7 +2,7 @@
 
 ## 源文件
 
-`/Users/topsee/ouyangrong1313/MyAIWiki/raw/学习笔记2025.pdf`（343页）
+~~`/Users/topsee/ouyangrong1313/MyAIWiki/raw/学习笔记2025.pdf`（343页）~~（已删除）
 
 ## 笔记结构概览
 
@@ -183,4 +183,4 @@
 
 ## 标签
 
-#主题/AI科技 #主题/AIAgent #场景/技术博客
+#主题/AI科技 #主题/AI-Agent #场景/技术博客

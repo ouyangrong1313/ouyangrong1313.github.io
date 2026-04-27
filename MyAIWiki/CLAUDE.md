@@ -155,9 +155,9 @@ MyAIWiki/
 ## 标签体系
 
 ### 按主题
-- `#主题/AIAgent` - AI Agent 相关
+- `#主题/AI-Agent` - AI Agent 相关
 - `#主题/APP研发` - APP 开发相关
-- `#主题/AI Coding` - AI 编程相关
+- `#主题/AI-Coding` - AI 编程相关
 - `#主题/内容创作` - 写作相关
 - `#主题/效率` - 效率工具相关
 

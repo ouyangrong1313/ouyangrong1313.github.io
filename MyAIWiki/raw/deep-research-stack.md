@@ -165,4 +165,4 @@ Voxtral 是 Mistral 的原生音频模型系列，从头开始构建用于语音
 
 ## 标签
 
-#主题/AIAgent #主题/AI Coding #手法/对比冲突 #场景/技术博客
+#主题/AI-Agent #主题/AI-Coding #手法/对比冲突 #场景/技术博客

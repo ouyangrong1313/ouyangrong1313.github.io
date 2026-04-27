@@ -61,7 +61,7 @@ Cat的原话：如果Claude Code失败了但Anthropic整体成功，她会很开
 
 ## 标签
 
-#主题/AIAgent #主题/AI Coding #场景/技术博客
+#主题/AI-Agent #主题/AI-Coding #场景/技术博客
 
 ## 相关链接
 
