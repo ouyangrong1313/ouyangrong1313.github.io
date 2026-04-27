@@ -28,6 +28,7 @@ AI 辅助编程的实战经验、提示词模板、工作流总结。
 - [[ai给自己出题]] - 聪明人用AI做的，是给自己出题
 - [[谷歌开源agent-skills]] - 谷歌 Agent Skills：23000+ Stars 的 AI 编程纪律包 ⭐
 - [[你在用AI-AI也在悄悄引导你的选择]] - Linear CEO：AI 编程六个月的真实观察 ⭐
+- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] - Claude Code 架构深度解读 ⭐
 
 ## 核心原则
 

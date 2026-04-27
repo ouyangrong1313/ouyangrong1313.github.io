@@ -15,8 +15,8 @@
 
 ## 最近更新
 
-- [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑|陈春花：从岗位到角色]] - 2026-04-27 ⭐
-- [[02-ai-coding/你在用AI-AI也在悄悄引导你的选择|你在用 AI，AI 也在悄悄引导你的选择]] - 2026-04-27
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness|Claude Code 架构深度解读]] - 2026-04-27 ⭐
+- [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑|
 - [[03-productivity/2026年了-你的文件管理还
 - [[01-ai-agents/AI时代给人类留了最后一份工作-是农民|AI时代给人类留了最后一份工作，是农民]] - 2026-04-27
 - [[02-ai-coding/谷歌开源agent-skills|谷歌开源 Agent Skills]] - 2026-04-27
