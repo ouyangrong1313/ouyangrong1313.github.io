@@ -14,55 +14,47 @@
 
 ```
 MyAIWiki/
-├── raw/                    # 原始素材暂存区
-│   ├── articles/           # 收藏的文章原文
-│   ├── notes/             # 随手记的笔记
-│   └── screenshots/       # 截图/图片素材
+├── raw/                    # 原始素材区（杜威十进制）
+│   ├── inbox/              # 待处理入口（新素材先放这里）
+│   ├── articles/            # 已处理的原文存档
+│   ├── notes/               # 随手记的笔记
+│   └── screenshots/         # 截图/图片素材（预留）
 │
-├── wiki/                   # 编译后的知识库
-│   ├── master-index.md    # 主索引
+├── wiki/                    # 编译后的知识库（杜威十进制编号）
+│   ├── master-index.md      # 主索引
 │   │
-│   ├── ai-agents/         # AI Agent 落地方案 ⭐
+│   ├── 01-ai-agents/        # AI Agent 落地方案 ⭐
 │   │   ├── index.md
-│   │   ├── agent-architecture.md
-│   │   ├── tool-use.md
-│   │   ├── memory-systems.md
-│   │   ├── workflow-vs-agent.md
-│   │   └── cases/          # 落地案例
-│   │       ├── index.md
-│   │       └── *.md
+│   │   ├── *.md
+│   │   └── cases/           # 落地案例
+│   │       └── index.md
 │   │
-│   ├── app-dev/           # APP 研发流程 ⭐
+│   ├── 02-ai-coding/        # AI Coding ⭐
+│   │   └── index.md
+│   │
+│   ├── 03-productivity/     # 效率工具
+│   │   └── index.md
+│   │
+│   ├── 04-app-dev/         # APP 研发流程 ⭐
+│   │   └── index.md
+│   │
+│   ├── 05-content-creation/ # 内容创作
 │   │   ├── index.md
-│   │   ├── ios/           # iOS 研发
-│   │   ├── android/      # Android 研发
-│   │   ├── server/       # 后端服务
-│   │   └── architecture/  # 架构设计
+│   │   ├── hooks/           # 开头钩子库
+│   │   │   └── index.md
+│   │   └── structures/      # 文章结构库
+│   │       └── index.md
 │   │
-│   ├── ai-coding/        # AI Coding ⭐
-│   │   ├── index.md
-│   │   ├── prompts/      # 常用提示词
-│   │   ├── workflows/    # 工作流模板
-│   │   └── cases/        # 实战案例
+│   ├── 06-ai-tech/          # AI 技术趋势
+│   │   └── index.md
 │   │
-│   ├── rag-systems/       # RAG 系统
-│   │   ├── index.md
-│   │   └── *.md
-│   │
-│   ├── content-creation/   # 内容创作
-│   │   ├── index.md
-│   │   ├── hooks/        # 开头钩子库
-│   │   └── structures/   # 文章结构库
-│   │
-│   ├── productivity/      # 效率工具
-│   │   ├── index.md
-│   │   └── *.md
-│   │
-│   └── ai-tech/           # AI 技术趋势
-│       ├── index.md
-│       └── *.md
+│   └── 07-rag-systems/      # RAG 系统
+│       └── index.md
 │
-└── CLAUDE.md              # 本文件
+├── prompts/                 # 提示词模板
+│   └── bug-fix.md
+│
+└── CLAUDE.md                # 本文件
 ```
 
 ---
@@ -73,6 +65,35 @@ MyAIWiki/
 2. **累积式增长** - 每次查询、每次拆解都在增强知识库
 3. **索引即检索** - 聪明的文件结构替代复杂的检索算法
 4. **透明可解释** - 所有数据都是人眼可读的 Markdown
+
+---
+
+## 工作流：Inbox 入口
+
+新素材处理流程：
+```
+收到文章链接 → 保存到 raw/inbox/ → 编译成 wiki 页面 → 删除 inbox 中的原文
+```
+
+**为什么需要 Inbox？**
+- 减少信息焦虑：不确定要不要存档？先丢 inbox，定期处理
+- 避免 raw/ 变成垃圾堆：新素材直接进 inbox，有价值才转正
+
+---
+
+## 文件命名规范
+
+1. **统一用 `-` 连字符**（不用 `_` 或其他）
+2. **英文全部小写**
+3. **中文保持原样**
+4. **digest 后缀**：原文的拆解版本统一用 `-digest.md` 后缀
+5. **版本控制**：如需版本，用 `_v1`、`_v2`（下划线）
+
+**示例**：
+- `谷歌开源agent-skills.md` — 原文
+- `谷歌开源agent-skills-digest.md` — 拆解
+- `AI时代给人类留了最后一份工作-是农民.md` — 中文原文
+- `2026年了-你的文件管理还停留在新建文件夹吗-digest.md` — 中文拆解
 
 ---
 
@@ -107,7 +128,7 @@ MyAIWiki/
 | `/weekly` | 要求周复盘 | 复盘报告 |
 | `/idea` | 分享灵感 | 灵感记录文档 |
 
-详见 [[skills|Skills 命令手册]]
+详见 [[02-ai-coding/skills|Skills 命令手册]]
 
 ---
 
@@ -125,7 +146,7 @@ MyAIWiki/
 4. 7 个新角度 + 21 个开头钩子
 ```
 
-拆解结果会自动归档到 `wiki/content-creation/`，打上标签：
+拆解结果会自动归档到 `wiki/05-content-creation/`，打上标签：
 - `#主题/xxx` - 文章所属主题
 - `#手法/xxx` - 使用的写作手法
 - `#场景/xxx` - 适用场景
@@ -188,12 +209,13 @@ MyAIWiki/
 | 主题 | 路径 |
 |------|------|
 | 主索引 | wiki/master-index.md |
-| AI Agent 落地方案 | wiki/ai-agents/index.md |
-| APP 研发流程 | wiki/app-dev/index.md |
-| AI Coding | wiki/ai-coding/index.md |
-| 内容创作 | wiki/content-creation/index.md |
-| 效率工具 | wiki/productivity/index.md |
-| AI 技术趋势 | wiki/ai-tech/index.md |
+| AI Agent 落地方案 | wiki/01-ai-agents/index.md |
+| APP 研发流程 | wiki/04-app-dev/index.md |
+| AI Coding | wiki/02-ai-coding/index.md |
+| 内容创作 | wiki/05-content-creation/index.md |
+| 效率工具 | wiki/03-productivity/index.md |
+| AI 技术趋势 | wiki/06-ai-tech/index.md |
+| RAG 系统 | wiki/07-rag-systems/index.md |
 
 ---
 
@@ -201,7 +223,7 @@ MyAIWiki/
 
 ### 示例1：收集 Agent 落地方案
 ```
-把我发给你的 [URL] 保存到 raw/
+把我发给你的 [URL] 保存到 raw/inbox/
 提取这篇文章里的 Agent 落地方案，分析：
 - 这个方案解决了什么问题
 - 用了什么技术架构
@@ -221,5 +243,5 @@ MyAIWiki/
 - 哪些提示词特别有效
 - 踩了哪些坑
 - 下次可以怎么改进
-保存到 wiki/ai-coding/cases/ 下
+保存到 wiki/02-ai-coding/cases/ 下
 ```
