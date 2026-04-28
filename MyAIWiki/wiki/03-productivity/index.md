@@ -12,6 +12,7 @@
 - [[obsidian-claude-code-os]] - Obsidian + Claude Code 工作流 ⭐
 - [[karpathy-knowledge-system]] - Karpathy LLM Wiki 系统 ⭐
 - [[ai-learning-expert-perspective]] - AI 学习：专家视角 ⭐
+- [[use-ai-well-become-more-valuable]] - 用好AI的人，才更值钱 ⭐
 
 ## 文件管理
 
