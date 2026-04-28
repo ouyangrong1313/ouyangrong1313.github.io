@@ -15,8 +15,8 @@
 
 ## 最近更新
 
+- [[01-ai-agents/agent-principles-architecture-engineering|Agent 原理、架构与工程实践]] - 2026-04-28 ⭐
 - [[03-productivity/use-ai-well-become-more-valuable|用好AI的人，才更值钱]] - 2026-04-28 ⭐
-- [[01-ai-agents/ai-personal-knowledge-base-problems|AI 个人知识库：为什么还是那么难用]] - 2026-04-28 ⭐
 - [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness|Claude Code 架构深度解读]] - 2026-04-27 ⭐
 - [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑|
 - [[03-productivity/2026年了-你的文件管理还
