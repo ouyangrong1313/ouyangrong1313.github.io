@@ -10,6 +10,7 @@
 - [[obsidian-setup]] - Obsidian 配置
 - [[claude-code-workflow]] - Claude Code 工作流
 - [[obsidian-claude-code-os]] - Obsidian + Claude Code 工作流 ⭐
+- [[karpathy-knowledge-system]] - Karpathy LLM Wiki 系统 ⭐
 
 ## 文件管理
 
