@@ -15,6 +15,7 @@
 
 ## 最近更新
 
+- [[01-ai-agents/Skills驱动推理新范式|Skills 驱动推理新范式]] - 2026-04-30 ⭐
 - [[01-ai-agents/OpenClaw的正确打开方式|OpenClaw 的正确打开方式]] - 2026-04-29 ⭐⭐
 - [[01-ai-agents/智联网-移动互联网下一站|智联网：移动互联网下一站]] - 2026-04-29 ⭐⭐
 - [[01-ai-agents/agent-principles-architecture-engineering|Agent 原理、架构与工程实践]] - 2026-04-28 ⭐

@@ -12,6 +12,7 @@
 
 ## 关键论文
 
+- [[Skills驱动推理新范式]] - TRS：用技能卡片降低推理 Token 成本 ⭐
 - [[react-paper]] - ReAct: 推理+行动
 - [[autogpt-analysis]] - AutoGPT 深度分析
 - [[openclaw-analysis]] - OpenClaw 分析
