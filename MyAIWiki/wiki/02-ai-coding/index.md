@@ -22,13 +22,15 @@ AI 辅助编程的实战经验、提示词模板、工作流总结。
 - [[workflows/code-migration]] - 代码迁移流程
 
 ### 实战案例
-- [[cases/54万行代码重构]] - 大规模代码重构案例
+- [[vibe-coding]] - Vibe Coding：用 AI 写代码的正确姿势 ⭐
+- [[oh-my-codex]] - oh-my-codex：让 Codex CLI 拥有 30 个专家团队 ⭐
 - [[cases/ai-customer-service]] - AI 客服实战
 - [[cat-wu-interview]] - Cat Wu 访谈：AI时代PM的唯一护城河 ⭐
 - [[ai给自己出题]] - 聪明人用AI做的，是给自己出题
 - [[谷歌开源agent-skills]] - 谷歌 Agent Skills：23000+ Stars 的 AI 编程纪律包 ⭐
 - [[你在用AI-AI也在悄悄引导你的选择]] - Linear CEO：AI 编程六个月的真实观察 ⭐
 - [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] - Claude Code 架构深度解读 ⭐
+- [[用Agent评测思路管理AI-Coding-31万行代码重构实践]] - 用Agent评测思路管理AI Coding：31万行代码重构实践 ⭐
 
 ## 核心原则
 

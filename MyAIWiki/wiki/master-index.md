@@ -15,7 +15,13 @@
 
 ## 最近更新
 
-- [[01-ai-agents/Skills驱动推理新范式|Skills 驱动推理新范式]] - 2026-04-30 ⭐
+- [[01-ai-agents/perplexity-agent-skills-design|Perplexity Agent Skills 设计规范]] - Skill 设计迭代维护的 5 步法、4 类评测、3 条红线 - 2026-05-10 ⭐
+- [[01-ai-agents/garry-tan-ai-second-brain|Garry Tan的AI第二大脑]] - 薄路由/厚技能/厚数据，复利型AI系统 ⭐ - 2026-05-10
+- [[01-ai-agents/openclaw-shi-yong-an-li-ji-qiao|OpenClaw使用案例与技巧]] - 写作助理/Review/主动推送等实际场景 - 2026-05-10 ⭐
+- [[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]] - 用Agent评测思路管理AI Coding：31万行代码重构实践 - 2026-05-07 ⭐
+- [[01-ai-agents/agent-shi-dai-jia-gou-shi-geng-zhi-de-shen-dian-de-xi-tong-neng-li-digest|Agent时代，架构师更值得沉淀的系统能力]] - 2026-05-05 ⭐
+- [[06-ai-tech/凯文凯利-真正的好生意都在卖看不见的东西|凯文·凯利：真正的好生意，都在卖看不见的东西]] - 2026-05-05 ⭐
+- [[02-ai-coding/vibe-coding|Vibe Coding：用 AI 写代码的正确姿势]] - 2026-05-05 ⭐
 - [[01-ai-agents/OpenClaw的正确打开方式|OpenClaw 的正确打开方式]] - 2026-04-29 ⭐⭐
 - [[01-ai-agents/智联网-移动互联网下一站|智联网：移动互联网下一站]] - 2026-04-29 ⭐⭐
 - [[01-ai-agents/agent-principles-architecture-engineering|Agent 原理、架构与工程实践]] - 2026-04-28 ⭐
