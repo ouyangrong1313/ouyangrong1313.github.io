@@ -1,0 +1,107 @@
+<h1 id="perplexity-agent-skills-设计规范拆解">Perplexity Agent Skills 设计规范拆解</h1>
+
+<h2 id="核心观点5-个">核心观点（5 个）</h2>
+
+<ol>
+  <li>
+    <p><strong>Skill ≠ 代码</strong>：不是写代码，是为模型构建上下文。工程师写代码的本能直接套到 Skill 上，几乎一定会失败。</p>
+  </li>
+  <li>
+    <p><strong>Description 是路由触发器，不是文档</strong>：以 <code class="language-plaintext highlighter-rouge">Load when…</code> 开头 ≤50 词，描述用户意图而非工作流。</p>
+  </li>
+  <li>
+    <p><strong>Gotchas 才是最高价值内容</strong>：Skill 的价值不在于告诉模型”怎么做”，而在于告诉模型”别踩哪些坑”。</p>
+  </li>
+  <li>
+    <p><strong>越靠上的层越贵</strong>：Index ~100 tokens/Skill（永远付），Load ~5,000 tokens（会话内持续占用），Runtime 无上界（仅实际读取时付费）。</p>
+  </li>
+  <li>
+    <p><strong>先写 Evals，后写 Skill</strong>：负例与正例同等重要，甚至更重要。</p>
+  </li>
+</ol>
+
+<h2 id="7-个分析角度">7 个分析角度</h2>
+
+<h3 id="1-范式差异python-vs-skill">1. 范式差异（Python vs Skill）</h3>
+<p>| Python | Skill |
+|——–|——-|
+| Simple &gt; complex | 复杂性是特性 |
+| Explicit &gt; implicit | 隐式模式匹配 |
+| Sparse &gt; dense | 每 token 榨出最大信号 |
+| 规则优先 | Gotchas 优先 |
+| 好实现 = 好解释 | 好解释 = 模型已会 = 删掉 |</p>
+
+<h3 id="2-四重定义">2. 四重定义</h3>
+<ul>
+  <li>目录（多级层次结构）</li>
+  <li>格式（frontmatter 规范）</li>
+  <li>可调用（加载流程）</li>
+  <li>渐进式（成本分层）</li>
+</ul>
+
+<h3 id="3-五步构建法">3. 五步构建法</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>Step 0: 先写 Evals（最重要！）
+Step 1: 写 Description（Load when...）
+Step 2: 写 Body（意图陈述，非命令序列）
+Step 3: 用层次结构（scripts/references/assets/config）
+Step 4: 迭代（小词级调优）
+Step 5: Ship
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="4-gotchas-飞轮">4. Gotchas 飞轮</h3>
+<ul>
+  <li>Agent 错了 → 加 gotcha</li>
+  <li>误加载 → 收紧描述 + 加负例</li>
+  <li>该加载没加载 → 加正例</li>
+  <li>system prompt 变了 → 检查冲突</li>
+</ul>
+
+<h3 id="5-四类评测">5. 四类评测</h3>
+<ul>
+  <li>加载评测（精度/召回/禁止）</li>
+  <li>渐进加载评测（读取附属文件）</li>
+  <li>端到端任务评测（LLM judge）</li>
+  <li>跨模型评测（多模型同时跑）</li>
+</ul>
+
+<h3 id="6-三条红线">6. 三条红线</h3>
+<ol>
+  <li>模型已会的别写</li>
+  <li>system prompt 重复的别写</li>
+  <li>变化太快的别写</li>
+</ol>
+
+<h3 id="7-判断标准">7. 判断标准</h3>
+<p><strong>“没有这句话，Agent 会做错吗？”</strong> 答否即删。</p>
+
+<hr />
+
+<h2 id="14-个开头钩子">14 个开头钩子</h2>
+
+<ol>
+  <li>“写 Skill 不是写代码，是为模型构建上下文”</li>
+  <li>“Description 写 README 是最常见的错误——它其实是路由触发器”</li>
+  <li>“Gotchas 才是最高价值内容，不是命令序列”</li>
+  <li>“Index 层是最贵的奢侈品柜台，每 token 都在和其他 Skill 抢预算”</li>
+  <li>“先写 Evals 是反直觉但回报最高的步骤”</li>
+  <li>“从 80/20 到 99.9%，全靠 gotcha 列表生长”</li>
+  <li>“不要规定路径，规定意图——模型在异常路径上表现更好”</li>
+  <li>“Skill 是仅追加为主的，不是每次都重写”</li>
+  <li>“PR 改描述却没附 evals，说明已经走偏了”</li>
+  <li>“Every Skill is a tax”</li>
+  <li>“Load when… 这个开头格式不是随便写的，是路由触发的语法”</li>
+  <li>“层次结构有代价，需要导航工具来对冲间接性”</li>
+  <li>“Action at a distance：新 Skill 会悄无声息降级现有 Skill”</li>
+  <li>“写 Skill 的能力本身在复利增长”</li>
+</ol>
+
+<hr />
+
+<p>标签：#主题/AI Agent · #主题/Skill设计 · #场景/知识付费
+原文：https://mp.weixin.qq.com/s/vXOpiUiAK-fG6GUgi2sD-A</p>

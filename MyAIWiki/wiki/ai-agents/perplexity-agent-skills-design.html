@@ -1,0 +1,87 @@
+<h1 id="perplexity-agent-skills-设计规范">Perplexity Agent Skills 设计规范</h1>
+
+<blockquote>
+  <p>原文：<a href="https://research.perplexity.ai/articles/designing-refining-and-maintaining-agent-skills-at-perplexity">Designing, Refining, and Maintaining Agent Skills at Perplexity</a></p>
+</blockquote>
+
+<h2 id="核心范式">核心范式</h2>
+
+<p><strong>Skill ≠ 代码</strong>。写 Skill 不是写代码，是为模型构建上下文。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Python 信条</th>
+      <th>Skill 反信条</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Simple &gt; complex</td>
+      <td>复杂性是特性</td>
+    </tr>
+    <tr>
+      <td>Explicit &gt; implicit</td>
+      <td>隐式模式匹配</td>
+    </tr>
+    <tr>
+      <td>每 token 都要榨出最大信号</td>
+      <td>Gotchas 才是最高价值</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="四步构建法">四步构建法</h2>
+
+<ol>
+  <li><strong>Step 0</strong> — 先写 Evals（最重要！）</li>
+  <li><strong>Step 1</strong> — 写 Description（<code class="language-plaintext highlighter-rouge">Load when...</code> ≤50 词）</li>
+  <li><strong>Step 2</strong> — 写 Body（意图陈述，非命令序列）</li>
+  <li><strong>Step 3</strong> — 用层次结构（scripts/references/assets/config）</li>
+</ol>
+
+<h2 id="成本模型">成本模型</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>层级</th>
+      <th>预算</th>
+      <th>何时付费</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Index</td>
+      <td>~100 tokens</td>
+      <td>每次会话、永远</td>
+    </tr>
+    <tr>
+      <td>Load</td>
+      <td>~5,000 tokens</td>
+      <td>会话内持续占用</td>
+    </tr>
+    <tr>
+      <td>Runtime</td>
+      <td>无上界</td>
+      <td>仅实际读取时</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="维护gotchas-飞轮">维护：Gotchas 飞轮</h2>
+
+<ul>
+  <li>Agent 错了 → 加 gotcha</li>
+  <li>误加载 → 收紧描述 + 加负例</li>
+  <li>该加载没加载 → 加正例</li>
+</ul>
+
+<h2 id="判断标准">判断标准</h2>
+
+<p><strong>“没有这句话，Agent 会做错吗？”</strong> 答否即删。</p>
+
+<hr />
+
+<p>标签：#主题/AI Agent · #主题/Skill设计
+原文：https://mp.weixin.qq.com/s/vXOpiUiAK-fG6GUgi2sD-A</p>
