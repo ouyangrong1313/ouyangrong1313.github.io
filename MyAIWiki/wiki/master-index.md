@@ -15,6 +15,8 @@
 
 ## 最近更新
 
+- [[01-ai-agents/good-ai-pm-bad-ai-pm|Good AI PM / Bad AI PM：AI 时代，PM 藏不住了]] - AI 压缩协调型劳动后，真正稀缺的是洞察与判断 - 2026-05-13 ⭐
+- [[02-ai-coding/claude-obsidian-second-brain|Claude + Obsidian 第二大脑系统]] - AI 自动维护知识库，5分钟搭建，终身受益 - 2026-05-12 ⭐
 - [[01-ai-agents/perplexity-agent-skills-design|Perplexity Agent Skills 设计规范]] - Skill 设计迭代维护的 5 步法、4 类评测、3 条红线 - 2026-05-10 ⭐
 - [[01-ai-agents/garry-tan-ai-second-brain|Garry Tan的AI第二大脑]] - 薄路由/厚技能/厚数据，复利型AI系统 ⭐ - 2026-05-10
 - [[01-ai-agents/openclaw-shi-yong-an-li-ji-qiao|OpenClaw使用案例与技巧]] - 写作助理/Review/主动推送等实际场景 - 2026-05-10 ⭐
@@ -49,3 +51,4 @@
 
 ### 按场景
 #场景/知识付费 #场景/技术博客 #场景/公众号长文 #场景/产品介绍 #场景/落地案例
+- [01-ai-agents / 深度解析 LLM Wiki / Obsidian-Wiki / GBrain：Agent 时代知识的“自组织”与“自进化”](./01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain.md)

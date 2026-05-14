@@ -14,14 +14,17 @@
 
 ```
 MyAIWiki/
-├── raw/                    # 原始素材区（杜威十进制）
+├── .ai-wiki-schema.md      # AI 维护规则（核心！）
+├── log.md                   # 时间序变更记录
+├── raw/                     # 原始素材区（不可修改）
 │   ├── inbox/              # 待处理入口（新素材先放这里）
-│   ├── articles/            # 已处理的原文存档
-│   ├── notes/               # 随手记的笔记
-│   └── screenshots/         # 截图/图片素材（预留）
+│   ├── articles/           # 已处理的原文存档
+│   ├── notes/              # 随手记的笔记
+│   └── screenshots/        # 截图/图片素材（预留）
 │
-├── wiki/                    # 编译后的知识库（杜威十进制编号）
+├── wiki/                    # 编译后的知识库（AI 写）
 │   ├── master-index.md      # 主索引
+│   ├── lint-report-*.md    # 健康检查报告
 │   │
 │   ├── 01-ai-agents/        # AI Agent 落地方案 ⭐
 │   │   ├── index.md
@@ -61,10 +64,11 @@ MyAIWiki/
 
 ## 核心原则
 
-1. **LLM 写，你读** - wiki 是 LLM 的领域，你很少手动编辑
-2. **累积式增长** - 每次查询、每次拆解都在增强知识库
-3. **索引即检索** - 聪明的文件结构替代复杂的检索算法
-4. **透明可解释** - 所有数据都是人眼可读的 Markdown
+1. **AI 写 wiki，人类读 wiki** - AI 负责所有维护工作（Ingest/Query/Lint），人类只做高价值决策
+2. **Schema 驱动** - `.ai-wiki-schema.md` 定义了 AI 维护规则，是知识库的核心
+3. **累积式增长** - wiki 是持久复合的产物，不是每次重新发现知识
+4. **索引即检索** - 聪明的文件结构替代复杂的检索算法
+5. **透明可追踪** - 所有变更记录到 `log.md`
 
 ---
 
@@ -244,4 +248,37 @@ MyAIWiki/
 - 踩了哪些坑
 - 下次可以怎么改进
 保存到 wiki/02-ai-coding/cases/ 下
+```
+
+### 示例4：晨间简报
+```bash
+# 手动运行晨间简报
+python3 ~/ouyangrong1313/MyAIWiki/scripts/morning-digest.py
+```
+
+### 示例5：Lint 健康检查
+```
+检查一下知识库的健康状况：
+1. 孤立页面（没有被引用）
+2. 过时内容（被新来源更新）
+3. 缺失交叉引用
+生成报告到 wiki/lint-report-YYYY-MM.md
+```
+
+---
+
+## 自动化
+
+### 晨间简报（可选）
+每天 7:30 自动运行：
+```bash
+# 设置 cron job
+(crontab -l 2>/dev/null; echo "30 7 * * * python3 ~/ouyangrong1313/MyAIWiki/scripts/morning-digest.py") | crontab -
+```
+
+### 每月 Lint
+每月最后一天健康检查：
+```bash
+# 设置每月最后一天运行 lint
+(crontab -l 2>/dev/null; echo "0 20 28-31 * * python3 ~/ouyangrong1313/MyAIWiki/scripts/morning-digest.py --lint") | crontab -
 ```

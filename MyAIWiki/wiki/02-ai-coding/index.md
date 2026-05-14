@@ -31,6 +31,12 @@ AI 辅助编程的实战经验、提示词模板、工作流总结。
 - [[你在用AI-AI也在悄悄引导你的选择]] - Linear CEO：AI 编程六个月的真实观察 ⭐
 - [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] - Claude Code 架构深度解读 ⭐
 - [[用Agent评测思路管理AI-Coding-31万行代码重构实践]] - 用Agent评测思路管理AI Coding：31万行代码重构实践 ⭐
+- [[吴恩达AI提示词课]] - 吴恩达 AI Prompting 课程精华：三层搜索模型、Sycophancy 对抗 ⭐
+- [[软件工程的功底是智能时代生死攸关的要素]] - AI 时代软件工程基本功的系统性提醒：复杂性、技术债、理解债与工程治理
+- [[软件工程的功底是智能时代生死攸关的要素-digest]] - 上一篇的速读摘要版
+- [[从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]] - 把软件工程基本功映射到 Agent / Skill / 知识库 / 验证闭环的实践理解
+- [[Codex才是最适合普通人的顶级牛马-Agent]] - 从聊天框到 Agent 工作台：项目目录、Skill、Computer Use 与多线程调度
+- [[Codex才是最适合普通人的顶级牛马-Agent-digest]] - 上一篇的速读摘要版
 
 ## 核心原则
 
