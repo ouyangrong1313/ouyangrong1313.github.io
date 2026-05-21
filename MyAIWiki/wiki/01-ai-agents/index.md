@@ -45,4 +45,6 @@
 ## 相关标签
 
 #主题/AI-Agent
-- [深度解析 LLM Wiki / Obsidian-Wiki / GBrain：Agent 时代知识的“自组织”与“自进化”](./deep-analysis-llm-wiki-obsidian-wiki-gbrain.md)
+- [深度解析 LLM Wiki / Obsidian-Wiki / GBrain：Agent 时代知识的”自组织”与”自进化”](./deep-analysis-llm-wiki-obsidian-wiki-gbrain.md)
+- [[hermes-obsidian-llm-wiki-knowledge-base]] - Hermes+Obsidian+LLM Wiki 本地知识库：三个工具协作自动化 ⭐ - 2026-05-14
+- [[hermes-agent-masterclass]] - Hermes Agent Masterclass：Akshay 深度教程，90K stars 的技术细节 ⭐ - 2026-05-14

@@ -1,10 +1,8 @@
 # AI Coding
 
-AI 辅助编程的工作流、工具和实践。
+目录页面
 
-## 目录
+## 页面索引
 
-- [Matt Pocock Skills](mattpocock-skills.md) — 30k star 的 Claude Code Skill 集合
-
-## 标签
-#主题/AI Coding
+- [Claude Code 大型代码库最佳实践](./claude-code-large-codebase-best-practices.md)
+- [谷歌开源 agent-skills](./谷歌开源agent-skills.md)

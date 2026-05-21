@@ -1,54 +1,52 @@
-# Wiki Index
-
-## Active Wikis
-
-- [[01-ai-agents/index|AI Agents]] ⭐ - AI Agent 落地方案
-- [[01-ai-agents/cases/index|Agent Cases]] - 落地案例库
-- [[04-app-dev/index|APP Dev]] - APP 研发流程
-- [[02-ai-coding/index|AI Coding]] ⭐ - AI 辅助编程
-- [[07-rag-systems/index|RAG Systems]] - RAG 系统
-- [[05-content-creation/index|Content Creation]] - 内容创作
-- [[05-content-creation/hooks/index|写作钩子库]] - 开头钩子积累
-- [[05-content-creation/structures/index|文章结构库]] - 结构模板积累
-- [[03-productivity/index|Productivity]] - 效率工具
-- [[06-ai-tech/index|AI Tech]] - AI 技术趋势
+# AI 知识库索引
 
 ## 最近更新
 
-- [[01-ai-agents/good-ai-pm-bad-ai-pm|Good AI PM / Bad AI PM：AI 时代，PM 藏不住了]] - AI 压缩协调型劳动后，真正稀缺的是洞察与判断 - 2026-05-13 ⭐
-- [[02-ai-coding/claude-obsidian-second-brain|Claude + Obsidian 第二大脑系统]] - AI 自动维护知识库，5分钟搭建，终身受益 - 2026-05-12 ⭐
-- [[01-ai-agents/perplexity-agent-skills-design|Perplexity Agent Skills 设计规范]] - Skill 设计迭代维护的 5 步法、4 类评测、3 条红线 - 2026-05-10 ⭐
-- [[01-ai-agents/garry-tan-ai-second-brain|Garry Tan的AI第二大脑]] - 薄路由/厚技能/厚数据，复利型AI系统 ⭐ - 2026-05-10
-- [[01-ai-agents/openclaw-shi-yong-an-li-ji-qiao|OpenClaw使用案例与技巧]] - 写作助理/Review/主动推送等实际场景 - 2026-05-10 ⭐
-- [[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]] - 用Agent评测思路管理AI Coding：31万行代码重构实践 - 2026-05-07 ⭐
-- [[01-ai-agents/agent-shi-dai-jia-gou-shi-geng-zhi-de-shen-dian-de-xi-tong-neng-li-digest|Agent时代，架构师更值得沉淀的系统能力]] - 2026-05-05 ⭐
-- [[06-ai-tech/凯文凯利-真正的好生意都在卖看不见的东西|凯文·凯利：真正的好生意，都在卖看不见的东西]] - 2026-05-05 ⭐
-- [[02-ai-coding/vibe-coding|Vibe Coding：用 AI 写代码的正确姿势]] - 2026-05-05 ⭐
-- [[01-ai-agents/OpenClaw的正确打开方式|OpenClaw 的正确打开方式]] - 2026-04-29 ⭐⭐
-- [[01-ai-agents/智联网-移动互联网下一站|智联网：移动互联网下一站]] - 2026-04-29 ⭐⭐
-- [[01-ai-agents/agent-principles-architecture-engineering|Agent 原理、架构与工程实践]] - 2026-04-28 ⭐
-- [[03-productivity/use-ai-well-become-more-valuable|用好AI的人，才更值钱]] - 2026-04-28 ⭐
-- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness|Claude Code 架构深度解读]] - 2026-04-27 ⭐
-- [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑|
-- [[03-productivity/2026年了-你的文件管理还
-- [[01-ai-agents/AI时代给人类留了最后一份工作-是农民|AI时代给人类留了最后一份工作，是农民]] - 2026-04-27
-- [[02-ai-coding/谷歌开源agent-skills|谷歌开源 Agent Skills]] - 2026-04-27
-- [[02-ai-coding/claude-code深度使用指南|Claude Code 深度使用指南]] - 2026-04-27
-- [[02-ai-coding/ai给自己出题|聪明人用AI做的，是给自己出题]] - 2026-04-27
-- [[05-content-creation/乔布斯1995遗失访谈|乔布斯1995年"遗失的访谈"]] - 2026-04-27
-- [[01-ai-agents/记忆是-agent-基建|记忆，是 Agent 基建]] - 2026-04-27 ⭐
-- [[02-ai-coding/skills|Skills 命令手册]] - 2026-04-26 ⭐
-- [[03-productivity/obsidian-claude-code-os|Obsidian + Claude Code 工作流]] - 2026-04-26
-- [[01-ai-agents/deep-research-stack|Deep Research Stack：开源深度研究方案]] - 2026-04-26
+- [Codex配置原则总览](./02-ai-coding/Codex配置原则总览.md) — 2026-05-21
+- [Codex工具入口与能力边界](./02-ai-coding/Codex工具入口与能力边界.md) — 2026-05-21
+- [多Agent使用边界与并行判定](./02-ai-coding/多Agent使用边界与并行判定.md) — 2026-05-21
+- [任务类型到验证模板](./02-ai-coding/任务类型到验证模板.md) — 2026-05-21
+- [Codex长期线程设计草案](./02-ai-coding/Codex长期线程设计草案.md) — 2026-05-21
+- [Codex配置下一步改造：从规则层走向线程、工具、目标与共享记忆](./02-ai-coding/Codex配置下一步改造-从规则层走向线程工具目标与共享记忆.md) — 2026-05-21
+- [来自 Codex 官方团队的分享：如何把 Codex 用到极致](./02-ai-coding/来自Codex官方团队的分享-如何把Codex用到极致.md) — 2026-05-21
+- [知识卡片编译模板：长文如何压成 raw / digest / wiki 三层](./02-ai-coding/知识卡片编译模板-长文如何压成raw-digest-wiki三层.md) — 2026-05-20
+- [MyAIWiki写入规范与验证模板](./02-ai-coding/MyAIWiki写入规范与验证模板.md) — 2026-05-20
+- [Codex配置优化清单：从Harness视角改造AGENTS、Skills、知识库与验证闭环](./02-ai-coding/Codex配置优化清单-从Harness视角.md) — 2026-05-20
+- [从Prompt、Context到Harness，工程的三次进化与终局之战](./02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战.md) — 2026-05-20
+- [你不知道的 Agent：原理、架构与工程实践](./ai-agents/you-dont-know-agent-principles-architecture-engineering.md) — 2026-05-16
+- [How to Build a Personal AI System With Claude](./ai-agents/how-to-build-personal-ai-system-with-claude.md) — 2026-05-16
+- [Claude Code 大型代码库最佳实践](./ai-coding/claude-code-large-codebase-best-practices.md) — 2026-05-16
+- [Agent Skills 系统性综述](./ai-agents/agent-skills-systematic-survey.md) — 2026-05-16
+- [2026 LLM工程师路线图](./ai-agents/2026-llm-engineer-roadmap.md) — 2026-05-15
 
-## 标签索引
+## 分类
 
-### 按主题
-#主题/AI-Agent #主题/APP研发 #主题/AI-Coding #主题/内容创作 #主题/效率 #主题/AI科技 #主题/RAG系统
+### AI Agents
+- [你不知道的 Agent：原理、架构与工程实践](./ai-agents/you-dont-know-agent-principles-architecture-engineering.md)
+- [How to Build a Personal AI System With Claude](./ai-agents/how-to-build-personal-ai-system-with-claude.md)
+- [2026 LLM工程师路线图](./ai-agents/2026-llm-engineer-roadmap.md)
+- [Agent Skills 系统性综述](./ai-agents/agent-skills-systematic-survey.md)
 
-### 按手法
-#手法/焦虑共鸣 #手法/对比冲突 #手法/好奇心循环 #手法/权威背书 #手法/开头钩子 #手法/文章结构
+### AI Coding
+- [Codex配置原则总览](./02-ai-coding/Codex配置原则总览.md)
+- [Codex工具入口与能力边界](./02-ai-coding/Codex工具入口与能力边界.md)
+- [多Agent使用边界与并行判定](./02-ai-coding/多Agent使用边界与并行判定.md)
+- [任务类型到验证模板](./02-ai-coding/任务类型到验证模板.md)
+- [Codex长期线程设计草案](./02-ai-coding/Codex长期线程设计草案.md)
+- [Codex配置下一步改造：从规则层走向线程、工具、目标与共享记忆](./02-ai-coding/Codex配置下一步改造-从规则层走向线程工具目标与共享记忆.md)
+- [来自 Codex 官方团队的分享：如何把 Codex 用到极致](./02-ai-coding/来自Codex官方团队的分享-如何把Codex用到极致.md)
+- [知识卡片编译模板：长文如何压成 raw / digest / wiki 三层](./02-ai-coding/知识卡片编译模板-长文如何压成raw-digest-wiki三层.md)
+- [MyAIWiki写入规范与验证模板](./02-ai-coding/MyAIWiki写入规范与验证模板.md)
+- [Codex配置优化清单：从Harness视角改造AGENTS、Skills、知识库与验证闭环](./02-ai-coding/Codex配置优化清单-从Harness视角.md)
+- [从Prompt、Context到Harness，工程的三次进化与终局之战](./02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战.md)
+- [Claude Code 大型代码库最佳实践](./ai-coding/claude-code-large-codebase-best-practices.md)
+- [谷歌开源 agent-skills](./ai-coding/谷歌开源agent-skills.md)
 
-### 按场景
-#场景/知识付费 #场景/技术博客 #场景/公众号长文 #场景/产品介绍 #场景/落地案例
-- [01-ai-agents / 深度解析 LLM Wiki / Obsidian-Wiki / GBrain：Agent 时代知识的“自组织”与“自进化”](./01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain.md)
+### AI Tech
+（暂无页面）
+
+### Productivity
+（暂无页面）
+
+### Content Creation
+（暂无页面）
