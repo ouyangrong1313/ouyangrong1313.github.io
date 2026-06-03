@@ -4,6 +4,115 @@
 
 ---
 
+## 2026-06-03
+### ingest | Claude Code 团队 5 条工作原则 - Fiona Fung 分享
+- 来源：https://mp.weixin.qq.com/s/iBELIhdHf44aWKs0Z-Iudg
+- 转载方：卡兹克（公众号）
+- 原始作者：Fiona Fung（Anthropic Claude Code 团队工程总监）
+- 原文：raw/articles/Claude-Code团队5条工作原则-Fiona-Fung分享.md
+- 拆解：raw/articles/Claude-Code团队5条工作原则-Fiona-Fung分享-digest.md
+- wiki：wiki/02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享.md
+- 拆解（wiki 版）：wiki/02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享-digest.md
+- 标签：#主题/AI-Coding #主题/AI-Native #主题/工程管理 #主题/组织文化 #手法/范式反思 #场景/Anthropic一手
+- 说明：自动编译草稿，重点提炼"JIT 规划 + 自动化肌肉记忆 + Trust but verify + Taste is scarce + 团队级 harness + 3 个没答案的问题"；与 [[54万行代码的顿悟]] / [[YC如何进行AI-Native组织改造]] / [[AI-Coding的顿悟时刻]] 同主线（范式/组织/实操三层合并 = 完整 AI-native 蓝图）。Fiona 公开承认 3 个没答案的问题（iOS/Android 团队、自动化 review 边界、模糊角色信心）这一点比很多 AI 公司都强
+
+### ingest | YC 如何进行 AI-Native 组织改造：Agent 能力要向所有人开放
+- 来源：https://mp.weixin.qq.com/s/dcpsur_udGz6tLW-yARU8w
+- 转载方：Founder Park
+- 采访对象：Pete Koomen（YC 合伙人 + Optimizely 创始人）+ Gary（即 Garry Tan，YC 总裁）
+- 原文：raw/articles/YC如何进行AI-Native组织改造-Agent能力要向所有人开放.md
+- 拆解：raw/articles/YC如何进行AI-Native组织改造-Agent能力要向所有人开放-digest.md
+- wiki：wiki/02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放.md
+- 拆解（wiki 版）：wiki/02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放-digest.md
+- 标签：#主题/AI-Coding #主题/AI-Native #主题/AI-Agent #主题/Harness #主题/Skill #主题/工程管理 #主题/组织文化 #手法/范式反思 #场景/YC播客
+- 说明：自动编译草稿。**关键发现**：文中的 Gary 就是 [[54万行代码的顿悟]] 的作者 Garry Tan，**Gbrain 就是 GBrain**，是同一个人同一段时间的两次叙述。提炼"350+ 工具注册表 + Dream Cycle + Skillify/check resolvable (DRY+MECE) + Egalitarian + Trust by default + Horseless Carriages 批评 + Agent 包裹确定性工具"；建议人工复核：(1) [[任务类型到验证模板]] 是否补"知识/Markdown/Skill 验证"类型；(2) MyAIWiki 是否加 weekly Dream Cycle 让 AI 读本周新加内容自动归并/提炼/改进
+
+### ingest | AI Coding 的顿悟时刻
+- 来源：https://mp.weixin.qq.com/s/zx5yCntR5QfRdbBrWElCOQ
+- 作者：未署名（实战派，笔触与宝玉风格相似但未确认）
+- 原文：raw/articles/AI-Coding的顿悟时刻.md
+- 拆解：raw/articles/AI-Coding的顿悟时刻-digest.md
+- wiki：wiki/02-ai-coding/AI-Coding的顿悟时刻.md
+- 拆解（wiki 版）：wiki/02-ai-coding/AI-Coding的顿悟时刻-digest.md
+- 标签：#主题/AI-Coding #主题/工程管理 #主题/AI-Native #主题/架构 #手法/经济反转 #手法/范式反思 #场景/公司落地
+- 说明：自动编译草稿，重点提炼"工厂模式半年标配 + Spec→LDD 流水线 + Scrum 失效论 + 未来瓶颈=需求定义+架构设计 + 4%成本换100%产出+组织向两端收缩"；与 [[54万行代码的顿悟]] 互为镜像（工程师个人范式 vs 团队流程+组织重构）
+
+### ingest | 54万行代码的顿悟：Markdown才是新编程方式
+- 来源：https://mp.weixin.qq.com/s/cqyQma3jFUlZf4_uJnH5lA
+- 原文作者：Garry Tan（Y Combinator 总裁）
+- 原文出处：X 长文 https://x.com/garrytan/status/2061454423034110372
+- 原文：raw/articles/54万行代码的顿悟-Markdown才是新编程方式.md
+- 拆解：raw/articles/54万行代码的顿悟-Markdown才是新编程方式-digest.md
+- wiki：wiki/02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式.md
+- 拆解（wiki 版）：wiki/02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式-digest.md
+- 标签：#主题/AI-Coding #主题/AI-Agent #主题/Harness #主题/工程管理 #主题/Skill #手法/范式反思 #场景/YC公开课
+- 说明：自动编译草稿，重点提炼"代码/模型经济方程反转 + Markdown 是新编程方式 + Skillify 循环 + Tokenmaxxing"；与 [[Claude-Code负责人谈AI原生工程组织]] 互为镜像（组织侧 vs 工程师侧）；建议人工复核"测试 Markdown 作为新验证类型"是否要写进 [[任务类型到验证模板]]
+
+### ingest | 大家都在说「软件工厂」，但90%的CEO不知道自己公司在第几级
+- 来源：https://mp.weixin.qq.com/s/HyWmGabUHQUnOYufiQZyCA
+- 原文作者：Alex Lieberman（tenex_labs 创始人）
+- 原文：raw/articles/大家都在说软件工厂-但90的CEO不知道自己公司在第几级.md
+- 拆解：raw/articles/大家都在说软件工厂-但90的CEO不知道自己公司在第几级-digest.md
+- wiki：wiki/02-ai-coding/大家都在说软件工厂-但90的CEO不知道自己公司在第几级.md
+- 拆解（wiki 版）：wiki/02-ai-coding/大家都在说软件工厂-但90的CEO不知道自己公司在第几级-digest.md
+- 标签：#主题/AI-Coding #主题/AI-Agent #主题/工程管理 #主题/Agent组织 #手法/阶段模型 #场景/公众号长文
+- 说明：自动编译草稿，重点提炼软件工厂的 Level 0-4 五级梯子、自测 6 问（特别是"拿走 AI 工具后流程会不会崩"的第 6 问）、L2→L3 的三道护栏、Karpety 的"传统软件自动化你能规定的事 / AI 自动化你能验证的事"框架；建议人工复核"第 6 问作为团队定位工具"是否要进一步做成独立 wiki 页
+
+## 2026-05-31
+### ingest | 让你拿到 offer 的 AI 产品经理核心技能丨Aakash Gupta
+- 来源：https://mp.weixin.qq.com/s/fwFnfpXKQkxsqlfjps4Jzg
+- 原文：raw/articles/AI-PM核心技能-观测评估与反馈闭环.md
+- 拆解：raw/articles/AI-PM核心技能-观测评估与反馈闭环-digest.md
+- wiki：wiki/01-ai-agents/AI-PM核心技能-观测评估与反馈闭环.md
+- 标签：#主题/AI-Agent #主题/AI-Coding #主题/APP研发 #场景/公众号长文
+- 说明：自动编译草稿，重点提炼 AI PM 的反馈闭环、Trace、Eval 与产品学习系统能力
+
+
+## 2026-05-30
+### ingest | Claude Code 负责人：AI-native 工程组织怎么跑起来丨Claude
+- 来源：https://mp.weixin.qq.com/s/D7Udo__uUHentP742ytqiA
+- 原文：raw/claude-code-ai-native-engineering-org.md
+- 拆解：raw/claude-code-ai-native-engineering-org-digest.md
+- wiki：wiki/02-ai-coding/Claude-Code负责人谈AI原生工程组织.md
+- 标签：#主题/AI-Coding #主题/工程管理 #主题/Agent组织 #场景/公众号长文
+- 说明：自动编译草稿，已生成 raw / digest / wiki 三层内容，建议人工复核提炼角度是否需要进一步贴近团队语境
+
+## 2026-05-28
+### ingest | Claude Code 用到这个程度，我算是开眼了
+- 来源：https://mp.weixin.qq.com/s/TfJAJF_viwpZ6xHDt4WrIw
+- 原文：raw/ClaudeCode用到这个程度-我算是开眼了.md
+- 拆解：raw/ClaudeCode用到这个程度-我算是开眼了-digest.md
+- wiki：wiki/02-ai-coding/ClaudeCode用到这个程度-我算是开眼了.md
+- 标签：#主题/AI-Coding #场景/公众号长文
+- 说明：自动编译草稿，建议人工复核 digest 与 wiki 提炼质量
+
+
+## 2026-05-27
+### compile | Codex任务交接与 `/new` 模板
+- 来源：基于《我用 Codex 做研究后，总结出 6 条有用经验》与当前 Codex 会话切换需求整理
+- wiki：wiki/02-ai-coding/Codex任务交接与new模板.md
+- 标签：#主题/AI-Coding #主题/效率 #手法/工程实践
+- 说明：把任务结束后的交接摘要模板和 `/new` 切换顺序固定为短规则页
+
+### ingest | 我用 Codex 做研究后，总结出 6 条有用经验！
+- 来源：https://mp.weixin.qq.com/s/gyLbhAIIe67KhfrCqtWXmw
+- 原文：raw/我用Codex做研究后-总结出6条有用经验.md
+- 拆解：raw/我用Codex做研究后-总结出6条有用经验-digest.md
+- wiki：wiki/02-ai-coding/我用Codex做研究后-总结出6条有用经验.md
+- 标签：#主题/AI-Coding #场景/公众号长文
+- 说明：自动编译草稿，建议人工复核 digest 与 wiki 提炼质量
+
+
+## 2026-05-25
+### ingest | Codex「自我蒸馏」提示词进化版！官方团队给出更强方案，一键打包你的专属工作流
+- 来源：https://mp.weixin.qq.com/s/SDYTJrkpzFk-QbSCJQaLuQ
+- 原文：raw/Codex「自我蒸馏」提示词进化版-官方团队给出更强方案-一键打包你的专属工作流.md
+- 拆解：raw/Codex「自我蒸馏」提示词进化版-官方团队给出更强方案-一键打包你的专属工作流-digest.md
+- wiki：wiki/02-ai-coding/Codex「自我蒸馏」提示词进化版-官方团队给出更强方案-一键打包你的专属工作流.md
+- 标签：#主题/AI-Coding #场景/公众号长文
+- 说明：自动编译草稿，建议人工复核 digest 与 wiki 提炼质量
+
+
 ## 2026-05-20
 
 ### compile | 知识卡片编译模板：长文如何压成 raw / digest / wiki 三层
@@ -156,3 +265,4 @@
 - 说明：简短描述
 -->
 - 2026-05-13：编译公众号文章《深度解析LLM Wiki / Obsidian-Wiki / GBrain：Agent时代知识的“自组织”与“自进化”》，新增 raw、digest 与 wiki 条目。
+- 2026-05-30: 新增《Claude Code负责人谈AI原生工程组织》；来源：微信公众号文章 https://mp.weixin.qq.com/s/D7Udo__uUHentP742ytqiA

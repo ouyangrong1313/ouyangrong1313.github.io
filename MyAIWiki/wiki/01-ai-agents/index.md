@@ -38,6 +38,8 @@
 - [[OpenClaw-vs-Hermes-多-Agent-架构设计-digest]] - 上一篇的速读摘要版
 - [[从零设计生产级-Multi-Agent-Harness]] - 从编排、工具治理、记忆、评估、预算到 MCP 接入的全景拆解
 - [[从零设计生产级-Multi-Agent-Harness-digest]] - 上一篇的速读摘要版
+- [[make-for-agent-qi-shi-huan-shi-make-for-human|Make for Agent，其实还是 Make for Human]] - Agent 产品设计的核心不是界面，而是责任链、身份与上下文基础设施 ⭐ - 2026-05-27
+- [[AI-PM核心技能-观测评估与反馈闭环]] - AI PM 的新门槛：反馈源、Trace、Eval 与产品学习闭环 ⭐ - 2026-05-31
 
 - [[AI时代给人类留了最后一份工作-是农民]] - AMC 与 Context Farmer：人类最后的工作 ⭐
 - [[agent-principles-architecture-engineering]] - Agent 原理、架构与工程实践 ⭐
