@@ -461,6 +461,308 @@ def get_anti_hype_warning(info_list, openclaw_changes: Dict[str, List[str]]):
 
 
 
+# ==================== 知识节点融合（2026-06 升级）====================
+
+def parse_simple_frontmatter(content: str) -> Dict:
+    """简化的 frontmatter 解析（复用 wiki-query.py 的逻辑）"""
+    fm = {}
+    if not content.startswith("---"):
+        return fm
+    end = content.find("\n---", 3)
+    if end == -1:
+        return fm
+    fm_text = content[3:end].strip()
+
+    def clean_value(v: str) -> str:
+        return v.strip().strip('"').strip("'").strip()
+
+    def parse_inline_list(v: str) -> List[str]:
+        v = v.strip()
+        if not (v.startswith("[") and v.endswith("]")):
+            return []
+        inner = v[1:-1]
+        protected = re.sub(r"\[\[([^\]]+)\]\]", lambda m: "[[" + m.group(1).replace(",", "〈,〉") + "]]", inner)
+        items = [clean_value(x).replace("〈,〉", ",") for x in protected.split(",")]
+        return [x for x in items if x]
+
+    current_list_key = None
+    for line in fm_text.split("\n"):
+        line = line.rstrip()
+        if not line or line.startswith("#"):
+            continue
+        if re.match(r"^\s+[-*]\s+", line):
+            if current_list_key:
+                value = re.sub(r"^\s+[-*]\s+", "", line).strip()
+                fm[current_list_key].append(clean_value(value))
+            continue
+        if ":" in line:
+            key, _, value = line.partition(":")
+            key = key.strip()
+            value = value.strip()
+            if not value:
+                fm[key] = []
+                current_list_key = key
+            elif value.startswith("[") and value.endswith("]"):
+                fm[key] = parse_inline_list(value)
+                current_list_key = None
+            else:
+                fm[key] = clean_value(value)
+                current_list_key = None
+    return fm
+
+
+def get_today_new_nodes() -> List[Dict]:
+    """获取最近 48 小时内新增的 wiki 文章中的知识节点
+
+    Returns:
+        [{node, source_path, source_title, category, date}]
+    """
+    yesterday = datetime.now() - timedelta(days=2)
+    results = []
+
+    try:
+        for root, dirs, files in os.walk(WIKI_DIR):
+            # 跳过 index.md 和 master-index.md
+            for f in files:
+                if not f.endswith(".md"):
+                    continue
+                if f in ("index.md", "master-index.md"):
+                    continue
+                path = os.path.join(root, f)
+                mtime = datetime.fromtimestamp(os.path.getmtime(path))
+                if mtime < yesterday:
+                    continue
+                try:
+                    content = safe_read(Path(path))
+                    fm = parse_simple_frontmatter(content)
+                    nodes = fm.get("nodes", [])
+                    if not nodes:
+                        continue
+                    # 提取标题
+                    title = fm.get("title", "")
+                    if not title:
+                        for line in content.split("\n"):
+                            if line.startswith("# "):
+                                title = line[2:].strip()
+                                break
+                    if not title:
+                        title = f
+                    for node in nodes:
+                        if isinstance(node, str) and node.strip():
+                            results.append({
+                                "node": node.strip(),
+                                "source_path": path,
+                                "source_title": title,
+                                "category": fm.get("category", ""),
+                                "date": fm.get("date", ""),
+                            })
+                except Exception:
+                    pass
+    except Exception:
+        pass
+    return results
+
+
+def find_related_nodes(node: str, limit: int = 5) -> List[Dict]:
+    """根据节点名找相关文章（用 wiki-query 思路的命令式查询）
+
+    Returns:
+        [{node, source_path, source_title, category, match_type}]
+    """
+    results = []
+    seen_paths = set()
+
+    # 策略 1：精确节点名匹配
+    for root, dirs, files in os.walk(WIKI_DIR):
+        for f in files:
+            if not f.endswith(".md") or f in ("index.md", "master-index.md"):
+                continue
+            path = os.path.join(root, f)
+            try:
+                content = safe_read(Path(path))
+                fm = parse_simple_frontmatter(content)
+                nodes = fm.get("nodes", [])
+                for n in nodes:
+                    if isinstance(n, str) and n.strip() == node:
+                        if path not in seen_paths:
+                            seen_paths.add(path)
+                            title = fm.get("title", "")
+                            if not title:
+                                for line in content.split("\n"):
+                                    if line.startswith("# "):
+                                        title = line[2:].strip()
+                                        break
+                            if not title:
+                                title = f
+                            results.append({
+                                "node": n.strip(),
+                                "source_path": path,
+                                "source_title": title,
+                                "category": fm.get("category", ""),
+                                "match_type": "精确节点匹配",
+                            })
+            except Exception:
+                pass
+
+    # 策略 2：双向链接中包含该节点
+    for root, dirs, files in os.walk(WIKI_DIR):
+        for f in files:
+            if not f.endswith(".md") or f in ("index.md", "master-index.md"):
+                continue
+            path = os.path.join(root, f)
+            if path in seen_paths:
+                continue
+            try:
+                content = safe_read(Path(path))
+                # 找 [[node]] 或 [[node|alias]] 或 标题中含 node
+                pattern = rf"\[\[[^\]]*{re.escape(node)}[^\]]*\]\]"
+                if re.search(pattern, content):
+                    fm = parse_simple_frontmatter(content)
+                    title = fm.get("title", "")
+                    if not title:
+                        for line in content.split("\n"):
+                            if line.startswith("# "):
+                                title = line[2:].strip()
+                                break
+                    if not title:
+                        title = f
+                    results.append({
+                        "node": node,
+                        "source_path": path,
+                        "source_title": title,
+                        "category": fm.get("category", ""),
+                        "match_type": "双向链接",
+                    })
+                    seen_paths.add(path)
+            except Exception:
+                pass
+
+    # 策略 3：ripgrep 全文匹配（兌底）
+    # 适用于老文章没有 frontmatter 的场景
+    try:
+        import subprocess
+        result = subprocess.run(
+            ["rg", "-l", "--no-heading", node, WIKI_DIR],
+            capture_output=True,
+            text=True,
+            timeout=10,
+        )
+        if result.returncode == 0:
+            rg_files = [Path(p) for p in result.stdout.strip().split("\n") if p]
+            # 过滤 index.md / master-index.md
+            rg_files = [p for p in rg_files if p.name not in ("index.md", "master-index.md")]
+            # 统计每个文件里节点名出现次数
+            rg_scored = []
+            for f in rg_files:
+                if str(f) in seen_paths:
+                    continue
+                try:
+                    content = safe_read(f)
+                    count = content.count(node)
+                    if count > 0:
+                        rg_scored.append((f, count))
+                except Exception:
+                    pass
+            # 按出现次数降序
+            rg_scored.sort(key=lambda x: x[1], reverse=True)
+            for f, count in rg_scored[:limit]:
+                try:
+                    content = safe_read(f)
+                    fm = parse_simple_frontmatter(content)
+                    title = fm.get("title", "")
+                    if not title:
+                        for line in content.split("\n"):
+                            if line.startswith("# "):
+                                title = line[2:].strip()
+                                break
+                    if not title:
+                        title = f.name
+                    results.append({
+                        "node": node,
+                        "source_path": str(f),
+                        "source_title": title,
+                        "category": fm.get("category", ""),
+                        "match_type": f"全文匹配（出现{count}次）",
+                    })
+                    seen_paths.add(str(f))
+                except Exception:
+                    pass
+    except (FileNotFoundError, subprocess.TimeoutExpired):
+        # ripgrep 未装或超时，静默跳过
+        pass
+
+    return results[:limit]
+
+
+def get_node_fusion_section() -> List[str]:
+    """生成“知识节点融合”章节（发芽报告的核心升级）
+
+    Returns:
+        markdown 行列表
+    """
+    lines = []
+    new_nodes = get_today_new_nodes()
+
+    if not new_nodes:
+        return lines
+
+    # 按节点去重，保留所有来源
+    unique_nodes = {}
+    for n in new_nodes:
+        key = n["node"]
+        if key not in unique_nodes:
+            unique_nodes[key] = []
+        unique_nodes[key].append(n)
+
+    lines.append("## 🌱 今日新节点（发芽报告升级版）")
+    lines.append("")
+    lines.append(f"> 本节是 LLM-Wiki 风格升级：除了今天新增的文章，还提炼出今天**新出现的独立知识节点**，并为每个节点找 3-5 个关联节点。")
+    lines.append("")
+
+    # 今日新节点列表（按来源文章分组，能看出每篇文章的节点贡献）
+    lines.append("### 📌 今日新增知识节点")
+    lines.append(f"> 今日共提炼出 **{len(unique_nodes)} 个新节点**（来源：{len(new_nodes)} 条记录）")
+    lines.append("")
+
+    # 按来源文章分组
+    from collections import defaultdict
+    by_source = defaultdict(list)
+    for n in new_nodes:
+        by_source[n["source_title"]].append(n["node"])
+
+    # 先按文章展示，每篇最多 6 个节点
+    for source_title, nodes in by_source.items():
+        unique_nodes_in_source = list(dict.fromkeys(nodes))  # 去重保持顺序
+        node_strs = [f"**{n}**" for n in unique_nodes_in_source[:8]]
+        suffix = f"（共 {len(unique_nodes_in_source)} 个）" if len(unique_nodes_in_source) > 8 else ""
+        lines.append(f"- 《{source_title[:40]}{'...' if len(source_title) > 40 else ''}》")
+        lines.append(f"  {', '.join(node_strs)} {suffix}")
+    lines.append("")
+
+    # 关联节点融合（选有最多关联的 5 个新节点——优先选有 inbound 引用的）
+    lines.append("### 🔗 节点关联与碰撞")
+
+    # 先扫一遍所有新节点，找有 inbound 关联的
+    nodes_with_links = []
+    for node, sources in unique_nodes.items():
+        related = find_related_nodes(node, limit=3)
+        related = [r for r in related if r["source_path"] not in [s["source_path"] for s in sources]]
+        if related:
+            nodes_with_links.append((node, sources, related))
+
+    # 按关联数降序
+    nodes_with_links.sort(key=lambda x: len(x[2]), reverse=True)
+    for node, sources, related in nodes_with_links[:5]:
+        lines.append(f"- **{node}** 的关联节点：")
+        for r in related[:3]:
+            lines.append(f"  - → {r['source_title'][:50]}{'...' if len(r['source_title']) > 50 else ''}（{r['match_type']}）")
+        lines.append("")
+
+    lines.append("> 💡 **建议**：阅读以上“今日新节点” + “关联节点”，尝试用一句话讲清两者如何碰撞出新的判断——这是发芽报告的核心动作。")
+    lines.append("")
+    return lines
+
+
 def generate_markdown():
     today = datetime.now().strftime("%Y-%m-%d")
 
@@ -475,6 +777,11 @@ def generate_markdown():
     openclaw_changes = get_openclaw_changes()
 
     has_knowledge_updates = bool(new_raw_files or new_wiki_files)
+
+    # 【2026-06 升级】知识节点融合章节（发芽报告核心）
+    node_fusion = get_node_fusion_section()
+    if node_fusion:
+        lines.extend(node_fusion)
 
     if entries:
         lines.append("## 📝 最近 7 天新增知识轨迹")

@@ -1,6 +1,18 @@
+---
+title: Matt Van Horn 的 22 个 Agentic Engineering Hacks
+category: 02-ai-coding
+tags: [#主题/AI-Coding, #主题/AI-Agent, #主题/效率, #主题/APP研发, #场景/技术博客, #场景/落地案例, #场景/X长文, #手法/案例驱动, #手法/权威背书, #手法/对比冲突, #手法/焦虑共鸣]
+nodes: [Compound-Engineering, Plan-as-Leash, Human-Signal, last30days, Printing-Press, Agent-Cookie, AI-Psychosis, Skill, Vibe-Coding, Voice-First]
+links: [[claude-code-dynamic-workflows]] · [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] · [[Codex才是最适合普通人的顶级牛马-Agent]] · [[every-agentic-engineering-hack-2026-06-digest|速读摘要]]
+date: 2026-06-03
+source: X / @mvanhorn
+stats: 82万 浏览 / 118 转推 / 391 引用 / 2,768 喜欢 / 8,511 书签（2026-06-07 抓取）
+raw: [[articles/2026-06-03-Matt-Van-Horn-Every-Agentic-Engineering-Hack]]
+---
+
 # Matt Van Horn 的 22 个 Agentic Engineering Hacks
 
-> 来源：Matt Van Horn @mvanhorn 2026-06-03 长文（34万 浏览 / 1,669 喜欢 / 5,144 书签）
+> 来源：Matt Van Horn @mvanhorn 2026-06-03 长文（**82万 浏览 / 2,768 喜欢 / 8,511 书签**，2026-06-07 抓取）
 > 原文：https://x.com/mvanhorn/status/2061877533885473181
 > 关联：[[claude-code-dynamic-workflows]] · [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] · [[Codex才是最适合普通人的顶级牛马-Agent]] · [[every-agentic-engineering-hack-2026-06-digest|速读摘要]]
 

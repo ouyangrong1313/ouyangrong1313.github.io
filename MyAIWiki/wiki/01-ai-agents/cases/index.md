@@ -21,8 +21,12 @@
 
 ## 案例列表
 
+### 非技术行业 AI 落地
+- [一个农民，用 Codex 管理了 1500 亩地](./farmer-Codex-1500-mu.md) - AI小范儿 2026-06-08 转载自 OpenAI 官方案例：北海道农民 Hiroki Tomiyasu 用 Codex 改造 4 个工作流（病虫害识别 / 卫星遥感 / 温室 IoT / 客服机器人）——"ChatGPT 学习 + Codex 落地" 普通人 AI 路径
+- [一个农民 - Digest](./farmer-Codex-1500-mu-digest.md) - 上一篇的速读摘要版
+
 待补充
 
 ## 标签
 
-#主题/AI-Agent #场景/落地案例
+#主题/AI-Agent #场景/落地案例 #场景/农业 #场景/非技术行业
