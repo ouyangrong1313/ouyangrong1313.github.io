@@ -1,0 +1,438 @@
+<h1 id="agent-harness-14-步路线图">Agent Harness 14 步路线图</h1>
+
+<blockquote>
+  <p><strong>一句话</strong>：Harness 是 Loop 的地基。一个坏 harness 上的好 loop，是大规模生产垃圾的最快方法。14 步从单 Agent 搭到自我进化系统。</p>
+</blockquote>
+
+<p><strong>作者</strong>：Codez (@0xCodez) · 2026-06-16 · 原文：<a href="https://x.com/0xCodez/status/2066867539305459732">X 长文</a>
+<strong>互动</strong>：likes 564 / retweets 87 / bookmarks 993 / views 84,721
+<strong>与既存文档关系</strong>：</p>
+<ul>
+  <li>概念体系见 [[harness-engineering]]（Rule/Skill/Subagent/Workflow/Scripts/MCP 六件套）</li>
+  <li>工程实现细节见 [[Harness工程AgentLoop]]（生命周期/上下文/工具/容错/调度）</li>
+  <li>上层 Loop 范式见 [[Addy-Osmani-Loop-Engineering]]（Loop 是 Harness 套上 timer）</li>
+</ul>
+
+<p>本文定位：<strong>从 0 到 self-improving 的具体路径与顺序</strong>。</p>
+
+<hr />
+
+<h2 id="核心公式">核心公式</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>Self-Improving System = Harness + Loop + Memory（且顺序不能反）
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>关键反直觉</strong>：</p>
+<ul>
+  <li><strong>模型从来没变过，变的是它周围的 harness</strong> —— “自我进化”是 harness 在累积，不是模型在学。</li>
+  <li><strong>Loop 没有加 intelligence，只是把 harness 套了个定时器</strong>。Harness 没搭好就上 loop，复利是双向腐烂。</li>
+  <li><strong>Harness = 模型 + 工具 + 权限 + 上下文</strong>。其他一切（subagents/hooks/memory）都是这四件的形状变体。</li>
+</ul>
+
+<hr />
+
+<h2 id="三层不要混">三层不要混</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>层级</th>
+      <th>性质</th>
+      <th>关键组件</th>
+      <th>错放代价</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Harness</strong></td>
+      <td>静态配置</td>
+      <td>模型/工具/权限/上下文</td>
+      <td>一切上层都崩</td>
+    </tr>
+    <tr>
+      <td><strong>Loop</strong></td>
+      <td>定时调起</td>
+      <td><code class="language-plaintext highlighter-rouge">/loop</code> + <code class="language-plaintext highlighter-rouge">/goal</code></td>
+      <td>烂 harness 上跑得越快越烂</td>
+    </tr>
+    <tr>
+      <td><strong>Self-Improving</strong></td>
+      <td>复利闭环</td>
+      <td>Loop + Memory + Reviewer</td>
+      <td>没有它就跑一次忘一次</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>实操分类原则</strong>：</p>
+<ul>
+  <li>事实 → CLAUDE.md（每 session 都要的）</li>
+  <li>流程 → skills（多步操作）</li>
+  <li>单文件夹规则 → <code class="language-plaintext highlighter-rouge">rules/</code></li>
+  <li>强制约束 → hooks（不能依赖模型”听话”）</li>
+  <li>隔离任务 → subagents</li>
+</ul>
+
+<hr />
+
+<h2 id="14-步路线图3-段">14 步路线图（3 段）</h2>
+
+<h3 id="part-1--what-harness-is01-04">Part 1 · What Harness is（01-04）</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>步</th>
+      <th>主题</th>
+      <th>一句话</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>01</td>
+      <td>Harness 定义</td>
+      <td>单一 Agent 运行所处的环境 = 模型 + 工具 + 权限 + 上下文</td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td>目录结构</td>
+      <td>全部装在 <code class="language-plaintext highlighter-rouge">.claude/</code> 一个目录里，目录即文档</td>
+    </tr>
+    <tr>
+      <td>03</td>
+      <td>三层关系</td>
+      <td>Harness/Loop/System 三层不混</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>默认 harness</td>
+      <td>装好 Claude Code 就是空 harness，one-off 任务够用，重复任务必崩</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="part-2--build-the-foundation05-09">Part 2 · Build the foundation（05-09）</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>步</th>
+      <th>主题</th>
+      <th>一句话</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>05</td>
+      <td><strong>CLAUDE.md</strong></td>
+      <td>限 <strong>500 tokens</strong> 内，只放事实；procedures 挪 skills；单文件夹规则挪 rules/</td>
+    </tr>
+    <tr>
+      <td>06</td>
+      <td><strong>settings.json</strong></td>
+      <td>预先放行安全操作、禁掉危险操作；判断标准：<strong>弄错了多难撤销？</strong></td>
+    </tr>
+    <tr>
+      <td>07</td>
+      <td><strong>Subagents</strong></td>
+      <td>核心价值是”反自我评分”—— reviewer 子 agent 用新 context 窗口挑刺</td>
+    </tr>
+    <tr>
+      <td>08</td>
+      <td><strong>Skills</strong></td>
+      <td>触发器 = 反复把同一段指令粘进新对话。Skills 是 harness 进化的可复用单位</td>
+    </tr>
+    <tr>
+      <td>09</td>
+      <td><strong>Hooks</strong></td>
+      <td><strong>CLAUDE.md 是建议，hooks 是强制</strong>（exit 2 可阻断）。两类最值钱：PreToolUse 安全门 + PostToolUse 格式化</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="part-3--make-it-compound10-14">Part 3 · Make it compound（10-14）</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>步</th>
+      <th>主题</th>
+      <th>一句话</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>10</td>
+      <td><strong>Add a loop</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">/loop 30m /goal</code> + 独立 grader 判定 done</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td><strong>Dynamic workflow</strong></td>
+      <td>复杂任务用 Claude 自己写 JS harness（<code class="language-plaintext highlighter-rouge">agent()</code>/<code class="language-plaintext highlighter-rouge">parallel()</code>/<code class="language-plaintext highlighter-rouge">pipeline()</code>）；workflow 是指挥家，harness 是管弦乐队</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td><strong>Add memory</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">agent-memory/STATE.md</code> 三段式：verified facts / lessons learned / last session</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td><strong>Close the loop</strong></td>
+      <td>Output → reviewer（07）→ memory（12）→ 蒸馏到 skills（08）→ 下次跑更聪明</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td><strong>Ship it</strong></td>
+      <td>打包成 plugin 团队复用；<strong>Ship 前要扫 secrets 和过宽权限</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="顺序就是教训重点">顺序就是教训（<strong>重点</strong>）</h3>
+
+<blockquote>
+  <p>一次手动跑通 → 加 context/permission → 加 reviewer subagent → 加 memory → <strong>最后才上 loop</strong>。</p>
+
+  <p>错位代价：loop 跑得越勤，harness 的问题放大得越快。</p>
+</blockquote>
+
+<hr />
+
+<h2 id="claude-目录速查"><code class="language-plaintext highlighter-rouge">.claude/</code> 目录速查</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>.claude/
+├─ CLAUDE.md          # 事实，每次 session 必读（≤500 tokens）
+├─ settings.json      # 权限、模型、hooks
+├─ .mcp.json          # 外部工具连接
+├─ rules/             # 路径级行为（tests.md / python-types.md）
+├─ agents/            # 子 agent 定义（reviewer.md / eval-runner.md）
+├─ skills/            # 可复用流程（pr-checklist/SKILL.md）
+└─ agent-memory/      # 跨 run 记忆（STATE.md）
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>判别原则</strong>：能讲清每个文件为什么存在；讲不清的，删。</p>
+
+<hr />
+
+<h2 id="settingsjson-模板">settings.json 模板</h2>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="s2">"claude-sonnet-4-6"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"autoApprove"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Read(*)"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Grep(*)"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Bash(npm test)"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Bash(git status)"</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"deny"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"Bash(rm -rf*)"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Bash(git push*)"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Edit(.env*)"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Edit(secrets/*)"</span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>放行/禁止判断标准</strong>：弄错了多难撤销？</p>
+<ul>
+  <li>撤销便宜（读、grep、测试）→ autoApprove</li>
+  <li>撤销昂贵（rm -rf、force-push、读 secrets）→ always deny or prompt</li>
+  <li>中间地带 → autoApprove + 记日志</li>
+</ul>
+
+<hr />
+
+<h2 id="hooks-模板最值钱的两个">Hooks 模板（最值钱的两个）</h2>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="nl">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+  </span><span class="nl">"PreToolUse"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="nl">"matcher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bash"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"./.claude/hooks/block-dangerous.sh"</span><span class="w">
+    </span><span class="err">//</span><span class="w"> </span><span class="err">exit</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">阻断，模型无法</span><span class="s2">"礼貌忽略"</span><span class="w">
+  </span><span class="p">}],</span><span class="w">
+  </span><span class="nl">"PostToolUse"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="nl">"matcher"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Edit|Write"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"prettier --write </span><span class="se">\"</span><span class="s2">$CLAUDE_FILE_PATH</span><span class="se">\"</span><span class="s2">"</span><span class="w">
+  </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>反模式</strong>：20 个 hooks。一个好 harness 只有 1-2 个锋利 hook；判断题留给模型，强制题交给 hooks。</p>
+
+<hr />
+
+<h2 id="statemd-模板">STATE.md 模板</h2>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="gh"># Project memory</span>
+
+<span class="gu">## Verified facts   # stop guessing about these</span>
+<span class="p">-</span> prc is in dollars, not cents (checked via SELECT MIN/MAX)
+<span class="p">-</span> auth middleware order: rate_limit -&gt; jwt -&gt; rbac
+
+<span class="gu">## Lessons learned  # distill the general ones into skills</span>
+<span class="p">-</span> Windows CI runners fail TLS 1.2 in PowerShell — use bash
+<span class="p">-</span> Migrations on tables &gt;1M rows must batch in 10k chunks
+
+<span class="gu">## Last session     # resume, don't restart</span>
+2026-06-11 · 3 fixes merged, 2 escalated. Next: verify rate-limit fix.
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Memory 复利三动作</strong>：</p>
+<ol>
+  <li><strong>Write before walking away</strong> —— 每次跑完更新 state file</li>
+  <li><strong>Read at the start</strong> —— 每次开局先读 state + 相关 skills</li>
+  <li><strong>Distill into skills</strong> —— 一般化教训（”Windows runner 用 bash”）从 state 升格为 skill</li>
+</ol>
+
+<hr />
+
+<h2 id="8-个-harness-反模式check-list">8 个 Harness 反模式（check list）</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>反模式</th>
+      <th>后果</th>
+      <th>解药</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><strong>跑在默认 harness</strong></td>
+      <td>agent 每 session 重新猜项目</td>
+      <td>建 <code class="language-plaintext highlighter-rouge">.claude/</code> 基础四件</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><strong>CLAUDE.md 膨胀</strong></td>
+      <td>每 session 浪费 token、procedures 越改越乱</td>
+      <td>限 500 tokens / 拆 skills / 拆 rules/</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><strong>Enforcement 放 CLAUDE.md</strong></td>
+      <td>模型”礼貌忽略”建议</td>
+      <td>改 hooks（exit 2 阻断）</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><strong>单 agent 自写自评</strong></td>
+      <td>自我宽容，质量崩</td>
+      <td>加 reviewer subagent（新 context）</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><strong>没有 memory</strong></td>
+      <td>每次重零开始</td>
+      <td>建 STATE.md 三段式</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td><strong>loop 套在烂 harness 上</strong></td>
+      <td>烂的更快更大</td>
+      <td>顺序：先 harness 跑通，再上 loop</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td><strong>20 个 hooks</strong></td>
+      <td>谁也搞不清在哪触发</td>
+      <td>1-2 个锋利的</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td><strong>Ship harness 不扫 secrets</strong></td>
+      <td>团队级泄漏</td>
+      <td>打包前扫 <code class="language-plaintext highlighter-rouge">.env</code> / 过宽权限</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="对-seetong-团队的-5-个优先动作">对 Seetong 团队的 5 个优先动作</h2>
+
+<ol>
+  <li><strong>梳理/新建 <code class="language-plaintext highlighter-rouge">.claude/</code></strong>：CLAUDE.md 限 500 tokens / <code class="language-plaintext highlighter-rouge">rules/</code> 按模块分 / <code class="language-plaintext highlighter-rouge">skills/</code> 装 PR checklist / <code class="language-plaintext highlighter-rouge">agents/</code> 装 reviewer</li>
+  <li><strong>加 PreToolUse 安全 hook</strong>：挡 <code class="language-plaintext highlighter-rouge">rm -rf</code> / 改 <code class="language-plaintext highlighter-rouge">.env</code> / push 到 <code class="language-plaintext highlighter-rouge">master</code> / <code class="language-plaintext highlighter-rouge">main</code>（监控类 APP 误删代价极高）</li>
+  <li><strong>加 reviewer subagent</strong>：让独立 context 检查主 agent 改动（Seetong 历史代码量大，主 agent 容易”自我宽容”）</li>
+  <li><strong>建 <code class="language-plaintext highlighter-rouge">.claude/agent-memory/STATE.md</code></strong>：每次跑完更新 verified facts（<code class="language-plaintext highlighter-rouge">pod install</code> 顺序/<code class="language-plaintext highlighter-rouge">pch</code> 路径依赖）/ lessons（push 前要 <code class="language-plaintext highlighter-rouge">pod repo update</code>）</li>
+  <li><strong>警惕”loop on bad harness”</strong>：harness 没搭好之前不上 <code class="language-plaintext highlighter-rouge">/loop</code> 或 Routines。<strong>复利是双向的：好 harness 复利加速，烂 harness 复利腐烂</strong></li>
+</ol>
+
+<hr />
+
+<h2 id="金句卡">金句卡</h2>
+
+<blockquote>
+  <p><strong>“所有人都在聊 loop，但几乎没人聊 loop 跑在什么上面。”</strong> —— 0xCodez</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>“Loop engineering sits one floor above the harness.”</strong> —— Addy Osmani（被 0xCodez 引用）</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>“CLAUDE.md 是建议，hooks 是强制。”</strong> —— 区分软硬约束的本质</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>“Workflow 是指挥家，harness 是管弦乐队。”</strong> —— workflow 与子组件的关系</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>“模型从来没变过，变的是它周围的 harness。”</strong> —— 自我进化的真相</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>“Loop 拿走所有掌声，harness 干所有活。”</strong> —— 哲学升华</p>
+</blockquote>
+
+<hr />
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+  <li>原文 raw：<a href="../../raw/2026-06-17-0xCodez-Agent-Harness-14-Steps.md">../../raw/2026-06-17-0xCodez-Agent-Harness-14-Steps.md</a></li>
+  <li>拆解 digest：<a href="../../raw/2026-06-17-0xCodez-Agent-Harness-14-Steps-digest.md">../../raw/2026-06-17-0xCodez-Agent-Harness-14-Steps-digest.md</a></li>
+  <li>同主题 wiki：<a href="./harness-engineering.md">./harness-engineering.md</a>（6 核心概念体系）</li>
+  <li>同主题 wiki：<a href="./Harness工程AgentLoop.md">./Harness工程AgentLoop.md</a>（工程实现细节）</li>
+  <li>同主题 wiki：<a href="./HarnessEngineering企业级实战.md">./HarnessEngineering企业级实战.md</a></li>
+  <li>上层 Loop 范式：<a href="../02-ai-coding/Addy-Osmani-Loop-Engineering.md">../02-ai-coding/Addy-Osmani-Loop-Engineering.md</a></li>
+  <li>作者 Substack：https://movez.substack.com/</li>
+</ul>
+
+<p>标签：#主题/AIAgent #主题/AI-Coding #手法/体系框架 #手法/工程实践 #场景/X长文 #场景/ClaudeCode</p>

@@ -1,0 +1,325 @@
+<h1 id="problem-first把方案翻转回问题">/problem-first：把方案翻转回问题</h1>
+
+<ul>
+  <li>原文链接：https://mp.weixin.qq.com/s/S3nyYPPS-ahYtKYMrr5jjQ</li>
+  <li>原始来源：George @nurijanian on X / prodmgmt.world（69.8K 浏览量）</li>
+  <li>来源：微信公众号 / 深思圈</li>
+  <li>发布时间：2026-06-07 20:13</li>
+  <li>获取时间：2026-06-08</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论（一句话）</h2>
+
+<blockquote>
+  <p><strong>每个”需要做 XX”都是一个没说清楚的问题的”压缩版本”；PM 用 /problem-first 技能，90 秒、8 个部分（方案跳跃诊断 / 底层问题 / 假设挑战+验证 / 问题陈述 / 三个替代框架 / 想法筛选漏斗 / 草稿信 / 强制全部输出）把方案解压回问题；同样适用于点子太多的 PM 筛选 backlog（50 个想法 90% 死于”证据状态：无”）。</strong></p>
+</blockquote>
+
+<h2 id="分类提炼">分类提炼</h2>
+
+<ul>
+  <li>场景：产品管理 / 工作流设计 / AI 工具 / 需求沟通</li>
+  <li>标签：#主题/产品管理 #主题/工作流设计 #节点/假设挑战带验证 #节点/三个替代框架</li>
+  <li>类型：方法论 / 工具介绍 / 案例分析</li>
+</ul>
+
+<h2 id="知识节点8-个独立概念">知识节点（8 个独立概念）</h2>
+
+<ul>
+  <li><strong>problem-first核心</strong>：每个方案都是”没说清楚的问题的压缩版本”；PM 工作 = 把答案”解压”回问题</li>
+  <li><strong>解压方案当研究材料</strong>：不否定方案而是把方案当研究材料；从”站在路线图前面挡住”变成”挖进路线图底下找问题”</li>
+  <li><strong>Munger翻转</strong>：Invert, always invert；”这个方案能解决什么”不如”这个方案在响应什么问题”；先翻转，再前进</li>
+  <li><strong>8个部分输出</strong>：方案跳跃诊断 / 底层问题 / 假设挑战 / 问题陈述 / 三个替代框架 / 想法筛选 / 草稿信 / 90 秒（强制全跑）</li>
+  <li><strong>假设挑战带验证</strong>：每条假设 = “如果错了风险” + “验证方案”；没验证方法的假设是”更精致的猜测”</li>
+  <li><strong>三个替代框架的威力</strong>：团队需求”通知系统”折叠了 3 个完全不同的产品（UI 状态模式 / 信任与状态问题 / Agent 告警）；没对比几乎无法提前发现错误</li>
+  <li><strong>逆向筛选漏斗</strong>：50 个想法 → 90% 死于”证据状态：无” → 3-5 存活 → 1 个下周带证据包提案；瓶颈不是生成是筛选</li>
+  <li><strong>协议优于提示词</strong>：每次给你同样的 8 个部分不管输入什么；强制完成所有部分 = 系统性消除遗漏</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+<ul>
+  <li>[[买了一样的AI为什么别家的比你的强]]：Hiten Shah 的 200+ skill 库是 PM OS 200+ 技能的源头；/problem-first 是其中之一</li>
+  <li>[[Anthropic万字爆火长文的三个判断,以及一个值得警惕的阳谋]]：快刀青衣拆解的”验收能力稀缺”在 /problem-first 里得到具体工具（”假设挑战带验证”）</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+<ul>
+  <li>[[Claude-Code之父品味不是人类护城河]]：Boris 强调”经验是负债 / 年轻人天然用模型思维”，/problem-first 是这个判断的 PM 对应物</li>
+  <li>[[AI-Coding的顿悟时刻]]：未来瓶颈 = 需求定义 + 架构设计；/problem-first 是需求定义的具体工具</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+<ul>
+  <li>[[为什么说React是比HTML更合适的AI设计稿格式]]：宝玉的”React 是 AI 时代设计稿格式” = 协议 = 8 个固定部分</li>
+</ul>
+
+<h2 id="正文要点6-节--总结">正文要点（6 节 + 总结）</h2>
+
+<h3 id="一pm-最熟悉的困境">一、PM 最熟悉的困境</h3>
+
+<p><strong>两种对立的 PM 困境，同一个工具解决</strong>：</p>
+<ul>
+  <li>接手别人写好的路线图，找不到切入点</li>
+  <li>自己点子太多，triage 能力跟不上</li>
+</ul>
+
+<blockquote>
+  <p>团队感知到痛点，但跳过定义问题直接给答案。PM 的工作 = 把答案”解压”回问题，再判断问题是否被正确处理。</p>
+</blockquote>
+
+<h3 id="二翻转翻转永远先翻转">二、翻转，翻转，永远先翻转</h3>
+
+<p><strong>Munger 思路应用于 PM</strong>：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>正面问题</th>
+      <th>翻转问题</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>“这个方案能解决什么”</td>
+      <td>“这个方案在响应什么问题”</td>
+    </tr>
+    <tr>
+      <td>“我们应该怎么成功”</td>
+      <td>“我们怎么会失败”</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>政治上更安全的两姿态</strong>：</p>
+<ul>
+  <li>❌ 站在路线图前面挡住（阻挠）</li>
+  <li>✅ 挖进路线图底下找问题（深入研究）</li>
+</ul>
+
+<blockquote>
+  <p>入职第 30 天打”先研究问题”这张牌非常不合算。</p>
+</blockquote>
+
+<h3 id="三通知系统的完整示例8-个部分">三、通知系统的完整示例（8 个部分）</h3>
+
+<p>输入：”我们需要建一个新通知系统” → /problem-first 一次 AI 调用，90 秒：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>输出</th>
+      <th>关键内容</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>①</td>
+      <td>方案跳跃诊断</td>
+      <td>团队检测到了什么信号让他们提出这个</td>
+    </tr>
+    <tr>
+      <td>②</td>
+      <td>底层问题</td>
+      <td>用户无法看到产品内部的状态变化，导致不信任</td>
+    </tr>
+    <tr>
+      <td>③</td>
+      <td>假设挑战</td>
+      <td>每条带”如果错了风险” + “验证方案”</td>
+    </tr>
+    <tr>
+      <td>④</td>
+      <td>问题陈述</td>
+      <td>依赖产品做时间敏感决策的用户，很难知道上下文变化</td>
+    </tr>
+    <tr>
+      <td>⑤</td>
+      <td>三个替代框架</td>
+      <td>（详见下文）</td>
+    </tr>
+    <tr>
+      <td>⑥</td>
+      <td>想法筛选漏斗</td>
+      <td>证据状态：90% 想法无证据</td>
+    </tr>
+    <tr>
+      <td>⑦</td>
+      <td>草稿信</td>
+      <td>让团队拉到同一对话起点</td>
+    </tr>
+    <tr>
+      <td>⑧</td>
+      <td>强制全跑</td>
+      <td>90 秒完成 8 个部分 = 系统性消除遗漏</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>假设挑战示例</strong>：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>假设</th>
+      <th>如果错了风险</th>
+      <th>验证方案</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>用户想要更多通知</td>
+      <td>加了噪音，采用率反而下降</td>
+      <td>查现有通知参与数据</td>
+    </tr>
+    <tr>
+      <td>推送机制坏了</td>
+      <td>重建管道，问题还在</td>
+      <td>读最近 50 张”漏掉更新”工单</td>
+    </tr>
+    <tr>
+      <td>用户想要实时推送</td>
+      <td>打扰感，用户关掉</td>
+      <td>下 5 次用户访谈里问</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="四三个框架的威力最核心输出">四、三个框架的威力（最核心输出）</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>框架</th>
+      <th>重新定义问题</th>
+      <th>解法空间</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>框架 A</strong></td>
+      <td>用户不知道上下文发生了变化</td>
+      <td>状态变化指示器、活动流（<strong>UI 状态模式</strong>）</td>
+    </tr>
+    <tr>
+      <td><strong>框架 B</strong></td>
+      <td>用户不信任系统在工作</td>
+      <td>状态可见性、操作审计、置信度信号（<strong>信任问题</strong>）</td>
+    </tr>
+    <tr>
+      <td><strong>框架 C</strong></td>
+      <td>用户想把”监视”委托给产品</td>
+      <td>订阅、智能摘要、Agent 告警（<strong>接近 Agent</strong>）</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>三个框架里<strong>没有一个是”通知系统”</strong>。每个框架都导向完全不同的产品，但团队需求折叠进了一句话。</p>
+
+  <p><strong>常见失败模式</strong>：做了框架 A 方案却以为在解决框架 B 问题 — “通知系统”做对了 UI 但解决错了问题。</p>
+</blockquote>
+
+<h3 id="五逆向用法想法太多的-pm">五、逆向用法：想法太多的 PM</h3>
+
+<p><strong>实验数据</strong>：</p>
+<ul>
+  <li>50 个想法 backlog</li>
+  <li>90% 死于”证据状态：无”</li>
+  <li>3-5 个存活</li>
+  <li>1 个下周带证据包提案</li>
+</ul>
+
+<blockquote>
+  <p>真正的瓶颈不是生成，是筛选能力。/problem-first 解决的是实际瓶颈，不是症状。</p>
+</blockquote>
+
+<p><strong>现实因素</strong>：</p>
+<ul>
+  <li>Agent 几乎可构建任何东西</li>
+  <li>但每个想法仍需时间（写 spec 让 /goal 执行，比预期费劲）</li>
+  <li>被过滤的想法 = 节省实际执行成本，不只是精神负担</li>
+</ul>
+
+<h3 id="六为什么用-ai-比自己想更有效">六、为什么用 AI 比自己想更有效</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>维度</th>
+      <th>手写</th>
+      <th>AI</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>时间</td>
+      <td>1 小时</td>
+      <td>90 秒</td>
+    </tr>
+    <tr>
+      <td>完成度</td>
+      <td>跳过最难部分</td>
+      <td>强制全跑 8 个部分</td>
+    </tr>
+    <tr>
+      <td>主要收益</td>
+      <td>—</td>
+      <td><strong>系统性消除遗漏</strong>，不是速度</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>最易跳过的部分 = 草稿信（Draft Message）</strong>：</p>
+
+<blockquote>
+  <p>跳过草稿信 = 已经在内部重新框架问题，但团队不知道 = 制造沟通真空</p>
+
+  <p>技术工作和沟通工作的成本不对等：前者有 AI 加速，后者仍高度依赖人 — /problem-first 把沟通这步也自动化，是聪明的设计决策</p>
+</blockquote>
+
+<h2 id="我们的对我们意味着什么">我们的”对我们意味着什么”</h2>
+
+<p>作者提炼的更普遍规律：</p>
+<ul>
+  <li><strong>“被限制的不是想法的生成，而是筛选容量”</strong> — 协议 &gt; 提示词</li>
+  <li><strong>客户说”我需要更便宜”</strong> = 路线图说”建通知系统”，<strong>是同一类错误</strong></li>
+  <li><strong>/problem-first 不只 PM 专属</strong> — 工程师、设计师、业务都常处于”拿到方案、没问题定义”处境</li>
+</ul>
+
+<h2 id="我的理解对-seetong-团队的真实价值">我的理解（对 Seetong 团队的真实价值）</h2>
+
+<ul>
+  <li><strong>黄松佳（PM）每个需求 = “需要做 XX” 都可以用 /problem-first 拆解</strong>：
+    <ul>
+      <li>“需要做异地组网” → 3 个框架？A 网络层 / B 体验层 / C 业务层</li>
+      <li>“需要做套餐失效提示” → 假设挑战？3 个验证方案</li>
+    </ul>
+  </li>
+  <li><strong>欧阳荣 / 张威 / 谭伟 / 陈宝旺（开发）收到”需要做 XX”</strong> = 先问：
+    <ul>
+      <li>“这个问题有证据吗”（证据状态）</li>
+      <li>“有 3 个替代方案吗”（三个框架）</li>
+      <li>“怎么验证”（假设挑战带验证）</li>
+    </ul>
+  </li>
+  <li><strong>草稿信机制可用于 Seetong 团队版本评审 / 复盘</strong></li>
+  <li><strong>“协议 &gt; 提示词” = Hiten Shah 200+ skill 的设计哲学</strong> = Anthropic Claude Code 风格（每次跑全 8 节）</li>
+</ul>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+  <li>原文：https://mp.weixin.qq.com/s/S3nyYPPS-ahYtKYMrr5jjQ</li>
+  <li>原始文章：George @nurijanian on X / prodmgmt.world</li>
+  <li>关联 wiki：
+    <ul>
+      <li>[[买了一样的AI为什么别家的比你的强]] - Hiten Shah 200+ skill 是 PM OS 200+ 技能的源头</li>
+      <li>[[Anthropic万字爆火长文的三个判断,以及一个值得警惕的阳谋]] - 验收能力 = 假设挑战带验证</li>
+      <li>[[Claude-Code之父品味不是人类护城河]] - 经验是负债 / Generalist 黄金时代</li>
+      <li>[[AI-Coding的顿悟时刻]] - 未来瓶颈 = 需求定义 + 架构设计</li>
+      <li>[[为什么说React是比HTML更合适的AI设计稿格式]] - 协议 = 8 个固定部分</li>
+    </ul>
+  </li>
+</ul>

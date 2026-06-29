@@ -1,0 +1,67 @@
+<h1 id="ai-团队协作案例loop--sdddigest">AI 团队协作案例：Loop + SDD（Digest）</h1>
+
+<blockquote>
+  <p><strong>一句话总结</strong>：叶小钗核心命题”个人提效 ≠ 团队提效”——Loop Engineering 隐藏了 3 个前提（Skill 维护/最终验证/Token 成本），组织级补丁是 SDD，本质构建规则和信息流；最终落到 AI 进入组织 4 层爬坡视角。</p>
+</blockquote>
+
+<h2 id="速查表">速查表</h2>
+
+<h3 id="核心观点5-条">核心观点（5 条）</h3>
+<ol>
+  <li><strong>个人提效 ≠ 团队提效</strong> — 技术负责人的真正课题是”团队要怎么和 AI 合作”</li>
+  <li><strong>Loop 隐藏 3 个前提</strong> — Skill 从哪来/谁做最终验证/Token 成本谁买单（总 token 消耗 3-8x 手动 Prompt）</li>
+  <li><strong>SDD 是组织级补丁</strong> — 共享上下文/规则/边界/验收标准的方法论，Spec 是研发流程事实真相</li>
+  <li><strong>Spec 三角色 = 上下文 + 协作契约 + 质量基准</strong> — 避免”产品/研发/AI/测试各理解一套”</li>
+  <li><strong>AI 进入组织 4 层爬坡</strong> — 个人工具→流程标准→组织协作→评价体系</li>
+</ol>
+
+<h3 id="关键金句">关键金句</h3>
+<ul>
+  <li>“个人提效 ≠ 整体提效”（核心命题）</li>
+  <li>“Loop Engineering 最大的问题：只说结果，不说前提”</li>
+  <li>“方向正确和实现简单之间，隔着大量的工程细节”</li>
+  <li>“AI 当前最大的问题不是输出速度，他只解决了干得快的问题，不解决干得对的问题”</li>
+</ul>
+
+<h3 id="关键数字">关键数字</h3>
+<ul>
+  <li>Loop 模式 token 消耗 = 手动 Prompt 的 3-8 倍 / 单任务成本 2-4 倍人工</li>
+  <li>Boris Cherny 单人 6 个月 259 PR / 497 提交 / 4 万行代码</li>
+  <li>某学员 3 个月 + 十几次设计推倒 才把团队级 AI 跑通</li>
+</ul>
+
+<h2 id="6-段式-spec-骨架实操">6 段式 Spec 骨架（实操）</h2>
+
+<p><strong>目标</strong> — 用户/系统/业务流程能获得什么能力（错误：”新增商品订单详情页” / 正确：”为运营人员提供订单详情查看，便于定位履约问题”）</p>
+
+<p><strong>范围</strong> — 做什么/不做什么（明确”本期只支持查看，不支持编辑”）</p>
+
+<p><strong>约束</strong> — AI 必须遵守的边界（”敏感信息落库必须加密；外部 AI 接口超时 15s 触发降级”）</p>
+
+<p><strong>决策</strong> — 不许 AI 重新设计（”用哪个表/复用哪个组件/哪个状态枚举/接口命名”）</p>
+
+<p><strong>任务</strong> — 拆小任务（数据模型→接口→前端→测试，逐项推进）</p>
+
+<p><strong>验收</strong> — 写清”什么情况下算修复完成”</p>
+
+<h2 id="任务复杂度-3-分级--ai-进入组织-4-层">任务复杂度 3 分级 + AI 进入组织 4 层</h2>
+
+<p><strong>3 分级</strong>：小改动 Prompt 即可 / 中等需求 轻量规格 / 大型任务 完整规格</p>
+
+<p><strong>4 层爬坡</strong>：①个人工具→暴露团队协作 ②流程标准→暴露组织边界 ③组织协作→暴露专业评价 ④评价权专业→暴露商业模式</p>
+
+<p><strong>关键判断</strong>：这些问题不是 AI 带来的，组织原本就存在——只是过去被低效率掩盖。</p>
+
+<h2 id="5-个对-seetong-团队可借鉴动作--关联">5 个对 Seetong 团队可借鉴动作 + 关联</h2>
+
+<ol>
+  <li><strong>SDD 做 Seetong 团队需求交付新规范</strong> — TAPD PRD 模板加 6 段式 Spec 骨架 + 任务复杂度分级；嵌入 <code class="language-plaintext highlighter-rouge">seetong-requirement-clarifier</code> skill</li>
+  <li><strong>“客服反馈 → Spec 链路”入 Seetong Bug Triage</strong> — 对照 <code class="language-plaintext highlighter-rouge">seetong-bug-triage</code> skill，反馈先整理成轻量 Spec</li>
+  <li><strong>项目级上下文建 Seetong 项目知识库</strong> — 架构约束/目录规范/接口规范/权限模型/状态机/错误码/数据字典</li>
+  <li><strong>Spec 6 段式入 Seetong Bug 描述模板</strong> — TAPD BUG 描述加 6 段，重点约束”AI 重构时不许换组件库/状态枚举/接口命名”</li>
+  <li><strong>AI 进入组织的 4 层爬坡做 Seetong 团队 AI 落地 roadmap</strong> — 当前卡 1-2 层，6 个月推 SDD 落地，12-18 月推 Spec 锚定</li>
+</ol>
+
+<p><strong>关联</strong>：<strong>Loop 7 视角闭环</strong> = Addy/若飞/APPSO/陈进/Samuel McDonnell/Anatoli+<strong>叶小钗（本文）</strong>；镜像 [[Multica-AI-Native-组织-人是最慢的节点]]；强关联 [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]</p>
+
+<p><strong>备注与限制</strong>：叶小钗批判是个人判断不是实验数据；SDD 6 段式骨架样本量小；3 个月 + 十几次设计推倒是单一个案；SDD vs TDD vs BDD 缺量化对比；任务复杂度 3 分级缺边界判定标准。</p>

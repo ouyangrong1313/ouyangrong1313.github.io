@@ -1,0 +1,242 @@
+<h1 id="0xcodezagent-harness-14-步路线图拆解">0xCodez《Agent Harness 14 步路线图》拆解</h1>
+
+<blockquote>
+  <p><strong>一句话定位</strong>：在 Prompt→Harness→Loop 三层架构里，<strong>Harness 是 Loop 的地基</strong>。本文把地基拆成 14 步，从单 Agent 一步步搭到”自我进化”系统。</p>
+</blockquote>
+
+<hr />
+
+<h2 id="一核心观点5-条">一、核心观点（5 条）</h2>
+
+<ol>
+  <li>
+    <p><strong>Loop 只是 Harness 的 timer 化</strong>。”Loop engineering sits one floor above the harness.” 上层（loop）多火，下层（harness）就多被忽视。9/10 的人跑 Claude Code 用的是默认 harness，所以 loop 出来的全是 slop。</p>
+  </li>
+  <li>
+    <p><strong>Harness 的四件套 = 模型 + 工具 + 权限 + 上下文</strong>。其他一切（subagents/hooks/memory）都是这四件套的形状变体。抓住这四点，harness 设计就抓住了骨架。</p>
+  </li>
+  <li>
+    <p><strong>三层不要混</strong>：Harness（静态配置）/ Loop（定时调起）/ Self-improving system（loop + memory 复利）。<strong>事实入 context、流程入 skills、执行隔离入 subagents、强制约束入 hooks</strong> —— 混了就是性能崩+成本炸的根源。</p>
+  </li>
+  <li>
+    <p><strong>CLAUDE.md 限 500 tokens 是死线</strong>。Procedures 不能塞 CLAUDE.md，要塞 skills；单文件夹规则要进 <code class="language-plaintext highlighter-rouge">rules/</code>。这一条是 practitioner 共识，反直觉但实战反复验证。</p>
+  </li>
+  <li>
+    <p><strong>“自我进化”不是模型在变聪明，是 Harness 在累积</strong>。Reviewer subagent + memory state file + skills 蒸馏三件套闭环，<strong>让下次跑比这次跑更聪明</strong>。模型不变，harness 越来越尖。</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="二7-个分析角度">二、7 个分析角度</h2>
+
+<h3 id="角度-1层次观prompt--harness--loop--self-improving">角度 1：层次观（Prompt → Harness → Loop → Self-Improving）</h3>
+
+<ul>
+  <li>Harness 是 Loop 的”地基”，Loop 是 Self-improving system 的”定时器”。</li>
+  <li>错位代价：loop 跑得越勤，harness 的问题放大得越快。</li>
+  <li>与 [[Addy-Osmani-Loop-Engineering]] 是同一枚硬币的两面：Osmani 讲 Loop，本文讲 Harness（Loop 的下一层）。</li>
+</ul>
+
+<h3 id="角度-2可拆解的-14-步路线图">角度 2：可拆解的 14 步路线图</h3>
+
+<ul>
+  <li><strong>Part 1（01-04）What Harness is</strong>：定义 → 目录结构 → 三层关系 → 默认空 harness 的局限。</li>
+  <li><strong>Part 2（05-09）Build the foundation</strong>：CLAUDE.md（事实）→ settings.json（权限）→ subagents（隔离）→ skills（流程）→ hooks（强约束）。</li>
+  <li><strong>Part 3（10-14）Make it compound</strong>：loop（定时）→ dynamic workflow（自编排）→ memory（跨 run 记忆）→ 闭环 → 打包分享。</li>
+  <li><strong>顺序就是教训</strong>：先 manual 跑通 → 加 context/permission → 加 reviewer → 加 memory → <strong>最后才上 loop</strong>。</li>
+</ul>
+
+<h3 id="角度-3claudemd-的反膨胀实践">角度 3：CLAUDE.md 的”反膨胀”实践</h3>
+
+<ul>
+  <li>限 500 token 是死线，不是建议。</li>
+  <li>三分类判断标准：是否每 session 都需要（→ CLAUDE.md）/ 是否多步流程（→ skills）/ 是否单文件夹（→ rules/）。</li>
+  <li>“读 CLAUDE.md 时大声念出来”是判别技巧：每行都该是 fact，不是 procedure。</li>
+</ul>
+
+<h3 id="角度-4hooks-是-claudemd-的硬升级版">角度 4：Hooks 是 CLAUDE.md 的”硬升级版”</h3>
+
+<ul>
+  <li>关键对比：<strong>CLAUDE.md 是建议，hooks 是强制</strong>。模型能”礼貌忽略”前者，不能忽略 exit code 2 的后者。</li>
+  <li>两个最有价值的 hook：PreToolUse 安全门（挡 rm -rf/读 .env/push main）+ PostToolUse 格式化（跑 prettier）。</li>
+  <li>反模式：20 个 hooks。一个好 harness 只有 1-2 个锋利 hook。</li>
+</ul>
+
+<h3 id="角度-5subagent-的最大价值是反自我评分">角度 5：Subagent 的最大价值是”反自我评分”</h3>
+
+<ul>
+  <li>Subagent 不是为并行而并行，<strong>核心价值是把”dirty work”隔离出主 context</strong>。</li>
+  <li><strong>最有价值的 subagent 是 reviewer</strong>：让独立 context 窗口的 reviewer 检查主 agent 输出。模型自己 review 自己太宽容。</li>
+  <li>Writer-vs-checker 分工：让 loop 上层可以放心信任输出。</li>
+</ul>
+
+<h3 id="角度-6memory-让昨天的工作成为明天的起点">角度 6：Memory 让”昨天的工作”成为”明天的起点”</h3>
+
+<ul>
+  <li>Agent 跑完就忘。Harness 不必。</li>
+  <li>State file 三段式：verified facts（停猜的）/ lessons learned（要蒸馏的）/ last session（恢复的）。</li>
+  <li><strong>复利三动作</strong>：Write before walking away + Read at start + Distill general lessons into skills。</li>
+  <li>“Windows runner 用 bash 不用 PowerShell”这种教训要从 state file 升格为 skill。</li>
+</ul>
+
+<h3 id="角度-7错误的-8-种姿势反向-check-list">角度 7：错误的 8 种姿势（反向 check list）</h3>
+
+<ul>
+  <li>Default harness（无 context/规则/记忆） / 膨胀的 CLAUDE.md / 把 enforcement 放 CLAUDE.md 而非 hooks / 单 agent 自写自评 / 无 memory / 把 loop 套在烂 harness 上 / 20 个 hooks / 不扫 secrets 就 ship 插件。</li>
+  <li>共同模式：<strong>把”建议”当”约束”、把”流程”当”事实”、把”加法”当”迭代”</strong>。</li>
+</ul>
+
+<hr />
+
+<h2 id="三14-个开头钩子按引用频次和反直觉度排序">三、14 个开头钩子（按引用频次和反直觉度排序）</h2>
+
+<h3 id="钩子-1反共识开篇">钩子 1（反共识开篇）</h3>
+
+<blockquote>
+  <p>“所有人都在聊 loop，但几乎没人聊 loop 跑在什么上面。”</p>
+</blockquote>
+
+<p>适用：写”被忽视的底层”的引子。</p>
+
+<h3 id="钩子-2数据冲击">钩子 2（数据冲击）</h3>
+
+<blockquote>
+  <p>“10 个用 Claude Code 的人里，9 个跑在默认 harness 上 —— 没规则、没子 agent、没 hooks、没记忆。”</p>
+</blockquote>
+
+<p>适用：揭示现状问题的开篇。</p>
+
+<h3 id="钩子-3类比金句">钩子 3（类比金句）</h3>
+
+<blockquote>
+  <p>“Loop engineering sits one floor above the harness.”</p>
+</blockquote>
+
+<p>适用：引入层次观的引子。</p>
+
+<h3 id="钩子-4结论先行">钩子 4（结论先行）</h3>
+
+<blockquote>
+  <p>“一个坏 harness 上的好 loop，是大规模生产垃圾的最快方法。”</p>
+</blockquote>
+
+<p>适用：写”质量与基础”的引子。</p>
+
+<h3 id="钩子-5结构预告">钩子 5（结构预告）</h3>
+
+<blockquote>
+  <p>“14 步，3 层，一块地基。”</p>
+</blockquote>
+
+<p>适用：长文目录预告式开篇。</p>
+
+<h3 id="钩子-6数字框架">钩子 6（数字框架）</h3>
+
+<blockquote>
+  <p>“Harness 拆开了就是四件套：模型、工具、权限、上下文。其他一切都是这四件的形状变体。”</p>
+</blockquote>
+
+<p>适用：写”复杂概念奥卡姆剃刀”的开篇。</p>
+
+<h3 id="钩子-7强制-vs-建议">钩子 7（强制 vs 建议）</h3>
+
+<blockquote>
+  <p>“CLAUDE.md 是建议，hooks 是强制。模型能礼貌忽略前者，不能忽略 exit code 2 的后者。”</p>
+</blockquote>
+
+<p>适用：写”约束机制设计”或”硬规则 vs 软规则”。</p>
+
+<h3 id="钩子-8反直觉共识">钩子 8（反直觉共识）</h3>
+
+<blockquote>
+  <p>“跑过 Claude Code 的人都同意：CLAUDE.md 别超过 500 tokens。”</p>
+</blockquote>
+
+<p>适用：写”反直觉工程实践”开篇。</p>
+
+<h3 id="钩子-9reviewer-子-agent-的颠覆性">钩子 9（reviewer 子 agent 的颠覆性）</h3>
+
+<blockquote>
+  <p>“任何 harness 里最值钱的 subagent，是检查主 agent 工作的那个。”</p>
+</blockquote>
+
+<p>适用：写”独立 review”价值的引子。</p>
+
+<h3 id="钩子-10procedures-与-facts-区分">钩子 10（procedures 与 facts 区分）</h3>
+
+<blockquote>
+  <p>“大声念一遍你的 CLAUDE.md。每行都该是 fact（”我们用 pnpm 不用 npm”）。如果是 procedure（”加功能时先…“），挪到 skill 里。”</p>
+</blockquote>
+
+<p>适用：写”文档结构化”的引子。</p>
+
+<h3 id="钩子-11loop-的本质">钩子 11（loop 的本质）</h3>
+
+<blockquote>
+  <p>“Loop 没有加 intelligence，只是把 harness 套了个定时器。”</p>
+</blockquote>
+
+<p>适用：写”本质 vs 表面”的开篇。</p>
+
+<h3 id="钩子-12流程与管弦乐">钩子 12（流程与管弦乐）</h3>
+
+<blockquote>
+  <p>“Workflow 是指挥家，harness 是管弦乐队。”</p>
+</blockquote>
+
+<p>适用：写”组件与编排”或”零件与系统”。</p>
+
+<h3 id="钩子-13自我进化的真相">钩子 13（”自我进化”的真相）</h3>
+
+<blockquote>
+  <p>“模型从来没变过，变的是它周围的 harness。这才是’自我进化’的诚实含义 —— 不是模型在学，是 harness 在积累。”</p>
+</blockquote>
+
+<p>适用：写”进化机制”或”AI 学习”的反共识开篇。</p>
+
+<h3 id="钩子-14哲学升华">钩子 14（哲学升华）</h3>
+
+<blockquote>
+  <p>“Loop 拿走所有掌声，harness 干所有活。”</p>
+</blockquote>
+
+<p>适用：写”幕后英雄”或”被低估的基础设施”。</p>
+
+<hr />
+
+<h2 id="四对-seetong-团队的-5-个可借鉴动作">四、对 Seetong 团队的 5 个可借鉴动作</h2>
+
+<ol>
+  <li>
+    <p><strong>梳理现有 <code class="language-plaintext highlighter-rouge">.claude/</code> 目录</strong>（如果还没建）。按本文 <code class="language-plaintext highlighter-rouge">01-04</code> 步把 CLAUDE.md（事实）/<code class="language-plaintext highlighter-rouge">rules/</code>（单文件夹规则）/<code class="language-plaintext highlighter-rouge">skills/</code>（流程）/<code class="language-plaintext highlighter-rouge">agents/</code>（reviewer 等）严格分开。<strong>第一步先瘦身 CLAUDE.md 到 500 tokens 以内</strong>。</p>
+  </li>
+  <li>
+    <p><strong>加一个 PreToolUse 安全 hook</strong>。挡 <code class="language-plaintext highlighter-rouge">rm -rf</code> / 改 <code class="language-plaintext highlighter-rouge">.env</code> / <code class="language-plaintext highlighter-rouge">git push</code> 到 master/main。这是”模型不能礼貌忽略”的硬约束，对 Seetong 监控类 APP 尤为重要（误删/误推代价高）。</p>
+  </li>
+  <li>
+    <p><strong>加一个 reviewer subagent</strong>。让独立 context 的 reviewer 检查主 agent 的代码改动。Seetong 有 QMUI + Objective-C 大量历史代码，<strong>主 agent 容易”自我宽容”</strong>。</p>
+  </li>
+  <li>
+    <p><strong>建 STATE.md 跨 session 记忆</strong>。每次跑完记录：verified facts（<code class="language-plaintext highlighter-rouge">pod install</code> 顺序 / <code class="language-plaintext highlighter-rouge">pch</code> 路径依赖）/ lessons learned（<code class="language-plaintext highlighter-rouge">git push</code> 要先 <code class="language-plaintext highlighter-rouge">pod repo update</code>）/ last session。放在 <code class="language-plaintext highlighter-rouge">.claude/agent-memory/</code>。</p>
+  </li>
+  <li>
+    <p><strong>警惕”loop on bad harness”</strong>。Harness 没搭好之前，不要上 <code class="language-plaintext highlighter-rouge">/loop</code> 或 Routines。<strong>复利是双向的：好 harness 复利加速，烂 harness 复利也加速腐烂</strong>。</p>
+  </li>
+</ol>
+
+<hr />
+
+<h2 id="五相关链接">五、相关链接</h2>
+
+<ul>
+  <li>原文 raw：<a href="./2026-06-17-0xCodez-Agent-Harness-14-Steps.md">2026-06-17-0xCodez-Agent-Harness-14-Steps.md</a></li>
+  <li>同主题 wiki：<a href="../wiki/01-ai-agents/harness-engineering.md">../wiki/01-ai-agents/harness-engineering.md</a></li>
+  <li>同主题 wiki：<a href="../wiki/01-ai-agents/Harness工程AgentLoop.md">../wiki/01-ai-agents/Harness工程AgentLoop.md</a></li>
+  <li>上层 Loop：<a href="../wiki/02-ai-coding/Addy-Osmani-Loop-Engineering.md">../wiki/02-ai-coding/Addy-Osmani-Loop-Engineering.md</a></li>
+  <li>同主题 wiki：<a href="../wiki/01-ai-agents/HarnessEngineering企业级实战.md">../wiki/01-ai-agents/HarnessEngineering企业级实战.md</a></li>
+  <li>Substack：https://movez.substack.com/</li>
+  <li>推文：https://x.com/0xCodez/status/2066867539305459732</li>
+</ul>
+
+<p>标签：#主题/AIAgent #主题/AI-Coding #手法/体系框架 #手法/工程实践 #场景/X长文 #场景/ClaudeCode</p>

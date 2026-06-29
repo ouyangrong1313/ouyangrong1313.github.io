@@ -1,0 +1,438 @@
+<h1 id="loop-engineering-详解把反馈循环放进工程现场">Loop Engineering 详解：把反馈循环放进工程现场</h1>
+
+<blockquote>
+  <p><strong>核心命题</strong>：Loop Engineering 不是”提示词死了”，而是把 prompt 放回一个<strong>反馈系统</strong>：发现工作 → 分配任务 → 执行 → 验证 → 记录状态 → 决定继续/停止/交给人。若飞（架构师 JiaGouX）在这篇里不争论口号，而是给工程团队一份”小范围试 loop 的实操指南”——<strong>7 天试点 + 5 项准入小表 + 5 条保守原则</strong>。</p>
+
+  <p>本文是 [[Addy-Osmani-Loop-Engineering]] 的中文工程化深度解读 + 7 天试点设计 + 中文工程社区视角。</p>
+</blockquote>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+<ul>
+  <li>[[Addy-Osmani-Loop-Engineering]]：Addy Osmani 原文（5+1 积木系统 / Codex 与 Claude Code 双实现 / 3 个反噬警示），本文是其中文工程化深度解读</li>
+  <li>[[从Prompt-Context到Harness-工程的三次进化与终局之战]]：从 Prompt 到 Context 到 Harness 的范式演化，loop 是 Harness 之上的”持续发生”层</li>
+  <li>[[Agentic-Engineering-AI-Workbench]]：AI 工作台 5 层（计划/上下文/执行/验证/治理），是 Loop 的”工作现场”基础</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+<ul>
+  <li>[[Claude-Code一周年回顾-Boris-Cat]]：Routine 异步化是 loop 的工程化形式</li>
+  <li>[[Claude-Code作者Boris-我已经不写prompt了我写loop]]：Boris 写 loop 驱动 Claude 判断下一步</li>
+  <li>[[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]：Harness 动态生成 + Loop 的协作</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+<ul>
+  <li>[[Claude-Code之父品味不是人类护城河]]：同一 Boris 访谈主线——人的判断力是稀缺资源</li>
+  <li>[[Claude-Code团队5条工作原则-Fiona-Fung分享]]：Trust but verify + 团队级 harness</li>
+  <li>[[多Agent使用边界与并行判定]]：多 Agent 并行判定规则</li>
+  <li>[[Codex配置原则总览]]：Codex 配置原则与 loop 的关系</li>
+</ul>
+
+<h2 id="核心论点">核心论点</h2>
+
+<h3 id="1-prompt--harness--loop-的层次关系">1. Prompt → Harness → Loop 的层次关系</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>层级</th>
+      <th>管的什么</th>
+      <th>关键词</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Prompt</strong></td>
+      <td>下一句话怎么说</td>
+      <td>临时输入、上下文、推理</td>
+    </tr>
+    <tr>
+      <td><strong>Harness</strong></td>
+      <td>这一次任务怎么跑</td>
+      <td>状态边界、失败闭环、工作台</td>
+    </tr>
+    <tr>
+      <td><strong>Loop</strong></td>
+      <td>这类任务怎么持续发生</td>
+      <td>定期醒来、留下证据、自动验证</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong>如果 Harness 是让 Agent 跑在一个可检查的工作现场里，Loop 接着问的是：工作现场能不能定期醒来，继续发现问题、处理问题、留下证据。</strong></p>
+</blockquote>
+
+<h3 id="2-6-个工程问题loop-拆解框架">2. 6 个工程问题（loop 拆解框架）</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>问题</th>
+      <th>对应能力</th>
+      <th>解决的风险</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>什么时候启动</td>
+      <td>自动化、定时任务、<code class="language-plaintext highlighter-rouge">/goal</code>、<code class="language-plaintext highlighter-rouge">/loop</code></td>
+      <td>靠人想起来才做</td>
+    </tr>
+    <tr>
+      <td>在哪里改</td>
+      <td>worktree、隔离环境、临时分支</td>
+      <td>并行互相覆盖</td>
+    </tr>
+    <tr>
+      <td>按什么规则做</td>
+      <td>Skills、项目规则、计划模板</td>
+      <td>每轮重新解释业务</td>
+    </tr>
+    <tr>
+      <td>能连到哪里</td>
+      <td>MCP、插件、连接器、CLI</td>
+      <td>只能看本地文件</td>
+    </tr>
+    <tr>
+      <td>谁来复核</td>
+      <td>sub-agent、reviewer、测试</td>
+      <td>自写自审过于宽松</td>
+    </tr>
+    <tr>
+      <td>怎么接上下一轮</td>
+      <td>状态文件、issue、看板、日志</td>
+      <td>上下文中断和目标漂移</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="3-4-个-loop-入口架构视角">3. 4 个 Loop 入口（架构视角）</h3>
+
+<ol>
+  <li><strong>触发入口</strong>：谁能启动、多久启动一次、输入从哪里来</li>
+  <li><strong>执行沙箱</strong>：在哪个 worktree / 分支 / 临时环境里跑、能否回滚</li>
+  <li><strong>验收出口</strong>：用哪些测试、日志、规则和人工复核来判定结果</li>
+  <li><strong>状态账本</strong>：这轮尝试、证据、失败原因和下一步写到哪里</li>
+</ol>
+
+<blockquote>
+  <p>这些问题都不玄。难点在组合：这些东西放在一起后，系统还能不能停得住、看得清、交得出去。</p>
+</blockquote>
+
+<h3 id="4-闭环-vs-开环">4. 闭环 vs 开环</h3>
+
+<ul>
+  <li><strong>闭环</strong>：边界明确、目标清楚、反馈客观、停止条件可验证（CI 分流、链接检查、事实核验）</li>
+  <li><strong>开环</strong>：Agent 自己发现任务、扩展路径、决定下一步（<strong>风险高、预算难控、目标易漂移</strong>）</li>
+</ul>
+
+<blockquote>
+  <p><strong>我会把 loop 的第一站放在闭环，开环先放一放。</strong> 工程里有个老经验：先让一个小闭环跑稳，再谈更大的自动化。</p>
+</blockquote>
+
+<h3 id="5-4-条件准入判断">5. 4 条件准入判断</h3>
+
+<p>Loop 适合”<strong>目标清楚、验证便宜、失败可回滚</strong>“的任务：</p>
+
+<ol>
+  <li>这件事会不会重复</li>
+  <li>能不能自动验证</li>
+  <li>token 预算能不能承受重试</li>
+  <li>Agent 有没有真实工具可用</li>
+</ol>
+
+<blockquote>
+  <p>验证很便宜 → loop 放大收益；验证很贵 → loop 放大幻觉和成本</p>
+</blockquote>
+
+<h3 id="6-5-项准入小表很管用">6. 5 项准入小表（很管用）</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>检查项</th>
+      <th>可以试</th>
+      <th>暂缓</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>输入</td>
+      <td>日志/issue/测试报告/文档</td>
+      <td>靠口头描述、边界每天变</td>
+    </tr>
+    <tr>
+      <td>输出</td>
+      <td>分类表/候选 PR/证据清单</td>
+      <td>直接改核心逻辑</td>
+    </tr>
+    <tr>
+      <td>验证</td>
+      <td>有测试/lint/链接检查/可复现命令</td>
+      <td>只能靠人读一遍</td>
+    </tr>
+    <tr>
+      <td>权限</td>
+      <td>默认只读、写入走隔离分支</td>
+      <td>直接改主分支或生产配置</td>
+    </tr>
+    <tr>
+      <td>停止</td>
+      <td>有预算/时间/证据不足等停止条件</td>
+      <td>只写”继续优化”、没有退出点</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>五项里只要有两项落在右边，先补测试、补状态、补边界，再考虑自动 loop。</p>
+</blockquote>
+
+<h3 id="7-6-类适合的试点场景">7. 6 类适合的试点场景</h3>
+
+<ol>
+  <li><strong>技术稿事实核验</strong>（读多、改少、证据可列）</li>
+  <li><strong>CI 失败分流</strong>（输入结构化、验证路径明确）</li>
+  <li><strong>文档链接和配置漂移检查</strong>（可自动扫描 + 人工确认）</li>
+  <li><strong>重复故障归类</strong>（需要并行阅读大量日志和 issue）</li>
+  <li><strong>陈旧 feature flag / 实验配置清理</strong>（天然可拆、结果可只读）</li>
+  <li><strong>依赖升级预检查</strong>（先生成影响范围和测试建议）</li>
+</ol>
+
+<h3 id="8-任务卡预算loop-边界写在前面">8. 任务卡预算：loop 边界写在前面</h3>
+
+<p>示例任务卡（每日 CI 分流）：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre>循环名称：每日 CI 分流
+触发频率：每天 09:30
+输入范围：过去 24 小时失败 job、最近 20 个 commit
+最大运行：30 分钟
+最大分支：一次最多处理 5 个失败簇
+权限：默认只读；修复必须进入独立 worktree
+验证：只运行相关测试，不跑全量回归
+停止条件：无新失败、证据不足、预算到达、需要人工决策
+交付物：失败分类表、可复现命令、候选 PR、剩余风险
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<blockquote>
+  <p>这些边界如果不写，loop 会很快变成一个乐观的 while 循环。它会一直尝试，一直解释，一直”看起来有进展”。<strong>但 momentum 不是 progress。</strong></p>
+</blockquote>
+
+<h3 id="9-状态记忆loop-不能只靠对话">9. 状态记忆：loop 不能只靠对话</h3>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="gu">## 当前目标</span>
+<span class="gu">## 已尝试</span>
+<span class="gu">## 已验证</span>
+<span class="gu">## 禁止事项</span>
+<span class="gu">## 下一步</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<blockquote>
+  <p><strong>如果没有状态记忆，loop 就会变成一串断开的 prompt。看起来连续，实际上每轮都在重新开始。</strong></p>
+</blockquote>
+
+<h3 id="10-5-条保守原则">10. 5 条保守原则</h3>
+
+<ol>
+  <li>先只读，后写入</li>
+  <li>先低风险，后核心路径</li>
+  <li>先小频率，后高频率</li>
+  <li>先人工确认，后自动合并</li>
+  <li><strong>先写停止条件，再写继续条件</strong></li>
+</ol>
+
+<blockquote>
+  <p>很多自动化出问题，不是因为不会继续，而是因为不知道什么时候停。</p>
+</blockquote>
+
+<h3 id="11-7-天试点路径">11. 7 天试点路径</h3>
+
+<ul>
+  <li><strong>D1 选场景</strong>：低风险任务（CI 分流 / 文档检查 / 事实核验）</li>
+  <li><strong>D2 写任务卡</strong>：输入范围 / 权限 / 预算 / 停止条件 / 交付物</li>
+  <li><strong>D3 做 Skill</strong>：项目规则 / 常见误区 / 验证命令 / 输出格式</li>
+  <li><strong>D4 接状态记忆</strong>：<code class="language-plaintext highlighter-rouge">plan.md</code> / issue / 看板</li>
+  <li><strong>D5 跑一次手动 loop</strong>：人手动触发每一步</li>
+  <li><strong>D6 加自动触发</strong>：固定频率 + 时间/预算上限，输出先进入人工 inbox</li>
+  <li><strong>D7 复盘</strong>：命中率、误报率、回滚率、成本、证据 5 个指标</li>
+</ul>
+
+<p><strong>复盘 5 指标</strong>：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>指标</th>
+      <th>看什么</th>
+      <th>算可继续</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>命中率</td>
+      <td>loop 找到的问题里有多少确实值得处理</td>
+      <td>人工复核后仍有稳定收益</td>
+    </tr>
+    <tr>
+      <td>误报率</td>
+      <td>有多少输出会浪费人的时间</td>
+      <td>不影响日常节奏</td>
+    </tr>
+    <tr>
+      <td>回滚率</td>
+      <td>Agent 写入后有多少需要撤回</td>
+      <td>写入先控制在候选分支</td>
+    </tr>
+    <tr>
+      <td>成本</td>
+      <td>token、运行时间、工具调用次数</td>
+      <td>账单和收益能对上</td>
+    </tr>
+    <tr>
+      <td>证据</td>
+      <td>每个结论有没有来源、命令、日志或测试结果</td>
+      <td>人能在 5 分钟内复核一轮</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>如果这些数说不清，问题通常不在 Agent，而在工作流本身还没有被定义清楚。</p>
+</blockquote>
+
+<h2 id="关键判断卡">关键判断卡</h2>
+
+<h3 id="loop-什么时候值得上">Loop 什么时候值得上</h3>
+
+<ul>
+  <li>任务重复 + 验证自动化 + 预算撑得住 + Agent 有真实工具 = 可上</li>
+  <li>验证很贵 + 边界模糊 + 后果很重 = <strong>loop 会把问题放大</strong></li>
+</ul>
+
+<h3 id="人的位置变了">人的位置变了</h3>
+
+<ul>
+  <li>以前：每轮 prompt 临时判断（下一步做什么 / 哪个结果可信 / 哪个文件不能碰 / 什么时候停）</li>
+  <li>现在：提前变成规则、模板、权限、预算、停止条件</li>
+  <li><strong>人没消失，反而更前置、更重</strong></li>
+</ul>
+
+<h3 id="成熟-loop-应该能诚实地说">成熟 loop 应该能诚实地说</h3>
+
+<ul>
+  <li>“我没有足够证据继续”</li>
+  <li>“这次修改超过了授权范围”</li>
+  <li>“预算已经到达”</li>
+  <li>“验证结果不稳定”</li>
+  <li>“需要人做产品判断”</li>
+</ul>
+
+<h2 id="收束判断">收束判断</h2>
+
+<blockquote>
+  <p><strong>循环越自动，人的判断越要在场。因为 loop 本身不知道你是在加速理解，还是在逃避理解。这道分界线，最后还是要由人负责。</strong></p>
+</blockquote>
+
+<p>若飞对 loop 的态度：<strong>可以试，值得学，不用神化。</strong></p>
+
+<ul>
+  <li>它能放大已经清楚的工作流，但想清楚工作流这件事仍在人这里</li>
+  <li>它能持续处理可验证的小闭环，但模糊的业务判断仍要有人负责</li>
+  <li>它能让工程师少做重复操作，但不能让工程师少理解系统</li>
+</ul>
+
+<h2 id="与原文-addy-osmani-loop-engineering-的差异">与原文 [[Addy-Osmani-Loop-Engineering]] 的差异</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>维度</th>
+      <th>Addy 原文</th>
+      <th>若飞详解</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>视角</td>
+      <td>跨产品方法论综述</td>
+      <td>中文工程社区实操</td>
+    </tr>
+    <tr>
+      <td>重点</td>
+      <td>5+1 积木系统（Automations/Worktrees/Skills/Plugins/Sub-agents/Memory）</td>
+      <td>6 工程问题 + 4 入口 + 5 准入 + 7 天试点</td>
+    </tr>
+    <tr>
+      <td>风险提示</td>
+      <td>3 个反噬警示</td>
+      <td>5 条保守原则 + momentum ≠ progress</td>
+    </tr>
+    <tr>
+      <td>状态记忆</td>
+      <td>一笔带过</td>
+      <td>完整示例（plan.md 5 段式模板）</td>
+    </tr>
+    <tr>
+      <td>试点路径</td>
+      <td>无</td>
+      <td>7 天具体路径 + 5 复盘指标</td>
+    </tr>
+    <tr>
+      <td>中文工程语境</td>
+      <td>无</td>
+      <td>大量”先只读后写入 / 先低风险后核心路径”等中文工程经验沉淀</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="对-seetong-团队的可借鉴动作6-条">对 Seetong 团队的可借鉴动作（6 条）</h2>
+
+<ol>
+  <li><strong>用 5 项准入小表审 Seetong-iOS/Android/Harmony 的可 loop 任务清单</strong>：先识别哪些任务”5 项里有 3 项以上落在可以试列”</li>
+  <li><strong>从”陈旧 feature flag 清理”或”重复故障归类”开始试点</strong>：风险低、验证便宜、有现成数据</li>
+  <li><strong>写一份”loop 任务卡模板”</strong>给团队，要求任何新建 loop 必须填 6 项（循环名称/触发频率/输入范围/最大运行/权限/停止条件）</li>
+  <li><strong>搭一个”Loop 状态记忆”MCP 或独立 workspace</strong>：<code class="language-plaintext highlighter-rouge">plan.md</code> 5 段式（目标/已尝试/已验证/禁止事项/下一步）标准化</li>
+  <li><strong>设”先写停止条件再写继续条件”为团队守则</strong>：所有 loop 任务卡审查时第一项看停止条件</li>
+  <li><strong>为 Seetong 团队 3 个高频场景写 7 天试点复盘</strong>：CI 分流 / 录像设备离线归类 / 用户反馈分类</li>
+</ol>
+
+<h2 id="待补证--局限">待补证 / 局限</h2>
+
+<ul>
+  <li>“Loop Engineering”作为术语<strong>还在演化中</strong>，若飞和 Addy Osmani 的口径不完全一致——Addy 偏 5+1 积木，若飞偏 4 入口 + 5 准入</li>
+  <li><strong>7 天试点</strong>是若飞个人推荐路径，<strong>未给真实团队的成功率数据</strong>——只能作为起点模板，不能作为最佳实践</li>
+  <li>“<strong>5 条保守原则</strong>“接近经验法则，<strong>缺量化阈值</strong>（如”低风险”的定义、”小频率”的具体数字）</li>
+  <li>6 类试点场景是英文社区样本，<strong>中文工程社区的真实落地数据未公开</strong></li>
+  <li>“momentum ≠ progress” 这一关键判断<strong>未给量化定义</strong>——什么叫”看起来有进展”vs”真的进展”还需要团队内部建立 metric</li>
+</ul>
+
+<h2 id="标签与分类">标签与分类</h2>
+
+<ul>
+  <li>主题：AI-Coding / Harness / Loop / 工程管理 / 工作流设计 / 状态记忆</li>
+  <li>手法：方法论 / 工程实践 / 试点设计</li>
+  <li>场景：小团队试点 / AI-Native 组织</li>
+  <li>公司：架构师 JiaGouX</li>
+</ul>
+
+<hr />
+
+<p><em>完整快问快答与产品演示细节见 [[../../raw/2026-06-Ruofei-Loop-Engineering-详解]] 原文。</em>
+<em>速读摘要见 [[Loop-Engineering-详解-把反馈循环放进工程现场-digest]]。</em></p>

@@ -1,0 +1,279 @@
+<h1 id="claude-code-首席设计师的-ai-工作流从并行到自动巡逻人只在判断环节介入">Claude Code 首席设计师的 AI 工作流:从并行到自动巡逻,人只在判断环节介入</h1>
+
+<ul>
+  <li>原文链接:https://mp.weixin.qq.com/s/_WaCCvZ0FgMQiJ1PSVOMwA</li>
+  <li>原始作者:loonggg(微信公众号)</li>
+  <li>演示来源:Meaghan Choi(Anthropic,Claude Code 首席设计师)</li>
+  <li>来源:微信公众号 / loonggg</li>
+  <li>发布时间:2026-06-09 11:30</li>
+  <li>获取时间:2026-06-10</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论(一句话)</h2>
+
+<blockquote>
+  <p><strong>Anthropic Claude Code 首席设计师 Meaghan Choi 的日常 AI 工作流 6 条核心:①worktree 并行(同时开 4-5 个 Claude)②让 AI 自己做初判并给理由 ③不只让 AI 写代码,所有重复性工作全扔出去(commit / PR / Slack)④用定时任务让 AI 自动巡逻代码与产品质量 ⑤AI 现阶段做不好设计,人把控方向 ⑥始终开 Opus + 1M 上下文 + auto + loop,能自动化的全自动化,人只在判断环节介入。</strong></p>
+</blockquote>
+
+<h2 id="分类提炼">分类提炼</h2>
+
+<ul>
+  <li>场景:Anthropic 内部工作流 / 个人 AI 工作流 / 团队 AI 化</li>
+  <li>标签:#主题/AI-Coding #主题/Anthropic #节点/Worktree并行 #节点/Auto模式+Loop</li>
+  <li>类型:方法论 / 一手观察 / 跨职能自动化</li>
+</ul>
+
+<h2 id="知识节点8-个独立概念">知识节点(8 个独立概念)</h2>
+
+<ul>
+  <li><strong>Worktree并行</strong>:Anthropic 工程师日常同时开 4-5 个 Claude 窗口;worktree 给仓库创建隔离副本,让并行 Claude 互不打架</li>
+  <li><strong>AI自决给理由</strong>:<code class="language-plaintext highlighter-rouge">/prototype</code> 自定义技能让 Claude 选一个方案并解释为什么;初判也交给 AI,人只做最终确认</li>
+  <li><strong>全链路自动化</strong>:不只是写代码,所有重复性工作(commit / PR / 截图 / Slack 通知 / 简单修复)都交给 AI;小修复随手发云端任务,自动变成代码提交,改动小的自动过审上线</li>
+  <li><strong>AI自动巡逻</strong>:定时任务让 Claude 每天扫描前端改动,检查设计师是否参与过(Slack / 会议纪要 / 文档);没参与就自动生成替代设计 + 打包 PR + 私信工程师</li>
+  <li><strong>Auto模式+Loop</strong>:auto 模式分类器自动判断风险,没风险直接执行;loop 让 Claude 自己循环执行到完成;不再反复问”可以吗?确认吗?”</li>
+  <li><strong>Opus1M上下文</strong>:始终用 Opus 模型 + 1M 上下文窗口 + auto 模式 = Claude Code 推荐的”高交互”配置组合</li>
+  <li><strong>AI设计边界</strong>:AI 现阶段做不好设计(Claude 自己也承认);审美 / 产品决策 / 质量把控仍要人做;门槛降低反而要求标准不降低</li>
+  <li><strong>先把流程搭好等模型升级</strong>:即便 AI 能力不够(比如自动发消息质量差被关掉),整套流程保留着,等下一代模型直接接上 = 永远不浪费自己搭好的工作流</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游(基于 / 来自)</h3>
+
+<ul>
+  <li>[[Claude-Code作者Boris-我已经不写prompt了我写loop]] - “写 Loops” 是 AI Coding 下一阶段,本文”auto + loop”是同一信号的 Claude Code 内化版</li>
+  <li>[[Claude-Code之父品味不是人类护城河]] - Boris 谈品味被模型侵蚀,Meaghan 谈当下 AI 设计仍不够好,两者互补 = “AI 边界今天在哪,明天会移动到哪”</li>
+  <li>[[Claude-Code团队5条工作原则-Fiona-Fung分享]] - “Trust but verify” 规则的 AI 监控化 = 同一个 Anthropic 内部思路的不同切面</li>
+  <li>[[Addy-Osmani-Loop-Engineering]] - 5+1 积木(auto / worktree / skill / mcp / sub-agent / memory)与本文方法完全对应</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游(应用于 / 验证于)</h3>
+
+<ul>
+  <li>[[Agentic-Engineering-AI-Workbench]] - “AI 工作台”五层结构(计划/上下文/执行/验证/治理)= 本文方法论的结构化版本</li>
+  <li>[[买了一样的AI为什么别家的比你的强]] - “AI 自己做初判 + 给理由”是 Hiten Shah “模型是商品,判断是资产”在个人层面的具体实现</li>
+  <li>[[多Agent使用边界与并行判定]] - “同时开 4-5 个 Claude”需要先用”任务卡 + 隔离 + 可验证结果 + 合并规则”判定并行是否值得</li>
+  <li>[[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] - 强模型也需 Harness,auto/loop 本身是 Harness 的一部分</li>
+</ul>
+
+<h2 id="正文要点8-条">正文要点(8 条)</h2>
+
+<h3 id="一并行工作靠-worktree">一、并行工作靠 worktree</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>维度</th>
+      <th>Meaghan 的实践</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>并行数量</td>
+      <td>4-5 个 Claude 窗口同时跑</td>
+    </tr>
+    <tr>
+      <td>隔离方案</td>
+      <td>worktree(给仓库创建隔离副本)</td>
+    </tr>
+    <tr>
+      <td>解决痛点</td>
+      <td>多 Claude 互相打架、改同一文件</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>“Anthropic 内部的工程师,经常同时开四五个 Claude 窗口并行处理任务。这已经是他们的日常了。”</p>
+</blockquote>
+
+<blockquote>
+  <p><strong>思路本身就值得琢磨</strong>——哪怕不写代码,也可以想想:有没有办法让 AI 同时帮你处理多条线的工作?</p>
+</blockquote>
+
+<h3 id="二让-ai-自己做决策然后告诉你为什么">二、让 AI 自己做决策,然后告诉你为什么</h3>
+
+<p><strong><code class="language-plaintext highlighter-rouge">/prototype</code> 自定义技能</strong>:</p>
+<ul>
+  <li>旧做法:让 Claude 生成 5 个版本,Meaghan 自己挑</li>
+  <li>新做法:<strong>让 Claude 先选一个它觉得最好的,然后解释为什么</strong></li>
+</ul>
+
+<blockquote>
+  <p>“以前大家用 AI 的习惯是:你给我几个选项,我来拍板。但她的做法是把初步判断也交给 AI,自己只做最终的确认。”</p>
+</blockquote>
+
+<p><strong>关键副产品</strong>:没有人再手写这些自定义技能了,全都是让 Claude 帮忙生成。”如果有人说他是自己手写的,那他在骗你。”</p>
+
+<h3 id="三不只是写代码所有重复性工作都丢给-ai">三、不只是写代码,所有重复性工作都丢给 AI</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>工作环节</th>
+      <th>AI 参与度</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>写代码</td>
+      <td>100%</td>
+    </tr>
+    <tr>
+      <td>自动 commit</td>
+      <td>AI 主导</td>
+    </tr>
+    <tr>
+      <td>发起 PR</td>
+      <td>AI 主导</td>
+    </tr>
+    <tr>
+      <td>截图记录功能效果</td>
+      <td>AI 主导</td>
+    </tr>
+    <tr>
+      <td>Slack 通知同事审核</td>
+      <td>AI 主导</td>
+    </tr>
+    <tr>
+      <td>简单修复(按钮间距 / 颜色)</td>
+      <td>AI 直接修,改动小自动过审上线</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong>核心理念</strong>:任何她觉得不值得花时间亲自做的事情,全部扔出去。</p>
+</blockquote>
+
+<h3 id="四用定时任务让-ai-自动巡逻产品质量">四、用定时任务让 AI 自动巡逻产品质量</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre>每日定时任务:
+  Claude 扫描所有仓库前端改动
+    ↓
+  检查每个改动背后是否有设计师参与
+    ↓ 查 Slack 聊天记录 / 会议纪要 / 文档协作
+  未经过设计师审核?
+    ↓
+  AI 自动生成替代设计方案
+    ↓
+  打包成待审核的代码提交
+    ↓
+  私信工程师,提醒他去找设计师合作
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>关键细节</strong>:这套流程在 Claude 设计能力还不够好的时候,把”自动发消息”关掉(免得消息质量差让工程师烦),<strong>但整套流程保留着</strong>——等下一代模型能力更强,直接重新启用。</p>
+
+<h3 id="五ai-现阶段做不好设计人仍要把控方向">五、AI 现阶段做不好设计,人仍要把控方向</h3>
+
+<ul>
+  <li>审美和产品决策:人类主导</li>
+  <li>什么该上线 / 什么不该上线:<strong>人做判断</strong></li>
+  <li>质量把控体系:反而要求更强</li>
+</ul>
+
+<blockquote>
+  <p>“工具变强了,门槛降低了,但标准不能跟着降低。反而因为产出变多了,筛选和把关变得更重要了。”</p>
+</blockquote>
+
+<h3 id="六始终开-auto-模式减少一切不必要的确认">六、始终开 auto 模式,减少一切不必要的确认</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>配置</th>
+      <th>作用</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Opus 模型</td>
+      <td>强模型</td>
+    </tr>
+    <tr>
+      <td>1M 上下文窗口</td>
+      <td>大上下文</td>
+    </tr>
+    <tr>
+      <td>auto 模式</td>
+      <td>分类器自动判断风险,没风险直接执行</td>
+    </tr>
+    <tr>
+      <td>loop</td>
+      <td>一直做,做到完为止</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong>核心理念</strong>:能自动化的全部自动化,人只在真正需要判断的环节介入。</p>
+</blockquote>
+
+<h3 id="七先把流程搭好等模型升级">七、先把流程搭好,等模型升级</h3>
+
+<p>这是 loonggg 自己提炼的”金句方向”:</p>
+
+<blockquote>
+  <p>“不要怕现在的 AI 做得不够好。先把流程搭起来,先把自动化的框架建好。等模型能力提升了,你的系统马上就能受益。”</p>
+</blockquote>
+
+<p><strong>Anthropic 内部验证</strong>:</p>
+<ul>
+  <li>Meaghan 整套”AI 自动巡逻”流程保留</li>
+  <li>自动发消息关了,但骨架一直在</li>
+  <li>下一代模型一发布,直接接上</li>
+</ul>
+
+<h3 id="八写在最后从一问一答到接管整条链路">八、写在最后:从”一问一答”到”接管整条链路”</h3>
+
+<blockquote>
+  <p>“很多人用 AI 还停留在「问一个问题,得一个答案」的阶段。但真正把 AI 用到极致的人,已经在想怎么搭建一整套自动化的工作流了。<strong>他们不是在用 AI 完成一个步骤,而是在让 AI 接管整条链路。</strong>”</p>
+</blockquote>
+
+<h2 id="我的理解">我的理解</h2>
+
+<ul>
+  <li><strong>“先把流程搭好,等模型升级”是 2026 年最高 ROI 的 AI 战略</strong> —— Meaghan 关掉”自动发消息”但保留整套流程 = <strong>永远不浪费自己搭好的工作流</strong>;这条主线与 [[Addy-Osmani-Loop-Engineering]] [[Agentic-Engineering-AI-Workbench]] 是同一信号的不同切面</li>
+  <li><strong>“auto + loop + Opus 1M 上下文”是 Claude Code 推荐的”高交互”配置组合</strong> —— 但这套组合需要配合 <strong>清晰的护栏(分类器判断风险 / loop 终止条件)</strong>,否则容易失控;与 [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] “模型再强也需要 Harness 约束”互相印证</li>
+  <li><strong>“用定时任务自动巡逻产品质量”是 Anthropic 内部的”AI 自我监控”实践</strong> —— AI 不只帮工程师写代码,还帮设计师/PM 检查”有没有被绕过”;这条与 [[Claude-Code团队5条工作原则-Fiona-Fung分享]] 的 “Trust but verify” 是同一条规则的产品化形式</li>
+  <li><strong>“AI 做不好设计,人把控方向”是重要的”AI 边界论”</strong> —— 与 [[Claude-Code之父品味不是人类护城河]] Boris 的”品味也会被模型侵蚀”形成互补:<strong>AI 在”判断 + 审美”上边界还在,但边界会持续移动</strong>;人要做的是 <strong>持续把”今天模型做不到”的事结构化地留给未来模型</strong></li>
+  <li><strong>“让 AI 自己做决策 + 给理由”是”判断力外包”的具体实现</strong> —— 跟上 [[买了一样的AI为什么别家的比你的强]] 的”模型是商品,判断是资产”主线 —— Meaghan 把”选择哪个方案”这种初级判断也包进 Claude = <strong>判断的颗粒度从”拍板”下沉到”初判 + 解释”</strong></li>
+  <li><strong>对 Seetong 团队的 3 个可借鉴动作</strong>:
+    <ol>
+      <li><strong>worktree 并行改造</strong>:选一个迭代试”同时 3 个 Codex 跑不同子任务”(参考 [[多Agent使用边界与并行判定]])</li>
+      <li><strong>“AI 自动巡逻”小试点</strong>:写一个 cron 任务,每天扫 Seetong Bug / 需求,自动标红”测试已 3 天未响应”等异常</li>
+      <li><strong>Opus + 1M 上下文 + auto 模式</strong>:在重决策(架构 / 重大 Bug 排查 / 跨模块重构)任务上用这套配置,先小范围验证</li>
+    </ol>
+  </li>
+</ul>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+  <li>原文:https://mp.weixin.qq.com/s/_WaCCvZ0FgMQiJ1PSVOMwA</li>
+  <li>演示者:Meaghan Choi(Anthropic,Claude Code 首席设计师)</li>
+  <li>关联 wiki:
+    <ul>
+      <li>[[Claude-Code作者Boris-我已经不写prompt了我写loop]] - “写 Loops”是 AI Coding 的下一阶段,本文”auto + loop”是同主线</li>
+      <li>[[Claude-Code之父品味不是人类护城河]] - Boris 谈品味被模型侵蚀,Meaghan 谈当下 AI 设计仍不够好,两者互补</li>
+      <li>[[Claude-Code团队5条工作原则-Fiona-Fung分享]] - “Trust but verify” 规则的 AI 监控化</li>
+      <li>[[Addy-Osmani-Loop-Engineering]] - 5+1 积木 + auto + loop 是同一信号的跨产品表达</li>
+      <li>[[Agentic-Engineering-AI-Workbench]] - “AI 工作台”五层结构 = 本文方法论的结构化版本</li>
+      <li>[[买了一样的AI为什么别家的比你的强]] - “AI 自己做初判 + 给理由”是判断力外包的具体形式</li>
+      <li>[[多Agent使用边界与并行判定]] - “同时开 4-5 个 Claude” 需要先判定并行是否值得</li>
+      <li>[[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] - 强模型也需 Harness,auto/loop 本身是 Harness 的一部分</li>
+    </ul>
+  </li>
+</ul>

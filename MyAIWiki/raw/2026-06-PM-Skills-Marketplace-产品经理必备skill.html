@@ -1,0 +1,175 @@
+<h1 id="一个产品经理必备-skill-上热搜了">一个产品经理必备 skill ，上热搜了。</h1>
+
+<p>产品经理用 AI 写文档，早就不是新鲜事了。</p>
+
+<p>我试过用好几个 AI 来写 PRD。我发现真正让人头痛的是,AI 给你的是很多的文字,并不是可以执行的方法论。</p>
+
+<p>AI 写了一个 PRD,它就给你生成几个页面的模板;让你做竞品分析,它就给你列出一串表格。</p>
+
+<p>看起来很完整了,但是用的时候总感觉少了一点东西。</p>
+
+<p>最近我在 GitHub 上刷到了一个叫 <strong>PM Skills</strong> 的项目。</p>
+
+<p>三个月内拿到了 16000 多颗星星。</p>
+
+<p><strong>PM Skills Marketplace</strong> 做的事情很简单,就是把产品管理的方法论编码成可以被 AI 直接执行的工作流。</p>
+
+<p>举个例子,你就明白了。</p>
+
+<p>遇到一个未知的需求,一般会这样:</p>
+
+<ul>
+  <li>打开 ChatGPT 或 DeepSeek。</li>
+  <li>输入”帮我写一个用户访谈脚本”。</li>
+  <li>AI 给你一个通用模板。</li>
+  <li>自己先改一点,还是不清晰的。</li>
+  <li>再问”对电商用户怎么改”,AI 又会给出一些建议。</li>
+  <li>你还要不断地修改,反反复复地进行好几轮。</li>
+</ul>
+
+<p>而我装完 PM Skills,直接在 OpenCode 里输入:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>/interview-script
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>马上它就问我:</p>
+
+<blockquote>
+  <p>本次采访的目的是什么?</p>
+</blockquote>
+
+<p>我给一个企业级的 OA 工作流系统的调研需求。</p>
+
+<p>一分钟后。</p>
+
+<p>创建了一个叫 <code class="language-plaintext highlighter-rouge">customer-interview-oa-workflow.md</code> 的文件。</p>
+
+<p>里面记录了一些关于这个需求调研的内容。</p>
+
+<p>我用 VS Code 打开并补充一些内容。</p>
+
+<p>接着它根据我的回答来生成一个结构化的访谈脚本,里面包含了 JTBD 问题、满意度等内容。</p>
+
+<p>从这个过程来看,很明显:</p>
+
+<p><strong>已经不需要自己去搭建框架了,AI 会带你完成整个过程。</strong></p>
+
+<p>这就是”给你文字”与”给你结构化的执行路径”的区别。</p>
+
+<p>整个项目包含 <strong>9 个插件、68 个技能以及 42 个命令</strong>,覆盖了产品的全生命周期。</p>
+
+<p>从产品发现、战略规划、执行落地,到市场研究、数据分析、市场进入、营销增长,再到工具包和最新的 AI 交付,基本覆盖了产品经理工作中会遇到的所有场景。</p>
+
+<p>它把所有产品的管理方法论都编入了 AI 中。</p>
+
+<h2 id="01-发现产品的方法">01 发现产品的方法</h2>
+
+<p>每个”技能”都有一个对应的方法论或分析框架。</p>
+
+<p>我用了 <code class="language-plaintext highlighter-rouge">/opportunity-solution-tree</code>,本来是想让我画出一棵树状图,但它却一步步地引导我来构建 Teresa Torres 的 OST —— 从结果出发,逆向推导出机会点、分解方案,最后通过实验来验证。</p>
+
+<p><strong>不是给你一个模板让你去填,而是问完一个问题之后再问下一个。</strong></p>
+
+<p><code class="language-plaintext highlighter-rouge">identify-assumptions-existing</code> 也试了,按照价值、可用性、可行性、生存性这四个维度把我的产品中”默认没问题”的假设都揪出来了。</p>
+
+<p>强的一逼。</p>
+
+<h2 id="02-命令与技能之间也有关系">02 命令与技能之间也有关系</h2>
+
+<p>那么命令与技能的区别是什么呢?</p>
+
+<p><strong>技能是独立的方法论,命令就是把多个技能组合起来完成一个过程。</strong></p>
+
+<p>比如 <code class="language-plaintext highlighter-rouge">/discover</code>,它会让你看到整个产品发现的过程:创意产生、假设对应、排序优先、实验设计。不需要你自己来拼接流程了,AI 会一步步地向你提问,并且一步步地带你前进。</p>
+
+<h2 id="03-产品的战略能力">03 产品的战略能力</h2>
+
+<p>战略相关的内容包括了产品的愿景、价值主张、商业模式和价格策略等。</p>
+
+<p><code class="language-plaintext highlighter-rouge">/product-strategy</code> 会帮你创建出包含九个部分的产品战略画布,并且从愿景一直写到可以防御的部分。</p>
+
+<p>而 <code class="language-plaintext highlighter-rouge">lean-canvas</code> 就是把整个 Lean Canvas 走一遍 —— 我曾经填了很多次 Lean Canvas,每次都会想,”这里应该填什么?”这样让它带上就快了。</p>
+
+<h2 id="04-定价策略能力">04 定价策略能力</h2>
+
+<p><code class="language-plaintext highlighter-rouge">pricing-strategy</code> 会帮你做定价模型、竞争分析、支付意愿评估和价格弹性考虑。</p>
+
+<p>用前面提到的企业的 OA 系统需求来试试看,它会自动找出所有的竞争对手名单 —— 这一点是没想到到的。</p>
+
+<p>原来需要花上几天时间来整理的东西,现在分分钟就出结果了。</p>
+
+<h2 id="05-产品的执行能力">05 产品的执行能力</h2>
+
+<p>执行层面上最多的有 16 项,包括 PRD、OKR、路线图、Sprint 规划、发布说明等。</p>
+
+<p><code class="language-plaintext highlighter-rouge">create-prd</code> 会为你生成一个包含八部分的 PRD 模板,而 <code class="language-plaintext highlighter-rouge">outcome-roadmap</code> 则把功能列表转化为以成果为导向的路线图。</p>
+
+<p><code class="language-plaintext highlighter-rouge">pre-mortem</code> 最实用的就是在项目刚开始的时候就做一次风险分析,并且把 Tigers、Paper Tigers 和 Elephants 分开来。</p>
+
+<p>以前需要开上半天会议才能想到的想法,现在也是很快就拿到结果了。</p>
+
+<p><strong>它不是随便给你一个模板让你去填,而是问完一个问题之后再问下一个。</strong></p>
+
+<p>它会向你提问、引导你的思考、帮助你做优先级排序 —— 你才是做决定的人,它只是帮你把方法论走一遍。</p>
+
+<h2 id="安装与使用">安装与使用</h2>
+
+<p>我用 OpenCode 手动复制 Skills 来安装。</p>
+
+<p><strong>1. 将项目克隆到本地</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>git clone https://github.com/phuryn/pm-skills.git
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>2. 把所有的技能都复制到 OpenCode 文件夹里</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="nb">mkdir</span> <span class="nt">-p</span> ~/.opencode/skills
+<span class="nb">cp</span> <span class="nt">-r</span> pm-skills/pm-product-discovery/skills/<span class="k">*</span> ~/.opencode/skills/
+<span class="nb">cp</span> <span class="nt">-r</span> pm-skills/pm-product-strategy/skills/<span class="k">*</span> ~/.opencode/skills/
+<span class="nb">cp</span> <span class="nt">-r</span> pm-skills/pm-execution/skills/<span class="k">*</span> ~/.opencode/skills/
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>其他插件也是如此。</p>
+
+<p><strong>3. 在 OpenCode 里直接用</strong></p>
+
+<p>比如说在产品发现上遇到问题的时候,为了提升用户留存率所设计出的一种机会方案树。</p>
+
+<h2 id="缺点">缺点</h2>
+
+<p>到这里就缺点也给大家提一提了:</p>
+
+<ul>
+  <li><strong>Commands 只能在 Claude Code 和 Claude Cowork 中使用</strong>,在其他工具里只能用到 Skills。Windows 用户还会遇到不稳的情况。</li>
+  <li>该项目比较适合有产品管理方法论基础的人。如果对 Opportunity Solution Tree、Lean Canvas 等概念一无所知的话,在 AI 向你提问时可能会答不上来。</li>
+</ul>
+
+<h2 id="写在最后">写在最后</h2>
+
+<p>关于方法论的问题,知道的人很多,能够实施的人却很少。</p>
+
+<p><strong>PM Skills Marketplace 把框架变成了一种流程,把知识变成了能力。</strong></p>
+
+<p>下次写 PRD 或者做战略规划的时候,可以让他带你转一圈。</p>
+
+<p>有兴趣的朋友可以安装一下试试看。</p>
+
+<p><strong>开源地址</strong>:https://github.com/phuryn/pm-skills</p>
+
+<hr />
+
+<p>标签：
+#主题/AI-Coding
+#主题/AI-Agent
+#主题/产品经理
+#手法/案例叙事
+#手法/痛点共鸣
+#场景/工具推荐
+#场景/技术博客
+#场景/方法论落地</p>

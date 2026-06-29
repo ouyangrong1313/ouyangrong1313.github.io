@@ -1,0 +1,294 @@
+<h1 id="claude-code-动态工作流让-ai-自己写-harness这事靠谱吗">Claude Code 动态工作流：让 AI 自己写 Harness，这事靠谱吗</h1>
+
+<ul>
+  <li>原文链接：https://mp.weixin.qq.com/s/gSwA5Y2Alyf9fu9mmn-32Q</li>
+  <li>原始博客：https://claude.com/blog/a-harness-for-every-task-dynamic-workflows-in-claude-code</li>
+  <li>动态工作流文档：https://code.claude.com/docs/en/workflows</li>
+  <li>作者：Anthropic 工程师 Thariq Shihipar 和 Sid Bidasaria</li>
+  <li>编译：Feisky</li>
+  <li>获取时间：2026-06-04</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论（一句话）</h2>
+
+<blockquote>
+  <p><strong>Claude Code 的动态工作流（Dynamic Workflows）</strong> 把”搭建 Harness”这件事也交给 Claude 自己——不再需要预先写好调度脚本，Claude 看任务后自己写确定性 JS 脚本来调度独立子 Agent；适合”不知道最优拆分方式”的探索性任务，但对已有经验的任务静态工作流仍更可控。</p>
+</blockquote>
+
+<h2 id="分类提炼">分类提炼</h2>
+<ul>
+  <li>场景：复杂任务自动化、Agent 工程化、AI Coding 进阶</li>
+  <li>标签：#主题/AI-Coding #主题/AI-Agent #节点/Claude-Code #节点/Harness</li>
+  <li>类型：技术解读 / 范式跃迁 / 案例分析</li>
+</ul>
+
+<h2 id="知识节点">知识节点</h2>
+
+<ul>
+  <li><strong>动态工作流</strong>：让 Claude Code 现场根据任务自动写调度脚本，而不是用预先写好的静态 harness</li>
+  <li><strong>静态工作流</strong>：用 Claude Agent SDK 或 claude -p 预先编排好，需要提前考虑各种边界</li>
+  <li><strong>偷懒</strong>：单 Agent 在长上下文里的退化模式——做 50 个检查只查 20 个就宣布完成</li>
+  <li><strong>自我偏爱</strong>：Agent 评判自己产出时天然倾向给好评，对抗性验证场景致命</li>
+  <li><strong>目标漂移</strong>：上下文压缩是有损的，长任务后 Agent 优化的目标已偏离原始需求</li>
+  <li><strong>扇出合并</strong>：最常用的调度模式——拆成多个独立小步，每步一个 Agent，最后合并</li>
+  <li><strong>对抗验证</strong>：每个生成 Agent 配一个独立验证 Agent，专门挑毛病</li>
+  <li><strong>锦标赛模式</strong>：N 个 Agent 两两比较淘汰，留下赢家</li>
+  <li><strong>隔离区</strong>：读不可信外部内容的 Agent 不允许执行高权限操作，避免 prompt injection</li>
+  <li><strong>Harness 自我内化</strong>：Harness 可能像 prompt engineering 一样是模型不够强时的中间状态，未来会被内化</li>
+  <li><strong>Opus 4.8</strong>：足够强到能自己写出高质量 Harness 的模型能力门槛</li>
+  <li><strong>ultracode</strong>：Claude Code 的动态工作流触发词</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+<ul>
+  <li>[[claude-code-dynamic-workflows]]：6-3 写的同主题英文原始博客编译版（侧重六种模式 + Prompt 示例）</li>
+  <li>[[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]：Harness 是 Agent 系统护城河的总论</li>
+  <li>[[从Prompt-Context到Harness-工程的三次进化与终局之战]]：从 Prompt 到 Context 到 Harness 的工程化路径</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+<ul>
+  <li>[[HarnessEngineering企业级实战]]：动态工作流是 Harness 落地的最新形态</li>
+  <li>[[Harness工程AgentLoop]]：动态工作流 + Agent Loop 的结合</li>
+  <li>[[Claude-Code在大代码库中的最佳实践]]：大代码库任务正好命中动态工作流的强项</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+<ul>
+  <li>[[AI-Coding的顿悟时刻]]：AI Coding 整体演化的判断</li>
+  <li>[[Claude-Code团队5条工作原则-Fiona-Fung分享]]：另一支团队对 Claude Code 用法的判断</li>
+</ul>
+
+<h2 id="正文要点">正文要点</h2>
+
+<h3 id="单-agent-的三大退化模式">单 Agent 的三大退化模式</h3>
+
+<p>Claude Code 默认模式是单 Agent 一个上下文窗口搞定规划和执行，<strong>大多数编程任务这就够用</strong>。但有些场景单 Agent 怎么优化都跑不好——三个已知的退化模式：</p>
+
+<ol>
+  <li><strong>偷懒</strong>：让它做一轮安全审查，50 个检查项查到 20 个就宣布完成（长上下文行为退化）</li>
+  <li><strong>自我偏爱</strong>：让它评判自己产出，天然倾向给好评</li>
+  <li><strong>目标漂移</strong>：上下文压缩是有损的，每压缩一次，原始需求的边缘条件、约束细节丢一点</li>
+</ol>
+
+<blockquote>
+  <p>这三个问题不是模型能力问题，是单上下文窗口同时承担规划和执行带来的<strong>架构局限</strong>。</p>
+</blockquote>
+
+<h3 id="dynamic-workflows-工作原理">Dynamic Workflows 工作原理</h3>
+
+<p>用独立的子 Agent 各自占一个干净的上下文窗口，每个子 Agent 只干一件事，由<strong>确定性的 JavaScript 脚本</strong>调度它们的执行顺序和依赖关系。</p>
+
+<p><strong>核心区别</strong>：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>维度</th>
+      <th>静态工作流</th>
+      <th>动态工作流</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>调度脚本</td>
+      <td>提前写好，考虑各种边界</td>
+      <td>Claude 看任务后自己写</td>
+    </tr>
+    <tr>
+      <td>适用</td>
+      <td>已知拆分方式的任务</td>
+      <td>探索性任务</td>
+    </tr>
+    <tr>
+      <td>稳定性</td>
+      <td>可控</td>
+      <td>灵活但需要 Prompt 引导</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="六种调度模式">六种调度模式</h3>
+
+<ol>
+  <li><strong>分类路由</strong>：一个分类 Agent 判断任务类型，分发给不同处理 Agent</li>
+  <li><strong>扇出合并</strong>（最常用）：拆成很多小步，每步一个独立 Agent，最后合并</li>
+  <li><strong>对抗验证</strong>：每个生成 Agent 配独立验证 Agent 专门挑毛病</li>
+  <li><strong>生成过滤</strong>：先大量生成，再按标准筛选去重</li>
+  <li><strong>锦标赛模式</strong>：N 个 Agent 不同策略做同一件事，两两淘汰留赢家</li>
+  <li><strong>循环到完成</strong>：不设固定轮次，跑满足停止条件</li>
+</ol>
+
+<blockquote>
+  <p>这些模式可组合：先扇出，每个分支内部做对抗验证，合并时再跑一轮锦标赛。</p>
+</blockquote>
+
+<h3 id="实际应用场景">实际应用场景</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>场景</th>
+      <th>模式</th>
+      <th>关键价值</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>大规模迁移和重构</strong></td>
+      <td>扇出 + 对抗验证</td>
+      <td>Bun Zig→Rust 重写；每个修改点一个独立 Agent，天然避免交叉污染</td>
+    </tr>
+    <tr>
+      <td><strong>深度验证</strong></td>
+      <td>分类 + 扇出</td>
+      <td>提取文章里的事实性声明，每个声明派 Agent 核实，验证信息源是否可靠</td>
+    </tr>
+    <tr>
+      <td><strong>排序</strong></td>
+      <td>锦标赛</td>
+      <td>按 Bug 严重程度排 1000 条工单；比较判断比绝对评分可靠</td>
+    </tr>
+    <tr>
+      <td><strong>规则遵守</strong></td>
+      <td>分类 + 验证</td>
+      <td>CLAUDE.md 规则一条 Agent 验证一条；反向扫日志提炼新规则</td>
+    </tr>
+    <tr>
+      <td><strong>根因分析</strong></td>
+      <td>扇出 + 对抗</td>
+      <td>不锁定单一假设，分别从日志/文件/数据生成假设，每个假设面对验证者和反驳者</td>
+    </tr>
+    <tr>
+      <td><strong>大规模分流</strong></td>
+      <td>分类 + 隔离区</td>
+      <td>工单队列分类、去重、自动修复；读不可信内容的 Agent 不可执行高权限操作</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="什么时候不需要工作流">什么时候不需要工作流</h3>
+
+<blockquote>
+  <p>动态工作流消耗的 token 显著更多，适合复杂、高价值的任务。</p>
+</blockquote>
+
+<p><strong>判断标准</strong>：</p>
+<ul>
+  <li>❌ 不需要：能用一句话说清楚要做什么 + 做完能快速验证</li>
+  <li>✅ 需要：任务可拆成独立并行单元，或验证成本高到不想自己一个个检查</li>
+</ul>
+
+<h3 id="用法和技巧">用法和技巧</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="c"># 两种开启方式</span>
+ultracode  <span class="c"># 触发词</span>
+<span class="c"># 或在 Prompt 里要求 "用工作流做这件事"</span>
+
+<span class="c"># 配合 /loop 定期执行</span>
+/loop <span class="s2">"用工作流扫最近 50 个 session..."</span>
+
+<span class="c"># 配合 /goal 硬性完成条件</span>
+/goal <span class="s2">"不找到根因不许停"</span>
+
+<span class="c"># 限制 token 消耗</span>
+<span class="s2">"用 10k token 解决"</span>  <span class="c"># 大概一两轮对话</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>Prompt 模板示例</strong>：</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">这个测试大概 50 次跑挂一次。用工作流复现它，形成竞争性假设，不找到经得起验证的根因不许停。</code></li>
+  <li><code class="language-plaintext highlighter-rouge">用工作流扫我最近 50 个 session，找到我反复在纠正的模式，把重复出现的提炼成 CLAUDE.md 规则。</code></li>
+  <li><code class="language-plaintext highlighter-rouge">拿我的商业计划，用工作流让不同 Agent 分别从投资人、客户、竞争对手的视角撕它。</code></li>
+  <li><code class="language-plaintext highlighter-rouge">这个文件夹有 80 份简历，用工作流按后端岗位排名，前 10 名交叉验证一遍。先用 AskUserQuestion 问我评分标准。</code></li>
+</ul>
+
+<p><strong>保存工作流</strong>：按 s 可保存脚本到 <code class="language-plaintext highlighter-rouge">~/.claude/workflows</code>，或通过 Skill 分发给团队。</p>
+
+<h2 id="表格六种调度模式对比">表格：六种调度模式对比</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>模式</th>
+      <th>核心思想</th>
+      <th>适用场景</th>
+      <th>关键风险</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>分类路由</td>
+      <td>任务类型分发</td>
+      <td>异构任务批处理</td>
+      <td>分类器本身的准确性</td>
+    </tr>
+    <tr>
+      <td>扇出合并</td>
+      <td>拆小步并行</td>
+      <td>大规模可拆解任务</td>
+      <td>合并 Agent 的归纳能力</td>
+    </tr>
+    <tr>
+      <td>对抗验证</td>
+      <td>配独立验证</td>
+      <td>需要质量保证的生成</td>
+      <td>验证 Agent 也要强</td>
+    </tr>
+    <tr>
+      <td>生成过滤</td>
+      <td>大量生成+筛选</td>
+      <td>创意/方案探索</td>
+      <td>筛选标准的可定义性</td>
+    </tr>
+    <tr>
+      <td>锦标赛</td>
+      <td>两两淘汰</td>
+      <td>排序/评选</td>
+      <td>N 较大时 token 成本</td>
+    </tr>
+    <tr>
+      <td>循环到完成</td>
+      <td>跑到满足</td>
+      <td>开放式目标</td>
+      <td>难以停止 / token 爆炸</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="我的理解">我的理解</h2>
+
+<ul>
+  <li><strong>Harness 也可能是中间状态</strong>——这是这篇文章最有哲学意味的判断。”Harness 可能像 prompt engineering 一样，是大模型发展过程中的一个中间状态……下一代模型根本不需要外部编排，自己就能在内部完成任务分解和对抗验证”</li>
+  <li><strong>动态 vs 静态不是替代关系</strong>——文章明确说”两者不矛盾，动态工作流可以保存下来变成静态的”</li>
+  <li><strong>对 MyAIWiki 的启发</strong>：<strong>这跟 [[Harness不是目的，知识才是护城河]] 是同一判断的两个侧面</strong>——工程化重要但不是终局，知识沉淀和判断力才是</li>
+  <li><strong>实战判断</strong>（按 80/20）：日常工作流<strong>别上动态工作流</strong>（成本不划算），只在”知道这件事复杂 + 验证成本高”时才用</li>
+</ul>
+
+<h2 id="适合关联的主题">适合关联的主题</h2>
+
+<ul>
+  <li>[[claude-code-dynamic-workflows]]</li>
+  <li>[[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]</li>
+  <li>[[从Prompt-Context到Harness-工程的三次进化与终局之战]]</li>
+  <li>[[HarnessEngineering企业级实战]]</li>
+  <li>[[Harness工程AgentLoop]]</li>
+  <li>[[Claude-Code在大代码库中的最佳实践]]</li>
+  <li>[[Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]</li>
+  <li>[[AI-Coding的顿悟时刻]]</li>
+  <li>[[Claude-Code团队5条工作原则-Fiona-Fung分享]]</li>
+</ul>

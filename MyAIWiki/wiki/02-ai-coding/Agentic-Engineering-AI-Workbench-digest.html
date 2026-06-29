@@ -1,0 +1,183 @@
+<h1 id="agentic-engineering-实战---digest">Agentic Engineering 实战 - Digest</h1>
+
+<ul>
+  <li>原文链接：https://mp.weixin.qq.com/s/TTLaGn28owLQSy-cvEgPWw</li>
+  <li>来源：微信公众号 / 架构师 JiaGouX（若飞，编译）</li>
+  <li>发布时间：2026-06-08 23:20</li>
+  <li>获取时间：2026-06-09</li>
+</ul>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<p><strong>“Agent 面前摆着一张工作台”</strong>——AI 工作台 = <strong>计划 / 上下文 / 执行 / 验证 / 治理</strong> 五层；个人可以 YOLO，团队必须把”任务卡 + 工作区隔离 + 可验证结果 + 合并规则”四件事说清楚后再多开 Agent；<strong>CLAUDE.md 三段式、plan.md 任务协议、Skill = 过程资产、Subagents = 隔离、团队 3 层权限渐进</strong>构成可落地的最小工作台。</p>
+
+<h2 id="8-个知识节点速查">8 个知识节点速查</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>节点</th>
+      <th>一句话</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>AI-工作台五层</strong></td>
+      <td>计划 / 上下文 / 执行 / 验证 / 治理；每层”最小交付物”+”用来解决什么”</td>
+    </tr>
+    <tr>
+      <td><strong>可控并行</strong></td>
+      <td>多开 Agent 之前的 5 问 + 每开一个 Agent 先写”任务卡”</td>
+    </tr>
+    <tr>
+      <td><strong>plan-md 任务协议</strong></td>
+      <td>8 段核心 + 2 段进阶（证据要求/合并条件）</td>
+    </tr>
+    <tr>
+      <td><strong>5层上下文 × 3档载入</strong></td>
+      <td>5 层分类 × 3 档投放；CLAUDE.md 重 Validation</td>
+    </tr>
+    <tr>
+      <td><strong>CLAUDE-md 三段式</strong></td>
+      <td>What / Domain / Validation（最值得花时间）</td>
+    </tr>
+    <tr>
+      <td><strong>Skill = 过程资产</strong></td>
+      <td>不是最佳实践文档，是可执行流程；6+ 段式</td>
+    </tr>
+    <tr>
+      <td><strong>Subagents = 隔离</strong></td>
+      <td>独立可验型才拆；强耦合型留在主线</td>
+    </tr>
+    <tr>
+      <td><strong>团队3层权限</strong></td>
+      <td>只读 → 半自动 → 受控写入；接入真实系统前 5 行威胁模型</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="5-个金句">5 个金句</h2>
+
+<ul>
+  <li>
+    <blockquote>
+      <p><strong>“工作台搭得越清楚，Agent 干活越有边界。”</strong></p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>“上下文不是越多越好，更重要的是放对位置。”</strong></p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>“Agent 正在从代码助手变成执行层。”</strong></p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>“代码生成几乎免费以后，review 变成瓶颈。”</strong></p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p><strong>“Agent 会静默失败——错误输出经常看起来很合理。”</strong></p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="4-个核心交付物团队可直接抄">4 个核心交付物（团队可直接抄）</h2>
+
+<ol>
+  <li><strong>plan.md 8 段模板</strong>（目标/不做什么/背景/可能涉及文件/实施步骤/验收标准/验证命令/当前状态）</li>
+  <li><strong>CLAUDE.md 三段式</strong>（What / Domain / Validation，重 Validation）</li>
+  <li><strong>PR 模板</strong>（目标/改动范围/验证证据/风险）</li>
+  <li><strong>权限表 + 5 行威胁模型</strong>（按”读代码/跑测试/写本地/发 PR/访问 Slack/改生产/登录态网页”分级）</li>
+</ol>
+
+<h2 id="5-个最小行动行动笔记">5 个最小行动（行动笔记）</h2>
+
+<ol>
+  <li>复杂任务留 <code class="language-plaintext highlighter-rouge">plan.md</code> 文件出口</li>
+  <li><code class="language-plaintext highlighter-rouge">CLAUDE.md</code> 三段式，重 Validation</li>
+  <li>把团队最容易漏掉的验证流程写成 Skill</li>
+  <li>hooks 第一版：挡一类危险命令 + 整理一类失败日志</li>
+  <li>Subagents：能独立探索/独立验证/只返回高密度结果的任务才拆</li>
+</ol>
+
+<h2 id="7-天小试点中等复杂度-bug-修复">7 天小试点（中等复杂度 bug 修复）</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>天</th>
+      <th>动作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>选任务</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>最小 <code class="language-plaintext highlighter-rouge">plan.md</code></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>一小段 <code class="language-plaintext highlighter-rouge">CLAUDE.md</code></td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>隔离环境实现</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>认真做人工 review</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>失败写回 gotchas</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>看 4 问 + 5 指标</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="与已有文章的关联">与已有文章的关联</h2>
+
+<ul>
+  <li><strong>强关联</strong>（本篇是它们的”团队工程化版”）：
+    <ul>
+      <li>[[every-agentic-engineering-hack-2026-06]]（Matt Van Horn 个人 YOLO 母本）</li>
+      <li>[[claude-code-dynamic-workflows]]（plan = 动态可执行）</li>
+      <li>[[从Prompt-Context到Harness-工程的三次进化与终局之战]]（”上下文不是越多越好” = Harness 思想具体化）</li>
+      <li>[[Notion-spec-driven-AI-workflow]]（plan.md 的一种更严格形式：spec 进仓库 + verification）</li>
+      <li>[[AI-Coding的顿悟时刻]]（Spec→LDD + 工程师向两端收缩）</li>
+      <li>[[多Agent使用边界与并行判定]]（”可控并行 5 问”是更具体的可执行版）</li>
+      <li>[[任务类型到验证模板]]（PR 模板 = 验证证据前置）</li>
+      <li>[[买了一样的AI为什么别家的比你的强]]（Skill = 过程资产 = 组织内 skill 沉淀）</li>
+      <li>[[Claude-Code团队5条工作原则-Fiona-Fung分享]]（Trust but verify + 团队级 harness）</li>
+    </ul>
+  </li>
+  <li><strong>同级</strong>：
+    <ul>
+      <li>[[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]（plan.md 8 段结构可与 Spec-Kit spec.md 对照）</li>
+      <li>[[Claude-Code负责人谈AI原生工程组织]]</li>
+      <li>[[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]</li>
+      <li>[[54万行代码的顿悟-Markdown才是新编程方式]]（个人层 vs 团队层）</li>
+      <li>[[Anthropic万字长文三个判断和一个阳谋]]（”验收能力”主线，本篇是工程化落地版）</li>
+    </ul>
+  </li>
+  <li><strong>原始素材延伸</strong>：
+    <ul>
+      <li>Matt Van Horn《Every Agentic Engineering Hack I Know》</li>
+      <li>John Kim《How I use Claude Code》(Meta Staff Engineer)</li>
+      <li>Kaxil Naik《I Haven’t Written a Line of Code in 4 Months》</li>
+      <li>Simon Willison《Context engineering》</li>
+      <li>Addy Osmani《Agent Skills》（O’Reilly Radar）</li>
+    </ul>
+  </li>
+</ul>

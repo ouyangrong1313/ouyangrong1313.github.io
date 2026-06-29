@@ -1,0 +1,144 @@
+<h1 id="用agent评测思路管理ai-coding31万行代码ai重构实践">用Agent评测思路管理AI Coding——31万行代码AI重构实践</h1>
+
+<h2 id="核心结论">核心结论</h2>
+
+<p>当 90% 以上代码由 AI 生成，<strong>决定系统走向的不是谁写得更快，而是谁能更好地约束 AI</strong>。没有统一规范的约束，AI 只会成倍放大混乱。</p>
+
+<h2 id="三大关键经验">三大关键经验</h2>
+
+<h3 id="1-人人对齐先于人机对齐">1. 人人对齐先于人机对齐</h3>
+
+<p>管理 AI Coding 与评测 Agent 的底层逻辑一模一样：</p>
+<ul>
+  <li><strong>人人对齐</strong>：先让团队形成统一共识（分层原则、建模方式、依赖边界）</li>
+  <li><strong>人机对齐</strong>：将共识固化为 AI Rule 和 Skill，约束大模型生成结果</li>
+</ul>
+
+<blockquote>
+  <p>顺序至关重要：很多团队以为配置好 AI Rule 就完事了，但真正的瓶颈在人，不在工具。</p>
+</blockquote>
+
+<h3 id="2-经验的价值正在转移">2. 经验的价值正在转移</h3>
+
+<ul>
+  <li><strong>过去</strong>：资深工程师的核心壁垒是”能看全”——泡三年才能建立全局感知</li>
+  <li><strong>现在</strong>：AI 把”看全”的门槛打到几乎为零，10 个隐藏极深的性能隐患被精准定位</li>
+  <li><strong>结论</strong>：经验的价值正从”能看全”转移到”能判断什么重要”——这才是人不可替代的部分</li>
+</ul>
+
+<h3 id="3-重构可以零排期">3. 重构可以零排期</h3>
+
+<p><strong>第三条路</strong>：把技术债拆解为业务需求的”顺带动作”，借着迭代渐进式消化。</p>
+
+<p>关键能力：拆解精度——哪些业务需求能”顺带”消化哪些技术债，需要逐个判断。</p>
+
+<h2 id="行动指南">行动指南</h2>
+
+<ol>
+  <li><strong>盘清技术债</strong>：核心开发圈定高危方向，AI 做穷举扫描</li>
+  <li><strong>制定规范并落地为 AI Rule</strong>：规范不落地到工具链里，就只是一纸空文</li>
+  <li><strong>主 R 打样，沉淀 SOP</strong>：可复用的迁移流程，推广到全组</li>
+  <li><strong>建立 Pre-PR 机制</strong>：AI 预审过滤基础问题，让人聚焦业务语义</li>
+</ol>
+
+<h2 id="工程分层四步法">工程分层四步法</h2>
+
+<p>重构前”按需求建包” → 重构后四层架构（Starter / Application / Infrastructure / Common）</p>
+
+<p>三步推进：</p>
+<ol>
+  <li>补齐业务对象与数据转换层</li>
+  <li>重建接口契约，阻断底层数据对象向上泄露</li>
+  <li>修复上游全链路参数依赖</li>
+</ol>
+
+<h2 id="ai-辅助测试-sop">AI 辅助测试 SOP</h2>
+
+<p>Human-in-the-loop 模式：人界定范围和风险，AI 做脏活</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>步骤</th>
+      <th>目标</th>
+      <th>人的价值</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Step1 建立范围</td>
+      <td>确定测哪些接口</td>
+      <td>审核并确认测试范围</td>
+    </tr>
+    <tr>
+      <td>Step2 风险分级</td>
+      <td>决定测多深</td>
+      <td>判断风险等级</td>
+    </tr>
+    <tr>
+      <td>Step3 设计分组</td>
+      <td>最小化用例</td>
+      <td>补充业务特殊场景</td>
+    </tr>
+    <tr>
+      <td>Step4 生成步骤</td>
+      <td>写出可执行步骤</td>
+      <td>校验边界条件</td>
+    </tr>
+    <tr>
+      <td>Step5 验证覆盖</td>
+      <td>确保不漏不多</td>
+      <td>最终确认</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="cr-效率提升">CR 效率提升</h2>
+
+<p>共识：人工 CR 的价值从”你写得对吗？”转变为”我们是否在正确的约束下解决正确的问题？”</p>
+
+<p>实践：</p>
+<ul>
+  <li><strong>Pre-PR 机制</strong>：提交前 AI 多轮自查，修复所有规范类问题</li>
+  <li><strong>高阶模型审查低阶模型</strong>：用高配模型作为 Judge Model</li>
+  <li><strong>不同厂商模型对抗审核</strong>：差异化能力形成互补</li>
+</ul>
+
+<h2 id="标签">标签</h2>
+
+<p>#主题/AI Coding #手法/对比冲突 #手法/权威背书 #场景/技术博客</p>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[[vibe-coding</td>
+          <td>Vibe Coding：用 AI 写代码的正确姿势]]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[[oh-my-codex</td>
+          <td>oh-my-codex：让 Codex CLI 拥有专家团队]]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>[[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-却在-Harness</td>
+          <td>Claude Code 架构深度解读]]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>

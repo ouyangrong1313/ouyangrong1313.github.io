@@ -1,0 +1,205 @@
+# AI 知识库索引
+
+## 最近更新
+- [AI 第二大脑 Claude+Obsidian 10 步完整实操指南](./02-ai-coding/undefinedKi-AI-Second-Brain-10-Step-Guide.md) — 2026-06-22（X 推文 @undefinedKi：**Karpathy LLM Wiki 模式的 2026-06 实操升级版**——一个晚上搭完的 10 步实操(Claude Desktop Pro + Obsidian + Local REST API + mcp-obsidian MCP + CLAUDE.md + 项目级 vault + Skill + Schedule);**385.6万 查看 / 9,297 书签**;**核心反直觉**1)**keys, not prompts**——权限控制走 read-only scoped key,不靠"别删文件"的提示词 2)**"The big vault plans. A single project ships."**——大库做规划、单项目独立打开成 vault 才出活 3)**"You are not building a Claude setup. You are building your own memory"**——同订阅完全不同机器;**8 节点**（第二大脑/LLM-Wiki/MCP连接/项目级Vault/Skill化/Schedule自动维护/权限控制优先/Claude-Desktop配置）;**三个开源 ready-made 仓库**:claude-obsidian(AgriciDaniel) / obsidian-second-brain(eugeniughelbur,43 命令,跨 Claude/Codex/Gemini) / second-brain-starter(coleam00);**本工作区已有 6 篇相关页面**([[karpathy-knowledge-system]] / [[claude-obsidian-second-brain]] 5-12 旧版 718万 / [[obsidian-claude-code-os]] / [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]] / [[garry-tan-ai-second-brain]] / [[构建LLM-Wiki智能知识库-实现AI辅助写作工作流]]),本文价值在"10 步完整实操"+"Schedule"+"keys-not-prompts";**与 [[Claude-Code-主动式Agent-Routines]] 下游强关联**(Schedule 任务的产品化形式);**5 个对 Seetong 借鉴动作**(MyAIWiki 本库做"现成 demo"/晨间简报升级 Schedule/Seetong 项目级 vault 隔离/重复任务 Skill 化/权限走 Key 不走 prompt);**附:@ridark_eth 16M 浏览短推文**(https://x.com/ridark_eth/status/2068753952850546985)是本文的引用推广,作为"舆论扩散信号"存档 ⭐⭐）
+- [AI 第二大脑 Claude+Obsidian 10 步实操 - Digest](./02-ai-coding/undefinedKi-AI-Second-Brain-10-Step-Guide-digest.md) — 2026-06-22
+- [AI 团队协作案例：Loop 隐藏前提 + SDD 组织级补丁](./01-ai-agents/AI-团队协作-Loop-SDD.md) — 2026-06-22（微信公众号 叶小钗：**"个人提效 ≠ 团队提效"是叶小钗的核心命题**；**Loop Engineering 最大的问题是"只说结果，不说前提"**——隐藏了三个前提：①**Skill 从哪来**（谁来写/评审/更新）②**谁做最终验证**（Addy 承认"验证在你身上"但几十个 Loop 并行时人类审阅带宽怎么跟上）③**Token 成本谁买单**（总 token 消耗是手动 Prompt 的 3-8 倍）；**金句**："方向正确和实现简单之间，隔着大量的工程细节，每个细节都能让你在错误的方向上耗几个月"；**组织级补丁是 SDD（Spec-Driven Development）**——不是"先写文档让 AI 写代码"那么粗暴，是构建"共享上下文/规则/边界/验收标准"的方法论；**Spec 三核心角色** = ①上下文 ②协作契约 ③质量基准（避免"产品说一套/研发理解一套/AI 生成一套/测试验另一套"）；**vs TDD/BDD**：TDD 偏实现/BDD 偏场景/SDD 偏上游；**六段式 Spec 骨架** = 目标→范围→约束→决策→任务→验收；**SDD 三层次** = Spec First（规格先行）/ Spec-Anchored（规格锚定，长期资产）/ Spec as Source（规格即源码，终极形态）；**任务复杂度 3 分级** = 小改动 Prompt / 中等需求 轻量规格 / 大型任务 完整规格（避免"所有需求都套完整规格 → AI 提效变文档负担"）；**SDD 落地四步路径** = ①选高价值场景切入点 ②定义轻量 Spec 模板 ③建立项目级上下文 ④把 Spec 纳入研发流程明确人工卡点；**AI 进入组织 4 层爬坡** = 个人工具→流程标准→组织协作→评价体系（上一层问题解决后会把下一层问题推出来）；**8 节点 + 5 个对 Seetong 借鉴动作**（SDD 入 TAPD PRD 模板/客服反馈→Spec 链路入 Seetong Bug Triage/项目级上下文建 Seetong 项目知识库/Spec 6 段式入 Seetong Bug 描述模板/AI 进入组织 4 层爬坡做 Seetong AI 落地 roadmap）；**Loop 主题第 7 视角"团队协作/组织治理"**——补完现有 6 篇(Addy-Osmani / 若飞详解 / APPSO / 陈进 / Samuel McDonnell / Anatoli深思圈)偏单人/偏工程师视角的"组织落地"维度；**与 [[Multica-AI-Native-组织-人是最慢的节点]] 镜像**——本文"个人提效 ≠ 团队提效" vs Multica"人是组织瓶颈不是 Agent"；**与 [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] 强关联**——本文 SDD "规格+边界+验收" ≈ 那篇 3 关键设计"不直接升级/质量门禁硬规则化/反馈留痕到平台" ⭐⭐⭐）
+- [AI 团队协作案例 - Digest](./01-ai-agents/AI-团队协作-Loop-SDD-digest.md) — 2026-06-22
+- [530 万人读的这篇：自循环提示词（大众教育版 Loop）](./01-ai-agents/530万人-自循环-提示词.md) — 2026-06-22（微信公众号 深思圈 编译/解读自 Anatoli Kopadze 英文爆款《Loops explained: Claude, GPT, Mira and what actually works》（X 平台 530 万浏览）：**大多数人用 AI 还是"打需求、等、改、再问"的手动循环——"你就是那台引擎"**；**真循环 = 一次给目标让 AI 自跑完整圈（五步：发现→计划→做→验证→决定；三关键：验证是心脏 / 状态是学习 / 停止条件不烧账户）**；**"验证是心脏"**——没真检查 = 看 AI 反复同意自己（"干活的那个模型给自己打分时太仁慈了"）；**四条门槛**判断要不要上重型循环（任务每周重复 / 有自动判错 / 端到端能自己干 / 完成客观非品味,少一条就用手动提示词）；**可粘贴的自检循环提示词模板**（目标+3条严标准+循环协议+8分门槛+"每轮先修最弱一项"）；**Mira 案例**——Telegram 内无代码 agent,接 500+ app,跨会话长期记忆,模型无关,"**ChatGPT 回答,Mira 动手**"（让 agent 把邮件发出去）；**深思圈两个关键提醒**①530 万爆款 = 病毒发布 playbook（巨大承诺+免费赠品+CTA）②大众版"无闸门 agent"风险——工程师版强调"验证器+急停开关",Mira 把刹车悄悄拿掉,只剩油门递给不会设 gate 的普通用户；**8 节点 + 5 个对 Seetong 借鉴动作**（提示词模板入 Seetong Prompt 库 / 四条门槛做 Loop 候选评估 checklist / "验证是心脏"补 Seetong Skill 的 Validation Gate / cron run ack timeout = "无停止条件" 加 `maxRunningMs+onTimeout` 双闸门 / 警惕 Mira 类"无闸门 agent" Seetong 默认 Approval=hard-gate）；**Loop 主题第 6 视角**——补完现有 5 篇(Addy-Osmani / 若飞详解 / APPSO / 陈进 / Samuel McDonnell)偏工程师视角的"大众教育版"；与 [[Addy-Osmani-Loop-Engineering]] [[Loop-Engineering-详解-把反馈循环放进工程现场]] [[APPSO-Codex-Claude-Code-Loop-Engineering]] [[Loop-Engineering-验证才是瓶颈]] **核心互补**（本文 prompt-level / Samuel 验证瓶颈那篇 system-level） [[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]] [[Claude-Code-主动式Agent-Routines]] 同主线 ⭐⭐⭐）
+- [530 万人读的自循环提示词 - Digest](./01-ai-agents/530万人-自循环-提示词-digest.md) — 2026-06-22
+- [Hermes Agent 重构得物数仓工作流](./01-ai-agents/Hermes-Agent重构得物数仓工作流.md) — 2026-06-17（微信公众号 得物技术(小诘、博温)：**数仓埋点承接最消耗的不是"生成 SQL"而是"把分散信息重新拼起来"**;得物选 **Hermes Agent 而非 OpenClaw** 重构工作流(4 项原生能力:分层持久记忆 SQLite+FTS5 / 技能自动沉淀 / 多平台统一网关 / 工具与扩展生态 MCP);**4 个工程构件**(工作区独立空间 + 看板状态机进入→设计→预演→评审→交付每步责任人 + 规则+长期记忆 + 结构化工具接口+预演+人工确认点);**4 类资产化能力底座**(规则包答判断/工作区答依据/看板答卡/结构化接口答验证);**上线前 3 道门**(事实源门/预演门/责任门,任何缺证据 Hermes 只能停在候选/待确认状态,不能继续生产写入);**能力边界划分**——Hermes 是"流程编排者"不是"埋点生成器",Hermes 做"判断前工程化准备",**人聚焦口径裁决+生产放行**;**规模化路径**——用 4 个量化指标(准备时间/交付周期/评审通过率/返工原因)对齐看板/日志/确认记录;**8 节点 + 5 个对 Seetong 借鉴动作**(4 工程构件 TAPD 端到端试点/3 道门建 Seetong SOP/4 资产化能力底座重写 Skill 库/能力边界划 Seetong AI 助手定位/4 量化指标评估自动化效果);与 [[阿里云开发者-淘宝主播Agent的Harness工程实战]] [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] Harness 主题互补(主播=实时交互高风险/得物=承接流程标准化);与 [[Skill-Self-Evolution]] [[用 LLM Agent 重构告警排查流程]] [[Claude Code Harness 工程:数仓侧落地方案]] 同作者团队 Skill 主线;与 [[Loop-Engineering-验证才是瓶颈]] 互补(本文"3 道门"硬证据 vs 那篇 Loop 验证闸门);与 [[腾讯-AI-Agent-Skill-测评方案落地]] "测评是 Demo→生产门槛"同主线 ⭐⭐）
+- [Hermes Agent 重构得物数仓工作流 - Digest](./01-ai-agents/Hermes-Agent重构得物数仓工作流-digest.md) — 2026-06-17
+- [面向 Skills 编程——淘宝企业购端到端研发提效实践](./02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践.md) — 2026-06-17（微信公众号 大淘宝技术(官亭,淘天集团-行业运营技术团队)：**"面向 Skills 编程"新范式——Skills = AI 研发的最小可复用单元**(工作流+领域知识+约束规则);**商品域端到端交付周期 23.5人日→8人日(整体提效 65%)**,**代码一次生成成功率 50%→90%(全靠知识工程,不是换模型)**;**五阶段演进路径** Vibe Coding(2025.8)→Prompt 模板(采纳率 70%)→SDD(可用率 40%→80%)→Skill 沉淀(2026.1-2)→云端集成(2026.2 探索中);**"质量瓶颈不在模型,在知识工程"——50%→90% 全靠知识注入和约束迭代,不是换更强的模型**;**确定性工程+不确定性 AI=可控流水线**(脚本提取+架构拆分+约束沉淀);**三层架构**(原子能力层+模板层+适配层,AI 只聚焦适配层,代码量 -60%,多端并行零冲突);**ADJUSTMENT_PLAN 五步闭环**(发现→定位 Skill→补约束→验证→交叉验证)将 11 类高频问题全部沉淀为 Skill 约束;**事前约束→运行时约束→事后审查→人工卡点 四层质量防线**;**8 节点 + 5 个对 Seetong 借鉴动作**(知识工程体检/三层架构重写 Seetong 适配层 Skill/ADJUSTMENT_PLAN 闭环建高频问题约束库/SOP 四层防线/Seetong 端到端生码平台 P0 小试点);与 [[阿里云开发者-淘宝主播Agent的Harness工程实战]] [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] 阿里淘系同源;与 [[Skill-Self-Evolution]] [[Agent Skills 系统性综述]] [[谷歌开源 agent-skills]] [[Addy-Osmani-agent-skills-设计哲学]] Skill 主线;与 [[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] [[Notion-spec-driven-AI-workflow]] [[AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]] SDD/Spec 主线;与 [[Loop-Engineering-验证才是瓶颈]] 互补(本文 Skills 构建 vs 那篇 Loop 验证) ⭐⭐⭐）
+- [面向 Skills 编程 - Digest](./02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践-digest.md) — 2026-06-17
+- [Loop Engineering 的另一半:验证才是瓶颈](./01-ai-agents/Loop-Engineering-验证才是瓶颈.md) — 2026-06-17（微信公众号 深思 SenseAI 翻译/编译自 Samuel McDonnell (@samueljmcd) 英文原文《My Thoughts on Loop Engineering》：**Loop 工程的真正瓶颈不是生成器(编排),而是验证器(闸门)**;**一个 loop = 生成器 + 验证器,瓶颈从来在验证器这一侧**;**开放循环易变废料机 / 今天真正出活的是带评估闸门的封闭循环**;**那个框(验证),才是产品,其余的都是管道**;**内循环成熟(大多数 agent 都会做)/ 外循环还半残(SKILL.md/AGENTS.md 持久化教训只搭了一半,大量价值正摊在这块桌子上没人捡)**;**"先仪表化闸门再去扩大循环"**;**Bun 75 万行 Zig→Rust 移植案例**(Jarred Sumner 11 天/99.8% 测试/Anthropic 自家说"未上生产"= 整个发布最诚实的一句话);**"产出的质量被验证器的质量封顶,一分都高不上去"**;**降维边界**(写作/策略/设计/品味 验证者无法降维成自动闸门);**"别再设计提示词,去设计验证者"**;深思圈**补刀**(自动化不是产出,是更快的错/一条错的教训被持久化会毒化之后每次运行);**8 节点 + 5 个对 Seetong 借鉴动作**;**这是现有 Loop 主线 3 篇(Addy-Osmani/Loop-Engineering-详解/APPSO)偏编排的"补完篇"——本文讲验证**,与 [[Harness工程AgentLoop]] [[HarnessEngineering企业级实战]] [[0xCodez-Agent-Harness-14-Steps]] [[阿里云开发者-淘宝主播Agent的Harness工程实战]] 形成"**Harness=骨架 / Loop=循环 / 闸门=验证**"完整主线三角 ⭐⭐）
+- [Loop Engineering 验证才是瓶颈 - Digest](./01-ai-agents/Loop-Engineering-验证才是瓶颈-digest.md) — 2026-06-17
+- [淘宝主播 Agent 的 Harness 工程实战](./01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战.md) - 2026-06-17(微信公众号 阿里云开发者 / 阿里妹导读:**Harness 从"个人助手"推到"淘宝直播"高风险生产场景的工程骨架**;**业务/框架彻底分层** + **物理存储分治**(MySQL 会话/Hologres 记忆/GitLab Skill)+ **纵深防御 5 层** + **记忆对账信任度闭环**;**Harness 六元组** (E, T, C, S, L, V);**Reducer 上下文模式** 解决状态模糊/上下文膨胀/不可回放;**工具三件套** 边界+Schema+幂等性(写操作必带 UUID 幂等键防"双切品/双改价");**结构化错误码 3xxx/4xxx/5xxx/9xxx**;**Hook 5 时机** PreReasoning/PreToolCall/PostToolCall/PostReasoning/SessionEnd;**Approval 4 档** auto/soft-gate/hard-gate/block;**PlanEngine vs ReAct** 成功率 0.847 vs 0.737 / 子任务覆盖率 0.976 vs 0.883;**记忆三层** L1 主观/L2 事实/L3 行为 + **矛盾累积 ≥ 3 次才覆盖** + **trust 非对称更新**(+0.05/-0.10/-0.05/+0.03)+ **trust 决定输出**(≥0.7 recommend/0.4-0.7 弱参考/<0.4 仅 evidence);**8 节点 + 5 个对 Seetong 借鉴动作**;与 [[Harness工程AgentLoop]] [[HarnessEngineering企业级实战]] [[0xCodez-Agent-Harness-14-Steps]] [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] 同主线 ⭐⭐)
+- [淘宝主播 Harness - Digest](./01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战-digest.md) - 2026-06-17
+- [0xCodez X 长文:Agent Harness 14 步路线图](./01-ai-agents/0xCodez-Agent-Harness-14-Steps.md) - 2026-06-17(X (@0xCodez) 2026-06-16 长文 likes 564 / bookmarks 993:**"Harness 是 Loop 的地基"**;**3 段 14 步路线图**(Part 1 what Harness is 01-04 / Part 2 build foundation 05-09 / Part 3 make it compound 10-14);**核心公式** Self-Improving System = Harness + Loop + Memory 且顺序不能反;**核心反直觉**("模型从来没变过,变的是 harness" + "loop 没有加 intelligence 只是把 harness 套 timer" + "CLAUDE.md 是建议 hooks 是强制");**4 件套** = 模型+工具+权限+上下文(其他都是变体);**settings.json 权限判断** = 弄错了多难撤销;**两个最值钱的 hooks** = PreToolUse 安全门 + PostToolUse 格式化;**STATE.md 三段式** = verified facts / lessons learned / last session;**8 反模式 check list** = default harness/CLAUDE.md 膨胀/enforcement 放 CLAUDE.md/单 agent 自评/无 memory/loop on bad harness/20 hooks/ship 不扫 secrets;**对 Seetong 5 个优先动作**;与 [[harness-engineering]] [[Harness工程AgentLoop]] [[HarnessEngineering企业级实战]] 互为概念/工程/路径三角 ⭐⭐
+- [Agent Harness 14 步路线图 - Digest](./01-ai-agents/0xCodez-Agent-Harness-14-Steps-digest.md) - 2026-06-17
+- [Capihom:Claude Code 主动式 Agent 工作流 - Routines](./02-ai-coding/Claude-Code-主动式Agent-Routines.md) - 2026-06-17(Capihom 2026-06-17 编译自 Anthropic applied AI 团队 Maya 演讲"Build a proactive agent workflow with Claude Code":**"主动式 Agent 不该等你按回车才开始工作"**;Anthropic Claude Code 推出 **Routines**(按 cron/GitHub 事件/webhook 主动启动远程会话),**最小配置 4 样**(prompt+repo+connector+trigger),**三大基础设施负担**(跑在哪里/什么时候触发/人怎么介入),**主动式 Agent 三大设计问题**(触发器+上下文+可转向性 Steerability),**渐进路径**(先调查建议,再放行动权限),**Anthropic 内部案例**(Sarah 文档同步 routine + Claude Code 每周 PR 增 200% + deploy verifier 案例);**核心反直觉**("主动式 agent 不要求人消失,要求人能叫停" + "AI 判断不稳定根因往往不是模型态度,是流程没把信息接进来");**8 节点 + 5 个对 Seetong 借鉴动作**;**这是 Anthropic 第一次把 Routines 当作"产品定位"对外讲**)⭐⭐
+- [Claude Code 主动式 Agent Routines - Digest](./02-ai-coding/Claude-Code-主动式Agent-Routines-digest.md) - 2026-06-17
+- [腾讯 TEG:AI Agent & Skill 测评方案及落地实践](./01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地.md) - 2026-06-17(腾讯程序员 2026-06-17(TEG 云架构平台部网关测试团队 martinskxu):**"测评是 Agent 从 Demo 可用走向生产可靠必须跨过的门槛"**;Agent 三大独有痛点(非确定性/黑盒化/错误级联放大)+ 3 类评分器(确定性 > Rubric > 人工;"能用代码判断的绝不用模型")+ 5 大评测维度 + 3 类 Agent 侧重 + 5 步闭环 SOP + 用例基线 Baseline + **负向触发用例反直觉("过度触发比不触发难发现")**;落地项目 **TPerf 性能平台智能分析 Agent** 已在生产跑通;8 节点 + 5 个对 Seetong 借鉴动作;**这是 01-ai-agents 在 2026-06 第一个完整的"评测工程实践"落地参考**)⭐⭐⭐
+- [腾讯 TEG Agent Skill 测评 - Digest](./01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地-digest.md) - 2026-06-17
+- [InfoQ:谷歌首席工程师软件生态学 10 倍时刻](./02-ai-coding/InfoQ-Adam-Bender-软件生态学-10倍时刻.md) - 2026-06-17(InfoQ 2026-06-17 编译自 Google 首席软件工程师 Adam Bender (Google I/O 2026 主题演讲):**"软件生态学"** 整体性学科 + **10 倍代码时刻** 5 个容量型瓶颈(编译/代码审查/Token经济学/测试计算资源/版本控制)必先崩 + **依赖图二次方增长**(10x 代码 → 100-1000x 测试) + **工程是积分编程** + Google 文化 8 特质 + 大规模变更(10 行代码修补 100 亿行应用);**8 节点** + **5 个对 Seetong 团队可借鉴动作**(画生态图/10x 时刻 4 候选/Code Review checklist/代码审查=指导/小仓库反问句);与 [[Addy-Osmani-Loop-Engineering]] 同一硬币另一面 ⭐⭐
+- [软件生态学 10 倍时刻 - Digest](./02-ai-coding/InfoQ-Adam-Bender-软件生态学-10倍时刻-digest.md) - 2026-06-17
+- [陈进:读完 Agent Loop 工程手册,我有 8 个还没想明白的问题](./01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题.md) - 2026-06-16(陈进/腾讯云开发者:Agent Loop 范式跃迁 + 8 个真痛点没标准答案 + SELF Protocol 治理薄壳草稿 + 4 件套 + 6 个对 Seetong 可借鉴动作)⭐⭐⭐
+- [陈进 Agent Loop 8 问 - Digest](./01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题-digest.md) - 2026-06-16
+- [阿里妹:端到端业务需求专家 Agent--4 层架构 × 8 步流程](./01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程.md) - 2026-06-15(森叶:业务需求专家 Agent 不是更聪明的代码生成器,而是把上下文、工具调用、人工确认、验收证据、反馈沉淀组织成闭环;4 层横向架构 + 8 步纵向流程 + 3 个关键设计:不直接升级 / 质量门禁硬规则化 / 反馈留痕到平台)⭐⭐⭐
+- [阿里妹业务需求 Agent - Digest](./01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程-digest.md) - 2026-06-15
+- [OpenClaw + Seetong 配置优化方案 P0 落地](./01-ai-agents/openclaw-seetong-配置优化P0.md) - 2026-06-15(综合 OpenClaw 实战 + 清华沈阳《自进化 AI》+ EvoSkill / SkillOpt / Loop Engineering 等多源沉淀 → 7 条通用规则 + 5 条 Seetong 专属 + 3 项 P0 已落地:SOUL 验证 Gate / AGENTS 任务分级 L1-L4 / AGENTS Skill 自进化护栏)⭐⭐⭐
+- [Addy Osmani agent-skills 设计哲学:23 技能 + 7 块骨架 + 4 个杀手锏](./02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架.md) - 2026-06-15(微信公众号 ColaAI 转载自 Chrome 团队 Lead Addy Osmani 开源项目:⭐ 58.9k Star / 23 技能 / 7 命令 / 3 角色 / 4 清单 + 4 设计哲学 + 7 块统一骨架 + Google 工程文化内嵌 + 3 个对 Seetong 可借鉴动作)⭐⭐⭐
+- [agent-skills 设计哲学 - Digest](./02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架-digest.md) - 2026-06-15
+- [清华教授沈阳把AI逼成了会自己进化的「新物种」](./01-ai-agents/清华沈阳-自进化AI新物种.md) - 2026-06-15(微信公众号 新智元 对话清华沈阳:自进化 AI 5 条产品线 + 3 个原创概念 + FDE 30%-50% 岗位重构空间)⭐⭐⭐
+- [清华沈阳 - Digest](./../raw/2026-06-15-清华沈阳-自进化AI新物种-digest.md) - 2026-06-15
+- [Codex和Claude Code负责人都不写提示词了,AI 圈爆火的Loop到底是什么](./02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering.md) - 2026-06-14(微信公众号 APPSO:Prompt→Harness→Loop 时代迁移 + 5+1 积木 + 4 产业人物同向共振 + 分界线>术语 + 4 个对 Seetong 可借鉴动作)⭐⭐
+- [Codex和Claude Code Loop - Digest](./02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering-digest.md) - 2026-06-14
+- [PM Skills Marketplace - 产品经理必备 Skill](./02-ai-coding/PM-Skills-Marketplace-产品经理必备skill.md) - 2026-06-14(微信公众号 开源日记:phuryn/pm-skills 3 个月 16k Star + 9 插件 × 68 技能 × 42 命令 + Skill=独立方法论 vs Command=组合流程 + "给文字 vs 给执行路径"分水岭 + 方法论壁垒被抬高)⭐⭐
+- [PM Skills - Digest](./02-ai-coding/PM-Skills-Marketplace-产品经理必备skill-digest.md) - 2026-06-14
+- [Loop Engineering 详解:把反馈循环放进工程现场](./02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场.md) - 2026-06-11(若飞 架构师JiaGouX 编译自 Addy Osmani 等:Prompt→Harness→Loop 层次 + 6 工程问题 + 4 入口 + 5 项准入 + 6 类场景 + 7 天试点 + 5 条保守原则)⭐⭐⭐
+- [Loop Engineering 详解 - Digest](./02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场-digest.md) - 2026-06-11
+- [Multica:人是最慢的节点,4 人 + 几十个 Agent 的 AI Native 组织长什么样](./01-ai-agents/Multica-AI-Native-组织-人是最慢的节点.md) - 2026-06-11(腾讯研究院 张佳圆访谈:人是组织瓶颈 + 三类角色 + 最多两层 + 去中间层 + Agent idle 率 + 思考退化对抗)⭐⭐⭐
+- [Multica - Digest](./01-ai-agents/Multica-AI-Native-组织-人是最慢的节点-digest.md) - 2026-06-11
+- [透明玻璃--写作的最高境界](./05-content-creation/透明玻璃-写作的最高境界.md) - 2026-06-11(微信公众号 红豆范 写作方法论:3 特征(精准/凝练/自然)+ 4 步骤(减法/工匠/规律/精准表达)+ 5 技巧(动作/具象/对话/短句/删过渡词)+ 1 警示(透明 ≠ 简陋 = 经历绚丽的简单 = 第三重境界))⭐⭐
+- [透明玻璃 - Digest](./05-content-creation/透明玻璃-写作的最高境界-digest.md) - 2026-06-11
+- [与 AI 一起做产品的六条原则](./03-productivity/与AI一起做产品的六条原则.md) - 2026-06-11(微信公众号 AGENT橘 团队实践总结:AI 放大器 + 减法 + 品味 + 80 分 + 共情 + 一致性 + 6 个反问句决策 checklist)⭐⭐
+- [与 AI 一起做产品的六条原则 - Digest](./03-productivity/与AI一起做产品的六条原则-digest.md) - 2026-06-11
+- [如何构建一个更"好"的知识库:RAGAS 三维度评估 + 8 步构建流程 + 前沿架构选型](./07-rag-systems/如何构建一个更好的知识库.md) - 2026-06-11(阿里 idealab 团队 RAG 评估与构建工程实践综述:RAGAS 三维度 + 8 步流程 + AutoRAG/QuIM-RAG/OpenViking)⭐⭐
+- [如何构建一个更好的知识库 - Digest](./07-rag-systems/如何构建一个更好的知识库-digest.md) - 2026-06-11
+- [知识库分层编排:从 RAG 到 Agent-native Knowledge Context Layer](./07-rag-systems/知识库分层编排-从RAG到Agent-native-KCL.md) - 2026-06-10(板牙 知识库第 5 种范式「金字塔」:5 层抽象分层 + 7 种有向边 + 角色感知 + Pyramid+RAG Hit@3=89%)⭐⭐⭐
+- [Claude Code 一周年回顾:Agent 自主验证 / Routine 异步化 / Auto Mode 反直觉安全](./02-ai-coding/Claude-Code一周年回顾-Boris-Cat.md) - 2026-06-10(BorisNCat 编译自 Boris Cherny + Cat Wu 一周年回顾视频)⭐⭐⭐
+- [Claude Code 首席设计师的 AI 工作流](./02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流.md) - 2026-06-10(loonggg 编译自 Anthropic Claude Code 首席设计师 Meaghan Choi 演示)⭐⭐
+- [Loop Engineering:把 prompt agent 替换为设计循环系统](./02-ai-coding/Addy-Osmani-Loop-Engineering.md) - 2026-06-09(Addy Osmani 跨产品方法论长文,**41万 查看 / 3,266 赞 / 7,605 书签**)⭐⭐⭐
+- [如何更科学、方向可控的实现 Skill 的「自进化」?](./01-ai-agents/Skill-Self-Evolution.md) - 2026-06-09(阿里妹 飞樰 深度综述 Trace2Skill / EvoSkill / SkillOpt)⭐⭐⭐
+- [Skill 自进化 - Digest](./01-ai-agents/Skill-Self-Evolution-digest.md) - 2026-06-09
+- [一个农民,用 Codex 管理了 1500 亩地](./01-ai-agents/cases/farmer-Codex-1500-mu.md) - 2026-06-09(AI小范儿 转载自 OpenAI 官方案例)
+- [一个农民 - Digest](./01-ai-agents/cases/farmer-Codex-1500-mu-digest.md) - 2026-06-09
+- [Agentic Engineering 实战:把计划、上下文和验证做成 AI 工作台](./02-ai-coding/Agentic-Engineering-AI-Workbench.md) - 2026-06-09(架构师 JiaGouX 若飞 编译自 Matt Van Horn/John Kim/Kaxil Naik/Addy Osmani)⭐⭐⭐
+- [Agentic Engineering 实战 - Digest](./02-ai-coding/Agentic-Engineering-AI-Workbench-digest.md) - 2026-06-09
+- [规范驱动开发:Notion 的 AI 工程工作流程](./02-ai-coding/Notion-spec-driven-AI-workflow.md) - 2026-06-09(Capihom 编译自 Latent Space《How I AI》嘉宾 Ryan Nystrom)⭐⭐
+- [规范驱动开发 - Digest](./02-ai-coding/Notion-spec-driven-AI-workflow-digest.md) - 2026-06-09
+- [/problem-first:把方案翻转回问题](./02-ai-coding/problem-first把方案翻转回问题.md) - 2026-06-08(深思圈 编译自 George @nurijanian)⭐⭐⭐
+- [/problem-first 把方案翻转回问题 - Digest](./02-ai-coding/problem-first把方案翻转回问题-digest.md) - 2026-06-08
+- [Claude Code 之父:「品味」不是人类护城河;当工程师不再写代码,招聘看什么?](./02-ai-coding/Claude-Code之父品味不是人类护城河.md) - 2026-06-08(机器之心 编译自 Boris Cherny 访谈)⭐⭐⭐
+- [Claude Code 之父品味不是人类护城河 - Digest](./02-ai-coding/Claude-Code之父品味不是人类护城河-digest.md) - 2026-06-08
+- [Anthropic 万字爆火长文的三个判断,以及一个值得警惕的阳谋](./02-ai-coding/Anthropic万字长文三个判断和一个阳谋.md) - 2026-06-08(快刀青衣 拆解 Anthropic《When AI builds itself》)⭐⭐⭐
+- [Anthropic 万字长文三个判断和一个阳谋 - Digest](./02-ai-coding/Anthropic万字长文三个判断和一个阳谋-digest.md) - 2026-06-08
+- [买了一样的 AI,为什么别家的比你的强](./02-ai-coding/买了一样的AI为什么别家的比你的强.md) - 2026-06-08(深思圈 编译自 Hiten Shah,188.3K 浏览)⭐⭐
+- [买了一样的 AI 为什么别家的比你的强 - Digest](./02-ai-coding/买了一样的AI为什么别家的比你的强-digest.md) - 2026-06-08
+- [为什么说 React 是比 HTML 更合适的 AI 设计稿格式](./02-ai-coding/为什么说React是比HTML更合适的AI设计稿格式.md) - 2026-06-08(宝玉)⭐
+- [为什么说 React 是比 HTML 更合适的 AI 设计稿格式 - Digest](./02-ai-coding/为什么说React是比HTML更合适的AI设计稿格式-digest.md) - 2026-06-08
+- [Ogilvy 10 条写作规则 + Claude Skill 落地](./05-content-creation/ogilvy-10-writing-rules-with-claude-skill.md) - 2026-06-07(20.8万 浏览)⭐
+- [Ogilvy 10 条 - Digest](./05-content-creation/) - 2026-06-07
+- [Claude Code 团队 5 条工作原则 - Fiona Fung 分享](./02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享.md) - 2026-06-03
+- [Claude Code 团队 5 条工作原则 - Digest](./02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享-digest.md) - 2026-06-03
+- [YC 如何进行 AI-Native 组织改造:Agent 能力要向所有人开放](./02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放.md) - 2026-06-03
+- [YC 如何进行 AI-Native 组织改造 - Digest](./02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放-digest.md) - 2026-06-03
+- [AI Coding 的顿悟时刻](./02-ai-coding/AI-Coding的顿悟时刻.md) - 2026-06-03
+- [AI Coding 的顿悟时刻 - Digest](./02-ai-coding/AI-Coding的顿悟时刻-digest.md) - 2026-06-03
+- [Matt Van Horn 的 22 个 Agentic Engineering Hacks](./02-ai-coding/every-agentic-engineering-hack-2026-06.md) - 2026-06-03(82万 浏览)⭐
+- [Claude Code 作者 Boris 28 分钟教你写真正有效的 Prompts](./02-ai-coding/Claude-Code作者Boris-28分钟教你写真正有效的Prompts.md) - 2026-06-06(88万 浏览)⭐
+- [Matt Van Horn 的 22 个 Hacks - Digest](./02-ai-coding/every-agentic-engineering-hack-2026-06-digest.md) - 2026-06-03
+- [Claude Code 动态工作流:让 Claude 现写 Harness 解决任何任务](./02-ai-coding/claude-code-dynamic-workflows.md) - 2026-06-03
+- [Claude Code 动态工作流 - Digest](./02-ai-coding/claude-code-dynamic-workflows-digest.md) - 2026-06-03
+- [54万行代码的顿悟:Markdown才是新编程方式](./02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式.md) - 2026-06-03
+- [54万行代码的顿悟 - Digest](./02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式-digest.md) - 2026-06-03
+- [大家都在说「软件工厂」,但90%的CEO不知道自己公司在第几级](./02-ai-coding/大家都在说软件工厂-但90的CEO不知道自己公司在第几级.md) - 2026-06-03
+- [大家都在说「软件工厂」- Digest](./02-ai-coding/大家都在说软件工厂-但90的CEO不知道自己公司在第几级-digest.md) - 2026-06-03
+- [AI PM核心技能:观测、评估与反馈闭环](./01-ai-agents/AI-PM核心技能-观测评估与反馈闭环.md) - 2026-05-31
+- [Claude Code 用到这个程度,我算是开眼了](./02-ai-coding/ClaudeCode用到这个程度-我算是开眼了.md) - 2026-05-28
+- [我用 Codex 做研究后,总结出 6 条有用经验!](./02-ai-coding/我用Codex做研究后-总结出6条有用经验.md) - 2026-05-27
+- [Codex「自我蒸馏」提示词进化版!官方团队给出更强方案,一键打包你的专属工作流](./02-ai-coding/Codex「自我蒸馏」提示词进化版-官方团队给出更强方案-一键打包你的专属工作流.md) - 2026-05-25
+
+- [Codex配置原则总览](./02-ai-coding/Codex配置原则总览.md) - 2026-05-21
+- [Codex工具入口与能力边界](./02-ai-coding/Codex工具入口与能力边界.md) - 2026-05-21
+- [多Agent使用边界与并行判定](./02-ai-coding/多Agent使用边界与并行判定.md) - 2026-05-21
+- [任务类型到验证模板](./02-ai-coding/任务类型到验证模板.md) - 2026-05-21
+- [Codex长期线程设计草案](./02-ai-coding/Codex长期线程设计草案.md) - 2026-05-21
+- [Codex配置下一步改造:从规则层走向线程、工具、目标与共享记忆](./02-ai-coding/Codex配置下一步改造-从规则层走向线程工具目标与共享记忆.md) - 2026-05-21
+- [来自 Codex 官方团队的分享:如何把 Codex 用到极致](./02-ai-coding/来自Codex官方团队的分享-如何把Codex用到极致.md) - 2026-05-21
+- [知识卡片编译模板:长文如何压成 raw / digest / wiki 三层](./02-ai-coding/知识卡片编译模板-长文如何压成raw-digest-wiki三层.md) - 2026-05-20
+- [MyAIWiki写入规范与验证模板](./02-ai-coding/MyAIWiki写入规范与验证模板.md) - 2026-05-20
+- [Codex配置优化清单:从Harness视角改造AGENTS、Skills、知识库与验证闭环](./02-ai-coding/Codex配置优化清单-从Harness视角.md) - 2026-05-20
+- [从Prompt、Context到Harness,工程的三次进化与终局之战](./02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战.md) - 2026-05-20
+- [你不知道的 Agent:原理、架构与工程实践](./ai-agents/you-dont-know-agent-principles-architecture-engineering.md) - 2026-05-16
+- [How to Build a Personal AI System With Claude](./ai-agents/how-to-build-personal-ai-system-with-claude.md) - 2026-05-16
+- [Claude Code 大型代码库最佳实践](./ai-coding/claude-code-large-codebase-best-practices.md) - 2026-05-16
+- [Agent Skills 系统性综述](./ai-agents/agent-skills-systematic-survey.md) - 2026-05-16
+- [2026 LLM工程师路线图](./ai-agents/2026-llm-engineer-roadmap.md) - 2026-05-15
+
+## 分类
+
+### AI Agents
+- [腾讯 TEG:AI Agent & Skill 测评方案及落地实践](./01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地.md) - 2026-06-17(腾讯程序员 TEG 云架构平台部网关测试团队:**"测评是 Agent 从 Demo 可用走向生产可靠必须跨过的门槛"**;Agent 三大独有痛点 + 3 类评分器 + 5 大评测维度 + 5 步闭环 SOP + 用例基线;**落地项目 TPerf 性能平台智能分析 Agent** 已在生产跑通;**核心反直觉**:过度触发比不触发难发现,负向触发用例比正向更重要;**这是 01-ai-agents 在 2026-06 第一个完整的"评测工程实践"落地参考**;与 [[Skill-Self-Evolution]] [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] 上游强关联,与 [[用Agent评测思路管理AI-Coding-31万行代码AI重构实践]] [[seetong-batch-issue-rootcause-analysis]] [[seetong-daily-briefing]] 下游强关联)⭐⭐⭐
+- [腾讯 TEG Agent Skill 测评 - Digest](./01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地-digest.md) - 2026-06-17
+- [阿里妹:端到端业务需求专家 Agent--4 层架构 × 8 步流程](./01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程.md) - 阿里妹 2026-06-15 森叶:业务需求专家 Agent 的 4 层横向架构(上下文输入 / 业务专家编排 / 工具执行 / 反馈学习)+ 8 步纵向流程(需求进入→澄清→方案→实现→CR 协同→验收→发布→结项)+ 3 个关键设计(不直接升级 / 质量门禁硬规则化 / 反馈留痕到平台)
+- [阿里妹业务需求 Agent - Digest](./01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程-digest.md) - 上一篇的速读摘要版
+- [Multica:人是最慢的节点,4 人 + 几十个 Agent 的 AI Native 组织长什么样](./01-ai-agents/Multica-AI-Native-组织-人是最慢的节点.md) - 腾讯研究院 2026-06-11 张佳圆(Multica 创始人)访谈:4 人 + 几十 Agent 极端样本 + 人是组织瓶颈 + 三类角色(Orchestrator/Worker/Validator)+ 最多两层 + 去中间层 + 端到端负责 + Agent idle 率 + 思考退化对抗
+- [Multica - Digest](./01-ai-agents/Multica-AI-Native-组织-人是最慢的节点-digest.md) - 上一篇的速读摘要版
+- [如何更科学、方向可控的实现 Skill 的「自进化」?](./01-ai-agents/Skill-Self-Evolution.md) - 阿里妹飞樰 2026-06-09 深度综述:Trace2Skill(阿里千问归纳法)/ EvoSkill(Sentient Labs 自验证)/ SkillOpt(微软+高校训练范式)+ 可验证性=飞轮 + Skill 即参数
+- [Skill 自进化 - Digest](./01-ai-agents/Skill-Self-Evolution-digest.md) - 上一篇的速读摘要版
+- [一个农民,用 Codex 管理了 1500 亩地](./01-ai-agents/cases/farmer-Codex-1500-mu.md) - AI小范儿 2026-06-08 转载自 OpenAI 官方案例:北海道农民 Hiroki Tomiyasu 用 Codex 改造 4 个工作流 + "ChatGPT 学习 + Codex 落地" + 工具低估反思
+- [一个农民 - Digest](./01-ai-agents/cases/farmer-Codex-1500-mu-digest.md) - 上一篇的速读摘要版
+- [AI PM核心技能:观测、评估与反馈闭环](./01-ai-agents/AI-PM核心技能-观测评估与反馈闭环.md)
+- [你不知道的 Agent:原理、架构与工程实践](./ai-agents/you-dont-know-agent-principles-architecture-engineering.md)
+- [How to Build a Personal AI System With Claude](./ai-agents/how-to-build-personal-ai-system-with-claude.md)
+- [2026 LLM工程师路线图](./ai-agents/2026-llm-engineer-roadmap.md)
+- [Agent Skills 系统性综述](./ai-agents/agent-skills-systematic-survey.md)
+
+### AI Coding
+- [Capihom:Claude Code 主动式 Agent 工作流 - Routines](./02-ai-coding/Claude-Code-主动式Agent-Routines.md) - 2026-06-17(Capihom 编译自 Anthropic applied AI 团队 Maya 演讲:**"主动式 Agent 不该等你按回车才开始工作"**;Anthropic Claude Code 推出 Routines,最小配置 4 样(prompt+repo+connector+trigger),三大基础设施负担,主动式 Agent 三大设计问题(触发器+上下文+可转向性),**渐进路径**(先调查建议,再放行动权限),**核心反直觉**("主动式 agent 不要求人消失,要求人能叫停" + "AI 判断不稳定根因往往不是模型态度,是流程没把信息接进来");Anthropic 内部案例(Sarah 文档同步 routine + Claude Code 每周 PR 增 200% + deploy verifier);**这是 Anthropic 第一次把 Routines 当作"产品定位"对外讲**;与 [[Claude-Code首席设计师Meaghan-Choi工作流]] [[Claude-Code一周年回顾-Boris-Cat]] [[Anthropic万字长文三个判断和一个阳谋]] 上游强关联,与 [[Addy-Osmani-Loop-Engineering]] [[APPSO-Codex-Claude-Code-Loop-Engineering]] [[Loop-Engineering-详解-把反馈循环放进工程现场]] 下游强关联)⭐⭐
+- [Claude Code 主动式 Agent Routines - Digest](./02-ai-coding/Claude-Code-主动式Agent-Routines-digest.md) - 2026-06-17
+- [InfoQ:谷歌首席工程师软件生态学 10 倍时刻](./02-ai-coding/InfoQ-Adam-Bender-软件生态学-10倍时刻.md) - 2026-06-17(InfoQ 编译自 Google 首席软件工程师 Adam Bender Google I/O 2026 主题演讲:**"软件生态学"**整体性学科 + **10 倍代码时刻** 5 个容量型瓶颈必先崩 + **依赖图二次方增长** + **工程是积分编程**;8 节点 + 5 个对 Seetong 借鉴动作;**与 [[Addy-Osmani-Loop-Engineering]] 同一硬币另一面**,是 02-ai-coding 的"系统会怎么崩"视角)⭐⭐
+- [软件生态学 10 倍时刻 - Digest](./02-ai-coding/InfoQ-Adam-Bender-软件生态学-10倍时刻-digest.md) - 2026-06-17
+- [Codex和Claude Code负责人都不写提示词了,AI 圈爆火的Loop到底是什么](./02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering.md) - APPSO 2026-06-14 产业视角:Prompt→Harness→Loop 三层迁移 + 5 个必答问题 + 5+1 积木(Addy Osmani)+ 4 类场景 + 3 个前提 + 成本转移 + 分界线 + **Boris Cherny / Cat Wu / Tibo / Addy Osmani 4 产业人物同向共振**;与 [[Addy-Osmani-Loop-Engineering]] 互为方法论原典,与 [[Loop-Engineering-详解-把反馈循环放进工程现场]] 互为中文工程实操 ⭐⭐
+- [Codex和Claude Code Loop - Digest](./02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering-digest.md) - 上一篇的速读摘要版
+- [Loop Engineering 详解:把反馈循环放进工程现场](./02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场.md) - 若飞(架构师JiaGouX)2026-06-11 中文工程化深度解读 + 7 天试点:Prompt→Harness→Loop 层次 + 6 工程问题 + 4 入口 + 5 项准入 + 6 类场景 + 7 天试点 + 5 条保守原则
+- [Loop Engineering 详解 - Digest](./02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场-digest.md) - 上一篇的速读摘要版
+- [Claude Code 一周年回顾:Agent 自主验证 / Routine 异步化 / Auto Mode 反直觉安全](./02-ai-coding/Claude-Code一周年回顾-Boris-Cat.md) - BorisNCat 2026-06-09 编译自 Boris Cherny + Cat Wu 一周年回顾视频:Agent 自主验证(不是单元测试)+ Routine 让 Claude 从同步变异步 + Auto Mode 反直觉安全(Sonnet 4.6 分类器)+ 两次认知跃迁 + 一半工作在手机上 + Context 极简主义 + 2026/3/31 源码泄露风波(51.2 万行 / KAIROS / Undercover Mode)+ 一年 9 个功能里程碑 ⭐⭐⭐
+- [Claude Code 首席设计师的 AI 工作流](./02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流.md) - loonggg 2026-06-09 编译自 Anthropic Claude Code 首席设计师 Meaghan Choi 演示:worktree 并行 + AI 自决给理由 + 全链路自动化 + 定时巡逻产品质量 + Opus+1M+auto+loop,"能自动化的全自动化,人只在判断环节介入" ⭐⭐
+- [Agentic Engineering 实战:把计划、上下文和验证做成 AI 工作台](./02-ai-coding/Agentic-Engineering-AI-Workbench.md) - 架构师 JiaGouX 若飞 2026-06-08 编译自 Matt Van Horn/John Kim/Kaxil Naik/Addy Osmani:"Agent 面前摆着一张工作台"--AI 工作台 5 层(计划/上下文/执行/验证/治理)+ plan.md 任务协议 + CLAUDE.md 三段式 + Skill=过程资产 + Subagents=隔离 + 团队 3 层权限渐进 + 5 行威胁模型
+- [Loop Engineering:把 prompt agent 替换为设计循环系统](./02-ai-coding/Addy-Osmani-Loop-Engineering.md) - Addy Osmani 2026-06-09 跨产品方法论长文(**41万 查看 / 3,266 赞 / 7,605 书签**):5+1 积木系统(Automations/Worktrees/Skills/Plugins+Connectors/Sub-agents/Memory)+ Codex 与 Claude Code 双实现对照 + 3 个反噬警示 + "Build the loop. Stay the engineer.";与 [[claude-code-dynamic-workflows]] [[Agentic-Engineering-AI-Workbench]] [[Claude-Code之父品味不是人类护城河]] 强关联 ⭐⭐⭐
+- [Agentic Engineering 实战 - Digest](./02-ai-coding/Agentic-Engineering-AI-Workbench-digest.md) - 上一篇的速读摘要版
+- [规范驱动开发:Notion 的 AI 工程工作流程](./02-ai-coding/Notion-spec-driven-AI-workflow.md) - Capihom 2026-06-08 编译自 Latent Space《How I AI》嘉宾 Ryan Nystrom(Notion AI 核心建设者):spec-driven 完整流水线 + 救 CI / Standup Prep 自动化 / "我不懂"PR 评审 / 工程师=系统思考者+架构师
+- [规范驱动开发 - Digest](./02-ai-coding/Notion-spec-driven-AI-workflow-digest.md) - 上一篇的速读摘要版
+- [/problem-first:把方案翻转回问题](./02-ai-coding/problem-first把方案翻转回问题.md) - 深思圈 2026-06-07:编译自 George @nurijanian 69.8K 浏览--8 部分 / 90 秒 / 三个替代框架 / 假设挑战带验证 / 50 想法 90% 死于证据状态 / 协议优于提示词 ⭐⭐⭐
+- [/problem-first 把方案翻转回问题 - Digest](./02-ai-coding/problem-first把方案翻转回问题-digest.md) - 上一篇的速读摘要版
+- [Claude Code 之父:「品味」不是人类护城河;当工程师不再写代码,招聘看什么?](./02-ai-coding/Claude-Code之父品味不是人类护城河.md) - 机器之心 2026-06-07:编译自 Boris Cherny 访谈--Claude Code 起源 / 写 Loops / Generalist 黄金时代 / MTS / 少招人多给 tokens / 价值观护城河 ⭐⭐⭐
+- [Claude Code 之父品味不是人类护城河 - Digest](./02-ai-coding/Claude-Code之父品味不是人类护城河-digest.md) - 上一篇的速读摘要版
+- [Anthropic 万字爆火长文的三个判断,以及一个值得警惕的阳谋](./02-ai-coding/Anthropic万字长文三个判断和一个阳谋.md) - 快刀青衣 2026-06-07:拆解 Anthropic《When AI builds itself》--执行力零价格 + 验收能力 + 慢变量安全垫 + 巴鲁克计划阳谋 ⭐⭐⭐
+- [Anthropic 万字长文三个判断和一个阳谋 - Digest](./02-ai-coding/Anthropic万字长文三个判断和一个阳谋-digest.md) - 上一篇的速读摘要版
+- [买了一样的 AI,为什么别家的比你的强](./02-ai-coding/买了一样的AI为什么别家的比你的强.md) - Hiten Shah 2026-06-06:模型是商品,skill 才是资产--AI 公司的竞争优势来自把"最厉害的人的判断"打包成可被 agent 复用的 skill(**188.3K 浏览**)⭐⭐
+- [买了一样的 AI 为什么别家的比你的强 - Digest](./02-ai-coding/买了一样的AI为什么别家的比你的强-digest.md) - 上一篇的速读摘要版
+- [为什么说 React 是比 HTML 更合适的 AI 设计稿格式](./02-ai-coding/为什么说React是比HTML更合适的AI设计稿格式.md) - 宝玉 2026-06-08:React 的组件化、树形结构、数据驱动、文本化交付,比巨大 HTML 更适合 AI 时代的设计稿协作 ⭐
+- [为什么说 React 是比 HTML 更合适的 AI 设计稿格式 - Digest](./02-ai-coding/为什么说React是比HTML更合适的AI设计稿格式-digest.md) - 上一篇的速读摘要版
+- [Claude Code 团队 5 条工作原则 - Fiona Fung 分享](./02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享.md) - 瓶颈转移到验证/评审/安全 + JIT 规划 + 自动化肌肉记忆 + Trust but verify + Taste is scarce typing is not + 团队级 harness + 3 个没答案的问题
+- [Claude Code 团队 5 条工作原则 - Digest](./02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享-digest.md) - 上一篇的速读摘要版
+- [YC 如何进行 AI-Native 组织改造:Agent 能力要向所有人开放](./02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放.md) - Pete Koomen + Gary (Garry Tan) 对谈:350+ 工具注册表 + Dream Cycle + Skillify/check resolvable + Egalitarian + Trust by default + Horseless Carriages 批评
+- [YC 如何进行 AI-Native 组织改造 - Digest](./02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放-digest.md) - 上一篇的速读摘要版
+- [AI Coding 的顿悟时刻](./02-ai-coding/AI-Coding的顿悟时刻.md) - 工厂模式半年标配 + Spec→LDD 流水线 + Scrum 失效论 + 未来瓶颈=需求定义+架构设计 + 4%成本换100%产出+组织向两端收缩
+- [AI Coding 的顿悟时刻 - Digest](./02-ai-coding/AI-Coding的顿悟时刻-digest.md) - 上一篇的速读摘要版
+- [Matt Van Horn 的 22 个 Agentic Engineering Hacks](./02-ai-coding/every-agentic-engineering-hack-2026-06.md) - "No IDE. Just plan.md and voice." + YOLO + 多 session 并发 + 工具栈生态(**82万 浏览 / 2,768 喜欢 / 8,511 书签**)⭐
+- [Claude Code 作者 Boris 28 分钟教你写真正有效的 Prompts](./02-ai-coding/Claude-Code作者Boris-28分钟教你写真正有效的Prompts.md) - Boris Cherny 亲自讲解 CLAUDE.md + 内存 + 并行 + 提示模式四件套,**88万 浏览 / 1.5万 书签** ⭐
+- [Matt Van Horn 的 22 个 Hacks - Digest](./02-ai-coding/every-agentic-engineering-hack-2026-06-digest.md) - 上一篇的速读摘要版
+- [Claude Code 动态工作流:让 Claude 现写 Harness 解决任何任务](./02-ai-coding/claude-code-dynamic-workflows.md) - Anthropic 官方 6 种 Pattern + 10 个真实 Use Case(132万 浏览 / 6,210 喜欢)⭐
+- [Claude Code 动态工作流 - Digest](./02-ai-coding/claude-code-dynamic-workflows-digest.md) - 上一篇的速读摘要版
+- [54万行代码的顿悟:Markdown才是新编程方式](./02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式.md) - Garry Tan 的"代码/模型经济方程反转 + Markdown 是新编程方式 + Skillify 循环 + Tokenmaxxing"
+- [54万行代码的顿悟 - Digest](./02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式-digest.md) - 上一篇的速读摘要版
+- [大家都在说「软件工厂」,但90%的CEO不知道自己公司在第几级](./02-ai-coding/大家都在说软件工厂-但90的CEO不知道自己公司在第几级.md) - 软件工厂 Level 0-4 五级阶梯 + 自测 6 问
+- [大家都在说「软件工厂」- Digest](./02-ai-coding/大家都在说软件工厂-但90的CEO不知道自己公司在第几级-digest.md) - 上一篇的速读摘要版
+- [Codex配置原则总览](./02-ai-coding/Codex配置原则总览.md)
+- [Codex工具入口与能力边界](./02-ai-coding/Codex工具入口与能力边界.md)
+- [多Agent使用边界与并行判定](./02-ai-coding/多Agent使用边界与并行判定.md)
+- [任务类型到验证模板](./02-ai-coding/任务类型到验证模板.md)
+- [Codex长期线程设计草案](./02-ai-coding/Codex长期线程设计草案.md)
+- [Codex配置下一步改造:从规则层走向线程、工具、目标与共享记忆](./02-ai-coding/Codex配置下一步改造-从规则层走向线程工具目标与共享记忆.md)
+- [来自 Codex 官方团队的分享:如何把 Codex 用到极致](./02-ai-coding/来自Codex官方团队的分享-如何把Codex用到极致.md)
+- [知识卡片编译模板:长文如何压成 raw / digest / wiki 三层](./02-ai-coding/知识卡片编译模板-长文如何压成raw-digest-wiki三层.md)
+- [MyAIWiki写入规范与验证模板](./02-ai-coding/MyAIWiki写入规范与验证模板.md)
+- [Codex配置优化清单:从Harness视角改造AGENTS、Skills、知识库与验证闭环](./02-ai-coding/Codex配置优化清单-从Harness视角.md)
+- [从Prompt、Context到Harness,工程的三次进化与终局之战](./02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战.md)
+- [Claude Code 大型代码库最佳实践](./ai-coding/claude-code-large-codebase-best-practices.md)
+- [谷歌开源 agent-skills](./ai-coding/谷歌开源agent-skills.md)
+
+### AI Tech
+(暂无页面)
+
+### Productivity
+- [与 AI 一起做产品的六条原则](./03-productivity/与AI一起做产品的六条原则.md) - 微信公众号 AGENT橘 团队实践总结:AI 放大器 + 减法 + 品味 + 80 分 + 共情 + 一致性 + 6 个反问句决策 checklist;**6 原则 + 6 案例 + 6 反问** 完整结构 ⭐⭐
+- [用好AI的人,才更值钱](./03-productivity/use-ai-well-become-more-valuable.md) ⭐
+- [AI 学习:专家视角](./03-productivity/ai-learning-expert-perspective.md) ⭐
+- [Karpathy LLM Wiki 系统](./03-productivity/karpathy-knowledge-system.md) ⭐
+- [Obsidian + Claude Code 工作流](./03-productivity/obsidian-claude-code-os.md) ⭐
+- [2026年了,你的文件管理还停留在新建文件夹吗](./03-productivity/2026年了-你的文件管理还停留在新建文件夹吗.md) ⭐
+- [陈春花 - 从岗位到角色:AI 时代组织设计的新逻辑](./03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑.md) ⭐
+
+### RAG Systems
+- [如何构建一个更"好"的知识库:RAGAS 三维度评估 + 8 步构建流程 + 前沿架构选型](./07-rag-systems/如何构建一个更好的知识库.md) - 阿里 idealab 团队 2026-06 RAG 评估与构建工程实践综述:RAG 双引擎本质 + RAGAS 三维度(Context Relevance / Faithfulness / Answer Relevance) + 8 步构建流程(Load/Split/Embed/Store + Query/Retrieve/Rerank/Generate) + RAG vs Long Context 选型决策 + 前沿架构 3 案例(AutoRAG 自动化 Pipeline / QuIM-RAG 问题倒排索引 / OpenViking 文件系统范式)⭐⭐
+- [如何构建一个更好的知识库 - Digest](./07-rag-systems/如何构建一个更好的知识库-digest.md)
+- [知识库分层编排:从 RAG 到 Agent-native Knowledge Context Layer](./07-rag-systems/知识库分层编排-从RAG到Agent-native-KCL.md) - 板牙 2026-06-10 提出第 5 种范式「金字塔(Pyramid KB)」:5 层抽象分层(原则/架构/规范/实现/经验)+ 7 种有向边跨层关联 + 角色感知(架构师看 L1+L2 / 开发者看 L2-L4)+ 变更驱动更新;Pyramid+RAG Hit@3=89% vs Naive RAG 75%(200 条 QA / 831 篇源文档实测);类比法律体系 = 宪法/法律/规章/手册/判例 ⭐⭐⭐
+
+### Content Creation
+- [透明玻璃--写作的最高境界](./05-content-creation/透明玻璃-写作的最高境界.md) - 微信公众号 红豆范 2026-06 写作方法论:3 特征(精准/凝练/自然)+ 4 步骤(减法/工匠/规律/精准表达)+ 5 技巧(动作/具象/对话/短句/删过渡词)+ 1 警示(透明 ≠ 简陋 = 经历绚丽的简单 = 第三重境界);**"池塘生春草" 5 字 = 字字珠玑** ⭐⭐
+- [Ogilvy 10 条写作规则 + Claude Skill 落地](./05-content-creation/ogilvy-10-writing-rules-with-claude-skill.md) - 经典理论+AI 复活范式 + 严重性分级审计 + 写作不替重写的产品哲学(**20.8万 浏览 / 1,331 书签**)⭐
+- [ai-learning-path-analysis](./05-content-creation/ai-learning-path-analysis.md) - AI 学习路径分析
+- [乔布斯1995遗失访谈](./05-content-creation/乔布斯1995遗失访谈.md) - 乔布斯1995年遗失访谈核心观点

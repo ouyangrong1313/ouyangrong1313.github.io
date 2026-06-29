@@ -1,0 +1,76 @@
+<h1 id="从埋点需求到规则资产hermes-agent-重构得物数仓工作流">从埋点需求到规则资产:Hermes Agent 重构得物数仓工作流</h1>
+
+<blockquote>
+  <p><strong>核心结论</strong>:数仓埋点承接最消耗的不是”生成 SQL”,而是”<strong>把分散信息重新拼起来</strong>“;得物选 <strong>Hermes Agent</strong>(而非 OpenClaw)重构数仓工作流,核心把”<strong>判断前的工程化准备</strong>“交给 Agent,<strong>人聚焦口径裁决 + 生产放行</strong>;<strong>上线前 3 道门</strong>(事实源门/预演门/责任门)+ <strong>4 类资产化能力底座</strong>(规则/协作可见/上下文与事实源/结构化工具接口)+ <strong>4 个工程构件</strong>(工作区/看板/规则+长期记忆/结构化接口+预演+人工确认)。</p>
+</blockquote>
+
+<h2 id="8-个知识节点">8 个知识节点</h2>
+
+<ul>
+  <li><strong>数仓埋点承接的特殊性</strong>:把分散信息重新拼起来(需求文档动作→历史点位→指标口径→字段变更→发布确认),分散性高、易错。”<strong>关掉窗口就失忆</strong>“在数仓场景不可接受——这是 Hermes vs OpenClaw 选型的根因。</li>
+  <li><strong>Hermes vs OpenClaw 选型逻辑</strong>:选 Hermes 因 4 项原生能力(<strong>分层持久记忆 + 技能自动沉淀 + 多平台统一网关 + 工具与扩展生态</strong>);<strong>选 Agent 不只看能力清单,看场景痛点</strong>——”反复回溯历史口径 + 让 AI 进入协作沟通现场 + 生产动作可审计”是数仓刚需。</li>
+  <li><strong>4 个工程构件</strong>:工作区(独立空间,集中文档/讨论/产物)+ 看板(状态机:进入/设计/预演/评审/交付,<strong>每步责任人</strong>)+ 规则+长期记忆(“<strong>老同学才知道</strong>“沉淀为可执行检查清单)+ 结构化工具接口 + 预演 + 人工确认点。</li>
+  <li><strong>能力边界划分(关键定位)</strong>:<strong>Hermes 是”流程编排者”不是”埋点生成器”</strong>——Hermes 负责”判断前工程化准备”(材料/历史/候选方案/系统预演/风险证据),<strong>人负责业务语义/指标口径/敏感字段/下游影响/生产放行</strong>;把人从翻材料/追状态/补上下文里释放出来,聚焦真判断。</li>
+  <li><strong>单 Agent 编排 + 多能力模块</strong>:”单 Agent 保持统一上下文 + 能力模块承接稳定动作”——<strong>固化 5 项流程契约</strong>(输入/动作边界/输出产物/失败处理/经验回写),避免提示词换说法检查重点就漂;可迁移到指标发布/配置变更/数据质量排查。</li>
+  <li><strong>4 类资产化能力底座</strong>:<strong>规则包答”怎么判断” + 工作区答”依据在哪里” + 看板答”卡在哪里” + 结构化工具接口答”系统状态是否验证过”</strong>;上下文传递不靠”多塞材料”而是分层(临时留本轮/可复用沉规则包/把关进治理记忆)。</li>
+  <li><strong>风险治理 3 道门</strong>:<strong>事实源门 + 预演门 + 责任门</strong>——<strong>任何一道门缺证据,Hermes 只能停在候选/待确认状态,不能继续生产写入</strong>;越靠近写入越要先预演、再确认、最后留痕。</li>
+  <li><strong>规模化落地路径</strong>:<strong>用连续样本证明准备时间/交付周期/评审通过率/返工原因的变化,只有指标和看板/日志/确认记录一一对应时,才具备扩大使用的工程基础</strong>——”自动化动作堆得越多 ≠ 链路可用”。</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游(基于 / 来自)</h3>
+<ul>
+  <li><strong>Hermes Agent 平台</strong>:分层持久记忆(SQLite + FTS5)+ 技能自动沉淀 + 多平台网关(飞书/钉钉/企微)+ 工具与扩展生态(MCP 封装)</li>
+  <li><strong>OpenClaw</strong>(本文平行对比对象):同赛道 Agent 框架,但在数仓 3 项刚需上”没有对应的能力定位”</li>
+  <li><strong>MCP</strong>:企业内部系统封装稳定接入</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游(应用于 / 验证于)</h3>
+<ul>
+  <li><strong>得物数仓埋点承接</strong>:每个需求独立工作区 + 状态机看板 + 规则包 + 结构化接口</li>
+  <li><strong>可迁移场景</strong>:指标发布 / 配置变更 / 数据质量排查(同机制 + 换事实源和工具接口)</li>
+</ul>
+
+<h3 id="同级横向--并列">同级(横向 / 并列)</h3>
+<ul>
+  <li>阿里淘系 Harness:<a href="主播=实时交互高风险">[阿里云开发者-淘宝主播Agent的Harness工程实战]</a>/ [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]</li>
+  <li>得物同主线:[[Skill-Self-Evolution]] / [[用 LLM Agent 重构告警排查流程]] / [[Claude Code Harness 工程:数仓侧落地方案]]</li>
+  <li>Skill 主线:[[Agent Skills 系统性综述]] / [[谷歌开源 agent-skills]] / [[Addy-Osmani-agent-skills-设计哲学]] / [[PM-Skills-Marketplace-产品经理必备skill]]</li>
+  <li>Loop 主题:<a href="本文&quot;3 道门&quot;硬证据 vs 那篇 Loop 验证闸门">[Loop-Engineering-验证才是瓶颈]</a></li>
+  <li>评测主线:[[腾讯-AI-Agent-Skill-测评方案落地]] “测评是 Demo→生产必须跨过的门槛”同主线</li>
+  <li>风险治理:[[阿里云开发者-淘宝主播Agent的Harness工程实战]] 5 层纵深防御 + 记忆对账</li>
+</ul>
+
+<h2 id="5-个对-seetong-团队可借鉴动作">5 个对 Seetong 团队可借鉴动作</h2>
+
+<ol>
+  <li><strong>写”Seetong 需求承接 4 个工程构件”试点</strong>:TAPD 接入 + 状态机看板(每步责任人)+ 规则包(11 类 iOS 6 大漏洞/4G 6 类问题检查清单)+ 结构化接口(预演+放行),目标全链路可回放可审计(对应 [[seetong-tapd-version-review]])。</li>
+  <li><strong>按”上线前 3 道门”建 Seetong 自动化 SOP</strong>:<strong>事实源门</strong>(文档/讨论/结论齐)+ <strong>预演门</strong>(测试环境跑通)+ <strong>责任门</strong>(责任人确认),任何缺证据都停(对应 [[阿里云开发者-淘宝主播Agent的Harness工程实战]] 5 层防护 + [[seetong-batch-issue-rootcause-analysis]])。</li>
+  <li><strong>借鉴”4 类资产化能力底座”重写 Seetong Skill 库</strong>:<strong>规则包</strong>(三端 API + 已知 bug 模式)+ <strong>工作区</strong>(每版本产物/讨论归档)+ <strong>看板</strong>(TAPD 状态机)+ <strong>结构化接口</strong>(TAPD/神策/友盟/反馈 API 封装为 MCP)。</li>
+  <li><strong>用”能力边界划分”为 Seetong AI 助手定位</strong>:<strong>AI 做”判断前准备”</strong>,<strong>人做真判断</strong>(业务语义/优先级/敏感字段/下游影响/生产放行),不让 AI 直接给最终方案(对应 [[seetong-requirement-clarifier]])。</li>
+  <li><strong>用”4 个量化指标”做 Seetong 自动化效果评估</strong>:<strong>准备时间/交付周期/评审通过率/返工原因</strong>——只有指标和看板/日志/确认记录一一对应,链路才具备扩大使用工程基础(对应 [[seetong-weekly-report]])。</li>
+</ol>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li>作者小诘、博温,得物技术团队</li>
+  <li>核心选型立场:选 Hermes Agent 而非 OpenClaw — 因 4 项原生能力更贴数仓痛点</li>
+  <li><strong>关键术语</strong>:<strong>Hermes Agent = 文中特指的智能体平台</strong>(非通用,与 OpenClaw 平行对比)</li>
+  <li>规模化 4 个量化指标(准备时间/交付周期/评审通过率/返工原因)具体数字未披露</li>
+  <li>Hermes Agent 平台具体技术栈未明示</li>
+  <li>规则包版本管理 / 多人协作冲突解决未展开</li>
+  <li>与 OpenClaw 对比只在”能力定位”层面,无 Benchmark 数据</li>
+  <li>原文:https://mp.weixin.qq.com/s/hGma3I1jMF5KsDZQK_6X4Q</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>raw:<a href="../../raw/2026-06-17-得物技术-Hermes-Agent重构得物数仓工作流.md">../../raw/2026-06-17-得物技术-Hermes-Agent重构得物数仓工作流.md</a></td>
+          <td>digest:<a href="./Hermes-Agent重构得物数仓工作流-digest.md">./Hermes-Agent重构得物数仓工作流-digest.md</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>

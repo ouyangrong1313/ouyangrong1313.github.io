@@ -1,0 +1,143 @@
+<h1 id="淘宝主播-agent-的-harness-工程实战原文摘要">淘宝主播 Agent 的 Harness 工程实战(原文摘要)</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+<p>把 Harness 从”个人助手形态”推到”淘宝直播”这个<strong>操作不可撤回 + 注意力稀缺 + 多话题高频交织 + 长程可中断</strong>的极端压力测试场,落地为”<strong>业务方写 Skill / 框架层兜底脏活</strong>“的工程化骨架。</p>
+
+<h2 id="5-条核心观点">5 条核心观点</h2>
+
+<ol>
+  <li><strong>Harness 六元组 = (E, T, C, S, L, V)</strong>:Execution Loop / Tool Registry / Context Manager / State Store / Lifecycle Hooks / Evaluation Interface。把零散 Prompt 技巧升级成有明确分工的系统架构,任何 Agent 项目都可拿这六个维度自查缺哪一块。</li>
+  <li><strong>业务/框架分层 + 五层纵深防御</strong>:业务方以 Skill 形式声明能力与风险,框架层兜住执行循环/上下文/安全/状态/观测。”纵深防御”不是单点:Prompt 边界 → Schema 强约束 → Approval 审批分层 → 工具执行验证 → 执行审计记录。</li>
+  <li><strong>逻辑统一、物理分治</strong>:逻辑上向 Agent 暴露统一”工作区”抽象;物理上三类资产分开存——<strong>MySQL 存会话</strong>(强一致+点查)/ <strong>Hologres 存记忆</strong>(向量+全文+标量三路召回)/ <strong>GitLab 存 Skill</strong>(版本管理+Code Review+灰度发布)。</li>
+  <li><strong>Reducer 上下文 + 结构化错误码 + 生命周期 Hook</strong>:LLM 只决策(产生 Action),Reducer 维护状态(纯函数),每轮 system-hint 注入干净快照;错误码分 3xxx/4xxx/5xxx/9xxx 决定自动重试还是 Hook 通知;Hook 在 PreReasoning / PreToolCall / PostToolCall / PostReasoning / SessionEnd 5 个关键时机拦截。</li>
+  <li><strong>记忆对账 + 信任度自进化</strong>:L1 会话记忆(主播声明)/ L2 事实记忆(实时数据)/ L3 行为记忆(离线聚合)。”主播说的”和”主播做的”矛盾时不粗暴覆盖 L1,而是<strong>累积证据 ≥ 3 次</strong>后 Agent 主动和主播确认;trust_score 决定输出形态(≥0.7 给 recommend,0.4-0.7 给 evidence+弱参考,&lt;0.4 只给 evidence)。</li>
+</ol>
+
+<h2 id="关键参数数字">关键参数/数字</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>项</th>
+      <th>数字/范围</th>
+      <th>用途</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Harness 六元组</td>
+      <td>(E, T, C, S, L, V)</td>
+      <td>系统架构形式化</td>
+    </tr>
+    <tr>
+      <td>沙箱资源配额</td>
+      <td>CPU ≤ 50%,进程 ≤ 64</td>
+      <td>防止资源耗尽攻击</td>
+    </tr>
+    <tr>
+      <td>沙箱 stdout/stderr 上限</td>
+      <td>64KB</td>
+      <td>防止海量输出污染上下文</td>
+    </tr>
+    <tr>
+      <td>工具 timeout</td>
+      <td>Agent 只能缩小不能放大</td>
+      <td>防止 Agent 长期占死沙箱</td>
+    </tr>
+    <tr>
+      <td>结构化错误码 5xxx 重试</td>
+      <td>最多 3 次,指数退避</td>
+      <td>系统异常处理</td>
+    </tr>
+    <tr>
+      <td>PlanEngine vs ReAct 成功率</td>
+      <td>0.847 vs 0.737</td>
+      <td>DAG 规划价值</td>
+    </tr>
+    <tr>
+      <td>PlanEngine vs ReAct 子任务覆盖率</td>
+      <td>0.976 vs 0.883</td>
+      <td>DAG 全局规划价值</td>
+    </tr>
+    <tr>
+      <td>PlanEngine vs ReAct 工具执行冗余率</td>
+      <td>0.587 vs 0.727</td>
+      <td>DAG 减少重复工具调用</td>
+    </tr>
+    <tr>
+      <td>PlanEngine vs ReAct 迭代轮次</td>
+      <td>5.440 vs 8.020</td>
+      <td>DAG 提效</td>
+    </tr>
+    <tr>
+      <td>Approval 4 档</td>
+      <td>auto / soft-gate / hard-gate / block</td>
+      <td>风险分层审批</td>
+    </tr>
+    <tr>
+      <td>trust_score 增量表</td>
+      <td>+0.05 / -0.10 / +0.03 / -0.05</td>
+      <td>非对称信任度更新</td>
+    </tr>
+    <tr>
+      <td>矛盾累积阈值</td>
+      <td>≥ 3 次</td>
+      <td>触发 Agent 主动确认</td>
+    </tr>
+    <tr>
+      <td>离线评测</td>
+      <td>极端改价/违规诱导/模糊指令对抗样本</td>
+      <td>验证五层防护</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="核心金句">核心金句</h2>
+
+<ol>
+  <li><strong>“模型会一代代变强,但包裹模型的这层 Harness 工程,才是把’能用的 Demo’变成’敢上线的产品’的真正壁垒。”</strong>(全文收尾)</li>
+  <li><strong>“模型再强,没有河道也会泛滥成灾;河道修好了,哪怕水流有波动,整体也是可控的。”</strong>(ATA”水流理论”)</li>
+  <li><strong>“主播’说的’和’做的’不一定一致。”</strong>(记忆对账的朴素起点)</li>
+  <li><strong>“矛盾时不粗暴覆盖,而是累积证据、达到阈值后由 Agent 主动和主播确认。”</strong>(记忆工程取舍)</li>
+  <li><strong>“业务方专注写 Skill,框架层兜住所有安全、状态、上下文与可观测的脏活。”</strong>(分层架构核心思想)</li>
+</ol>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游(基于 / 来自)</h3>
+<ul>
+  <li><strong>Harness Engineering 概念走红</strong>:OpenClaw、Claude Code、Hermes 等智能体产品带火</li>
+  <li><strong>ATA “水流理论”</strong>:人控制方向+设定边界,AI 在边界内推进</li>
+  <li><strong>前端 Reducer 状态管理思想</strong>:LLM = Action,Reducer = State</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游(应用于 / 验证于)</h3>
+<ul>
+  <li><strong>淘宝主播 Agent 生产环境</strong>:每日数千场直播,直接对真实金钱损失</li>
+  <li><strong>Hologres 向量+全文+标量三路召回</strong>:记忆检索落地</li>
+  <li><strong>Langfuse trace 可视化</strong>:评测体系落地</li>
+  <li><strong>qwen3.7-max 基模 + 小模型 SFT/RL</strong>:planner 二次训练</li>
+</ul>
+
+<h3 id="同级横向--并列">同级(横向 / 并列)</h3>
+<ul>
+  <li>既有 Harness 主线:[[harness-engineering]] 概念入门 / [[Harness工程AgentLoop]] Loop 视角 / [[HarnessEngineering企业级实战]] 阿里 25%→90% 视角 / [[0xCodez-Agent-Harness-14-Steps]] 14 步路径视角</li>
+  <li>阿里妹同源:[[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] 业务需求 Agent 视角</li>
+  <li>记忆主线:[[记忆是-agent-基建]] / [[llm-agent-unified-memory-framework]] / [[ai-personal-knowledge-base-problems]]</li>
+  <li>Loop 主题:[[Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解-把反馈循环放进工程现场]] / [[APPSO-Codex-Claude-Code-Loop-Engineering]]</li>
+  <li>Agent 安全:[[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]] 治理薄壳</li>
+  <li>Agent 评测:[[腾讯-AI-Agent-Skill-测评方案落地]] 评测工程实践</li>
+  <li>Agent 架构:[[从零设计生产级-Multi-Agent-Harness]] / [[OpenClaw-vs-Hermes-多-Agent-架构设计]]</li>
+</ul>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li>文章未注明确切作者署名(推测为阿里/淘宝直播技术团队)</li>
+  <li>微信 HTML 抽取时第 2.6 节”异常处理”表的”响应超时”行被截断(原文应有”系统检测”等列),已用空行标注</li>
+  <li>PlanEngine vs ReAct 的具体评测数据集未披露(基模 qwen3.7-max, 平均 7 步 query)</li>
+  <li>文章未给出 4 个 trust 区间的具体推荐话术模板</li>
+  <li>“矛盾累积 ≥ 3 次”是经验阈值,未给实验数据</li>
+  <li>五层防护的具体”层间冗余度”未量化(每层漏掉的占比)</li>
+  <li>主播 Agent 是否在淘宝主播场景 A/B 验证未披露具体数字</li>
+</ul>

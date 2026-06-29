@@ -1,0 +1,112 @@
+<h1 id="从埋点需求到规则资产hermes-agent-重构得物数仓工作流速读摘要">从埋点需求到规则资产:Hermes Agent 重构得物数仓工作流(速读摘要)</h1>
+
+<blockquote>
+  <p><strong>一句话</strong>:数仓埋点承接最消耗的不是”生成 SQL”,而是”把分散信息重新拼起来”;得物选 Hermes Agent 重构工作流,核心<strong>“判断前工程化准备”交给 Agent,人聚焦口径裁决 + 生产放行</strong>;<strong>上线前 3 道门</strong>(事实源/预演/责任)+ <strong>4 类资产化能力底座</strong>(规则/协作可见/上下文/结构化接口)+ <strong>4 个工程构件</strong>(工作区/看板/规则+长期记忆/结构化接口+预演+人工确认)。</p>
+</blockquote>
+
+<h2 id="速查表">速查表</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>维度</th>
+      <th>核心命题</th>
+      <th>关键数字/设计</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>痛点定位</td>
+      <td>数仓埋点承接=分散信息拼装</td>
+      <td>文档→历史点位→指标口径→字段变更→发布确认</td>
+    </tr>
+    <tr>
+      <td>选型</td>
+      <td>Hermes 而非 OpenClaw</td>
+      <td>4 项原生能力更贴数仓刚需</td>
+    </tr>
+    <tr>
+      <td>Hermes 原生能力</td>
+      <td>分层记忆/技能沉淀/多平台网关/工具生态</td>
+      <td>SQLite+FTS5/飞书钉钉企微/MCP</td>
+    </tr>
+    <tr>
+      <td>工程构件</td>
+      <td>工作区/看板/规则+记忆/结构化接口</td>
+      <td>4 个 + 预演 + 人工确认</td>
+    </tr>
+    <tr>
+      <td>状态机</td>
+      <td>进入→设计→预演→评审→交付</td>
+      <td>5 步,每步责任人</td>
+    </tr>
+    <tr>
+      <td>能力边界</td>
+      <td>Hermes=编排者,人=裁决+放行</td>
+      <td>AI 做”判断前准备”,人做真判断</td>
+    </tr>
+    <tr>
+      <td>流程契约</td>
+      <td>输入/动作边界/输出产物/失败处理/经验回写</td>
+      <td>5 项固化</td>
+    </tr>
+    <tr>
+      <td>4 类资产化底座</td>
+      <td>规则答判断/工作区答依据/看板答卡/接口答验证</td>
+      <td>4 类资产分工</td>
+    </tr>
+    <tr>
+      <td>上下文分层</td>
+      <td>临时/可复用/把关</td>
+      <td>3 类信息分层</td>
+    </tr>
+    <tr>
+      <td>风险治理</td>
+      <td>3 道门:事实源+预演+责任</td>
+      <td>任何缺证据都停</td>
+    </tr>
+    <tr>
+      <td>规模化验证</td>
+      <td>准备时间/交付周期/评审通过率/返工原因</td>
+      <td>4 个量化指标必须与看板日志对齐</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>5 个反直觉点</strong>:① 数仓痛点不是”生成 SQL”而是”拼装分散信息” ② 选 Agent 不看能力清单看场景痛点 ③ Hermes 是编排者不是生成器 ④ 能力模块不是工具清单是流程契约 ⑤ 自动化动作堆得多 ≠ 链路可用,必须量化验证。</p>
+
+<h2 id="5-个对-seetong-团队可借鉴动作">5 个对 Seetong 团队可借鉴动作</h2>
+
+<ol>
+  <li><strong>写”Seetong 需求承接 4 个工程构件”试点</strong>:TAPD 接入 + 状态机看板(每步责任人)+ 规则包(11 类 iOS 6 大漏洞/4G 6 类问题检查清单)+ 结构化接口(预演+放行),目标全链路可回放可审计。</li>
+  <li><strong>按”上线前 3 道门”建 Seetong 自动化 SOP</strong>:<strong>事实源门</strong>(文档/讨论/结论齐)+ <strong>预演门</strong>(测试环境跑通)+ <strong>责任门</strong>(责任人确认),任何缺证据都停。</li>
+  <li><strong>借鉴”4 类资产化能力底座”重写 Seetong Skill 库</strong>:<strong>规则包</strong>(三端 API+已知 bug 模式)+ <strong>工作区</strong>(每版本产物/讨论归档)+ <strong>看板</strong>(TAPD 状态机)+ <strong>结构化接口</strong>(TAPD/神策/友盟/反馈 API 封装为 MCP)。</li>
+  <li><strong>用”能力边界划分”为 Seetong AI 助手定位</strong>:<strong>AI 做”判断前准备”</strong>,<strong>人做真判断</strong>(业务语义/优先级/敏感字段/下游影响/生产放行),不让 AI 直接给最终方案。</li>
+  <li><strong>用”4 个量化指标”做 Seetong 自动化效果评估</strong>:<strong>准备时间/交付周期/评审通过率/返工原因</strong>——只有指标和看板/日志/确认记录一一对应,链路才具备扩大使用工程基础。</li>
+</ol>
+
+<h2 id="关联--备注">关联 + 备注</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>关联</strong>:阿里淘系 [[阿里云开发者-淘宝主播Agent的Harness工程实战]]</td>
+      <td>得物同主线 [[Skill-Self-Evolution]] / [[用 LLM Agent 重构告警排查流程]]</td>
+      <td>Skill [[Agent Skills 系统性综述]]</td>
+      <td>Loop [[Loop-Engineering-验证才是瓶颈]]</td>
+      <td>评测 [[腾讯-AI-Agent-Skill-测评方案落地]]</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>备注</strong>:作者小诘、博温</td>
+      <td>Hermes = 文中特指平台</td>
+      <td>量化指标未披露</td>
+      <td>平台技术栈未明示</td>
+      <td>规则包版本管理未展开</td>
+    </tr>
+  </tbody>
+</table>

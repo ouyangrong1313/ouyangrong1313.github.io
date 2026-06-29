@@ -1,0 +1,125 @@
+<h1 id="规范驱动开发notion-的-ai-工程工作流程---digest">规范驱动开发：Notion 的 AI 工程工作流程 - Digest</h1>
+
+<ul>
+  <li>原文链接：https://mp.weixin.qq.com/s/3tD61I6xLWpjoOrF6goewA</li>
+  <li>来源：微信公众号 / Capihom（编译自 Latent Space《How I AI》播客，嘉宾：Notion 工程师 Ryan Nystrom）</li>
+  <li>发布时间：2026-06-08 22:00</li>
+  <li>获取时间：2026-06-09</li>
+</ul>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<p><strong>Spec-driven development 不是给团队平白多一层负担，而是把”原本就在做但停在会议等待区的设计文档”第一次变成 agent 的施工说明书和可执行工程资产</strong>——Ryan 在 Notion 已经跑通”Whisper 说意图 → Codex 写 spec → @Codex 出 PR + 验证截图 → spec 进仓库做 change log”的完整流水线。</p>
+
+<h2 id="三大主线">三大主线</h2>
+
+<ol>
+  <li><strong>入口范式</strong>：先说清楚，再写代码（Whisper → Codex 写 spec → “Build it”）</li>
+  <li><strong>流水线改造</strong>：Standup prep 自动化 / @Codex 出 PR / Spec 进仓库成为可执行资产</li>
+  <li><strong>角色重构</strong>：工程师 = 系统思考者 + 架构师，重心从手工 plumbing 挪到验证/边界/自证工具</li>
+</ol>
+
+<h2 id="8-个知识节点速查">8 个知识节点速查</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>节点</th>
+      <th>一句话</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Spec-driven Development</strong></td>
+      <td>文档不再是会议材料，是写进仓库、带验证计划的工程资产</td>
+    </tr>
+    <tr>
+      <td><strong>Whisper→Codex 流水线</strong></td>
+      <td>语音说意图 → Codex 写 spec → “Build it”</td>
+    </tr>
+    <tr>
+      <td><strong>救 CI / DevX</strong></td>
+      <td>慢 CI = 一次等待卡住整个验证回路 = AI 采用问题</td>
+    </tr>
+    <tr>
+      <td><strong>Standup Prep 自动化</strong></td>
+      <td>Notion AI agent 拉 24h 多源信息生成 preread</td>
+    </tr>
+    <tr>
+      <td><strong>Boxy / @Codex 出 PR</strong></td>
+      <td>Notion 评论 @Codex → 10 分钟出 PR + 预览 + 验证截图</td>
+    </tr>
+    <tr>
+      <td><strong>“我不懂” PR 评审</strong></td>
+      <td>承认不懂发给 agent = 有效 debug；从社交阻力里拽出 code review</td>
+    </tr>
+    <tr>
+      <td><strong>Spec Verification</strong></td>
+      <td>spec 底部明确写 verification = 文档成可执行资产</td>
+    </tr>
+    <tr>
+      <td><strong>工程师角色重构</strong></td>
+      <td>系统思考者 + 架构师；重心在 spec/验证/边界/自证</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="5-个金句">5 个金句</h2>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>“我真的不知道这里在干什么，你得像给 5 岁小孩讲一样解释给我听。”</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>“我不是 CI 专家，但我大概知道自己想要什么。”</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>“你的 AI、你的 agent，不会因为你在开会前 5 分钟让它做这件事而抱怨。”</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>“spec 就是事实来源。”</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>“我把我们的工作看成是在变成系统思考者和架构师。”</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="3-步可借鉴动作">3 步可借鉴动作</h2>
+
+<ol>
+  <li><strong>挑一段最重复的流程</strong>（standup 预读 / 评论触发 PR / 老设计文档改写为可执行 spec）先打通</li>
+  <li><strong>先打通一小段，再把整条链路慢慢换掉</strong>——阻力会小很多</li>
+  <li><strong>把 spec 放进 repo</strong>——改功能时先改 spec，再让 agent 回头改代码</li>
+</ol>
+
+<h2 id="与已有文章的关联">与已有文章的关联</h2>
+
+<ul>
+  <li><strong>强关联</strong>：
+    <ul>
+      <li>[[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]（工具/方法论对照）</li>
+      <li>[[AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]]（SDD 工具谱系坐标）</li>
+      <li>[[AI-Coding的顿悟时刻]]（Spec→LDD 流水线 + 工程师向两端收缩）</li>
+      <li>[[Claude-Code团队5条工作原则-Fiona-Fung分享]]（验证/评审/安全瓶颈转移）</li>
+      <li>[[Anthropic万字长文三个判断和一个阳谋]]（”验收能力”的一线落地版）</li>
+    </ul>
+  </li>
+  <li><strong>同级</strong>：
+    <ul>
+      <li>[[Claude-Code负责人谈AI原生工程组织]]</li>
+      <li>[[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]</li>
+      <li>[[54万行代码的顿悟-Markdown才是新编程方式]]（个人层 vs 组织层）</li>
+      <li>[[买了一样的AI为什么别家的比你的强]]（spec 仓库 = 一种”组织级 skill”）</li>
+    </ul>
+  </li>
+</ul>

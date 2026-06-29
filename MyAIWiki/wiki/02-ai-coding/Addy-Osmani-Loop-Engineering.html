@@ -1,0 +1,237 @@
+<h1 id="loop-engineering把-prompt-agent-替换为设计循环系统">Loop Engineering：把 prompt agent 替换为设计循环系统</h1>
+
+<ul>
+  <li>原文链接：https://x.com/addyosmani/status/2064127981161959567?s=20</li>
+  <li>来源：X / Addy Osmani（@addyosmani，Chrome 团队 Lead，Google 工程总监）</li>
+  <li>原始推文发布时间：2026-06-09 07:30</li>
+  <li>互动数据：41万 查看 / 3,266 赞 / 7,605 书签 / 570 转推 / 153 回复</li>
+  <li>获取时间：2026-06-09</li>
+  <li>抓取方式：CDP Proxy（X SPA）</li>
+</ul>
+
+<blockquote>
+  <table>
+    <tbody>
+      <tr>
+        <td>速读：[[../raw/2026-06-Addy-Osmani-Loop-Engineering-digest</td>
+        <td>Raw Digest]] · 原文：[[../raw/2026-06-Addy-Osmani-Loop-Engineering</td>
+        <td>Raw 原文]]</td>
+      </tr>
+    </tbody>
+  </table>
+</blockquote>
+
+<h2 id="核心结论一句话">核心结论（一句话）</h2>
+
+<blockquote>
+  <p><strong>Loop engineering = 用一个”会自己循环的 5+1 积木系统”替代”人按 turn 提示 agent”的新范式；Claude Code 与 Codex 已具备全部 5 个积木 + MCP 互通 = 跨工具设计 loop 成为可能；但真正的难点不是工具，是设计 loop 时的工程判断力——verification / comprehension debt / cognitive surrender 三个反噬不警惕，再好的 loop 也会变成灾难加速器。</strong></p>
+</blockquote>
+
+<h2 id="分类提炼">分类提炼</h2>
+
+<ul>
+  <li><strong>场景</strong>：AI Coding 方法论 · 跨工具 loop 设计 · 工程师角色升级</li>
+  <li><strong>类型</strong>：跨产品方法论长文（不是单一工具教程，是”两个工具的公约数”）</li>
+  <li><strong>价值层级</strong>：⭐⭐⭐（与 [[claude-code-dynamic-workflows]] 同级但更上层：本文是<strong>方法论层</strong>，dynamic workflows 是<strong>Claude Code 一侧的具体实现</strong>）</li>
+  <li><strong>关键引述两条</strong>（背书强度高）：
+    <ul>
+      <li>@steipete：”You shouldn’t be prompting coding agents anymore. You should be designing loops that prompt your agents.”</li>
+      <li>@bcherny（Anthropic Claude Code 负责人）：”I don’t prompt Claude anymore. I have loops running that prompt Claude and figuring out what to do. My job is to write loops.”</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="知识节点10-个独立概念">知识节点（10 个独立概念）</h2>
+
+<blockquote>
+  <p>每条独立成段可理解，对应一个可 grep 关键词，不与同篇其他节点重叠。</p>
+</blockquote>
+
+<ul>
+  <li><strong>Loop-Engineering</strong>：用循环系统替代”人主动 prompt agent”的工程范式；一个 loop = 一个递归目标（你给目的，AI 迭代到完成），loop engineering = 设计这种递归系统的工程实践</li>
+  <li><strong>5积木框架</strong>：loop 由 5 个积木（Automations / Worktrees / Skills / Plugins+Connectors / Sub-agents）+ 1 个状态文件（Memory）组成；可作为 loop 设计的标准 checklist</li>
+  <li><strong>Automations</strong>：定时/条件触发的发现+分诊，是 loop 的”心跳”——让它变成持续运行的 loop 而非一次性任务；Codex 的 Automations tab、Claude Code 的 <code class="language-plaintext highlighter-rouge">/loop</code> / cron / hooks / GitHub Actions 是同一能力的不同入口</li>
+  <li><strong>Worktrees</strong>：基于 git worktree 的并行 agent 隔离；解决”两个 agent 写同一文件”机械冲突，但不解决”人 review 跟不上”——<strong>worktrees 解机械冲突，人仍是天花板</strong></li>
+  <li><strong>Skills</strong>：以 <code class="language-plaintext highlighter-rouge">SKILL.md</code> 文件夹格式沉淀项目 intent（约定/build 步骤/”我们不这样写因为那次事故”）；agent 冷启动时不再用自信乱猜填 intent 空洞；<strong>Skill = 创作格式，Plugin = 分发方式</strong></li>
+  <li><strong>MCP-Connectors</strong>：让 loop 接触真实工具（issue tracker / DB / staging API / Slack）的协议；Codex 和 Claude Code 都说 MCP，<strong>写一个 connector 两边都能用</strong>；是 loop 能”开 PR + 关联 ticket + 通知频道”而不是”告诉你该改什么”的关键</li>
+  <li><strong>Sub-agents</strong>：用独立 agent 文件（Codex <code class="language-plaintext highlighter-rouge">.codex/agents/</code> TOML / Claude Code <code class="language-plaintext highlighter-rouge">.claude/agents/</code>）做 maker-checker 分离；<strong>写代码的 agent 不该是给自己打分的人</strong>；<code class="language-plaintext highlighter-rouge">/goal</code> 的底层实现也是这个分离——一个全新模型判断 loop 是否完成</li>
+  <li><strong>Memory-on-Disk</strong>：跨会话状态文件（markdown / Linear board）；<strong>agent 忘，repo 不忘</strong>——长期 loop 的唯一可信状态是”在磁盘上、不在上下文里”</li>
+  <li><strong>Cognitive-Surrender</strong>：loop 自跑时最诱惑的姿势是停止有意见、拿走什么是什么；<strong>为不思考而设计的 loop 是毒药，为有判断地设计是解药</strong>——同一动作，反面结果</li>
+  <li><strong>Harness-Loop层次</strong>：loop engineering 坐在 harness engineering 之上的一层楼——harness 是车间，loop 是工厂；工厂自带时间表、spawn helper、喂自己</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+
+<ul>
+  <li>[[Claude-Code作者Boris-我已经不写prompt了我写loop]]：Boris 在 30 分钟演讲里展开 “我的工作 = 写 loop”，本文是<strong>该金句的跨工具方法论化</strong>（Boris 偏 Claude Code dynamic workflows 实现，本文是双工具的公约数）</li>
+  <li>[[claude-code-dynamic-workflows]]：本文”Codex 也有 <code class="language-plaintext highlighter-rouge">/goal</code>、也用 <code class="language-plaintext highlighter-rouge">SKILL.md</code>、也走 MCP”的跨工具对称论断，与 Thariq 的 Claude Code Dynamic Workflows 互为镜像——<strong>dynamic workflows 是 Claude Code 一侧的工程实现，loop engineering 是跨产品的设计框架</strong></li>
+  <li>[[从Prompt-Context到Harness-工程的三次进化与终局之战]]：本文”loop engineering 坐在 harness 之上的一层楼”是 Harness 哲学的延伸——Harness 是车间，loop 是工厂</li>
+  <li>[[Agentic-Engineering-AI-Workbench]]：若飞 2026-06-08 编译长文，Addy Osmani 是其编译来源之一（《Agent Skills》那篇），本篇是 Addy 在 loop 这一相邻主题的独立方法论；两篇互为佐证</li>
+  <li>[[买了一样的AI为什么别家的比你的强]]：Hiten Shah “Skill 是资产”——本文”Skill 是 loop 复利的关键”是同一信号在 loop 场景的落地</li>
+  <li>[[54万行代码的顿悟-Markdown才是新编程方式]]：Garry Tan 的 Skillify 循环与本文 “Memory on disk = 复利” 是同一思想的另一表达</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+
+<ul>
+  <li>[[Claude-Code之父品味不是人类护城河]]：Boris Cherny 访谈里”我的工作已经变成写 Loops”的金句，本文是该金句的系统化展开</li>
+  <li>[[AI-Coding的顿悟时刻]]：”未来瓶颈 = 需求定义 + 架构设计”——本文”build the loop, stay the engineer”是同主线的工程化版本</li>
+  <li>[[多Agent使用边界与并行判定]]：本文”worktrees 解机械冲突，人仍是天花板”是该主线在 loop 自动化场景的强化</li>
+</ul>
+
+<h3 id="同级横向--并列--镜像">同级（横向 / 并列 / 镜像）</h3>
+
+<ul>
+  <li>[[Claude-Code作者Boris-我已经不写prompt了我写loop]]：同一金句的姊妹篇——Boris 偏 Anthropic 一侧，Addy 跨工具框架</li>
+  <li>[[claude-code-dynamic-workflows]]：同主题不同层面——动态工作流是单工具实现，loop engineering 是跨工具框架</li>
+  <li>[[从Prompt-Context到Harness-工程的三次进化与终局之战]]：同层级——Harness / Loop / Factory 三层抽象的另一视角</li>
+</ul>
+
+<h2 id="正文要点7-条">正文要点（7 条）</h2>
+
+<h3 id="一范式跃迁从你按-turn-提示-agent到你设计系统调-agent">一、范式跃迁：从”你按 turn 提示 agent”到”你设计系统调 agent”</h3>
+
+<p>过去两年用 coding agent 的方式是：你写 prompt → 看输出 → 写下一个 prompt → 重复。<strong>agent 是工具，你全程握着</strong>。这件事正在结束。新范式是：你建一个小型系统，<strong>让系统去找工作、分派工作、验收、记下结果、决定下一步</strong>——系统替你戳 agent。</p>
+
+<h3 id="二loop--递归目标定义目的ai-迭代到完成">二、Loop = 递归目标：定义目的，AI 迭代到完成</h3>
+
+<p>一个 loop = 一个递归目标（你给目的，AI 迭代到完成）。这是对 loop 的最简定义。Loop engineering = 设计这种递归系统。<strong>Loop engineering 之于 harness，等于工厂之于车间</strong>——harness 是车间，loop 是工厂。</p>
+
+<h3 id="三51-积木框架一张可以照搬的设计-checklist">三、5+1 积木框架（一张可以照搬的设计 checklist）</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>积木</th>
+      <th>Codex</th>
+      <th>Claude Code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Automations</strong></td>
+      <td>Automations tab</td>
+      <td><code class="language-plaintext highlighter-rouge">/loop</code> / cron / hooks / GitHub Actions</td>
+    </tr>
+    <tr>
+      <td><strong>Worktrees</strong></td>
+      <td>内建多线程 worktree</td>
+      <td><code class="language-plaintext highlighter-rouge">git worktree</code> + <code class="language-plaintext highlighter-rouge">--worktree</code> flag + subagent <code class="language-plaintext highlighter-rouge">isolation: worktree</code></td>
+    </tr>
+    <tr>
+      <td><strong>Skills</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">SKILL.md</code>（$ 或 /skills 或自动匹配）</td>
+      <td>同 <code class="language-plaintext highlighter-rouge">SKILL.md</code> 格式</td>
+    </tr>
+    <tr>
+      <td><strong>Plugins + Connectors</strong></td>
+      <td>MCP</td>
+      <td>MCP（互通）</td>
+    </tr>
+    <tr>
+      <td><strong>Sub-agents</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">.codex/agents/</code> TOML</td>
+      <td><code class="language-plaintext highlighter-rouge">.claude/agents/</code> + agent teams</td>
+    </tr>
+    <tr>
+      <td><strong>Memory（第 6 块）</strong></td>
+      <td>markdown / Linear board</td>
+      <td>同</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>关键洞察：跨产品形状完全一致——别再争哪个工具好，直接设计一个在两边都能跑的 loop</strong>。</p>
+
+<h3 id="四5-积木详解每一块都讲-codex-和-claude-code-双实现">四、5 积木详解（每一块都讲 Codex 和 Claude Code 双实现）</h3>
+
+<ul>
+  <li><strong>Automations（心跳）</strong>：让 loop 持续跑而非一次性。Codex 的 Triage inbox 把”找到东西的 run”和”没找到东西的 run”分开，<strong>archive 自跑结果</strong>很关键。Automation 可以 call skill，让循环任务可维护。Claude Code 同能力：<code class="language-plaintext highlighter-rouge">/loop</code> 周期、cron 时间表、hooks 在 lifecycle 触发、GitHub Actions 在你关电脑后继续跑</li>
+  <li><strong>Worktrees（隔离）</strong>：解”两个 agent 写同一文件”的机械冲突；<strong>worktrees take away the mechanical collision but YOU are still the ceiling</strong>——你 review 的带宽决定最多能跑几个 agent</li>
+  <li><strong>Skills（intent 沉淀）</strong>：让 agent 冷启动时不再用自信乱猜填 intent 洞；<strong>没有 skill 的 loop 每轮从零重推项目，有 skill 的 loop 复利累积</strong>；Skill = 创作格式，Plugin = 分发方式</li>
+  <li><strong>Connectors（手脚）</strong>：MCP 让 loop 接触真实工具；<strong>这是 agent 说”这是 fix”和 loop “开 PR + 关联 ticket + 通知频道”的区别</strong></li>
+  <li><strong>Sub-agents（制衡）</strong>：<strong>写代码的不该是给自己打分的人</strong>；经典三件套：探索 / 实现 / 验证；<code class="language-plaintext highlighter-rouge">/goal</code> 在底层就是这个分离——独立模型判断 loop 是否完成</li>
+</ul>
+
+<h3 id="五最值得知道的原语loop--goal">五、最值得知道的原语：<code class="language-plaintext highlighter-rouge">/loop</code> + <code class="language-plaintext highlighter-rouge">/goal</code></h3>
+
+<p><code class="language-plaintext highlighter-rouge">/loop</code> 按周期重跑。<strong><code class="language-plaintext highlighter-rouge">/goal</code> 跑到你写的条件真正成立</strong>——每轮之后用独立小模型验是否 done。<strong>Codex 也有 <code class="language-plaintext highlighter-rouge">/goal</code>，同名同行为</strong>——这是跨工具统一的原语。给个条件如”test/auth 全过 + lint 干净”然后走开。</p>
+
+<h3 id="六一个-loop-长什么样addy-自用模板">六、一个 loop 长什么样（Addy 自用模板）</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre>每天早上 9 点在仓库跑 automation
+  ↓
+prompt 调起 triage skill：读昨日 CI failures / open issues / recent commits
+  ↓
+findings 写进 markdown 或 Linear board
+  ↓
+对每个值得做的 finding：在独立 worktree 开新线程
+  ↓
+sub-agent 写 fix，第二个 sub-agent 对照项目 skills + 现有 tests review
+  ↓
+connector 让 loop 自动开 PR + 更新 ticket
+  ↓
+loop 处理不了的东西进 triage inbox 等人
+  ↓
+state file 是整个系统的脊椎——明天的运行从今天停的地方继续
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>关键认知：你只设计一次。其余步骤你一个都没 prompt。</strong></p>
+
+<h3 id="七三个反噬loop-越强越尖锐不是更简单">七、三个反噬（loop 越强越尖锐，不是更简单）</h3>
+
+<ol>
+  <li><strong>Verification 还是你的</strong>。无人值守的 loop = 无人值守地犯错。”完成了”是声明不是证明——<strong>your job is to ship code you confirmed works</strong></li>
+  <li><strong>理解会腐烂</strong>。loop 越快产你没写的代码，”存在”和”你懂”之间的 gap 越大。<strong>Comprehension debt</strong>——一个顺滑的 loop 让它长得更快</li>
+  <li><strong>认知投降是最舒服的姿势</strong>。loop 自跑时最诱惑的就是停止有意见。<strong>Cognitive surrender</strong>——设计 loop 是药（有判断地设计）也是毒（为不思考而设计）</li>
+</ol>
+
+<h2 id="结尾金句">结尾金句</h2>
+
+<blockquote>
+  <p><strong>Build the loop. Stay the engineer.</strong></p>
+</blockquote>
+
+<blockquote>
+  <p>Two people can build the exact same loop and get completely opposite results. One uses it to move faster on work they understand deeply. The other uses it to avoid understanding the work at all. <strong>The loop doesn’t know the difference. You do.</strong></p>
+</blockquote>
+
+<blockquote>
+  <p>That’s what makes <strong>loop design harder than prompt engineering</strong>, not easier. Cherny’s point isn’t that the work got easier. <strong>It’s that the leverage point moved.</strong></p>
+</blockquote>
+
+<blockquote>
+  <p>Build the loop. But build it like someone who intends to stay the engineer, not just the person who presses go.</p>
+</blockquote>
+
+<h2 id="标签">标签</h2>
+
+<p>#主题/AI-Coding
+#主题/AI-Agent
+#节点/Agent-Loop
+#节点/Codex
+#节点/Skill
+#节点/Harness
+#节点/Memory
+#场景/技术博客
+#场景/方法论
+#手法/范式归纳
+#手法/对比冲突
+#手法/警示提醒</p>

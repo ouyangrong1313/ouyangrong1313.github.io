@@ -1,0 +1,431 @@
+<h1 id="如何更科学方向可控的实现-skill-的自进化">如何更科学、方向可控的实现 Skill 的「自进化」？</h1>
+
+<ul>
+  <li>原文链接：https://mp.weixin.qq.com/s/2Cq0QR3vcKlMHkI0XyYYrw</li>
+  <li>原始素材：3 篇论文——Trace2Skill（阿里千问）/ EvoSkill（Sentient Labs）/ SkillOpt（微软 + 高校）</li>
+  <li>来源：微信公众号 / 阿里妹（飞樰，深度技术综述）</li>
+  <li>发布时间：2026-06-09 08:30</li>
+  <li>获取时间：2026-06-09</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论（一句话）</h2>
+
+<blockquote>
+  <p><strong>Agent Skill 进化正从”经验主义”走向”科学工程”路径</strong>——本文深度解析三大里程碑式 Skill 自进化方案：阿里千问 <strong>Trace2Skill</strong>（归纳法聚合 + 硬约束合并）、Sentient Labs <strong>EvoSkill</strong>（三角色闭环 + 前沿集合 + 验证 gate + 负反馈历史）、微软 + 高校 <strong>SkillOpt</strong>（Skill 即参数 + 学习率约束 + 验证 gate + 动量 + 元学习）；<strong>实际业务中混合策略（Trace2Skill 快速基线 + EvoSkill 扩充 + SkillOpt 精修）可能是更好的解法</strong>。</p>
+</blockquote>
+
+<h2 id="分类提炼">分类提炼</h2>
+
+<ul>
+  <li><strong>场景</strong>：Agent Skill 自进化 / 企业级 Agent 调优 / Skill 体系建设</li>
+  <li><strong>标签</strong>：#主题/Agent-Skills #主题/自进化 #主题/可验证性</li>
+  <li><strong>类型</strong>：技术综述 / 论文精解 / 范式归纳</li>
+  <li><strong>价值层级</strong>：⭐⭐⭐（Agent Skill 体系从”提示词工程”升级到”科学工程”的开创性综述）</li>
+</ul>
+
+<h2 id="知识节点8-个独立概念">知识节点（8 个独立概念）</h2>
+
+<ul>
+  <li><strong>Skill-自进化痛点</strong>：在线单通 Agent 轨迹的偶然性 / 特殊性 / 极端 Case 会”带偏”进化方向；与早期 Prompt 调优的”badcase 找补式优化”是同一类陷阱——过拟合、顾此失彼、臃肿发散；企业级场景下”质量飘忽不定、稳定性大幅降低”</li>
+  <li><strong>离线优化在线验证</strong>：企业级标准做法 3 步（离线收集轨迹 / 人工审核 + 回归评测 / 灰度切流）；本质仍由人指导、Agent 没有自主判断、核心决策权在人手</li>
+  <li><strong>Trace2Skill-归纳法</strong>：阿里千问；让”分析师小分队”并行看大量轨迹 → 把零碎经验合并成完整无冲突的 Skill；3 步流程（轨迹生成 / 并行提案 A+ &amp; A− 不对称角色 / 无冲突归纳）；挑战传统假设”经验是任务特定的”——Skill 逻辑规则比零散记忆更具泛化性</li>
+  <li><strong>EvoSkill-自验证</strong>：Sentient Labs；三角色 Pipeline（Executor / Proposer / Builder）+ 验证 gate + 负反馈历史；前沿集合（Frontier）算法 = 容量固定的”精英池” G（容量 k），跑赢 G 中最弱者才进入；类比 RL 策略更新</li>
+  <li><strong>SkillOpt-训练范式</strong>：微软 + 高校；最大胆的类比——把”Skill 文本”类比为”模型权重” / “基于反馈的文本重构”类比为”梯度更新” / “LLM 改写引擎”类比为”优化器”；六大核心组件</li>
+  <li><strong>前沿集合-Frontier</strong>：EvoSkill 核心算法；容量固定的”精英池”，跑赢最弱才进入；类似 RL 策略池的隐喻</li>
+  <li><strong>Skill-即参数</strong>：SkillOpt 核心创新；引入专门的”优化器 Agent”像 SGD / Adam 一样微调 Skill 文本；极简产物 best_skill.md（300~2000 Tokens，纯文本，零依赖）</li>
+  <li><strong>可验证性-飞轮</strong>：核心洞察——Claude / GPT / Qwen 2026 年迭代越来越快的根因 = 模型效果衡量越来越可验证；Agent 飞轮 = “轨迹 → 验证 → 调 Skill → 再验证”；从”人力驱动”到”算力驱动”是质的飞跃</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+<ul>
+  <li>3 篇论文：Trace2Skill（阿里千问）/ EvoSkill（Sentient Labs）/ SkillOpt（微软 + 上交 / 同济 / 复旦）</li>
+  <li>[[买了一样的AI为什么别家的比你的强]]：Hiten Shah 提的”Skill 战略”——本篇给出 Skill 自进化的工程化实现路径</li>
+  <li>[[Agent Skills 系统性综述]]：Skill 的工程综述——本篇是其”自进化”专门深入</li>
+  <li>[[谷歌开源 agent-skills]]：skill 的开源实现——本篇是 skill 自进化的学术 + 开源进展</li>
+  <li>[[Skills驱动推理新范式]]：TRS（用技能卡片降低推理 Token 成本）——本篇是 Skill 体系的下游进化范式</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+<ul>
+  <li>[[从Prompt-Context到Harness-工程的三次进化与终局之战]]：本篇 SkillOpt 的”Skill 即参数”是把”工程 = 训练范式”做到 Skill 空间的极致</li>
+  <li>[[Notion-spec-driven-AI-workflow]]：Notion 的 spec-driven 是”先人工写 spec 再让 agent 执行”——本篇 EvoSkill / SkillOpt 是”自动从轨迹中沉淀 / 优化 spec”</li>
+  <li>[[Agentic-Engineering-AI-Workbench]]：本篇 SkillOpt “可验证性 = 飞轮”是 AI 工作台”验证”层的科学化版本</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+<ul>
+  <li>[[agent-architectures]]：Agent 架构层（ReAct / Plan-and-Execute 等）——本篇是 Skill 进化层</li>
+  <li>[[harness-engineering]]：Harness 视角——本篇 SkillOpt 强调 “Harness 无关” 部署</li>
+  <li>[[Harness工程AgentLoop]]：Harness Agent Loop——本篇 SkillOpt 引入”训练范式”是 Loop 范式的延伸</li>
+  <li>[[AI-PM核心技能-观测评估与反馈闭环]]：评测体系是 Skill 自进化的基础——本篇与其”反馈闭环”主线同</li>
+</ul>
+
+<h2 id="正文要点8-条">正文要点（8 条）</h2>
+
+<h3 id="一skill-自进化的常见痛点在线单轨迹进化">一、Skill 自进化的常见痛点（在线单轨迹进化）</h3>
+
+<blockquote>
+  <p><strong>为什么自动沉淀的 Skill 质量不高 / 反而比原版差 / 越迭代越冗长？</strong></p>
+</blockquote>
+
+<ul>
+  <li><strong>根因</strong>：目前 Skill 自我沉淀机制基于<strong>单通 Agent 对话轨迹</strong>——当前 Session 的任务完成效果直接决定进化方向</li>
+  <li><strong>企业级场景痛点</strong>：每天承接同一类任务，Query 差异累积后轨迹和结论差异变大 + 边界情况和长尾场景</li>
+  <li><strong>“badcase 找补式优化”陷阱</strong>：模型为迎合当前 badcase 去过拟合，把个例补进 Prompt，破坏泛化性和通用性</li>
+  <li><strong>个人场景</strong>：任务多样性高、复用比例低，问题相对小</li>
+  <li><strong>企业级场景</strong>：质量”飘忽不定、稳定性大幅降低”，甚至”越优化越差”</li>
+</ul>
+
+<h3 id="二企业级标准做法离线优化--在线验证">二、企业级标准做法：离线优化 + 在线验证</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>1. 离线收集轨迹数据
+2. 人工审核 + 回归评测验证
+3. 灰度切流上线
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>局限</strong>：严重制约生产力、很难规模化、链路非常耗时耗力
+<strong>本质</strong>：仍由人指导、Agent 没有自主判断、核心决策权在人手</p>
+
+<p><strong>不是真正的”自进化”</strong>——真正的自进化 = 释放人力 + 闭环优化</p>
+
+<h3 id="三trace2skill阿里千问-归纳法聚合式进化">三、Trace2Skill（阿里千问）—— 归纳法聚合式进化</h3>
+
+<p><strong>核心思路</strong>：让”分析师小分队”并行看大量轨迹 → 把零碎经验合并成完整无冲突的 Skill</p>
+
+<p><strong>3 个核心步骤</strong>：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>步骤</th>
+      <th>关键操作</th>
+      <th>关键设计</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>轨迹生成</td>
+      <td>ReAct 并行跑 200 条 50+ 轮次轨迹</td>
+      <td>正负样本分离（T+ / T−）</td>
+    </tr>
+    <tr>
+      <td>并行提案</td>
+      <td>A+ 一次性（成功集）/ A− ReAct 多轮（失败集）</td>
+      <td>不对称角色设计 + 质量门控</td>
+    </tr>
+    <tr>
+      <td>无冲突归纳</td>
+      <td>层次归并 + 引用检查 + 冲突标记 + 格式校验</td>
+      <td>多次出现 → 通用原则 / 单次出现 → 噪声</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>设计哲学</strong>：”先看够多 → 再写一份完整文档”（批处理式）——像人类专家学习路径</p>
+
+<p><strong>实验挑战的假设</strong>：”经验本质上是任务特定的，必须通过情景记忆库检索”——<strong>Skill 的逻辑规则比零散记忆更具泛化性</strong></p>
+
+<p><strong>局限</strong>：因果贡献难定量 / 使用率追踪缺失 / 缺乏自动验证机制</p>
+
+<h3 id="四evoskillsentient-labs-自验证自然选择">四、EvoSkill（Sentient Labs）—— 自验证自然选择</h3>
+
+<p><strong>核心架构</strong>：从”构建 → 验证”形成闭环，<strong>三角色 Sub-Agent Pipeline</strong>：</p>
+
+<ul>
+  <li><strong>Executor（执行者）</strong>：跑当前 Skill 拿轨迹</li>
+  <li><strong>Proposer（提案者）</strong>：诊问题 / 提优化方向</li>
+  <li><strong>Builder（搭建者）</strong>：改 Skill 文档</li>
+</ul>
+
+<p><strong>严格验证机制</strong>：</p>
+<ul>
+  <li>在独立验证集重跑 → 效果比对 → <strong>只有更好才保留</strong></li>
+  <li>负向反馈不丢弃，作为后续学习的”反面教材”</li>
+</ul>
+
+<p><strong>前沿集合（Frontier）算法</strong>：</p>
+<ul>
+  <li>容量固定的”精英池” G（容量 k），始终保留当前得分最高的 k 个程序</li>
+  <li><strong>类比 RL</strong>：每轮迭代 = 选择父代 / 挖掘失败 / 诊断提案 / 落地构建 / 严格验证 / 历史沉淀</li>
+  <li>程序 = Agent 能力的完整载体（System Prompt + Skills 库）≈ RL 里的 Policy</li>
+</ul>
+
+<p><strong>类比</strong>：自然选择进化 / 优胜劣汰</p>
+
+<p><strong>优势</strong>：自然生长出 Skill 库，每个 Skill 对应具体失败模式，可解释性强
+<strong>风险</strong>：每轮只改一处，收敛慢；不同轮次跑的结果差异大</p>
+
+<h3 id="五skillopt微软--高校-训练范式skill-即参数">五、SkillOpt（微软 + 高校）—— 训练范式（Skill 即参数）</h3>
+
+<p><strong>最大胆的类比</strong>：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>神经网络</th>
+      <th>SkillOpt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>模型权重 Weights</td>
+      <td>Skill 文本</td>
+    </tr>
+    <tr>
+      <td>梯度更新</td>
+      <td>基于反馈的文本重构</td>
+    </tr>
+    <tr>
+      <td>优化器（SGD / Adam）</td>
+      <td>LLM 驱动的改写引擎</td>
+    </tr>
+    <tr>
+      <td>损失函数 Loss</td>
+      <td>验证集得分</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>6 大核心组件</strong>：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>组件</th>
+      <th>关键设计</th>
+      <th>解决的问题</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>① Forward Pass</td>
+      <td>Rollout Evidence（默认 Batch=40）</td>
+      <td>数据生成</td>
+    </tr>
+    <tr>
+      <td>② Backward Pass</td>
+      <td>Minibatch Reflection（默认 8）</td>
+      <td>避免单轨迹过拟合</td>
+    </tr>
+    <tr>
+      <td>③ Learning Rate Constraint</td>
+      <td>Bounded Text Updates（Cosine 调度）</td>
+      <td>避免灾难性遗忘</td>
+    </tr>
+    <tr>
+      <td>④ Validation Gate + Rejected-Edit Buffer</td>
+      <td>严格大于当前最优（平局拒绝）</td>
+      <td>Propose-and-Test 闭环</td>
+    </tr>
+    <tr>
+      <td>⑤ Slow / Meta Update</td>
+      <td>Momentum 机制 + Meta-Skill</td>
+      <td>长期趋势 + 元学习</td>
+    </tr>
+    <tr>
+      <td>⑥ Harness-Agnostic Deployment</td>
+      <td>适配 Chat / Codex / Claude Code</td>
+      <td>工程落地</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>极简产物</strong>：<code class="language-plaintext highlighter-rouge">best_skill.md</code>（300~2000 Tokens，纯文本，零依赖，跨模型/跨 harness/跨任务迁移）</p>
+
+<p><strong>局限</strong>：只自进化调优了单 Skill 文档，References / Resources 等其他文件没考虑</p>
+
+<h3 id="六可验证性--agent-飞轮核心洞察">六、可验证性 = Agent 飞轮（核心洞察）</h3>
+
+<blockquote>
+  <p>Claude / GPT / Qwen 2026 年迭代越来越快的核心原因 = <strong>模型效果衡量越来越可验证</strong>（AI Coding 场景代码能否跑通、单元测试是否通过）</p>
+</blockquote>
+
+<p><strong>Agent 飞轮</strong>：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>Agent 产生轨迹
+  ↓
+自动化验证给出即时反馈
+  ↓
+根据反馈快速调整 Skill
+  ↓
+新 Skill 再次进入验证循环
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>只有验证闭环打通，<strong>迭代速度才能从”人力驱动”转变为”算力驱动”</strong>——这是质的飞跃</p>
+
+<h3 id="七三大范式对比10-维度">七、三大范式对比（10 维度）</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>对比项</th>
+      <th>Trace2Skill</th>
+      <th>EvoSkill</th>
+      <th>SkillOpt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>优化对象</td>
+      <td>单 SKILL.md + Reference</td>
+      <td>可多 Skill</td>
+      <td>单 best_skill.md</td>
+    </tr>
+    <tr>
+      <td>数据采集</td>
+      <td>一次性全量</td>
+      <td>每轮 batch</td>
+      <td>每步 batch (40)</td>
+    </tr>
+    <tr>
+      <td>更新粒度</td>
+      <td>并行 patch + 层次合并</td>
+      <td>每轮一个新 Skill</td>
+      <td>bounded 原子编辑</td>
+    </tr>
+    <tr>
+      <td>验证过程</td>
+      <td>格式校验 + 冲突检测</td>
+      <td>验证集超过前沿最弱</td>
+      <td>严格大于当前最优</td>
+    </tr>
+    <tr>
+      <td>失败利用</td>
+      <td>Multi-turn A− 找根因</td>
+      <td>Proposer 找根因</td>
+      <td>minibatch 反思 + 负反馈</td>
+    </tr>
+    <tr>
+      <td>学习率</td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>动量</td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>元学习</td>
+      <td>❌</td>
+      <td>反馈历史 H</td>
+      <td>Meta-Skill</td>
+    </tr>
+    <tr>
+      <td>Harness</td>
+      <td>ReAct</td>
+      <td>底座 Harness</td>
+      <td>Harness 无关</td>
+    </tr>
+    <tr>
+      <td>模型</td>
+      <td>同模型三角色</td>
+      <td>同模型三角色</td>
+      <td>优化器/目标模型分离</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>三大学派</strong>：</p>
+<ul>
+  <li><strong>Trace2Skill：归纳推理学派</strong>（类比：专家开会合并意见）</li>
+  <li><strong>EvoSkill：自验证选择学派</strong>（类比：自然选择进化）</li>
+  <li><strong>SkillOpt：训练优化器学派</strong>（类比：带 momentum + early stopping 的 SGD）</li>
+</ul>
+
+<h3 id="八选型建议混合策略">八、选型建议（混合策略）</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>场景特征</th>
+      <th>推荐方案</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>简单 + 快速落地 + 规律明显</td>
+      <td><strong>Trace2Skill</strong> 性价比最高</td>
+    </tr>
+    <tr>
+      <td>效果有明确要求 + 完善自动化评估</td>
+      <td><strong>EvoSkill / SkillOpt</strong> 更适合</td>
+    </tr>
+    <tr>
+      <td>复杂业务 / 长期演进</td>
+      <td><strong>混合策略</strong>：Trace2Skill 快速生成基线 + EvoSkill 持续扩充技能库 + SkillOpt 精修核心瓶颈</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>整体来看，引入验证机制的方案会优于纯归纳方案</strong>——因为验证会引导 Agent 不断走向进化的正确方向。但同时，随着方法复杂度的提升，计算成本和迭代周期也在显著增加。</p>
+
+<h2 id="对-seetong-团队的可借鉴动作">对 Seetong 团队的可借鉴动作</h2>
+
+<p>虽然 Seetong 不是直接做 Agent 框架，但 Skill 自进化思路可借鉴到：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>借鉴点</th>
+      <th>具体落地</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>把团队”调 prompt 经验”沉淀为 Skill</strong></td>
+      <td>不停留在”群里贴一个 prompt”，而是写进 skill 库，有触发场景 / 验证方式 / 失败模式</td>
+    </tr>
+    <tr>
+      <td><strong>收集”修 bug / 处理报警”轨迹</strong></td>
+      <td>类似 Trace2Skill 思路：把重复出现的问题处理过程做归纳，下次 Agent 能直接调</td>
+    </tr>
+    <tr>
+      <td><strong>核心脚本的”最佳实践”用 SkillOpt 思路打磨</strong></td>
+      <td>bounded 编辑（每次只动一点点）+ 验证（CI 通过 + 灰度切流）+ 负反馈记录（被拒的修改作为”反面教材”）</td>
+    </tr>
+    <tr>
+      <td><strong>建立内部评测体系</strong></td>
+      <td>AI Coding 类（Seetong 客户端、SDK 改动）天然可验证（编译通过 / 单元测试通过 / 截图比对）—— 用好这一点</td>
+    </tr>
+    <tr>
+      <td><strong>关键判断（spec / 边界 / 验证回路）做”可验证化”</strong></td>
+      <td>比如把”我们该不该给某个功能加新字段”从”PM 体感”变成”30 个用户样本的对照评测”</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="关键术语索引">关键术语索引</h2>
+
+<ul>
+  <li><strong>Trace2Skill</strong>（阿里千问）：归纳法聚合式进化</li>
+  <li><strong>EvoSkill</strong>（Sentient Labs）：自验证自然选择</li>
+  <li><strong>SkillOpt</strong>（微软 + 高校）：训练范式 / Skill 即参数</li>
+  <li><strong>Frontier（前沿集合）</strong>：EvoSkill 核心算法，容量固定的精英池</li>
+  <li><strong>Rejected-Edit Buffer</strong>：SkillOpt 负反馈缓冲</li>
+  <li><strong>Meta-Skill</strong>：SkillOpt 仅优化器可见的元记忆</li>
+  <li><strong>best_skill.md</strong>：SkillOpt 极简产物（300~2000 Tokens）</li>
+  <li><strong>飞樰</strong>：本文作者，公众号”阿里妹”主理人</li>
+  <li><strong>Agent Skill 自进化</strong>：本文核心主题</li>
+</ul>
+
+<h2 id="写作引用建议">写作引用建议</h2>
+
+<ul>
+  <li>引用本篇时优先用：”Agent 进化从经验主义走向科学工程” / “Skill 即参数” / “可验证性 = Agent 飞轮” / “从人力驱动到算力驱动” / “前沿集合 = 容量固定的精英池” / “Trace2Skill = 归纳法 / EvoSkill = 自验证 / SkillOpt = 训练范式”</li>
+  <li>强关联引用：[[买了一样的AI为什么别家的比你的强]]（Skill 战略）/ [[Agent Skills 系统性综述]]（Skill 综述）/ [[从Prompt-Context到Harness-工程的三次进化与终局之战]]（Harness 思想延伸到 Skill 训练）/ [[Notion-spec-driven-AI-workflow]]（spec-driven 是 Skill 自进化的对照）</li>
+</ul>

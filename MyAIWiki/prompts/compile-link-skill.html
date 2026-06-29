@@ -1,0 +1,262 @@
+<h1 id="compile-link--链接编译知识库统一入口">/compile-link — 链接编译知识库统一入口</h1>
+
+<blockquote>
+  <p>设计来源：Karpathy LLM Wiki Step 8 “Build a skill so you never repeat yourself”——任何重复 2 次的任务做 Skill。</p>
+</blockquote>
+
+<h2 id="触发条件">触发条件</h2>
+
+<ul>
+  <li>用户发来一个 URL（微信公众号 / X 推文 / 任意文章）</li>
+  <li>伴随”编译知识库”、”存档”、”入知识库”、”加 wiki”、”做 digest”等关键词</li>
+  <li>或单独一句 <code class="language-plaintext highlighter-rouge">/compile https://...</code></li>
+</ul>
+
+<p><strong>反例（不该触发）</strong>：</p>
+<ul>
+  <li>用户发 URL 但说”看看这篇写什么”——这是<strong>阅读</strong>，不是编译</li>
+  <li>用户发 URL 但说”对比一下 X 和 Y”——这是<strong>研究</strong>，不是编译</li>
+  <li>用户发自己的草稿——这是<strong>修改</strong>，不是编译</li>
+</ul>
+
+<h2 id="输入规范">输入规范</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>字段</th>
+      <th>必填</th>
+      <th>默认</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>URL</td>
+      <td>✅</td>
+      <td>—</td>
+      <td>要编译的文章链接</td>
+    </tr>
+    <tr>
+      <td>分类</td>
+      <td>⚠️</td>
+      <td>02-ai-coding</td>
+      <td>wiki 分类（01-ai-agents / 02-ai-coding / 03-productivity / 04-app-dev / 05-content-creation / 06-ai-tech / 07-rag-systems）</td>
+    </tr>
+    <tr>
+      <td>是否短链</td>
+      <td>⚠️</td>
+      <td>否</td>
+      <td>X 推文等短内容标 true，节省 digest 篇幅</td>
+    </tr>
+    <tr>
+      <td>force</td>
+      <td>⚠️</td>
+      <td>否</td>
+      <td>已存在文件时是否覆盖</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="5-步流程">5 步流程</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>fetch → raw → digest → wiki → index+log
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="step-1fetch抓取原文">Step 1：fetch（抓取原文）</h3>
+
+<ul>
+  <li>微信公众号 / 知乎 / 一般博客 → Playwright CDP 抓（curl 会被反爬）</li>
+  <li>X 推文 → Playwright CDP 抓（X 是 SPA + 反爬严格）</li>
+  <li>已经保存过的 raw 文件 → 跳过</li>
+</ul>
+
+<p><strong>输出</strong>：<code class="language-plaintext highlighter-rouge">raw/{slug}.md</code>（完整原文 + 元信息 + 标签行）</p>
+
+<h3 id="step-2raw原文存档">Step 2：raw（原文存档）</h3>
+
+<ul>
+  <li>文件命名：<code class="language-plaintext highlighter-rouge">raw/{YYYY-MM-DD}-{slug}.md</code>（<code class="language-plaintext highlighter-rouge">{slug}</code> = URL 主题 lowercase-with-hyphen）</li>
+  <li>包含：原文链接、作者、发布日期、平台、关键数据、完整正文</li>
+  <li>底部添加：<code class="language-plaintext highlighter-rouge">标签：#主题/xxx #手法/xxx #场景/xxx #节点/xxx</code></li>
+</ul>
+
+<h3 id="step-3digest拆解版">Step 3：digest（拆解版）</h3>
+
+<ul>
+  <li>文件命名：<code class="language-plaintext highlighter-rouge">raw/{YYYY-MM-DD}-{slug}-digest.md</code></li>
+  <li>包含：1 句话总结 + 5 条核心观点 + 关键参数表 + 5 句核心金句 + 5 个对 Seetong/MyAIWiki 借鉴动作 + 关联图谱</li>
+  <li><strong>透明玻璃自检</strong>：≤4K 字节、6-10 节点、≤5 个 H2</li>
+</ul>
+
+<h3 id="step-4wiki知识库页面">Step 4：wiki（知识库页面）</h3>
+
+<ul>
+  <li>文件命名：<code class="language-plaintext highlighter-rouge">wiki/{分类}/{slug}.md</code></li>
+  <li><strong>遵循 <code class="language-plaintext highlighter-rouge">prompts/wiki-template.md</code> 新结构</strong>（YAML frontmatter + 知识节点 + 关联图谱 + 正文要点 + 备注）</li>
+  <li>同时建 <code class="language-plaintext highlighter-rouge">wiki/{分类}/{slug}-digest.md</code>（速读版，≤4K 字节）</li>
+  <li><strong>透明玻璃自检</strong>：≤8K 字节、6-10 节点、≤5 个 H2</li>
+</ul>
+
+<h3 id="step-5index--log索引同步">Step 5：index + log（索引同步）</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">wiki/{分类}/index.md</code> 追加新页面链接（在合适分类区，<strong>不</strong>简单 append 到末尾）</li>
+  <li><code class="language-plaintext highlighter-rouge">wiki/master-index.md</code> 追加到「最近更新」区顶部 + 对应分类区</li>
+  <li><code class="language-plaintext highlighter-rouge">log.md</code> 追加 ingest 记录（按现有格式：操作类型/标题/作者/链接/数据/位置/命题/节点/金句/Seetong 借鉴/关联/待补证/透明玻璃自检/标签）</li>
+</ul>
+
+<h2 id="验证清单每跑一次-compile-必过">验证清单（每跑一次 /compile 必过）</h2>
+
+<h3 id="输入">输入</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />URL 可访问（不是 404 / 私域）</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />分类目录存在</li>
+</ul>
+
+<h3 id="raw">raw</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />原文完整（不是片段、不是摘要）</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />包含链接、作者、日期、平台元信息</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />底部有标签行</li>
+</ul>
+
+<h3 id="digest">digest</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />1 句话总结讲清”为什么值得长期保留”</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />5 核心观点 / 5 金句 / 5 借鉴动作 / 关联图谱完整</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />≤4K 字节</li>
+</ul>
+
+<h3 id="wiki">wiki</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />YAML frontmatter 完整（title / category / tags / nodes / date / source）</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">nodes</code> 5-10 条，每条独立可 grep</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" /><code class="language-plaintext highlighter-rouge">links</code> ≥ 3 个（上游/同级/下游各 1+）</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />关联图谱有上游/下游/同级三段</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />≤8K 字节</li>
+</ul>
+
+<h3 id="index--log">index / log</h3>
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />分类 index.md 已追加</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />master-index.md 已追加（最近更新 + 分类区）</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />log.md 已追加（按格式）</li>
+</ul>
+
+<h2 id="反合理化不偷懒借口表">反合理化（不偷懒借口表）</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>偷懒借口</th>
+      <th>反驳</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>“原文很短，不需要 digest/wiki”</td>
+      <td>短文也要走完整流程——重点是分类+节点+关联，不是字数</td>
+    </tr>
+    <tr>
+      <td>“原文是英文，跳过中文 digest”</td>
+      <td>英文也编译中文 digest——这是中英对照知识库的价值</td>
+    </tr>
+    <tr>
+      <td>“已有相关页面，跳过编译”</td>
+      <td>已有页面要更新（增量添加）不是跳过；新页面要建（去重差异化）</td>
+    </tr>
+    <tr>
+      <td>“抓取失败，就用用户给的文字版”</td>
+      <td>文字版也要打 raw 标签 + 来源说明，不直接当原文</td>
+    </tr>
+    <tr>
+      <td>“AI 跑全套质量不稳，留人工”</td>
+      <td>这违背”AI 跑全套”约定；如确实质量差，先跑完再二次精修</td>
+    </tr>
+    <tr>
+      <td>“分类不确定，先放 02-ai-coding”</td>
+      <td>不确定就 AskUserQuestion；不要默认</td>
+    </tr>
+    <tr>
+      <td>“8K 字节超了，先这样”</td>
+      <td>重新压缩到 8K 内——内容密度比字数重要</td>
+    </tr>
+    <tr>
+      <td>“5 个借鉴动作想不出来，跳过”</td>
+      <td>想不出 5 个就做 3 个真实的；不要凑 5 个假的</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="与现有组件的关系">与现有组件的关系</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>组件</th>
+      <th>角色</th>
+      <th>/compile 怎么用</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scripts/compile_wechat_to_wiki.py</code></td>
+      <td>自动出 raw/digest/wiki 草稿</td>
+      <td>Step 1-4 内部调用</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scripts/build_wechat_raw.py</code></td>
+      <td>单步抓取微信文章</td>
+      <td>Step 1 内部调用</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scripts/apply_wechat_polish_output.py</code></td>
+      <td>把精修结果回写文件</td>
+      <td>Step 3-4 精修环节</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">prompts/wiki-template.md</code></td>
+      <td>新文章结构模板</td>
+      <td>Step 4 严格遵循</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">prompts/wechat-compile-polish.md</code></td>
+      <td>精修提示词</td>
+      <td>Step 3-4 精修环节</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">scripts/wiki-query.py</code></td>
+      <td>查询/验证工具</td>
+      <td>Step 5 验证 frontmatter/links</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">prompts/bug-fix.md</code></td>
+      <td>另一个独立 Skill</td>
+      <td>与本 Skill <strong>无关</strong>，不串</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="快速测试">快速测试</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre><span class="c"># 跑一次完整的 /compile</span>
+/compile https://mp.weixin.qq.com/s/xxx 01-ai-agents
+
+<span class="c"># 跑完后用户应该看到：</span>
+<span class="c"># - 5 个新文件（raw + raw-digest + wiki + wiki-digest）</span>
+<span class="c"># - 3 个索引文件被更新（分类 index + master-index + log）</span>
+<span class="c"># - 一份"完成报告"（列出所有文件路径 + 透明玻璃自检结果）</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<hr />
+
+<p><strong>最后更新</strong>：2026-06-22 ｜ <strong>设计来源</strong>：<code class="language-plaintext highlighter-rouge">raw/2026-06-22-undefinedKi-AI-Second-Brain-10-Step-Guide-digest.md</code> Step 8 + [[Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] 反合理化节</p>

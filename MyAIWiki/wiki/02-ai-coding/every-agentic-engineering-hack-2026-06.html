@@ -1,0 +1,398 @@
+<h1 id="matt-van-horn-的-22-个-agentic-engineering-hacks">Matt Van Horn 的 22 个 Agentic Engineering Hacks</h1>
+
+<blockquote>
+  <p>来源：Matt Van Horn @mvanhorn 2026-06-03 长文（<strong>82万 浏览 / 2,768 喜欢 / 8,511 书签</strong>，2026-06-07 抓取）
+原文：https://x.com/mvanhorn/status/2061877533885473181
+关联：[[claude-code-dynamic-workflows]] · [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] · [[Codex才是最适合普通人的顶级牛马-Agent]] · [[every-agentic-engineering-hack-2026-06-digest|速读摘要]]</p>
+</blockquote>
+
+<hr />
+
+<h2 id="一句话主张">一句话主张</h2>
+
+<blockquote>
+  <p><strong>No IDE. Just plan.md files and voice.</strong></p>
+</blockquote>
+
+<p>Agentic Engineering 的全部工作流是：语音输入 → plan.md 沉淀 → agent 执行。3 月那篇 91.3万 浏览的 “Every Claude Code Hack” 是 1.0 版，这是 6 月 2.0 版。</p>
+
+<hr />
+
+<h2 id="5-大核心原则">5 大核心原则</h2>
+
+<h3 id="1-plan-是缰绳不是读物">1. Plan 是缰绳，不是读物</h3>
+<ul>
+  <li>想到 idea 立刻 <code class="language-plaintext highlighter-rouge">/ce-plan</code>，不是”想想”，不是”先写代码”</li>
+  <li><strong>Make the plan. Trust the plan. Don’t read the plan.</strong></li>
+  <li>读 300 行 markdown 是 agent 的作业；你 inline 问 “TLDR?” / “eli5 this plan”</li>
+</ul>
+
+<h3 id="2-思考进计划执行机械化">2. 思考进计划，执行机械化</h3>
+<ul>
+  <li>传统 dev = 80% 编码 + 20% 计划</li>
+  <li>Agentic Engineering = <strong>20% 编码 + 80% 计划</strong></li>
+  <li>这是开发者角色的根本翻转：写代码的人 → 思考的人</li>
+</ul>
+
+<h3 id="3-research--plan--build-标准循环">3. Research → Plan → Build 标准循环</h3>
+<ul>
+  <li>任何决策前先 <code class="language-plaintext highlighter-rouge">/last30days &lt;topic&gt;</code> 跑研究</li>
+  <li>再 <code class="language-plaintext highlighter-rouge">/ce-plan</code> 落地到结构化 plan.md</li>
+  <li>再 <code class="language-plaintext highlighter-rouge">/ce-work</code> 执行</li>
+  <li><strong>从”凭印象选库”到”凭社区共识选库”</strong></li>
+</ul>
+
+<h3 id="4-多-session-并发--human-signal">4. 多 session 并发 + Human Signal</h3>
+<ul>
+  <li>4-6 个 cmux tab 并行跑不同任务</li>
+  <li>Agent 提供体量，<strong>人提供品味、方向、react-and-redirect loop</strong></li>
+  <li>“Option two is closer but use the language from option one” 这种判断才是价值</li>
+  <li><strong>Be the taste. Let them be the hands.</strong></li>
+</ul>
+
+<h3 id="5-现实警告ai-psychosis">5. 现实警告：AI Psychosis</h3>
+<ul>
+  <li>Agentic Engineering 是”最伟大的电子游戏”，loop 太爽</li>
+  <li>朋友们做了一堆项目没有用户，<strong>消失的是 build 之外的人</strong></li>
+  <li>Take breaks. Talk to loved ones. Build for someone.</li>
+</ul>
+
+<hr />
+
+<h2 id="22-个-hack-速查表">22 个 Hack 速查表</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Hack</th>
+      <th>工具 / 命令</th>
+      <th>一句话</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>CE plan.md 第一时间</td>
+      <td><code class="language-plaintext highlighter-rouge">/ce-plan</code> <code class="language-plaintext highlighter-rouge">/ce-work</code> <code class="language-plaintext highlighter-rouge">/ce-brainstorm</code></td>
+      <td>想到 idea 立刻出 plan，<strong>80% 计划 + 20% 编码</strong></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Don’t Read the plan.md</td>
+      <td>inline “TLDR?” / “eli5”</td>
+      <td>计划是给 agent 的缰绳，<strong>别坐下来读 300 行</strong></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Plan for the Plan</td>
+      <td><code class="language-plaintext highlighter-rouge">/ce-plan make a plan for the plan</code></td>
+      <td><strong>防止 LLM 偷懒的万能招</strong>：先 plan 再 plan</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Get Voice-Pilled</td>
+      <td>Monologue / Wispr Flow / Apple dictation</td>
+      <td><strong>语音转 LLM 不需要完美转写</strong></td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Lots of Tabs in cmux</td>
+      <td>cmux</td>
+      <td>4-6 tab 并行，<strong>每个跑不同任务</strong></td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Terminal 默认进 Claude</td>
+      <td>Ghostty config + launcher.sh</td>
+      <td><strong>新 tab 直接进 Claude Code</strong></td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Remote Control + Email</td>
+      <td>Claude mobile + AgentMail</td>
+      <td>Claude 可以收邮件触发新 session</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Skip Permissions YOLO</td>
+      <td><code class="language-plaintext highlighter-rouge">skipDangerousModePermissionPrompt: true</code> + 声音 hook</td>
+      <td><strong>It’s my computer. YOLO.</strong></td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Codex 不开 CLI</td>
+      <td>Codex IDE 扩展 + <code class="language-plaintext highlighter-rouge">/ce-work --codex</code></td>
+      <td><strong>Claude plans, Codex builds</strong></td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>last30days 跑研究</td>
+      <td><code class="language-plaintext highlighter-rouge">/last30days &lt;topic&gt;</code></td>
+      <td><strong>决策前先跑多源新鲜研究</strong>（26K stars）</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Granola Raw Transcript</td>
+      <td>Granola + Claude</td>
+      <td><strong>整段生 transcript 丢给 LLM</strong>，不先总结</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Human Signal</td>
+      <td>你的 judgment</td>
+      <td><strong>你是品味、方向、react-and-redirect loop</strong></td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>HyperFrames 做视频</td>
+      <td>HyperFrames + agent</td>
+      <td><strong>视频 HTML 化，agent 写 script.md 渲染 MP4</strong></td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>Notes as Agent KB</td>
+      <td>Bear / Obsidian / gbrain / supermemory</td>
+      <td><strong>选有 CLI/API 的笔记，让 agent 能读</strong></td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>Mac mini 远程工作</td>
+      <td>Mosh + Tmux + Hermes + OpenClaw</td>
+      <td><strong>Mosh 远端不卡，Tmux 飞机不掉</strong></td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>Proof 给人看 plan</td>
+      <td>Proof</td>
+      <td><strong>plan.md 丢进 Proof，非终端人也能评论</strong></td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>Write Your Own Skills</td>
+      <td>“look at CE skill and help me make one like this”</td>
+      <td><strong>做超过 2 次的事做成 skill</strong></td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>Contribute to OSS</td>
+      <td><code class="language-plaintext highlighter-rouge">/ce-plan</code> + <code class="language-plaintext highlighter-rouge">/ce-work</code> 循环</td>
+      <td><strong>用同一套循环提 PR 给 Python/Go/Vercel Agent Browser</strong></td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>M5 Max + 64GB</td>
+      <td>M5 Max 笔记本</td>
+      <td><strong>6 session 起步配置</strong>，Anker 充电宝救命</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>Printing Press + Agent Cookie</td>
+      <td>printingpress.dev</td>
+      <td><strong>把现实服务包成 agent-native CLI</strong>，自动登录</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>AI Psychosis</td>
+      <td>mindset</td>
+      <td><strong>陷阱是沉迷 build 失去人，不是空 launch</strong></td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>本文写作方式</td>
+      <td>cmux + Monologue + Proof</td>
+      <td><strong>No IDE. No typing code. Talk, plan, build.</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="关键配置代码开箱即用">关键配置代码（开箱即用）</h2>
+
+<h3 id="claudesettingsjson--yolo--声音-hook">~/.claude/settings.json — YOLO + 声音 hook</h3>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"permissions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"allow"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"WebSearch"</span><span class="p">,</span><span class="w"> </span><span class="s2">"WebFetch"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Bash"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Read"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Write"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Edit"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Glob"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Grep"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Task"</span><span class="p">,</span><span class="w"> </span><span class="s2">"TodoWrite"</span><span class="p">],</span><span class="w">
+    </span><span class="nl">"deny"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"defaultMode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bypassPermissions"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"skipDangerousModePermissionPrompt"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"remoteControlAtStartup"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre><span class="p">{</span><span class="w">
+  </span><span class="nl">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"Stop"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"hooks"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w"> </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"command"</span><span class="p">,</span><span class="w"> </span><span class="nl">"command"</span><span class="p">:</span><span class="w"> </span><span class="s2">"afplay /System/Library/Sounds/Blow.aiff"</span><span class="w"> </span><span class="p">}]</span><span class="w"> </span><span class="p">}]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="codexconfigtoml--codex-yolo">~/.codex/config.toml — Codex YOLO</h3>
+<div class="language-toml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="n">approval_policy</span> <span class="o">=</span><span class="w"> </span><span class="s">"never"</span>
+<span class="n">sandbox_mode</span> <span class="o">=</span><span class="w"> </span><span class="s">"danger-full-access"</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="ghostty--claude-launcher">Ghostty + Claude launcher</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="c"># ~/.local/bin/claude-launcher.sh</span>
+claude <span class="nt">--dangerously-skip-permissions</span>
+<span class="c"># when Claude exits: print short note, drop into login zsh</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<hr />
+
+<h2 id="工具栈生态速查">工具栈生态速查</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>工具</th>
+      <th>角色</th>
+      <th>关键能力</th>
+      <th>Stars</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Compound Engineering</strong></td>
+      <td>工作流核心</td>
+      <td><code class="language-plaintext highlighter-rouge">/ce-plan</code> <code class="language-plaintext highlighter-rouge">/ce-work</code> <code class="language-plaintext highlighter-rouge">/ce-brainstorm</code></td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td><strong>last30days</strong></td>
+      <td>研究前置</td>
+      <td>多源并行抓 30 天新鲜内容</td>
+      <td>27K</td>
+    </tr>
+    <tr>
+      <td><strong>Printing Press</strong></td>
+      <td>CLI 工厂</td>
+      <td>任意服务 → agent-native CLI</td>
+      <td>3.7K</td>
+    </tr>
+    <tr>
+      <td><strong>Agent Cookie</strong></td>
+      <td>浏览器 session 同步</td>
+      <td>免密码登录，CLIs 直接以你身份行事</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td><strong>AgentMail</strong></td>
+      <td>Claude 收件箱</td>
+      <td>email → 新 session（WebSocket + DKIM/SPF）</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td><strong>cmux</strong></td>
+      <td>终端多 tab</td>
+      <td>4-6 个独立 session</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td><strong>Monologue / Wispr Flow</strong></td>
+      <td>语音转 LLM</td>
+      <td>Mac 端语音输入任意 app</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td><strong>Proof</strong></td>
+      <td>计划评审</td>
+      <td>plan.md → 可分享可评论的文档</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td><strong>HyperFrames</strong></td>
+      <td>视频生成</td>
+      <td>视频 HTML 化，agent 渲染 MP4</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td><strong>Hermes / OpenClaw</strong></td>
+      <td>自主 agent 生态</td>
+      <td>远程自主工作</td>
+      <td>–</td>
+    </tr>
+    <tr>
+      <td><strong>Mosh + Tmux</strong></td>
+      <td>远程连接</td>
+      <td>飞机/差旅不掉 session</td>
+      <td>–</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h2 id="反直觉的金句">反直觉的金句</h2>
+
+<blockquote>
+  <p>“It’s also the single best trick I know for making an LLM not lazy. Ask for the deliverable directly and it cuts corners. Ask it to first plan how it will produce the deliverable, then execute that plan, and it does the deep version every time.”</p>
+
+  <p>—— 防止 LLM 偷懒的万能招：Plan for the Plan</p>
+</blockquote>
+
+<blockquote>
+  <p>“The reason a plan gets better every time is that Claude has access to every prior plan I’ve written. Compounding context.”</p>
+
+  <p>—— 计划 + 笔记 = Compounding context</p>
+</blockquote>
+
+<blockquote>
+  <p>“Not ‘AI writes my code.’ Agentic Engineering does the errands, watches the game, warms the car, and books the trip, while I’m doing something else.”</p>
+
+  <p>—— AI Coding 的下一站：AI Errands</p>
+</blockquote>
+
+<blockquote>
+  <p>“The trap isn’t the empty launch, it’s vanishing into the build and losing the people around you.”</p>
+
+  <p>—— AI Psychosis 的真正危险</p>
+</blockquote>
+
+<hr />
+
+<h2 id="关联阅读">关联阅读</h2>
+
+<ul>
+  <li>[[claude-code-dynamic-workflows]] — Anthropic 官方 dynamic workflow，与本文形成”官方 vs 一线用户”互文</li>
+  <li>[[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] — Harness 哲学的基础理论</li>
+  <li>[[从Prompt-Context到Harness-工程的三次进化与终局之战]] — 三层框架</li>
+  <li>[[Codex才是最适合普通人的顶级牛马-Agent]] — Codex 工作台视角</li>
+  <li>[[ClaudeCode用到这个程度-我算是开眼了]] — Claude Code 实战汇编</li>
+  <li>[[vibe-coding]] — Vibe Coding 基础概念</li>
+  <li>[[oh-my-codex]] — Codex 30 个专家团队</li>
+  <li>[[来自Codex官方团队的分享-如何把Codex用到极致]] — Codex 官方用法</li>
+  <li>[[Codex配置优化清单-从Harness视角]] — Codex harness 改造</li>
+  <li>[[claude-code-large-codebase-best-practices]] — 大型代码库实践</li>
+  <li>[[谷歌开源agent-skills]] — Agent Skills 纪律包</li>
+</ul>
+
+<hr />
+
+<h2 id="标签">标签</h2>
+
+<p>#主题/AI-Coding #主题/AI-Agent #主题/效率 #主题/APP研发
+#场景/技术博客 #场景/落地案例
+#手法/案例驱动 #手法/权威背书 #手法/对比冲突 #手法/焦虑共鸣</p>

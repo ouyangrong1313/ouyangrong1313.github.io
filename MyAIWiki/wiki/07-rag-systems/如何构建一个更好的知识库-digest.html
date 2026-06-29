@@ -1,0 +1,223 @@
+<h1 id="如何构建一个更好的知识库---digest">如何构建一个更”好”的知识库 - Digest</h1>
+
+<ul>
+  <li>原文链接:https://mp.weixin.qq.com/s/77n3CmJ7qzyeEiXeFCjqtA</li>
+  <li>来源:微信公众号 / 阿里 idealab 团队</li>
+  <li>获取时间:2026-06-11</li>
+</ul>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<p><strong>“好”的知识库 = RAGAS 三维度(检索相关性 + 生成忠实度 + 答案相关性)全面达标 + 8 步构建流程(Load/Split/Embed/Store + Query/Retrieve/Rerank/Generate)每环节可调 + AutoRAG 等自动化优化解决模块组合爆炸;RAG vs Long Context 不是二选一而是”RAG 粗筛 + Long Context 精读”的混合方案</strong>。</p>
+
+<h2 id="核心观点-5-条">核心观点 5 条</h2>
+
+<ol>
+  <li>
+    <p><strong>RAG 的本质是”参数化记忆 + 非参数化记忆”双引擎</strong> —— 不是替代 LLM,而是补 LLM 的非参数记忆空白(2020 Facebook 论文框架至今未变)</p>
+  </li>
+  <li>
+    <p><strong>“好”的判断必须先有标准</strong> —— RAGAS 框架提供三维度评估,三者必须分别评估才能定位根因(失败往往由检索 + 生成共同造成)</p>
+  </li>
+  <li>
+    <p><strong>语义相似 ≠ 对 LLM 有用</strong> —— 传统 IR 指标(Precision/Recall/F1)已不够,需要 ICLERB 端到端评估”检索 → 注入 → 评估 → 反推”</p>
+  </li>
+  <li>
+    <p><strong>构建流程标准化为 8 步</strong> —— 离线 4 步(Load/Split/Embed/Store)+ 在线 4 步(Query/Retrieve/Rerank/Generate),每步都有明确可配置参数</p>
+  </li>
+  <li>
+    <p><strong>RAG vs Long Context 不是二选一</strong> —— 数据量 &lt; 50K tokens + 低更新频率用 Long Context;数据量大 + 更新频繁 + 需要精确召回用 RAG;<strong>混合方案 = RAG 粗筛 + Long Context 精读</strong></p>
+  </li>
+</ol>
+
+<h2 id="ragas-三维度速查">RAGAS 三维度速查</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>维度</th>
+      <th>核心问题</th>
+      <th>计算要点</th>
+      <th>reference-free</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Context Precision</strong></td>
+      <td>相关文档是否排在前面</td>
+      <td>排序质量</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td><strong>Context Recall</strong></td>
+      <td>应被召回内容是否都召回了</td>
+      <td>claims 归因</td>
+      <td>❌ 需参考答案</td>
+    </tr>
+    <tr>
+      <td><strong>Faithfulness</strong></td>
+      <td>答案是否忠于上下文</td>
+      <td>LLM 拆 claims → 验证 → 占比</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td><strong>Answer Relevance</strong></td>
+      <td>答案是否回应了问题</td>
+      <td>反向生成问题比对相似度</td>
+      <td>✅</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="8-步构建流程速查">8 步构建流程速查</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>离线索引:Load → Split → Embed → Store
+在线查询:Query → Retrieve → Rerank → Generate
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<table>
+  <thead>
+    <tr>
+      <th>阶段</th>
+      <th>步骤</th>
+      <th>关键参数 / 选型</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>离线</td>
+      <td>Load</td>
+      <td>数据源:odps / 语雀 / 钉钉 / 本地</td>
+    </tr>
+    <tr>
+      <td>离线</td>
+      <td>Split</td>
+      <td>chunk_size 256-1024 tokens;chunk_overlap 10%-20%</td>
+    </tr>
+    <tr>
+      <td>离线</td>
+      <td>Embed</td>
+      <td>Embedding 模型选型(多模型可选)</td>
+    </tr>
+    <tr>
+      <td>离线</td>
+      <td>Store</td>
+      <td>向量数据库(ANN 索引 + 元数据)</td>
+    </tr>
+    <tr>
+      <td>在线</td>
+      <td>Query</td>
+      <td>预处理 + 增强(HyDE / Late Chunking / 意图驱动)</td>
+    </tr>
+    <tr>
+      <td>在线</td>
+      <td>Retrieve</td>
+      <td>稠密 / 稀疏 / 混合</td>
+    </tr>
+    <tr>
+      <td>在线</td>
+      <td>Rerank</td>
+      <td>Cross-Encoder 精排</td>
+    </tr>
+    <tr>
+      <td>在线</td>
+      <td>Generate</td>
+      <td>上下文 + 用户问题 → LLM → 答案</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="前沿架构-3-案例">前沿架构 3 案例</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>案例</th>
+      <th>核心思路</th>
+      <th>适用场景</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>AutoRAG</strong></td>
+      <td>自动化 RAG Pipeline 优化</td>
+      <td>特定领域数据集优化 + 缺乏调优经验</td>
+    </tr>
+    <tr>
+      <td><strong>QuIM-RAG</strong></td>
+      <td>问题倒排索引匹配</td>
+      <td>(原文未展开)</td>
+    </tr>
+    <tr>
+      <td><strong>OpenViking</strong></td>
+      <td>文件系统范式</td>
+      <td>(原文摘要提及但正文未展开)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="5-个金句">5 个金句</h2>
+
+<ul>
+  <li>
+    <blockquote>
+      <p>“知识库的核心接口,就是上传和召回。不同版本和理论,就是召回的内容和排序的区别。”</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>“RAG 系统的失败往往是检索和生成环节共同造成的,因此必须分别评估,才能定位问题根因。”</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>“传统 IR 指标基于语义相似度评估检索质量,但在 RAG 场景下存在一个核心问题:<strong>语义相似 ≠ 对 LLM 有用</strong>。”</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>“对用户原始查询进行预处理和增强……最为简单的方式就是交给大模型自己来。<strong>充分信任基模的能力</strong>。”</p>
+    </blockquote>
+  </li>
+  <li>
+    <blockquote>
+      <p>(对 RAG vs Long Context 的混合方案)”RAG 粗筛 + Long Context 精读”</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="3-个反直觉点">3 个反直觉点</h2>
+
+<ol>
+  <li><strong>Context Recall 不是完全 reference-free</strong> —— 需要参考答案才能算,所以构建完整 RAGAS 评估还是要有人工标注</li>
+  <li><strong>F1 不是越大越好</strong> —— F1 是 Precision 和 Recall 的调和平均,差异大时偏向较小值</li>
+  <li><strong>嵌入 Long Context 不代表消灭 RAG</strong> —— Claude 200K、Gemini 1M+ 是扩展了适用边界,但没消灭 RAG 的精确召回优势;混合方案才是务实选择</li>
+</ol>
+
+<h2 id="5-个对-seetong-团队可借鉴动作">5 个对 Seetong 团队可借鉴动作</h2>
+
+<ol>
+  <li><strong>用 RAGAS 三维度做 Seetong 知识库体检</strong> —— 选 50 条 FAQ 跑三维度看短板</li>
+  <li><strong>chunk_size 实测校准</strong> —— Seetong_tps 模块 100-200 行/类可能需要更细粒度</li>
+  <li><strong>引入混合检索(BM25 + 向量)</strong> —— 协议名/错误码(1118/1119/-102)是关键词敏感,纯向量会漏</li>
+  <li><strong>Faithfulness 评估首选</strong> —— 检测幻觉是 RAG 最有价值的指标</li>
+  <li><strong>Cross-Encoder 重排序补救”初筛不准”</strong> —— 性价比最高的排序优化</li>
+</ol>
+
+<h2 id="关联">关联</h2>
+
+<ul>
+  <li>[[如何构建一个更好的知识库]] - 完整编译版</li>
+  <li>[[rag-fundamentals]] [[rag-vs-finetuning]] - RAG 基础</li>
+  <li>[[AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]] - RAG 演进全景</li>
+  <li>[[知识库分层编排-从RAG到Agent-native-KCL]] - 第 5 种范式「金字塔」</li>
+</ul>
+
+<h2 id="备注">备注</h2>
+
+<ul>
+  <li>原文摘要提到 Late Chunking、HyDE、Cross-Encoder、OpenViking 等多个前沿架构,但微信 HTML 抽取时<strong>部分内容未完整展开</strong></li>
+  <li>idealab 平台是阿里内网工具,外部访问受限</li>
+</ul>

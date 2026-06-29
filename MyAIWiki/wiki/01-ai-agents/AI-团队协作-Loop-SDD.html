@@ -1,0 +1,71 @@
+<h1 id="ai-团队协作案例loop-隐藏前提--sdd-组织级补丁">AI 团队协作案例：Loop 隐藏前提 + SDD 组织级补丁</h1>
+
+<ul>
+  <li><strong>原文链接</strong>：https://mp.weixin.qq.com/s/WdO0XmvRCwtEhjrzq3gDwQ</li>
+  <li><strong>原始作者</strong>：叶小钗</li>
+  <li><strong>发布时间</strong>：2026-06（具体日期未标注）</li>
+  <li><strong>og:description</strong>：单人提效不等于团队提效，Loop Engineering 最大的问题：只说结果，不说前提</li>
+</ul>
+
+<h2 id="核心结论">核心结论</h2>
+
+<blockquote>
+  <p><strong>“个人提效 ≠ 团队提效”是叶小钗的核心命题。Loop Engineering 最大的问题是”只说结果，不说前提”——隐藏了 Skill 维护/最终验证/Token 成本三个前提。组织级补丁是 SDD（Spec-Driven Development），本质是构建规则和信息流让 Loop 在团队层级跑得起来；最终视角是 AI 进入组织的 4 层爬坡：个人工具→流程标准→组织协作→评价体系。</strong></p>
+</blockquote>
+
+<h2 id="知识节点8-个独立概念">知识节点（8 个独立概念）</h2>
+
+<ul>
+  <li><strong>场景</strong>：Loop 主题”团队协作/组织治理视角”——补完现有 6 视角偏单人/偏工程师的”组织落地”维度（叶小钗定位 = 批判 Loop + 推 SDD）</li>
+  <li><strong>个人提效 ≠ 团队提效</strong>：AI Coding 对个人效率”有效且夸张”，但团队层面不明显。技术负责人的真正课题是”团队要怎么和 AI 合作”，比 Coding 工具选型更重要。</li>
+  <li><strong>Loop 三个隐藏前提</strong>：①<strong>Skill 从哪来</strong>（谁来写/评审/更新）②<strong>谁做最终验证</strong>（Addy 承认”验证在你身上”但几十个 Loop 并行时人类审阅带宽怎么跟上）③<strong>Token 成本谁买单</strong>（总 token 是手动 Prompt 3-8 倍）。</li>
+  <li><strong>SDD 作为组织级补丁</strong>：不是”先写文档让 AI 写代码”那么粗暴——要解决 4 个根本问题：AI 应基于什么上下文/应恪守什么边界/有所为有所不为/生成结果用什么标准判断对错。<strong>vs TDD/BDD</strong>：TDD 偏实现/BDD 偏场景/SDD 偏上游。</li>
+  <li><strong>Spec 三核心角色</strong>：①<strong>上下文</strong>（业务目标/范围/历史约束/接口/数据/权限/状态定义）②<strong>协作契约</strong>（避免”产品说一套/研发理解一套/AI 生成一套/测试验另一套”）③<strong>质量基准</strong>（功能/边界/兼容/性能/合规/测试全过）。</li>
+  <li><strong>六段式 Spec 骨架</strong>：目标→ 范围→ 约束→ 决策→ 任务→ 验收。错误”新增订单页” vs 正确”为运营提供订单详情查看，便于定位履约问题”。</li>
+  <li><strong>SDD 三层次 + 任务复杂度分级</strong>：三层次 = Spec First（规格先行，起手式）/ Spec-Anchored（规格锚定，长期资产）/ Spec as Source（规格即源码，终极形态）。任务分级 = 小改动 Prompt / 中等需求 轻量规格 / 大型任务 完整规格。<strong>核心原则</strong>：成熟团队根据任务复杂度选规格强度，避免”所有需求都套完整规格 → AI 提效变文档负担”。</li>
+  <li><strong>SDD 四步落地 + AI 进入组织 4 层爬坡</strong>：四步 = ①选高价值场景切入点（新模块/遗留迁移/外部接入）②定义轻量 Spec 模板 ③建立项目级上下文（架构约束/目录规范/接口规范/权限模型/状态机/错误码/数据字典）④把 Spec 纳入研发流程，明确人工卡点。<strong>4 层爬坡</strong>：个人工具→流程标准→组织协作→评价体系。<strong>关键判断</strong>：这些问题不是 AI 带来的，组织原本就存在——只是过去被低效率掩盖，AI 进来后某些节点突然变快，旧系统不均衡被放大。</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+<ul>
+  <li>Addy Osmani《Loop Engineering》原文 + Boris Cherny 单人 259 PR 案例</li>
+  <li>AI 训练营学员 SDD 实践实录</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+<ul>
+  <li>Seetong 团队需求交付流程 / Bug Triage / 项目知识库 / PRD 模板 / AI 落地 roadmap（见借鉴动作）</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+<ul>
+  <li>[[Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解-把反馈循环放进工程现场]] / [[APPSO-Codex-Claude-Code-Loop-Engineering]] / [[Loop-Engineering-验证才是瓶颈]] / [[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]] / [[530万人-自循环-提示词]]：Loop 主题 6 视角</li>
+  <li>[[Multica-AI-Native-组织-人是最慢的节点]]：<strong>镜像</strong>——本文”个人提效 ≠ 团队提效”，Multica”人是组织瓶颈不是 Agent”</li>
+  <li>[[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]：3 关键设计 ≈ SDD “规格 + 边界 + 验收”</li>
+</ul>
+
+<p><strong>Loop 主题 7 视角闭环</strong> = 方法论原典（Addy）+ 中文工程实操（若飞）+ 产业信号（APPSO）+ 治理薄壳（陈进）+ 验证瓶颈（Samuel McDonnell）+ 大众教育版（Anatoli/深思圈）+ <strong>团队协作/组织治理（叶小钗，本文）</strong></p>
+
+<h2 id="正文要点5-条">正文要点（5 条）</h2>
+
+<ol>
+  <li><strong>Loop 原始叙事是”单人超级程序员借助多智能体放大自身产能”，不是”多人异构团队协作治理”</strong>——Boris Cherny 6 个月不打开 IDE 一人 259 PR 是单人案例，团队工作环境完全不同。</li>
+  <li><strong>Loop Engineering 最大的问题是”只说结果，不说前提”</strong>——三个隐藏前提任何一项不解决，团队级 Loop 就会变成”扯皮 + 审阅带宽爆炸 + 财务黑洞”。</li>
+  <li><strong>SDD 不是”先写文档”那么简单，是构建”共享上下文/规则/边界/验收标准”的方法论</strong>——Spec 是研发流程里的事实真相，三角色 = 上下文 + 协作契约 + 质量基准。</li>
+  <li><strong>6 段式 Spec 骨架 + 任务复杂度分级是 SDD 落地的实操抓手</strong>——避免”所有需求都套完整规格 → AI 提效变文档负担”的反向陷阱。</li>
+  <li><strong>AI 进入组织的 4 层爬坡是更高视角</strong>——个人工具→流程标准→组织协作→评价体系，”上一层的问题解决以后，会把下一层的问题推出来”。</li>
+</ol>
+
+<h2 id="5-个对-seetong-团队可借鉴动作">5 个对 Seetong 团队可借鉴动作</h2>
+
+<ol>
+  <li><strong>SDD 做 Seetong 团队需求交付新规范</strong>：TAPD PRD 模板加 6 段式 Spec 骨架 + 任务复杂度分级（小改动 Prompt / 中等轻量 / 大型完整）。下一步把 SDD 6 段式嵌入 <code class="language-plaintext highlighter-rouge">seetong-requirement-clarifier</code> skill。</li>
+  <li><strong>“客服反馈 → Spec 链路”入 Seetong Bug Triage</strong>：把客服/用户反馈先整理成轻量 Spec（问题现象/影响对象/复现路径/相关上下文/初步判断/修改范围/验收标准/风险提示），对照 <code class="language-plaintext highlighter-rouge">seetong-bug-triage</code> skill 改造。</li>
+  <li><strong>项目级上下文建 Seetong 项目知识库</strong>：建 Seetong 团队级”AI 上下文资产”——架构约束/目录规范/接口规范/权限模型/状态机/错误码/数据字典，挂到 <code class="language-plaintext highlighter-rouge">wiki/04-app-dev/</code> 现有架构文档。</li>
+  <li><strong>Spec 6 段式入 Seetong Bug 描述模板</strong>：TAPD BUG 描述加 6 段，改造 <code class="language-plaintext highlighter-rouge">seetong-ios-quality-review</code> / <code class="language-plaintext highlighter-rouge">seetong-batch-issue-rootcause-analysis</code> skill。<strong>重点约束</strong>：”AI 重构时不许换组件库/不许改状态枚举/不许改接口路径命名”（决策段）。</li>
+  <li><strong>AI 进入组织的 4 层爬坡做 Seetong 团队 AI 落地 roadmap</strong>：当前 Seetong 卡第 1-2 层。6 个月目标 = 推进到第 2 层（SDD 落地）；12-18 个月推第 3 层（Spec 锚定 + 项目级上下文资产）。roadmap 进 <code class="language-plaintext highlighter-rouge">MEMORY.md</code> “Seetong 团队与项目”节。</li>
+</ol>
+
+<p><strong>备注与限制</strong>：叶小钗批判是个人判断不是实验数据；SDD 6 段式骨架样本量小；3 个月 + 十几次设计推倒是单一个案；SDD vs TDD vs BDD 缺量化对比；任务复杂度 3 分级缺边界判定标准。</p>

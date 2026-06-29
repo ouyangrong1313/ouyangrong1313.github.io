@@ -1,0 +1,439 @@
+<h1 id="claude-code-一周年回顾agent-自主验证--routine-异步化--auto-mode-反直觉安全--context-极简主义">Claude Code 一周年回顾:Agent 自主验证 / Routine 异步化 / Auto Mode 反直觉安全 / Context 极简主义</h1>
+
+<ul>
+  <li>原文链接:https://mp.weixin.qq.com/s/OXXZdKfBwFJJK14kKBJ5Kw</li>
+  <li>原始作者:BorisNCat(微信公众号)</li>
+  <li>原始视频:https://www.youtube.com/watch?v=Hth_tLaC2j8</li>
+  <li>演示嘉宾:Boris Cherny(Anthropic,Claude Code 负责人)+ Cat Wu(Anthropic,Claude Code 产品负责人)</li>
+  <li>来源:微信公众号 / BorisNCat</li>
+  <li>发布时间:2026-06-09 23:29</li>
+  <li>获取时间:2026-06-10</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论(一句话)</h2>
+
+<blockquote>
+  <p><strong>Claude Code 用一年时间从 Slack 两个赞走到「人人写代码 / Agent 自动修 bug / 一半工作在手机上完成」。Boris Cherny + Cat Wu 一周年回顾核心 10 点:①Agent 自主验证(不是单元测试,而是 Claude 自己在 bash 里测自己写的东西)②人人写代码(PM/设计师/财务都用)③Routine 让 Claude 从同步变异步 ④Auto Mode 比手动更安全(Sonnet 4.6 分类器判断权限)⑤两次认知跃迁(写代码 → Agent → Loop)⑥一半工程工作在手机上完成 ⑦Context 极简主义(给最少 system prompt + 最少 tools)⑧源码泄露风波(59.8MB source map 暴露 51.2 万行代码 + KAIROS/Undercover/内部代号)⑨一年 9 个功能里程碑 ⑩下一年:Agent 越来越自主,跑几百几千个 Agent 早就不稀奇。</strong></p>
+</blockquote>
+
+<h2 id="分类提炼">分类提炼</h2>
+
+<ul>
+  <li>场景:Anthropic 一周年回顾 / 个人 AI 工作流演化 / AI 编程基础设施</li>
+  <li>标签:#主题/AI-Coding #主题/Anthropic #节点/AutoMode反直觉安全 #节点/源码泄露事件</li>
+  <li>类型:访谈实录 / 历史回顾 / 供应链安全反例</li>
+</ul>
+
+<h2 id="知识节点10-个独立概念">知识节点(10 个独立概念)</h2>
+
+<ul>
+  <li><strong>Agent自主验证</strong>:不是单元测试 / lint / 类型检查,而是”Agent 能不能自己跑起来,验证自己写的东西”;Opus 4 起 Claude 在 bash 里自己测自己写的代码;iOS 模拟器、Android 模拟器、桌面端 computer use 循环跑验证成常规</li>
+  <li><strong>角色边界模糊</strong>:Cat(PM)在写代码,设计师 Megan 直接提 PR 修按钮,企业客户里设计师/PM/财务/数据科学家都在用;<strong>未来每个人都既是 PM 又是工程师</strong></li>
+  <li><strong>Routine异步化</strong>:Voice Mode 工程师先设一个 Routine 自动监听相关 issue/bug 提交修复 PR;扩到”所有超过 5 小时没人回应的 bug report”;<strong>Routine 是 Claude 从同步工具变成异步基础设施的第一个”显而易见场景”</strong></li>
+  <li><strong>AutoMode反直觉安全</strong>:把权限判断交给 Sonnet 4.6 分类器;99% 请求人眼走神 → auto mode 让你只关注真正重要的事;<strong>auto mode 比手动审核每一条权限提示更安全</strong>;训练数据来自成千上万条 Agent 运行轨迹 + 红队 prompt 注入 + 内部攻击测试</li>
+  <li><strong>两次认知跃迁</strong>:①写代码 → 跟 Agent 说话 → Agent 写代码 ②跟 Agent 说话 → 跟 Loop/Routine 说话 → Loop 调度 Agent;”一年半就经历了两次大跃迁,这速度太疯狂了”</li>
+  <li><strong>手机编程</strong>:电脑启动 Agent → Remote Control 从手机接管 → Voice Mode 告诉 Claude 去做;<strong>大概一半的工程工作是在手机上完成的</strong>;Agent View 看后台 Agent 状态;桌面应用自动管理 worktree</li>
+  <li><strong>Context极简主义</strong>:”Sonnet 3.5 时代做 prompt engineering,Opus 4 时代做 context engineering,但现在的模型都不需要了”;<strong>给最少 system prompt + 最少 tools,让模型自己找 context</strong>;Cat 自称”context minimalist”;给太多 context = 微观管理</li>
+  <li><strong>源码泄露事件</strong>:2026/3/31 npm v2.1.88 不小心发布 59.8MB source map;<strong>51.2 万行未混淆 TypeScript / 1900 个文件</strong>;KAIROS 守护进程、Undercover Mode、Tengu/Fennec/Capybara 内部代号、44 个隐藏功能开关;DMCA 误伤 8100 仓库;<strong>claw-code Python 重写版 2 小时 75,000 star</strong></li>
+  <li><strong>KAIROS守护进程</strong>:未发布的自主守护进程(后台 daemon,源码引用 150+ 次);自动监听 GitHub webhook、推送通知;<strong>autoDream 功能在空闲时自动整合记忆</strong>;<strong>这是 Claude Code 的”后台灵魂”</strong></li>
+  <li><strong>ClaudeCode时间线</strong>:2025/5 正式发布 → 2025/9 v2.0(Checkpoints/VS Code/Hooks/GitHub Actions/Agent SDK)→ 2025/10 网页端+沙箱+Skills → 2025/11 Opus 4.5 降价 67%+compaction → 2026/1 v2.1.0(1096 commit)+ /teleport → 2026/2 Opus 4.6+Agent Teams+Remote Control → 2026/3 Voice Mode+/loop+auto mode → 2026/4 桌面应用+Routines+worktree+Opus 4.7 → 2026/5 Agent View+Opus 4.8+Dynamic Workflows</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游(基于 / 来自)</h3>
+
+<ul>
+  <li>[[Claude-Code作者Boris-我已经不写prompt了我写loop]] - 同一作者多次访谈反复强调”写 loop”,本篇第一次给出”两次认知跃迁”明确时间锚点</li>
+  <li>[[Claude-Code之父品味不是人类护城河]] - Boris 谈品味被模型侵蚀,本篇 Boris 谈 AI 怎么自己验证自己写的代码;两者互补 = “品味边界”+”验证边界”</li>
+  <li>[[Claude-Code首席设计师Meaghan-Choi工作流]] - Meaghan 谈”auto + loop”,本篇 Boris 说最爱 auto mode;”AI 自动巡逻产品质量”是 Routine 的早期形态</li>
+  <li>[[Claude-Code团队5条工作原则-Fiona-Fung分享]] - “Trust but verify” → 本篇给出”验证 = Agent 自己跑起来”的 Anthropic 内部实践</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游(应用于 / 验证于)</h3>
+
+<ul>
+  <li>[[Agentic-Engineering-AI-Workbench]] - “AI 工作台”五层结构的”验证”层 = 本篇”Agent 自己跑起来验证”的工程化版本</li>
+  <li>[[Addy-Osmani-Loop-Engineering]] - 5+1 积木 vs Boris 两次认知跃迁 = 同一信号的两种切面</li>
+  <li>[[Anthropic万字长文三个判断和一个阳谋]] - “AI 审 AI”是同主线,但本篇更进一步 = “AI 当默认安全官”</li>
+  <li>[[买了一样的AI为什么别家的比你的强]] - “模型是商品,判断是资产”;本篇”Claude 在 bash 里自己测自己写的代码”是”判断力外包到验证环节”的具体实现</li>
+</ul>
+
+<h3 id="同级横向--并列">同级(横向 / 并列)</h3>
+
+<ul>
+  <li>[[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] - “KAIROS + autoDream”是 Harness 的”持久化运行”维度</li>
+  <li>[[多Agent使用边界与并行判定]] - “Agent View + 桌面应用自动管理 worktree”是”并行判定”的工具化形态</li>
+  <li>[[从Prompt-Context到Harness-工程的三次进化与终局之战]] - “Context 极简主义”是 Harness 阶段的”约束观”具体表达</li>
+</ul>
+
+<h2 id="正文要点10-条">正文要点(10 条)</h2>
+
+<h3 id="一两个赞的起点--一年走完产品一辈子">一、两个赞的起点 → 一年走完产品一辈子</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>维度</th>
+      <th>数据</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2025/2</td>
+      <td>Research Preview,搭配 Claude 3.7 Sonnet</td>
+    </tr>
+    <tr>
+      <td>2025/5/22</td>
+      <td>Claude 4 家族发布,Claude Code 正式发布</td>
+    </tr>
+    <tr>
+      <td>初始反馈</td>
+      <td>Slack 内部只有 2 个赞</td>
+    </tr>
+    <tr>
+      <td>Cat 当时评价</td>
+      <td>“做得还挺不错”(委婉版 = “不太行”)</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>“从那天起,一切开始加速。”</p>
+</blockquote>
+
+<h3 id="二agent-自主验证不是单元测试">二、Agent 自主验证,不是单元测试</h3>
+
+<p><strong>常见误解</strong>:单元测试 / lint / 类型检查
+<strong>Agent 层面的验证</strong>:能不能自己跑起来,验证自己写的东西</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>阶段</th>
+      <th>验证能力</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Opus 4</td>
+      <td>Claude 打开一个 Claude CLI,在 bash 里自己测自己写的功能</td>
+    </tr>
+    <tr>
+      <td>现在</td>
+      <td>iOS 模拟器 / Android 模拟器 / 桌面端 computer use 循环跑验证成常规</td>
+    </tr>
+    <tr>
+      <td>Cat 团队实践</td>
+      <td>桌面开发 Skill,computer use 在应用里点来点去,发现 bug 就修,修完再验证</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>“如果 Claude 能把经验写进 CLAUDE.md 或做成 Skill,Claude 就能一直跑下去。”</p>
+</blockquote>
+
+<p><strong>自我进化的闭环</strong>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>发现 bug → 修复 → 验证 → 把经验更新到 Skill → 下次直接用
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h3 id="三人人都在写代码">三、人人都在写代码</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>角色</th>
+      <th>写代码状态</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cat(PM)</td>
+      <td>写代码</td>
+    </tr>
+    <tr>
+      <td>设计师 Megan</td>
+      <td>直接提 PR 修按钮(“写得还挺好的”)</td>
+    </tr>
+    <tr>
+      <td>企业客户的 PM</td>
+      <td>直接在应用里改功能</td>
+    </tr>
+    <tr>
+      <td>企业客户的财务</td>
+      <td>在 Claude Code 里跑预测模型</td>
+    </tr>
+    <tr>
+      <td>企业客户的数据科学家</td>
+      <td>屏幕上全是 Claude Code</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>Boris 的判断</strong>:未来每个人都既是 PM 又是工程师。工程师越来越多地端到端交付产品,从想法到实现到发布到和法务、市场协调,一个人走完全流程。</p>
+
+<h3 id="四routine-的威力claude-从同步变异步">四、Routine 的威力:Claude 从同步变异步</h3>
+
+<p><strong>Voice Mode 工程师的两个 Routine</strong>:</p>
+<ol>
+  <li>自动监听所有关于 Voice Mode 的 GitHub issue 和 bug report → 提交修复 PR → ping 他 review</li>
+  <li>监控所有<strong>超过 5 小时没人回应</strong>的 bug report → 自动提交修复</li>
+</ol>
+
+<blockquote>
+  <p>“我发了一个小功能,有个边界情况我没注意到。有人报了 bug,我打算晚上去修。结果我的 Claude 告诉我:「等等,另一个 Claude 已经修了。」”</p>
+</blockquote>
+
+<blockquote>
+  <p>“回想一下以前,你得自己回复 code review 评论,自己修 CI,自己 rebase。这些我已经很久很久没做过了。”</p>
+</blockquote>
+
+<p><strong>关键定位</strong>:Routine 是 Agent SDK 之后第一个”显而易见的应用场景”,让 Claude <strong>从同步工具变成异步基础设施</strong>。</p>
+
+<h3 id="五最爱-auto-mode反直觉安全设计">五、最爱 Auto Mode(反直觉安全设计)</h3>
+
+<p><strong>Auto Mode 的核心设计</strong>:把权限判断交给另一个模型(Sonnet 4.6)做安全审查。</p>
+
+<p><strong>反直觉论点</strong>:auto mode 比手动审核每一条权限提示更安全。</p>
+<ul>
+  <li>当你 99% 的请求都点同意时,眼睛就走神了</li>
+  <li>Auto mode 让你只关注真正重要的事</li>
+</ul>
+
+<p><strong>Anthropic 上线前的安全工程</strong>:</p>
+<ul>
+  <li>收集成千上万条 Agent 运行轨迹 → 训练 auto mode 分类器</li>
+  <li>请红队人员做 prompt 注入攻击</li>
+  <li>让内部团队亲自尝试攻击 Claude Code 的 auto mode</li>
+  <li>所有发现的问题都变成 eval,持续提升安全性</li>
+</ul>
+
+<blockquote>
+  <p>“这不只是防范已知漏洞,而是防范我们能构造出的最聪明的攻击。”</p>
+</blockquote>
+
+<h3 id="六两次认知跃迁--一半工作在手机上">六、两次认知跃迁 + 一半工作在手机上</h3>
+
+<p><strong>两次认知跃迁</strong>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>跃迁 1:写代码 → 跟 Agent 说话(Agent 写代码)
+跃迁 2:跟 Agent 说话 → 跟 Loop/Routine 说话(Loop 调度 Agent)
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>手机编程</strong>:</p>
+<ul>
+  <li>电脑启动 Agent → Remote Control 从手机接管</li>
+  <li>出去买杯咖啡,看看 Agent 进展,启动新 Agent</li>
+  <li>跟人聊天聊出 idea → Voice Mode 告诉 Claude 去做</li>
+  <li><strong>大概一半的工程工作是在手机上完成的</strong></li>
+</ul>
+
+<p><strong>终端标签对比</strong>:
+| 维度 | 一年前 | 现在 |
+|—|—|—|
+| 终端标签 | 6 个 | 1 个 |
+| git checkout | 6 个同一仓库切换 | 桌面应用自动管理 worktree |
+| 状态监控 | 来回切换 | Agent View 一屏全看 |</p>
+
+<h3 id="七context-极简主义">七、Context 极简主义</h3>
+
+<blockquote>
+  <p>“以前 Sonnet 3.5 时代你得做 prompt engineering,Opus 4 时代你得做 context engineering。但现在的模型,这些都不需要了。”</p>
+</blockquote>
+
+<p><strong>Cat 的实践</strong>:告诉模型它需要知道的,剩下的让它自己搞定。</p>
+
+<blockquote>
+  <p>“给模型太多 context,就像在微观管理它。有时候模型知道更好的方法来达到同一个目标。”</p>
+</blockquote>
+
+<h3 id="八源码泄露风波2026331">八、源码泄露风波(2026/3/31)</h3>
+
+<p><strong>事件</strong>:</p>
+<ul>
+  <li>Anthropic 通过 npm 包 @anthropic-ai/claude-code v2.1.88 不小心发布 59.8MB JavaScript source map</li>
+  <li>51.2 万行未混淆 TypeScript / 约 1900 个文件</li>
+  <li>根本原因:Claude Code 基于 Bun 构建,Bun 默认生成 source map,但没人在 .npmignore 里排除</li>
+</ul>
+
+<p><strong>社区扒出的料</strong>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>内部代号</th>
+      <th>含义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tengu</td>
+      <td>Claude Code 项目代号</td>
+    </tr>
+    <tr>
+      <td>Fennec</td>
+      <td>Opus 4.6</td>
+    </tr>
+    <tr>
+      <td>Capybara</td>
+      <td>疑似 Mythos 模型</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>未发布功能</strong>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>功能</th>
+      <th>描述</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>KAIROS</td>
+      <td>自主守护进程(后台 daemon),源码引用 150+ 次;监听 GitHub webhook、推送通知</td>
+    </tr>
+    <tr>
+      <td>autoDream</td>
+      <td>KAIROS 内置,空闲时自动整合记忆</td>
+    </tr>
+    <tr>
+      <td>Undercover Mode</td>
+      <td>~90 行代码;员工操作非内部仓库时自动激活,去掉 Co-Authored-By 署名,禁止提及内部代号</td>
+    </tr>
+    <tr>
+      <td>隐藏功能开关</td>
+      <td>44 个</td>
+    </tr>
+    <tr>
+      <td>未发布功能</td>
+      <td>20 多个</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>社区反应</strong>:</p>
+<ul>
+  <li>安全研究员 Chaofan Shou 在 X 公开 → 引发开发者社区爆炸</li>
+  <li>Anthropic DMCA 误伤 8100 个仓库(包括自家开源仓库的合法 fork)→ 撤回大部分</li>
+  <li>Mirror 仓库被下架前 41,500 个 fork</li>
+  <li><strong>韩国开发者”claw-code” Python 重写版 2 小时 75,000 GitHub star</strong></li>
+  <li>有人根据 Claude Buddy 变体发 meme 币</li>
+</ul>
+
+<p><strong>漏洞暴露</strong>:</p>
+<ul>
+  <li>CVE-2025-59536、CVE-2026-21852 等</li>
+  <li>RCE + API token 窃取</li>
+</ul>
+
+<p><strong>正面影响</strong>:也让社区第一次看到 Claude Code 内部复杂度 — 40+ 注册工具 / 5 种 context 压缩策略 / 23 个 bash 安全检查 / 14 个缓存破坏向量。</p>
+
+<blockquote>
+  <p>Boris:”这是一个人为错误。没有人因此被开除,犯错的人仍然拥有公司的完全信任。这是一个流程漏洞,任何人都可能犯。”</p>
+</blockquote>
+
+<h3 id="九一年功能时间线9-个里程碑">九、一年功能时间线(9 个里程碑)</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>时间</th>
+      <th>里程碑</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>2025/5</td>
+      <td>正式发布,搭配 Opus 4</td>
+    </tr>
+    <tr>
+      <td>2025/9</td>
+      <td><strong>Claude Code 2.0</strong>(Checkpoints / VS Code 扩展 / Hooks 系统 / GitHub Actions 集成 / Agent SDK)</td>
+    </tr>
+    <tr>
+      <td>2025/10</td>
+      <td>网页端(claude.ai/code)+ 沙箱隔离 + Skills 系统</td>
+    </tr>
+    <tr>
+      <td>2025/11</td>
+      <td>Opus 4.5 + 67% 降价 + context compaction</td>
+    </tr>
+    <tr>
+      <td>2026/1</td>
+      <td>v2.1.0(1096 commit)+ /teleport + 多语言</td>
+    </tr>
+    <tr>
+      <td>2026/2</td>
+      <td>Opus 4.6 + <strong>Agent Teams</strong> + <strong>Remote Control</strong></td>
+    </tr>
+    <tr>
+      <td>2026/3</td>
+      <td>Voice Mode + /loop + <strong>auto mode</strong></td>
+    </tr>
+    <tr>
+      <td>2026/4</td>
+      <td>桌面应用重设计 + <strong>Routines 正式发布</strong> + worktree 隔离 + Opus 4.7 + push notifications</td>
+    </tr>
+    <tr>
+      <td>2026/5</td>
+      <td><strong>Agent View</strong> + Opus 4.8 + <strong>Dynamic Workflows</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>“一年之内,从一个终端聊天工具变成了一个可以自主运行、自我验证、多实例协作的 AI 编程基础设施。”</p>
+</blockquote>
+
+<h3 id="十下一年">十、下一年</h3>
+
+<blockquote>
+  <p>Boris:”一年后的使用方式如果还跟现在一样,我反而会觉得奇怪。Agent 运行时间越来越长,越来越自主,同时跑几百上千个 Agent 早就不稀奇了。下一年的形态,一定跟现在完全不同。”</p>
+</blockquote>
+
+<blockquote>
+  <p>Cat:”这些想法不会只从我们这里来,而是会从整个社区里涌现出来。”</p>
+</blockquote>
+
+<h2 id="我的理解">我的理解</h2>
+
+<ul>
+  <li><strong>“Agent 自主验证”是 Claude Code 一年里最被低估的能力升级</strong> — 不是”单元测试”,而是”Claude 自己在 bash 里跑自己写的代码”;跟 [[Agentic-Engineering-AI-Workbench]] 中”AI 工作台 = 5 层结构(计划/上下文/执行/验证/治理)”的”验证”层是同一思路,但 Claude Code 把”验证”做成了”Agent 自己在 iOS 模拟器/桌面应用里点来点去”;<strong>对 Seetong</strong>:验证不再是”测试工程师写测试用例”,而是”AI 自己在 Xcode/真机里跑”</li>
+  <li><strong>“Auto Mode 比手动更安全”是反直觉但有数据的安全设计模式</strong> — Anthropic 用 Sonnet 4.6 做权限分类器,99% 人眼走神反而是漏洞;与 [[Anthropic万字长文三个判断和一个阳谋]] 提到的”AI 审 AI”同主线,但更进一步 = <strong>AI 当默认安全官,人只介入真正高风险事件</strong>;<strong>对 Seetong</strong>:当前 Seetong 多级确认(开发/测试/PM)可能有”99% 走过场”的隐患,值得调研 auto 化权限分层</li>
+  <li><strong>“Routine 是 Claude 从同步变异步的第一个显而易见场景”</strong> — 跟 [[Claude-Code首席设计师Meaghan-Choi工作流]] 的”AI 自动巡逻产品质量”是同一信号的反复印证;但本篇给了<strong>具体配置:5 小时没人响应的 bug report 自动提交修复</strong>;<strong>对 Seetong 可立刻抄作业</strong>:Seetong 当前 Bug/需求响应周期长,可设个”3 天测试未响应 + 1 天开发未响应”的自动催办或自动升优先级 Routine</li>
+  <li><strong>“两次认知跃迁(写代码 → Agent → Loop)”</strong> — 这是 2026 年 AI Coding 范式的最清晰总结;跟 [[Claude-Code作者Boris-我已经不写prompt了我写loop]] [[Addy-Osmani-Loop-Engineering]] [[Claude-Code之父品味不是人类护城河]] 是同一主线,<strong>但本篇第一次给出了”两次跃迁”的明确时间锚点(1.5 年)</strong></li>
+  <li><strong>“Context 极简主义”是 Anthropic 内部对 Context Engineering 的反思</strong> — Cat 自称”context minimalist”,Boris 说”给最少 system prompt + 最少 tools”;跟 [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] 中”Harness 是约束,不是堆 context”是同一立场;<strong>对 Seetong 团队</strong>:当前如果每个项目的 AGENTS.md/CLAUDE.md 都写了一大堆”上下文”,可能需要反向瘦身,只留关键约束</li>
+  <li><strong>“源码泄露风波”是教科书级的供应链安全反例</strong> — 51.2 万行 / KAIROS / Undercover Mode / 内部代号 / 44 隐藏开关 / DMCA 误伤 8100 仓库 / 韩国开发者 2 小时 75,000 star / meme 币;<strong>对 Seetong 团队</strong>:①发布 npm 包时一定要确认 .npmignore 排除 source map ②任何”小疏忽”都可能成为产品级公关危机 ③AI 匿名贡献开源的伦理问题(Undercover Mode)是新兴领域,值得团队提前讨论立场</li>
+  <li><strong>“KAIROS + autoDream”是 AI Agent 的”后台灵魂”</strong> — 源码泄露暴露 Claude Code 内部有”自主守护进程 + 空闲时自动整合记忆” = <strong>AI 越来越有”持续存在”的本体论意义</strong>;与 [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] “AI 持久化运行”同主线;<strong>未来 Seetong 自研 AI 助手时,要考虑”AI 也有后台(daemon + 自动记忆)”的架构设计</strong></li>
+  <li><strong>“下一年:Agent 越来越自主,跑几百几千个”</strong> — Boris 公开说”下一年的形态,一定跟现在完全不同”;<strong>给团队的最重要提醒</strong>:<strong>今天搭的所有 AI 工作流都是”过渡版”</strong>,不用追求一步到位,关键是要<strong>保留架构弹性</strong>让下一代模型/Agent 直接接上(呼应 Meaghan 那篇的”先把流程搭好等模型升级”)</li>
+</ul>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+  <li>原文:https://mp.weixin.qq.com/s/OXXZdKfBwFJJK14kKBJ5Kw</li>
+  <li>原始视频:https://www.youtube.com/watch?v=Hth_tLaC2j8</li>
+  <li>Claude Code 官方文档:https://code.claude.com/docs/en/overview</li>
+  <li>ClaudeDevs 推文:https://x.com/ClaudeDevs/status/2064032814392352816</li>
+  <li>关联 wiki:
+    <ul>
+      <li>[[Claude-Code作者Boris-我已经不写prompt了我写loop]] - 同一作者多次访谈反复强调”写 loop”,本篇第一次给出”两次认知跃迁”明确时间锚点</li>
+      <li>[[Claude-Code之父品味不是人类护城河]] - Boris 谈品味被模型侵蚀,本篇谈 AI 怎么自己验证自己写的代码</li>
+      <li>[[Claude-Code首席设计师Meaghan-Choi工作流]] - Meaghan 谈”auto + loop”,Boris 说最爱 auto mode</li>
+      <li>[[Claude-Code团队5条工作原则-Fiona-Fung分享]] - “Trust but verify” → “Agent 自己跑起来验证”</li>
+      <li>[[Addy-Osmani-Loop-Engineering]] - 5+1 积木 vs Boris 两次认知跃迁</li>
+      <li>[[Agentic-Engineering-AI-Workbench]] - “AI 工作台”五层结构的”验证”层</li>
+      <li>[[Anthropic万字长文三个判断和一个阳谋]] - “AI 审 AI”主线,本篇更进一步 = “AI 当默认安全官”</li>
+      <li>[[买了一样的AI为什么别家的比你的强]] - “Claude 在 bash 里自己测自己写的代码”是”判断力外包到验证环节”</li>
+      <li>[[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] - “KAIROS + autoDream”是 Harness 的”持久化运行”维度</li>
+      <li>[[多Agent使用边界与并行判定]] - “Agent View + 桌面应用自动管理 worktree”是并行判定的工具化形态</li>
+      <li>[[从Prompt-Context到Harness-工程的三次进化与终局之战]] - “Context 极简主义”是 Harness 阶段的”约束观”具体表达</li>
+    </ul>
+  </li>
+</ul>

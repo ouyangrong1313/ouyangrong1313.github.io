@@ -1,0 +1,240 @@
+<h1 id="pm-skills-marketplace--产品经理必备-skill">PM Skills Marketplace —— 产品经理必备 Skill</h1>
+
+<ul>
+  <li>原文链接:https://mp.weixin.qq.com/s/7t3pCljov14VbIDXcsYuBw</li>
+  <li>来源:微信公众号 开源日记</li>
+  <li>获取时间:2026-06-14</li>
+  <li>GitHub:https://github.com/phuryn/pm-skills (3 个月 16k Star)</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论(一句话)</h2>
+
+<blockquote>
+  <p><strong>通用 AI 给”文字模板”,PM Skills 给”结构化执行路径”</strong> —— Skill 的本质是领域专家把”做事路径”代码化,AI 不替你决策,只带你把方法论走一遍。</p>
+</blockquote>
+
+<h2 id="分类提炼">分类提炼</h2>
+
+<ul>
+  <li>场景:产品经理 AI 工作流、Skills 生态、Slash command 落地</li>
+  <li>标签:#主题/AI-Coding #主题/Skill #场景/工具推荐 #场景/方法论落地</li>
+  <li>类型:工具评测 + 案例叙事 + 行业趋势观察</li>
+</ul>
+
+<h2 id="知识节点11-个独立概念">知识节点(11 个独立概念)</h2>
+
+<blockquote>
+  <p>每条独立成段可被理解,对应一个可 grep 的关键词</p>
+</blockquote>
+
+<ul>
+  <li><strong>PM-Skills</strong>:phuryn/pm-skills 开源项目,把产品管理方法论编码成 AI 可执行 Skills 的市场,3 个月 16k Star</li>
+  <li><strong>Skill</strong>:独立的方法论单元,单一可调用,如 <code class="language-plaintext highlighter-rouge">/opportunity-solution-tree</code> 对应 Teresa Torres OST</li>
+  <li><strong>Command</strong>:多个 Skill 组合成的完整流程,如 <code class="language-plaintext highlighter-rouge">/discover</code> = 创意→假设→排序→实验四步串联</li>
+  <li><strong>Slash-Command</strong>:源自 Claude Code 的交互范式,正在外溢到 OpenCode、Cursor、Cline,成为 AI Coding 事实标准</li>
+  <li><strong>OST</strong>:Opportunity Solution Tree(Teresa Torres),从结果逆推机会、分解方案、实验验证的产品发现框架</li>
+  <li><strong>Lean-Canvas</strong>:精益商业模式画布,9 格快速验证商业假设,PM Skills 把”填什么”的难题转成引导式提问</li>
+  <li><strong>JTBD</strong>:Jobs-to-Be-Done,用户访谈脚本中的核心问题类型,关注”用户雇佣产品做什么任务”</li>
+  <li><strong>Pre-mortem</strong>:项目启动期风险分析方法,提前假设项目失败并归因,区分 Tigers/Paper Tigers/Elephants 三类风险</li>
+  <li><strong>OpenCode</strong>:开源 AI Coding 工具,兼容 Slash command + Skill 协议,PM Skills 主要安装目标(<code class="language-plaintext highlighter-rouge">~/.opencode/skills/</code>)</li>
+  <li><strong>Claude-Code</strong>:Slash command 协议起源者,Commands 功能目前仍是其和 Claude Cowork 独占</li>
+  <li><strong>方法论编码</strong>:Skill 生态的核心命题 —— 把领域专家的”做事路径”封装成 AI 可调用工作流,区别于”通用 Prompt 模板”</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游(基于 / 来自)</h3>
+<ul>
+  <li>[[mattpocock-skills]]:Skill 范式的同源案例,领域专家(TS 教学)把方法论编入 Claude Skill</li>
+  <li>[[Skill-Self-Evolution]]:Skill 自进化的研究综述,本文是垂直领域 Skill 编码的实际落地</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游(应用于 / 验证于)</h3>
+<ul>
+  <li>暂无,待后续应用 —— 可启发 MyAIWiki 把”开头钩子库”“文章结构库”做成 <code class="language-plaintext highlighter-rouge">/hook-*</code> Skill</li>
+  <li>可启发 Seetong-iOS 把”PRD 模板”“BUG 调研脚本”做成项目内 Skill</li>
+</ul>
+
+<h3 id="同级横向--并列">同级(横向 / 并列)</h3>
+<ul>
+  <li>[[claude-code-large-codebase-best-practices]]:Claude Code Skill 在工程域的同主题应用</li>
+  <li>[[与AI一起做产品的六条原则]]:产品经理 AI 实践的方法论视角(本文是工具视角)</li>
+  <li>[[AI-PM核心技能-观测评估与反馈闭环]]:产品经理 AI 工作流的能力视角</li>
+</ul>
+
+<h2 id="skill-vs-command-对比">Skill vs Command 对比</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>类型</th>
+      <th>定义</th>
+      <th>粒度</th>
+      <th>典型示例</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Skill</strong></td>
+      <td>独立方法论</td>
+      <td>单步可调用</td>
+      <td><code class="language-plaintext highlighter-rouge">/opportunity-solution-tree</code> (OST) · <code class="language-plaintext highlighter-rouge">lean-canvas</code> · <code class="language-plaintext highlighter-rouge">pricing-strategy</code></td>
+    </tr>
+    <tr>
+      <td><strong>Command</strong></td>
+      <td>Skill 组合</td>
+      <td>流水线</td>
+      <td><code class="language-plaintext highlighter-rouge">/discover</code> = 创意 + 假设 + 排序 + 实验</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>积木 vs 流水线</strong> —— Skill 是积木,Command 是流水线,Command 还需平台支持(目前仅 Claude Code / Cowork)。</p>
+
+<h2 id="项目结构---9-大插件">项目结构 - 9 大插件</h2>
+
+<ol>
+  <li><strong>Product Discovery</strong> — 产品发现:OST、假设识别、机会分析</li>
+  <li><strong>Product Strategy</strong> — 战略:愿景、价值主张、商业模式</li>
+  <li><strong>Execution</strong> — 执行(最多 16 项):PRD、OKR、路线图、Sprint</li>
+  <li><strong>Market Research</strong> — 市场研究</li>
+  <li><strong>Data Analysis</strong> — 数据分析</li>
+  <li><strong>Go-to-Market</strong> — 市场进入</li>
+  <li><strong>Marketing Growth</strong> — 营销增长</li>
+  <li><strong>Toolkit</strong> — 工具包</li>
+  <li><strong>AI Delivery</strong> — AI 交付(最新)</li>
+</ol>
+
+<p>合计:<strong>68 技能 + 42 命令</strong>,覆盖产品全生命周期。</p>
+
+<h2 id="高价值-skill-速查">高价值 Skill 速查</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Skill 命令</th>
+      <th>作用</th>
+      <th>适用场景</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/interview-script</code></td>
+      <td>生成结构化访谈脚本(含 JTBD、满意度)</td>
+      <td>用户调研启动</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/opportunity-solution-tree</code></td>
+      <td>引导构建 Teresa Torres OST</td>
+      <td>需求来源不明</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">identify-assumptions-existing</code></td>
+      <td>按价值/可用/可行/生存四维度揪出隐藏假设</td>
+      <td>产品复盘</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/discover</code></td>
+      <td>完整产品发现 Command</td>
+      <td>新需求立项</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">/product-strategy</code></td>
+      <td>9 部分战略画布</td>
+      <td>战略制定</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">lean-canvas</code></td>
+      <td>引导填完 Lean Canvas</td>
+      <td>新业务设计</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pricing-strategy</code></td>
+      <td>定价模型 + 竞品 + 弹性分析</td>
+      <td>定价决策</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">create-prd</code></td>
+      <td>8 部分 PRD 模板</td>
+      <td>文档输出</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">outcome-roadmap</code></td>
+      <td>功能列表 → 成果导向路线图</td>
+      <td>路线图重构</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pre-mortem</code></td>
+      <td>项目启动期风险分析(Tigers/Paper/Elephants)</td>
+      <td>立项评估</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="正文要点">正文要点</h2>
+
+<ul>
+  <li><strong>“给文字”vs”给结构化执行路径”是 AI 工具的分水岭</strong> —— 通用 ChatGPT 给的是要反复修改的模板,PM Skills 是 AI 主动提问、带你走流程的引擎</li>
+  <li><strong>AI 工具成熟度看”领域方法论编码”</strong> —— 模型差距已经收敛,真正差距在领域专家有没有把”做事路径”代码化</li>
+  <li><strong>Slash Command 正在成为 AI Coding 事实标准</strong> —— 从 Claude Code 起源,扩散到 OpenCode、Cursor、Cline,统一的交互层正在形成</li>
+  <li><strong>AI 提问、用户决定 —— 这是边界不是缺陷</strong> —— 刻意保留的决策点让 Skill 比”全自动写文档”更可靠</li>
+  <li><strong>方法论壁垒被抬高</strong> —— Skill 平民化了执行,会驾驭 Skill 的人价值跃迁,只会填模板的人加速淘汰</li>
+  <li><strong>Skill 生态仍在 jQuery 插件时代</strong> —— SKILL.md 协议有了,但分发、版本、依赖、命名空间都没解决</li>
+  <li><strong>个人 Wiki 的下一步是”可调用”</strong> —— 把开头钩子库做成 <code class="language-plaintext highlighter-rouge">/hook-anxiety</code>,把文章结构库做成 <code class="language-plaintext highlighter-rouge">/structure-discover-solve</code></li>
+</ul>
+
+<h2 id="案例用-interview-script-做-oa-调研">案例:用 <code class="language-plaintext highlighter-rouge">/interview-script</code> 做 OA 调研</h2>
+
+<ul>
+  <li><strong>背景</strong>:作者要给企业级 OA 工作流系统做用户访谈调研</li>
+  <li><strong>传统做法</strong>:打开 ChatGPT,输入”帮我写一个用户访谈脚本”,拿到通用模板,反复改”对电商怎么改”几轮才能用</li>
+  <li><strong>PM Skills 做法</strong>:OpenCode 中输入 <code class="language-plaintext highlighter-rouge">/interview-script</code> → AI 主动问”本次采访目的是什么” → 给出 OA 调研需求 → 一分钟后生成 <code class="language-plaintext highlighter-rouge">customer-interview-oa-workflow.md</code>,含 JTBD 问题、满意度等结构化内容</li>
+  <li><strong>结果</strong>:从”AI 给文字、人手动加结构”变成”AI 带流程、人填决策”,时间从几轮迭代缩到一分钟</li>
+</ul>
+
+<h2 id="已知限制">已知限制</h2>
+
+<ul>
+  <li>❌ <strong>Commands 仅 Claude Code / Claude Cowork 支持</strong>,其他工具只能用 Skills</li>
+  <li>❌ <strong>Windows 不稳定</strong></li>
+  <li>❌ <strong>需要方法论基础</strong> —— 不懂 OST、Lean Canvas 的人,AI 提问时答不上来</li>
+  <li>❌ <strong>手动安装</strong>,无统一 Marketplace(jQuery 插件时代,没有 npm)</li>
+</ul>
+
+<h2 id="我的理解">我的理解</h2>
+
+<ul>
+  <li>最触动我的点:<strong>“AI 不替你做决定,只带你把方法论走一遍”</strong> —— 这句把当前 AI 工具的合理边界讲清楚了,反对”AI 全自动生成”的盲目期待</li>
+  <li>对 MyAIWiki 的启发:本知识库 200+ 篇散文目前只能”读”,下一步应该 Skill 化 —— <code class="language-plaintext highlighter-rouge">/hook-anxiety</code>(从钩子库挑焦虑共鸣型开头)、<code class="language-plaintext highlighter-rouge">/structure-discover-solve</code>(套用发现→方案结构)、<code class="language-plaintext highlighter-rouge">/find-relevant</code> (从 nodes 关联图谱中匹配相关条目)</li>
+  <li>对 Seetong-iOS 的启发:可以把”PRD 模板”“BUG 复盘表”“需求拆分 Checklist”做成项目内 Skill,接入 Claude Code 后产品/研发协作可以走 Slash command</li>
+</ul>
+
+<h2 id="适合关联的主题">适合关联的主题</h2>
+
+<ul>
+  <li>[[mattpocock-skills]]:领域专家把方法论做成 Skill 的同源案例</li>
+  <li>[[Skill-Self-Evolution]]:Skill 自进化研究综述</li>
+  <li>[[claude-code-large-codebase-best-practices]]:Claude Code Skill 在工程域的应用</li>
+  <li>[[与AI一起做产品的六条原则]]:产品经理 AI 实践方法论视角</li>
+  <li>[[AI-PM核心技能-观测评估与反馈闭环]]:产品经理 AI 工作流能力视角</li>
+</ul>
+
+<h2 id="安装">安装</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>git clone https://github.com/phuryn/pm-skills.git
+
+<span class="nb">mkdir</span> <span class="nt">-p</span> ~/.opencode/skills
+<span class="nb">cp</span> <span class="nt">-r</span> pm-skills/pm-product-discovery/skills/<span class="k">*</span> ~/.opencode/skills/
+<span class="nb">cp</span> <span class="nt">-r</span> pm-skills/pm-product-strategy/skills/<span class="k">*</span> ~/.opencode/skills/
+<span class="nb">cp</span> <span class="nt">-r</span> pm-skills/pm-execution/skills/<span class="k">*</span> ~/.opencode/skills/
+<span class="c"># 其他插件类同</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Claude Code 用户可直接享用 Commands;OpenCode 等其他工具只能用 Skills 部分。</p>

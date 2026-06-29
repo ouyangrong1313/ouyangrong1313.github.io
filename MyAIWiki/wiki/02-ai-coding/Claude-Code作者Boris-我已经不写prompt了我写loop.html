@@ -1,0 +1,347 @@
+<h1 id="claude-code-作者-boris我已经不写-prompt-了我写-loop">Claude Code 作者 Boris：我已经不写 prompt 了，我写 loop</h1>
+
+<ul>
+  <li>原文链接：https://mp.weixin.qq.com/s/-Mhg_EEibje5tkWlVazdMA</li>
+  <li>来源：微信公众号 / winkrun</li>
+  <li>原始内容：Boris Chernyshev（Claude Code 作者）30 分钟演讲</li>
+  <li>获取时间：2026-06-04</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论（一句话）</h2>
+
+<blockquote>
+  <p><strong>Boris 已经不写 prompt 了，他写 loop</strong>——Claude Code + loops + Dynamic Workflow 让”写代码”从”一次性 prompt 拿结果”变成”养管道”；Boris 的工作从”对话者”变成”管道养作者”，核心是用 <code class="language-plaintext highlighter-rouge">agent() / parallel() / pipeline()</code> 三个 API 配合 6 种基本模式组合出 2-4 种真实 workflow。</p>
+</blockquote>
+
+<h2 id="分类提炼">分类提炼</h2>
+<ul>
+  <li>场景：AI 编程实战、Dynamic Workflow 落地、Boris 工作流揭秘</li>
+  <li>标签：#主题/AI-Coding #主题/AI-Agent #节点/Claude-Code #节点/Harness</li>
+  <li>类型：实战揭秘 / API 详解 / 避坑指南</li>
+</ul>
+
+<h2 id="知识节点">知识节点</h2>
+
+<ul>
+  <li><strong>Boris Chernyshev</strong>：Claude Code 作者，演讲核心论断”我不写 prompt 写 loop”</li>
+  <li><strong>loop 而非 prompt</strong>：工作范式转变——从”对话者拿一次结果”变成”养管道，长期运行多个 loop”</li>
+  <li><strong>Dynamic Workflow</strong>：Anthropic 2026-05-28 上线，让 Claude 临场写 harness（JS 文件）</li>
+  <li><strong>agent API</strong>：Dynamic Workflow 的核心三件套之一——生成独立子 agent</li>
+  <li><strong>parallel</strong>：barrier 语义——扇出后等所有结果返回才继续</li>
+  <li><strong>pipeline</strong>：流式语义——每个元素独立流过每一阶段（更便宜更快）</li>
+  <li><strong>Agentic laziness</strong>：长任务做一半就宣布完成（如 50 项审计只做 20 项）</li>
+  <li><strong>Self-preferential bias</strong>：让 Claude 验证自己输出时倾向偏袒自己</li>
+  <li><strong>Goal drift</strong>：多轮后逐渐偏离目标，每次压缩都会丢信息</li>
+  <li><strong>Classify-and-act</strong>：分类路由——便宜模型分类，贵模型只用在需要的地方</li>
+  <li><strong>Fan-out-and-synthesize</strong>：扇出合并——50 个文件安全审计最适合</li>
+  <li><strong>Adversarial verification</strong>：对抗验证——验证者从没看过原始工作，没法偏袒</li>
+  <li><strong>Generate-and-filter</strong>：先生成 30 个想法，再用 rubric 筛选，逼 Claude 晚做承诺</li>
+  <li><strong>Tournament</strong>：成对比较淘汰赛——比绝对打分可靠得多</li>
+  <li><strong>Loop until done</strong>：循环 + 停止条件，配合 <code class="language-plaintext highlighter-rouge">/goal</code> 设硬性标准</li>
+  <li><strong>token 预算</strong>：必须在 prompt 里写”use 10k tokens”——不封顶能烧到预期 5-10 倍</li>
+  <li><strong>quarantine</strong>：处理用户提交内容必须隔离——读取 agent 只读，动作 agent 不接触原文</li>
+  <li><strong>bracket 排序</strong>：要排 1000 个东西搞个 tournament bracket，别想着一次性排序</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+<ul>
+  <li>[[claude-code-dynamic-workflows]]：6-3 写的英文原始博客编译版（Anthropic 官方视角）</li>
+  <li>[[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]：上午写的 Feisky 编译版（侧重判断 + 取舍）</li>
+  <li>[[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]：Harness 思想的总论</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+<ul>
+  <li>[[Harness工程AgentLoop]]：本篇的 agent/parallel/pipeline API 是 Agent Loop 的具体实现</li>
+  <li>[[HarnessEngineering企业级实战]]：Dynamic Workflow 是 Harness 落地的最新形态</li>
+  <li>[[Skills驱动推理新范式]]：保存的 workflow 脚本可作为 Skill 分发</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+<ul>
+  <li>[[Claude-Code团队只招聘两类人-会做梦的人+懂底层的人]]：同一团队的组织方法论</li>
+  <li>[[Claude-Code团队5条工作原则-Fiona-Fung分享]]：同一团队的工作原则</li>
+</ul>
+
+<h2 id="正文要点">正文要点</h2>
+
+<h3 id="一核心论断">一、核心论断</h3>
+
+<blockquote>
+  <p>我现在不再给 Claude 写 prompt 了，我有一堆 loop 在跑。<strong>我的工作是写 loop</strong>。</p>
+</blockquote>
+
+<p>Boris 30 分钟演讲把自己的 Claude 配置摊开讲：<strong>Claude Code + loops + Dynamic Workflow</strong>。</p>
+
+<h3 id="二dynamic-workflow-是什么">二、Dynamic Workflow 是什么</h3>
+
+<p>Anthropic 2026-05-28 上线 Dynamic Workflows。默认 Claude Code 把规划和执行塞进同一个上下文窗口，<strong>大多数写代码的活够用</strong>——但碰到长任务、大规模并行、强结构化、对抗性任务就崩。</p>
+
+<p>以前 Anthropic 内部要靠工程师手搓 harness（Research、Code Review、agent 团队都是这么来的）。<strong>Dynamic Workflows 让 Claude 自己临场写这个 harness</strong>——一个 JavaScript 文件，里面用几个特殊函数 spawn 子 agent，再用标准 JS 处理数据。</p>
+
+<p><strong>相比默认 harness，多了三件事</strong>：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>维度</th>
+      <th>默认</th>
+      <th>Dynamic Workflow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>上下文</td>
+      <td>共享</td>
+      <td>每个子 agent 独立窗口</td>
+    </tr>
+    <tr>
+      <td>模型</td>
+      <td>单一</td>
+      <td>每个子 agent 可指定（Opus/Sonnet/Haiku）</td>
+    </tr>
+    <tr>
+      <td>隔离</td>
+      <td>无</td>
+      <td>worktree（独立 git checkout）或 remote</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>启动方式</strong>：跟 Claude 说”给我做一个 workflow……”，或触发词 <code class="language-plaintext highlighter-rouge">ultracode</code>。<strong>中途被打断也能恢复</strong>。</p>
+
+<h3 id="三结构性解决三个老毛病">三、结构性解决三个老毛病</h3>
+
+<p>Anthropic 发布文档点了三个失败模式：</p>
+
+<ol>
+  <li><strong>Agentic laziness</strong>：复杂多步任务做一半宣布完成（50 项审计做了 20 项）</li>
+  <li><strong>Self-preferential bias</strong>：让 Claude 验证自己时倾向偏袒自己</li>
+  <li><strong>Goal drift</strong>：多轮后逐渐偏离目标，第 47 轮时”不要做 X”这条约束悄悄消失</li>
+</ol>
+
+<p><strong>Workflow 用结构来解</strong>：不同 Claude / 各自上下文 / 目标聚焦 / 状态隔离。</p>
+
+<h3 id="四静态-vs-动态">四、静态 vs 动态</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>维度</th>
+      <th>静态 workflow</th>
+      <th>动态 workflow</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>写法</td>
+      <td>提前写好</td>
+      <td>Claude 临场写</td>
+    </tr>
+    <tr>
+      <td>边界</td>
+      <td>保守，兼顾所有</td>
+      <td>量身定制</td>
+    </tr>
+    <tr>
+      <td>适用</td>
+      <td>已知任务</td>
+      <td>探索性任务</td>
+    </tr>
+    <tr>
+      <td>优势</td>
+      <td>稳定</td>
+      <td><strong>贴着你的上下文塑形</strong>：读你的代码 / 对照新供应商真实文档 / 按你的数据定价 / 用对抗 pass 攻击自己的初步答案</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>动态版本赢的不是搜索，是它能<strong>贴着你的上下文塑形</strong>。</p>
+</blockquote>
+
+<h3 id="五核心-api-三件套">五、核心 API 三件套</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>API</th>
+      <th>语义</th>
+      <th>适用</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">agent()</code></td>
+      <td>生成独立子 agent</td>
+      <td>通用</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">parallel()</code></td>
+      <td><strong>barrier</strong>——扇出后等所有结果回来才返回</td>
+      <td>下一步必须等全部结果</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">pipeline()</code></td>
+      <td>流式——每个元素独立流过每一阶段</td>
+      <td>不需要等全部，更便宜更快</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>选哪个就看一个问题</strong>：下一步是不是必须等全部结果？是就 parallel，不是就 pipeline（更便宜更快）。</p>
+
+<h3 id="六6-个常用模式">六、6 个常用模式</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>模式</th>
+      <th>核心思想</th>
+      <th>适用</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Classify-and-act</strong></td>
+      <td>便宜模型分类，贵模型只用在需要的地方</td>
+      <td>异构任务批处理</td>
+    </tr>
+    <tr>
+      <td><strong>Fan-out-and-synthesize</strong></td>
+      <td>拆成多个独立小任务并行跑，再合并</td>
+      <td>50 个文件安全审计</td>
+    </tr>
+    <tr>
+      <td><strong>Adversarial verification</strong></td>
+      <td>验证者没看过原始工作，没法偏袒</td>
+      <td>专治 self-preferential bias</td>
+    </tr>
+    <tr>
+      <td><strong>Generate-and-filter</strong></td>
+      <td>30 个想法 + rubric 筛掉一批</td>
+      <td>逼 Claude 晚做承诺</td>
+    </tr>
+    <tr>
+      <td><strong>Tournament</strong></td>
+      <td>成对比较，淘汰赛</td>
+      <td>排序/品味判断（1000 个东西排个 bracket）</td>
+    </tr>
+    <tr>
+      <td><strong>Loop until done</strong></td>
+      <td>循环 + 停止条件 + /goal 硬性标准</td>
+      <td>开放式目标</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p>这 6 个模式很少单独出现，<strong>一个真实 workflow 通常组合 2-4 个</strong>。</p>
+</blockquote>
+
+<p><strong>真实案例</strong>：Anthropic 把 Bun 从 Zig 重写到 Rust 用的就是”<strong>Fan-out（一个 agent 一个 callsite）→ 对抗验证 → loop until done</strong>“。</p>
+
+<h3 id="七容易踩的坑claude-code-团队自己的提醒">七、容易踩的坑（Claude Code 团队自己的提醒）</h3>
+
+<ol>
+  <li>❌ <strong>该用普通 session 解决的事别上 workflow</strong>——大多数日常编码任务不需要 5 个评审</li>
+  <li>❌ <strong>不设 token 预算</strong>——一个野心大的 workflow 不封顶能烧到预期的 <strong>5 到 10 倍</strong>；直接在 prompt 里写 <code class="language-plaintext highlighter-rouge">"use 10k tokens"</code></li>
+  <li>❌ <strong>让同一个 agent 既干活又验证</strong>——self-preference 让验证形同虚设</li>
+  <li>❌ <strong>把 parallel() 和 pipeline() 当一回事</strong>——barrier 差别很关键</li>
+  <li>❌ <strong>loop 模式不配 /goal</strong>——它会在第一个软完成点停下</li>
+  <li>❌ <strong>让不可信内容直达执行 agent</strong>——处理用户提交内容必须 <strong>quarantine</strong>——读取 agent 只读，动作 agent 不接触原文</li>
+  <li>❌ <strong>排序用绝对打分</strong>——换成 tournament 配对比较</li>
+  <li>❌ <strong>跑通的 workflow 不保存</strong>——在 workflow 菜单按 <code class="language-plaintext highlighter-rouge">s</code> 存到 <code class="language-plaintext highlighter-rouge">~/.claude/workflows</code>，或打包成 Skill 分发</li>
+</ol>
+
+<h3 id="八旁观者视角">八、旁观者视角</h3>
+
+<p>网友总结：</p>
+
+<blockquote>
+  <p>Boris 不小心把 n8n 整套 UX 哲学说了一遍——一个 loop 看 webhook，一个 loop 看 schedule，一个 loop 盯队列。<strong>你不再跑任务，你在养管道</strong>。</p>
+</blockquote>
+
+<blockquote>
+  <p>但编排层得先稳，再上动态路由，不然会被自己绕死。</p>
+</blockquote>
+
+<h2 id="表格parallel-vs-pipeline-决策">表格：parallel vs pipeline 决策</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>场景</th>
+      <th>应该用</th>
+      <th>理由</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>50 个文件安全审计，最后给一份报告</td>
+      <td><code class="language-plaintext highlighter-rouge">parallel()</code></td>
+      <td>必须等所有审计结果</td>
+    </tr>
+    <tr>
+      <td>1000 条 ticket 批量分类，按类型路由到不同处理</td>
+      <td><code class="language-plaintext highlighter-rouge">pipeline()</code></td>
+      <td>元素独立流过分类→处理</td>
+    </tr>
+    <tr>
+      <td>Bun 重写：callsite 改完 + 跑测试 + 改下一个</td>
+      <td><code class="language-plaintext highlighter-rouge">pipeline()</code></td>
+      <td>元素间有依赖但不需要 barrier</td>
+    </tr>
+    <tr>
+      <td>多角度撕商业计划，最后合并</td>
+      <td><code class="language-plaintext highlighter-rouge">parallel()</code></td>
+      <td>必须等所有视角回来</td>
+    </tr>
+    <tr>
+      <td>实时数据流处理</td>
+      <td><code class="language-plaintext highlighter-rouge">pipeline()</code></td>
+      <td>元素独立流过</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="我的理解">我的理解</h2>
+
+<ul>
+  <li><strong>这是 Dynamic Workflow 主题的”第 3 篇”</strong>——6-3 英文官方版、上午 Feisky 编译版、本篇作者亲述实战版。<strong>三篇配套看最完整</strong>：
+    <ul>
+      <li>6-3 英文版侧重<strong>六种模式 + Prompt 示例</strong></li>
+      <li>上午 Feisky 版侧重<strong>判断 + 取舍</strong>（什么时候不用）</li>
+      <li>本篇 Boris 实战版侧重<strong>API 三件套 + 避坑指南</strong></li>
+    </ul>
+  </li>
+  <li><strong>“我写 loop 不写 prompt” 是 2026 年最值得记住的范式转变</strong>——跟 [[Claude-Code团队只招聘两类人]] 是同一团队在<strong>两个层面</strong>的呼应：
+    <ul>
+      <li>组织层：写 prompt 的人才画像 → 写 loop 的人才画像</li>
+      <li>个人层：执行者 → 管道养作者</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>token 预算是真实坑</strong>——<code class="language-plaintext highlighter-rouge">"use 10k tokens"</code> 这种 prompt 限制<strong>必须成习惯</strong>，否则一个 workflow 能烧掉 5-10 倍预算</p>
+  </li>
+  <li>
+    <p><strong>quarantine 模式</strong>是最有防御价值的工程实践——跟 [[陈春花-AI时代管理者重建判断权]] 的”隔离区”判断是同一回事：<strong>读和写分离，避免 prompt injection 导致的越权</strong></p>
+  </li>
+  <li><strong>“你不再跑任务，你在养管道”</strong>——这个比喻对 Seetong 团队很有启发：核心问题不是”AI 能不能做这个 task”，而是”我能不能维护一个长期跑的管道”</li>
+</ul>
+
+<h2 id="适合关联的主题">适合关联的主题</h2>
+
+<ul>
+  <li>[[claude-code-dynamic-workflows]]</li>
+  <li>[[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]</li>
+  <li>[[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]</li>
+  <li>[[Claude-Code团队只招聘两类人-会做梦的人+懂底层的人]]</li>
+  <li>[[Claude-Code团队5条工作原则-Fiona-Fung分享]]</li>
+  <li>[[Harness工程AgentLoop]]</li>
+  <li>[[HarnessEngineering企业级实战]]</li>
+  <li>[[Skills驱动推理新范式]]</li>
+  <li>[[陈春花-AI时代管理者重建判断权]]</li>
+</ul>

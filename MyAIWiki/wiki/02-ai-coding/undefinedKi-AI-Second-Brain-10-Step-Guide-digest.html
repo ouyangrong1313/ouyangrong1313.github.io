@@ -1,0 +1,116 @@
+<h1 id="ai-第二大脑-claudeobsidian-10-步完整实操指南---digest">AI 第二大脑 Claude+Obsidian 10 步完整实操指南 - Digest</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<p>把 Karpathy 2026-04 提出的 LLM Wiki 模式，<strong>从概念落地为”一个晚上能搭完”的 10 步实操</strong>——Claude Desktop + Obsidian + Local REST API + mcp-obsidian + CLAUDE.md + 项目级 vault + Skill + Schedule，把对话型 AI 升级为”记忆永不丢失、每天自我整理”的个人第二大脑。</p>
+
+<h2 id="5-条核心观点">5 条核心观点</h2>
+
+<ol>
+  <li><strong>MCP + Local REST API 是关键拼图</strong>——Claude 用 <code class="language-plaintext highlighter-rouge">mcp-obsidian</code> 接 Obsidian 本地 REST API（端口 27124），从此 Claude 能读写 vault 里每个 .md 文件；<strong>必须 Pro 付费版</strong>才有 Code Tab</li>
+  <li><strong>CLAUDE.md = 策略层，项目文件夹 = 执行层</strong>——根 CLAUDE.md 写”我是谁”，项目 CLAUDE.md 写”这一项目的目标”；<strong>大库规划、单项目出活</strong></li>
+  <li><strong>Inputs/Process/Outputs/Feedback 四区项目结构</strong>——所有项目统一这套文件夹；<strong>重复任务做成 Skill</strong>：下次一句”跑 xxx skill”就执行</li>
+  <li><strong>vault 维护做成 Schedule 任务</strong>——每天 7:00 让 Claude 自动跑”整理 + 链接 + 过时标注 + 3 行变化摘要”；<strong>你醒来时，脑已整理过</strong></li>
+  <li><strong>keys, not prompts</strong>——权限控制走只读 scoped key，不靠”别删文件”的提示词；<strong>只要技术上能删，假设终有一天会删</strong></li>
+</ol>
+
+<h2 id="10-步流程精简">10 步流程（精简）</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>阶段</th>
+      <th>核心动作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>装 Claude Desktop</td>
+      <td>必须 Pro 付费，启用 Code Tab</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>装 Obsidian 建 vault</td>
+      <td>文件夹即第二大脑；用 <code class="language-plaintext highlighter-rouge">[[链接]]</code> 体会 wikilink</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>装 Local REST API 插件</td>
+      <td>复制 API Key</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><code class="language-plaintext highlighter-rouge">claude mcp add-json obsidian-vault</code></td>
+      <td>把 key 写进环境变量</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>让 Claude 面试你写 CLAUDE.md</td>
+      <td>一次性建好”我是谁”</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>建项目文件夹（Inputs/Process/Outputs/Feedback）</td>
+      <td>每个项目自带一个 CLAUDE.md</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>“Open folder as a vault”</td>
+      <td>单项目隔离上下文</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>重复任务做成 Skill</td>
+      <td>“I want to turn this into a reusable skill…”</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>接实时数据（Calendar/Gmail/Slack）</td>
+      <td>MCP <code class="language-plaintext highlighter-rouge">mcp add google-workspace</code>，只读权限</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Schedule 任务</td>
+      <td>每天 7:00 自动整理 vault</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="5-句核心金句">5 句核心金句</h2>
+
+<ol>
+  <li><strong>“You are not building a Claude setup. You are building your own memory, and it gets smarter every day you feed it.”</strong></li>
+  <li><strong>“An empty brain is useless. Fix that first, and don’t type it all out by hand. Make Claude interview you.”</strong></li>
+  <li><strong>“The big vault plans. A single project ships.”</strong></li>
+  <li><strong>“Always grant read-only where you can, the brain should read your data, not delete it.”</strong></li>
+  <li><strong>“Same subscription. Completely different machine.”</strong></li>
+</ol>
+
+<h2 id="5-个对-seetong--myaiwiki-可借鉴动作">5 个对 Seetong / MyAIWiki 可借鉴动作</h2>
+
+<ol>
+  <li><strong>MyAIWiki 本库是 Karpathy Wiki 模式的实操实例</strong>——raw + wiki + log + index + CLAUDE.md 五层结构，跑通 4 月以来</li>
+  <li><strong>晨间简报升级为 Schedule 任务</strong>——把 [[MyAIWiki写入规范与验证模板]] 的”晨间简报”做成 Claude Desktop Schedule 任务</li>
+  <li><strong>每个 Seetong 项目独立 vault</strong>——<code class="language-plaintext highlighter-rouge">/Volumes/work/sdks/seetong-tps/CLAUDE.md</code> 单独写角色，全局 CLAUDE.md 不污染</li>
+  <li><strong>重复任务做 Skill 而非提示词</strong>——seetong-bug-triage / seetong-prd-review / seetong-weekly-report 补统一骨架</li>
+  <li><strong>权限走 Key 不走 prompt</strong>——Seetong-TAPD 工具接 read-only scope；OpenClaw 默认只读，删除/推送走人工审批</li>
+</ol>
+
+<h2 id="关联图谱精简">关联图谱（精简）</h2>
+
+<ul>
+  <li><strong>上游</strong>：[[karpathy-knowledge-system]] / [[claude-obsidian-second-brain]]（5/12 旧版）/ [[obsidian-claude-code-os]] / [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]] / [[garry-tan-ai-second-brain]] / [[构建LLM-Wiki智能知识库-实现AI辅助写作工作流]]</li>
+  <li><strong>下游</strong>：MyAIWiki 本库 + 三个开源 ready-made 仓库（claude-obsidian / obsidian-second-brain / second-brain-starter）+ Claude Desktop Schedule</li>
+  <li><strong>同级</strong>：[[Claude-Code-主动式Agent-Routines]] / [[Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解]] / [[APPSO-Codex-Claude-Code-Loop-Engineering]]</li>
+</ul>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li>原文 6/20 发布，385.6万 浏览；<strong>本工作区已有 6 篇相关页面</strong>，本文价值在”10 步完整实操”+”Schedule”+”keys-not-prompts”</li>
+  <li>关键工具栈：Claude Desktop（Pro $20/月）+ Obsidian（免费）+ Local REST API 插件 + mcp-obsidian + Schedule</li>
+  <li><strong>ridark_eth 短推文</strong>（16M 浏览）是本文的引用推广，作为”舆论扩散信号”存档</li>
+  <li>详细版本：见同目录 [[undefinedKi-AI-Second-Brain-10-Step-Guide]]</li>
+</ul>

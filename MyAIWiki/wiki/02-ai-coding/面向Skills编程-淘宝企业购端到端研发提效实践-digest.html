@@ -1,0 +1,105 @@
+<h1 id="面向-skills-编程淘宝企业购端到端研发提效实践速读摘要">面向 Skills 编程——淘宝企业购端到端研发提效实践(速读摘要)</h1>
+
+<blockquote>
+  <p><strong>一句话</strong>:Skills = AI 研发的最小可复用单元(工作流+领域知识+约束规则);<strong>商品域交付周期 23.5→8 人日(65%),代码一次生成成功率 90%</strong>;<strong>质量瓶颈不在模型,在知识工程——50%→90% 全靠知识注入,不是换模型</strong>。</p>
+</blockquote>
+
+<h2 id="速查表">速查表</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>维度</th>
+      <th>核心命题</th>
+      <th>关键数字/设计</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>范式升级</td>
+      <td>配置化编程 → 面向 Skills 编程</td>
+      <td>人写 Skills,LLM 写代码</td>
+    </tr>
+    <tr>
+      <td>Skills 契约</td>
+      <td>Skills = AI 行为的契约</td>
+      <td>做什么/怎么做/不能做</td>
+    </tr>
+    <tr>
+      <td>构建方法论</td>
+      <td>4 步:识别重复模式 → 封装不变量 → 变化作为输入 → LLM 在约束下执行</td>
+      <td>垂直域不通用,方法论通用</td>
+    </tr>
+    <tr>
+      <td>五阶段</td>
+      <td>Vibe Coding → Prompt 模板 → SDD → Skill 沉淀 → 云端集成</td>
+      <td>2025.8 - 2026.2</td>
+    </tr>
+    <tr>
+      <td>Prompt 采纳率 / SDD 可用率</td>
+      <td>标准化翻译器 / 规范驱动</td>
+      <td>70% / 40%→80%</td>
+    </tr>
+    <tr>
+      <td>交付周期</td>
+      <td>商品域端到端</td>
+      <td>23.5 → 8 人日(65%)</td>
+    </tr>
+    <tr>
+      <td>代码一次生成成功率</td>
+      <td>全链路 15 接口商品域</td>
+      <td>50% → 90%(全靠知识工程)</td>
+    </tr>
+    <tr>
+      <td>11 类高频问题</td>
+      <td>ADJUSTMENT_PLAN 五步闭环</td>
+      <td>全部沉淀为 Skill 约束,不再复现</td>
+    </tr>
+    <tr>
+      <td>三层架构</td>
+      <td>原子能力层 + 模板层 + 适配层</td>
+      <td>适配层代码量 -60%,多端并行零冲突</td>
+    </tr>
+    <tr>
+      <td>质量防线 + 评估审查</td>
+      <td>事前→运行时→事后→人工 / 15/15 接口覆盖</td>
+      <td>四层 / 字段遗漏率 0%</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>5 个反直觉点</strong>:① 质量瓶颈不在模型,在知识工程 ② Skills 本身不通用,但构建方法论通用 ③ 50% → 90% 全靠知识注入,不是换模型 ④ 配置化天花板 = “SPI 扩展点变手写适配” ⑤ AI 不是替代者,是”数字专家”——开发者从编码者变成辅导 AI 的人。</p>
+
+<h2 id="5-个对-seetong-团队可借鉴动作">5 个对 Seetong 团队可借鉴动作</h2>
+
+<ol>
+  <li><strong>用”质量瓶颈在知识工程”做体检</strong>:Skill 成功率卡在 60-70%?<strong>优先排查 references 完整度</strong>,不换模型——50%→90% 全靠知识注入</li>
+  <li><strong>复制”三层架构”重写 Seetong 适配层 Skill</strong>:Seetong 三端适配——<strong>原子能力层</strong>(API/Socket/DB)+ <strong>模板层</strong>(端口无关流程)+ <strong>适配层</strong>(AI 填充端差异),预期代码量 -60%</li>
+  <li><strong>借鉴 ADJUSTMENT_PLAN 五步闭环建高频问题约束库</strong>:Seetong 11 类 iOS 6 大漏洞/4G 6 类问题列表沉淀为 Skill 约束(对应 [[seetong-ios-quality-review]] / [[seetong-batch-issue-rootcause-analysis]])</li>
+  <li><strong>“事前约束→运行时约束→事后审查→人工卡点”作为 SOP 四层防线</strong>:事前 references 禁止项 + 运行时 Hook 拦截(对应 [[阿里云开发者-淘宝主播Agent的Harness工程实战]] 五层防护)+ 事后 Trace 审查 + 人工卡点(改版本号/主分支二次确认)</li>
+  <li><strong>写”Seetong 端到端生码平台” P0 小试点</strong>:TAPD→神策→友盟→反馈→周报(对应 [[seetong-tapd-version-review]] + [[seetong-daily-briefing]] + [[seetong-weekly-report]]),7 天内成功率 baseline→80%</li>
+</ol>
+
+<h2 id="关联--备注">关联 + 备注</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>关联</strong>:阿里淘系 [[阿里云开发者-淘宝主播Agent的Harness工程实战]] / [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]</td>
+      <td>Skill [[Skill-Self-Evolution]] / [[Agent Skills 系统性综述]] / [[谷歌开源 agent-skills]] / [[Addy-Osmani-agent-skills-设计哲学]]</td>
+      <td>SDD/Spec [[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] / [[AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]]</td>
+      <td>Loop [[Loop-Engineering-验证才是瓶颈]]</td>
+      <td>评测 [[腾讯-AI-Agent-Skill-测评方案落地]]</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>备注</strong>:作者官亭,招聘 zezhou.jzz@taobao.com</td>
+      <td>阶段 5 未规模化</td>
+      <td>“字段遗漏率 0%”多项目稳定待验证</td>
+    </tr>
+  </tbody>
+</table>

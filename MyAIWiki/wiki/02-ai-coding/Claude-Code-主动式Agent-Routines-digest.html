@@ -1,0 +1,46 @@
+<h1 id="claude-code-主动式-agent-routines--digest">Claude Code 主动式 Agent Routines — Digest</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<p><strong>主动式 Agent 不该等你按回车才开始工作。</strong> Anthropic Routines 最小配置 = prompt + repo + connector + trigger 四样;<strong>主动式 Agent 三大设计问题</strong>:触发器 + 上下文 + 可转向性;<strong>渐进路径</strong>:先调查建议,再放行动权限。</p>
+
+<h2 id="速查表">速查表</h2>
+
+<p><strong>核心命题</strong>:AI 提效从”写好 prompt”转向”把稳定流程设计成可触发、可观察、可校验的系统”
+<strong>核心金句 4 条</strong>:① 编码 agent 不该等你按回车 ② Claude 拥有什么上下文,就能做到哪一步 ③ 主动式 agent 不要求人消失,要求人能叫停 ④ proactive agents beat reactive agents
+<strong>关键数字</strong>:Routines 最小配置 4 样 / Claude Code 每周 PR 增 200% / 内部文档 routine 每周一上午 10 点跑</p>
+
+<h2 id="反直觉-5-个">反直觉 5 个</h2>
+
+<ol>
+  <li>主动式 agent 成熟形态不要求人消失,要求人能叫停</li>
+  <li>AI 判断不稳定根因往往不是模型态度,是流程没把信息接进来</li>
+  <li>主动式 agent 不是黑箱后台,是可打开的协作文档</li>
+  <li>AI 提效从”写好 prompt”转向”流程可触发/可观察/可校验”</li>
+  <li>proactive agents beat reactive agents(问题出现时先开始调查)</li>
+</ol>
+
+<h2 id="5-个对-seetong-团队可借鉴动作">5 个对 Seetong 团队可借鉴动作</h2>
+
+<ol>
+  <li><strong>Seetong 现有 cron 流程从”写好 prompt 跑一次”升级为”Routines 思路”</strong> — 加托管 + 触发器 + 上下文声明 + 可转向入口</li>
+  <li><strong>设 Seetong Agent 三大设计问题 checklist</strong> — 触发器 + 上下文 + 可转向性,每个新 Skill 上线前必填</li>
+  <li><strong>建立”上下文=成功的上限”作为 Seetong Agent 设计原则</strong> — 列每个 Skill 的输入源清单</li>
+  <li><strong>设”小处先赢”渐进路径</strong> — 挑每周重复 + 输入稳定 + 需人确认的流程,跑顺后再加下一个</li>
+  <li><strong>借鉴 Anthropic 内部 Sarah 文档同步 routine 模式</strong> — Seetong-tps 跨端版本说明 / 内部 SDK changelog 同步</li>
+</ol>
+
+<h2 id="关联">关联</h2>
+
+<p><strong>主条目</strong>:[[Claude-Code-主动式Agent-Routines]]
+<strong>上游</strong>:[[Claude-Code首席设计师Meaghan-Choi工作流]] / [[Claude-Code一周年回顾-Boris-Cat]] / [[Anthropic万字长文三个判断和一个阳谋]] / [[claude-code-dynamic-workflows]]
+<strong>下游</strong>:[[Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解-把反馈循环放进工程现场]] / [[APPSO-Codex-Claude-Code-Loop-Engineering]] / [[Agentic-Engineering-AI-Workbench]]
+<strong>同级</strong>:[[Claude-Code之父品味不是人类护城河]] / [[Claude-Code作者Boris-28分钟教你写真正有效的Prompts]]</p>
+
+<h2 id="备注">备注</h2>
+
+<ul>
+  <li>速读版:核心结论 + 反直觉 + Seetong 借鉴动作 + 关联指针</li>
+  <li>完整编译页:同目录 [[Claude-Code-主动式Agent-Routines]]</li>
+  <li>演讲原视频:https://www.youtube.com/watch?v=eSP7PLTXNy8 (比浓缩稿更完整,含 Maya 现场演示和问答)</li>
+</ul>

@@ -1,0 +1,169 @@
+<h1 id="如何使用-ai-打造一个智能高效省-token-的-ai-知识库llm-wiki-skill-设计详解">如何使用 AI 打造一个智能、高效、省 Token 的 AI 知识库？LLM-Wiki Skill 设计详解</h1>
+
+<ul>
+  <li>原文链接：https://mp.weixin.qq.com/s/zw7lNCj00dyaDvl8UaMXDw</li>
+  <li>来源：微信公众号 / moss</li>
+  <li>获取时间：2026-06-04</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论（一句话）</h2>
+
+<blockquote>
+  <p><strong>LLM-Wiki Skill 的核心方法论</strong>是：用结构化存储降低输入成本（拆知识节点 + 三层存储），用 grep 命令式查询降低输出成本（绕开意图识别）——让知识库不管存多少内容，输出成本都可控。</p>
+</blockquote>
+
+<h2 id="分类提炼">分类提炼</h2>
+<ul>
+  <li>场景：个人知识库 / 团队知识沉淀 / Agent 驱动的第二大脑</li>
+  <li>标签：#主题/AI-Coding #主题/AI-Agent #节点/LLM-Wiki #节点/Memory</li>
+  <li>类型：方法论 / 工程实操 / Skill 设计</li>
+</ul>
+
+<h2 id="知识节点">知识节点</h2>
+
+<ul>
+  <li><strong>LLM-Wiki Skill</strong>：moss 设计的本地 AI 知识库 Skill，能自动消化文章、做每日发芽报告和主题融合</li>
+  <li><strong>知识节点</strong>：从一篇文章中拆分出的独立概念或判断，每条独立可 grep</li>
+  <li><strong>三层存储</strong>：原文 / 知识节点 / 索引文件，三层协同支撑轻量检索</li>
+  <li><strong>grep 查询</strong>：用命令行工具（grep / ripgrep）做结构化检索，不依赖 LLM 意图识别</li>
+  <li><strong>发芽报告</strong>：每日回顾——把今日新节点和图谱关联节点融合，生成新观点</li>
+  <li><strong>主题融合</strong>：输入主题 → 多轮 grep 筛选收窄 → 融合多篇生成新文章</li>
+  <li><strong>Token 经济</strong>：用 grep 绕开意图识别后，整个查询 token 控制在几千以内</li>
+  <li><strong>意图识别绕过</strong>：大模型最费 token 的环节是意图识别，grep 查询直接跳过</li>
+  <li><strong>命令式查询</strong>：靠命令 / 标签 / 关键词直接查询，不做大规模语义理解</li>
+  <li><strong>图谱关系</strong>：知识节点之间的关联结构（基于 / 引用 / 并列 / 验证）</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+<ul>
+  <li>[[AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]]：RAG → NotebookLM → LLM-Wiki 的技术演进背景</li>
+  <li>[[ai-personal-knowledge-base-problems]]：传统个人知识库的痛点分析</li>
+  <li>[[hermes-obsidian-llm-wiki-knowledge-base]]：Obsidian + LLM Wiki 的混合实现</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+<ul>
+  <li>[[MyAIWiki写入规范与验证模板]]：本 Wiki 正是 LLM-Wiki 方法论的具体应用</li>
+  <li>[[.ai-wiki-schema]]：本 Wiki 的 schema 是 LLM-Wiki 思想的工程化</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+<ul>
+  <li>[[构建LLM-Wiki智能知识库-实现AI辅助写作工作流]]：同作者 moss 的 LLM-Wiki 上篇</li>
+  <li>[[deep-analysis-llm-wiki-obsidian-wiki-gbrain]]：LLM-Wiki + Obsidian 的深度分析</li>
+</ul>
+
+<h2 id="正文要点">正文要点</h2>
+
+<ul>
+  <li><strong>核心痛点</strong>：把文章存进笔记软件后再也没打开过——这不是知识管理，是收藏</li>
+  <li><strong>真正的目标</strong>：每天生成”发芽报告”（今日新节点回顾 + 关联节点融合）；想写内容时自动基于知识库整理成文章</li>
+  <li><strong>输入端三层存储</strong>：原文 / 知识节点 / 索引文件——精准找节点、不用读整篇；输入 token 固定</li>
+  <li><strong>输出 1：发芽报告</strong>——今日新节点 → 通过图谱找 4-5 个关联节点 → 碰撞融合 → 生成新观点</li>
+  <li><strong>输出 2：主题融合</strong>——主题 → 意图识别（拆 10 个标签）→ 多轮 grep 筛选收窄 → 融合生成</li>
+  <li><strong>关键洞察</strong>：大模型里真正费 token 的大头是<strong>意图识别</strong>，grep 命令式查询绕过了这一步</li>
+  <li><strong>设计原则一句话</strong>：用结构化存储降低输入成本，用 grep 命令式查询降低输出成本</li>
+</ul>
+
+<h2 id="表格输入-vs-输出成本对比">表格：输入 vs 输出成本对比</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>环节</th>
+      <th>设计</th>
+      <th>Token 消耗</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>输入：链接/文字 → 拆节点</td>
+      <td>三层存储（原文/节点/索引）</td>
+      <td><strong>固定且低</strong>（不随知识库增长）</td>
+    </tr>
+    <tr>
+      <td>输出 1：发芽报告</td>
+      <td>grep 找关联节点 + 融合</td>
+      <td><strong>极低</strong>（绕开意图识别）</td>
+    </tr>
+    <tr>
+      <td>输出 2：主题融合</td>
+      <td>意图识别（拆 10 标签） + 多轮 grep + 融合</td>
+      <td><strong>可控</strong>（整流程几千 token）</td>
+    </tr>
+    <tr>
+      <td>核心方法</td>
+      <td><strong>结构化存储 + 命令式查询</strong></td>
+      <td>不管存多少，输出成本都低</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="落地-myaiwiki-的改造对照">落地 MyAIWiki 的改造对照</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>LLM-Wiki 已有</th>
+      <th>MyAIWiki 现状</th>
+      <th>改造方向</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>三层存储（原文/节点/索引）</td>
+      <td>原文 + 整理稿两层</td>
+      <td>加”知识节点”层</td>
+    </tr>
+    <tr>
+      <td>grep 命令式查询</td>
+      <td>没用 ripgrep</td>
+      <td>Skill 加 <code class="language-plaintext highlighter-rouge">rg</code></td>
+    </tr>
+    <tr>
+      <td>每日发芽报告</td>
+      <td>有 morning-digest.py</td>
+      <td>升级为节点融合版</td>
+    </tr>
+    <tr>
+      <td>主题融合生成</td>
+      <td>手动选文章</td>
+      <td>加 ripgrep 多轮筛选</td>
+    </tr>
+    <tr>
+      <td>关联图谱</td>
+      <td>Obsidian 自带反链</td>
+      <td>显式声明 3 维度关联（上游/下游/同级）</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="我的理解">我的理解</h2>
+
+<ul>
+  <li><strong>这是 MyAIWiki 升级的核心方法论</strong>——本 Wiki 已经写完两篇 LLM-Wiki 相关文章，这篇是工程实操的标杆</li>
+  <li>核心不是”做工具”，而是<strong>改变存储 + 改变查询的范式</strong>：
+    <ul>
+      <li>存储：从”整篇文章” → “独立知识节点”</li>
+      <li>查询：从”问 LLM” → “grep 命令”</li>
+    </ul>
+  </li>
+  <li>跟 [[AI-Coding的顿悟时刻]] 的判断一致：复利来自 Skill / Memory / Context Engineering，不是单条 prompt</li>
+  <li>MyAIWiki 的下一阶段重点：<strong>所有新文章按知识节点 + 关联图谱写，老文章逐步加 frontmatter</strong></li>
+</ul>
+
+<h2 id="适合关联的主题">适合关联的主题</h2>
+
+<ul>
+  <li>[[AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]]</li>
+  <li>[[构建LLM-Wiki智能知识库-实现AI辅助写作工作流]]</li>
+  <li>[[deep-analysis-llm-wiki-obsidian-wiki-gbrain]]</li>
+  <li>[[hermes-obsidian-llm-wiki-knowledge-base]]</li>
+  <li>[[ai-personal-knowledge-base-problems]]</li>
+  <li>[[rag-fundamentals]]</li>
+  <li>[[llm-agent-unified-memory-framework]]</li>
+  <li>[[claude-obsidian-second-brain]]</li>
+  <li>[[MyAIWiki写入规范与验证模板]]</li>
+</ul>

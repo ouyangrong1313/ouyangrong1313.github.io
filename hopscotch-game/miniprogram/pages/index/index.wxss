@@ -1,0 +1,319 @@
+/**
+ * 童年跳房子大挑战 - 首页样式
+ * pages/index/index.wxss
+ */
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #87CEEB 0%, #B0E0E6 30%, #FFF8DC 70%, #FFE4E1 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 云朵装饰 */
+.clouds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 300rpx;
+  pointer-events: none;
+}
+
+.cloud {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 100rpx;
+  animation: float 3s ease-in-out infinite;
+}
+
+.cloud::before,
+.cloud::after {
+  content: '';
+  position: absolute;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.cloud-1 {
+  width: 120rpx;
+  height: 50rpx;
+  top: 60rpx;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.cloud-1::before {
+  width: 60rpx;
+  height: 60rpx;
+  top: -30rpx;
+  left: 20rpx;
+}
+
+.cloud-1::after {
+  width: 50rpx;
+  height: 50rpx;
+  top: -20rpx;
+  left: 55rpx;
+}
+
+.cloud-2 {
+  width: 150rpx;
+  height: 60rpx;
+  top: 100rpx;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.cloud-2::before {
+  width: 70rpx;
+  height: 70rpx;
+  top: -35rpx;
+  left: 25rpx;
+}
+
+.cloud-2::after {
+  width: 55rpx;
+  height: 55rpx;
+  top: -25rpx;
+  left: 75rpx;
+}
+
+.cloud-3 {
+  width: 100rpx;
+  height: 40rpx;
+  top: 150rpx;
+  left: 50%;
+  animation-delay: 2s;
+}
+
+.cloud-3::before {
+  width: 50rpx;
+  height: 50rpx;
+  top: -25rpx;
+  left: 15rpx;
+}
+
+.cloud-3::after {
+  width: 40rpx;
+  height: 40rpx;
+  top: -18rpx;
+  left: 50rpx;
+}
+
+/* 标题区域 */
+.title-section {
+  margin-top: 80rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 10;
+}
+
+.game-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30rpx 60rpx;
+  border-radius: 30rpx;
+  border: 6rpx solid #FF6B6B;
+  box-shadow: 0 10rpx 30rpx rgba(255, 107, 107, 0.3);
+}
+
+.title-main {
+  font-size: 64rpx;
+  font-weight: bold;
+  color: #FF6B6B;
+  text-shadow: 3rpx 3rpx 0rpx #FFE4E1;
+  letter-spacing: 8rpx;
+}
+
+.title-sub {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #4ECDC4;
+  text-shadow: 3rpx 3rpx 0rpx #FFE4E1;
+  letter-spacing: 12rpx;
+  margin-top: 10rpx;
+}
+
+/* 跳房子图标 */
+.hopscotch-icon {
+  margin-top: 40rpx;
+}
+
+.house-grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200rpx;
+  justify-content: center;
+}
+
+.grid-item {
+  width: 55rpx;
+  height: 55rpx;
+  background: #FFE66D;
+  border: 4rpx solid #5D4E37;
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #5D4E37;
+  margin: 5rpx;
+  box-shadow: 0 4rpx 0rpx #D4A84B;
+}
+
+/* 最高分展示 */
+.high-score-section {
+  margin-top: 50rpx;
+  z-index: 10;
+}
+
+.score-badge {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+  padding: 20rpx 50rpx;
+  border-radius: 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 8rpx 25rpx rgba(255, 107, 107, 0.4);
+  border: 4rpx solid #fff;
+}
+
+.score-label {
+  font-size: 24rpx;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 4rpx;
+}
+
+.score-value {
+  font-size: 56rpx;
+  font-weight: bold;
+  color: #FFE66D;
+  text-shadow: 2rpx 2rpx 0rpx rgba(0, 0, 0, 0.2);
+}
+
+/* PK提示 */
+.pk-notice {
+  margin-top: 30rpx;
+  background: rgba(78, 205, 196, 0.9);
+  padding: 15rpx 30rpx;
+  border-radius: 30rpx;
+  z-index: 10;
+}
+
+.pk-notice text {
+  color: white;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+
+/* 按钮区域 */
+.btn-section {
+  margin-top: 60rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25rpx;
+  z-index: 10;
+}
+
+.btn-start,
+.btn-pk,
+.btn-rules,
+.btn-rank {
+  width: 320rpx;
+  height: 90rpx;
+  border-radius: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+  font-weight: bold;
+  color: white;
+  border: none;
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.2);
+}
+
+.btn-start {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+  border: 4rpx solid #fff;
+}
+
+.btn-pk {
+  background: linear-gradient(135deg, #4ECDC4 0%, #7EDDD6 100%);
+  border: 4rpx solid #fff;
+}
+
+.btn-rules {
+  background: linear-gradient(135deg, #FFE66D 0%, #FFD93D 100%);
+  color: #5D4E37;
+  border: 4rpx solid #fff;
+}
+
+.btn-rank {
+  background: linear-gradient(135deg, #DDA0DD 0%, #EE82EE 100%);
+  border: 4rpx solid #fff;
+}
+
+.btn-icon {
+  margin-right: 10rpx;
+  font-size: 28rpx;
+}
+
+/* 地面装饰 */
+.ground-section {
+  position: absolute;
+  bottom: 120rpx;
+  left: 0;
+  right: 0;
+  height: 150rpx;
+}
+
+.retro-ground {
+  height: 100%;
+  background: linear-gradient(180deg,
+    #D2691E 0%,
+    #8B4513 40%,
+    #654321 100%
+  );
+  border-top: 8rpx solid #3D2314;
+  position: relative;
+}
+
+.ground-line {
+  position: absolute;
+  width: 100%;
+  height: 4rpx;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0rpx,
+    transparent 20rpx,
+    rgba(255, 255, 255, 0.1) 20rpx,
+    rgba(255, 255, 255, 0.1) 40rpx
+  );
+}
+
+.ground-line:nth-child(1) { top: 30%; }
+.ground-line:nth-child(2) { top: 60%; }
+.ground-line:nth-child(3) { top: 85%; }
+
+/* 分享提示 */
+.share-hint {
+  position: absolute;
+  bottom: 40rpx;
+  z-index: 10;
+}
+
+.share-hint text {
+  font-size: 22rpx;
+  color: rgba(93, 78, 55, 0.6);
+  letter-spacing: 2rpx;
+}

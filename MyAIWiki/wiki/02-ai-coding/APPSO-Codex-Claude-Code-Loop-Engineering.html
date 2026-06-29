@@ -1,0 +1,79 @@
+<h1 id="codex和claude-code负责人都不写提示词了ai-圈爆火的loop到底是什么">Codex和Claude Code负责人都不写提示词了,AI 圈爆火的Loop到底是什么</h1>
+
+<ul>
+  <li>原文链接:https://mp.weixin.qq.com/s/nM1fpAdA8F2wYPNh2jEvPg</li>
+  <li>原始作者:APPSO / 发现明日产品的</li>
+  <li>发布时间:2026-06(具体日期未标注)</li>
+  <li>获取时间:2026-06-14</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论(一句话)</h2>
+<p>Loop Engineering 不是”新瓶装旧酒”,而是当 Agent 能连续跑几十分钟/几小时时,人机协作单位从”一次对话”升到”完整反馈回路”——人该从”每轮 prompt”退到”设计 loop”;<strong>分清”好提示词够了”和”必须 loop”的分界线,比”循环工程”这个名字本身重要得多</strong>。</p>
+
+<h2 id="知识节点8-个">知识节点(8 个)</h2>
+
+<ul>
+  <li><strong>时代迁移</strong>:Prompt Engineering(写好一句提示词)→ Harness Engineering(给模型搭框架套马鞍)→ Loop Engineering(把反馈回路系统化);人从执行者变成系统设计者</li>
+  <li><strong>Loop 本质</strong>:把”行动→观察→修正→再行动”的人手循环系统化——过去靠人手复制报错/追问/提醒/判断停,现在写成规则交给系统跑</li>
+  <li><strong>5 个必答问题</strong>:AI 何时开工 / 调哪些工具 / 怎么知道做错了 / 结果记在哪里 / 何时必须停下交人——这是 loop 设计的最小完整性检查</li>
+  <li><strong>5+1 积木</strong>(Addy Osmani):定时任务(Codex Automations / OpenClaw HEARTBEAT / Claude Cowork Scheduled)+ worktree(隔离分支)+ Skill(过程资产)+ 连接器(MCP)+ 子 Agent(写与审必须两拨人)+ 1 状态文件(对话外记忆)</li>
+  <li><strong>不只代码</strong>:内容(选题→事实核验→发布前检查)/ 客服(分诊+草稿+人工兜底)/ 产品运营(反馈聚合)/ 研究(论文追踪)四类同构场景;<strong>共同点 = 任务反复 + 流程稳定 + 结果可检查 + 判断在人</strong></li>
+  <li><strong>3 个上手前提</strong>:Token 管够 + 任务每周重复 + 有自动验证(测试/类型检查/构建);<strong>缺一条,循环成本可能高过回报</strong></li>
+  <li><strong>成本转移</strong>:从”人时间成本”转到”系统 Token 成本”——无限额度的人(龙虾之父、Boris、Addy)觉得常识,月付 20 美元跑两天到周限额;<strong>真正优化的可能不再是某一句提示词,而是整个反馈回路</strong></li>
+  <li><strong>分界线</strong>:一次性活=好提示词又快又便宜;反复活=必须 loop;<strong>关键判断 = “AI 已经能连续处理多轮任务时,人还要不要继续卡在每次追问里”</strong></li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游本文基于来自">上游(本文基于/来自)</h3>
+<ul>
+  <li>[[Addy-Osmani-Loop-Engineering]] — 5+1 积木方法论原始来源(41 万浏览)</li>
+  <li>[[Loop-Engineering-详解-把反馈循环放进工程现场]] — 若飞中文工程实操版(7 天试点+5 项准入)</li>
+  <li>Boris Cherny / Cat Wu 一周年节目 + 龙虾之父 X 推文</li>
+</ul>
+
+<h3 id="下游本文应用于补全到">下游(本文应用于/补全到)</h3>
+<ul>
+  <li>[[从Prompt-Context到Harness-工程的三次进化与终局之战]] — 三层演进框架</li>
+  <li>[[Claude-Code一周年回顾-Boris-Cat]] — Boris/Cat Loop 表达原文</li>
+  <li>[[Claude-Code之父品味不是人类护城河]] — Boris”我的工作已经变成写 Loops”</li>
+  <li>[[claude-code-dynamic-workflows]] — Claude Code dynamic workflow 实现层</li>
+</ul>
+
+<h3 id="同级横向并列">同级(横向/并列)</h3>
+<ul>
+  <li>[[Claude-Code首席设计师Meaghan-Choi工作流]] — 同一波 AI Coding 大佬的”定时巡逻产品质量”实践</li>
+  <li>[[Anthropic万字长文三个判断和一个阳谋]] — 产业战略层</li>
+</ul>
+
+<h2 id="正文要点8-条">正文要点(8 条)</h2>
+
+<ol>
+  <li><strong>质疑</strong>:有人觉得 Loop Engineering 是新瓶装旧酒,正在用 Agent 的用户自然就实现了 loop,不用单拎出来。本文反驳:技术没新东西,但<strong>模型终于能把循环跑下去</strong>才是 Loop 重新被讨论的根因</li>
+  <li><strong>典型 loop</strong>:AI 写代码→跑测试→报错→贴回去→改→再跑;<strong>人从”每轮推动”退到”把规则写下来”</strong></li>
+  <li><strong>代码场景化</strong>:每天早上系统自动检查昨晚失败提交,AI 读日志,能复现的在 worktree 修+跑测试+开草稿 PR;不能复现的写现场+尝试+下一步进状态文件等人接</li>
+  <li><strong>5+1 积木逐项</strong>:定时任务是”自动化循环第一步”;worktree 是”防互相覆盖”;Skill 是”项目知识不用每次猜”;连接器是”靠 MCP 跳出文件系统”;子 Agent 是”写与审必须两拨人”;状态文件是”对话外记忆”</li>
+  <li><strong>不只编程</strong>:内容(选 5 个可能成稿选题+标资料缺口)/ 客服(分诊+草稿+敏感投诉留人)/ 产品运营(反馈聚合)/ 研究(每周新论文+已有判断)</li>
+  <li><strong>3 个前提</strong>:Token 管够(月付 20 美元跑两天到周限额)/ 任务每周重复(一次性活用好提示词更快更便宜)/ 自动验证(Agent 没人盯时拦烂活)</li>
+  <li><strong>成本结构变化</strong>:过去=人时间,现在=系统 Token;<strong>新账本 = “一次 loop 的 token” vs “一次对话追问几轮的人时间”</strong>;模型越强,loop 越划算</li>
+  <li><strong>核心命题</strong>:Loop Engineering 是不是新学科不重要,<strong>“哪些事只需好提示词 / 哪些事需要 loop”这条分界线才重要</strong></li>
+</ol>
+
+<h2 id="对-seetong-团队-4-个可借鉴动作">对 Seetong 团队 4 个可借鉴动作</h2>
+
+<ol>
+  <li><strong>盘点已是 loop 的</strong>:OpenClaw HEARTBEAT(30m 心跳)、Seetong 团队日报/周报/简报 cron、神策友盟反馈 dry-run、神策 Login 成功率每日巡检——<strong>这些都是 loop 雏形,只是没人把它们当 loop 看</strong>;把它们写进 [[Codex配置原则总览]] 的”已是 loop”清单</li>
+  <li><strong>选 1 个”高 ROI + 验证便宜”场景试 7 天</strong>:候选——神策崩溃堆栈归类(自动 verify=错误码匹配)/ TAPD 过期迭代关闭(自动 verify=已 close 状态)/ 用户反馈去重(自动 verify=关键词 hash);不要从 “AI 写代码” 起步(验证贵)</li>
+  <li><strong>写 Loop 任务卡 8 项必填</strong>:循环名称 / 触发频率 / 输入范围 / 最大运行 / 权限 / 验证 / 停止 / 交付物;复用 [[Loop-Engineering-详解-把反馈循环放进工程现场]] 的任务卡预算模板</li>
+  <li><strong>拒绝为 loop 而 loop</strong>:Seetong 一次性需求(版本发版、调研分析)继续用好提示词+Plan 模式;<strong>只有”每周/每天重复 + 流程稳定 + 验证便宜”三件齐全才上 loop</strong>——一次性的活,好提示词又快又便宜</li>
+</ol>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li><strong>“四次独立信息源同向”是同温层信号</strong>——Boris/Cat/Tibo/Addy 都在 AI Coding 头部社交网络,未必代表行业共识</li>
+  <li>“一次 loop 的 token 实际 vs 一次对话追问几轮”的对比数据未给</li>
+  <li>本文无 7 天试点路径/数据,与若飞详解互补</li>
+  <li>龙虾之父”5 分钟唤醒 Codex”的成功率/质量/成本未披露</li>
+  <li>本文是”产业视角入门版”,适合先建立 Loop 是什么的认知;<strong>真要做试点先看若飞详解或 Addy 原文</strong></li>
+</ul>

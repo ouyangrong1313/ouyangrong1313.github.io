@@ -1,0 +1,553 @@
+<h1 id="agentic-engineering-实战把计划上下文和验证做成-ai-工作台">Agentic Engineering 实战：把计划、上下文和验证做成 AI 工作台</h1>
+
+<ul>
+  <li>原文链接：https://mp.weixin.qq.com/s/TTLaGn28owLQSy-cvEgPWw</li>
+  <li>原始素材：Matt Van Horn《Every Agentic Engineering Hack I Know》/ John Kim《How I use Claude Code》/ Kaxil Naik《I Haven’t Written a Line of Code in 4 Months》/ Simon Willison《Context engineering》/ Addy Osmani《Agent Skills》</li>
+  <li>来源：微信公众号 / 架构师 JiaGouX（若飞，编译）</li>
+  <li>发布时间：2026-06-08 23:20</li>
+  <li>获取时间：2026-06-09</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论（一句话）</h2>
+
+<blockquote>
+  <p><strong>“Agent 面前摆着一张工作台”</strong>——AI 工作台 = <strong>计划 / 上下文 / 执行 / 验证 / 治理</strong> 五层；个人可以 YOLO，团队必须把”任务卡 + 工作区隔离 + 可验证结果 + 合并规则”这四件事说清楚后再多开 Agent；<strong>CLAUDE.md 三段式（What/Domain/Validation）、plan.md 任务协议、Skill = 过程资产、Subagents = 隔离、团队 3 层权限渐进（只读→半自动→受控写入）</strong>构成可落地的最小工作台。</p>
+</blockquote>
+
+<h2 id="分类提炼">分类提炼</h2>
+
+<ul>
+  <li><strong>场景</strong>：AI-Native 工程团队 / 工作台分层治理 / 工程师角色升级</li>
+  <li><strong>标签</strong>：#主题/AI-Coding #主题/AI-Native #主题/Harness #主题/工作台</li>
+  <li><strong>类型</strong>：实战方法论 / 编译长文 / 范式归纳</li>
+  <li><strong>价值层级</strong>：⭐⭐⭐（这是 [[every-agentic-engineering-hack-2026-06]]（个人 YOLO 版）的”团队工程化版”——把 Matt 的 Hacks 翻译成可治理的工程交付物）</li>
+</ul>
+
+<h2 id="知识节点8-个独立概念">知识节点（8 个独立概念）</h2>
+
+<ul>
+  <li><strong>AI-工作台五层</strong>：计划 / 上下文 / 执行 / 验证 / 治理；每层有”最小交付物”和”用来解决什么”——可作为团队 AI-Native 改造的总检查清单</li>
+  <li><strong>可控并行</strong>：多开 Agent 之前必须先回答 5 问（任务怎么拆 / 工作区怎么隔离 / 结果怎么验 / 冲突怎么收 / 错了怎么退）；每开一个 Agent 先写一张”任务卡”</li>
+  <li><strong>plan-md 任务协议</strong>：8 段核心（目标/不做什么/背景输入/涉及文件/实施步骤/验收标准/验证命令/当前状态）+ 2 段进阶（证据要求/合并条件）；Agent 提前收工通常因为”完成条件没写清楚”</li>
+  <li><strong>5层上下文 × 3档载入</strong>：5 层（当前窗口/项目规则/任务状态/历史资料/结果）× 3 档（直接放进窗口/放文件让 Agent 读/放外部检索）；CLAUDE.md 三段式（What/Domain/Validation），<strong>重 Validation</strong></li>
+  <li><strong>Skill = 过程资产</strong>：Skill 是可执行流程不是最佳实践文档；6+ 段式（触发场景/先读资料/步骤/命令/失败模式/输出证据/gotchas）；任何重复超过两次的事情都值得变成 Skill</li>
+  <li><strong>Subagents = 隔离原则</strong>：能独立探索、独立验证、只返回高密度结果的任务才拆；需要频繁协商/共享状态/强耦合的任务留在主线；多 Agent 麻烦在”结果怎么合并、证据怎么保留、失败怎么回到流程里”</li>
+  <li><strong>团队3层权限渐进</strong>：只读 → 半自动 → 受控写入；接入真实系统前先写 5 行威胁模型（能读什么 / 能否发出去 / prompt injection / 误操作可撤回 / 审计可追人）</li>
+  <li><strong>PR 模板 = 验证证据前置</strong>：代码生成几乎免费后 review 才是瓶颈；Agent 会静默失败（错误输出”看起来很合理”）；PR 必带 7 项（目标/范围/取舍/命令/结果/风险/人工多看一眼的位置）</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+<ul>
+  <li>原始素材：Matt Van Horn（个人 YOLO 派）/ John Kim（克制工程派）/ Kaxil Naik（4 个月不写代码派）/ Simon Willison（context engineering 命名者）/ Addy Osmani（Agent Skills 综述）</li>
+  <li>[[every-agentic-engineering-hack-2026-06]]：本篇的”个人版母本”——Matt Van Horn 的 22 Hacks</li>
+  <li>[[claude-code-dynamic-workflows]]：本篇 plan.md 思路与 Dynamic Workflows 是同一精神（plan 是动态可执行的）</li>
+  <li>[[从Prompt-Context到Harness-工程的三次进化与终局之战]]：本篇”上下文不是越多越好”是 Harness 思想的具体化</li>
+  <li>[[买了一样的AI为什么别家的比你的强]]：本篇”Skill = 过程资产”与 Hiten Shah “Skill 战略”是同一信号的组织内落地版</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+<ul>
+  <li>[[Notion-spec-driven-AI-workflow]]：spec-driven 是 plan.md 的一种更严格形式（spec 进仓库 + verification）</li>
+  <li>[[AI-Coding的顿悟时刻]]：”Spec→LDD 流水线 + 未来瓶颈=需求定义+架构设计”——本篇 5 层工作台是同主线的”工程化版本”</li>
+  <li>[[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]：本篇 plan.md 8 段结构可与 Spec-Kit 的 spec.md 对照</li>
+  <li>[[多Agent使用边界与并行判定]]：本篇”可控并行 5 问 + 任务卡”是更具体的可执行版</li>
+  <li>[[任务类型到验证模板]]：本篇”PR 模板 + 验证证据前置”是该主线在 Agent 时代的延续</li>
+  <li>[[Claude-Code团队5条工作原则-Fiona-Fung分享]]：本篇”团队权限渐进”与 Fiona “Trust but verify + 团队级 harness”是同主线</li>
+</ul>
+
+<h3 id="同级横向--并列--镜像">同级（横向 / 并列 / 镜像）</h3>
+<ul>
+  <li>[[Claude-Code负责人谈AI原生工程组织]]：组织层视角</li>
+  <li>[[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]：组织层视角</li>
+  <li>[[54万行代码的顿悟-Markdown才是新编程方式]]：个人层视角（Markdown 是新编程方式）</li>
+  <li>[[Anthropic万字长文三个判断和一个阳谋]]：”验收能力”主线，本篇是工程化落地版</li>
+</ul>
+
+<h2 id="正文要点8-条">正文要点（8 条）</h2>
+
+<h3 id="一ai-工作台-5-层结构核心范式">一、AI 工作台 5 层结构（核心范式）</h3>
+
+<p>Agent 面前摆着一张工作台：左边是计划，右边是上下文，后面接着测试、日志、权限和回滚。靠一句神奇提示词不够，它需要在一个被人整理过的现场里工作。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>层</th>
+      <th>最小交付物</th>
+      <th>用来解决什么</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>计划</td>
+      <td><code class="language-plaintext highlighter-rouge">plan.md</code>、验收勾选项</td>
+      <td>防止任务跑偏、提前收工</td>
+    </tr>
+    <tr>
+      <td>上下文</td>
+      <td><code class="language-plaintext highlighter-rouge">CLAUDE.md</code>、任务资料包</td>
+      <td>防止靠聊天记忆硬撑</td>
+    </tr>
+    <tr>
+      <td>执行</td>
+      <td>worktree、Skills、Subagents</td>
+      <td>防止并行互相污染</td>
+    </tr>
+    <tr>
+      <td>验证</td>
+      <td>测试、日志、截图、trace、PR 说明</td>
+      <td>防止”看起来做完了”</td>
+    </tr>
+    <tr>
+      <td>治理</td>
+      <td>allowlist、hooks、权限表、回滚点</td>
+      <td>防止把个人 YOLO 带进团队</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong>工作台搭得越清楚，Agent 干活越有边界。</strong></p>
+</blockquote>
+
+<h3 id="二多开-agent-之前先把可控并行说清楚">二、多开 Agent 之前，先把”可控并行”说清楚</h3>
+
+<p>团队里多 Agent 三个常见翻车：</p>
+<ul>
+  <li>多个 Agent 改同一个工作目录，文件互相覆盖</li>
+  <li>多个任务共用一段上下文，旧错误和新目标混在一起</li>
+  <li>产出变多了，但 review、测试、合并和回滚跟不上</li>
+</ul>
+
+<p>必须先回答 5 问：</p>
+<ol>
+  <li>任务怎么拆（哪些能独立执行，哪些需要留在主线里）</li>
+  <li>工作区怎么隔离（worktree / 临时分支 / 只读探索）</li>
+  <li>结果怎么验（每个子任务交什么证据）</li>
+  <li>冲突怎么收（谁合并、谁 review、谁决定丢弃）</li>
+  <li>错了怎么退（能不能回滚到任务开始前）</li>
+</ol>
+
+<p>每开一个 Agent，先写一张”任务卡”：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>任务：修复订单导出超时
+工作区：worktree/order-export-timeout
+边界：只改导出链路，不动权限模型
+输入：issue 链接、报错日志、最近一次慢查询
+交付：diff、测试命令、关键日志、剩余风险
+合并：主会话 review 后再合入
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>worktree 解决的是物理隔离，验收、评审和合并，还得另外设计。</strong> 并行和协作不是一回事。</p>
+
+<h3 id="三planmd-8-段核心--2-段进阶">三、plan.md 8 段核心 + 2 段进阶</h3>
+
+<p>Matt 的工作流里最靠前的动作是先生成 <code class="language-plaintext highlighter-rouge">plan.md</code>。<code class="language-plaintext highlighter-rouge">/ce-plan</code> 不是写通用计划，而是先读代码库找已有模式/约定/历史经验，再写出带验收标准的 plan.md。</p>
+
+<p>8 段核心：</p>
+<ol>
+  <li><strong>目标</strong> —— 这次要解决什么问题</li>
+  <li><strong>不做什么</strong> —— 明确排除哪些范围</li>
+  <li><strong>背景和输入</strong> —— issue / 截图 / 报错 / 用户反馈 / 链接</li>
+  <li><strong>可能涉及的文件</strong> —— 先列线索</li>
+  <li><strong>实施步骤</strong> —— 按可验证的小步拆</li>
+  <li><strong>验收标准</strong> —— 什么结果算完成</li>
+  <li><strong>验证命令</strong> —— 测试 / 构建 / lint / 截图 / 日志检查</li>
+  <li><strong>当前状态</strong> —— 已做、未做、阻塞、下一步</li>
+</ol>
+
+<p>2 段进阶：</p>
+<ul>
+  <li><strong>证据要求</strong>：哪些命令要跑 / 要截图还是日志 / 哪些失败可接受、哪些需要停下</li>
+  <li><strong>合并条件</strong>：谁 review / PR 带哪些说明 / 哪些风险需人工确认</li>
+</ul>
+
+<blockquote>
+  <p>Agent 做长任务时一个常见问题是<strong>提前收工</strong>。它修了几个明显问题，跑了一个看起来还行的检查，然后自然进入总结状态。它不一定是在偷懒。很多时候，是我们没有把”完成条件”写清楚。</p>
+</blockquote>
+
+<h3 id="四5-层上下文--3-档载入">四、5 层上下文 × 3 档载入</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>层级</th>
+      <th>放什么</th>
+      <th>典型载体</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>当前窗口</td>
+      <td>当前目标、约束、最近观察、下一步决策</td>
+      <td>对话上下文</td>
+    </tr>
+    <tr>
+      <td>项目规则</td>
+      <td>架构边界、编码约定、禁止事项、验证方式</td>
+      <td><code class="language-plaintext highlighter-rouge">CLAUDE.md</code>、rules</td>
+    </tr>
+    <tr>
+      <td>任务状态</td>
+      <td>计划、已做事项、阻塞、证据</td>
+      <td><code class="language-plaintext highlighter-rouge">plan.md</code>、todo、issue</td>
+    </tr>
+    <tr>
+      <td>历史资料</td>
+      <td>会议、旧方案、事故、决策记录</td>
+      <td>Obsidian、Bear、Docs、搜索工具</td>
+    </tr>
+    <tr>
+      <td>结果</td>
+      <td>测试、日志、截图、trace、线上状态</td>
+      <td>CLI、MCP、hooks</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>3 档载入：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>档位</th>
+      <th>怎么给</th>
+      <th>适合什么</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>直接放进窗口</td>
+      <td>当前目标、约束、最近错误、关键 diff</td>
+      <td>这一轮马上要推理</td>
+    </tr>
+    <tr>
+      <td>放文件让 Agent 读</td>
+      <td><code class="language-plaintext highlighter-rouge">plan.md</code>、<code class="language-plaintext highlighter-rouge">CLAUDE.md</code>、运行说明、设计记录</td>
+      <td>任务过程中多次用到</td>
+    </tr>
+    <tr>
+      <td>放外部检索</td>
+      <td>会议全文、历史事故、社区讨论、旧 PR</td>
+      <td>只在需要时查</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><code class="language-plaintext highlighter-rouge">CLAUDE.md</code> 三段式（<strong>重 Validation</strong>）：</p>
+<ul>
+  <li><strong>What</strong> —— 项目做什么、技术栈、关键运行方式</li>
+  <li><strong>Domain</strong> —— 最容易误解的业务概念、数据边界、目录职责</li>
+  <li><strong>Validation</strong> —— 改完以后怎么证明（测试命令 / 构建命令 / 截图方式 / 日志位置 / 回归样例）</li>
+</ul>
+
+<blockquote>
+  <p>Agent 往往不缺生成能力，缺的是知道在你们系统里，什么才算真的做完。</p>
+</blockquote>
+
+<h3 id="五skill--过程资产不是高级-prompt">五、Skill = 过程资产（不是高级 prompt）</h3>
+
+<p>Skill 不是”最佳实践文档”，是<strong>可执行流程</strong>：</p>
+<ul>
+  <li>文档说”注意测试质量”（读完就忘）</li>
+  <li>流程说”先写失败用例 → 跑一次确认失败 → 写最小实现 → 跑测试 → 输出证据”（推到下一步）</li>
+</ul>
+
+<p>可用 Skill 至少 6+ 段：</p>
+<ol>
+  <li>什么场景触发</li>
+  <li>先读哪些资料</li>
+  <li>按什么步骤做</li>
+  <li>用哪些命令或脚本</li>
+  <li>常见失败模式是什么</li>
+  <li>最后交什么证据</li>
+  <li>失败以后怎么记录 gotchas</li>
+</ol>
+
+<p>hooks 是另一层——<strong>“做到某一步时系统自动插手一下”</strong>：</p>
+<ul>
+  <li>危险动作前拦（删除/迁移/发布/改生产配置/敏感目录）</li>
+  <li>工具执行后补信号（测试失败时整理关键日志、任务结束前要求输出验证证据）</li>
+</ul>
+
+<p>分工矩阵：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>机制</th>
+      <th>更适合做什么</th>
+      <th>不适合做什么</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Skill</td>
+      <td>描述流程、检查清单、输出证据</td>
+      <td>强制阻断危险动作</td>
+    </tr>
+    <tr>
+      <td>hook</td>
+      <td>拦截命令、补日志、提醒验证</td>
+      <td>承载复杂推理</td>
+    </tr>
+    <tr>
+      <td>Subagent</td>
+      <td>隔离搜索、审计、评审</td>
+      <td>上下文处理</td>
+    </tr>
+    <tr>
+      <td>plugin</td>
+      <td>打包团队能力</td>
+      <td>代替权限治理</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>第一版 hooks 可以很小——能拦住一类危险命令，能把一类失败变成 Agent 看得懂的上下文，就已经能减少不少返工。</p>
+
+<h3 id="六subagents-的核心是隔离不是多几个角色">六、Subagents 的核心是”隔离”，不是”多几个角色”</h3>
+
+<p>适合拆出去的（独立可验型）：</p>
+<ul>
+  <li>批量检索</li>
+  <li>独立 review</li>
+  <li>安全审计</li>
+  <li>大仓库扫点</li>
+  <li>只读资料整理</li>
+  <li>权限边界更窄的任务</li>
+</ul>
+
+<p><strong>不适合拆</strong>（强耦合型）：</p>
+<ul>
+  <li>需要频繁协商</li>
+  <li>共享大量中间状态</li>
+  <li>实现和规划强耦合</li>
+</ul>
+
+<p>主会话从 subagent 拿回高密度结果：结论 / 证据 / 风险 / 建议下一步。<strong>多 Agent 麻烦的地方，通常不在”谁扮演什么专家”，更多在结果怎么合并、证据怎么保留、失败怎么回到流程里。</strong></p>
+
+<h3 id="七团队-3-层权限渐进个人-yolo-vs-团队分层">七、团队 3 层权限渐进（个人 YOLO vs 团队分层）</h3>
+
+<p>Agent 正在从”代码助手”变成”执行层”——读邮件、查日历、搜 Slack、操作网页、拉会议记录、跑内部工具。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>阶段</th>
+      <th>能力边界</th>
+      <th>备注</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>只读</strong></td>
+      <td>读 issue/日志/文档/监控/测试结果/会议记录</td>
+      <td>先不写生产系统，不发消息，不改配置</td>
+    </tr>
+    <tr>
+      <td><strong>半自动</strong></td>
+      <td>生成草稿/命令/PR/变更单/回复建议</td>
+      <td>由人点击确认</td>
+    </tr>
+    <tr>
+      <td><strong>受控写入</strong></td>
+      <td>创建临时分支、更新草稿文档、本地脚本</td>
+      <td>低风险、可回滚、有审计</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>权限表：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>能力</th>
+      <th>默认策略</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>读代码、读文档</td>
+      <td>允许</td>
+      <td>注意私有仓库和敏感目录</td>
+    </tr>
+    <tr>
+      <td>跑测试、跑构建</td>
+      <td>允许</td>
+      <td>加上超时和资源限制</td>
+    </tr>
+    <tr>
+      <td>写本地文件</td>
+      <td>条件允许</td>
+      <td>尽量在分支或 worktree 里</td>
+    </tr>
+    <tr>
+      <td>发 PR</td>
+      <td>人工确认</td>
+      <td>PR 描述要带验证证据</td>
+    </tr>
+    <tr>
+      <td>访问 Slack / 邮箱</td>
+      <td>先只读</td>
+      <td>防止误发、泄露、prompt injection</td>
+    </tr>
+    <tr>
+      <td>改生产配置</td>
+      <td>默认禁止</td>
+      <td>走审批和审计</td>
+    </tr>
+    <tr>
+      <td>使用登录态操作网页</td>
+      <td>高风险</td>
+      <td>只在隔离账号和明确 allowlist 下试</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>接入真实系统前先写 5 行威胁模型：</p>
+<ul>
+  <li>这条链路能读到什么敏感信息</li>
+  <li>Agent 能不能把信息发出去</li>
+  <li>是否存在 prompt injection</li>
+  <li>误操作能不能撤回</li>
+  <li>日志和审计能不能追到人和会话</li>
+</ul>
+
+<blockquote>
+  <p>这部分看起来不如”多开 Agent”酷，但团队后面能不能用起来，很多时候就卡在这里。</p>
+</blockquote>
+
+<h3 id="八pr-模板--验证证据前置">八、PR 模板 = 验证证据前置</h3>
+
+<p>Kaxil Naik：Agent 让他几个月没有手写代码，但工作并没变轻松。少了敲代码，多了方向、判断、review 和调试 Agent 失败。</p>
+
+<p>两个现实问题：</p>
+<ul>
+  <li><strong>代码生成几乎免费以后，review 变成瓶颈。</strong> AI 生成的 PR 越来越多，但每一行 review 成本没消失。</li>
+  <li><strong>Agent 会静默失败。</strong> 错误输出经常看起来很合理——改错方向、没测到关键逻辑、生成读 diff 之前看不出问题的修复。</li>
+</ul>
+
+<p>PR 模板（必带 7 项）：</p>
+
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="gu">## 目标</span>
+这次 PR 解决什么问题。
+
+<span class="gu">## 改动范围</span>
+改了哪些模块，哪些明确没动。
+
+<span class="gu">## 验证证据</span>
+<span class="p">-</span> 命令：
+<span class="p">-</span> 结果：
+<span class="p">-</span> 截图 / 日志：
+
+<span class="gu">## 风险</span>
+<span class="p">-</span> 未覆盖：
+<span class="p">-</span> 需要人工确认：
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<blockquote>
+  <p>没有这份证据，PR 很容易只是把工作从”写代码”转移到了”猜它有没有做对”。</p>
+</blockquote>
+
+<h2 id="7-天小试点可借鉴实验">7 天小试点（可借鉴实验）</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>天</th>
+      <th>动作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>选任务（中等复杂度 + 风险低 + 复现路径明确）</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>写最小 <code class="language-plaintext highlighter-rouge">plan.md</code>（目标/不做什么/涉及文件/验收标准/验证命令）</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>只补一小段 <code class="language-plaintext highlighter-rouge">CLAUDE.md</code>（当前任务用得上的 Domain + Validation）</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Agent 在隔离环境实现（独立分支/worktree + 每步留证据）</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>认真做一次人工 review（看 diff / 看测试 / 标静默失败）</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>把失败写回 gotchas（能变命令的先变命令，能变 hook 的接 hook）</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>看 4 问（重复劳动 / 验证 / review 成本 / 复用）+ 5 指标</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>5 个朴素指标</strong>：返工次数 / 验证遗漏 / 上下文污染 / 合并耗时 / 经验沉淀</p>
+
+<h2 id="5-个最小行动行动笔记">5 个最小行动（行动笔记）</h2>
+
+<ol>
+  <li><strong>计划文件</strong>：复杂任务留一个文件出口，不只停在聊天里</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">CLAUDE.md</code></strong>：项目是什么、领域边界是什么、怎么证明做完</li>
+  <li><strong>验证 Skill</strong>：把团队最容易漏掉的验证流程写成 Skill</li>
+  <li><strong>hooks</strong>：第一版能挡一类危险命令 + 整理一类失败日志</li>
+  <li><strong>Subagents</strong>：能独立探索 / 独立验证 / 只返回高密度结果的任务才拆</li>
+</ol>
+
+<h2 id="关键术语索引">关键术语索引</h2>
+
+<ul>
+  <li><strong>AI 工作台五层</strong>：计划 / 上下文 / 执行 / 验证 / 治理（本文核心范式）</li>
+  <li><strong>plan.md / <code class="language-plaintext highlighter-rouge">/ce-plan</code></strong>：Matt 工作流中的计划入口</li>
+  <li><strong>CLAUDE.md 三段式</strong>：What / Domain / Validation</li>
+  <li><strong>Skill vs hooks vs Subagent vs plugin</strong>：分工矩阵（见 §五）</li>
+  <li><strong>可控并行</strong>：多开 Agent 之前的 5 问 + 任务卡</li>
+  <li><strong>团队 3 层权限</strong>：只读 / 半自动 / 受控写入</li>
+  <li><strong>威胁模型 5 行</strong>：能读什么 / 能否发出去 / prompt injection / 误操作可撤回 / 审计可追人</li>
+  <li><strong>Matt Van Horn</strong>：本篇核心信源之一，主张个人 YOLO 工作台</li>
+  <li><strong>John Kim</strong>：Meta Staff Engineer，主张克制工程派</li>
+  <li><strong>Kaxil Naik</strong>：4 个月不写代码，主张 review 是新瓶颈</li>
+  <li><strong>Addy Osmani</strong>：Agent Skills 综述作者，主张 Skill = 过程资产</li>
+  <li><strong>Simon Willison</strong>：context engineering 命名者</li>
+  <li><strong>若飞（架构师 JiaGouX）</strong>：本文作者，公众号”架构师”主理人</li>
+</ul>
+
+<h2 id="写作引用建议">写作引用建议</h2>
+
+<ul>
+  <li>引用本篇时优先用：工作台搭得越清楚，Agent 干活越有边界 / Agent 正在从代码助手变成执行层 / 代码生成几乎免费以后，review 变成瓶颈 / Agent 会静默失败 / 计划留得下来，上下文找得到，验证跑得起来，权限边界说得清，失败经验下次还能用</li>
+  <li>强关联引用：[[every-agentic-engineering-hack-2026-06]]（个人版母本）/ [[AI-Coding的顿悟时刻]]（”Spec→LDD + 工程师向两端收缩”）/ [[Notion-spec-driven-AI-workflow]]（plan.md 的一种更严格形式）/ [[Claude-Code团队5条工作原则-Fiona-Fung分享]]（Trust but verify + 团队级 harness）</li>
+</ul>

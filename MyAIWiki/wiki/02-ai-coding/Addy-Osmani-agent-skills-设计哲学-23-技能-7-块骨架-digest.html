@@ -1,0 +1,122 @@
+<h1 id="agent-skills-设计哲学--digest">agent-skills 设计哲学 — Digest</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<p>Chrome 团队 Lead 把”资深工程师工作流”打包成 <strong>23 技能 + 7 命令</strong>,治的是 AI 写代码”能跑但上生产就崩”的抄近路病;真正值钱的是 <strong>4 个设计哲学 + 7 块统一骨架</strong>,不是技能数量。</p>
+
+<h2 id="速查表">速查表</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>项</th>
+      <th>数字</th>
+      <th>含义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Star</td>
+      <td>58.9k</td>
+      <td>4-27 时 23k → 6-15 时 58.9k</td>
+    </tr>
+    <tr>
+      <td>技能</td>
+      <td>23</td>
+      <td>22 生命周期 + 1 元</td>
+    </tr>
+    <tr>
+      <td>命令</td>
+      <td>7</td>
+      <td><code class="language-plaintext highlighter-rouge">/spec /plan /build /test /review /code-simplify /ship</code></td>
+    </tr>
+    <tr>
+      <td>角色</td>
+      <td>3</td>
+      <td>评审员 / 测试 / 安全</td>
+    </tr>
+    <tr>
+      <td>清单</td>
+      <td>4</td>
+      <td>测试 / 安全 / 性能 / 无障碍</td>
+    </tr>
+    <tr>
+      <td>工具</td>
+      <td>8+</td>
+      <td>Claude Code / Cursor / Codex 等</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="4-个杀手锏设计哲学">4 个杀手锏(设计哲学)</h2>
+
+<ol>
+  <li><strong>流程而非文档</strong> —— 技能=有步骤+检查点+退出条件的工作流</li>
+  <li><strong>反合理化</strong> —— 每技能内置”借口→反驳”表,堵死 agent 跳步退路</li>
+  <li><strong>验证不可妥协</strong> —— 每技能以”拿证据”收尾</li>
+  <li><strong>渐进式披露</strong> —— SKILL.md 入口 + 引用按需加载</li>
+</ol>
+
+<h2 id="7-块统一骨架每-skillmd-都有">7 块统一骨架(每 SKILL.md 都有)</h2>
+
+<p><code class="language-plaintext highlighter-rouge">名称+描述</code> → <code class="language-plaintext highlighter-rouge">概述</code> → <code class="language-plaintext highlighter-rouge">何时使用</code> → <code class="language-plaintext highlighter-rouge">流程</code> → <code class="language-plaintext highlighter-rouge">反合理化</code> → <code class="language-plaintext highlighter-rouge">危险信号</code> → <code class="language-plaintext highlighter-rouge">验证</code></p>
+
+<h2 id="关键金句">关键金句</h2>
+
+<ul>
+  <li>“AI agent 默认走最短路径——而最短路径,往往跳过了让软件可靠的所有步骤”</li>
+  <li>“它的价值不在’让 AI 更聪明’,而在’让 AI 更靠谱’”</li>
+  <li>“靠谱比聪明值钱得多”</li>
+</ul>
+
+<h2 id="反直觉点">反直觉点</h2>
+
+<ul>
+  <li>技能多不稀奇,<strong>难的是让 agent 真的照做</strong> —— 4 个设计哲学才是壁垒</li>
+  <li>验证是<strong>拿证据</strong>(测试/构建/运行数据),不是”看起来对”</li>
+  <li>23 技能不散架,靠的是<strong>死板的模板化</strong></li>
+</ul>
+
+<h2 id="对-seetong--openclaw-3-个可借鉴动作">对 Seetong / OpenClaw 3 个可借鉴动作</h2>
+
+<ol>
+  <li><strong>Skill 7 块骨架审计</strong> —— 检查 30+ 现 Skill 是否都有”反合理化”“危险信号”两节;缺的优先补</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">反合理化</code> 列入团队 SKILL.md 必填项</strong> —— 写 5 个偷懒借口 + 团队标准反驳话术</li>
+  <li><strong>复用 7 命令到 Seetong 三端</strong> —— <code class="language-plaintext highlighter-rouge">/spec /plan /build /test /review /ship</code> 接 TAPD 流转</li>
+</ol>
+
+<h2 id="关联">关联</h2>
+
+<ul>
+  <li>旧版(4-27):[[谷歌开源agent-skills]] 20 skills / 23k star</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>同主线:[[Addy-Osmani-Loop-Engineering]]</td>
+          <td>[[Loop-Engineering-详解-把反馈循环放进工程现场]]</td>
+          <td>[[APPSO-Codex-Claude-Code-Loop-Engineering]]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>同形态:[[PM-Skills-Marketplace-产品经理必备skill]]</td>
+          <td>[[Agentic-Engineering-AI-Workbench]]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>团队沉淀:[[从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]]</li>
+</ul>
+
+<h2 id="备注">备注</h2>
+
+<ul>
+  <li>项目仓库:https://github.com/addyosmani/agent-skills</li>
+  <li>原文:https://mp.weixin.qq.com/s/ZU81MGzo5j0bwd6i7CfZCw</li>
+  <li>缺口:无真实团队 7 命令完整落地数据,Seetong 可作首批样板</li>
+</ul>

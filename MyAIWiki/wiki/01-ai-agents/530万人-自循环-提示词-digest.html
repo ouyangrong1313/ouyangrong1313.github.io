@@ -1,0 +1,70 @@
+<h1 id="530-万人读的这篇自循环提示词digest">530 万人读的这篇：自循环提示词（Digest）</h1>
+
+<blockquote>
+  <p><strong>一句话总结</strong>：530 万浏览的爆款讲清了一件事——大多数人用 AI 还是手动循环（一问一答），真正的循环是”给目标 + 验证 + 状态 + 停止条件”让 AI 自跑；全文最值钱的是”自检循环提示词模板”，不是后半段软广的 Mira。</p>
+</blockquote>
+
+<h2 id="速查表">速查表</h2>
+
+<h3 id="核心观点5-条">核心观点（5 条）</h3>
+<ol>
+  <li><strong>手动循环 = 你是引擎</strong> — 大多数人手把手推 AI，”AI 只是工具，工具自己什么都不做”</li>
+  <li><strong>真循环 = 五步 + 三关键</strong> — 发现/计划/做/验证/决定；验证（心脏）/ 状态（学习）/ 停止条件（不烧账户）</li>
+  <li><strong>四条门槛判断要不要上 loop</strong> — 任务每周重复 / 有自动判错 / 端到端能干 / 完成客观非品味。少一条就老实手动</li>
+  <li><strong>自检循环提示词模板</strong>（可粘贴）— 目标 + 3 条严标准 + 循环协议 + 8 分门槛 + 每轮先修最弱项</li>
+  <li><strong>530 万爆款 = 病毒 playbook</strong> — 巨大承诺 + 免费赠品（提示词）+ CTA（装 Mira），深思圈补刀”大众版把工程师版急停开关悄悄拿掉”</li>
+</ol>
+
+<h3 id="关键金句3-条">关键金句（3 条）</h3>
+<ul>
+  <li><strong>“验证是心脏：没有一个真正的检查，你就不是在循环，而是在看 AI 反复同意自己”</strong></li>
+  <li><strong>“ChatGPT 回答，Mira 动手”</strong> — 大众版 agent 的核心承诺</li>
+  <li><strong>“系统可以接管’持续干活’那一部分；那个结果，始终是你的”</strong> — 深思圈收尾</li>
+</ul>
+
+<h3 id="关键数字--案例">关键数字 / 案例</h3>
+<ul>
+  <li><strong>530 万浏览</strong>（X 平台 Anatoli Kopadze 单帖）</li>
+  <li><strong>Mira 接 500+ app</strong> / 跨会话长期记忆 / 模型无关（GPT/Claude/Gemini 按任务切）</li>
+  <li><strong>8 分门槛</strong> — 每条标准必须 8 分以上才打”FINAL”</li>
+  <li><strong>示例 prompt</strong>：”每个工作日早 7 点，查我的 Gmail 和日历，给我一份 120 字以内的简报”</li>
+</ul>
+
+<h2 id="反直觉点3-条">反直觉点（3 条）</h2>
+
+<ol>
+  <li><strong>验证是心脏不是”自我打分”</strong> — 没真检查 = 看 AI 反复同意自己，”干活的那个模型，给自己打分时太仁慈了”</li>
+  <li><strong>“你是那台引擎”是问题不是答案</strong> — 大多数人以为自己在驾驭 AI，其实自己在干 AI 的活</li>
+  <li><strong>大众版”无闸门 agent”是工程师反复警告的反模式</strong> — 工程师版强调”验证器+急停开关”，Mira 类工具把刹车悄悄拿掉，递给不会设 gate 的普通用户</li>
+</ol>
+
+<h2 id="5-个对-seetong-团队可借鉴动作">5 个对 Seetong 团队可借鉴动作</h2>
+
+<ol>
+  <li><strong>提示词模板入 Seetong Prompt 库</strong> — 把”自检循环”作为 <code class="language-plaintext highlighter-rouge">seetong-*-review</code> skill 末尾标准段</li>
+  <li><strong>“四条门槛”做 Seetong Loop 候选评估 checklist</strong> — 挡掉一批 ROI 不明的工作</li>
+  <li><strong>“验证是心脏”补 Seetong Skill 的 Validation Gate</strong> — 现有 skill 缺 Verification 章节的优先补</li>
+  <li><strong>cron run ack timeout = “无停止条件”</strong> — 加 <code class="language-plaintext highlighter-rouge">maxRunningMs + onTimeout: 'kill-and-mark-error'</code> 双闸门</li>
+  <li><strong>警惕 Mira 类”无闸门 agent”</strong> — Seetong 不能直接接入工单/邮件/计费类高副作用 API</li>
+</ol>
+
+<h2 id="关联同主线-6-视角闭环">关联（同主线 6 视角闭环）</h2>
+
+<ul>
+  <li><strong>方法论原典</strong> — [[Addy-Osmani-Loop-Engineering]]</li>
+  <li><strong>中文工程实操</strong> — [[Loop-Engineering-详解-把反馈循环放进工程现场]]</li>
+  <li><strong>产业信号</strong> — [[APPSO-Codex-Claude-Code-Loop-Engineering]]</li>
+  <li><strong>治理薄壳</strong> — [[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]]</li>
+  <li><strong>验证瓶颈（核心互补）</strong> — [[Loop-Engineering-验证才是瓶颈]]（system-level）</li>
+  <li><strong>大众教育版（本文）</strong> — prompt-level</li>
+</ul>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li>530 万浏览 = X 平台单帖数据，非多平台</li>
+  <li>Mira 实际稳定性/无意识行为数据未公开（软广风险）</li>
+  <li>提示词模板跨模型成功率未公布</li>
+  <li>深思圈未亲自复现原文实验</li>
+  <li>与 [[Loop-Engineering-验证才是瓶颈]] 互补：本文 prompt-level，那篇 system-level</li>
+</ul>
