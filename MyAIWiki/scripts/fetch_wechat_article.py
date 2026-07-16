@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Fetch rendered WeChat article content via Playwright + local Chrome.
+Fetch WeChat article content with Playwright first, then fall back to direct HTML parsing.
 
 Usage:
   python3 scripts/fetch_wechat_article.py <url>
@@ -12,9 +12,21 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
+from datetime import datetime
+from html import unescape
 from pathlib import Path
+
+from bs4 import BeautifulSoup
+
+
+MOBILE_USER_AGENT = (
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) "
+    "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 "
+    "Mobile/15E148 Safari/604.1"
+)
 
 
 def find_playwright_package() -> Path:
@@ -35,13 +47,14 @@ def find_playwright_package() -> Path:
 def build_node_script(playwright_path: str, url: str) -> str:
     escaped_path = json.dumps(playwright_path)
     escaped_url = json.dumps(url)
+    escaped_user_agent = json.dumps(MOBILE_USER_AGENT)
     return f"""
 const {{ chromium }} = require({escaped_path});
 
 (async () => {{
   const browser = await chromium.launch({{ channel: 'chrome', headless: true }});
   const context = await browser.newContext({{
-    userAgent: 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1'
+    userAgent: {escaped_user_agent}
   }});
   const page = await context.newPage();
   await page.goto({escaped_url}, {{ waitUntil: 'domcontentloaded', timeout: 45000 }});
@@ -67,7 +80,7 @@ const {{ chromium }} = require({escaped_path});
 """
 
 
-def fetch_article(url: str) -> dict:
+def fetch_article_via_playwright(url: str) -> dict:
     playwright_path = find_playwright_package()
     script = build_node_script(str(playwright_path), url)
     result = subprocess.run(
@@ -83,9 +96,88 @@ def fetch_article(url: str) -> dict:
     return data
 
 
+def normalize_wechat_text(text: str) -> str:
+    text = unescape(text)
+    text = text.replace("\xa0", " ")
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
+def fetch_article_via_html(url: str) -> dict:
+    result = subprocess.run(
+        [
+            "curl",
+            "-L",
+            "-A",
+            MOBILE_USER_AGENT,
+            url,
+        ],
+        check=True,
+        capture_output=True,
+        text=True,
+        env=os.environ.copy(),
+    )
+    html_text = result.stdout
+
+    soup = BeautifulSoup(html_text, "html.parser")
+    content_node = soup.select_one("#js_content")
+    if content_node is None:
+        raise RuntimeError("Fetched page did not contain #js_content.")
+
+    for tag in content_node.select("script, style"):
+        tag.decompose()
+
+    title = ""
+    title_meta = soup.select_one('meta[property="og:title"]')
+    if title_meta and title_meta.get("content"):
+        title = title_meta["content"].strip()
+    if not title:
+        title = (soup.title.string or "").strip() if soup.title else ""
+
+    author = ""
+    author_meta = soup.select_one('meta[name="author"]')
+    if author_meta and author_meta.get("content"):
+        author = author_meta["content"].strip()
+    if not author:
+        match = re.search(r'var nickname = htmlDecode\("([^"]+)"\)', html_text)
+        if match:
+            author = unescape(match.group(1))
+
+    publish_time = ""
+    match = re.search(r'var ct = "(\d{10})"', html_text)
+    if match:
+        publish_time = datetime.fromtimestamp(int(match.group(1))).strftime("%Y-%m-%d")
+
+    content_text = normalize_wechat_text(content_node.get_text("\n", strip=True))
+    body = soup.body
+    body_text = normalize_wechat_text(body.get_text("\n", strip=True) if body else content_text)
+
+    data = {
+        "title": title,
+        "author": author,
+        "publish_time": publish_time,
+        "url": url,
+        "body_text": body_text,
+        "content_text": content_text,
+        "fetch_mode": "html-fallback",
+    }
+    if not data.get("title") and not data.get("content_text"):
+        raise RuntimeError("Fetched page did not return title/content.")
+    return data
+
+
+def fetch_article(url: str) -> dict:
+    try:
+        return fetch_article_via_playwright(url)
+    except (FileNotFoundError, subprocess.CalledProcessError, RuntimeError) as exc:
+        data = fetch_article_via_html(url)
+        data["playwright_error"] = str(exc)
+        return data
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Fetch WeChat article title/author/time/content via Playwright + Chrome."
+        description="Fetch WeChat article title/author/time/content via Playwright, with an HTML fallback."
     )
     parser.add_argument("url", help="WeChat article URL")
     parser.add_argument(
