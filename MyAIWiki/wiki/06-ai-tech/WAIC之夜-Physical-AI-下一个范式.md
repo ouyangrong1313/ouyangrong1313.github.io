@@ -17,6 +17,7 @@ related:
   - "[[Multica-AI-Native-组织-人是最慢的节点]]"
   - "[[麦肯锡-AI提效只是第一波红利]]"
   - "[[OpenAI-AI原生组织-4条工作原则]]"
+  - "[[傅盛-李飞飞-机器人世界模型与人的自主性]]"
 ---
 
 # WAIC 2026 圆桌：Physical AI 是 Agentic AI 之后的下一个范式吗？
@@ -77,7 +78,7 @@ related:
 
 **下游**：机器人企业落地节奏；Three capability world model 工程化；One Model One System 终局进度。
 
-**同级**：方法论对偶 [[Lilian-Weng-Harness-Engineering-自我改进]]；战略对偶 [[Nikesh-Arora-模型过剩与记忆护城河]]；样本对偶 [[Multica-AI-Native-组织-人是最慢的节点]]；数据洞察对偶 [[深思圈-消费护城河不是注意力是环境]]；组织战略对偶 [[麦肯锡-AI提效只是第一波红利]] / [[OpenAI-AI原生组织-4条工作原则]]。
+**同级**：方法论对偶 [[Lilian-Weng-Harness-Engineering-自我改进]]；战略对偶 [[Nikesh-Arora-模型过剩与记忆护城河]]；样本对偶 [[Multica-AI-Native-组织-人是最慢的节点]]；数据洞察对偶 [[深思圈-消费护城河不是注意力是环境]]；组织战略对偶 [[麦肯锡-AI提效只是第一波红利]] / [[OpenAI-AI原生组织-4条工作原则]]；机制补充 [[傅盛-李飞飞-机器人世界模型与人的自主性]]（物理数据、世界模拟、行动规划与反馈闭环）。
 
 ## 6 个对 Seetong 团队可借鉴动作
 
