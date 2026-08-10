@@ -121,6 +121,7 @@ Garry **已经拥有 350+ 个 skill pack**，覆盖大多数个人和工作任�
 
 ## 适合关联的主题
 
+- [[51CTO-Garry-Tan-个人AGI与经验代码库]]：同一轮 Garry Tan 观点的治理补充，说明 Skill 不仅是 Markdown 指令层，还必须沉淀经验来源、确定性边界、归属和权限审计。
 - AI 时代编程范式
 - Markdown as Code / Prompt as Code
 - Skill 设计 / Skill pack

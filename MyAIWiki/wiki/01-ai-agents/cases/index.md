@@ -22,6 +22,8 @@
 ## 案例列表
 
 ### 非技术行业 AI 落地
+- [东方屹腾：执行型 Agent 从零到稳定交付](./liangbo-execution-agent.md) - ADPS 案例报告 01 / 梁博 / 2026-07-13 发布：把企业 SaaS 场景里的执行型 Agent 骨架拆成“执行型 vs 内容型分野 / 控制-叙事二元论 / Orchestrator + 意图网关 / ReAct -> 规划执行 / HITL / 机械状态平面 / 会话统一状态平面”，重点回答为什么强约束事务流不能把 API 参数绑定交给 LLM 临场生成
+- [东方屹腾：执行型 Agent 从零到稳定交付 - Digest](./liangbo-execution-agent-digest.md) - 8 节点速查表 + 5 个关键转折 + 3 个迁移前提
 - [一个农民，用 Codex 管理了 1500 亩地](./farmer-Codex-1500-mu.md) - AI小范儿 2026-06-08 转载自 OpenAI 官方案例：北海道农民 Hiroki Tomiyasu 用 Codex 改造 4 个工作流（病虫害识别 / 卫星遥感 / 温室 IoT / 客服机器人）——"ChatGPT 学习 + Codex 落地" 普通人 AI 路径
 - [一个农民 - Digest](./farmer-Codex-1500-mu-digest.md) - 上一篇的速读摘要版
 
@@ -29,4 +31,4 @@
 
 ## 标签
 
-#主题/AI-Agent #场景/落地案例 #场景/农业 #场景/非技术行业
+#主题/AI-Agent #场景/落地案例 #场景/农业 #场景/非技术行业 #场景/企业SaaS #主题/执行型Agent
