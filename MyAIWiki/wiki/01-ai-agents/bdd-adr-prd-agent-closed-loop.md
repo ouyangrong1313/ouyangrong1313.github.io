@@ -1,9 +1,21 @@
 ---
 title: BDD+ADR+PRD：让 Agent 遵守规范的闭环方法
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/AI-Coding, #场景/技术博客, #场景/公众号长文, #节点/Harness, #节点/Context-Engineering, #节点/Agent-Loop, #节点/Memory, #节点/Spec-Driven, #手法/焦虑共鸣, #手法/对比冲突, #手法/权威背书]
+tags:
+  - 主题/AI-Agent
+  - 主题/AI-Coding
+  - 场景/技术博客
+  - 场景/公众号长文
+  - 节点/Harness
+  - 节点/Context-Engineering
+  - 节点/Agent-Loop
+  - 节点/Memory
+  - 节点/Spec-Driven
+  - 手法/焦虑共鸣
+  - 手法/对比冲突
+  - 手法/权威背书
 nodes: [ADR架构决策记录, PRD三件事, BDD-Cucumber双轨, 闭环执行, Linter强制, 知识资产化, Context-Compaction, Spec-Driven, Agent-Governance]
-links: [[AI-团队协作-Loop-SDD-digest]], [[0xCodez-Agent-Harness-14-Steps]], [[agent-skills-systematic-survey]]
+links: [[01-ai-agents/AI-团队协作-Loop-SDD-digest]], [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]], [[01-ai-agents/agent-skills-systematic-survey]]
 date: 2026-07-01
 source: 微信公众号（编译自 Michal Cichra AI Engineer 大会演讲）
 source_url: https://mp.weixin.qq.com/s/QT71-f3OZ067XhDwrbrAtQ
@@ -41,14 +53,14 @@ source_url: https://mp.weixin.qq.com/s/QT71-f3OZ067XhDwrbrAtQ
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- [[agent-skills-systematic-survey]]：本文的"技能契约化"思路与 Agent Skills 系统的"技能生命周期"互补
-- [[0xCodez-Agent-Harness-14-Steps]]：本文的 Linter/闭环执行可视为 Harness 工程中的 Hooks/Loop 节点在规范治理维度的具体落地
+- [[01-ai-agents/agent-skills-systematic-survey]]：本文的"技能契约化"思路与 Agent Skills 系统的"技能生命周期"互补
+- [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]]：本文的 Linter/闭环执行可视为 Harness 工程中的 Hooks/Loop 节点在规范治理维度的具体落地
 
 ### 下游（应用于 / 验证于）
 - 暂无（待 Seetong 三端 SDK 实践后补充具体落地页）
 
 ### 同级（横向 / 并列）
-- [[AI-团队协作-Loop-SDD-digest]]：**最相关的同级文章**——叶小钗的 SDD（Spec-Driven Development）"6 段式 Spec 骨架"与本文的"PRD 三件事 + ADR + BDD"同源异流，前者强调组织级协作契约，后者强调工程级 Linter 强校验
+- [[01-ai-agents/AI-团队协作-Loop-SDD-digest]]：**最相关的同级文章**——叶小钗的 SDD（Spec-Driven Development）"6 段式 Spec 骨架"与本文的"PRD 三件事 + ADR + BDD"同源异流，前者强调组织级协作契约，后者强调工程级 Linter 强校验
 
 ## 正文要点
 
@@ -113,6 +125,6 @@ Git Hook → CI → Linter → Agent 自修 → 重提
 
 ## 适合关联的主题
 
-- [[AI-团队协作-Loop-SDD-digest]]：SDD 6 段式 Spec 骨架 + 本文的 ADR/PRD/BDD 是"组织级 + 工程级"两条 spec-driven 路径
-- [[0xCodez-Agent-Harness-14-Steps]]：本文的 Linter/Loop 是 Harness 工程 Hooks/Loop 节点在规范治理维度的细化
-- [[agent-skills-systematic-survey]]：技能契约化的思路互补——Skill 是"怎么做"的契约，ADR/PRD/BDD 是"为什么 + 做什么 + 怎么验"的契约
+- [[01-ai-agents/AI-团队协作-Loop-SDD-digest]]：SDD 6 段式 Spec 骨架 + 本文的 ADR/PRD/BDD 是"组织级 + 工程级"两条 spec-driven 路径
+- [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]]：本文的 Linter/Loop 是 Harness 工程 Hooks/Loop 节点在规范治理维度的细化
+- [[01-ai-agents/agent-skills-systematic-survey]]：技能契约化的思路互补——Skill 是"怎么做"的契约，ADR/PRD/BDD 是"为什么 + 做什么 + 怎么验"的契约

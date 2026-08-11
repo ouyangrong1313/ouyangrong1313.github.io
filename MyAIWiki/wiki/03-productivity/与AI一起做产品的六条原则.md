@@ -1,9 +1,27 @@
 ---
 title: 与 AI 一起做产品的六条原则
 category: 03-productivity
-tags: [#主题/AI时代产品设计, #主题/产品管理, #主题/工作方法, #主题/AI哲学, #主题/减法设计, #主题/一致性设计, #主题/品味, #节点/AI放大器, #节点/减法设计, #节点/品味沉淀, #节点/80分交付, #节点/共情, #节点/一致性, #节点/产品决策checklist, #手法/反例论证, #手法/反问驱动, #场景/AI时代PM, #场景/产品评审]
+tags:
+  - 主题/AI时代产品设计
+  - 主题/产品管理
+  - 主题/工作方法
+  - 主题/AI哲学
+  - 主题/减法设计
+  - 主题/一致性设计
+  - 主题/品味
+  - 节点/AI放大器
+  - 节点/减法设计
+  - 节点/品味沉淀
+  - 节点/80分交付
+  - 节点/共情
+  - 节点/一致性
+  - 节点/产品决策checklist
+  - 手法/反例论证
+  - 手法/反问驱动
+  - 场景/AI时代PM
+  - 场景/产品评审
 nodes: [AI-放大器原则, 减法-人砍要狠, 品味-沉淀-context, 80分-交付门槛, 共情-替用户感受, 一致性-同物同UI, 6-反问决策框架, PD文档也是产品]
-links: [[Good-AI-PM-Bad-AI-PM]], [[AI-PM核心技能-观测评估与反馈闭环]], [[problem-first把方案翻转回问题]]
+links: [[01-ai-agents/good-ai-pm-bad-ai-pm]], [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]], [[02-ai-coding/problem-first把方案翻转回问题]]
 date: 2026-06-11
 source: 微信公众号 / AGENT橘(团队实践总结);原文链接 https://mp.weixin.qq.com/s/Q8j4611EjzdAN5rMFjAeoQ
 ---
@@ -23,7 +41,7 @@ source: 微信公众号 / AGENT橘(团队实践总结);原文链接 https://mp.w
 ## 分类提炼
 
 - 场景:AI 时代产品设计 / PM 决策框架 / "反 AI 焦虑"产品哲学
-- 标签:#主题/AI时代产品设计 #节点/6反问决策框架
+- 标签: #主题/AI时代产品设计 #节点/6反问决策框架
 - 类型:原则清单 / 决策框架 / 反 AI 焦虑哲学
 
 ## 知识节点(8 个独立概念)
@@ -55,9 +73,9 @@ source: 微信公众号 / AGENT橘(团队实践总结);原文链接 https://mp.w
 
 ### 同级(横向 / 并列)
 
-- [[Good-AI-PM-Bad-AI-PM]] - AI 时代 PM 的"好 vs 不好"对照,本文是"原则级"而那篇是"行为级"
-- [[AI-PM核心技能-观测评估与反馈闭环]] - PM 核心技能,本文是"决策原则"维度
-- [[problem-first把方案翻转回问题]] - 同 PM 主线,本文补"AI 时代判断力"维度
+- [[01-ai-agents/good-ai-pm-bad-ai-pm]] - AI 时代 PM 的"好 vs 不好"对照,本文是"原则级"而那篇是"行为级"
+- [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]] - PM 核心技能,本文是"决策原则"维度
+- [[02-ai-coding/problem-first把方案翻转回问题]] - 同 PM 主线,本文补"AI 时代判断力"维度
 - [[index]] - 03-productivity 首篇破冰
 - 关联:[[memory/2026-06-10]] 中 MMP / Harmony 0 commit 开放问题
 
@@ -138,7 +156,7 @@ source: 微信公众号 / AGENT橘(团队实践总结);原文链接 https://mp.w
 
 ## 相关链接
 
-- [[Good-AI-PM-Bad-AI-PM]]
-- [[AI-PM核心技能-观测评估与反馈闭环]]
-- [[problem-first把方案翻转回问题]]
+- [[01-ai-agents/good-ai-pm-bad-ai-pm]]
+- [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]]
+- [[02-ai-coding/problem-first把方案翻转回问题]]
 - 原文链接:https://mp.weixin.qq.com/s/Q8j4611EjzdAN5rMFjAeoQ

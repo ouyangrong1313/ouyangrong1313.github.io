@@ -1,9 +1,17 @@
 ---
 title: AI循环：Claude、GPT和Mira，到底什么才是真正好用的
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI-Agent, #节点/Agent-Loop, #节点/Harness, #节点/Skill, #节点/子代理, #节点/Mira, #场景/X长文章]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Agent
+  - 节点/Agent-Loop
+  - 节点/Harness
+  - 节点/Skill
+  - 节点/子代理
+  - 节点/Mira
+  - 场景/X长文章
 nodes: [Loop循环, 五步骨架, 验证心脏, 停止条件, Ralph-Wiggum循环, 五个积木, 子代理分工, 采纳率, 手搓轻量循环, Mira-zero-code]
-links: [[深思SenseAI-Loop-Engineering-验证才是瓶颈]], [[Claude-Code作者Boris-我已经不写prompt了我写loop]], [[loonggg-Claude-Code-技能心法-11条建议]], [[oh-my-codex-让CodexCLI拥有专家团队]], [[深思圈-530万人-自循环-提示词]], [[深思圈-problem-first把方案翻转回问题]], [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+links: [[01-ai-agents/Loop-Engineering-验证才是瓶颈]], [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]], [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]], [[02-ai-coding/oh-my-codex]], [[01-ai-agents/530万人-自循环-提示词]], [[02-ai-coding/problem-first把方案翻转回问题]], [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
 date: 2026-07-05
 source: X（Twitter） / 淘沙者（TheSandPicker）@Etudecn 2026-07-03
 原始链接: https://x.com/Etudecn/status/2073072648922481000
@@ -28,9 +36,9 @@ source: X（Twitter） / 淘沙者（TheSandPicker）@Etudecn 2026-07-03
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- [[Claude-Code作者Boris-我已经不写prompt了我写loop]]：Boris Cherny“我不写 prompt，我写 loop”的理念底稿，本文是在用户侧把它讲清楚的长文版
-- [[loonggg-Claude-Code-技能心法-11条建议]]：本文“五个积木”中的 Skill 设计心法，与 Claude Code 团队官方经验互证
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]：本文的 Loop/验证/停止条件，其实都是 Harness 基建的不同切面
+- [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]]：Boris Cherny“我不写 prompt，我写 loop”的理念底稿，本文是在用户侧把它讲清楚的长文版
+- [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]]：本文“五个积木”中的 Skill 设计心法，与 Claude Code 团队官方经验互证
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]：本文的 Loop/验证/停止条件，其实都是 Harness 基建的不同切面
 
 ### 下游（应用于 / 验证于）
 - **编程循环**：代码迁移、测试修复、lint/类型错误收敛这类“目标明确 + 可验证”的场景
@@ -38,10 +46,10 @@ source: X（Twitter） / 淘沙者（TheSandPicker）@Etudecn 2026-07-03
 - **Mira zero-code 循环**：把循环门槛降到 Telegram，通过 Composio 串起 500+ App，面向更广泛的非工程用户
 
 ### 同级（横向 / 并列）
-- [[深思SenseAI-Loop-Engineering-验证才是瓶颈]]：本文强调“验证是循环的心脏”，那篇从更硬核的工程视角讲“验证器才是产品”
-- [[深思圈-530万人-自循环-提示词]]：同主题的普通用户教育版，本文更系统、框架更完整
-- [[oh-my-codex-让CodexCLI拥有专家团队]]：本文“子代理分工”的早期 Codex 实践样本
-- [[深思圈-problem-first把方案翻转回问题]]：本文讲“什么时候值得搭循环”，那篇讲“什么时候根本不该走方案驱动”
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]：本文强调“验证是循环的心脏”，那篇从更硬核的工程视角讲“验证器才是产品”
+- [[01-ai-agents/530万人-自循环-提示词]]：同主题的普通用户教育版，本文更系统、框架更完整
+- [[02-ai-coding/oh-my-codex]]：本文“子代理分工”的早期 Codex 实践样本
+- [[02-ai-coding/problem-first把方案翻转回问题]]：本文讲“什么时候值得搭循环”，那篇讲“什么时候根本不该走方案驱动”
 
 ## 正文要点
 
@@ -65,4 +73,4 @@ source: X（Twitter） / 淘沙者（TheSandPicker）@Etudecn 2026-07-03
 - **Token 量级**：单个中等任务约 50K–200K tokens，context 每轮重发会持续膨胀
 - **Mira 部分带软广色彩**：原文后半明显在为 Mira 铺路，阅读时应把“概念框架”与“产品宣传”拆开看
 - **适用边界**：Loop 只适合“高频、可验证、端到端能自己干完、完成标准客观”的任务；不满足这些条件的任务，不要硬套循环
-- raw: ../../raw/2026-07-05-X-淘沙者Etudecn-AI循环claude-gpt-mira.md | raw-digest: ../../raw/2026-07-05-X-淘沙者Etudecn-AI循环claude-gpt-mira-digest.md | wiki-digest: ./AI循环-Claude-GPT和Mira到底什么才是真正好用的-digest.md
+- raw: ../../raw/X-淘沙者Etudecn-AI循环claude-gpt-mira.md | raw-digest: ../../raw/X-淘沙者Etudecn-AI循环claude-gpt-mira-digest.md | wiki-digest: ./AI循环-Claude-GPT和Mira到底什么才是真正好用的-digest.md

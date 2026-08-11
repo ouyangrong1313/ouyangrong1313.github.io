@@ -4,7 +4,7 @@
 - 来源：Founder Park
 - 采访对象：**Pete Koomen**（YC 合伙人 + Optimizely 创始人） + **Gary**（即 **Garry Tan**，YC 总裁）
 - 编译时间：2026-06-03
-- 来源层：raw（已存 `raw/articles/YC如何进行AI-Native组织改造-Agent能力要向所有人开放.md`）
+- 来源层：raw（已存 `raw/YC如何进行AI-Native组织改造-Agent能力要向所有人开放.md`）
 
 ## 核心结论（一句话）
 
@@ -13,16 +13,16 @@
 ## 分类提炼
 
 - 场景：AI-Native 组织 / Harness / Tool Registry / Skill / Dream Cycle / 文化建设
-- 标签：#主题/AI-Coding #主题/AI-Native #主题/AI-Agent #主题/Harness #主题/Skill #主题/工程管理 #主题/组织文化 #手法/范式反思 #场景/YC播客
+- 标签： #主题/AI-Coding #主题/AI-Native #主题/AI-Agent #主题/Harness #主题/Skill #主题/工程管理 #主题/组织文化 #手法/范式反思 #场景/YC播客
 - 类型：一手经验 / 范式宣言 / 方法论
-- 关联主线：与 [[Claude-Code负责人谈AI原生工程组织]]、[[54万行代码的顿悟]] 同主线（甚至**同一个人**！）
+- 关联主线：与 [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]]、[[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] 同主线（甚至**同一个人**！）
 
 ## 关键人物一致关系（重要发现）
 
-文中的 **Gary** 就是 [[54万行代码的顿悟]] 的作者 **Garry Tan**（YC 总裁）。文里提到的 **Gbrain** 就是 [[54万行代码的顿悟]] 里的 **GBrain**（8 层 AI 第二大脑）。**这不是两个独立作者的两篇文章，是同一个人/同一段时间的不同侧面表达。**
+文中的 **Gary** 就是 [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] 的作者 **Garry Tan**（YC 总裁）。文里提到的 **Gbrain** 就是 [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] 里的 **GBrain**（8 层 AI 第二大脑）。**这不是两个独立作者的两篇文章，是同一个人/同一段时间的不同侧面表达。**
 
 **数据交叉印证**：
-- [[54万行代码的顿悟]]：54 万行 Rails 代码（Gary's List）
+- [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]：54 万行 Rails 代码（Gary's List）
 - 本文："一月到二月我用 Rails 写了约五十万行代码，Gary's List"
 - **完全吻合** → 同一项目的两次叙述
 
@@ -187,7 +187,7 @@ YC 工具从 20 → **350+**。工具注册表 = Resolver，"告诉 Agent '我�
 
 ## 我的判断（编译者注）
 
-1. **本文是 [[54万行代码的顿悟]] 的官方补完**：
+1. **本文是 [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] 的官方补完**：
    - 同一作者（Garry Tan）同一时间段不同侧面表达
    - 54 万行顿悟讲"工程师个人范式"（Markdown 是新编程方式）
    - 本文讲"组织层面"（Egalitarian + Trust by default + 工具/Skill 注册表 + Dream Cycle）
@@ -197,13 +197,13 @@ YC 工具从 20 → **350+**。工具注册表 = Resolver，"告诉 Agent '我�
    - Jared "觉得自己在违规" 推了 PR
    - 效果惊人
    - 教训：**在 AI 时代，"违规"往往就是创新**
-   - 这和 [[Codex配置原则总览]] 提到的"边界必须明确，但不要过早"呼应
+   - 这和 [[02-ai-coding/Codex配置原则总览]] 提到的"边界必须明确，但不要过早"呼应
 
 3. **"Skill + Skillify + check resolvable" 是超级具体的可操作新方法论**：
-   - 之前 [[54万行代码的顿悟]] 讲 "Skillify it" 循环
+   - 之前 [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] 讲 "Skillify it" 循环
    - 本文补完：**check resolvable + DRY + MECE**
    - **新组合**：Skillify 完必 check resolvable，保证 skill 库的健康
-   - 这是 [[Codex配置原则总览]] / [[多Agent使用边界与并行判定]] 都应该补的新原则
+   - 这是 [[02-ai-coding/Codex配置原则总览]] / [[02-ai-coding/多Agent使用边界与并行判定]] 都应该补的新原则
 
 4. **"Dream Cycle" 是 AI-Native 组织的关键基础设施**：
    - 没有 Dream Cycle，技能库会"用着用着烂掉"
@@ -233,17 +233,17 @@ YC 工具从 20 → **350+**。工具注册表 = Resolver，"告诉 Agent '我�
 
 ## 适合关联的主题
 
-- [[Claude-Code负责人谈AI原生工程组织]] — 同主线，组织侧瓶颈迁移
-- [[54万行代码的顿悟]] — **同一个人**，**同一段时间**的工程师个人范式
-- [[AI-Coding的顿悟时刻]] — Spec→LDD 流水线 + Scrum 反思
-- [[Codex配置原则总览]] / [[Codex配置优化清单-从Harness视角]] — 工具注册表 + Skill 设计原则
-- [[Codex才是最适合普通人的顶级牛马-Agent]] — Agent 工作台化
-- [[来自Codex官方团队的分享：如何把Codex用到极致]] — durable threads + 共享记忆
-- [[多Agent使用边界与并行判定]] — 应该补 Skillify + check resolvable
-- [[你不知道的 Agent：原理、架构与工程实践]] — Agent 架构基础
-- [[软件工程的功底是智能时代生死攸关的要素]] — 反思
-- [[知识卡片编译模板-长文如何压成raw-digest-wiki三层]] — 知识库本身的 skill pack 化样本
-- [[任务类型到验证模板]] — 应该补"知识/Markdown/Skill 验证"类型
+- [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]] — 同主线，组织侧瓶颈迁移
+- [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] — **同一个人**，**同一段时间**的工程师个人范式
+- [[02-ai-coding/AI-Coding的顿悟时刻]] — Spec→LDD 流水线 + Scrum 反思
+- [[02-ai-coding/Codex配置原则总览]] / [[02-ai-coding/Codex配置优化清单-从Harness视角]] — 工具注册表 + Skill 设计原则
+- [[02-ai-coding/Codex才是最适合普通人的顶级牛马-Agent]] — Agent 工作台化
+- [[02-ai-coding/来自Codex官方团队的分享-如何把Codex用到极致]] — durable threads + 共享记忆
+- [[02-ai-coding/多Agent使用边界与并行判定]] — 应该补 Skillify + check resolvable
+- [[01-ai-agents/you-dont-know-agent-principles-architecture-engineering]] — Agent 架构基础
+- [[02-ai-coding/软件工程的功底是智能时代生死攸关的要素]] — 反思
+- [[02-ai-coding/知识卡片编译模板-长文如何压成raw-digest-wiki三层]] — 知识库本身的 skill pack 化样本
+- [[02-ai-coding/任务类型到验证模板]] — 应该补"知识/Markdown/Skill 验证"类型
 
 ## 行动建议
 

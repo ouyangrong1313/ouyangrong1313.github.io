@@ -6,21 +6,27 @@ source_original_author: 麦肯锡 Tanguy Catlin × Roberta Fusaro
 date: 2026-07-13
 slug: 麦肯锡-AI提效只是第一波红利
 category: 06-ai-tech
-tags: [AI战略, 组织转型, 学习代谢率, agentic-commerce, outcome-based, friction-removal]
+tags:
+  - AI战略
+  - 组织转型
+  - 学习代谢率
+  - agentic-commerce
+  - outcome-based
+  - friction-removal
 rating: ⭐⭐⭐
 source_mckinsey: https://www.mckinsey.com/mgi/our-research/the-real-ai-advantage#/
 source_wechat: https://mp.weixin.qq.com/s/pIN7pLC_J8oWbrBFvIxrTg
 source_podcast: 《The McKinsey Podcast》2026-07-09 第期《The real AI advantage》
-digest: "[[麦肯锡-AI提效只是第一波红利-digest]]"
+digest: "[[06-ai-tech/麦肯锡-AI提效只是第一波红利-digest]]"
 related:
-  - "[[Nikesh-Arora-模型过剩与记忆护城河]]"
-  - "[[章文龙-AI分身时代-在场重新定价]]"
-  - "[[凯文凯利-真正的好生意都在卖看不见的东西]]"
-  - "[[Multica-AI-Native-组织-人是最慢的节点]]"
-  - "[[陈春花-从岗位到角色-AI时代组织设计的新逻辑]]"
-  - "[[Addy-Osmani-Loop-Engineering]]"
-  - "[[Loop-Engineering-验证才是瓶颈]]"
-  - "[[清华沈阳-自进化AI新物种]]"
+  - "[[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]"
+  - "[[06-ai-tech/章文龙-AI分身时代-在场重新定价]]"
+  - "[[06-ai-tech/凯文凯利-真正的好生意都在卖看不见的东西]]"
+  - "[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]"
+  - "[[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]]"
+  - "[[02-ai-coding/Addy-Osmani-Loop-Engineering]]"
+  - "[[01-ai-agents/Loop-Engineering-验证才是瓶颈]]"
+  - "[[01-ai-agents/清华沈阳-自进化AI新物种]]"
 ---
 
 # 麦肯锡：AI 提效只是第一波红利
@@ -113,21 +119,21 @@ Agent 替用户完成跨平台、跨行业的整个交易流程(保险 / 买房 
 
 ### 上游(本文论点的来源)
 
-- [[Nikesh-Arora-模型过剩与记忆护城河]] —— 模型过剩 90% 判断印证"提效红利被竞争抵消"
-- [[章文龙-AI分身时代-在场重新定价]] —— "哪些事必须亲自做" 与 judgment 节点呼应
-- [[凯文凯利-真正的好生意都在卖看不见的东西]] —— friction / data / judgment 都是"看不见的东西"
+- [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]] —— 模型过剩 90% 判断印证"提效红利被竞争抵消"
+- [[06-ai-tech/章文龙-AI分身时代-在场重新定价]] —— "哪些事必须亲自做" 与 judgment 节点呼应
+- [[06-ai-tech/凯文凯利-真正的好生意都在卖看不见的东西]] —— friction / data / judgment 都是"看不见的东西"
 
 ### 下游(本文论点的应用)
 
-- [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]] —— "从岗位到角色" = outcome-based 的早期版本
-- [[与AI一起做产品的六条原则]] —— 6 原则 + 判断力 是本文 judgment 的产品视角具体化
-- [[清华沈阳-自进化AI新物种]] —— 自进化 AI 与"学习代谢率" 概念同源
+- [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]] —— "从岗位到角色" = outcome-based 的早期版本
+- [[03-productivity/与AI一起做产品的六条原则]] —— 6 原则 + 判断力 是本文 judgment 的产品视角具体化
+- [[01-ai-agents/清华沈阳-自进化AI新物种]] —— 自进化 AI 与"学习代谢率" 概念同源
 
 ### 同级(横向 / 关联)
 
-- [[Multica-AI-Native-组织-人是最慢的节点]] —— "组织是最慢的节点" 印证本文"组织维度最难"
-- [[Addy-Osmani-Loop-Engineering]] —— 5+1 积木 是 metabolic rate 的工程化具体化
-- [[Loop-Engineering-验证才是瓶颈]] —— 验证闸门 是 metabolic rate 的硬约束
+- [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]] —— "组织是最慢的节点" 印证本文"组织维度最难"
+- [[02-ai-coding/Addy-Osmani-Loop-Engineering]] —— 5+1 积木 是 metabolic rate 的工程化具体化
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] —— 验证闸门 是 metabolic rate 的硬约束
 
 ## 正文要点(8 条 = 主张 + 案例 + 操作)
 

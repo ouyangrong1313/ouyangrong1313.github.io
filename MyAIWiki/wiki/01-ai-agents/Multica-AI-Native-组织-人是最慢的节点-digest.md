@@ -3,8 +3,8 @@
 > 来源：https://mp.weixin.qq.com/s/tIx02ra7Y58xdchsTtzZtw
 > 公众号：腾讯研究院
 > 发布时间：2026-06-11
-> 完整版：[[Multica-AI-Native-组织-人是最慢的节点]]
-> 原文：[[../../raw/2026-06-TencentIR-Multica-AI-Native-组织]]
+> 完整版：[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]
+> 原文：[[../../raw/TencentIR-Multica-AI-Native-组织]]
 
 ## 一句话总结
 
@@ -69,15 +69,15 @@
 
 ## 关联阅读
 
-- [[Claude-Code一周年回顾-Boris-Cat]] — "不再 review 代码"同源
-- [[AI-PM核心技能-观测评估与反馈闭环]] — AI 时代稀缺的是判断力
-- [[OpenClaw-vs-Hermes-多-Agent-架构设计]] — 多 Agent 架构的另一条主线
-- [[从零设计生产级-Multi-Agent-Harness]] — 多 Agent Harness 工程化
-- [[make-for-agent-qi-shi-huan-shi-make-for-human]] — Agent 协作层的产品设计
-- [[54万行代码的顿悟]] — 未来瓶颈 = 需求定义 + 架构设计
-- [[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]] — 同一 AI Native 组织主题的另一视角
-- [[AI-Coding的顿悟时刻]] — 工程师个人范式
+- [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]] — "不再 review 代码"同源
+- [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]] — AI 时代稀缺的是判断力
+- [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]] — 多 Agent 架构的另一条主线
+- [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]] — 多 Agent Harness 工程化
+- [[01-ai-agents/make-for-agent-qi-shi-huan-shi-make-for-human]] — Agent 协作层的产品设计
+- [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] — 未来瓶颈 = 需求定义 + 架构设计
+- [[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]] — 同一 AI Native 组织主题的另一视角
+- [[02-ai-coding/AI-Coding的顿悟时刻]] — 工程师个人范式
 
 ## 标签
 
-#主题/AI-Native #主题/AI-Agent #主题/多Agent协作 #主题/组织变革 #主题/人机协作 #主题/认知衰减 #公司/Multica #场景/Agent平台 #场景/小团队
+ #主题/AI-Native #主题/AI-Agent #主题/多Agent协作 #主题/组织变革 #主题/人机协作 #主题/认知衰减 #公司/Multica #场景/Agent平台 #场景/小团队

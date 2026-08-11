@@ -68,7 +68,7 @@
 ---
 
 ## 标签
-#主题/AIAgent #手法/趋势洞察 #手法/反常识 #手法/架构拆解 #场景/技术博客
+ #主题/AIAgent #手法/趋势洞察 #手法/反常识 #手法/架构拆解 #场景/技术博客
 
 ## 相关链接
 - 原文：https://mp.weixin.qq.com/s/BQJuCj-jVl4ycAI1IQBp5g

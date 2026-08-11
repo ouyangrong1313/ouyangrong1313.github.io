@@ -160,10 +160,10 @@ Claude Code的代码评审之所以敢交给Claude，是因为有一套严格的
 
 ## 标签
 
-#主题/AI-Agent #主题/AI-Coding #手法/权威背书 #场景/技术博客
+ #主题/AI-Agent #主题/AI-Coding #手法/权威背书 #场景/技术博客
 
 ## 相关链接
 
-- [[ai-agents/index]]
-- [[ai-coding/index]]
-- [[productivity/index]]
+- [[01-ai-agents/index]]
+- [[02-ai-coding/index]]
+- [[03-productivity/index]]

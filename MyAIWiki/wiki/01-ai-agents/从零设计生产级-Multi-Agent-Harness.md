@@ -463,11 +463,11 @@ Prompt、模型、工具、记忆策略、Budget 策略的每次调整，都应�
 
 ## 关联阅读
 
-- [[OpenClaw-vs-Hermes-多-Agent-架构设计]]
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
-- [[HarnessEngineering企业级实战]]
-- [[Harness工程AgentLoop]]
-- [[从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]]
-- [[harness-engineering]]
-- [[企业知识库认知底座]]
-- [[谷歌开源agent-skills]]
+- [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]]
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+- [[01-ai-agents/HarnessEngineering企业级实战]]
+- [[01-ai-agents/Harness工程AgentLoop]]
+- [[02-ai-coding/从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]]
+- [[01-ai-agents/harness-engineering]]
+- [[06-ai-tech/企业知识库认知底座]]
+- [[02-ai-coding/谷歌开源agent-skills]]

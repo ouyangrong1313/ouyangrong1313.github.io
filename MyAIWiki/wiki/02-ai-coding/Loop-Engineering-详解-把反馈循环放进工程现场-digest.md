@@ -3,12 +3,12 @@
 > 来源：https://mp.weixin.qq.com/s/hx7-BQ33JFOHHtJP30TkbA
 > 公众号：架构师（JiaGouX）—若飞
 > 发布时间：2026-06-11
-> 完整版：[[Loop-Engineering-详解-把反馈循环放进工程现场]]
-> 原文：[[../../raw/2026-06-Ruofei-Loop-Engineering-详解]]
+> 完整版：[[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]]
+> 原文：[[../../raw/Ruofei-Loop-Engineering-详解]]
 
 ## 一句话总结
 
-**Loop Engineering 不是"提示词死了"，而是把 prompt 放回一个反馈系统：发现工作 → 分配任务 → 执行 → 验证 → 记录状态 → 决定继续/停止/交给人。** 若飞在 [[Addy-Osmani-Loop-Engineering]] 原文之上，给中文工程团队一份"7 天小范围试点"的实操指南。
+**Loop Engineering 不是"提示词死了"，而是把 prompt 放回一个反馈系统：发现工作 → 分配任务 → 执行 → 验证 → 记录状态 → 决定继续/停止/交给人。** 若飞在 [[02-ai-coding/Addy-Osmani-Loop-Engineering]] 原文之上，给中文工程团队一份"7 天小范围试点"的实操指南。
 
 ## Prompt → Harness → Loop 层次
 
@@ -82,7 +82,7 @@
 - "**loop 本身不知道你是在加速理解，还是在逃避理解**。"
 - "提示词解决的是下一句话怎么说，loop 解决的是这件事怎么持续做、怎么知道做对、什么时候停。"
 
-## 与原文 [[Addy-Osmani-Loop-Engineering]] 差异
+## 与原文 [[02-ai-coding/Addy-Osmani-Loop-Engineering]] 差异
 
 - 若飞详解偏**中文工程社区实操**（6 工程问题 + 4 入口 + 5 准入 + 7 天试点）
 - Addy 原文偏**跨产品方法论综述**（5+1 积木系统 / Codex 与 Claude Code 双实现）
@@ -91,17 +91,17 @@
 
 ## 关联阅读
 
-- [[Addy-Osmani-Loop-Engineering]] — Addy Osmani 原文
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]] — 范式演化主线
-- [[Agentic-Engineering-AI-Workbench]] — Loop 的"工作现场"基础
-- [[Claude-Code一周年回顾-Boris-Cat]] — Routine 异步化是 loop 工程化形式
-- [[Claude-Code作者Boris-我已经不写prompt了我写loop]] — Boris 写 loop 实操
-- [[Claude-Code之父品味不是人类护城河]] — 同一 Boris 访谈主线
-- [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] — Harness 动态生成
-- [[多Agent使用边界与并行判定]] — 多 Agent 并行判定
-- [[Codex配置原则总览]] — Codex 配置与 loop 关系
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]] — Trust but verify
+- [[02-ai-coding/Addy-Osmani-Loop-Engineering]] — Addy Osmani 原文
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]] — 范式演化主线
+- [[02-ai-coding/Agentic-Engineering-AI-Workbench]] — Loop 的"工作现场"基础
+- [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]] — Routine 异步化是 loop 工程化形式
+- [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]] — Boris 写 loop 实操
+- [[02-ai-coding/Claude-Code之父品味不是人类护城河]] — 同一 Boris 访谈主线
+- [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] — Harness 动态生成
+- [[02-ai-coding/多Agent使用边界与并行判定]] — 多 Agent 并行判定
+- [[02-ai-coding/Codex配置原则总览]] — Codex 配置与 loop 关系
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] — Trust but verify
 
 ## 标签
 
-#主题/AI-Coding #主题/Harness #主题/Loop #主题/工程管理 #主题/工作流设计 #主题/状态记忆 #手法/方法论 #手法/工程实践 #手法/试点设计 #公司/架构师JiaGouX #场景/小团队试点
+ #主题/AI-Coding #主题/Harness #主题/Loop #主题/工程管理 #主题/工作流设计 #主题/状态记忆 #手法/方法论 #手法/工程实践 #手法/试点设计 #公司/架构师JiaGouX #场景/小团队试点

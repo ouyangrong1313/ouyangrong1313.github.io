@@ -1,9 +1,17 @@
 ---
 title: Loop Engineering 的另一半:验证才是瓶颈
 category: 01-ai-agents
-tags: [#主题/Loop-Engineering, #主题/AI-Agent, #主题/工程实践, #主题/AI评测, #主题/AI安全, #主题/Agent-Loop, #场景/方法论, #场景/补完]
+tags:
+  - 主题/Loop-Engineering
+  - 主题/AI-Agent
+  - 主题/工程实践
+  - 主题/AI评测
+  - 主题/AI安全
+  - 主题/Agent-Loop
+  - 场景/方法论
+  - 场景/补完
 nodes: [Loop-生成器-验证器二分, 开放循环-封闭循环, 评估闸门才是产品, 内循环-外循环分层, 仪表化前置原则, Bun-75万行-移植案例, 跑分-生产鸿沟, 验证者-降维边界]
-links: [[Addy-Osmani-Loop-Engineering]], [[Loop-Engineering-详解-把反馈循环放进工程现场]], [[APPSO-Codex-Claude-Code-Loop-Engineering]], [[Harness工程AgentLoop]], [[HarnessEngineering企业级实战]], [[0xCodez-Agent-Harness-14-Steps]], [[阿里云开发者-淘宝主播Agent的Harness工程实战]], [[腾讯-AI-Agent-Skill-测评方案落地]], [[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]], [[Skill-Self-Evolution]]
+links: [[02-ai-coding/Addy-Osmani-Loop-Engineering]], [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]], [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]], [[01-ai-agents/Harness工程AgentLoop]], [[01-ai-agents/HarnessEngineering企业级实战]], [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]], [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]], [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]], [[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]], [[01-ai-agents/Skill-Self-Evolution]]
 date: 2026-06-18
 source: 微信公众号 / 深思 SenseAI(翻译/编译) 2026-06-17 13:25
 原始作者: Samuel McDonnell(@samueljmcd)
@@ -38,12 +46,12 @@ source: 微信公众号 / 深思 SenseAI(翻译/编译) 2026-06-17 13:25
 - **Bun 75 万行 Zig→Rust 移植案例**(Jarred Sumner 2026-06):11 天 / 99.8% 测试通过 / 仍未上生产——验证"评估闸门封顶产出"主张
 
 ### 同级(横向 / 并列)
-- 既有 Loop 主线(本文是"**补完篇**",它们讲编排,我讲验证):[[Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解-把反馈循环放进工程现场]] / [[APPSO-Codex-Claude-Code-Loop-Engineering]]
-- 既有 Harness 主线(**Harness=骨架 / Loop=循环 / 闸门=验证**,本文补完"闸门"侧):[[Harness工程AgentLoop]] / [[HarnessEngineering企业级实战]] / [[0xCodez-Agent-Harness-14-Steps]] / [[harness-engineering]] / [[阿里云开发者-淘宝主播Agent的Harness工程实战]]
-- 评测主线:[[腾讯-AI-Agent-Skill-测评方案落地]] 测评是 Demo→生产必须跨过的门槛
-- 治理薄壳:[[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]] Loop 范式 8 个真痛点
-- 自进化:[[Skill-Self-Evolution]] 外循环的持久化教训与 EvoSkill/SkillOpt 三大学派直接对话
-- Claude Code 一手 + 阿里业务:[[Claude-Code一周年回顾-Boris-Cat]] / [[Claude-Code首席设计师Meaghan-Choi工作流]] / [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
+- 既有 Loop 主线(本文是"**补完篇**",它们讲编排,我讲验证):[[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] / [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]]
+- 既有 Harness 主线(**Harness=骨架 / Loop=循环 / 闸门=验证**,本文补完"闸门"侧):[[01-ai-agents/Harness工程AgentLoop]] / [[01-ai-agents/HarnessEngineering企业级实战]] / [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[01-ai-agents/harness-engineering]] / [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]]
+- 评测主线:[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]] 测评是 Demo→生产必须跨过的门槛
+- 治理薄壳:[[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]] Loop 范式 8 个真痛点
+- 自进化:[[01-ai-agents/Skill-Self-Evolution]] 外循环的持久化教训与 EvoSkill/SkillOpt 三大学派直接对话
+- Claude Code 一手 + 阿里业务:[[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]] / [[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]] / [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
 
 ## 5 个对 Seetong 团队可借鉴动作
 
@@ -51,7 +59,7 @@ source: 微信公众号 / 深思 SenseAI(翻译/编译) 2026-06-17 13:25
 2. **Bun 案例思维实验 → Seetong 代码移植**:iOS OC→Swift / Android Java→Kotlin 迁移用 3 层 agent(写代码 / 2 审查 / 1 反驳 / 修复循环),**但把"99.8% 通过"作为启动条件,不是完成条件**;必须补 5-10 个"生产场景测试"(真实崩溃堆栈/慢启动场景)才算跑通。
 3. **"先仪表化再去扩循环"作为前置条件**:`seetong-batch-issue-rootcause-analysis` / `seetong-daily-briefing` 加 4 项指标(分群准确率/根因命中率/小时级延迟/人工二次确认率),先跑 7 天收集 baseline,再去扩量。**没有 baseline 的循环是赌博**。
 4. **拆 Seetong 哪些任务"有验证器"vs"没验证器"**:① 编译/单测/lint = 有客观验证器,扩 loop 价值高(参考 Bun) ② UI/策略/PRD 文档 = 没验证器,扩之前先想"是不是把'自己看一眼'换名字" ③ Bug 严重度/反馈归类 = 灰区,需先小批量人工标 baseline,跑通评测后再扩 loop。
-5. **写 Seetong "外循环持久化教训"原则**:`seetong-bug-triage` 跑出的"3 天内复现 2 次根因 X"等 Lesson 自动写进 `seetong-knowledge-base`(对应 [[ai-personal-knowledge-base-problems]]),但**先做"教训准入 Gate"**(2 次人工确认 + 1 次自动复现)才准持久化,避免毒化之后运行。
+5. **写 Seetong "外循环持久化教训"原则**:`seetong-bug-triage` 跑出的"3 天内复现 2 次根因 X"等 Lesson 自动写进 `seetong-knowledge-base`(对应 [[01-ai-agents/ai-personal-knowledge-base-problems]]),但**先做"教训准入 Gate"**(2 次人工确认 + 1 次自动复现)才准持久化,避免毒化之后运行。
 
 ## 备注与限制
 
@@ -62,4 +70,4 @@ source: 微信公众号 / 深思 SenseAI(翻译/编译) 2026-06-17 13:25
 - Bun "独立反驳层 agent"实际起多大作用未给拆解
 - "内循环成熟"未给跨模型对比
 - 原文:https://mp.weixin.qq.com/s/xo6oA8gnihPG2ERGV9l4Sw
-- raw:[../../raw/2026-06-17-深思SenseAI-Loop-Engineering-验证才是瓶颈.md](../../raw/2026-06-17-深思SenseAI-Loop-Engineering-验证才是瓶颈.md) | digest:[./Loop-Engineering-验证才是瓶颈-digest.md](./Loop-Engineering-验证才是瓶颈-digest.md)
+- raw:[../../raw/深思SenseAI-Loop-Engineering-验证才是瓶颈.md](../../raw/深思SenseAI-Loop-Engineering-验证才是瓶颈.md) | digest:[./Loop-Engineering-验证才是瓶颈-digest.md](./Loop-Engineering-验证才是瓶颈-digest.md)

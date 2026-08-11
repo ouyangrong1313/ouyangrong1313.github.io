@@ -1,9 +1,24 @@
 ---
 title: 读完 Agent Loop 工程手册，我有 8 个还没想明白的问题
 category: 01-ai-agents
-tags: [#主题/Agent-Loop, #主题/SELF-Protocol, #主题/治理薄壳, #主题/护栏, #主题/Memory, #主题/Maker-Checker, #主题/多Agent拓扑, #节点/Stopping-Condition, #节点/Context自动拼装, #节点/失败转技能, #节点/pre-publish-review, #手法/二手解读, #手法/单样本复盘, #场景/Agent落地, #场景/Loop选题]
+tags:
+  - 主题/Agent-Loop
+  - 主题/SELF-Protocol
+  - 主题/治理薄壳
+  - 主题/护栏
+  - 主题/Memory
+  - 主题/Maker-Checker
+  - 主题/多Agent拓扑
+  - 节点/Stopping-Condition
+  - 节点/Context自动拼装
+  - 节点/失败转技能
+  - 节点/pre-publish-review
+  - 手法/二手解读
+  - 手法/单样本复盘
+  - 场景/Agent落地
+  - 场景/Loop选题
 nodes: [Agent-Loop-范式, Stopping-Condition, Context-动态组装, 失败转输入, 六种多Agent拓扑, SELF-治理薄壳, Memory三层分级, pre-publish-review, 护栏分层, 理解力腐蚀]
-links: [[Addy-Osmani-Loop-Engineering]], [[Loop-Engineering-详解-把反馈循环放进工程现场]], [[APPSO-Codex-Claude-Code-Loop-Engineering]], [[Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]], [[Skill-Self-Evolution]], [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[清华沈阳-自进化AI新物种]], [[Multica-AI-Native-组织-人是最慢的节点]]
+links: [[02-ai-coding/Addy-Osmani-Loop-Engineering]], [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]], [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]], [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]], [[01-ai-agents/Skill-Self-Evolution]], [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[01-ai-agents/清华沈阳-自进化AI新物种]], [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]
 date: 2026-06-16
 source: 微信公众号 腾讯云开发者 / 陈进（https://mp.weixin.qq.com/s/DtQ0FfSpUxYdRR8XOvppaw）
 ---
@@ -41,14 +56,14 @@ source: 微信公众号 腾讯云开发者 / 陈进（https://mp.weixin.qq.com/s
 - 8 个真痛点反哺 Loop 工程方法论（求评论区拍砖）
 
 ### 同级（横向 / 并列）
-- [[Addy-Osmani-Loop-Engineering]] — 方法论原典（5+1 积木）
-- [[Loop-Engineering-详解-把反馈循环放进工程现场]] — 中文工程实操（6 工程问题 + 7 天试点）
-- [[APPSO-Codex-Claude-Code-Loop-Engineering]] — 产业信号（4 人同向共振）
-- [[Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] — Skill 是 Loop 的"每步不被跳过"
-- [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] — 业务需求 Agent 的 4 层×8 步实操
-- [[清华沈阳-自进化AI新物种]] — 自进化方向
-- [[Multica-AI-Native-组织-人是最慢的节点]] — AI Native 组织样本
-- [[Skill-Self-Evolution]] — Skill 自进化三大学派
+- [[02-ai-coding/Addy-Osmani-Loop-Engineering]] — 方法论原典（5+1 积木）
+- [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] — 中文工程实操（6 工程问题 + 7 天试点）
+- [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]] — 产业信号（4 人同向共振）
+- [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] — Skill 是 Loop 的"每步不被跳过"
+- [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] — 业务需求 Agent 的 4 层×8 步实操
+- [[01-ai-agents/清华沈阳-自进化AI新物种]] — 自进化方向
+- [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]] — AI Native 组织样本
+- [[01-ai-agents/Skill-Self-Evolution]] — Skill 自进化三大学派
 
 ## 正文要点 + 8 个真痛点
 ### 4 个值得琢磨的设计法
@@ -82,8 +97,8 @@ source: 微信公众号 腾讯云开发者 / 陈进（https://mp.weixin.qq.com/s
 - **单样本无对照**：SELF 所有"有效"都是 30 天单 Agent 个人体感
 - **8 痛点无标准答案**：整篇是抛问题不是给答案，作者"求评论区拍砖"
 - **Close Beta 形态**：SELF 不是产品，是开放协议；当前是 Knot Skill 33837 v1.6.7
-- raw 原文：[[2026-06-陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]]
-- raw digest：[[2026-06-陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题-digest]]
-- wiki digest：[[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题-digest]]
-- Loop 主线四视角：[[Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解-把反馈循环放进工程现场]] / [[APPSO-Codex-Claude-Code-Loop-Engineering]] / 本文
-- 治理/护栏延伸：[[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]（4 层×8 步）/ [[Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]]（Skill 库是 Loop 在工程化落体的形态）
+- raw 原文：[[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]]
+- raw digest：[[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题-digest]]
+- wiki digest：[[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题-digest]]
+- Loop 主线四视角：[[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] / [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]] / 本文
+- 治理/护栏延伸：[[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]（4 层×8 步）/ [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]]（Skill 库是 Loop 在工程化落体的形态）

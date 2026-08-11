@@ -1,9 +1,21 @@
 ---
 title: WorkBuddy Harness 工程复盘：从模型到可用 Agent
 category: 01-ai-agents
-tags: [主题/WorkBuddy, 主题/Harness, 主题/Context-Engineering, 主题/Loop-Engineering, 主题/MCP, 主题/Skill, 主题/Memory, 主题/AI-Agent, 场景/微信编译, 场景/产品拆解, 作者/Anne, 编辑/Founder-Park]
+tags:
+  - 主题/WorkBuddy
+  - 主题/Harness
+  - 主题/Context-Engineering
+  - 主题/Loop-Engineering
+  - 主题/MCP
+  - 主题/Skill
+  - 主题/Memory
+  - 主题/AI-Agent
+  - 场景/微信编译
+  - 场景/产品拆解
+  - 作者/Anne
+  - 编辑/Founder-Park
 nodes: [无状态模型, 工具调用协议, MCP三原语, SkillPlugin分层, 上下文五动作, 长期记忆准入, Harness三能力, 五层Harness, Loop组件, 业务验证缺口]
-links: [[Lilian-Weng-Harness-Engineering-自我改进]], [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]], [[HarnessEngineering企业级实战]], [[阿里云开发者-淘宝主播Agent的Harness工程实战]], [[0xCodez-Agent-Harness-14-Steps]], [[Loop-Engineering-验证才是瓶颈]], [[Leeka-Task-Decomposition-Agentic-Workflow]], [[AI-团队协作-Loop-SDD]], [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]], [[AI-Native企业-Agent团队和AI-Factory重写公司体系]], [[腾讯-AI-Agent-Skill-测评方案落地]]
+links: [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]], [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]], [[01-ai-agents/HarnessEngineering企业级实战]], [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]], [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]], [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]], [[01-ai-agents/AI-团队协作-Loop-SDD]], [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]], [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]], [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]
 date: 2026-07-12
 source: 微信公众号「Founder Park」2026-07-12 推送 / Anne（WorkBuddy 团队策略产品经理）
 ---
@@ -46,18 +58,18 @@ source: 微信公众号「Founder Park」2026-07-12 推送 / Anne（WorkBuddy �
 - Addy / Lilian / Leeka 这条主线：分别从 Loop、Harness 学术定义、任务拆解补足方法论底座
 
 ### 下游（应用于 / 验证于）
-- [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：印证“状态文件 + 分层知识 + DAG 编排”这条工程路径
-- [[阿里云开发者-淘宝主播Agent的Harness工程实战]]：印证高风险生产场景里权限、校验、幂等和信任度闭环的重要性
-- [[腾讯-AI-Agent-Skill-测评方案落地]]：印证“没有验证器，Agent 不能从 Demo 走到生产”
-- [[AI-团队协作-Loop-SDD]]：把本文的产品层解释继续推进到组织协作层和规格层
-- [[Loop-Engineering-验证才是瓶颈]]：与本文“业务验证缺口”直接形成前后呼应
+- [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：印证“状态文件 + 分层知识 + DAG 编排”这条工程路径
+- [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]]：印证高风险生产场景里权限、校验、幂等和信任度闭环的重要性
+- [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]：印证“没有验证器，Agent 不能从 Demo 走到生产”
+- [[01-ai-agents/AI-团队协作-Loop-SDD]]：把本文的产品层解释继续推进到组织协作层和规格层
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]：与本文“业务验证缺口”直接形成前后呼应
 
 ### 同级（横向 / 并列）
-- [[Lilian-Weng-Harness-Engineering-自我改进]]：理论原典，提供 Harness 的学术定义和 RSI 视角
-- [[HarnessEngineering企业级实战]]：企业侧落地，强调 Pipeline、门禁和角色分离
-- [[0xCodez-Agent-Harness-14-Steps]]：路线图视角，适合做落地 checklist
-- [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]：从 Anthropic 团队组织协作视角补完“人怎么和 Agent 共事”
-- [[AI-Native企业-Agent团队和AI-Factory重写公司体系]]：Truth Layer + Eval + 组织图重写，是本文在企业级场景的延展
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]：理论原典，提供 Harness 的学术定义和 RSI 视角
+- [[01-ai-agents/HarnessEngineering企业级实战]]：企业侧落地，强调 Pipeline、门禁和角色分离
+- [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]]：路线图视角，适合做落地 checklist
+- [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]：从 Anthropic 团队组织协作视角补完“人怎么和 Agent 共事”
+- [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]：Truth Layer + Eval + 组织图重写，是本文在企业级场景的延展
 
 ## 正文要点（5 条）
 
@@ -87,11 +99,11 @@ source: 微信公众号「Founder Park」2026-07-12 推送 / Anne（WorkBuddy �
 - WorkBuddy 的很多具体机制没有公开完整细节，例如内部 Tool/Skill 清单、审批策略、评测指标
 - 文中引用 OpenAI / Anthropic / LangChain 的实践，更多是方法论对照，不是可直接迁移的模板
 - 对业务正确性的验证缺口，文章指出了问题，但没有给出成熟的通用解法
-- 适合和 [[Lilian-Weng-Harness-Engineering-自我改进]]、[[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]、[[Loop-Engineering-验证才是瓶颈]] 连读，能形成“理论定义 -> 工程机制 -> 验证边界”的三段理解链
+- 适合和 [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]、[[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]、[[01-ai-agents/Loop-Engineering-验证才是瓶颈]] 连读，能形成“理论定义 -> 工程机制 -> 验证边界”的三段理解链
 
 ## 相关链接
 
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent-digest]]
-- [[Lilian-Weng-Harness-Engineering-自我改进]]
-- [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]
-- [[Loop-Engineering-验证才是瓶颈]]
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent-digest]]
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]
+- [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]

@@ -1,9 +1,16 @@
 ---
 title: Ogilvy 10 条写作规则 + Claude Skill 落地
 category: 05-content-creation
-tags: [#主题/内容创作, #主题/AI-Coding, #手法/权威背书, #手法/AI落地, #场景/Skill落地, #节点/Skill, #节点/Claude-Skill]
+tags:
+  - 主题/内容创作
+  - 主题/AI-Coding
+  - 手法/权威背书
+  - 手法/AI落地
+  - 场景/Skill落地
+  - 节点/Skill
+  - 节点/Claude-Skill
 nodes: [Ogilvy-10条规则, Claude-Skill, AI-写作教练, 经典理论+AI, 严重性分级审计, 写作-不替重写, Roman-Raphaelson, 出声朗读]
-links: [[乔布斯1995遗失访谈]]
+links: [[05-content-creation/乔布斯1995遗失访谈]]
 date: 2026-06-07
 source: Twitter/X - @dickiebush
 metrics: 20.8万浏览 / 118喜欢 / 1,331书签
@@ -105,7 +112,7 @@ Ogilvy 规则 3 和 7 的共同方法论。**写作的最高检验标准不是�
 - 任何团队的写作训练（团队级应用）
 
 ### 同级（横向 / 并列）
-- [[乔布斯1995遗失访谈]] - 1995 年乔布斯访谈中"Stay hungry, stay foolish"也是经典理论的现代复活
+- [[05-content-creation/乔布斯1995遗失访谈]] - 1995 年乔布斯访谈中"Stay hungry, stay foolish"也是经典理论的现代复活
 - AI 写作教练类工具（如 Grammarly、Wordtune）—— 区别：基于通用 NLP vs 基于经典成文规则
 - Agent Skills 系统性综述（02-ai-coding）—— 同属 Skill 落地范畴
 
@@ -132,4 +139,4 @@ Ogilvy 规则 3 和 7 的共同方法论。**写作的最高检验标准不是�
 
 ---
 
-**标签**：#主题/内容创作 #主题/AI-Coding #手法/权威背书 #手法/AI落地 #场景/Skill落地 #节点/Skill #节点/Claude-Skill
+**标签**： #主题/内容创作 #主题/AI-Coding #手法/权威背书 #手法/AI落地 #场景/Skill落地 #节点/Skill #节点/Claude-Skill

@@ -425,11 +425,11 @@ NotebookLM 更接近前者，并带一点 Wiki 化倾向；LLM Wiki 则更强调
 
 ## 关联阅读
 
-- [[llm-agent-unified-memory-framework]]
-- [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]]
-- [[企业知识库认知底座]]
-- [[从 Agent Harness 到知识复利：结合 OpenClaw 的一体化理解]]
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
-- [[memory-systems]]
-- [[claude-obsidian-second-brain]]
-- [[karpathy-knowledge-system]]
+- [[01-ai-agents/llm-agent-unified-memory-framework]]
+- [[01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain]]
+- [[06-ai-tech/企业知识库认知底座]]
+- [[06-ai-tech/从 Agent Harness 到知识复利：结合 OpenClaw 的一体化理解]]
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+- [[01-ai-agents/memory-systems]]
+- [[02-ai-coding/claude-obsidian-second-brain]]
+- [[03-productivity/karpathy-knowledge-system]]

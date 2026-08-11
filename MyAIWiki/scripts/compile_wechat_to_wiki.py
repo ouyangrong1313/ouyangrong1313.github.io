@@ -184,7 +184,7 @@ def build_wiki_markdown(article: dict, tags: str, category: str) -> str:
         "## 分类提炼",
         "",
         f"- 场景：{CATEGORY_LABELS.get(category, category)} / 公众号长文",
-        f"- 标签：{tags}",
+        f"- 标签： {tags}",
         "- 类型：自动编译草稿 / 待人工复核",
         "",
         "## 要点列表",
@@ -309,7 +309,7 @@ def update_log(path: Path, title: str, slug: str, category: str, url: str, tags:
             f"- 原文：raw/{slug}.md",
             f"- 拆解：raw/{slug}-digest.md",
             f"- wiki：wiki/{category}/{slug}.md",
-            f"- 标签：{tags}",
+            f"- 标签： {tags}",
             "- 说明：自动编译草稿，建议人工复核 digest 与 wiki 提炼质量",
             "",
         ]

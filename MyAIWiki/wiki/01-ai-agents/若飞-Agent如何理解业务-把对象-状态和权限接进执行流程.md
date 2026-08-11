@@ -1,9 +1,17 @@
 ---
 title: 一文讲清 Agent 如何理解业务：把对象、状态和权限接进执行流程
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/业务理解, #主题/对象状态权限, #主题/权限治理, #主题/业务执行, #主题/Harness, #场景/公众号长文, #作者/若飞]
+tags:
+  - 主题/AI-Agent
+  - 主题/业务理解
+  - 主题/对象状态权限
+  - 主题/权限治理
+  - 主题/业务执行
+  - 主题/Harness
+  - 场景/公众号长文
+  - 作者/若飞
 nodes: [意图识别只是入口, 六项业务语义, 事实源分层, 三类状态分离, 业务决策记录, 理解决策执行三层, 五份小合同, 业务理解卡, 四类伪懂测试]
-links: [[若飞-Agent-记忆与可验证自我改进怎么设计]], [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]], [[图工程-Graph-Engineering-来了-LangChain说不是新东西]], [[从零设计生产级-Multi-Agent-Harness]], [[AI-PM核心技能-观测评估与反馈闭环]], [[Loop-Engineering-详解-把反馈循环放进工程现场]], [[Agentic-Engineering-AI-Workbench]]
+links: [[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]], [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]], [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]], [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]], [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]], [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]], [[02-ai-coding/Agentic-Engineering-AI-Workbench]]
 date: 2026-07-27
 source: 微信公众号「架构师（JiaGouX）」2026-07-26 推送 / 若飞
 ---
@@ -23,7 +31,7 @@ source: 微信公众号「架构师（JiaGouX）」2026-07-26 推送 / 若飞
 ## 分类提炼
 
 - 场景：动作型 Agent / 客服与业务流程 / 对象-状态-权限建模
-- 标签：#主题/AI-Agent #主题/业务理解 #主题/对象状态权限 #主题/权限治理 #主题/业务执行 #主题/Harness #场景/公众号长文 #作者/若飞
+- 标签： #主题/AI-Agent #主题/业务理解 #主题/对象状态权限 #主题/权限治理 #主题/业务执行 #主题/Harness #场景/公众号长文 #作者/若飞
 - 类型：业务语义层方法论 / 运行时契约设计 / 执行边界拆解
 - 最强增量：把“业务理解”从抽象能力，压成一套可落地的运行时契约：对象、状态、规则、权限、动作、证据、测试和放权边界
 
@@ -43,21 +51,21 @@ source: 微信公众号「架构师（JiaGouX）」2026-07-26 推送 / 若飞
 
 ### 上游（基于 / 来自）
 
-- [[Agentic-Engineering-AI-Workbench]]：那篇把计划、上下文和验证做成 AI 工作台，这篇把同样的问题推进到业务现场，回答“工作台里到底要接哪份对象、状态和权限真相源”。
-- [[图工程-Graph-Engineering-来了-LangChain说不是新东西]]：图工程回答“边为什么存在”，本文补上“边上传递的究竟该是什么业务状态与权限信息”，让图不只是控制流图。
-- [[若飞-Agent-记忆与可验证自我改进怎么设计]]：上一篇讲 Memory 如何准入、晋升和回滚，这篇讲当前任务怎样绑定对象、状态、规则和权限；两篇合起来是一组控制面。
+- [[02-ai-coding/Agentic-Engineering-AI-Workbench]]：那篇把计划、上下文和验证做成 AI 工作台，这篇把同样的问题推进到业务现场，回答“工作台里到底要接哪份对象、状态和权限真相源”。
+- [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]]：图工程回答“边为什么存在”，本文补上“边上传递的究竟该是什么业务状态与权限信息”，让图不只是控制流图。
+- [[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]：上一篇讲 Memory 如何准入、晋升和回滚，这篇讲当前任务怎样绑定对象、状态、规则和权限；两篇合起来是一组控制面。
 
 ### 下游（应用于 / 验证于）
 
-- [[从零设计生产级-Multi-Agent-Harness]]：本文的对象-状态-权限与验证证据，正是多 Agent Harness 真要接进生产时必须补齐的运行时契约。
-- [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：应用宝场景里多专家、多节点和 DAG 编排要成立，前提正是每个节点知道自己读哪份状态、写哪份结果、谁能放行。
-- [[AI-PM核心技能-观测评估与反馈闭环]]：本文最后一节把指标从 intent accuracy 推到业务结果，和 AI PM 的观测、评估、反馈闭环正好接上。
+- [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]：本文的对象-状态-权限与验证证据，正是多 Agent Harness 真要接进生产时必须补齐的运行时契约。
+- [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：应用宝场景里多专家、多节点和 DAG 编排要成立，前提正是每个节点知道自己读哪份状态、写哪份结果、谁能放行。
+- [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]]：本文最后一节把指标从 intent accuracy 推到业务结果，和 AI PM 的观测、评估、反馈闭环正好接上。
 
 ### 同级（横向 / 并列）
 
-- [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]：阿里妹那篇讲“需求专家 Agent 如何跑完整链路”，本文讲“业务语义层如何让这条链路不靠猜”。
-- [[Loop-Engineering-详解-把反馈循环放进工程现场]]：Loop 那篇更偏工程入口与循环控制，本文补上业务现场里最容易混掉的对象、状态、权限和完成证据。
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]：WorkBuddy 讲模型外的 Context / Memory / Harness 结构层，本文则补上这些结构真正接业务时该接什么。
+- [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]：阿里妹那篇讲“需求专家 Agent 如何跑完整链路”，本文讲“业务语义层如何让这条链路不靠猜”。
+- [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]]：Loop 那篇更偏工程入口与循环控制，本文补上业务现场里最容易混掉的对象、状态、权限和完成证据。
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：WorkBuddy 讲模型外的 Context / Memory / Harness 结构层，本文则补上这些结构真正接业务时该接什么。
 
 ## 正文要点（6 条）
 
@@ -96,9 +104,9 @@ source: 微信公众号「架构师（JiaGouX）」2026-07-26 推送 / 若飞
 
 ## 相关链接
 
-- [[若飞-Agent如何理解业务-把对象-状态和权限接进执行流程-digest]]
-- [[若飞-Agent-记忆与可验证自我改进怎么设计]]
-- [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
-- [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]
-- [[图工程-Graph-Engineering-来了-LangChain说不是新东西]]
-- [[从零设计生产级-Multi-Agent-Harness]]
+- [[01-ai-agents/若飞-Agent如何理解业务-把对象-状态和权限接进执行流程-digest]]
+- [[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]
+- [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
+- [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]
+- [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]]
+- [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]

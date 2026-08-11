@@ -14,6 +14,6 @@
 
 ## 相关链接
 
-- [[tool-use]]
-- [[memory-systems]]
-- [[workflow-vs-agent]]
+- [[01-ai-agents/tool-use]]
+- [[01-ai-agents/memory-systems]]
+- [[01-ai-agents/workflow-vs-agent]]

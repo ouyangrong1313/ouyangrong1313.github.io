@@ -47,8 +47,8 @@
 
 ## 我的理解
 
-- 跟 [[Harness不是目的-知识才是护城河]] 是同一判断的两个侧面：那篇从工程角度说"工程化不是终局"，本篇从管理角度说"判断权不能外包"
-- 跟 [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] 是配套的：动态工作流是技术能力升级，本篇是上层制度约束——**两者必须配套**
+- 跟 [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] 是同一判断的两个侧面：那篇从工程角度说"工程化不是终局"，本篇从管理角度说"判断权不能外包"
+- 跟 [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] 是配套的：动态工作流是技术能力升级，本篇是上层制度约束——**两者必须配套**
 - 对 Seetong 团队的具体启发：
   - AI Coding 工具的引入要"价值校准"——它帮写代码，但代码质量标准由人定
   - TAPD 需求评审不能完全交给 AI
@@ -57,11 +57,11 @@
 
 ## 适合关联的主题
 
-- [[AI-PM核心技能-观测评估与反馈闭环]]
-- [[HarnessEngineering企业级实战]]
-- [[Harness不是目的-知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
-- [[Agent时代架构师系统能力]]
-- [[Harness工程AgentLoop]]
-- [[Skills驱动推理新范式]]
-- [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
-- [[OpenClaw-vs-Hermes-多-Agent-架构设计]]
+- [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]]
+- [[01-ai-agents/HarnessEngineering企业级实战]]
+- [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
+- [[01-ai-agents/Agent时代架构师系统能力]]
+- [[01-ai-agents/Harness工程AgentLoop]]
+- [[01-ai-agents/Skills驱动推理新范式]]
+- [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
+- [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]]

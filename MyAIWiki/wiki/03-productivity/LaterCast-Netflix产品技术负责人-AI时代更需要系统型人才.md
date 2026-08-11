@@ -1,9 +1,19 @@
 ---
 title: Netflix 产品与技术负责人：AI 时代为什么更需要系统型人才
 category: 03-productivity
-tags: [#主题/AI时代工作方法, #主题/系统思维, #主题/组织设计, #主题/岗位流动, #主题/Netflix, #主题/Lenny-Podcast, #主题/产品技术负责人, #主题/设计师价值迁移, #场景/Seetong借鉴, #作者/Elizabeth-Stone]
+tags:
+  - 主题/AI时代工作方法
+  - 主题/系统思维
+  - 主题/组织设计
+  - 主题/岗位流动
+  - 主题/Netflix
+  - 主题/Lenny-Podcast
+  - 主题/产品技术负责人
+  - 主题/设计师价值迁移
+  - 场景/Seetong借鉴
+  - 作者/Elizabeth-Stone
 nodes: [专业能力依然值钱, 能做不等于可以上线, 专业标准不模糊, 原型不等于走得快, 抢系统型人才, 平台80%通用, 设计师价值迁移, 系统思维缩小一格, AI熟练度非工具清单]
-links: [[LaterCast-YC设计负责人-AI重写设计师工作流]], [[笔记侠-苏姿丰-MIT演讲-工程师本能]], [[笔记侠-十布-这-是以后的工作方式]], [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]], [[OpenAI-AI原生组织-4条工作原则]], [[深思圈-思考外包能动性]], [[AI时代给人类留了最后一份工作-是农民]]
+links: [[03-productivity/LaterCast-YC设计负责人-AI重写设计师工作流]], [[03-productivity/笔记侠-苏姿丰-MIT演讲-工程师本能]], [[03-productivity/笔记侠-十布-这-是以后的工作方式]], [[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]], [[06-ai-tech/OpenAI-AI原生组织-4条工作原则]], [[06-ai-tech/深思圈-思考外包能动性]], [[01-ai-agents/AI时代给人类留了最后一份工作-是农民]]
 date: 2026-07-21
 source: 微信公众号「Capihom（晚点再听LaterCast）」2026-07-21（一手 Lenny's Podcast with Elizabeth Stone Netflix CPTO / 原文 https://mp.weixin.qq.com/s/Humku-Qw54NhhNq41BaGuw）
 ---
@@ -68,13 +78,14 @@ source: 微信公众号「Capihom（晚点再听LaterCast）」2026-07-21（一�
 - 企业级组织设计（中央工程团队 + 业务团队配比）/ AI 时代人才密度 vs 工具清单 / 平台型组织 vs 本地化团队
 
 ### 同级（横向）
-- [[LaterCast-YC设计负责人-AI重写设计师工作流]] 同 Capihom 编译主线（设计师 AI 工作流）
-- [[笔记侠-苏姿丰-MIT演讲-工程师本能]] 工程师本能 4 关键词
-- [[笔记侠-十布-这-是以后的工作方式]] 影刀创始人谈 AI 原生组织
-- [[WonderLearner-Alice-Claude-Code之父的新洞察]] 5 类角色原型
-- [[OpenAI-AI原生组织-4条工作原则]] Find a way / Creativity over control
-- [[AI时代给人类留了最后一份工作-是农民]] 不可外包的"最后一公里"
-- [[深思圈-思考外包能动性]] 外包苦役 vs 外包判断边界
+- [[03-productivity/LaterCast-YC设计负责人-AI重写设计师工作流]] 同 Capihom 编译主线（设计师 AI 工作流）
+- [[03-productivity/笔记侠-苏姿丰-MIT演讲-工程师本能]] 工程师本能 4 关键词
+- [[03-productivity/笔记侠-十布-这-是以后的工作方式]] 影刀创始人谈 AI 原生组织
+- [[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]] 5 类角色原型
+- [[06-ai-tech/OpenAI-AI原生组织-4条工作原则]] Find a way / Creativity over control
+- [[01-ai-agents/AI时代给人类留了最后一份工作-是农民]] 不可外包的"最后一公里"
+- [[06-ai-tech/深思圈-思考外包能动性]] 外包苦役 vs 外包判断边界
+- [[03-productivity/行走的帆-奈飞AI时代新人才观-系统思维]] 同源二手整理，补充高人才密度、风险容忍、责任担当与年轻员工的趋势感知；不作为独立证据。
 
 ## 6 个对 Seetong 借鉴动作
 
@@ -90,10 +101,10 @@ source: 微信公众号「Capihom（晚点再听LaterCast）」2026-07-21（一�
 - **嘉宾背景**：Elizabeth Stone，Netflix CPTO（前 CTO，2024 接管工程/产品/设计）；加入 Netflix 之前做过 Lyft 科学副总裁 / Nuna COO / 经济学家 / 华尔街交易员
 - **理论参考**：跨职能人才观 + 平台组织理论（Microsoft"铺好的路" / Netflix 文化"人才密度" / Chris Dixon 平台论）
 - **未独立验证**：平台"80% 通用"是经验值未给可量化口径；"AI 熟练度每季度更新"是 Netflix 内部评估机制未公开
-- **本批对比**：与 [[笔记侠-苏姿丰-MIT演讲-工程师本能]] 同主线"AI 时代通用能力 vs 专业深度"；与 [[深思圈-思考外包能动性]] 形成"组织视角 vs 个人视角"对偶
+- **本批对比**：与 [[03-productivity/笔记侠-苏姿丰-MIT演讲-工程师本能]] 同主线"AI 时代通用能力 vs 专业深度"；与 [[06-ai-tech/深思圈-思考外包能动性]] 形成"组织视角 vs 个人视角"对偶
 
 - [原文链接](https://mp.weixin.qq.com/s/Humku-Qw54NhhNq41BaGuw)
 - [Lenny's Podcast](https://www.lennyspodcast.com/)
-- [[LaterCast-YC设计负责人-AI重写设计师工作流]] 同主线
-- [[笔记侠-苏姿丰-MIT演讲-工程师本能]] 工程师本能
-- [[AI时代给人类留了最后一份工作-是农民]] 不可外包
+- [[03-productivity/LaterCast-YC设计负责人-AI重写设计师工作流]] 同主线
+- [[03-productivity/笔记侠-苏姿丰-MIT演讲-工程师本能]] 工程师本能
+- [[01-ai-agents/AI时代给人类留了最后一份工作-是农民]] 不可外包

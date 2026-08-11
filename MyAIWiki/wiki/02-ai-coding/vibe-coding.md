@@ -88,7 +88,7 @@ AI 能独立完成的任务时长，**每 7 个月翻一倍**：
 ---
 
 ## 标签
-#主题/AI Coding #场景/技术博客
+ #主题/AI Coding #场景/技术博客
 
 ## 来源
 - 原文：https://mp.weixin.qq.com/s/uajs9vOpVPqBzGFBw7zxtQ

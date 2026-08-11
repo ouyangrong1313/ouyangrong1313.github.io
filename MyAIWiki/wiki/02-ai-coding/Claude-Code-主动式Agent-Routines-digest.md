@@ -4,7 +4,7 @@ category: 02-ai-coding
 date: 2026-06-17
 source: 微信公众号 Capihom 2026-06-17 编译
 source_url: https://mp.weixin.qq.com/s/kvtDAdTe2H4hTUXc3FEaVg
-main_entry: [[Claude-Code-主动式Agent-Routines]]
+main_entry: [[02-ai-coding/Claude-Code-主动式Agent-Routines]]
 ---
 
 # Claude Code 主动式 Agent Routines — Digest
@@ -37,13 +37,13 @@ main_entry: [[Claude-Code-主动式Agent-Routines]]
 
 ## 关联
 
-**主条目**:[[Claude-Code-主动式Agent-Routines]]
-**上游**:[[Claude-Code首席设计师Meaghan-Choi工作流]] / [[Claude-Code一周年回顾-Boris-Cat]] / [[Anthropic万字长文三个判断和一个阳谋]] / [[claude-code-dynamic-workflows]]
-**下游**:[[Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解-把反馈循环放进工程现场]] / [[APPSO-Codex-Claude-Code-Loop-Engineering]] / [[Agentic-Engineering-AI-Workbench]]
-**同级**:[[Claude-Code之父品味不是人类护城河]] / [[Claude-Code作者Boris-28分钟教你写真正有效的Prompts]]
+**主条目**:[[02-ai-coding/Claude-Code-主动式Agent-Routines]]
+**上游**:[[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]] / [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]] / [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]] / [[02-ai-coding/claude-code-dynamic-workflows]]
+**下游**:[[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] / [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]] / [[02-ai-coding/Agentic-Engineering-AI-Workbench]]
+**同级**:[[02-ai-coding/Claude-Code之父品味不是人类护城河]] / [[02-ai-coding/Claude-Code作者Boris-28分钟教你写真正有效的Prompts]]
 
 ## 备注
 
 - 速读版:核心结论 + 反直觉 + Seetong 借鉴动作 + 关联指针
-- 完整编译页:同目录 [[Claude-Code-主动式Agent-Routines]]
+- 完整编译页:同目录 [[02-ai-coding/Claude-Code-主动式Agent-Routines]]
 - 演讲原视频:https://www.youtube.com/watch?v=eSP7PLTXNy8 (比浓缩稿更完整,含 Maya 现场演示和问答)

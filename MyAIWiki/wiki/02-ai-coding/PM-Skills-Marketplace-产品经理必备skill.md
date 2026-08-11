@@ -1,9 +1,24 @@
 ---
 title: PM Skills Marketplace - 产品经理必备 Skill
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI-Agent, #主题/产品经理, #主题/Skill, #主题/方法论, #场景/工具推荐, #场景/方法论落地, #场景/公众号长文, #手法/案例叙事, #手法/痛点共鸣, #手法/数据冲击, #节点/Skill, #节点/Slash-Command, #节点/OpenCode, #节点/产品方法论]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Agent
+  - 主题/产品经理
+  - 主题/Skill
+  - 主题/方法论
+  - 场景/工具推荐
+  - 场景/方法论落地
+  - 场景/公众号长文
+  - 手法/案例叙事
+  - 手法/痛点共鸣
+  - 手法/数据冲击
+  - 节点/Skill
+  - 节点/Slash-Command
+  - 节点/OpenCode
+  - 节点/产品方法论
 nodes: [PM-Skills, Slash-Command, Skill, Command, OST, Lean-Canvas, JTBD, Pre-mortem, OpenCode, Claude-Code, 方法论编码]
-links: [[mattpocock-skills]], [[Skill-Self-Evolution]], [[claude-code-large-codebase-best-practices]], [[与AI一起做产品的六条原则]], [[AI-PM核心技能-观测评估与反馈闭环]]
+links: [[02-ai-coding/mattpocock-skills]], [[01-ai-agents/Skill-Self-Evolution]], [[02-ai-coding/claude-code-large-codebase-best-practices]], [[03-productivity/与AI一起做产品的六条原则]], [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]]
 date: 2026-06-14
 source: 微信公众号 / 开源日记 / 2026-06-13
 ---
@@ -22,7 +37,7 @@ source: 微信公众号 / 开源日记 / 2026-06-13
 ## 分类提炼
 
 - 场景:产品经理 AI 工作流、Skills 生态、Slash command 落地
-- 标签:#主题/AI-Coding #主题/Skill #场景/工具推荐 #场景/方法论落地
+- 标签: #主题/AI-Coding #主题/Skill #场景/工具推荐 #场景/方法论落地
 - 类型:工具评测 + 案例叙事 + 行业趋势观察
 
 ## 知识节点(11 个独立概念)
@@ -44,17 +59,17 @@ source: 微信公众号 / 开源日记 / 2026-06-13
 ## 关联图谱
 
 ### 上游(基于 / 来自)
-- [[mattpocock-skills]]:Skill 范式的同源案例,领域专家(TS 教学)把方法论编入 Claude Skill
-- [[Skill-Self-Evolution]]:Skill 自进化的研究综述,本文是垂直领域 Skill 编码的实际落地
+- [[02-ai-coding/mattpocock-skills]]:Skill 范式的同源案例,领域专家(TS 教学)把方法论编入 Claude Skill
+- [[01-ai-agents/Skill-Self-Evolution]]:Skill 自进化的研究综述,本文是垂直领域 Skill 编码的实际落地
 
 ### 下游(应用于 / 验证于)
 - 暂无,待后续应用 —— 可启发 MyAIWiki 把"开头钩子库""文章结构库"做成 `/hook-*` Skill
 - 可启发 Seetong-iOS 把"PRD 模板""BUG 调研脚本"做成项目内 Skill
 
 ### 同级(横向 / 并列)
-- [[claude-code-large-codebase-best-practices]]:Claude Code Skill 在工程域的同主题应用
-- [[与AI一起做产品的六条原则]]:产品经理 AI 实践的方法论视角(本文是工具视角)
-- [[AI-PM核心技能-观测评估与反馈闭环]]:产品经理 AI 工作流的能力视角
+- [[02-ai-coding/claude-code-large-codebase-best-practices]]:Claude Code Skill 在工程域的同主题应用
+- [[03-productivity/与AI一起做产品的六条原则]]:产品经理 AI 实践的方法论视角(本文是工具视角)
+- [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]]:产品经理 AI 工作流的能力视角
 
 ## Skill vs Command 对比
 
@@ -126,11 +141,11 @@ source: 微信公众号 / 开源日记 / 2026-06-13
 
 ## 适合关联的主题
 
-- [[mattpocock-skills]]:领域专家把方法论做成 Skill 的同源案例
-- [[Skill-Self-Evolution]]:Skill 自进化研究综述
-- [[claude-code-large-codebase-best-practices]]:Claude Code Skill 在工程域的应用
-- [[与AI一起做产品的六条原则]]:产品经理 AI 实践方法论视角
-- [[AI-PM核心技能-观测评估与反馈闭环]]:产品经理 AI 工作流能力视角
+- [[02-ai-coding/mattpocock-skills]]:领域专家把方法论做成 Skill 的同源案例
+- [[01-ai-agents/Skill-Self-Evolution]]:Skill 自进化研究综述
+- [[02-ai-coding/claude-code-large-codebase-best-practices]]:Claude Code Skill 在工程域的应用
+- [[03-productivity/与AI一起做产品的六条原则]]:产品经理 AI 实践方法论视角
+- [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]]:产品经理 AI 工作流能力视角
 
 ## 安装
 

@@ -2,24 +2,24 @@
 title: InfoQ - 所有Harness终将长成"龙虾"，但最后活下来的只有几只
 category: 01-ai-agents
 tags:
-  - "#主题/Agent演进"
-  - "#主题/Claw新原语"
-  - "#主题/施泰因伯格定律"
-  - "#主题/心智空间争夺"
-  - "#主题/持续学习"
-  - "#作者/Sam-Bhagwat"
-  - "#公众号/InfoQ"
-  - "#场景/终局形态"
+  - 主题/Agent演进
+  - 主题/Claw新原语
+  - 主题/施泰因伯格定律
+  - 主题/心智空间争夺
+  - 主题/持续学习
+  - 作者/Sam-Bhagwat
+  - 公众号/InfoQ
+  - 场景/终局形态
 nodes: Agentic 4阶段光谱, LLM-Agent界限在循环, Harness核心竞争力, 云端Harness-Always-on, Claw决定性配置, Claw持续学习, 施泰因伯格定律, 心智空间争夺战
 links:
-  - "[[Lilian-Weng-Harness-Engineering-自我改进]]"
-  - "[[Claude-Code-主动式Agent-Routines]]"
-  - "[[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]"
-  - "[[Capihom-AI-Native企业-Agent团队和AI-Factory重写公司体系]]"
-  - "[[WorkBuddy-Harness工程复盘-从模型到可用Agent]]"
-  - "[[未来属于垂直领域Agent]]"
-  - "[[小龙虾-OpenClaw-Agent价值与边界]]"
-  - "[[Make-for-Agent-qi-shi-huan-shi-make-for-human]]"
+  - "[[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]"
+  - "[[02-ai-coding/Claude-Code-主动式Agent-Routines]]"
+  - "[[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]"
+  - "[[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]"
+  - "[[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]"
+  - "[[01-ai-agents/未来属于垂直领域Agent]]"
+  - "[[01-ai-agents/小龙虾-OpenClaw-Agent价值与边界]]"
+  - "[[01-ai-agents/make-for-agent-qi-shi-huan-shi-make-for-human]]"
 date: 2026-07-19
 source: 微信公众号「InfoQ」 编译 宇琪 策划 Tina / 一手 Sam Bhagwat Mastra CEO / [原文链接](https://mp.weixin.qq.com/s/oGya1dWy0iSUt1a-C4Q5mQ)
 ---
@@ -55,13 +55,13 @@ source: 微信公众号「InfoQ」 编译 宇琪 策划 Tina / 一手 Sam Bhagwa
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- **Harness 理论原典**：与 [[Lilian-Weng-Harness-Engineering-自我改进]] 同主线——本文 4 阶段光谱对应翁荔"Harness 操作系统演进"的不同切片。
-- **Routines 与 Cron 触发**：与 [[Claude-Code-主动式Agent-Routines]] 强关联——Routines = Claw 心跳雏形。
-- **动态 Harness Pattern**：与 [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] 同主线——动态子 Agent + Skill 系统 = Harness 阶段关键配置。
+- **Harness 理论原典**：与 [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] 同主线——本文 4 阶段光谱对应翁荔"Harness 操作系统演进"的不同切片。
+- **Routines 与 Cron 触发**：与 [[02-ai-coding/Claude-Code-主动式Agent-Routines]] 强关联——Routines = Claw 心跳雏形。
+- **动态 Harness Pattern**：与 [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] 同主线——动态子 Agent + Skill 系统 = Harness 阶段关键配置。
 
 ### 下游 / 同级（详见 digest 关联图谱摘要）
-- 下游代表 [[Capihom-AI-Native企业-Agent团队和AI-Factory重写公司体系]]（AI Factory = 企业内部 Claw 化）/ [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]（Harness 产品化）
-- 同级代表 [[未来属于垂直领域Agent]] + [[Make-for-Agent-qi-shi-huan-shi-make-for-human]] + [[小龙虾-OpenClaw-Agent价值与边界]]（OpenClaw 阶段定位）
+- 下游代表 [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]（AI Factory = 企业内部 Claw 化）/ [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]（Harness 产品化）
+- 同级代表 [[01-ai-agents/未来属于垂直领域Agent]] + [[01-ai-agents/make-for-agent-qi-shi-huan-shi-make-for-human]] + [[01-ai-agents/小龙虾-OpenClaw-Agent价值与边界]]（OpenClaw 阶段定位）
 
 ## 5 个对 Seetong 团队可借鉴动作
 
@@ -78,5 +78,5 @@ source: 微信公众号「InfoQ」 编译 宇琪 策划 Tina / 一手 Sam Bhagwa
 - **OpenClaw 提名为 Claw 阶段案例**：原文直接提到 OpenClaw、Hermes Agent 作 Claw 阶段案例——这是 Seetong AI 助手当前格局对标。
 - **Mastra 私心**：Sam 作为 Mastra 创始人，演讲有"框架推销"私心——提醒读者"用 Mastra 框架省力"是利益导向。
 - **演讲视频保留**：原视频 https://www.youtube.com/watch?v=X0QgldlzB1E 待复核是否存在 + 内容是否一致。
-- **分类理由**：放 `01-ai-agents` 而非 `02-ai-coding` 或 `06-ai-tech`——本文是 Agent 演进理论 + 新原语 Claw 定义 + 终局形态，核心是 Agent 体系方法论，与 [[Lilian-Weng-Harness-Engineering-自我改进]] / [[Claude-Code-主动式Agent-Routines]] / [[未来属于垂直领域Agent]] / [[小龙虾-OpenClaw-Agent价值与边界]] / [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] 同主线"Agent 演进 + 终局形态 + 心智争夺"，且补完 01-ai-agents 偏"理论框架 + 企业实证 + 任务拆解"缺位的"产品视角 Agent 阶段光谱 + 心智空间争夺"维度。
+- **分类理由**：放 `01-ai-agents` 而非 `02-ai-coding` 或 `06-ai-tech`——本文是 Agent 演进理论 + 新原语 Claw 定义 + 终局形态，核心是 Agent 体系方法论，与 [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] / [[02-ai-coding/Claude-Code-主动式Agent-Routines]] / [[01-ai-agents/未来属于垂直领域Agent]] / [[01-ai-agents/小龙虾-OpenClaw-Agent价值与边界]] / [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]] 同主线"Agent 演进 + 终局形态 + 心智争夺"，且补完 01-ai-agents 偏"理论框架 + 企业实证 + 任务拆解"缺位的"产品视角 Agent 阶段光谱 + 心智空间争夺"维度。
 - **透明玻璃自检**：wiki 7.5K（≤8K）/ digest 3.5K（≤4K）/ 节点 8（6-10）/ H2 5 wiki + H2 4 digest（≤5）/ 表格 0 wiki + 表格 1 digest（≤2）/ 0 陈词（无"显而易见""不言而喻""众所周知""具有重要意义"）。

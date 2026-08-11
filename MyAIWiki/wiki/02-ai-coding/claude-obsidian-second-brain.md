@@ -7,7 +7,7 @@ Claude + Obsidian 构建的"第二大脑"系统，通过 AI 自动维护机制�
 ## 分类提炼
 
 **场景**：AI Coding 工作流 | 个人知识管理 | 工具组合
-**标签**：#主题/AI Coding #主题/效率 #工具/Obsidian #工具/Claude-Code
+**标签**： #主题/AI Coding #主题/效率 #工具/Obsidian #工具/Claude-Code
 **类型**：实操指南 + 架构模式
 
 ## 要点列表

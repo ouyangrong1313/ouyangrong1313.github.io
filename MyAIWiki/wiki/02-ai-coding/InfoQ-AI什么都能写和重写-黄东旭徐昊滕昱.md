@@ -1,9 +1,22 @@
 ---
 title: "AI 什么都能写和重写" — InfoQ 深度访谈 TiDB 黄东旭、徐昊、滕昱
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/Agent, #主题/Harness, #主题/重写, #主题/知识工程, #主题/工程师价值, #主题/维护, #场景/深度访谈, #场景/企业级落地, #作者/黄东旭, #作者/徐昊, #作者/滕昱, #公司/TiDB]
+tags:
+  - 主题/AI-Coding
+  - 主题/Agent
+  - 主题/Harness
+  - 主题/重写
+  - 主题/知识工程
+  - 主题/工程师价值
+  - 主题/维护
+  - 场景/深度访谈
+  - 场景/企业级落地
+  - 作者/黄东旭
+  - 作者/徐昊
+  - 作者/滕昱
+  - 公司/TiDB
 nodes: [db9-100万行案例, 技术栈锁定松动, 什么都能写虚无主义, 什么都能重写, 代码不重要知识重要, AI-讨好型人格, 老登说了算, 维护之争两派]
-links: [[字节跳动洪定坤-AI-Coding的实践与探索]], [[深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]], [[清华沈阳-自进化AI新物种]], [[0xCodez-Agent-Harness-14-Steps]], [[Harness不是目的-知识才是护城河]], [[与AI一起做产品的六条原则]], [[AI-Coding的顿悟时刻]], [[54万行代码的顿悟-Markdown才是新编程方式]], [[面向Skills编程-淘宝企业购端到端研发提效实践]], [[Claude-Code团队5条工作原则-Fiona-Fung分享]]
+links: [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]], [[02-ai-coding/深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]], [[01-ai-agents/清华沈阳-自进化AI新物种]], [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]], [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]], [[03-productivity/与AI一起做产品的六条原则]], [[02-ai-coding/AI-Coding的顿悟时刻]], [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]], [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]], [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]
 date: 2026-06-26
 source: 微信公众号「InfoQ Pro」2026-06-26 深度访谈(采访:Tina;嘉宾:黄东旭+徐昊+滕昱)
 ---
@@ -20,7 +33,7 @@ source: 微信公众号「InfoQ Pro」2026-06-26 深度访谈(采访:Tina;嘉宾
 > **"AI 什么都能写,我陷入虚无主义"** — TiDB 联合创始人/CTO 黄东旭完成 db9 项目(**1-2 人 / 3 个月 / 100 万行 Rust / 0 人手写 0 人手 review / 1 万数据库实例 / 1 天 10 亿 token / 2000 美金/月**),**没看到 AI 边界**;徐昊认为**代码不重要,知识才重要**;滕昱认为**AI 讨好型人格没有痛苦反馈,只有"老登"(老工程师)能做判断掌舵**;维护之争两派分岔 — **徐昊(未来派):重写足够快就不必维护** vs **滕昱(现实派):企业屎山代码 Agent 精神分裂,部署出问题还得自己处理**。
 
 - **场景**:AI Coding 落地的"实证+反思"深度访谈
-- **类型**:三方对话录,与 [[字节跳动洪定坤-AI-Coding的实践与探索]] / [[深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]] 形成"三连击"
+- **类型**:三方对话录,与 [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] / [[02-ai-coding/深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]] 形成"三连击"
 - **关键证据**:db9 100 万行 / Bun 6 天迁移 / 4 大重写案例(Cloudflare Vinext / chardet / Thoughtworks 黑盒 / 1992 MUD)
 
 ## 知识节点(8 个)
@@ -39,8 +52,8 @@ source: 微信公众号「InfoQ Pro」2026-06-26 深度访谈(采访:Tina;嘉宾
 ### 关联图谱
 
 - **上游**:AI Coding 从"工具试用"进入"具体项目实证"阶段 + TiDB 5+ 年数据库积累
-- **下游三连击**:[[字节跳动洪定坤-AI-Coding的实践与探索]] **大厂 VP 视角(指标/治理/协作)** + [[深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]] **创业公司创始人视角(工厂化/COGS/递归自我改进)** + **本文 = 实战派视角(db9 实证 + 工程师价值 + 维护之争)**;[[清华沈阳-自进化AI新物种]] 自进化;[[0xCodez-Agent-Harness-14-Steps]] / [[Harness不是目的-知识才是护城河]] Harness;[[与AI一起做产品的六条原则]] 6 原则
-- **同级**:[[面向Skills编程-淘宝企业购端到端研发提效实践]] 阿里淘系 + [[Claude-Code团队5条工作原则-Fiona-Fung分享]] Anthropic 团队
+- **下游三连击**:[[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] **大厂 VP 视角(指标/治理/协作)** + [[02-ai-coding/深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]] **创业公司创始人视角(工厂化/COGS/递归自我改进)** + **本文 = 实战派视角(db9 实证 + 工程师价值 + 维护之争)**;[[01-ai-agents/清华沈阳-自进化AI新物种]] 自进化;[[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] Harness;[[03-productivity/与AI一起做产品的六条原则]] 6 原则
+- **同级**:[[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] 阿里淘系 + [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] Anthropic 团队
 
 ### 正文要点(3 段)
 
@@ -63,7 +76,7 @@ source: 微信公众号「InfoQ Pro」2026-06-26 深度访谈(采访:Tina;嘉宾
 - **数据可信度**:db9 可信度高(黄东旭自述);4 个重写案例均有具体来源
 - **未公开细节**:db9 harness 设计 / 徐昊 specification driven 工具栈 / "AI 能造假测试"未给具体例子
 - **嘉宾信息**:黄东旭(TiDB 联合创始人/CTO,PingCAP)/ 徐昊(Thoughtworks/汇丰等)/ 滕昱(资深工程师,具体公司未公开)
-- **本仓库已有强相关主线**:[[字节跳动洪定坤-AI-Coding的实践与探索]] / [[深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]] / [[与AI一起做产品的六条原则]]
+- **本仓库已有强相关主线**:[[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] / [[02-ai-coding/深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]] / [[03-productivity/与AI一起做产品的六条原则]]
 - **本仓库缺位补完**:02-ai-coding 现有主线偏"方法论/工具/范式",**缺位"具体项目实证 + 大量重写案例 + 维护之争两派分岔"**,本文是这一维度的代表
 
 ---

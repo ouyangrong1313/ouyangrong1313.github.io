@@ -81,7 +81,7 @@ head_i = Attention(QW_i^Q, KW_i^K, VW_i^V)
 
 ## 标签
 
-#主题/AI科技 #场景/技术博客
+ #主题/AI科技 #场景/技术博客
 
 ## 相关链接
 

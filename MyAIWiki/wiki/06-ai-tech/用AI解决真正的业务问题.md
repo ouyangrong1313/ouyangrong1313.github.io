@@ -2,22 +2,22 @@
 title: 用AI解决真正的业务问题
 category: 06-ai-tech
 tags:
-  - "#主题/AI战略"
-  - "#主题/企业AI落地"
-  - "#主题/为问题找AI"
-  - "#主题/AI适用边界"
-  - "#主题/AI培训"
-  - "#主题/数据清洁"
-  - "#节点/克利夫兰诊所"
-  - "#节点/脓毒症90分钟"
-  - "#节点/5加3替代边界"
-  - "#节点/高危岗位"
-  - "#节点/公司代码"
+  - 主题/AI战略
+  - 主题/企业AI落地
+  - 主题/为问题找AI
+  - 主题/AI适用边界
+  - 主题/AI培训
+  - 主题/数据清洁
+  - 节点/克利夫兰诊所
+  - 节点/脓毒症90分钟
+  - 节点/5加3替代边界
+  - 节点/高危岗位
+  - 节点/公司代码
 nodes: 为问题找AI｜克利夫兰诊所范本｜三个AI决策原则｜5加3替代边界｜AI恐惧高危岗位｜公司代码定位｜数据清洁先行｜判断力稀缺
 links:
-  - "[[麦肯锡-AI提效只是第一波红利]]"
-  - "[[章文龙-AI分身时代-在场重新定价]]"
-  - "[[Nikesh-Arora-模型过剩与记忆护城河]]"
+  - "[[06-ai-tech/麦肯锡-AI提效只是第一波红利]]"
+  - "[[06-ai-tech/章文龙-AI分身时代-在场重新定价]]"
+  - "[[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]"
 date: 2026-07-15
 source: 微信公众号「行走的帆」2026-07-14 推送 / 作者 行走的帆 / 一手来源 HBR IdeaCast 访谈 Josh Tarengel + 新书《AI for Good》/ 原文链接 https://mp.weixin.qq.com/s/TW1UQNic5_B3cDiEnSCVqQ
 ---
@@ -60,7 +60,7 @@ source: 微信公众号「行走的帆」2026-07-14 推送 / 作者 行走的帆
 
 ### 同级（横向 / 并列）
 
-- [[麦肯锡-AI提效只是第一波红利]]（组织战略对偶）/ [[章文龙-AI分身时代-在场重新定价]]（AI 时代哲学）/ [[Nikesh-Arora-模型过剩与记忆护城河]]（CEO 战略）
+- [[06-ai-tech/麦肯锡-AI提效只是第一波红利]]（组织战略对偶）/ [[06-ai-tech/章文龙-AI分身时代-在场重新定价]]（AI 时代哲学）/ [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]（CEO 战略）
 
 ## 正文要点 + Seetong 借鉴动作
 
@@ -84,7 +84,7 @@ source: 微信公众号「行走的帆」2026-07-14 推送 / 作者 行走的帆
 - 5+3 替代边界缺行业细分，Seetong 借鉴时需针对监控设备行业重新映射
 - 案例全在北美，Seetong 借鉴时考虑国内行业语境
 
-**相关链接**：原文 raw/raw-digest 见 `raw/2026-07-行走的帆-用AI解决真正的业务问题*.md`；wiki digest 见 `wiki/06-ai-tech/用AI解决真正的业务问题-digest.md`；一手来源 HBR IdeaCast + Josh Tarengel《AI for Good》
+**相关链接**：原文 raw/raw-digest 见 `raw/行走的帆-用AI解决真正的业务问题*.md`；wiki digest 见 `wiki/06-ai-tech/用AI解决真正的业务问题-digest.md`；一手来源 HBR IdeaCast + Josh Tarengel《AI for Good》
 
 ---
 

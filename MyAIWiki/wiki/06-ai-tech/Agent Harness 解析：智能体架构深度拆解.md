@@ -208,9 +208,9 @@ Harness 是围绕 LLM 的整套软件基础设施，典型包括：
 
 ## 相关链接
 - [[AI Agent]]
-- [[AI Coding]]
+- [[02-ai-coding/index]]
 - [[Context Engineering]]
-- [[Prompt Engineering]]
+- [[02-ai-coding/prompt-engineering]]
 - [[Claude Code]]
 - [[OpenAI Agents SDK]]
 - [[LangGraph]]

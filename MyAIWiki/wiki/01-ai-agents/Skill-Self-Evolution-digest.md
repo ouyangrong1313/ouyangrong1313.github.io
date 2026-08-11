@@ -1,9 +1,17 @@
 ---
 title: "如何更科学、方向可控的实现 Skill 的「自进化」- Digest"
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/Agent-Skills, #主题/自进化, #节点/Trace2Skill归纳法, #节点/EvoSkill自验证, #节点/SkillOpt训练范式, #节点/可验证性飞轮, #场景/Agent-Skill落地]
+tags:
+  - 主题/AI-Agent
+  - 主题/Agent-Skills
+  - 主题/自进化
+  - 节点/Trace2Skill归纳法
+  - 节点/EvoSkill自验证
+  - 节点/SkillOpt训练范式
+  - 节点/可验证性飞轮
+  - 场景/Agent-Skill落地
 nodes: [Skill-自进化痛点, 离线优化在线验证, Trace2Skill-归纳法, EvoSkill-自验证, SkillOpt-训练范式, 前沿集合-Frontier, Skill-即参数, 可验证性-飞轮]
-links: [[Skill-Self-Evolution]]
+links: [[01-ai-agents/Skill-Self-Evolution]]
 date: 2026-06-09
 source: 微信公众号 / 阿里妹（飞樰）—— 深度解析 Trace2Skill（阿里千问）/ EvoSkill（Sentient Labs）/ SkillOpt（微软 + 高校）三篇论文
 ---
@@ -77,18 +85,18 @@ source: 微信公众号 / 阿里妹（飞樰）—— 深度解析 Trace2Skill�
 ## 与已有文章的关联
 
 - **强关联**：
-  - [[买了一样的AI为什么别家的比你的强]]（Hiten Shah Skill 战略 → 本篇是工程化实现）
-  - [[Agent Skills 系统性综述]]（Skill 综述 → 本篇是"自进化"专门深入）
-  - [[谷歌开源 agent-skills]]（开源实现 → 本篇是学术 + 开源进展）
-  - [[Skills驱动推理新范式]]（TRS Skill 卡片 → 本篇是 Skill 体系的下游进化范式）
-  - [[从Prompt-Context到Harness-工程的三次进化与终局之战]]（Harness 思想延伸到 Skill 训练）
+  - [[02-ai-coding/买了一样的AI为什么别家的比你的强]]（Hiten Shah Skill 战略 → 本篇是工程化实现）
+  - [[01-ai-agents/agent-skills-systematic-survey]]（Skill 综述 → 本篇是"自进化"专门深入）
+  - [[02-ai-coding/谷歌开源agent-skills]]（开源实现 → 本篇是学术 + 开源进展）
+  - [[01-ai-agents/Skills驱动推理新范式]]（TRS Skill 卡片 → 本篇是 Skill 体系的下游进化范式）
+  - [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]（Harness 思想延伸到 Skill 训练）
 - **同级**：
-  - [[Notion-spec-driven-AI-workflow]]（spec-driven 是 Skill 自进化的对照）
-  - [[Agentic-Engineering-AI-Workbench]]（可验证性 = AI 工作台"验证"层的科学化版本）
-  - [[agent-architectures]]（Agent 架构层 vs Skill 进化层）
-  - [[harness-engineering]]（Harness 视角 vs SkillOpt "Harness 无关"）
-  - [[Harness工程AgentLoop]]（Harness Agent Loop → SkillOpt 引入"训练范式"是 Loop 范式的延伸）
-  - [[AI-PM核心技能-观测评估与反馈闭环]]（评测体系是 Skill 自进化的基础）
+  - [[02-ai-coding/Notion-spec-driven-AI-workflow]]（spec-driven 是 Skill 自进化的对照）
+  - [[02-ai-coding/Agentic-Engineering-AI-Workbench]]（可验证性 = AI 工作台"验证"层的科学化版本）
+  - [[01-ai-agents/agent-architectures]]（Agent 架构层 vs Skill 进化层）
+  - [[01-ai-agents/harness-engineering]]（Harness 视角 vs SkillOpt "Harness 无关"）
+  - [[01-ai-agents/Harness工程AgentLoop]]（Harness Agent Loop → SkillOpt 引入"训练范式"是 Loop 范式的延伸）
+  - [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]]（评测体系是 Skill 自进化的基础）
 
 ## 5 个对 Seetong 团队可借鉴的动作
 

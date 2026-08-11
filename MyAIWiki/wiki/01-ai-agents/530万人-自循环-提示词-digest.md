@@ -45,11 +45,11 @@ source: 微信公众号 深思圈（编译自 Anatoli Kopadze 530 万浏览爆�
 
 ## 关联（同主线 6 视角闭环）
 
-- **方法论原典** — [[Addy-Osmani-Loop-Engineering]]
-- **中文工程实操** — [[Loop-Engineering-详解-把反馈循环放进工程现场]]
-- **产业信号** — [[APPSO-Codex-Claude-Code-Loop-Engineering]]
-- **治理薄壳** — [[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]]
-- **验证瓶颈（核心互补）** — [[Loop-Engineering-验证才是瓶颈]]（system-level）
+- **方法论原典** — [[02-ai-coding/Addy-Osmani-Loop-Engineering]]
+- **中文工程实操** — [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]]
+- **产业信号** — [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]]
+- **治理薄壳** — [[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]]
+- **验证瓶颈（核心互补）** — [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]（system-level）
 - **大众教育版（本文）** — prompt-level
 
 ## 备注与限制
@@ -58,4 +58,4 @@ source: 微信公众号 深思圈（编译自 Anatoli Kopadze 530 万浏览爆�
 - Mira 实际稳定性/无意识行为数据未公开（软广风险）
 - 提示词模板跨模型成功率未公布
 - 深思圈未亲自复现原文实验
-- 与 [[Loop-Engineering-验证才是瓶颈]] 互补：本文 prompt-level，那篇 system-level
+- 与 [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] 互补：本文 prompt-level，那篇 system-level

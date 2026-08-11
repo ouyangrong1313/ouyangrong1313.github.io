@@ -94,7 +94,7 @@
 ---
 
 ## 标签
-#主题/AI Coding #主题/Claude Code #场景/技术博客 #手法/对比冲突 #手法/教程型
+ #主题/AI Coding #主题/Claude Code #场景/技术博客 #手法/对比冲突 #手法/教程型
 
 ## 相关链接
 - GitHub仓库：https://github.com/mattpocock/skills

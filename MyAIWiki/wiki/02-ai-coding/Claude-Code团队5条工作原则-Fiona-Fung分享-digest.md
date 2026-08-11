@@ -1,7 +1,7 @@
 # Claude Code 团队 5 条工作原则 - Digest
 
 - 原文链接：https://mp.weixin.qq.com/s/iBELIhdHf44aWKs0Z-Iudg
-- 原文：[[Claude-Code团队5条工作原则-Fiona-Fung分享]]
+- 原文：[[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]
 - 抓取时间：2026-06-03
 - 原始作者：Fiona Fung（Anthropic Claude Code 团队工程总监）
 - 转载方：卡兹克
@@ -42,7 +42,7 @@
 
 ## 我的理解
 
-- **5 条原则和 [[54万行代码的顿悟]]、[[YC如何进行AI-Native组织改造]] 高度互补**：那两篇偏"组织/范式"层，本文偏"具体实操"层（JIT 规划 / 自动化肌肉记忆 / Trust but verify / 团队 harness）。**三层合并**：范式 → 组织 → 实操 = 完整的 AI-native 蓝图
+- **5 条原则和 [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]、[[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]] 高度互补**：那两篇偏"组织/范式"层，本文偏"具体实操"层（JIT 规划 / 自动化肌肉记忆 / Trust but verify / 团队 harness）。**三层合并**：范式 → 组织 → 实操 = 完整的 AI-native 蓝图
 - **"JIT 规划"是 PR/原型先行 + 文档后补的最强背书**：适用于 Seetong 团队，**别再写长篇设计文档了**，有想法先做原型，能用了再说
 - **"Trust but verify" 是 AI 时代 Code Review 的金标准**：可借鉴——**Claude 先干 60-70% 风格/lint/PR/bug/test，人 review 真正需判断处**。立刻可行动：把 Code Review 工具集成到 Seetong 项目的 PR 流程
 - **"Taste is scarce, typing is not" 是招聘新标准**：不再是"几年 iOS 经验 / 写过多少个 APP"，而是"**能不能识别该做什么，能不能快速做出原型，能不能判断对错**"
@@ -66,11 +66,11 @@
 
 ## 适合关联的主题
 
-- [[Claude-Code负责人谈AI原生工程组织]] — 同主线
-- [[54万行代码的顿悟]] — 工程师个人范式
-- [[AI-Coding的顿悟时刻]] — 团队流程 + Scrum 反思
-- [[YC如何进行AI-Native组织改造]] — YC 内部 AI 改造
-- [[Codex配置原则总览]] — Harness / Skill 设计
-- [[多Agent使用边界与并行判定]] — 应补 JIT 规划 / Trust but verify / 团队 harness
-- [[知识卡片编译模板-长文如何压成raw-digest-wiki三层]] — JIT 规划的另一个样本
-- [[任务类型到验证模板]] — 验证流程往前推的具体实施
+- [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]] — 同主线
+- [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] — 工程师个人范式
+- [[02-ai-coding/AI-Coding的顿悟时刻]] — 团队流程 + Scrum 反思
+- [[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]] — YC 内部 AI 改造
+- [[02-ai-coding/Codex配置原则总览]] — Harness / Skill 设计
+- [[02-ai-coding/多Agent使用边界与并行判定]] — 应补 JIT 规划 / Trust but verify / 团队 harness
+- [[02-ai-coding/知识卡片编译模板-长文如何压成raw-digest-wiki三层]] — JIT 规划的另一个样本
+- [[02-ai-coding/任务类型到验证模板]] — 验证流程往前推的具体实施

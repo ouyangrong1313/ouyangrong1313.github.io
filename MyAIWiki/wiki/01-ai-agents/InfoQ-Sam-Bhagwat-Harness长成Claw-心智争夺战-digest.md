@@ -49,4 +49,4 @@ Agent 演进是 LLM → Agent → Harness → Claw 的 4 阶段光谱——施�
 - **关键原语定义不完整**：施泰因伯格定律未明确"Steinberger"致敬何人，**待补证**。
 - **OpenClaw 提名为 Claw 阶段案例**：原文直接提到 OpenClaw、Hermes Agent——与 Seetong AI 助手格局直接对标。
 - **Mastra 私心**：Sam 作为 Mastra 创始人，演讲有"框架推销"私心。
-- **分类理由**：放 `01-ai-agents`——本文是 Agent 演进理论 + 新原语 Claw 定义 + 终局形态，与 [[Lilian-Weng-Harness-Engineering-自我改进]] / [[Claude-Code-主动式Agent-Routines]] / [[未来属于垂直领域Agent]] 同主线。
+- **分类理由**：放 `01-ai-agents`——本文是 Agent 演进理论 + 新原语 Claw 定义 + 终局形态，与 [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] / [[02-ai-coding/Claude-Code-主动式Agent-Routines]] / [[01-ai-agents/未来属于垂直领域Agent]] 同主线。

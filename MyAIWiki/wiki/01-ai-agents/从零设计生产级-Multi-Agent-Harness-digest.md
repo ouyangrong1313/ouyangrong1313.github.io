@@ -51,7 +51,7 @@
 
 ## 适合关联的主题
 
-- [[OpenClaw-vs-Hermes-多-Agent-架构设计]]
-- [[HarnessEngineering企业级实战]]
-- [[Harness工程AgentLoop]]
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+- [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]]
+- [[01-ai-agents/HarnessEngineering企业级实战]]
+- [[01-ai-agents/Harness工程AgentLoop]]
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]

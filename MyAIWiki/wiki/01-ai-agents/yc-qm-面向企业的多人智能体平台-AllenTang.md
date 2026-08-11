@@ -1,9 +1,19 @@
 ---
 title: 一文搞懂 YC-QM：面向企业的多人智能体平台（multiplayer agent harness）
 category: 01-ai-agents
-tags: [#主题/Multiplayer-Agent #主题/Scope隔离 #主题/Harness适配器 #主题/持久电脑 #主题/Durable-by-default #主题/安全Posture #主题/工程文化 #主题/Seetong借鉴 #作者/AllenTang #项目/QM]
+tags:
+  - 主题/Multiplayer-Agent
+  - 主题/Scope隔离
+  - 主题/Harness适配器
+  - 主题/持久电脑
+  - 主题/Durable-by-default
+  - 主题/安全Posture
+  - 主题/工程文化
+  - 主题/Seetong借鉴
+  - 作者/AllenTang
+  - 项目/QM
 nodes: [Scope隔离7项资源, 持久电脑Durable-Computer, 4个Harness适配器, Durable-by-default, 智能体等于你本人, 3种安全Posture, 收文字不收代码, 多租户底座定位]
-links: [[万字长文拆解Agent-架构设计-四-多-Agent-协作]], [[0xCodez-Agent-Harness-14-Steps]], [[HarnessEngineering企业级实战]], [[Harness工程AgentLoop]], [[Lilian-Weng-Harness-Engineering-自我改进]], [[WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[agent-architecture]], [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[阿里云开发者-淘宝主播Agent的Harness工程实战]], [[腾讯-AI-Agent-Skill-测评方案落地]], [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]], [[cases/liangbo-execution-agent]], [[OpenClaw-vs-Hermes-多-Agent-架构设计]], [[Harness不是目的，知识才是护城河：一个-AI-工程交付团队的知识沉淀实践]], [[企业知识库认知底座]], [[Agent-Harness-与-OpenClaw：从工具到系统的中文解读]], [[未来属于垂直领域Agent]], [[lencx-Agent开发指南-技术太多-该怎么学]], [[Agent时代架构师系统能力]], [[phodal-项目记住-Coding-Agent-5步法]]
+links: [[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]], [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]], [[01-ai-agents/HarnessEngineering企业级实战]], [[01-ai-agents/Harness工程AgentLoop]], [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]], [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[01-ai-agents/agent-architecture]], [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]], [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]], [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]], [[01-ai-agents/cases/liangbo-execution-agent]], [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]], [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]], [[06-ai-tech/企业知识库认知底座]], [[06-ai-tech/Agent Harness 与 OpenClaw：从工具到系统的中文解读]], [[01-ai-agents/未来属于垂直领域Agent]], [[01-ai-agents/lencx-Agent开发指南-技术太多-该怎么学]], [[01-ai-agents/Agent时代架构师系统能力]], [[02-ai-coding/phodal-项目记住-Coding-Agent-5步法]]
 date: 2026-08-03
 source: 微信公众号「架构师带你玩转AI」AllenTang 编译（原文 https://mp.weixin.qq.com/s/O8O6ttb-z9KmwjG4C9fe-Q）
 ---
@@ -12,7 +22,7 @@ source: 微信公众号「架构师带你玩转AI」AllenTang 编译（原文 ht
 
 - 原文：https://mp.weixin.qq.com/s/O8O6ttb-z9KmwjG4C9fe-Q
 - 一手仓库：https://github.com/yc-software/qm（MIT 协议 / YC 开源）
-- 作者：AllenTang（与 7/22 [[万字长文拆解Agent-架构设计-四-多-Agent-协作]] 同公众号同编辑）
+- 作者：AllenTang（与 7/22 [[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]] 同公众号同编辑）
 - 发布时间：推断 2026-07 末至 2026-08 / 获取时间：2026-08-03 14:41 Asia/Shanghai / 原文约 3424 字
 
 ## 核心结论与分类
@@ -21,8 +31,8 @@ source: 微信公众号「架构师带你玩转AI」AllenTang 编译（原文 ht
 
 - 场景：企业级 Agent 平台 / 多人协作 / 多租户 / 安全治理 / 类型：开源项目深度解读 + 工程方法论
 - 主线：01-ai-agents / Agent 平台架构 + Harness 工程化
-- 同作者姊妹篇：[[万字长文拆解Agent-架构设计-四-多-Agent-协作]]（7/22）——"多 Agent 编排 / 多租户底座"对偶
-- 同日姊妹篇：[[phodal-项目记住-Coding-Agent-5步法]]（8/3）——"治理 / 落地"对偶
+- 同作者姊妹篇：[[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]]（7/22）——"多 Agent 编排 / 多租户底座"对偶
+- 同日姊妹篇：[[02-ai-coding/phodal-项目记住-Coding-Agent-5步法]]（8/3）——"治理 / 落地"对偶
 
 ## 知识节点（8 个）+ 正文要点（6 节）
 
@@ -39,9 +49,9 @@ source: 微信公众号「架构师带你玩转AI」AllenTang 编译（原文 ht
 
 ## 关联图谱
 
-- **上游：** [[万字长文拆解Agent-架构设计-四-多-Agent-协作]]（7/22 同作者）+ [[0xCodez-Agent-Harness-14-Steps]] [[HarnessEngineering企业级实战]] [[Harness工程AgentLoop]] [[Lilian-Weng-Harness-Engineering-自我改进]] [[agent-architecture]]
-- **下游：** [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] [[阿里云开发者-淘宝主播Agent的Harness工程实战]] [[腾讯-AI-Agent-Skill-测评方案落地]] [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] [[cases/liangbo-execution-agent]]
-- **同级：** [[Harness不是目的，知识才是护城河：一个-AI-工程交付团队的知识沉淀实践]] [[企业知识库认知底座]] [[Agent-Harness-与-OpenClaw：从工具到系统的中文解读]] [[未来属于垂直领域Agent]] [[lencx-Agent开发指南-技术太多-该怎么学]] [[Agent时代架构师系统能力]] [[phodal-项目记住-Coding-Agent-5步法]]（8/3 同日）
+- **上游：** [[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]]（7/22 同作者）+ [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] [[01-ai-agents/HarnessEngineering企业级实战]] [[01-ai-agents/Harness工程AgentLoop]] [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] [[01-ai-agents/agent-architecture]]
+- **下游：** [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]] [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] [[01-ai-agents/cases/liangbo-execution-agent]]
+- **同级：** [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] [[06-ai-tech/企业知识库认知底座]] [[06-ai-tech/Agent Harness 与 OpenClaw：从工具到系统的中文解读]] [[01-ai-agents/未来属于垂直领域Agent]] [[01-ai-agents/lencx-Agent开发指南-技术太多-该怎么学]] [[01-ai-agents/Agent时代架构师系统能力]] [[02-ai-coding/phodal-项目记住-Coding-Agent-5步法]]（8/3 同日）
 
 ## 6 个对 Seetong 借鉴动作
 
@@ -58,4 +68,4 @@ source: 微信公众号「架构师带你玩转AI」AllenTang 编译（原文 ht
 2. 发布：推断 2026-07 末至 2026-08。
 3. 可证伪："4 个 Harness 适配器"是文章快照主分支可能更新；"7 项 scope 资源"是归纳非官方完整列表。
 4. 不适用：1 人小工具/单人项目——scope 隔离价值在多租户，单人是 overhead。
-5. 关联首选：与 [[万字长文拆解Agent-架构设计-四-多-Agent-协作]]（7/22 同作者）+ [[phodal-项目记住-Coding-Agent-5步法]]（8/3 同日）形成"多 Agent 编排 / 多租户底座 / 治理落地"三连。
+5. 关联首选：与 [[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]]（7/22 同作者）+ [[02-ai-coding/phodal-项目记住-Coding-Agent-5步法]]（8/3 同日）形成"多 Agent 编排 / 多租户底座 / 治理落地"三连。

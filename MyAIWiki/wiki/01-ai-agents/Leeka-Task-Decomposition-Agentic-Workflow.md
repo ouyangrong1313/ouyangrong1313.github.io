@@ -1,9 +1,23 @@
 ---
 title: Task Decomposition：Agentic Workflow 最底层的核心观念
 category: 01-ai-agents
-tags: [#主题/任务拆解, #主题/Agentic-Workflow, #主题/Agent落地, #主题/MCP, #主题/Human-in-the-loop, #主题/Leeka, #节点/三层世界观, #节点/90%真相, #节点/Mega-Agent死路, #节点/分而治之, #节点/四步法, #节点/MUST-SHOULD-MAY, #节点/MCP-Type-C, #节点/HITL-Checkpoint]
+tags:
+  - 主题/任务拆解
+  - 主题/Agentic-Workflow
+  - 主题/Agent落地
+  - 主题/MCP
+  - 主题/Human-in-the-loop
+  - 主题/Leeka
+  - 节点/三层世界观
+  - 节点/90%真相
+  - 节点/Mega-Agent死路
+  - 节点/分而治之
+  - 节点/四步法
+  - 节点/MUST-SHOULD-MAY
+  - 节点/MCP-Type-C
+  - 节点/HITL-Checkpoint
 nodes: [三层世界观, 90%真相-不会拆, Mega-Agent死路, 分而治之-Divide-and-Conquer, 四步方法论标准化, MUST-SHOULD-MAY法则, JSON数据契约, MCP-AI世界Type-C, Human-in-the-loop-Checkpoint, 双向开发小步快跑]
-links: [[0xCodez-Agent-Harness-14-Steps]], [[Addy-Osmani-Loop-Engineering]], [[阿里妹-端到端业务需求专家Agent]], [[阿里云开发者-淘宝主播Agent的Harness工程实战]], [[清华沈阳-自进化AI新物种]], [[Multica-AI-Native-组织-人是最慢的节点]], [[Harness不是目的-知识才是护城河]]
+links: [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]], [[02-ai-coding/Addy-Osmani-Loop-Engineering]], [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]], [[01-ai-agents/清华沈阳-自进化AI新物种]], [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]], [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
 date: 2026-06-29
 source: 微信公众号(RPA/AI 教程类)2026-06-29 推送 作者 Leeka（影刀 RPA 高级工程师 + 生财有术航海教练）
 ---
@@ -22,7 +36,7 @@ source: 微信公众号(RPA/AI 教程类)2026-06-29 推送 作者 Leeka（影刀
 ### 分类提炼
 
 - 场景：Agent 落地方法论 / 任务拆解 / Workflow 编排
-- 标签：`#主题/任务拆解` `#主题/Agentic-Workflow` `#主题/Agent落地` `#主题/MCP` `#主题/Human-in-the-loop`
+- 标签： #主题/任务拆解 #主题/Agentic-Workflow #主题/Agent落地 #主题/MCP #主题/Human-in-the-loop
 - 类型：实操方法论（4 步法 + 实战案例 + 7 个 Seetong 借鉴动作）
 
 ## 知识节点（10 个独立概念）
@@ -49,13 +63,13 @@ source: 微信公众号(RPA/AI 教程类)2026-06-29 推送 作者 Leeka（影刀
 - **Seetong 高风险节点**：设备添加/远程开门/解绑/支付 → Human-in-the-loop Checkpoint
 
 ### 同级（横向 / 并列）
-- [[0xCodez-Agent-Harness-14-Steps]] - Agent Harness 14 步法（工程框架）
-- [[Addy-Osmani-Loop-Engineering]] - Loop Engineering 验证才是瓶颈（**本文是"拆"，Addy 是"测"，互补**）
-- [[阿里妹-端到端业务需求专家Agent]] - 4 层架构 8 步流程（业务端）
-- [[阿里云开发者-淘宝主播Agent的Harness工程实战]] - 阿里淘宝 Agent 工程实战
-- [[清华沈阳-自进化AI新物种]] - 自进化 AI 新物种
-- [[Multica-AI-Native-组织-人是最慢的节点]] - Multica AI Native 组织
-- [[Harness不是目的-知识才是护城河]] - Harness vs 知识护城河
+- [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] - Agent Harness 14 步法（工程框架）
+- [[02-ai-coding/Addy-Osmani-Loop-Engineering]] - Loop Engineering 验证才是瓶颈（**本文是"拆"，Addy 是"测"，互补**）
+- [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] - 4 层架构 8 步流程（业务端）
+- [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] - 阿里淘宝 Agent 工程实战
+- [[01-ai-agents/清华沈阳-自进化AI新物种]] - 自进化 AI 新物种
+- [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]] - Multica AI Native 组织
+- [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] - Harness vs 知识护城河
 
 ### 正文要点（5 条）
 
@@ -77,14 +91,14 @@ source: 微信公众号(RPA/AI 教程类)2026-06-29 推送 作者 Leeka（影刀
 ### 备注与限制
 
 - 本文是 RPA/AI 教程类公众号推送，核心是 Agent 落地的"任务拆解"方法论
-- 与 [[Addy-Osmani-Loop-Engineering]] 区别：Addy 关注"Loop 验证"，本文关注"任务拆解"——**"测"+"拆"互补**
-- 与 [[0xCodez-Agent-Harness-14-Steps]] 区别：0xCodez 是 14 步 Harness 框架，本文是 4 步 SOP 翻译法
-- 与 [[阿里妹-端到端业务需求专家Agent]] 区别：阿里妹 4 层 8 步（业务端），本文 4 步翻译（Human SOP → Workflow）
+- 与 [[02-ai-coding/Addy-Osmani-Loop-Engineering]] 区别：Addy 关注"Loop 验证"，本文关注"任务拆解"——**"测"+"拆"互补**
+- 与 [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] 区别：0xCodez 是 14 步 Harness 框架，本文是 4 步 SOP 翻译法
+- 与 [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] 区别：阿里妹 4 层 8 步（业务端），本文 4 步翻译（Human SOP → Workflow）
 - **核心反直觉**：AGI 来了也必须拆——"这跟帮手够不够聪明没有半毛钱关系"
 - **未展开**：MCP 协议具体技术细节（Leeka 假设读者已了解）；Skill 文件夹具体结构
 
 ### 相关链接
 
 - 原文：https://mp.weixin.qq.com/s/dFZDxPH7HjKV46mE8w1hww
-- 同主线 [[0xCodez-Agent-Harness-14-Steps]] / [[Addy-Osmani-Loop-Engineering]] / [[阿里妹-端到端业务需求专家Agent]] / [[阿里云开发者-淘宝主播Agent的Harness工程实战]] / [[清华沈阳-自进化AI新物种]] / [[Multica-AI-Native-组织-人是最慢的节点]] / [[Harness不是目的-知识才是护城河]]
-- 反向参考：[[Harness不是目的-知识才是护城河]]（知识护城河比 Harness 重要；本文"任务拆解"也是"比 Harness 更底层的地基"）
+- 同主线 [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] / [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] / [[01-ai-agents/清华沈阳-自进化AI新物种]] / [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]] / [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
+- 反向参考：[[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]（知识护城河比 Harness 重要；本文"任务拆解"也是"比 Harness 更底层的地基"）

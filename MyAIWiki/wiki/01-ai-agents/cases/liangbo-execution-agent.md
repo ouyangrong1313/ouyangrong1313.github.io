@@ -1,9 +1,22 @@
 ---
 title: "东方屹腾：执行型 Agent 从零到稳定交付"
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/执行型Agent, #主题/Harness, #主题/企业SaaS, #场景/落地案例, #场景/企业SaaS, #场景/工作流自动化, #节点/执行型Agent分野, #节点/控制叙事二元论, #节点/机械状态平面, #节点/会话统一状态平面, #节点/锚账集与分层记忆, #节点/ReAct到规划执行]
+tags:
+  - 主题/AI-Agent
+  - 主题/执行型Agent
+  - 主题/Harness
+  - 主题/企业SaaS
+  - 场景/落地案例
+  - 场景/企业SaaS
+  - 场景/工作流自动化
+  - 节点/执行型Agent分野
+  - 节点/控制叙事二元论
+  - 节点/机械状态平面
+  - 节点/会话统一状态平面
+  - 节点/锚账集与分层记忆
+  - 节点/ReAct到规划执行
 nodes: [执行型Agent分野, 控制叙事二元论, Orchestrator意图网关, ReAct到规划执行, HITL阻塞续作, 机械状态平面, 会话统一状态平面, 锚账集与分层记忆]
-links: [[未来属于垂直领域Agent]], [[Leeka-Task-Decomposition-Agentic-Workflow]], [[阿里云开发者-淘宝主播Agent的Harness工程实战]], [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]], [[WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[Lilian-Weng-Harness-Engineering-自我改进]], [[AI-Native企业-Agent团队和AI-Factory重写公司体系]]
+links: [[01-ai-agents/未来属于垂直领域Agent]], [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]], [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]], [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]], [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]], [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]
 date: 2026-07-17
 source: ADPS 企业 Agent 系统蓝皮书 v0.2 / 梁博 / 上海东方屹腾案例
 ---
@@ -22,7 +35,7 @@ source: ADPS 企业 Agent 系统蓝皮书 v0.2 / 梁博 / 上海东方屹腾案�
 ## 分类提炼
 
 - **场景**：企业 SaaS 工作流自动化 / 高约束事务执行 / 生产级 Agent
-- **标签**：#主题/执行型Agent #主题/Harness #场景/企业SaaS #场景/工作流自动化
+- **标签**： #主题/执行型Agent #主题/Harness #场景/企业SaaS #场景/工作流自动化
 - **类型**：案例蓝皮书 / 架构复盘
 - **适用前提**：系统是封闭企业体系；步骤依赖明确；参数错一位就会失败或破坏数据
 
@@ -46,16 +59,16 @@ source: ADPS 企业 Agent 系统蓝皮书 v0.2 / 梁博 / 上海东方屹腾案�
 
 ### 下游（应用于 / 验证于）
 
-- [[阿里云开发者-淘宝主播Agent的Harness工程实战]]：高风险业务流程里，如何把工具边界、幂等性、审批门和状态治理落到生产
-- [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：状态文件、DAG 编排、渐进式知识加载和脚本化执行，是“长链路状态化”的另一种企业实现
-- [[AI-Native企业-Agent团队和AI-Factory重写公司体系]]：truth layer、eval 和组织层 AI Factory，是执行型 Agent 进入企业大规模运转后的延伸形态
+- [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]]：高风险业务流程里，如何把工具边界、幂等性、审批门和状态治理落到生产
+- [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：状态文件、DAG 编排、渐进式知识加载和脚本化执行，是“长链路状态化”的另一种企业实现
+- [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]：truth layer、eval 和组织层 AI Factory，是执行型 Agent 进入企业大规模运转后的延伸形态
 
 ### 同级（横向 / 并列）
 
-- [[未来属于垂直领域Agent]]：提供“企业 Agent 应拆成更小、更专、更可控的 domain-specific agents”视角
-- [[Leeka-Task-Decomposition-Agentic-Workflow]]：补上任务拆解、数据契约、MUST/SHOULD/MAY 和 HITL checkpoint 的方法论
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]：从产品视角解释 Tool / Skill / Plugin / Context / Harness / Loop 如何分层
-- [[Lilian-Weng-Harness-Engineering-自我改进]]：给出 Harness 的理论原典和“模型重要性 = Harness 重要性”的学术视角
+- [[01-ai-agents/未来属于垂直领域Agent]]：提供“企业 Agent 应拆成更小、更专、更可控的 domain-specific agents”视角
+- [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]]：补上任务拆解、数据契约、MUST/SHOULD/MAY 和 HITL checkpoint 的方法论
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：从产品视角解释 Tool / Skill / Plugin / Context / Harness / Loop 如何分层
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]：给出 Harness 的理论原典和“模型重要性 = Harness 重要性”的学术视角
 
 ## 正文要点（6 条）
 
@@ -99,9 +112,9 @@ ReAct 适合“干一步看一步”，但当薪资组搭建这种流程要求�
 
 ## 相关链接
 
-- [[liangbo-execution-agent-digest]]
-- [[未来属于垂直领域Agent]]
-- [[Leeka-Task-Decomposition-Agentic-Workflow]]
-- [[阿里云开发者-淘宝主播Agent的Harness工程实战]]
-- [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]
-- [[Lilian-Weng-Harness-Engineering-自我改进]]
+- [[01-ai-agents/cases/liangbo-execution-agent-digest]]
+- [[01-ai-agents/未来属于垂直领域Agent]]
+- [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]]
+- [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]]
+- [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]

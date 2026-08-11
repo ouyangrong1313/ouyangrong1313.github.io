@@ -1,9 +1,16 @@
 ---
 title: WorkBuddy进化史：一款AI产品背后，是一套新的团队工作方式
 category: 01-ai-agents
-tags: ["#主题/AI-Agent", "#主题/AI-Native", "#主题/组织变革", "#主题/工作流", "#主题/AI-Coding", "#场景/企业研发", "#场景/公众号长文"]
+tags:
+  - 主题/AI-Agent",
+  - 主题/AI-Native",
+  - 主题/组织变革",
+  - 主题/工作流",
+  - 主题/AI-Coding",
+  - 场景/企业研发",
+  - 场景/公众号长文
 nodes: ["WorkBuddy", "CodeBuddy", "能力外溢", "工作成果价值单位", "Task Contract", "厚平台小团队", "人机混编团队", "组织记忆资产化"]
-links: ["[[WorkBuddy-Harness工程复盘-从模型到可用Agent]]", "[[Multica-AI-Native-组织-人是最慢的节点]]", "[[端到端10倍提效-英伟达研发团队如何用Agent重塑工作流]]", "[[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]", "[[AI-Native企业-Agent团队和AI-Factory重写公司体系]]"]
+links: ["[[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]", "[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]", "[[01-ai-agents/端到端10倍提效-英伟达研发团队如何用Agent重塑工作流]]", "[[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]", "[[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]"]
 date: 2026-08-07
 source: 微信公众号 / AI组织进化论
 ---
@@ -22,7 +29,7 @@ WorkBuddy 的快速产品化不是一次追热点式发布，而是 CodeBuddy �
 ## 分类提炼
 
 - 场景：企业 AI 产品、AI 原生研发组织、Agent 工作流
-- 标签：#主题/AI-Agent #主题/AI-Native #主题/组织变革 #主题/工作流 #主题/AI-Coding #场景/企业研发 #场景/公众号长文
+- 标签： #主题/AI-Agent #主题/AI-Native #主题/组织变革 #主题/工作流 #主题/AI-Coding #场景/企业研发 #场景/公众号长文
 - 类型：企业案例 + Agent 产品化与组织协作方法论
 
 ## 知识节点（8 个独立概念）
@@ -40,19 +47,19 @@ WorkBuddy 的快速产品化不是一次追热点式发布，而是 CodeBuddy �
 
 ### 上游（基于 / 来自）
 
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]：提供 WorkBuddy 的模型、工具、上下文、Memory、Harness 与 Loop 工程底座。
-- [[Lilian-Weng-Harness-Engineering-自我改进]]：提供“Harness 是模型与真实场景之间操作系统”的理论视角。
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：提供 WorkBuddy 的模型、工具、上下文、Memory、Harness 与 Loop 工程底座。
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]：提供“Harness 是模型与真实场景之间操作系统”的理论视角。
 
 ### 下游（应用于 / 验证于）
 
-- [[端到端10倍提效-英伟达研发团队如何用Agent重塑工作流]]：把目标、工具、真实环境、反馈和人类责任连成数字工程师闭环。
-- [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]：将任务契约和端到端责任落到需求进入、执行、验收与复盘流程。
+- [[01-ai-agents/端到端10倍提效-英伟达研发团队如何用Agent重塑工作流]]：把目标、工具、真实环境、反馈和人类责任连成数字工程师闭环。
+- [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]：将任务契约和端到端责任落到需求进入、执行、验收与复盘流程。
 
 ### 同级（横向 / 并列）
 
-- [[Multica-AI-Native-组织-人是最慢的节点]]：4 人加几十个 Agent 的极端小团队样本，强调去中间层与端到端负责。
-- [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]：从组织成熟度和渐进自主角度解释 AI Native 的演进阶段。
-- [[AI-Native企业-Agent团队和AI-Factory重写公司体系]]：补充 AI Factory、Truth Layer、Eval 和组织图重写的企业实证。
+- [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]：4 人加几十个 Agent 的极端小团队样本，强调去中间层与端到端负责。
+- [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]：从组织成熟度和渐进自主角度解释 AI Native 的演进阶段。
+- [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]：补充 AI Factory、Truth Layer、Eval 和组织图重写的企业实证。
 
 ## 正文要点与证据边界
 
@@ -65,9 +72,9 @@ WorkBuddy 的快速产品化不是一次追热点式发布，而是 CodeBuddy �
 
 ## 相关链接
 
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]
-- [[Multica-AI-Native-组织-人是最慢的节点]]
-- [[端到端10倍提效-英伟达研发团队如何用Agent重塑工作流]]
-- [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]
-- [[AI-Native企业-Agent团队和AI-Factory重写公司体系]]
-- [[笔记侠-十布-这-是以后的工作方式]]
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]
+- [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]
+- [[01-ai-agents/端到端10倍提效-英伟达研发团队如何用Agent重塑工作流]]
+- [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]
+- [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]
+- [[03-productivity/笔记侠-十布-这-是以后的工作方式]]

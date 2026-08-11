@@ -1,9 +1,28 @@
 ---
 title: Codex和Claude Code负责人都不写提示词了,AI 圈爆火的Loop到底是什么
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/Harness, #主题/Loop, #主题/产业观察, #主题/工作流设计, #节点/时代迁移, #节点/Loop本质, #节点/5个必答问题, #节点/5+1积木, #节点/分界线, #节点/成本转移, #节点/4人同向, #手法/产业视角, #手法/方法论综述, #公司/APPSO, #公司/Codex, #公司/ClaudeCode, #场景/Loop启蒙, #场景/产业信号]
+tags:
+  - 主题/AI-Coding
+  - 主题/Harness
+  - 主题/Loop
+  - 主题/产业观察
+  - 主题/工作流设计
+  - 节点/时代迁移
+  - 节点/Loop本质
+  - 节点/5个必答问题
+  - 节点/5+1积木
+  - 节点/分界线
+  - 节点/成本转移
+  - 节点/4人同向
+  - 手法/产业视角
+  - 手法/方法论综述
+  - 公司/APPSO
+  - 公司/Codex
+  - 公司/ClaudeCode
+  - 场景/Loop启蒙
+  - 场景/产业信号
 nodes: [时代迁移, Loop本质, 5个必答问题, 5+1积木, 不只代码, 3个上手前提, 成本转移, 分界线]
-links: [[Addy-Osmani-Loop-Engineering]], [[Loop-Engineering-详解-把反馈循环放进工程现场]], [[Claude-Code一周年回顾-Boris-Cat]], [[Claude-Code之父品味不是人类护城河]], [[从Prompt-Context到Harness-工程的三次进化与终局之战]], [[claude-code-dynamic-workflows]], [[Claude-Code首席设计师Meaghan-Choi工作流]], [[Claude-Code团队5条工作原则-Fiona-Fung分享]]
+links: [[02-ai-coding/Addy-Osmani-Loop-Engineering]], [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]], [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]], [[02-ai-coding/Claude-Code之父品味不是人类护城河]], [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]], [[02-ai-coding/claude-code-dynamic-workflows]], [[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]], [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]
 date: 2026-06-14
 source: 微信公众号 APPSO / 发现明日产品的
 ---
@@ -32,19 +51,19 @@ Loop Engineering 不是"新瓶装旧酒",而是当 Agent 能连续跑几十分�
 ## 关联图谱
 
 ### 上游(本文基于/来自)
-- [[Addy-Osmani-Loop-Engineering]] — 5+1 积木方法论原始来源(41 万浏览)
-- [[Loop-Engineering-详解-把反馈循环放进工程现场]] — 若飞中文工程实操版(7 天试点+5 项准入)
+- [[02-ai-coding/Addy-Osmani-Loop-Engineering]] — 5+1 积木方法论原始来源(41 万浏览)
+- [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] — 若飞中文工程实操版(7 天试点+5 项准入)
 - Boris Cherny / Cat Wu 一周年节目 + 龙虾之父 X 推文
 
 ### 下游(本文应用于/补全到)
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]] — 三层演进框架
-- [[Claude-Code一周年回顾-Boris-Cat]] — Boris/Cat Loop 表达原文
-- [[Claude-Code之父品味不是人类护城河]] — Boris"我的工作已经变成写 Loops"
-- [[claude-code-dynamic-workflows]] — Claude Code dynamic workflow 实现层
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]] — 三层演进框架
+- [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]] — Boris/Cat Loop 表达原文
+- [[02-ai-coding/Claude-Code之父品味不是人类护城河]] — Boris"我的工作已经变成写 Loops"
+- [[02-ai-coding/claude-code-dynamic-workflows]] — Claude Code dynamic workflow 实现层
 
 ### 同级(横向/并列)
-- [[Claude-Code首席设计师Meaghan-Choi工作流]] — 同一波 AI Coding 大佬的"定时巡逻产品质量"实践
-- [[Anthropic万字长文三个判断和一个阳谋]] — 产业战略层
+- [[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]] — 同一波 AI Coding 大佬的"定时巡逻产品质量"实践
+- [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]] — 产业战略层
 
 ## 正文要点(8 条)
 
@@ -59,9 +78,9 @@ Loop Engineering 不是"新瓶装旧酒",而是当 Agent 能连续跑几十分�
 
 ## 对 Seetong 团队 4 个可借鉴动作
 
-1. **盘点已是 loop 的**:OpenClaw HEARTBEAT(30m 心跳)、Seetong 团队日报/周报/简报 cron、神策友盟反馈 dry-run、神策 Login 成功率每日巡检——**这些都是 loop 雏形,只是没人把它们当 loop 看**;把它们写进 [[Codex配置原则总览]] 的"已是 loop"清单
+1. **盘点已是 loop 的**:OpenClaw HEARTBEAT(30m 心跳)、Seetong 团队日报/周报/简报 cron、神策友盟反馈 dry-run、神策 Login 成功率每日巡检——**这些都是 loop 雏形,只是没人把它们当 loop 看**;把它们写进 [[02-ai-coding/Codex配置原则总览]] 的"已是 loop"清单
 2. **选 1 个"高 ROI + 验证便宜"场景试 7 天**:候选——神策崩溃堆栈归类(自动 verify=错误码匹配)/ TAPD 过期迭代关闭(自动 verify=已 close 状态)/ 用户反馈去重(自动 verify=关键词 hash);不要从 "AI 写代码" 起步(验证贵)
-3. **写 Loop 任务卡 8 项必填**:循环名称 / 触发频率 / 输入范围 / 最大运行 / 权限 / 验证 / 停止 / 交付物;复用 [[Loop-Engineering-详解-把反馈循环放进工程现场]] 的任务卡预算模板
+3. **写 Loop 任务卡 8 项必填**:循环名称 / 触发频率 / 输入范围 / 最大运行 / 权限 / 验证 / 停止 / 交付物;复用 [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] 的任务卡预算模板
 4. **拒绝为 loop 而 loop**:Seetong 一次性需求(版本发版、调研分析)继续用好提示词+Plan 模式;**只有"每周/每天重复 + 流程稳定 + 验证便宜"三件齐全才上 loop**——一次性的活,好提示词又快又便宜
 
 ## 备注与限制

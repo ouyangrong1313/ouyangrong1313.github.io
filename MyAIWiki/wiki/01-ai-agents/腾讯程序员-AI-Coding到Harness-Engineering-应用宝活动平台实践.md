@@ -1,9 +1,17 @@
 ---
 title: 从 AI Coding 到 Harness Engineering 应用宝活动平台端到端实践
 category: 01-ai-agents
-tags: [#主题/Harness, #主题/AI-Agent, #主题/知识库, #主题/端到端开发, #主题/多Agent, #主题/工程实践, #主题/腾讯, #主题/Seetong借鉴]
+tags:
+  - 主题/Harness
+  - 主题/AI-Agent
+  - 主题/知识库
+  - 主题/端到端开发
+  - 主题/多Agent
+  - 主题/工程实践
+  - 主题/腾讯
+  - 主题/Seetong借鉴
 nodes: [状态文件驱动, 专家Agent体系, Worktree-DAG-Fork-Join并行, 冲突治理四象限, 脚本化执行, DevOps多平台集成, 结构化知识库与渐进式加载, 文档新鲜度检测]
-links: [[阿里云开发者-淘宝主播Agent的Harness工程实战]], [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[HarnessEngineering企业级实战]], [[Harness工程AgentLoop]], [[0xCodez-Agent-Harness-14-Steps]], [[harness-engineering]], [[Hermes-Agent重构得物数仓工作流]], [[Code-is-cheap-AI-Native-五倍效率]], [[Loop-Engineering-验证才是瓶颈]], [[Leeka-Task-Decomposition-Agentic-Workflow]]
+links: [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]], [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[01-ai-agents/HarnessEngineering企业级实战]], [[01-ai-agents/Harness工程AgentLoop]], [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]], [[01-ai-agents/harness-engineering]], [[01-ai-agents/Hermes-Agent重构得物数仓工作流]], [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]], [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]]
 date: 2026-07-05
 source: 微信公众号 / 腾讯程序员 2026-07-05(腾讯应用宝活动平台团队 / zimingxing、kinglongli、yifhao)
 原始链接: https://mp.weixin.qq.com/s/UE-RZH9hnbBd06CVapFGrA
@@ -44,10 +52,10 @@ source: 微信公众号 / 腾讯程序员 2026-07-05(腾讯应用宝活动平台
 - **Claude Workflow 模式**:团队正在探索"由脚本串联流程,必要时脚本 call AI",而非"AI 串联流程"
 
 ### 同级(横向 / 并列)
-- Harness 主线:[[Harness工程AgentLoop]] / [[HarnessEngineering企业级实战]] / [[阿里云开发者-淘宝主播Agent的Harness工程实战]] / [[0xCodez-Agent-Harness-14-Steps]] / [[harness-engineering]] / [[Code-is-cheap-AI-Native-五倍效率]]
-- 端到端流程:[[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] / [[Hermes-Agent重构得物数仓工作流]] / [[Leeka-Task-Decomposition-Agentic-Workflow]]
-- Loop 验证:[[Loop-Engineering-验证才是瓶颈]] / [[Addy-Osmani-Loop-Engineering]]
-- 多 Agent 架构:[[OpenClaw-vs-Hermes-多-Agent-架构设计]] / [[从零设计生产级-Multi-Agent-Harness]]
+- Harness 主线:[[01-ai-agents/Harness工程AgentLoop]] / [[01-ai-agents/HarnessEngineering企业级实战]] / [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] / [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[01-ai-agents/harness-engineering]] / [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]]
+- 端到端流程:[[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] / [[01-ai-agents/Hermes-Agent重构得物数仓工作流]] / [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]]
+- Loop 验证:[[01-ai-agents/Loop-Engineering-验证才是瓶颈]] / [[02-ai-coding/Addy-Osmani-Loop-Engineering]]
+- 多 Agent 架构:[[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]] / [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]
 
 ## 6 个对 Seetong 团队可借鉴动作
 
@@ -67,4 +75,4 @@ source: 微信公众号 / 腾讯程序员 2026-07-05(腾讯应用宝活动平台
 - **未来方向**:Claude Workflow 模式启发下,探索"脚本串联流程"替代"AI 串联流程",让"确定性的归脚本,认知的归 AI"
 - **取舍**:弃用主子 Agent 模式(改由外部主程序编排) + 弃用 Shell 脚本(改 Go 强类型) + 严格禁用项目级 Memory(防止上下文串扰)
 - **微信原文**:约 15.8K 字符,5 个一级章节 + 27 个二级章节,涵盖知识库工程 + 端到端开发工程两条主线
-- raw:../../raw/2026-07-05-腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践.md | raw-digest:../../raw/2026-07-05-腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践-digest.md | wiki-digest:./腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践-digest.md
+- raw:../../raw/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践.md | raw-digest:../../raw/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践-digest.md | wiki-digest:./腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践-digest.md

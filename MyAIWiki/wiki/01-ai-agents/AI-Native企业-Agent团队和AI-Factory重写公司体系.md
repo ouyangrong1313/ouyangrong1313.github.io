@@ -1,9 +1,19 @@
 ---
 title: AI-Native 企业：Agent 团队和 AI Factory 会怎么重写公司体系
 category: 01-ai-agents
-tags: [#主题/AI-Native #主题/Agent落地 #主题/组织变革 #主题/Truth-Layer #主题/Eval #主题/企业AI #手法/案例拆解 #手法/方法论 #场景/企业级落地 #场景/编译长文]
+tags:
+  - 主题/AI-Native
+  - 主题/Agent落地
+  - 主题/组织变革
+  - 主题/Truth-Layer
+  - 主题/Eval
+  - 主题/企业AI
+  - 手法/案例拆解
+  - 手法/方法论
+  - 场景/企业级落地
+  - 场景/编译长文
 nodes: [AI-native组织图, 每个职能都能构建, speedboat小队, build-vs-buy倾向自建, Truth-layer, Category-playbook-manifest, eval回流业务规则, 自主Agent规模双刃剑, 领导者自搭OS, 高管必须自己用AI]
-links: [[未来属于垂直领域Agent]] [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]] [[Multica-AI-Native-组织-人是最慢的节点]] [[Laurel-CPO-Jiaona-Zhang-公司OS]] [[Addy-Osmani-Loop-Engineering]]
+links: [[01-ai-agents/未来属于垂直领域Agent]] [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]] [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]] [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]] [[02-ai-coding/Addy-Osmani-Loop-Engineering]]
 date: 2026-07-07
 source: 微信公众号「晚点再听LaterCast」2026-07-07 推送（编译自 Augmented U 节目《Building the AI-Native Enterprise》/ 受访 Masha Sharma Groupon VP / 原视频 https://www.youtube.com/watch?v=pQj8qOyan-Q）
 ---
@@ -56,9 +66,9 @@ Masha 一年前还很保守（讨厌"经验不足的人把 thinking 外包给 AI
 
 ## 关联图谱
 
-**上游**：[[未来属于垂直领域Agent]]（同"晚点再听LaterCast"，那篇是"未来形态预测"，本文是"Groupon 企业实证"）+ [[Addy-Osmani-Loop-Engineering]] Loop 5+1 积木（本文"先跑小循环"对应 Loop 最小可用版）+ [[Laurel-CPO-Jiaona-Zhang-公司OS]]（同样是"公司 OS"视角，Laurel 给方法，本文给实证）
+**上游**：[[01-ai-agents/未来属于垂直领域Agent]]（同"晚点再听LaterCast"，那篇是"未来形态预测"，本文是"Groupon 企业实证"）+ [[02-ai-coding/Addy-Osmani-Loop-Engineering]] Loop 5+1 积木（本文"先跑小循环"对应 Loop 最小可用版）+ [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]]（同样是"公司 OS"视角，Laurel 给方法，本文给实证）
 
-**同级**：[[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]（Anthropic 管理者视角）+ [[Multica-AI-Native-组织-人是最慢的节点]]（极端样本）+ [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]（L3-L4 数据框架，本文是 Groupon 实证）+ [[Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]]（同 Capihom 编译系列）
+**同级**：[[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]（Anthropic 管理者视角）+ [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]（极端样本）+ [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]（L3-L4 数据框架，本文是 Groupon 实证）+ [[01-ai-agents/Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]]（同 Capihom 编译系列）
 
 ## 5 个核心主张 + 操作
 
@@ -82,8 +92,8 @@ Masha 一年前还很保守（讨厌"经验不足的人把 thinking 外包给 AI
 1. **AI-native 组织图体检**——找出 5 个还是"业务提需求-工程写 PRD"老链路的岗位；主人+黄松佳+谭伟+张威共同标出待改节点
 2. **每个职能搭 1 个最小 Agent**——客服/产品/测试/运营各 1 个 Skill（哪怕 60%），1 周 ship 到 staging；速度比完美重要
 3. **小商家上线路 AI 化**——设备添加从"填 5 张表"到"对话一句话"，MCP 标准化 + 设备配网知识库 + 1 次性合规评估
-4. **Truth Layer 沉淀**——设备配置/报警规则/反馈分类的 source of truth → AI-readable manifests（参考 [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] 的"知识库结构化"）
-5. **Eval 接回业务规则**——设备分诊/反馈分诊 eval suite，每周跑 quality control agents；与 [[腾讯-AI-Agent-Skill-测评方案落地]] "用例基线"思路一致
+4. **Truth Layer 沉淀**——设备配置/报警规则/反馈分类的 source of truth → AI-readable manifests（参考 [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] 的"知识库结构化"）
+5. **Eval 接回业务规则**——设备分诊/反馈分诊 eval suite，每周跑 quality control agents；与 [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]] "用例基线"思路一致
 6. **主人先搭自己的 OS**——7 维 OS + 月报加"AI 决策数 vs 主人亲自决策数"指标对齐 Masha 模式
 
 ## 备注与限制
@@ -99,5 +109,5 @@ Masha 一年前还很保守（讨厌"经验不足的人把 thinking 外包给 AI
 - 原文：https://mp.weixin.qq.com/s/LkMuNLTHRHTFJUYD6iAyaA
 - 一手原视频：https://www.youtube.com/watch?v=pQj8qOyan-Q
 - 公众号：晚点再听LaterCast（Capihom）
-- 同主线 wiki：[[未来属于垂直领域Agent]] [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]] [[Multica-AI-Native-组织-人是最慢的节点]]
-- 同 Capihom 编译系列：[[Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]] [[Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]]
+- 同主线 wiki：[[01-ai-agents/未来属于垂直领域Agent]] [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]] [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]
+- 同 Capihom 编译系列：[[01-ai-agents/Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]] [[02-ai-coding/Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]]

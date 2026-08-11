@@ -1,9 +1,23 @@
 ---
 title: How to Build a Company OS in Claude Code — Jiaona Zhang（Laurel CPO）
 category: 03-productivity
-tags: [#主题/AI时代公司OS, #主题/团队管理, #主题/PM实操, #主题/AI工具栈, #主题/招聘, #主题/工作地图, #节点/公司OS, #节点/1%-vs-99%鸿沟, #节点/工作地图, #节点/烦人重复动作, #节点/playbook-拆skill, #节点/Slack-入口, #节点/AI-Ops-专职, #节点/Captain-model]
+tags:
+  - 主题/AI时代公司OS
+  - 主题/团队管理
+  - 主题/PM实操
+  - 主题/AI工具栈
+  - 主题/招聘
+  - 主题/工作地图
+  - 节点/公司OS
+  - 节点/1%-vs-99%鸿沟
+  - 节点/工作地图
+  - 节点/烦人重复动作
+  - 节点/playbook-拆skill
+  - 节点/Slack-入口
+  - 节点/AI-Ops-专职
+  - 节点/Captain-model
 nodes: [公司OS定义, 1%与90-99%鸿沟, 工作地图work-map, 烦人重复动作起点, playbook拆skill-Dust-agent, Slack-邮箱入口, AI-Ops-专职岗位, Captain-model精简PM, AI-成熟度4级]
-links: [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]], [[与AI一起做产品的六条原则]], [[use-ai-well-become-more-valuable]], [[APPSO-Obsidian+Codex-Karpathy同款本地知识库]], [[Nikesh-Arora-模型过剩与记忆护城河]]
+links: [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]], [[03-productivity/与AI一起做产品的六条原则]], [[03-productivity/use-ai-well-become-more-valuable]], [[03-productivity/APPSO-Obsidian+Codex-Karpathy同款本地知识库]], [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]
 date: 2026-06-29
 source: 微信公众号(硅谷 AI 播客总结类)2026-06-29 翻译 Aakash Gupta 播客《How to Build a Company OS in Claude Code》原视频 https://www.youtube.com/watch?v=qsDX0PMKcaE
 ---
@@ -23,7 +37,7 @@ source: 微信公众号(硅谷 AI 播客总结类)2026-06-29 翻译 Aakash Gupta
 ### 分类提炼
 
 - 场景：组织管理 / 团队 AI 化 / PM 实操 / 招聘
-- 标签：`#主题/AI时代公司OS` `#主题/团队管理` `#主题/PM实操` `#主题/AI工具栈` `#主题/招聘` `#主题/工作地图`
+- 标签： #主题/AI时代公司OS #主题/团队管理 #主题/PM实操 #主题/AI工具栈 #主题/招聘 #主题/工作地图
 - 类型：播客采访翻译（采访者+受访者双人结构）
 
 ## 知识节点（9 个独立概念）
@@ -52,11 +66,11 @@ source: 微信公众号(硅谷 AI 播客总结类)2026-06-29 翻译 Aakash Gupta
 - Seetong 组织：是否需要 1 个 AI Ops 专职岗位
 
 ### 同级（横向 / 并列）
-- [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]] - 03-productivity 已有组织管理主线
-- [[与AI一起做产品的六条原则]] - 03-productivity 已有 AI 时代产品设计
-- [[use-ai-well-become-more-valuable]] - 03-productivity 已有"用好 AI 的人更值钱"
-- [[APPSO-Obsidian+Codex-Karpathy同款本地知识库]] - 本地知识库 3 层结构
-- [[Nikesh-Arora-模型过剩与记忆护城河]] - 06-ai-tech 已有"硅谷 CEO 战略视角"
+- [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]] - 03-productivity 已有组织管理主线
+- [[03-productivity/与AI一起做产品的六条原则]] - 03-productivity 已有 AI 时代产品设计
+- [[03-productivity/use-ai-well-become-more-valuable]] - 03-productivity 已有"用好 AI 的人更值钱"
+- [[03-productivity/APPSO-Obsidian+Codex-Karpathy同款本地知识库]] - 本地知识库 3 层结构
+- [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]] - 06-ai-tech 已有"硅谷 CEO 战略视角"
 
 ### 正文要点（6 条）
 
@@ -79,8 +93,8 @@ source: 微信公众号(硅谷 AI 播客总结类)2026-06-29 翻译 Aakash Gupta
 ### 备注与限制
 
 - 本文是 Aakash Gupta 播客采访的中文总结版，原视频 https://www.youtube.com/watch?v=qsDX0PMKcaE
-- 与 [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]] 区别：陈春花是从岗位到角色的组织设计哲学（中文），本文是"公司 OS"具体方法 + 4 级 AI 成熟度招聘（英文播客翻译）——**形成"组织管理"中英双视角资料**
-- 与 [[与AI一起做产品的六条原则]] 区别：六条原则是 AI 时代产品哲学原则，本文是 PM 实操方法 + 团队组织变化
+- 与 [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]] 区别：陈春花是从岗位到角色的组织设计哲学（中文），本文是"公司 OS"具体方法 + 4 级 AI 成熟度招聘（英文播客翻译）——**形成"组织管理"中英双视角资料**
+- 与 [[03-productivity/与AI一起做产品的六条原则]] 区别：六条原则是 AI 时代产品哲学原则，本文是 PM 实操方法 + 团队组织变化
 - **核心反直觉**："公司 OS 不一定一开始就是 OS"——从第一个自动化小工作流开始；速度变快后 PM 101 反而更硬
 - **不适用**：用"AI 改造 = 每个人责任"的口号代替具体行动；把 AI 工具放在新界面
 - **未展开**：Laurel 其他 AI 工具栈细节 / Dust vs Claude vs 其他 agent builder 对比 / Reforge 课程具体内容
@@ -88,4 +102,4 @@ source: 微信公众号(硅谷 AI 播客总结类)2026-06-29 翻译 Aakash Gupta
 ### 相关链接
 
 - 原文：https://mp.weixin.qq.com/s/cV_GGCVdk2q9i4Cn0O3fyA | 原始英文：https://www.youtube.com/watch?v=qsDX0PMKcaE
-- 同主线 [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]] / [[与AI一起做产品的六条原则]] / [[APPSO-Obsidian+Codex-Karpathy同款本地知识库]]
+- 同主线 [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]] / [[03-productivity/与AI一起做产品的六条原则]] / [[03-productivity/APPSO-Obsidian+Codex-Karpathy同款本地知识库]]

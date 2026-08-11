@@ -2,37 +2,37 @@
 
 时间序变更记录。格式：`## [日期] 操作 | 标题`
 
-- 2026-07-30: 新增《Agent Loop 才火一个月，Graph Engineering 又来了，但只要我学得足够慢，就什么都不用学了》；来源：微信公众号「叶小钗」；作者：叶小钗（同名公众号、自我标签 1-3-25、成都 TGO 7 组组长、协助几家公司做 AI 原生组织落地）；原文链接：https://mp.weixin.qq.com/s/ZFGJPB3PPZf-5kFlTaL3Tg；触发事件：2026-07-18 OpenClaw 作者 Peter Steinberger X 推文“大家还在聊 Loop，还是已经转向 Graph 了？”。新增 `raw/2026-07-30-叶小钗-Agent-Loop-vs-Graph-Engineering.md` 与 digest、`wiki/01-ai-agents/叶小钗-Agent-Loop-vs-Graph-Engineering.md` 与速读版，并同步到 `wiki/01-ai-agents/index.md`（「Graph Engineering / LangGraph / 拓扑决策专题」补完叶小钗保守派视角）与 `wiki/master-index.md` 最近更新顶部。**核心命题**“Agent Loop 与 Graph Engineering 不是替代关系，而是不同层面对'怎么让 AI 系统稳定、可控、高效地干活'的同一回答——Loop 是管理层方法论（隐性 SOP 显性化为代码），Graph 是工程架构层（节点之间的数据流 + 依赖关系 + 容错机制）；现阶段 Graph 没有太大深入价值”；**8 节点**（AI炒冷饭循环 / Agent-Loop复盘 / Graph-Engineering-定义 / Node-Edge模型 / 数据依赖≠执行顺序 / 线性流程是退化图 / Graph-适用边界与代价 / Loop-vs-Graph-本质是组织与工程两层）；关联 [[AI-团队协作-Loop-SDD]] [[叶小钗-AI原生组织方法论-2026版]] [[生产级Agent全景]]（同作者叶小钗主线） + [[AdrianPunk115-Graph-Engineering-从0到1小白完整教程]] [[图工程-Graph-Engineering-来了-LangChain说不是新东西]] [[万字长文拆解Agent-架构设计-四-多-Agent-协作]] [[Harness工程AgentLoop]] [[Loop-Engineering-验证才是瓶颈]] [[bdd-adr-prd-agent-closed-loop]]。**证据边界**：文章为作者个人观点 + 实操经验，无具体实验数据 / A/B 测试 / 量化对比；作者立场偏保守（“现阶段对 Graph 深入价值不大”）与同期市场鼓吹 Graph 趋势相反，Seetong 借鉴应交叉对照两边观点；7/18 Peter Steinberger 推文只是提问不代表 OpenClaw 团队立场已转向 Graph；本文最大元判断 = "Loop vs Graph 是个伪命题"——不应陷入"哪个新就用哪个"循环。
+- 2026-07-30: 新增《Agent Loop 才火一个月，Graph Engineering 又来了，但只要我学得足够慢，就什么都不用学了》；来源：微信公众号「叶小钗」；作者：叶小钗（同名公众号、自我标签 1-3-25、成都 TGO 7 组组长、协助几家公司做 AI 原生组织落地）；原文链接：https://mp.weixin.qq.com/s/ZFGJPB3PPZf-5kFlTaL3Tg；触发事件：2026-07-18 OpenClaw 作者 Peter Steinberger X 推文“大家还在聊 Loop，还是已经转向 Graph 了？”。新增 `raw/叶小钗-Agent-Loop-vs-Graph-Engineering.md` 与 digest、`wiki/01-ai-agents/叶小钗-Agent-Loop-vs-Graph-Engineering.md` 与速读版，并同步到 `wiki/01-ai-agents/index.md`（「Graph Engineering / LangGraph / 拓扑决策专题」补完叶小钗保守派视角）与 `wiki/master-index.md` 最近更新顶部。**核心命题**“Agent Loop 与 Graph Engineering 不是替代关系，而是不同层面对'怎么让 AI 系统稳定、可控、高效地干活'的同一回答——Loop 是管理层方法论（隐性 SOP 显性化为代码），Graph 是工程架构层（节点之间的数据流 + 依赖关系 + 容错机制）；现阶段 Graph 没有太大深入价值”；**8 节点**（AI炒冷饭循环 / Agent-Loop复盘 / Graph-Engineering-定义 / Node-Edge模型 / 数据依赖≠执行顺序 / 线性流程是退化图 / Graph-适用边界与代价 / Loop-vs-Graph-本质是组织与工程两层）；关联 [[AI-团队协作-Loop-SDD]] [[叶小钗-AI原生组织方法论-2026版]] [[生产级Agent全景]]（同作者叶小钗主线） + [[AdrianPunk115-Graph-Engineering-从0到1小白完整教程]] [[图工程-Graph-Engineering-来了-LangChain说不是新东西]] [[万字长文拆解Agent-架构设计-四-多-Agent-协作]] [[Harness工程AgentLoop]] [[Loop-Engineering-验证才是瓶颈]] [[bdd-adr-prd-agent-closed-loop]]。**证据边界**：文章为作者个人观点 + 实操经验，无具体实验数据 / A/B 测试 / 量化对比；作者立场偏保守（“现阶段对 Graph 深入价值不大”）与同期市场鼓吹 Graph 趋势相反，Seetong 借鉴应交叉对照两边观点；7/18 Peter Steinberger 推文只是提问不代表 OpenClaw 团队立场已转向 Graph；本文最大元判断 = "Loop vs Graph 是个伪命题"——不应陷入"哪个新就用哪个"循环。
 
-- 2026-07-30: 新增《AI 时代，高潜力人才与普通员工的区别，在于三种能力》；来源：微信公众号「HBR-China」；作者：吉姆·杜塞特（Jim Doucette）+ 维沙尔·高尔（Vishal Gaur）；原文链接：https://mp.weixin.qq.com/s/qJHiFCtzMdsM6XY8QeBTqg。新增 `raw/2026-07-30-HBR-China-AI时代高潜力人才与普通员工的区别-在于三种能力.md` 与 digest、`wiki/03-productivity/HBR-China-AI时代高潜力人才三种能力.md` 与速读版，并同步至 `wiki/03-productivity/index.md`（新增子区「AI 时代新员工能力与三项能力标尺（2026-07-30 新增 ⭐⭐⭐）」）和 `wiki/master-index.md` 最近更新顶部。**核心命题**“AI 正在重塑雇主对新员工的技能期望——区分高潜力人才 vs 普通员工的新标尺是三项能力：①一个人撞起更多角色 ②综合不同来源的知识 ③用 AI 重新设计工作流程；三项能力同时具备 = 跨域担责者”；**8 节点**（研究发现-AI重塑雇主期望 / 能力1-撞起更多角色 / 能力2-综合不同来源的知识 / 能力3-用AI重新设计工作流程 / 新标尺-高潜力人才区分 / 雇主-员工-能力三方关系 / AI放大能力差距 / 个人-组织-环境适配）；关联 [[HBR-China-为什么越来越多顶级领导者开始认真学哲学]]（同 HBR-China 7/01 主线，本文是“员工能力”侧） [[笔记侠-苏姿丰-MIT演讲-工程师本能]] [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]] [[与AI一起做产品的六条原则]] [[AI组织进化论-奈飞人才观-AI素养与系统思考]] [[快刀青衣-OpenAI高管教练四层能力]] [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]]。**证据边界**：原文仅一段 96 字摘要，未提供具体研究数据 / 研究方法 / 三项能力详细论证；作者机构与一手数据来源未标注；Seetong 借鉴时应不基于具体研究数字做承诺，自补“能力评估表 + 培养路径 + 晋升标准”三件套。
+- 2026-07-30: 新增《AI 时代，高潜力人才与普通员工的区别，在于三种能力》；来源：微信公众号「HBR-China」；作者：吉姆·杜塞特（Jim Doucette）+ 维沙尔·高尔（Vishal Gaur）；原文链接：https://mp.weixin.qq.com/s/qJHiFCtzMdsM6XY8QeBTqg。新增 `raw/HBR-China-AI时代高潜力人才与普通员工的区别-在于三种能力.md` 与 digest、`wiki/03-productivity/HBR-China-AI时代高潜力人才三种能力.md` 与速读版，并同步至 `wiki/03-productivity/index.md`（新增子区「AI 时代新员工能力与三项能力标尺（2026-07-30 新增 ⭐⭐⭐）」）和 `wiki/master-index.md` 最近更新顶部。**核心命题**“AI 正在重塑雇主对新员工的技能期望——区分高潜力人才 vs 普通员工的新标尺是三项能力：①一个人撞起更多角色 ②综合不同来源的知识 ③用 AI 重新设计工作流程；三项能力同时具备 = 跨域担责者”；**8 节点**（研究发现-AI重塑雇主期望 / 能力1-撞起更多角色 / 能力2-综合不同来源的知识 / 能力3-用AI重新设计工作流程 / 新标尺-高潜力人才区分 / 雇主-员工-能力三方关系 / AI放大能力差距 / 个人-组织-环境适配）；关联 [[HBR-China-为什么越来越多顶级领导者开始认真学哲学]]（同 HBR-China 7/01 主线，本文是“员工能力”侧） [[笔记侠-苏姿丰-MIT演讲-工程师本能]] [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]] [[与AI一起做产品的六条原则]] [[AI组织进化论-奈飞人才观-AI素养与系统思考]] [[快刀青衣-OpenAI高管教练四层能力]] [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]]。**证据边界**：原文仅一段 96 字摘要，未提供具体研究数据 / 研究方法 / 三项能力详细论证；作者机构与一手数据来源未标注；Seetong 借鉴时应不基于具体研究数字做承诺，自补“能力评估表 + 培养路径 + 晋升标准”三件套。
 
-- 2026-07-30: 新增《一个通用的AI Agent平台应该具备哪些Harness工程技术底座能力》；来源：微信公众号「人月聊IT」；作者：何明璐；发布时间：2026-07-29 21:29；原文链接：https://mp.weixin.qq.com/s/g9gsWggIqMqQtlU4jeBUKA。新增 `raw/2026-07-29-人月聊IT-通用AI-Agent平台-Harness技术底座.md`、对应 digest、`wiki/01-ai-agents/2026-07-29-人月聊IT-通用AI-Agent平台-Harness技术底座.md` 与速读版，并同步至 `wiki/01-ai-agents/index.md` 和 `wiki/master-index.md`。**核心命题**“Harness 是由状态、能力、控制和证据组成的 Agent 平台执行底盘”；**10 节点**（分层记忆 / 会话快照 / 上下文调度 / Skill生命周期 / MCP运行时 / 异步任务 / 浏览器桥接 / 多Agent隔离 / 安全沙箱 / 全链路追踪）；关联 [[储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[lencx-Agent开发指南-技术太多-该怎么学]] [[若飞-Agent-记忆与可验证自我改进怎么设计]] [[从零设计生产级-Multi-Agent-Harness]] [[腾讯-AI-Agent-Skill-测评方案落地]]。**证据边界**：原文称基于 Abu-Cowork 源码逆向整理，但未列出逐项源码、测试或基准；本文将其作为能力地图，不视为经独立验证的项目事实。
+- 2026-07-30: 新增《一个通用的AI Agent平台应该具备哪些Harness工程技术底座能力》；来源：微信公众号「人月聊IT」；作者：何明璐；发布时间：2026-07-29 21:29；原文链接：https://mp.weixin.qq.com/s/g9gsWggIqMqQtlU4jeBUKA。新增 `raw/人月聊IT-通用AI-Agent平台-Harness技术底座.md`、对应 digest、`wiki/01-ai-agents/2026-07-29-人月聊IT-通用AI-Agent平台-Harness技术底座.md` 与速读版，并同步至 `wiki/01-ai-agents/index.md` 和 `wiki/master-index.md`。**核心命题**“Harness 是由状态、能力、控制和证据组成的 Agent 平台执行底盘”；**10 节点**（分层记忆 / 会话快照 / 上下文调度 / Skill生命周期 / MCP运行时 / 异步任务 / 浏览器桥接 / 多Agent隔离 / 安全沙箱 / 全链路追踪）；关联 [[储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[lencx-Agent开发指南-技术太多-该怎么学]] [[若飞-Agent-记忆与可验证自我改进怎么设计]] [[从零设计生产级-Multi-Agent-Harness]] [[腾讯-AI-Agent-Skill-测评方案落地]]。**证据边界**：原文称基于 Abu-Cowork 源码逆向整理，但未列出逐项源码、测试或基准；本文将其作为能力地图，不视为经独立验证的项目事实。
 
-- 2026-07-30: 新增《AI想要落地其实很难！马克·库班：Agent会逐渐失效，也会慢慢偏离原来的运行状态》；来源：微信公众号「51CTO技术栈」；编辑：姜篇；发布时间：2026-07-29 12:00；原文链接：https://mp.weixin.qq.com/s/P1tt77545YjGMzeL84Eh4A；访谈参考：https://www.youtube.com/watch?v=1P1hJ36rxM0&t=226s。新增 `raw/2026-07-29-51CTO-马克库班-Agent漂移与长期维护.md`、`raw/2026-07-29-51CTO-马克库班-Agent漂移与长期维护-digest.md`、`wiki/01-ai-agents/2026-07-29-51CTO-马克库班-Agent漂移与长期维护.md` 与速读版，并同步到 `wiki/01-ai-agents/index.md` 和 `wiki/master-index.md`。**核心命题**“Agent 的生产交付物是一条能抵御变化、留存运行证据、允许接管和回滚的长期工作流”；**8 节点**（上线鸿沟 / Agent漂移 / 部署工程 / 任务回归 / 模型隔离 / 运行证据 / 人工接管 / 维护责任）；关联 [[phodal-Better-Harness-任务级证据评估]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[腾讯-AI-Agent-Skill-测评方案落地]] [[若飞-Agent如何理解业务-把对象-状态和权限接进执行流程]] [[Loop-Engineering-验证才是瓶颈]]。**证据边界**：公众号为访谈中文整理；口述引语与数字应回溯视频，不能外推为通用投入或收益基准。
+- 2026-07-30: 新增《AI想要落地其实很难！马克·库班：Agent会逐渐失效，也会慢慢偏离原来的运行状态》；来源：微信公众号「51CTO技术栈」；编辑：姜篇；发布时间：2026-07-29 12:00；原文链接：https://mp.weixin.qq.com/s/P1tt77545YjGMzeL84Eh4A；访谈参考：https://www.youtube.com/watch?v=1P1hJ36rxM0&t=226s。新增 `raw/51CTO-马克库班-Agent漂移与长期维护.md`、`raw/51CTO-马克库班-Agent漂移与长期维护-digest.md`、`wiki/01-ai-agents/2026-07-29-51CTO-马克库班-Agent漂移与长期维护.md` 与速读版，并同步到 `wiki/01-ai-agents/index.md` 和 `wiki/master-index.md`。**核心命题**“Agent 的生产交付物是一条能抵御变化、留存运行证据、允许接管和回滚的长期工作流”；**8 节点**（上线鸿沟 / Agent漂移 / 部署工程 / 任务回归 / 模型隔离 / 运行证据 / 人工接管 / 维护责任）；关联 [[phodal-Better-Harness-任务级证据评估]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[腾讯-AI-Agent-Skill-测评方案落地]] [[若飞-Agent如何理解业务-把对象-状态和权限接进执行流程]] [[Loop-Engineering-验证才是瓶颈]]。**证据边界**：公众号为访谈中文整理；口述引语与数字应回溯视频，不能外推为通用投入或收益基准。
 
-- 2026-07-30: 新增《Better Harness：用任务证据评估并持续改进 AI Coding 工作流》；来源：微信公众号「phodal」；作者：phodal；发布时间：2026-07-28 21:28；原文链接：https://mp.weixin.qq.com/s/PuMpxU1ruXlTgT_JWKoHfQ?scene=1&click_id=8；一手项目：https://github.com/QoderAI/better-harness。新增 `raw/2026-07-28-phodal-Better-Harness-开源.md`、`raw/2026-07-28-phodal-Better-Harness-开源-digest.md` 与 `wiki/01-ai-agents/phodal-Better-Harness-任务级证据评估.md`，并同步到 `wiki/01-ai-agents/index.md` 和 `wiki/master-index.md`。**核心命题**“配置存在不等于任务中生效；以真实任务为单位，分别采集会话、项目与 Agent 配置证据，按 Agent Work Loop 五维输出证据充分、可修复、可验证的 Finding；后续可比较任务变好才可证明流程改善”；**8 节点**（任务级证据 / 证据边界 / 三类证据 / Agent-Work-Loop / 可追溯Finding / 前馈反馈 / 评估校准 / 纵向复验）；与 [[Lilian-Weng-Harness-Engineering-自我改进]] [[Harness工程AgentLoop]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[Loop-Engineering-验证才是瓶颈]] [[若飞-Agent-记忆与可验证自我改进怎么设计]] 强关联。**核验与边界**：2026-07-30 已读取官方 README，确认开源项目、五维模型、三类证据边界与 Claude Code、Codex、Qoder、Cursor 宿主支持；文章所述 30 个项目、120 份报告和 200 多份 Spec 未独立复跑；不同宿主的证据覆盖尚未完全对齐，单次报告或修复均不能替代纵向效果证据。
+- 2026-07-30: 新增《Better Harness：用任务证据评估并持续改进 AI Coding 工作流》；来源：微信公众号「phodal」；作者：phodal；发布时间：2026-07-28 21:28；原文链接：https://mp.weixin.qq.com/s/PuMpxU1ruXlTgT_JWKoHfQ?scene=1&click_id=8；一手项目：https://github.com/QoderAI/better-harness。新增 `raw/phodal-Better-Harness-开源.md`、`raw/phodal-Better-Harness-开源-digest.md` 与 `wiki/01-ai-agents/phodal-Better-Harness-任务级证据评估.md`，并同步到 `wiki/01-ai-agents/index.md` 和 `wiki/master-index.md`。**核心命题**“配置存在不等于任务中生效；以真实任务为单位，分别采集会话、项目与 Agent 配置证据，按 Agent Work Loop 五维输出证据充分、可修复、可验证的 Finding；后续可比较任务变好才可证明流程改善”；**8 节点**（任务级证据 / 证据边界 / 三类证据 / Agent-Work-Loop / 可追溯Finding / 前馈反馈 / 评估校准 / 纵向复验）；与 [[Lilian-Weng-Harness-Engineering-自我改进]] [[Harness工程AgentLoop]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[Loop-Engineering-验证才是瓶颈]] [[若飞-Agent-记忆与可验证自我改进怎么设计]] 强关联。**核验与边界**：2026-07-30 已读取官方 README，确认开源项目、五维模型、三类证据边界与 Claude Code、Codex、Qoder、Cursor 宿主支持；文章所述 30 个项目、120 份报告和 200 多份 Spec 未独立复跑；不同宿主的证据覆盖尚未完全对齐，单次报告或修复均不能替代纵向效果证据。
 
-- 2026-07-29: 新增《奈飞最新人才观：AI素养已成基础门槛，系统思考才是差异化能力》；来源：微信公众号「AI组织进化论」；发布时间：2026-07-29；原文链接：https://mp.weixin.qq.com/s/9D6afswiyhpdlK3Y_OplPg；`raw/2026-07-AI组织进化论-奈飞人才观-AI素养与系统思考.md` + `raw/2026-07-AI组织进化论-奈飞人才观-AI素养与系统思考-digest.md` -> `wiki/03-productivity/AI组织进化论-奈飞人才观-AI素养与系统思考.md` 已写入，并同步到 `wiki/03-productivity/index.md` 与 `wiki/master-index.md`。**核心命题**“专业深度保质量下限，AI Fluency 成为全员要求，系统思考决定能否把局部经验沉淀为组织能力”；**9 节点**（Storming阶段 / 系统思考 / 共同脚手架 / 开放专业边界 / 学习如何学习 / AI Fluency / Source of Truth / 卓越操作系统 / 价值闭环）；与 [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]] [[OpenAI-AI原生组织-4条工作原则]] [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]] 强关联。**证据边界**：本文是公众号对 Elizabeth Stone 访谈和 Netflix 文化备忘录的二手解读，不能与 LaterCast 同源编译互为独立佐证；访谈原话与内部实践未逐项核验。
+- 2026-07-29: 新增《奈飞最新人才观：AI素养已成基础门槛，系统思考才是差异化能力》；来源：微信公众号「AI组织进化论」；发布时间：2026-07-29；原文链接：https://mp.weixin.qq.com/s/9D6afswiyhpdlK3Y_OplPg；`raw/AI组织进化论-奈飞人才观-AI素养与系统思考.md` + `raw/AI组织进化论-奈飞人才观-AI素养与系统思考-digest.md` -> `wiki/03-productivity/AI组织进化论-奈飞人才观-AI素养与系统思考.md` 已写入，并同步到 `wiki/03-productivity/index.md` 与 `wiki/master-index.md`。**核心命题**“专业深度保质量下限，AI Fluency 成为全员要求，系统思考决定能否把局部经验沉淀为组织能力”；**9 节点**（Storming阶段 / 系统思考 / 共同脚手架 / 开放专业边界 / 学习如何学习 / AI Fluency / Source of Truth / 卓越操作系统 / 价值闭环）；与 [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]] [[OpenAI-AI原生组织-4条工作原则]] [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]] 强关联。**证据边界**：本文是公众号对 Elizabeth Stone 访谈和 Netflix 文化备忘录的二手解读，不能与 LaterCast 同源编译互为独立佐证；访谈原话与内部实践未逐项核验。
 
-- 2026-07-29: 新增《Agent 开发指南：技术太多，该怎么学？》；来源：微信公众号「浮之静」；作者：lencx；发布时间：2026-07-28；原文链接：https://mp.weixin.qq.com/s/Mx1pclSLzkRFXKEME24TYA；`raw/2026-07-lencx-Agent开发指南-技术太多-该怎么学.md` + `raw/2026-07-lencx-Agent开发指南-技术太多-该怎么学-digest.md` -> `wiki/01-ai-agents/lencx-Agent开发指南-技术太多-该怎么学.md` 已写入，并同步到 `wiki/01-ai-agents/index.md` 与 `wiki/master-index.md`。**核心命题**“Agent 原生软件的终点不是最大自治，而是让不完全可靠的推理者在可靠系统中持续承担责任”；**9 节点**（可信完成 / 动作回执 / Harness边界 / Goal契约 / 五类记忆 / 状态合流 / 浏览器能力平面 / Agent-readable surface / Skill供应链）；与 [[harness-engineering]] [[Loop-Engineering-验证才是瓶颈]] [[若飞-Agent-记忆与可验证自我改进怎么设计]] [[Skill-Self-Evolution]] [[OpenClaw-vs-Hermes-多-Agent-架构设计]] 强关联；**证据边界**：作者明确区分事实、趋势推断与预测，项目性能、兼容性、成本和收购路线等主张未逐项独立复核。
+- 2026-07-29: 新增《Agent 开发指南：技术太多，该怎么学？》；来源：微信公众号「浮之静」；作者：lencx；发布时间：2026-07-28；原文链接：https://mp.weixin.qq.com/s/Mx1pclSLzkRFXKEME24TYA；`raw/lencx-Agent开发指南-技术太多-该怎么学.md` + `raw/lencx-Agent开发指南-技术太多-该怎么学-digest.md` -> `wiki/01-ai-agents/lencx-Agent开发指南-技术太多-该怎么学.md` 已写入，并同步到 `wiki/01-ai-agents/index.md` 与 `wiki/master-index.md`。**核心命题**“Agent 原生软件的终点不是最大自治，而是让不完全可靠的推理者在可靠系统中持续承担责任”；**9 节点**（可信完成 / 动作回执 / Harness边界 / Goal契约 / 五类记忆 / 状态合流 / 浏览器能力平面 / Agent-readable surface / Skill供应链）；与 [[harness-engineering]] [[Loop-Engineering-验证才是瓶颈]] [[若飞-Agent-记忆与可验证自我改进怎么设计]] [[Skill-Self-Evolution]] [[OpenClaw-vs-Hermes-多-Agent-架构设计]] 强关联；**证据边界**：作者明确区分事实、趋势推断与预测，项目性能、兼容性、成本和收购路线等主张未逐项独立复核。
 
-- 2026-07-28: 新增《Karpathy autoresearch：从上下文工程到自主研究循环》；二手来源：微信公众号「AgenticHub」2026-07-27 21:30 推送（署名：南七技校；原文 https://mp.weixin.qq.com/s/uYb5AzpAwHBHhO29_cvi_Q）；一手来源：Andrej Karpathy `karpathy/autoresearch`（仓库 https://github.com/karpathy/autoresearch；创建于 2026-03-06；`README.md`、`program.md`、`prepare.py`、`train.py`）及 2026-03-26 公开更新。`raw/2026-07-27-AgenticHub-Karpathy-autoresearch.md` + `raw/2026-07-27-AgenticHub-Karpathy-autoresearch-digest.md` -> `wiki/02-ai-coding/Karpathy-autoresearch-从上下文工程到自主研究循环.md` 已写入，并同步到 `wiki/02-ai-coding/index.md` 与 `wiki/master-index.md`。**核心命题**“自主研究循环的关键不是无限运行，而是不可变评分器 + 单一可编辑面 + 固定 5 分钟预算 + `val_bpb` + Git keep/reset + TSV 账本”；**核验**：官方原文是 GitHub 开源实现而非“9 页 PDF”，约 700 次实验与 2.02 小时到 1.80 小时有一手更新支持，“4 个 Bug”未得到官方核心材料证实，DAG/Worktree 是扩展而非官方基线；与 [[Lilian-Weng-Harness-Engineering-自我改进]] [[Loop-Engineering-验证才是瓶颈]] [[Code-is-cheap-AI-Native-五倍效率]] 强关联。
+- 2026-07-28: 新增《Karpathy autoresearch：从上下文工程到自主研究循环》；二手来源：微信公众号「AgenticHub」2026-07-27 21:30 推送（署名：南七技校；原文 https://mp.weixin.qq.com/s/uYb5AzpAwHBHhO29_cvi_Q）；一手来源：Andrej Karpathy `karpathy/autoresearch`（仓库 https://github.com/karpathy/autoresearch；创建于 2026-03-06；`README.md`、`program.md`、`prepare.py`、`train.py`）及 2026-03-26 公开更新。`raw/AgenticHub-Karpathy-autoresearch.md` + `raw/AgenticHub-Karpathy-autoresearch-digest.md` -> `wiki/02-ai-coding/Karpathy-autoresearch-从上下文工程到自主研究循环.md` 已写入，并同步到 `wiki/02-ai-coding/index.md` 与 `wiki/master-index.md`。**核心命题**“自主研究循环的关键不是无限运行，而是不可变评分器 + 单一可编辑面 + 固定 5 分钟预算 + `val_bpb` + Git keep/reset + TSV 账本”；**核验**：官方原文是 GitHub 开源实现而非“9 页 PDF”，约 700 次实验与 2.02 小时到 1.80 小时有一手更新支持，“4 个 Bug”未得到官方核心材料证实，DAG/Worktree 是扩展而非官方基线；与 [[Lilian-Weng-Harness-Engineering-自我改进]] [[Loop-Engineering-验证才是瓶颈]] [[Code-is-cheap-AI-Native-五倍效率]] 强关联。
 
-- 2026-07-27: 新增《Graph Engineering：从 0 到 1 小白完整教程》；来源：X Article / Adrian Punk（@AdrianPunk115）；原文链接：https://x.com/AdrianPunk115/status/2081268706483814605；发布时间：2026-07-26 06:41:42 UTC；获取时间：2026-07-27；`raw/2026-07-26-AdrianPunk115-Graph-Engineering-从0到1小白完整教程.md` + `raw/2026-07-26-AdrianPunk115-Graph-Engineering-从0到1小白完整教程-digest.md` -> `wiki/01-ai-agents/AdrianPunk115-Graph-Engineering-从0到1小白完整教程.md` + `wiki/01-ai-agents/AdrianPunk115-Graph-Engineering-从0到1小白完整教程-digest.md` 已写入，并同步到 `wiki/01-ai-agents/index.md` 的「Graph Engineering / LangGraph / 拓扑决策专题」和 `wiki/master-index.md` 最近更新顶部。**核心命题**"Graph Engineering 不是让 Loop 失效，而是把多个 Loop、工具节点、验证节点和人工节点按状态与路由组织起来；真正要学的不是画图，而是让一群会偏移的 AI 节点按契约交接、验证和停止"；**8 节点**（Graph是Loop上层结构 / Graph准入阈值 / 节点存在性检验 / 共享状态契约 / 路由代码化 / 独立审阅节点 / 写权限收口 / 小Graph串联）；**与 [[图工程-Graph-Engineering-来了-LangChain说不是新东西]] [[Loop-Engineering-验证才是瓶颈]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[从零设计生产级-Multi-Agent-Harness]] [[万字长文拆解Agent-架构设计-四-多-Agent-协作]] 强关联**；**分类理由**：本文是 Graph Engineering 大众解释版和模板页，核心是 Agent 编排与多 Loop 协作，放 `01-ai-agents`。
+- 2026-07-27: 新增《Graph Engineering：从 0 到 1 小白完整教程》；来源：X Article / Adrian Punk（@AdrianPunk115）；原文链接：https://x.com/AdrianPunk115/status/2081268706483814605；发布时间：2026-07-26 06:41:42 UTC；获取时间：2026-07-27；`raw/AdrianPunk115-Graph-Engineering-从0到1小白完整教程.md` + `raw/AdrianPunk115-Graph-Engineering-从0到1小白完整教程-digest.md` -> `wiki/01-ai-agents/AdrianPunk115-Graph-Engineering-从0到1小白完整教程.md` + `wiki/01-ai-agents/AdrianPunk115-Graph-Engineering-从0到1小白完整教程-digest.md` 已写入，并同步到 `wiki/01-ai-agents/index.md` 的「Graph Engineering / LangGraph / 拓扑决策专题」和 `wiki/master-index.md` 最近更新顶部。**核心命题**"Graph Engineering 不是让 Loop 失效，而是把多个 Loop、工具节点、验证节点和人工节点按状态与路由组织起来；真正要学的不是画图，而是让一群会偏移的 AI 节点按契约交接、验证和停止"；**8 节点**（Graph是Loop上层结构 / Graph准入阈值 / 节点存在性检验 / 共享状态契约 / 路由代码化 / 独立审阅节点 / 写权限收口 / 小Graph串联）；**与 [[图工程-Graph-Engineering-来了-LangChain说不是新东西]] [[Loop-Engineering-验证才是瓶颈]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[从零设计生产级-Multi-Agent-Harness]] [[万字长文拆解Agent-架构设计-四-多-Agent-协作]] 强关联**；**分类理由**：本文是 Graph Engineering 大众解释版和模板页，核心是 Agent 编排与多 Loop 协作，放 `01-ai-agents`。
 
-- 2026-07-27: 新增《一文讲清 Agent 如何理解业务：把对象、状态和权限接进执行流程》；来源：微信公众号「架构师（JiaGouX）」2026-07-26 23:31 推送；作者：若飞；原文链接：https://mp.weixin.qq.com/s/LYF3_RaXhe50DNb_ZW0KZg；获取时间：2026-07-27；`raw/2026-07-26-若飞-Agent如何理解业务-把对象-状态和权限接进执行流程.md` + `raw/2026-07-26-若飞-Agent如何理解业务-把对象-状态和权限接进执行流程-digest.md` -> `wiki/01-ai-agents/若飞-Agent如何理解业务-把对象-状态和权限接进执行流程.md` + `wiki/01-ai-agents/若飞-Agent如何理解业务-把对象-状态和权限接进执行流程-digest.md` 已写入，并同步到 `wiki/01-ai-agents/index.md` 新增子区「业务语义层 / 对象-状态-权限专题」和 `wiki/master-index.md` 最近更新顶部。**核心命题**"Agent 真正理解业务，不是能把一句话分到正确意图，而是能在明确边界内，把正确业务对象从当前状态推进到目标状态，并且全过程绑定真实状态、规则版本、权限边界与完成证据"；**9 节点**（意图识别只是入口 / 六项业务语义 / 事实源分层 / 三类状态分离 / 业务决策记录 / 理解决策执行三层 / 五份小合同 / 业务理解卡 / 四类伪懂测试）；**与 [[若飞-Agent-记忆与可验证自我改进怎么设计]] [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] [[图工程-Graph-Engineering-来了-LangChain说不是新东西]] [[从零设计生产级-Multi-Agent-Harness]] [[AI-PM核心技能-观测评估与反馈闭环]] 强关联**；**分类理由**：本文聚焦 Agent 业务语义层、状态/权限治理与执行证据，属于 Agent 架构与运行时控制面，不是单纯 AI Coding 技巧页。
+- 2026-07-27: 新增《一文讲清 Agent 如何理解业务：把对象、状态和权限接进执行流程》；来源：微信公众号「架构师（JiaGouX）」2026-07-26 23:31 推送；作者：若飞；原文链接：https://mp.weixin.qq.com/s/LYF3_RaXhe50DNb_ZW0KZg；获取时间：2026-07-27；`raw/若飞-Agent如何理解业务-把对象-状态和权限接进执行流程.md` + `raw/若飞-Agent如何理解业务-把对象-状态和权限接进执行流程-digest.md` -> `wiki/01-ai-agents/若飞-Agent如何理解业务-把对象-状态和权限接进执行流程.md` + `wiki/01-ai-agents/若飞-Agent如何理解业务-把对象-状态和权限接进执行流程-digest.md` 已写入，并同步到 `wiki/01-ai-agents/index.md` 新增子区「业务语义层 / 对象-状态-权限专题」和 `wiki/master-index.md` 最近更新顶部。**核心命题**"Agent 真正理解业务，不是能把一句话分到正确意图，而是能在明确边界内，把正确业务对象从当前状态推进到目标状态，并且全过程绑定真实状态、规则版本、权限边界与完成证据"；**9 节点**（意图识别只是入口 / 六项业务语义 / 事实源分层 / 三类状态分离 / 业务决策记录 / 理解决策执行三层 / 五份小合同 / 业务理解卡 / 四类伪懂测试）；**与 [[若飞-Agent-记忆与可验证自我改进怎么设计]] [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] [[图工程-Graph-Engineering-来了-LangChain说不是新东西]] [[从零设计生产级-Multi-Agent-Harness]] [[AI-PM核心技能-观测评估与反馈闭环]] 强关联**；**分类理由**：本文聚焦 Agent 业务语义层、状态/权限治理与执行证据，属于 Agent 架构与运行时控制面，不是单纯 AI Coding 技巧页。
 
-- 2026-07-27: 新增《万字长文拆解Agent 架构设计（四）：多 Agent 协作》；来源：微信公众号「架构师带你玩转AI」2026-07-22 23:17 推送；作者：AllenTang；原文链接：https://mp.weixin.qq.com/s/CFTp_TVA8DQLFuvirkrFvQ；获取时间：2026-07-27；`raw/2026-07-22-架构师带你玩转AI-万字长文拆解Agent-架构设计-四-多-Agent-协作.md` + `raw/2026-07-22-架构师带你玩转AI-万字长文拆解Agent-架构设计-四-多-Agent-协作-digest.md` -> `wiki/01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作.md` + `wiki/01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作-digest.md` 已写入，并同步到 `wiki/01-ai-agents/index.md` 新增子区「Claude Code 子 Agent / 上下文切分专题」和 `wiki/master-index.md` 最近更新顶部。**核心命题**"多 Agent 协作切分的不是能力，而是上下文——父 Agent 负责规划与汇总，子 Agent 在全新上下文里处理局部大材料，最后只把最终结论带回"；**8 节点**（上下文切分优于能力切分 / 编排者执行者互补权限 / Task工具委派接口 / 子Agent定义三读者 / 新桌子效应 / 最后一条消息回传 / 权限交集裁剪 / 模型即调度器）；**与 [[OpenClaw-vs-Hermes-多-Agent-架构设计]] [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] [[未来属于垂直领域Agent]] [[图工程-Graph-Engineering-来了-LangChain说不是新东西]] [[从零设计生产级-Multi-Agent-Harness]] [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] 强关联**；**分类理由**：本文聚焦多 Agent runtime、权限模型和上下文隔离，属于 Agent 架构层，不是单纯 AI Coding 使用技巧。
+- 2026-07-27: 新增《万字长文拆解Agent 架构设计（四）：多 Agent 协作》；来源：微信公众号「架构师带你玩转AI」2026-07-22 23:17 推送；作者：AllenTang；原文链接：https://mp.weixin.qq.com/s/CFTp_TVA8DQLFuvirkrFvQ；获取时间：2026-07-27；`raw/架构师带你玩转AI-万字长文拆解Agent-架构设计-四-多-Agent-协作.md` + `raw/架构师带你玩转AI-万字长文拆解Agent-架构设计-四-多-Agent-协作-digest.md` -> `wiki/01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作.md` + `wiki/01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作-digest.md` 已写入，并同步到 `wiki/01-ai-agents/index.md` 新增子区「Claude Code 子 Agent / 上下文切分专题」和 `wiki/master-index.md` 最近更新顶部。**核心命题**"多 Agent 协作切分的不是能力，而是上下文——父 Agent 负责规划与汇总，子 Agent 在全新上下文里处理局部大材料，最后只把最终结论带回"；**8 节点**（上下文切分优于能力切分 / 编排者执行者互补权限 / Task工具委派接口 / 子Agent定义三读者 / 新桌子效应 / 最后一条消息回传 / 权限交集裁剪 / 模型即调度器）；**与 [[OpenClaw-vs-Hermes-多-Agent-架构设计]] [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] [[未来属于垂直领域Agent]] [[图工程-Graph-Engineering-来了-LangChain说不是新东西]] [[从零设计生产级-Multi-Agent-Harness]] [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] 强关联**；**分类理由**：本文聚焦多 Agent runtime、权限模型和上下文隔离，属于 Agent 架构层，不是单纯 AI Coding 使用技巧。
 
-- 2026-07-27: 新增《图工程（Graph Engineering）来了？LangChain说不是新东西》；来源：微信公众号「AI工程化」2026-07-23 18:39 推送；作者：winkrun；原文链接：https://mp.weixin.qq.com/s/_uUffN2JEgASnLQNfDWSDw；获取时间：2026-07-27；`raw/2026-07-23-AI工程化-图工程-Graph-Engineering-来了-LangChain说不是新东西.md` + `raw/2026-07-23-AI工程化-图工程-Graph-Engineering-来了-LangChain说不是新东西-digest.md` → `wiki/01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西.md` + `wiki/01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西-digest.md` 已写入，并同步到 `wiki/01-ai-agents/index.md` 新增子区「Graph Engineering / LangGraph / 拓扑决策专题」和 `wiki/master-index.md` 最近更新顶部。**核心命题**"Graph Engineering 不是新范式，而是把 Agent 的真实依赖关系显式画出来——只有下一步真的读取上一步输出时边才成立；能预画路径的任务用图，路径本身需要探索的任务用 Harness"；**8 节点**（线性Agent是退化图 / 节点契约 / 数据契约边 / 钻石拓扑 / 验证器节点 / 有环图 / 动态Send / 图-vs-Harness）；**与 [[0xCodez-Agent-Harness-14-Steps]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[Lilian-Weng-Harness-Engineering-自我改进]] [[Loop-Engineering-验证才是瓶颈]] 强关联**；**分类理由**：本文聚焦 Agent 拓扑、状态机、图编排和任务选型，放 `01-ai-agents` 比 `02-ai-coding` 更贴切。
+- 2026-07-27: 新增《图工程（Graph Engineering）来了？LangChain说不是新东西》；来源：微信公众号「AI工程化」2026-07-23 18:39 推送；作者：winkrun；原文链接：https://mp.weixin.qq.com/s/_uUffN2JEgASnLQNfDWSDw；获取时间：2026-07-27；`raw/AI工程化-图工程-Graph-Engineering-来了-LangChain说不是新东西.md` + `raw/AI工程化-图工程-Graph-Engineering-来了-LangChain说不是新东西-digest.md` → `wiki/01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西.md` + `wiki/01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西-digest.md` 已写入，并同步到 `wiki/01-ai-agents/index.md` 新增子区「Graph Engineering / LangGraph / 拓扑决策专题」和 `wiki/master-index.md` 最近更新顶部。**核心命题**"Graph Engineering 不是新范式，而是把 Agent 的真实依赖关系显式画出来——只有下一步真的读取上一步输出时边才成立；能预画路径的任务用图，路径本身需要探索的任务用 Harness"；**8 节点**（线性Agent是退化图 / 节点契约 / 数据契约边 / 钻石拓扑 / 验证器节点 / 有环图 / 动态Send / 图-vs-Harness）；**与 [[0xCodez-Agent-Harness-14-Steps]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[Lilian-Weng-Harness-Engineering-自我改进]] [[Loop-Engineering-验证才是瓶颈]] 强关联**；**分类理由**：本文聚焦 Agent 拓扑、状态机、图编排和任务选型，放 `01-ai-agents` 比 `02-ai-coding` 更贴切。
 
-- 2026-07-20: 新增《若飞：Agent 记忆与可验证自我改进怎么设计》；来源：微信公众号「架构师（JiaGouX）」2026-07-19 推送；作者：若飞；原文链接：https://mp.weixin.qq.com/s/NUWvuUl0wewAJH_7mv0SDg；获取时间：2026-07-20；`raw/2026-07-19-若飞-Agent-记忆与可验证自我改进怎么设计.md` + `raw/2026-07-19-若飞-Agent-记忆与可验证自我改进怎么设计-digest.md` → `wiki/01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计.md` + `wiki/01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计-digest.md` 已写入，并同步到 `wiki/01-ai-agents/index.md` 新增子区「Agent Memory / Self-Harness / 验证晋升专题」和 `wiki/master-index.md` 最近更新顶部。**核心命题**"生产级 Agent Memory 不是资料袋，而是经验变更系统——历史要先过读取链 / 写入链，再经过证据门 / 归因门 / 回归门 / 权限门 / 发布门，才有资格从 observation 变成长期记忆、Skill 或 Harness"；**8 节点**（经验变更系统 / 读取链 / 写入链 / 六层资产 / 候选经验晋升单 / 状态感知检索 / 五道门 / 四阶段试点）；**与 [[Lilian-Weng-Harness-Engineering-自我改进]] [[Loop-Engineering-验证才是瓶颈]] [[记忆是-agent-基建]] [[阿里云开发者-淘宝主播Agent的Harness工程实战]] [[腾讯-AI-Agent-Skill-测评方案落地]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] 强关联**；**分类理由**：本文不是泛谈“记忆重要”，而是直接回答 Memory 如何准入、如何失效、如何晋升、如何回滚，补完 01-ai-agents 主线里“记忆治理 / Self-Harness / 验证控制面”的空白。
+- 2026-07-20: 新增《若飞：Agent 记忆与可验证自我改进怎么设计》；来源：微信公众号「架构师（JiaGouX）」2026-07-19 推送；作者：若飞；原文链接：https://mp.weixin.qq.com/s/NUWvuUl0wewAJH_7mv0SDg；获取时间：2026-07-20；`raw/若飞-Agent-记忆与可验证自我改进怎么设计.md` + `raw/若飞-Agent-记忆与可验证自我改进怎么设计-digest.md` → `wiki/01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计.md` + `wiki/01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计-digest.md` 已写入，并同步到 `wiki/01-ai-agents/index.md` 新增子区「Agent Memory / Self-Harness / 验证晋升专题」和 `wiki/master-index.md` 最近更新顶部。**核心命题**"生产级 Agent Memory 不是资料袋，而是经验变更系统——历史要先过读取链 / 写入链，再经过证据门 / 归因门 / 回归门 / 权限门 / 发布门，才有资格从 observation 变成长期记忆、Skill 或 Harness"；**8 节点**（经验变更系统 / 读取链 / 写入链 / 六层资产 / 候选经验晋升单 / 状态感知检索 / 五道门 / 四阶段试点）；**与 [[Lilian-Weng-Harness-Engineering-自我改进]] [[Loop-Engineering-验证才是瓶颈]] [[记忆是-agent-基建]] [[阿里云开发者-淘宝主播Agent的Harness工程实战]] [[腾讯-AI-Agent-Skill-测评方案落地]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] 强关联**；**分类理由**：本文不是泛谈“记忆重要”，而是直接回答 Memory 如何准入、如何失效、如何晋升、如何回滚，补完 01-ai-agents 主线里“记忆治理 / Self-Harness / 验证控制面”的空白。
 
-- 2026-07-17: 新增《东方屹腾：执行型 Agent 从零到稳定交付》；来源：ADPS 企业 Agent 系统蓝皮书 · 案例报告 01；案例提供：梁博（Bo Liang）；发布日期：2026-07-13；原文链接：https://adpsagent.com/zh/cases/liangbo-execution-agent/；获取时间：2026-07-17；`raw/articles/liangbo-execution-agent.md` + `raw/articles/liangbo-execution-agent-digest.md` → `wiki/01-ai-agents/cases/liangbo-execution-agent.md` + `wiki/01-ai-agents/cases/liangbo-execution-agent-digest.md` 已写入，并同步到 `wiki/01-ai-agents/cases/index.md`、`wiki/01-ai-agents/index.md`、`wiki/master-index.md`。**核心命题**“执行型 Agent 不是内容生成型 Agent；对强约束事务流，真正难点不是工具接入，而是 API 参数绑定不能交给 LLM 概率生成，必须落成控制-叙事二元论 + Orchestrator + 规划执行 + 机械状态平面的工程骨架”；**8 个节点**（执行型Agent分野 / 控制叙事二元论 / Orchestrator意图网关 / ReAct到规划执行 / HITL阻塞续作 / 机械状态平面 / 会话统一状态平面 / 锚账集与分层记忆）；**与 [[未来属于垂直领域Agent]] [[Leeka-Task-Decomposition-Agentic-Workflow]] [[阿里云开发者-淘宝主播Agent的Harness工程实战]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[Lilian-Weng-Harness-Engineering-自我改进]] 强关联**；**分类理由**：这是少见把“企业 SaaS 执行型事务流”拆到参数绑定、任务图状态机和会话状态三权分立层面的公开案例，补完本库行业落地主线里缺少的高约束执行型样本。
+- 2026-07-17: 新增《东方屹腾：执行型 Agent 从零到稳定交付》；来源：ADPS 企业 Agent 系统蓝皮书 · 案例报告 01；案例提供：梁博（Bo Liang）；发布日期：2026-07-13；原文链接：https://adpsagent.com/zh/cases/liangbo-execution-agent/；获取时间：2026-07-17；`raw/liangbo-execution-agent.md` + `raw/liangbo-execution-agent-digest.md` → `wiki/01-ai-agents/cases/liangbo-execution-agent.md` + `wiki/01-ai-agents/cases/liangbo-execution-agent-digest.md` 已写入，并同步到 `wiki/01-ai-agents/cases/index.md`、`wiki/01-ai-agents/index.md`、`wiki/master-index.md`。**核心命题**“执行型 Agent 不是内容生成型 Agent；对强约束事务流，真正难点不是工具接入，而是 API 参数绑定不能交给 LLM 概率生成，必须落成控制-叙事二元论 + Orchestrator + 规划执行 + 机械状态平面的工程骨架”；**8 个节点**（执行型Agent分野 / 控制叙事二元论 / Orchestrator意图网关 / ReAct到规划执行 / HITL阻塞续作 / 机械状态平面 / 会话统一状态平面 / 锚账集与分层记忆）；**与 [[未来属于垂直领域Agent]] [[Leeka-Task-Decomposition-Agentic-Workflow]] [[阿里云开发者-淘宝主播Agent的Harness工程实战]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[Lilian-Weng-Harness-Engineering-自我改进]] 强关联**；**分类理由**：这是少见把“企业 SaaS 执行型事务流”拆到参数绑定、任务图状态机和会话状态三权分立层面的公开案例，补完本库行业落地主线里缺少的高约束执行型样本。
 
 - 2026-07-08: 新增《从零开始玩转循环 (Getting started with loops)【译】》；原始作者：@delba_oliveira；来源：微信公众号「宝玉AI」2026-07-07 推送，宝玉翻译；原文链接：https://mp.weixin.qq.com/s/lG4WU5sSykOVu4XMHtWq1g；原始推文：https://x.com/ClaudeDevs/status/2074208949205881033；获取时间：2026-07-08；`raw/从零开始玩转循环-Getting-started-with-loops-译.md` + `raw/从零开始玩转循环-Getting-started-with-loops-译-digest.md` → `wiki/02-ai-coding/从零开始玩转循环-Getting-started-with-loops-译.md` 已写入，并同步到 `wiki/02-ai-coding/index.md` 的 Loop 主线和 `wiki/master-index.md` 最近更新 + AI Coding 索引。**核心命题**“loop 不是多问几轮，而是先定义触发器、停止条件、验证方式和成本边界，再按任务强度从 turn-based、`/goal`、`/loop` / `/schedule` 到 proactive 逐级升级”；**8 个节点**（回合制循环 / 目标导向循环 / 时间基循环 / 主动式循环 / 停止条件 / 验证技能 / 触发器设计 / Token边界）；**与 [[Addy-Osmani-Loop-Engineering]] [[Claude-Code-主动式Agent-Routines]] [[Loop-Engineering-详解-把反馈循环放进工程现场]] 强关联**；**分类理由**：本文是 Claude Code loop 的入门分类法与控制面解释，核心是工作流设计而非通用 Agent 组织，放 `02-ai-coding` 更贴切。
 
-- 2026-07-13: 新增《WorkBuddy Harness 工程复盘：从模型到可用 Agent》；原始作者：Anne（WorkBuddy 团队策略产品经理）；来源：微信公众号「Founder Park」2026-07-12 推送；原文链接：https://mp.weixin.qq.com/s/GkhemHUAhKWV-3Uxaa1Mqg；获取时间：2026-07-13；`raw/2026-07-12-WorkBuddy-Harness工程复盘-从模型到可用Agent.md` + `raw/2026-07-12-WorkBuddy-Harness工程复盘-从模型到可用Agent-digest.md` → `wiki/01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent.md` + `wiki/01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent-digest.md` 已写入，并同步到 `wiki/01-ai-agents/index.md` 新增子区「WorkBuddy Harness / Context / Loop 一体化专题」和 `wiki/master-index.md` 最近更新顶部。**核心命题**“模型决定能力上限，上下文和 Harness 决定能否稳定落地”；**10 个节点**（无状态模型 / 工具调用协议 / MCP三原语 / SkillPlugin分层 / 上下文五动作 / 长期记忆准入 / Harness三能力 / 五层Harness / Loop组件 / 业务验证缺口）；**关键结构**（5 个 Context 动作 / 3 个 MCP 原语 / 5 类长期记忆 / 5 层 Harness / 8 个 Loop 组件）；**与 [[Lilian-Weng-Harness-Engineering-自我改进]] [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] [[Loop-Engineering-验证才是瓶颈]] 强关联**——补完本库 01-ai-agents 主线里“理论原典 + 工程实战 + 验证边界”之间的解释层；**分类理由**：本文不是单一公司案例，也不是纯理论综述，而是产品视角的一体化 Harness / Context / Loop 长文，放 `01-ai-agents` 比 `02-ai-coding` 更贴切。
+- 2026-07-13: 新增《WorkBuddy Harness 工程复盘：从模型到可用 Agent》；原始作者：Anne（WorkBuddy 团队策略产品经理）；来源：微信公众号「Founder Park」2026-07-12 推送；原文链接：https://mp.weixin.qq.com/s/GkhemHUAhKWV-3Uxaa1Mqg；获取时间：2026-07-13；`raw/WorkBuddy-Harness工程复盘-从模型到可用Agent.md` + `raw/WorkBuddy-Harness工程复盘-从模型到可用Agent-digest.md` → `wiki/01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent.md` + `wiki/01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent-digest.md` 已写入，并同步到 `wiki/01-ai-agents/index.md` 新增子区「WorkBuddy Harness / Context / Loop 一体化专题」和 `wiki/master-index.md` 最近更新顶部。**核心命题**“模型决定能力上限，上下文和 Harness 决定能否稳定落地”；**10 个节点**（无状态模型 / 工具调用协议 / MCP三原语 / SkillPlugin分层 / 上下文五动作 / 长期记忆准入 / Harness三能力 / 五层Harness / Loop组件 / 业务验证缺口）；**关键结构**（5 个 Context 动作 / 3 个 MCP 原语 / 5 类长期记忆 / 5 层 Harness / 8 个 Loop 组件）；**与 [[Lilian-Weng-Harness-Engineering-自我改进]] [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] [[Loop-Engineering-验证才是瓶颈]] 强关联**——补完本库 01-ai-agents 主线里“理论原典 + 工程实战 + 验证边界”之间的解释层；**分类理由**：本文不是单一公司案例，也不是纯理论综述，而是产品视角的一体化 Harness / Context / Loop 长文，放 `01-ai-agents` 比 `02-ai-coding` 更贴切。
 
 - 2026-07-06: 新增《Datawhale - Claude Code 之父的老板，坦白 Agent 协作方法：他们做对的，和还没解决的！》;原始作者:**Fiona Fung**(Anthropic Claude Code 与 Cowork 工程与产品团队负责人,Boris Cherny「Claude Code 之父」与 Catherine Wu 都向她汇报);来源:Lenny's Podcast 访谈 Fiona Fung(https://www.youtube.com/watch?v=Ybrl4FYM57c);转载:微信公众号「Datawhale」2026-07-06 推送,Datawhale 编辑团队编译;原文链接:https://mp.weixin.qq.com/s/c9Vkx_2l2PRSY__GjUlHuQ;获取时间:2026-07-06;raw/inbox(原文 11K 完整正文)→raw(原文 + digest 共 14.4K)→wiki/01-ai-agents(编译页 6.8K + digest 3.5K) 已写入,挂到 01-ai-agents/index.md 新增子区「Claude Code 团队 Agent 协作方法论专题(2026-07-06 新增)」末尾 + master-index.md(最近更新顶部⭐⭐⭐);**核心命题**"Anthropic 工程师人均代码产出涨到 8 倍,靠的不只是模型变强,还有一整套配套的协作方法论——把'什么算好'写进 spec,把自由和责任绑定,把管理者的日常判断模板化成可以自动运行的 Routine,把新晋管理者先按回 IC 的位置;**但这套方法论并不完整——协作中的孤独感用结伴编程午餐缓解却没有真正解决,并行 Agent 带来的切换负荷 Fiona 自己说'还没搞定'**";**6 大章节**(验证取代编写 / 跨角色验证 / Agency-Accountability + Bad-Sad 分级 + Motion-vs-Progress / Routines 异步调度 / 切换负荷与孤独感未解决 / IC 优先 + 双击依赖层);**6 个关键数字**(**8 倍** 工程师人均每季度代码产出 / **20 个** Fiona 团队成员同时运行 Agent 数量 / **一半时候是错的** AI 生成数据分析被数据科学家否决 / **10 个** 并行 Claude 实例典型数量 / **1 个月** Claude Code 远程会话月度回顾周期 / **0 个** 关于切换负荷的解决方案);**10 节点**(验证取代编写 / spec入仓 / TDD回归 / 跨角色验证 / Agency-Accountability / Bad-Sad分级 / Motion-vs-Progress / Routines异步调度 / Switching-Cost-Unresolved / IC优先);**5 关键金句**("允许犯错是必要的,只要每次犯的是新错误"/"不要把动作误当成进步"/"现在有了 Routines,几乎是在让一个 Agent 帮她生成 prompt 和 PR"/"如果一个管理者一上来就急着打开管理工具箱,容易造成过多的审批层级"/"哪怕模型再强,工程师依然要花时间'双击'自己所依赖的那一层");**3 个反直觉点**(快不等于好 8 倍产出靠的是慢方法论回归 / 自由必须配责任 Agency-Accountability 捆绑 / 管理者要先做 IC 身份回归);**6 个对 Seetong 借鉴动作**(spec 入仓 + AI 评审 Seetong 化 / Bad/Sad 分级入 Seetong 质量体系 / Motion-vs-Progress 入 Seetong AI 助手评估 / 结伴编程午餐试 Seetong 缓解孤独感 / IC 优先试 Seetong 新晋管理 / 承认"还没解决"作为 Seetong AI 助手路线图诚实信号);**与 [[loonggg-Claude-Code-技能心法-11条建议]] [[Claude-Code首席设计师Meaghan-Choi工作流]] [[Claude-Code一周年回顾-Boris-Cat]] [[Claude-Code-主动式Agent-Routines]] 形成"Claude Code 团队 4 视角"**——补完现有主线偏"工程师视角+首席设计师视角+Boris 视角"缺位的"管理者视角+协作反思视角"维度;**与 [[WonderLearner-Alice-Claude-Code之父的新洞察]] 镜像**——本文是 Boris 老板 Fiona 的对应视角;**与 [[Multica-AI-Native-组织-人是最慢的节点]] 同主线**——形成"主流大厂样本(Anthropic Claude Code)vs 极端样本(Multica 4 人+几十 Agent)"对照;**与 [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]] 强关联**——本文是 L4-L5 阶段的"Claude Code 团队实证";**与 [[Laurel-CPO-Jiaona-Zhang-公司OS]] 同主线**——Laurel 谈"公司 OS 怎么搭",本文谈"Claude Code 团队怎么跑";**与 [[快刀青衣-OpenAI高管教练四层能力]] [[HBR-China-为什么越来越多顶级领导者开始认真学哲学]] [[宁向东-企业家凭什么能看见别人看不见的机会]] 同主线**——本文给"管理者+团队协作"维度的具体方法论;**与 [[Addy-Osmani-Loop-Engineering]] 强关联**——本文"验证取代编写"是 Loop 验证在跨角色场景的扩展;**分类理由**:本文是"AI Native 团队 Agent 协作方法论+Claude Code 团队实战反思",核心是 Agent 协作与团队工作方式(不是 AI Coding 工具方法论);放 01-ai-agents 比 02-ai-coding 更贴切(与 Claude Code 团队主线同分类),且补完现有主线偏"工程师视角+首席设计师视角+Boris 视角"缺位的"Fiona 视角+管理者视角+协作反思视角"维度;**透明玻璃自检**:wiki 6.8K(≤8K)/ digest 3.5K(≤4K)/ 节点 10 wiki / 节点 10 digest(6-10)/ H2 5 wiki / H2 5 digest(≤5)/ 表格 0 wiki / 表格 1 digest(≤2)/ 0 陈词 ⭐⭐⭐
 
@@ -44,15 +44,64 @@
 
 ---
 
+## 2026-08-11
+### maintenance | raw 归档与子目录导航规范化
+- raw：迁移 281 个 Markdown 文件，移除 `articles/`、日期批次与“按文章建目录”三种平行结构；归档统一为 `raw/{slug}.md` 和 `raw/{slug}-digest.md`，日期保留在文档元数据中。
+- 职责：网页抓取缓存迁入 `raw/source-cache/`；原有学习笔记和素材索引迁入 `raw/notes/`；自动生成的精修提示词迁入 `prompts/generated/`。`raw/` 仅保留原文、digest 与四类功能目录（inbox / notes / screenshots / source-cache）。
+- 工具：新增 `scripts/normalize_raw_archive.py`，预检同名冲突后迁移文件并改写文本引用；`wiki-health` Skill 将 raw 结构检查纳入常规体检。
+- wiki：为 `04-app-dev` 下 ios / android / architecture / ai-integration 四个既有子目录补齐 `index.md` 与上层导航。
+- 标签： #主题/知识管理 #主题/Obsidian #主题/AI-Coding #场景/维护
+
+### maintenance | MyAIWiki 链接与索引治理第二轮
+- 工具：`wiki-health-check.py` 新增 `--fix-link-aliases`，仅把唯一匹配的标题别名改为显式分类路径；新增 `--fix-indexes`，只在分类索引的“自动补全条目（待补摘要）”区追加缺失页面链接。
+- 结果：本库无法解析双链从 478 降至 136；25 个缺失分类索引入口已补齐；36 个 `seetong-*` 链接改为跨项目引用统计，不再误报为本库断链。
+- 保留债务：66 篇页面缺少结构化 frontmatter 字段，1,060 个节点尚无显式入链；两类问题需要语义判断，未自动补写。
+- 标签： #主题/知识管理 #主题/Obsidian #主题/AI-Coding #场景/维护
+
+### maintenance | MyAIWiki 结构与 Obsidian 标签规范化
+- 范围：统一 `wiki/` 到 7 个编号分类目录；将旧 `ai-agents` 与 `ai-coding` 中的 10 篇页面迁入对应分类，并更新全库旧路径链接。
+- 规范：frontmatter `tags` 改为无 `#` 的 YAML 列表；正文标签要求行首或空白前界，例如 `标签： #主题/AI-Coding`。
+- 工具：新增 `scripts/wiki-health-check.py` 和项目级 `.codex/skills/wiki-health/`，用于检查目录、标签、frontmatter、链接和索引覆盖；`--fix` 只执行确定性的标签格式修复。
+- 结果：450 个 Markdown 文件完成标签或 frontmatter 规范化；检查器当前无阻断错误。存量待治理项保留为 warnings（前端缺字段、跨库/失效链接、未挂分类索引）。
+- 标签： #主题/知识管理 #主题/Obsidian #主题/AI-Coding #场景/维护
+
+### ingest | Tiago Forte谈写作与知识管理：真正的积累，是让过去的思考持续为你工作
+- 来源：https://mp.weixin.qq.com/s/Io7s1LnbenzezaGEP9Ujjw
+- 原文：raw/AlphaWriter-Tiago-Forte-写作与知识管理.md
+- 拆解：raw/AlphaWriter-Tiago-Forte-写作与知识管理-digest.md
+- wiki：wiki/05-content-creation/AlphaWriter-Tiago-Forte-写作与知识管理.md
+- wiki 拆解：wiki/05-content-creation/AlphaWriter-Tiago-Forte-写作与知识管理-digest.md
+- 作者/来源：微信公众号「AlphaWriter」陆甲第；页面时间戳对应原文发布时间 2026-08-10；获取时间 2026-08-11。
+- 标签： #主题/写作方法论 #主题/知识管理 #主题/第二大脑 #主题/内容创作 #主题/个人生产力 #节点/未来自己笔记 #节点/渐进式总结 #节点/思想群岛 #节点/中间成果包 #节点/Favorite-Problems #节点/PARA行动优先 #节点/输入输出循环 #节点/知识复用 #场景/公众号长文
+- 核心命题：积累不是读过或存过，而是让过去的材料在未来仍可理解、在重访中逐步提炼，并持续进入文章、项目、课程和决策；知识系统的价值由复用结果衡量。
+- 8 个知识节点：未来自己笔记、渐进式总结、思想群岛、中间成果包、Favorite Problems、PARA 行动优先、输入输出循环、知识复用。
+- 关联：[[APPSO-Obsidian+Codex-Karpathy同款本地知识库]]、[[2026年了-你的文件管理还停留在新建文件夹吗]]、[[karpathy-knowledge-system]]、[[David-Perell-Pixar-Stanton-创造哲学]]、[[透明玻璃-写作的最高境界]]。
+- 证据边界：本文是公众号对 Tiago Forte 公开方法论的二手综合整理，不是逐字访谈、课程原文或学术研究；具体出处与案例数字需回到一手资料核验。
+- 透明玻璃自检：原文保留十段方法论；raw digest 含 5 个核心观点、8 个节点、7 个分析角度和 21 个钩子；wiki 含完整 frontmatter、8 个知识节点、三段关联图谱与采用边界；已同步分类索引、总索引与日志。
+
+### ingest | 奈飞在AI时代的新人才观：系统思维比专业技能更值钱
+- 来源：https://mp.weixin.qq.com/s/yRohx8Mhil53z-AR33jQQA
+- 原文：raw/行走的帆-奈飞AI时代新人才观-系统思维.md
+- 拆解：raw/行走的帆-奈飞AI时代新人才观-系统思维-digest.md
+- wiki：wiki/03-productivity/行走的帆-奈飞AI时代新人才观-系统思维.md
+- wiki 拆解：wiki/03-productivity/行走的帆-奈飞AI时代新人才观-系统思维-digest.md
+- 作者/来源：微信公众号「行走的帆」；页面时间戳对应原文发布时间 2026-08-10；获取时间 2026-08-11。
+- 标签： #主题/AI时代工作方法 #主题/系统思维 #主题/组织设计 #主题/人才管理 #主题/Netflix #节点/组织脚手架 #节点/高人才密度 #节点/责任担当 #节点/趋势原住民 #场景/公众号长文
+- 核心命题：AI降低跨职能执行门槛后，系统思维负责定义共同标准、识别复用机会并把局部产出接成组织能力；专业深度仍保质量底线，而高人才密度、风险容忍与责任担当是高自主文化的运行条件。
+- 8 个知识节点：系统思维、组织脚手架、开放专业边界、多想一层、高人才密度、风险容忍、责任担当、趋势原住民。
+- 关联：[[AI组织进化论-奈飞人才观-AI素养与系统思考]]、[[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]]、[[HBR-China-AI时代高潜力人才三种能力]]、[[OpenAI-AI原生组织-4条工作原则]]；已向前两篇同源文章补入反链。
+- 证据边界：本文为公众号对 Elizabeth Stone 访谈及奈飞文化的二手转述，未附播客原链接、逐字稿、时间戳或官方人事数据；库内同源文章不可互作独立佐证。
+- 透明玻璃自检：原文保留；raw digest 含 5 个核心观点、7 个分析角度和 21 个钩子；wiki 含 frontmatter、8 个知识节点、三段关联图谱与证据边界；已同步分类索引、总索引、日志和同源反链。
+
 ## 2026-08-10
 ### ingest | 傅盛转述李飞飞：机器人、世界模型与人的自主性
 - 来源：https://mp.weixin.qq.com/s/d58_p1Y_df5bVVuDU_opbQ
-- 原文：raw/2026-08-09-傅盛-李飞飞-机器人世界模型与人的自主性.md
-- 拆解：raw/2026-08-09-傅盛-李飞飞-机器人世界模型与人的自主性-digest.md
+- 原文：raw/傅盛-李飞飞-机器人世界模型与人的自主性.md
+- 拆解：raw/傅盛-李飞飞-机器人世界模型与人的自主性-digest.md
 - wiki：wiki/06-ai-tech/傅盛-李飞飞-机器人世界模型与人的自主性.md
 - wiki 拆解：wiki/06-ai-tech/傅盛-李飞飞-机器人世界模型与人的自主性-digest.md
 - 作者/来源：傅盛；微信公众号「傅盛和龙虾三万」；原文发布时间 2026-08-09；获取时间 2026-08-10
-- 标签：#主题/Physical-AI #主题/具身智能 #主题/世界模型 #主题/人的自主性 #节点/物理数据 #节点/具身交互 #节点/物理反馈 #节点/渲染边界 #节点/世界模拟 #节点/行动规划 #节点/闭环学习 #节点/人类自主性 #场景/公众号长文
+- 标签： #主题/Physical-AI #主题/具身智能 #主题/世界模型 #主题/人的自主性 #节点/物理数据 #节点/具身交互 #节点/物理反馈 #节点/渲染边界 #节点/世界模拟 #节点/行动规划 #节点/闭环学习 #节点/人类自主性 #场景/公众号长文
 - 核心命题：机器人能力的关键短板是可支撑动作预测、规划与纠错的真实物理数据；世界模型要从视觉渲染推进到状态模拟和行动规划；AI 可放大能力，但目标、价值、风险边界和最终责任仍由人保留。
 - 8 个知识节点：物理数据、具身交互、物理反馈、渲染边界、世界模拟、行动规划、闭环学习、人类自主性。
 - 关联：[[WAIC之夜-Physical-AI-下一个范式]]、[[深思圈-思考外包能动性]]、[[OpenAI-AI原生组织-4条工作原则]]、[[Nikesh-Arora-模型过剩与记忆护城河]]；已为 [[WAIC之夜-Physical-AI-下一个范式]] 增加反链。
@@ -63,12 +112,12 @@
 ## 2026-08-07
 ### ingest | Garry Tan：个人 AGI 藏在自己的经验代码库里
 - 来源：https://mp.weixin.qq.com/s/-mtLkbSE0IaHrLkwZmJnDw
-- 原文：raw/2026-08-07-51CTO-Garry-Tan-个人AGI与经验代码库.md
-- 拆解：raw/2026-08-07-51CTO-Garry-Tan-个人AGI与经验代码库-digest.md
+- 原文：raw/51CTO-Garry-Tan-个人AGI与经验代码库.md
+- 拆解：raw/51CTO-Garry-Tan-个人AGI与经验代码库-digest.md
 - wiki：wiki/02-ai-coding/51CTO-Garry-Tan-个人AGI与经验代码库.md
 - wiki 拆解：wiki/02-ai-coding/51CTO-Garry-Tan-个人AGI与经验代码库-digest.md
 - 作者/来源：姜篇；51CTO 技术栈；原文发布时间 2026-08-07；获取时间 2026-08-10
-- 标签：#主题/AI-Coding #主题/Skill #主题/个人知识库 #主题/经验资产 #主题/Agent #节点/经验代码库 #节点/Skill化 #节点/上下文检索 #节点/确定性边界 #节点/知识库治理 #场景/公众号长文 #来源/51CTO
+- 标签： #主题/AI-Coding #主题/Skill #主题/个人知识库 #主题/经验资产 #主题/Agent #节点/经验代码库 #节点/Skill化 #节点/上下文检索 #节点/确定性边界 #节点/知识库治理 #场景/公众号长文 #来源/51CTO
 - 核心命题：模型可以租用，个人或团队真正可积累的是把重复工作的判断、禁区、工具边界和验收标准沉淀为可检索、可执行、可治理的经验代码库；Skill 是其交给 Agent 的接口。
 - 8 个知识节点：经验代码库、Skill化、上下文检索、确定性边界、一次性工作、个人经验归属、知识库治理、权限与审计。
 - 关联：[[54万行代码的顿悟-Markdown才是新编程方式]]、[[garry-tan-ai-second-brain]]、[[买了一样的AI为什么别家的比你的强]]、[[phodal-项目记住-Coding-Agent-5步法]]、[[Agent自维护体系-完整实战]]；已增加来自 [[54万行代码的顿悟-Markdown才是新编程方式]] 的反链。
@@ -80,7 +129,7 @@
 - 原文：raw/当智能体真正开始干活-企业管理也该变革了.md
 - 拆解：raw/当智能体真正开始干活-企业管理也该变革了-digest.md
 - wiki：wiki/03-productivity/当智能体真正开始干活-企业管理也该变革了.md
-- 标签：#主题/AI-Agent #主题/AI-Native #主题/组织变革 #主题/企业管理 #主题/智能产能 #主题/安全治理 #节点/执行权转移 #节点/产业智能体 #节点/经验资产化 #节点/结果导向绩效 #节点/最小权限 #场景/企业管理 #场景/公众号长文 #来源/腾讯研究院
+- 标签： #主题/AI-Agent #主题/AI-Native #主题/组织变革 #主题/企业管理 #主题/智能产能 #主题/安全治理 #节点/执行权转移 #节点/产业智能体 #节点/经验资产化 #节点/结果导向绩效 #节点/最小权限 #场景/企业管理 #场景/公众号长文 #来源/腾讯研究院
 - wiki 拆解：wiki/03-productivity/当智能体真正开始干活-企业管理也该变革了-digest.md
 - 作者/来源：刘琼；腾讯研究院；本文首发于《企业管理》杂志；原文发布时间 2026-08-06；获取时间 2026-08-07
 - 核心命题：智能体从回答问题走向真实环境中的长期执行后，企业管理从岗位与工时转向人、Agent 与可验收结果；企业需要把自身经验转成有权限、有验证的产业智能体。
@@ -96,7 +145,7 @@
 - 原文：raw/WorkBuddy进化史-一款AI产品背后-是一套新的团队工作方式.md
 - 拆解：raw/WorkBuddy进化史-一款AI产品背后-是一套新的团队工作方式-digest.md
 - wiki：wiki/01-ai-agents/WorkBuddy进化史-一款AI产品背后-是一套新的团队工作方式.md
-- 标签：#主题/AI-Agent #主题/AI-Native #主题/组织变革 #主题/工作流 #主题/AI-Coding #节点/能力外溢 #节点/任务契约 #节点/厚平台小团队 #节点/人机混编团队 #场景/企业研发 #场景/公众号长文 #来源/AI组织进化论
+- 标签： #主题/AI-Agent #主题/AI-Native #主题/组织变革 #主题/工作流 #主题/AI-Coding #节点/能力外溢 #节点/任务契约 #节点/厚平台小团队 #节点/人机混编团队 #场景/企业研发 #场景/公众号长文 #来源/AI组织进化论
 - wiki 拆解：wiki/01-ai-agents/WorkBuddy进化史-一款AI产品背后-是一套新的团队工作方式-digest.md
 - 作者/来源：AI组织进化论；原文发布时间 2026-08-06；获取时间 2026-08-07
 - 核心命题：WorkBuddy 的快速产品化来自 CodeBuddy Agent 能力向通用工作场景的外溢，组织上由厚平台、3—5 人闭环小队、Task Contract 和人机混编共同支撑。
@@ -114,17 +163,17 @@
 - 原文：raw/端到端10倍提效-英伟达研发团队如何用Agent重塑工作流.md
 - 拆解：raw/端到端10倍提效-英伟达研发团队如何用Agent重塑工作流-digest.md
 - wiki：wiki/01-ai-agents/端到端10倍提效-英伟达研发团队如何用Agent重塑工作流.md
-- 标签：#主题/AI-Agent #主题/AI-Coding #主题/工作流 #主题/组织提效 #节点/端到端闭环 #节点/数字工程师 #节点/可验证反馈 #节点/人机分工 #场景/企业研发 #场景/公众号长文
+- 标签： #主题/AI-Agent #主题/AI-Coding #主题/工作流 #主题/组织提效 #节点/端到端闭环 #节点/数字工程师 #节点/可验证反馈 #节点/人机分工 #场景/企业研发 #场景/公众号长文
 - 说明：已完成原文、digest、frontmatter、知识节点、关联图谱和索引编译；关键数字保留 OpenAI 客户案例及受访者陈述的证据边界
 
 
 ## 2026-08-04
 ### ingest | 深度｜Graph Engineering：AI工作流从聊天窗口搬进有向图之后，发生了什么
 - 来源：https://mp.weixin.qq.com/s/X6Io4z1nDTk69pYXtWv1tA
-- 原文：raw/2026-08-04-深思SenseAI-Graph-Engineering-AI工作流从聊天窗口搬进有向图之后.md
-- 拆解：raw/2026-08-04-深思SenseAI-Graph-Engineering-AI工作流从聊天窗口搬进有向图之后-digest.md
+- 原文：raw/深思SenseAI-Graph-Engineering-AI工作流从聊天窗口搬进有向图之后.md
+- 拆解：raw/深思SenseAI-Graph-Engineering-AI工作流从聊天窗口搬进有向图之后-digest.md
 - wiki：wiki/01-ai-agents/2026-08-04-深思SenseAI-Graph-Engineering-AI工作流从聊天窗口搬进有向图之后.md
-- 标签：#主题/AI-Agent #主题/Graph-Engineering #主题/Multi-Agent #主题/Agent-Workflow #主题/AI-Reliability #节点/任务图 #节点/钻石模式 #节点/人类关卡 #节点/状态记忆 #场景/公众号长文 #来源/深思SenseAI
+- 标签： #主题/AI-Agent #主题/Graph-Engineering #主题/Multi-Agent #主题/Agent-Workflow #主题/AI-Reliability #节点/任务图 #节点/钻石模式 #节点/人类关卡 #节点/状态记忆 #场景/公众号长文 #来源/深思SenseAI
 - 说明：已完成正式编译；核心保留任务图、职责分离、钻石模式、人类关卡、工作流先行与状态记忆，并关联既有 Graph Engineering、Loop 与多 Agent 页面。
 
 
@@ -136,7 +185,7 @@
 - 拆解：raw/AndrejKarpathy-AI写代码-只需要问自己这一个问题-digest.md
 - wiki：wiki/02-ai-coding/AndrejKarpathy-AI写代码-只需要问自己这一个问题.md
 - 拆解（wiki 版）：wiki/02-ai-coding/AndrejKarpathy-AI写代码-只需要问自己这一个问题-digest.md
-- 标签：#主题/AI-Coding #主题/Skill #主题/AI-Agent #节点/思考发生点 #节点/判断执行分界 #场景/公众号长文
+- 标签： #主题/AI-Coding #主题/Skill #主题/AI-Agent #节点/思考发生点 #节点/判断执行分界 #场景/公众号长文
 - 说明：前半段把 Karpathy 的 AI Coding 判断框架压成一句“思考到底发生在哪一步？”，后半段拆解 rvaniaaa 的 8 段 GitHub 技能蒸馏系统，给出“人做判断，AI 做执行”如何被工程化的 pipeline。核心命题是“判断未完成的任务由人握住，成功标准清晰的任务才交给 AI”；知识节点聚焦思考发生点 / 判断执行分界 / 双资深一致 / 工作流档位切换 / Scout-Filter-Reader / Workflow-Extractor / Skill-Score / Reviewer-Publisher；与 [[AI-Coding的顿悟时刻]] [[Code-is-cheap-AI-Native-五倍效率]] [[面向Skills编程-淘宝企业购端到端研发提效实践]] [[loonggg-Claude-Code-技能心法-11条建议]] [[Skill-Self-Evolution]] 强关联；分类放 `02-ai-coding`，因为前半是 AI Coding 任务分界，后半是 Skill 资产化 pipeline；透明玻璃自检：wiki 6.8K(≤8K) / digest 3.3K(≤4K) / 节点 8 / H2 5 wiki / H2 5 digest。
 
 
@@ -144,11 +193,11 @@
 ### ingest | 研发工程化升级：Coding Agent、AI Testing、Verification First与研发效能
 - 来源：https://mp.weixin.qq.com/s/N3mJOygkf4uOaho7V6q58Q
 - 作者：Knock（微信公众号「ThinkingAgent」）
-- 原文：raw/2026-07-15-ThinkingAgent-Knock-研发工程化升级-Coding-Agent-AI-Testing与Verification-First.md
-- 拆解：raw/2026-07-15-ThinkingAgent-Knock-研发工程化升级-Coding-Agent-AI-Testing与Verification-First-digest.md
+- 原文：raw/ThinkingAgent-Knock-研发工程化升级-Coding-Agent-AI-Testing与Verification-First.md
+- 拆解：raw/ThinkingAgent-Knock-研发工程化升级-Coding-Agent-AI-Testing与Verification-First-digest.md
 - wiki：wiki/02-ai-coding/研发工程化升级-Coding-Agent-AI-Testing与Verification-First.md
 - 拆解（wiki 版）：wiki/02-ai-coding/研发工程化升级-Coding-Agent-AI-Testing与Verification-First-digest.md
-- 标签：#主题/AI-Coding #主题/Coding-Agent #主题/AI-Testing #主题/Verification-First #主题/研发效能 #节点/Probe-and-Refine #节点/覆盖率陷阱 #节点/概率验证 #场景/公众号长文
+- 标签： #主题/AI-Coding #主题/Coding-Agent #主题/AI-Testing #主题/Verification-First #主题/研发效能 #节点/Probe-and-Refine #节点/覆盖率陷阱 #节点/概率验证 #场景/公众号长文
 - 说明：把同一篇长文里的 4 条线串成一个工程闭环：Coding Agent 新格局 / AI Testing 有效性 / Verification First / 研发效能量化。核心命题是“AI 编程真正的问题不是能不能写，而是团队能不能信任 AI 写的代码”；知识节点聚焦 Coding-Agent三代进化 / Agentic-Coding工作流 / Probe-and-Refine / 覆盖率陷阱 / Agentic-Testing / Verification-First四层 / 概率验证 / 研发效能量化与分层信任；与 [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]] [[生产级Agent全景]] [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] [[字节跳动洪定坤-AI-Coding的实践与探索]] [[Loop-Engineering-验证才是瓶颈]] [[Code-is-cheap-AI-Native-五倍效率]] 强关联；分类放 `02-ai-coding`，因为文章主轴是“AI Coding 进入组织后如何被验证、评测和治理”，不是通用 Agent 架构或宏观行业战略。
 
 
@@ -158,21 +207,21 @@
 - 原文：raw/淘宝内容生态-GrowBrain-淘宝Agentic内容成长引擎.md
 - 拆解：raw/淘宝内容生态-GrowBrain-淘宝Agentic内容成长引擎-digest.md
 - wiki：wiki/01-ai-agents/淘宝内容生态-GrowBrain-淘宝Agentic内容成长引擎.md
-- 标签：#主题/AI-Agent #场景/公众号长文
+- 标签： #主题/AI-Agent #场景/公众号长文
 - 说明：自动编译草稿，建议人工复核 digest 与 wiki 提炼质量
 ### ingest | 超级个体时代｜腾讯研究院3万字报告
 - 来源：https://mp.weixin.qq.com/s/GZqTLfeOrfrLgG-R2bOjGw
 - 原文：raw/超级个体时代-腾讯研究院3万字报告.md
 - 拆解：raw/超级个体时代-腾讯研究院3万字报告-digest.md
 - wiki：wiki/03-productivity/超级个体时代-腾讯研究院3万字报告.md
-- 标签：#主题/效率 #主题/AI-Agent #场景/公众号长文
+- 标签： #主题/效率 #主题/AI-Agent #场景/公众号长文
 - 说明：自动编译草稿，建议人工复核 digest 与 wiki 提炼质量
 ### ingest | 精打细算虾养成指南： 省 Token 和把 AI 用好，从来就是一件事
 - 来源：https://mp.weixin.qq.com/s/BBySdR4uz9ybhcB0lak3rw
 - 原文：raw/精打细算虾养成指南-省Token和把AI用好-从来就是一件事.md
 - 拆解：raw/精打细算虾养成指南-省Token和把AI用好-从来就是一件事-digest.md
 - wiki：wiki/02-ai-coding/精打细算虾养成指南-省Token和把AI用好-从来就是一件事.md
-- 标签：#主题/AI-Coding #主题/AI-Agent #场景/公众号长文
+- 标签： #主题/AI-Coding #主题/AI-Agent #场景/公众号长文
 - 说明：自动编译草稿，建议人工复核 digest 与 wiki 提炼质量
 
 
@@ -185,7 +234,7 @@
 - 拆解：raw/claude-tag-Karpathy第三范式-digest.md
 - wiki：wiki/01-ai-agents/claude-tag-Karpathy第三范式.md
 - 拆解（wiki 版）：wiki/01-ai-agents/claude-tag-Karpathy第三范式-digest.md
-- 标签：#主题/AI-Agent #主题/ClaudeCode #主题/Slack #主题/异步协作 #主题/开源替代 #手法/权威背书 #手法/对比冲突 #手法/争议放大 #场景/公众号长文 #场景/产品介绍
+- 标签： #主题/AI-Agent #主题/ClaudeCode #主题/Slack #主题/异步协作 #主题/开源替代 #手法/权威背书 #手法/对比冲突 #手法/争议放大 #场景/公众号长文 #场景/产品介绍
 - 说明：Anthropic 2026-06-24 发布 Claude Tag（Claude in Slack 异步协作产品）；Karpathy 转发给"大模型 UI 第三次大改"评价——三范式理论（网站→App→自洽实体）；4 大新特点（多人协作/上下文积累/ambient 主动模式/异步执行）+ 频道权限隔离 + token 限额 + 全链路审计；Anthropic 内部版本已贡献产品团队 65% 代码，今天起对 Enterprise/Team 用户开放 beta（Opus 4.8）；评论区三争议：① 价值观不可调教（Anthropic 设定+不让用户调教）② 厂商 agent 归属权（本地方案走自己 API 所有权差十万八千里）③ 开源替代（openclaw 推荐，迁移成本是换 SaaS 的 10 倍）；与 [[Claude-Code-主动式Agent-Routines]] / [[Claude-Code首席设计师Meaghan-Choi工作流]] / [[Claude-Code一周年回顾-Boris-Cat]] 强关联（Anthropic 企业级异步协作产品落地版）；与 [[Anthropic万字长文三个判断和一个阳谋]] 价值观线呼应；5 个对 Seetong 借鉴动作（Seetong Slack/钉钉/飞书群加 Claude Tag 异步处理产品反馈/工程告警/客户工单/团队记忆按项目频道隔离/Seetong 内部 65% 代码贡献统计可作指标/Seetong ProjectMemory 开源版替代 Claude Tag/ambient 模式接入冷工单自动跟进）
 
 ### ingest | claude-obsidian 知识引擎（7200 Star 项目实践）
@@ -196,7 +245,7 @@
 - 拆解：raw/claude-obsidian-知识引擎-逛逛-GitHub-digest.md
 - wiki：wiki/02-ai-coding/claude-obsidian-知识引擎-逛逛-GitHub.md
 - 拆解（wiki 版）：wiki/02-ai-coding/claude-obsidian-知识引擎-逛逛-GitHub-digest.md
-- 标签：#主题/AI知识库 #主题/Obsidian #主题/ClaudeCode #主题/第二大脑 #主题/开源项目 #手法/产品种草 #手法/权威背书 #手法/工具安利 #场景/公众号长文 #场景/开源项目
+- 标签： #主题/AI知识库 #主题/Obsidian #主题/ClaudeCode #主题/第二大脑 #主题/开源项目 #手法/产品种草 #手法/权威背书 #手法/工具安利 #场景/公众号长文 #场景/开源项目
 - 说明：微信公众号逛逛 GitHub 2026-06-23 推送；GitHub 上对 Karpathy LLM Wiki 思想最完整的开源实现（claude-obsidian 7200+ Star 项目实操介绍）；compounding knowledge（知识复利）心智模型 + 6 大核心能力（自动整理笔记/矛盾检测/会话记忆/8 类健康检查/可视化 canvas/本地 Markdown 自托管）+ 两种安装方式 + 4 个预装插件（Calenda/Thino/Excalidraw/Banners）+ 5 个日常核心动作（丢/问/lint/画/复用）+ 跨项目复用；与 [[claude-obsidian-second-brain]] / [[obsidian-claude-code-os]] / [[hermes-obsidian-llm-wiki-knowledge-base]] / [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]] 同主线（工程实现视角 vs Defileo 个人 daily setup 视角 vs 梓哲悟语三层架构视角）；5 个对 Seetong 借鉴动作（MyAIWiki 本库装一个让 Claude 自动维护/CLAUDE.md 加引导让 Seetong 项目共享知识库/Skill 把"维护 vault"封装/Setup 脚本一键初始化 Seetong 项目 vault/lint 脚本入 Seetong CI）
 
 ## 2026-06-03
@@ -204,62 +253,62 @@
 - 来源：https://mp.weixin.qq.com/s/iBELIhdHf44aWKs0Z-Iudg
 - 转载方：卡兹克（公众号）
 - 原始作者：Fiona Fung（Anthropic Claude Code 团队工程总监）
-- 原文：raw/articles/Claude-Code团队5条工作原则-Fiona-Fung分享.md
-- 拆解：raw/articles/Claude-Code团队5条工作原则-Fiona-Fung分享-digest.md
+- 原文：raw/Claude-Code团队5条工作原则-Fiona-Fung分享.md
+- 拆解：raw/Claude-Code团队5条工作原则-Fiona-Fung分享-digest.md
 - wiki：wiki/02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享.md
 - 拆解（wiki 版）：wiki/02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享-digest.md
-- 标签：#主题/AI-Coding #主题/AI-Native #主题/工程管理 #主题/组织文化 #手法/范式反思 #场景/Anthropic一手
+- 标签： #主题/AI-Coding #主题/AI-Native #主题/工程管理 #主题/组织文化 #手法/范式反思 #场景/Anthropic一手
 - 说明：自动编译草稿，重点提炼"JIT 规划 + 自动化肌肉记忆 + Trust but verify + Taste is scarce + 团队级 harness + 3 个没答案的问题"；与 [[54万行代码的顿悟]] / [[YC如何进行AI-Native组织改造]] / [[AI-Coding的顿悟时刻]] 同主线（范式/组织/实操三层合并 = 完整 AI-native 蓝图）。Fiona 公开承认 3 个没答案的问题（iOS/Android 团队、自动化 review 边界、模糊角色信心）这一点比很多 AI 公司都强
 
 ### ingest | YC 如何进行 AI-Native 组织改造：Agent 能力要向所有人开放
 - 来源：https://mp.weixin.qq.com/s/dcpsur_udGz6tLW-yARU8w
 - 转载方：Founder Park
 - 采访对象：Pete Koomen（YC 合伙人 + Optimizely 创始人）+ Gary（即 Garry Tan，YC 总裁）
-- 原文：raw/articles/YC如何进行AI-Native组织改造-Agent能力要向所有人开放.md
-- 拆解：raw/articles/YC如何进行AI-Native组织改造-Agent能力要向所有人开放-digest.md
+- 原文：raw/YC如何进行AI-Native组织改造-Agent能力要向所有人开放.md
+- 拆解：raw/YC如何进行AI-Native组织改造-Agent能力要向所有人开放-digest.md
 - wiki：wiki/02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放.md
 - 拆解（wiki 版）：wiki/02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放-digest.md
-- 标签：#主题/AI-Coding #主题/AI-Native #主题/AI-Agent #主题/Harness #主题/Skill #主题/工程管理 #主题/组织文化 #手法/范式反思 #场景/YC播客
+- 标签： #主题/AI-Coding #主题/AI-Native #主题/AI-Agent #主题/Harness #主题/Skill #主题/工程管理 #主题/组织文化 #手法/范式反思 #场景/YC播客
 - 说明：自动编译草稿。**关键发现**：文中的 Gary 就是 [[54万行代码的顿悟]] 的作者 Garry Tan，**Gbrain 就是 GBrain**，是同一个人同一段时间的两次叙述。提炼"350+ 工具注册表 + Dream Cycle + Skillify/check resolvable (DRY+MECE) + Egalitarian + Trust by default + Horseless Carriages 批评 + Agent 包裹确定性工具"；建议人工复核：(1) [[任务类型到验证模板]] 是否补"知识/Markdown/Skill 验证"类型；(2) MyAIWiki 是否加 weekly Dream Cycle 让 AI 读本周新加内容自动归并/提炼/改进
 
 ### ingest | AI Coding 的顿悟时刻
 - 来源：https://mp.weixin.qq.com/s/zx5yCntR5QfRdbBrWElCOQ
 - 作者：未署名（实战派，笔触与宝玉风格相似但未确认）
-- 原文：raw/articles/AI-Coding的顿悟时刻.md
-- 拆解：raw/articles/AI-Coding的顿悟时刻-digest.md
+- 原文：raw/AI-Coding的顿悟时刻.md
+- 拆解：raw/AI-Coding的顿悟时刻-digest.md
 - wiki：wiki/02-ai-coding/AI-Coding的顿悟时刻.md
 - 拆解（wiki 版）：wiki/02-ai-coding/AI-Coding的顿悟时刻-digest.md
-- 标签：#主题/AI-Coding #主题/工程管理 #主题/AI-Native #主题/架构 #手法/经济反转 #手法/范式反思 #场景/公司落地
+- 标签： #主题/AI-Coding #主题/工程管理 #主题/AI-Native #主题/架构 #手法/经济反转 #手法/范式反思 #场景/公司落地
 - 说明：自动编译草稿，重点提炼"工厂模式半年标配 + Spec→LDD 流水线 + Scrum 失效论 + 未来瓶颈=需求定义+架构设计 + 4%成本换100%产出+组织向两端收缩"；与 [[54万行代码的顿悟]] 互为镜像（工程师个人范式 vs 团队流程+组织重构）
 
 ### ingest | 54万行代码的顿悟：Markdown才是新编程方式
 - 来源：https://mp.weixin.qq.com/s/cqyQma3jFUlZf4_uJnH5lA
 - 原文作者：Garry Tan（Y Combinator 总裁）
 - 原文出处：X 长文 https://x.com/garrytan/status/2061454423034110372
-- 原文：raw/articles/54万行代码的顿悟-Markdown才是新编程方式.md
-- 拆解：raw/articles/54万行代码的顿悟-Markdown才是新编程方式-digest.md
+- 原文：raw/54万行代码的顿悟-Markdown才是新编程方式.md
+- 拆解：raw/54万行代码的顿悟-Markdown才是新编程方式-digest.md
 - wiki：wiki/02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式.md
 - 拆解（wiki 版）：wiki/02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式-digest.md
-- 标签：#主题/AI-Coding #主题/AI-Agent #主题/Harness #主题/工程管理 #主题/Skill #手法/范式反思 #场景/YC公开课
+- 标签： #主题/AI-Coding #主题/AI-Agent #主题/Harness #主题/工程管理 #主题/Skill #手法/范式反思 #场景/YC公开课
 - 说明：自动编译草稿，重点提炼"代码/模型经济方程反转 + Markdown 是新编程方式 + Skillify 循环 + Tokenmaxxing"；与 [[Claude-Code负责人谈AI原生工程组织]] 互为镜像（组织侧 vs 工程师侧）；建议人工复核"测试 Markdown 作为新验证类型"是否要写进 [[任务类型到验证模板]]
 
 ### ingest | 大家都在说「软件工厂」，但90%的CEO不知道自己公司在第几级
 - 来源：https://mp.weixin.qq.com/s/HyWmGabUHQUnOYufiQZyCA
 - 原文作者：Alex Lieberman（tenex_labs 创始人）
-- 原文：raw/articles/大家都在说软件工厂-但90的CEO不知道自己公司在第几级.md
-- 拆解：raw/articles/大家都在说软件工厂-但90的CEO不知道自己公司在第几级-digest.md
+- 原文：raw/大家都在说软件工厂-但90的CEO不知道自己公司在第几级.md
+- 拆解：raw/大家都在说软件工厂-但90的CEO不知道自己公司在第几级-digest.md
 - wiki：wiki/02-ai-coding/大家都在说软件工厂-但90的CEO不知道自己公司在第几级.md
 - 拆解（wiki 版）：wiki/02-ai-coding/大家都在说软件工厂-但90的CEO不知道自己公司在第几级-digest.md
-- 标签：#主题/AI-Coding #主题/AI-Agent #主题/工程管理 #主题/Agent组织 #手法/阶段模型 #场景/公众号长文
+- 标签： #主题/AI-Coding #主题/AI-Agent #主题/工程管理 #主题/Agent组织 #手法/阶段模型 #场景/公众号长文
 - 说明：自动编译草稿，重点提炼软件工厂的 Level 0-4 五级梯子、自测 6 问（特别是"拿走 AI 工具后流程会不会崩"的第 6 问）、L2→L3 的三道护栏、Karpety 的"传统软件自动化你能规定的事 / AI 自动化你能验证的事"框架；建议人工复核"第 6 问作为团队定位工具"是否要进一步做成独立 wiki 页
 
 ## 2026-05-31
 ### ingest | 让你拿到 offer 的 AI 产品经理核心技能丨Aakash Gupta
 - 来源：https://mp.weixin.qq.com/s/fwFnfpXKQkxsqlfjps4Jzg
-- 原文：raw/articles/AI-PM核心技能-观测评估与反馈闭环.md
-- 拆解：raw/articles/AI-PM核心技能-观测评估与反馈闭环-digest.md
+- 原文：raw/AI-PM核心技能-观测评估与反馈闭环.md
+- 拆解：raw/AI-PM核心技能-观测评估与反馈闭环-digest.md
 - wiki：wiki/01-ai-agents/AI-PM核心技能-观测评估与反馈闭环.md
-- 标签：#主题/AI-Agent #主题/AI-Coding #主题/APP研发 #场景/公众号长文
+- 标签： #主题/AI-Agent #主题/AI-Coding #主题/APP研发 #场景/公众号长文
 - 说明：自动编译草稿，重点提炼 AI PM 的反馈闭环、Trace、Eval 与产品学习系统能力
 
 
@@ -269,7 +318,7 @@
 - 原文：raw/claude-code-ai-native-engineering-org.md
 - 拆解：raw/claude-code-ai-native-engineering-org-digest.md
 - wiki：wiki/02-ai-coding/Claude-Code负责人谈AI原生工程组织.md
-- 标签：#主题/AI-Coding #主题/工程管理 #主题/Agent组织 #场景/公众号长文
+- 标签： #主题/AI-Coding #主题/工程管理 #主题/Agent组织 #场景/公众号长文
 - 说明：自动编译草稿，已生成 raw / digest / wiki 三层内容，建议人工复核提炼角度是否需要进一步贴近团队语境
 
 ## 2026-05-28
@@ -278,7 +327,7 @@
 - 原文：raw/ClaudeCode用到这个程度-我算是开眼了.md
 - 拆解：raw/ClaudeCode用到这个程度-我算是开眼了-digest.md
 - wiki：wiki/02-ai-coding/ClaudeCode用到这个程度-我算是开眼了.md
-- 标签：#主题/AI-Coding #场景/公众号长文
+- 标签： #主题/AI-Coding #场景/公众号长文
 - 说明：自动编译草稿，建议人工复核 digest 与 wiki 提炼质量
 
 
@@ -286,7 +335,7 @@
 ### compile | Codex任务交接与 `/new` 模板
 - 来源：基于《我用 Codex 做研究后，总结出 6 条有用经验》与当前 Codex 会话切换需求整理
 - wiki：wiki/02-ai-coding/Codex任务交接与new模板.md
-- 标签：#主题/AI-Coding #主题/效率 #手法/工程实践
+- 标签： #主题/AI-Coding #主题/效率 #手法/工程实践
 - 说明：把任务结束后的交接摘要模板和 `/new` 切换顺序固定为短规则页
 
 ### ingest | 我用 Codex 做研究后，总结出 6 条有用经验！
@@ -294,7 +343,7 @@
 - 原文：raw/我用Codex做研究后-总结出6条有用经验.md
 - 拆解：raw/我用Codex做研究后-总结出6条有用经验-digest.md
 - wiki：wiki/02-ai-coding/我用Codex做研究后-总结出6条有用经验.md
-- 标签：#主题/AI-Coding #场景/公众号长文
+- 标签： #主题/AI-Coding #场景/公众号长文
 - 说明：自动编译草稿，建议人工复核 digest 与 wiki 提炼质量
 
 
@@ -304,7 +353,7 @@
 - 原文：raw/Codex「自我蒸馏」提示词进化版-官方团队给出更强方案-一键打包你的专属工作流.md
 - 拆解：raw/Codex「自我蒸馏」提示词进化版-官方团队给出更强方案-一键打包你的专属工作流-digest.md
 - wiki：wiki/02-ai-coding/Codex「自我蒸馏」提示词进化版-官方团队给出更强方案-一键打包你的专属工作流.md
-- 标签：#主题/AI-Coding #场景/公众号长文
+- 标签： #主题/AI-Coding #场景/公众号长文
 - 说明：自动编译草稿，建议人工复核 digest 与 wiki 提炼质量
 
 
@@ -313,19 +362,19 @@
 ### compile | 知识卡片编译模板：长文如何压成 raw / digest / wiki 三层
 - 来源：基于当前 MyAIWiki 编译实践整理
 - wiki：wiki/02-ai-coding/知识卡片编译模板-长文如何压成raw-digest-wiki三层.md
-- 标签：#主题/AI-Coding #主题/效率 #手法/工程实践
+- 标签： #主题/AI-Coding #主题/效率 #手法/工程实践
 - 说明：把长文进入知识库时的三层卡片化结构和适用边界固定为标准模板
 
 ### compile | MyAIWiki写入规范与验证模板
 - 来源：基于当前 Codex / OMX / MyAIWiki 使用约定整理
 - wiki：wiki/02-ai-coding/MyAIWiki写入规范与验证模板.md
-- 标签：#主题/AI-Coding #主题/效率 #手法/工程实践
+- 标签： #主题/AI-Coding #主题/效率 #手法/工程实践
 - 说明：明确正式知识库默认路径、禁止写入位置和知识落盘后的最小验证动作
 
 ### compile | Codex配置优化清单：从Harness视角改造AGENTS、Skills、知识库与验证闭环
 - 来源：基于《从Prompt、Context到Harness，工程的三次进化与终局之战》与当前 Codex / OMX / MyAIWiki 环境的归纳整理
 - wiki：wiki/02-ai-coding/Codex配置优化清单-从Harness视角.md
-- 标签：#主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践
+- 标签： #主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践
 - 说明：把 Harness 文章中的三层框架映射为可直接执行的 Codex 配置改造清单
 
 ### ingest | 从Prompt、Context到Harness，工程的三次进化与终局之战
@@ -333,7 +382,7 @@
 - 原文：raw/从Prompt-Context到Harness-工程的三次进化与终局之战.md
 - 拆解：raw/从Prompt-Context到Harness-工程的三次进化与终局之战-digest.md
 - wiki：wiki/02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战.md
-- 标签：#主题/AI-Coding #主题/AI-Agent #手法/权威背书 #手法/对比冲突 #场景/公众号长文
+- 标签： #主题/AI-Coding #主题/AI-Agent #手法/权威背书 #手法/对比冲突 #场景/公众号长文
 - 说明：把 Prompt / Context / Harness 三层框架编译进 AI Coding 知识库，并补充工程化闭环视角
 
 ## 2026-05-21
@@ -343,43 +392,43 @@
 - 原文：raw/来自Codex官方团队的分享-如何把Codex用到极致.md
 - 拆解：raw/来自Codex官方团队的分享-如何把Codex用到极致-digest.md
 - wiki：wiki/02-ai-coding/来自Codex官方团队的分享-如何把Codex用到极致.md
-- 标签：#主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/权威背书 #场景/公众号长文
+- 标签： #主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/权威背书 #场景/公众号长文
 - 说明：提炼 Codex 官方团队关于 durable threads、工具外延、自动化、目标验证和共享记忆的整套工作流方法
 
 ### compile | Codex配置下一步改造：从规则层走向线程、工具、目标与共享记忆
 - 来源：基于《来自 Codex 官方团队的分享：如何把 Codex 用到极致》与当前 Codex / OMX / MyAIWiki 配置现状的归纳
 - wiki：wiki/02-ai-coding/Codex配置下一步改造-从规则层走向线程工具目标与共享记忆.md
-- 标签：#主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践
+- 标签： #主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践
 - 说明：把官方方法论映射成当前配置的下一阶段改造优先级，明确线程、工具面、目标模板和共享记忆四条主线
 
 ### compile | 任务类型到验证模板
 - 来源：基于当前 Codex / MyAIWiki / 配置改造工作的通用收尾需求整理
 - wiki：wiki/02-ai-coding/任务类型到验证模板.md
-- 标签：#主题/AI-Coding #主题/效率 #手法/工程实践
+- 标签： #主题/AI-Coding #主题/效率 #手法/工程实践
 - 说明：把知识库、文档、脚本、代码、配置和浏览器抓取任务的最小 verifier 模板固定下来
 
 ### compile | Codex长期线程设计草案
 - 来源：基于《来自 Codex 官方团队的分享：如何把 Codex 用到极致》与当前高频任务模式整理
 - wiki：wiki/02-ai-coding/Codex长期线程设计草案.md
-- 标签：#主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践
+- 标签： #主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践
 - 说明：定义长期线程的用途、输入、输出、stop condition 和 verifier，作为后续工作台设计基础
 
 ### compile | Codex工具入口与能力边界
 - 来源：基于当前 Codex / Claude Code / Playwright / WebFetch / GUI 自动化实践总结
 - wiki：wiki/02-ai-coding/Codex工具入口与能力边界.md
-- 标签：#主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践
+- 标签： #主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践
 - 说明：明确 shell、WebFetch、Playwright、MCP 和 GUI 自动化各自适用面与边界，减少入口选择错误
 
 ### compile | 多Agent使用边界与并行判定
 - 来源：基于当前 Codex 子 agent 使用经验与长任务拆分实践整理
 - wiki：wiki/02-ai-coding/多Agent使用边界与并行判定.md
-- 标签：#主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践
+- 标签： #主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践
 - 说明：定义多 agent 适用场景、禁用场景和并行前判定问题，避免把并行当默认解
 
 ### compile | Codex配置原则总览
 - 来源：基于当前 Codex 配置规则页的统一收束与导航整理
 - wiki：wiki/02-ai-coding/Codex配置原则总览.md
-- 标签：#主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践
+- 标签： #主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践
 - 说明：将配置改造、验证模板、长期线程、工具入口和多 agent 边界串成正式总入口，并回指顶层 AGENTS 保持精简
 
 ### script | 微信文章抓取脚本
@@ -420,7 +469,7 @@
 - 原文：raw/good-ai-pm-bad-ai-pm.md
 - 拆解：raw/good-ai-pm-bad-ai-pm-digest.md
 - wiki：wiki/01-ai-agents/good-ai-pm-bad-ai-pm.md
-- 标签：#主题/AI-Agent #主题/AI科技 #主题/APP研发
+- 标签： #主题/AI-Agent #主题/AI科技 #主题/APP研发
 - 说明：提炼 AI 时代 PM 的核心分水岭：协调劳动被压缩后，真正稀缺的是客户洞察、现场感与判断力
 
 ## 2026-05-12
@@ -430,7 +479,7 @@
 - 原文：raw/claude-obsidian-second-brain.md
 - 拆解：raw/claude-obsidian-second-brain-digest.md
 - wiki：wiki/02-ai-coding/claude-obsidian-second-brain.md
-- 标签：#主题/AI-Coding #主题/AIAgent #主题/效率
+- 标签： #主题/AI-Coding #主题/AIAgent #主题/效率
 - 说明：Defileo 的爆款推文，718万+ 查看，介绍 LLM Wiki A 架构模式
 
 ### schema | 创建 AI Wiki Schema
@@ -445,7 +494,7 @@
 - 文件：prompts/bug-fix.md
 - 说明：优化了空的 bug-fix.md 模板
 
-### organize | 整理 raw/articles/ 未编译文章
+### organize | 整理 raw/ 未编译文章
 - 吴恩达AI提示词课 → wiki/02-ai-coding/吴恩达AI提示词课.md
 - Agent时代架构师系统能力 → wiki/01-ai-agents/Agent时代架构师系统能力.md
 - 说明：检查发现 3 篇文章已在 wiki 但缺正式版本，补充编译
@@ -456,7 +505,7 @@
 - 原文：raw/{slug}.md
 - 拆解：raw/{slug}-digest.md
 - wiki：wiki/{分类}/{slug}.md
-- 标签：#主题/xxx #手法/xxx
+- 标签： #主题/xxx #手法/xxx
 - 说明：简短描述
 -->
 - 2026-05-13：编译公众号文章《深度解析LLM Wiki / Obsidian-Wiki / GBrain：Agent时代知识的“自组织”与“自进化”》，新增 raw、digest 与 wiki 条目。
@@ -605,5 +654,5 @@
 - 2026-08-03: 新增《Code-in-Place-AI-时代为什么更该学编程-Capihom-EO》；原始作者：微信公众号「Capihom（晚点再听LaterCast）」2026-08-03 推送（编译 Stanford CS 教授 Chris Piech / Code in Place 项目发起人 / 一手 EO 播客 https://www.youtube.com/watch?v=g-CD1d0q01I / 原文 https://mp.weixin.qq.com/s/q6oyjUVDp-ftUnHH60-_Kw）；获取时间:2026-08-03 14:17 Asia/Shanghai；原文约 4196 字 / 110 行；raw（原文 12212B + digest 6348B）+ wiki/03-productivity（编译页 7949B + digest 3996B）已写入；挂到 03-productivity/index.md（**新增分区"Capihom 编译三连（AI 时代学习编程 + 基础决定放大 · 2026-08-03 新增）⭐⭐"**）+ master-index.md（最近更新顶部⭐⭐ 2 条：主条目+digest）+ log.md 末尾；**核心命题**"AI 会写代码 所以你更该学编程——基础决定 AI 放大是产出还是一堆自己看不懂的结果；Code in Place 六年观察的 8 个反直觉结论"；**关键数字**（**6 年** Code in Place 运行 / **+10 个百分点** 真人聊 10 分钟完课率 / **5 周** 架构问题延迟 / **40 小时 + 2 周** Piech 投入 / **1%/99%** 长尾 / **18 岁** AI 时代高中生可创业）；**8 节点**（1. AI 放大与基础 / 2. 计算器与乘法类比 / 3. 真人导师完课率 / 4. 架构延迟 5 周 / 5. 代码作为练习场 / 6. Claude Code 边做边补 / 7. 初级工程师提前面对用户 / 8. 职业变化比演示慢）；**5 关键金句**（"原有基础决定这次放大究竟带来产出 还是一堆自己看不懂的结果"/"我们不能跳过基础 但可以更讲究把时间花在哪些基础上"/"AI 的答案是对的 真人并不总是对 可人与人的接触会带来动力"/"我用 AI 编程很多 但我碰巧也懂编程和架构"/"代码只是练习场 被反复训练的是面对一个模糊问题怎样变成可以检验的一连串选择"）；**3 反直觉点**（AI 越强越要学基础 / 真人偶尔错反而比 AI 全对更有效 动力来自"有人在乎"/ AI 编程关键风险不在原型阶段在 5 周后）；**6 个对 Seetong 借鉴动作**（**Seetong 工程师基础体检** 每人 1 次自评"AI 放大的产出/看不懂"比 按架构/算法/需求判断/拆解 4 项打勾 / **Skill 上线前"五周后"测试** 每个新 Skill 上线 5 周后做架构复审 避免 AI 生成代码的延迟风险 / **Seetong AI 助手增加真人参与环节** 关键 Bug 分诊/反馈优先级/客户工单升级 3 类 Skill 触发后弹出"是否需要人工确认" / **新员工 onboarding 用"边做边补"** 2 周入门 + 40 小时补核心 + 1 个真实小功能交付 / **初级工程师提前面对真实用户** 年资 ≤ 1 年每月跟 1 次客户工单/反馈/报警分析 / **警惕演示视频 vs 真实场景差距** 每周回顾"跑通但生产出问题"的 Skill 按差距打分）；**与 [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]]（7/21）+ [[LaterCast-YC设计负责人-AI重写设计师工作流]]（7/16）同 Capihom 编译三连 三文一起读**；**与 [[phodal-项目记住-Coding-Agent-5步法]]（2026-08-03 同日）形成"哲学/落地"对偶**——本文"基础决定放大"哲学基础 + Phodal"项目结构化让 Agent 自学"；**与 [[深思圈-思考外包能动性]] [[与AI一起做产品的六条原则]] [[BillionWrites-特斯拉自学方法-战略性无聊-项目化-视觉化]] [[Code-is-cheap-AI-Native-五倍效率]] [[Karpathy-autoresearch-从上下文工程到自主研究循环]] 强关联**——补完 03-productivity 现有"AI 时代个人认知/通用能力"主线偏"AI 时代学习编程 + 真人对 AI 导师 + 基础决定放大"缺位的"AI 时代学习编程 + 教育方法论 + 架构延迟 5 周"维度 ⭐⭐；**分类理由**：本文是"AI 时代为什么学编程 + 教育哲学 + Code in Place 6 年实证"综合 主轴是个人学习与教育方法论（AI 放大/真人导师/架构延迟/Claude Code 学习循环），不放 02-ai-coding（不是工程方法论）也不放 06-ai-tech（不是行业分析）；放 03-productivity 与 [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]] / [[LaterCast-YC设计负责人-AI重写设计师工作流]] 同 Capihom 编译三连 且补完偏"AI 时代岗位流动/设计师工作流"缺位的"AI 时代为什么学编程 + 基础决定放大 + 真人 vs AI 导师"维度；**透明玻璃自检**：wiki 7949B（≤8K 字节）/ digest 3996B（≤4K 字节）/ 节点 8（6-10）/ H2 5 wiki / H2 5 digest（≤5）/ 表格 0 wiki + 表格 1 digest（≤2）/ 0 陈词（无"显而易见""不言而喻""众所周知""具有重要意义"）/ 称呼违规 0 条 / 0 标点违规 ⭐⭐；**待补证**："10 个百分点完课率"是 Code in Place 内部实验数据 外部团队未必能复现；"5 周架构问题"是经验观察无严格时间窗口；"99%/1% 长尾"是 Piech 经验值（自动驾驶 2011/2012 反例）非量化数据；公众号名未在 HTML meta 暴露 按内容定位 Capihom；发布时间未在 HTML meta 标注 推断 2026-07 末至 2026-08 初；**已知限制**：本文主轴是"AI 时代为什么学编程"对已毕业/资深工程师的启发是"5 周后再看架构"；Seetong 借鉴动作 6 条按 30-50 人小团队做裁剪——基础体检最优先 → Skill "5 周后"复审第二 → 真人参与环节第三（已在部分 Skill 试点）→ onboarding 边做边补第四；"完成 10 个小产品也该留下 10 次自己做判断的痕迹"是工程文化建议 与 Seetong 当前的 Skill 编写流程可衔接（每个 Skill 决策点留人签名）；**建议补条目** [[Chris-Piech]] 斯坦福 CS 教授 / [[Code-in-Place]] 斯坦福在线编程项目 / [[EO-Podcast]] 一手来源播客 / [[Capihom]] 公众号 = 晚点再听LaterCast（暂未建）/ [[AI-放大]] 主题索引（暂未建）/ [[基础决定放大]] 主题索引（暂未建）；**标签** #主题/AI时代学习 #主题/AI时代编程 #主题/AI导师vs真人 #主题/Code-in-Place #主题/Seetong借鉴 #主题/Claude-Code #主题/教育方法论 #主题/架构延迟 #主题/AI放大 #手法/8节点 #手法/实证观察 #场景/AI-Coding学习 #场景/工程师成长 #公众号/Capihom #作者/Chris-Piech #公司/Stanford #节点/AI放大与基础 #节点/计算器与乘法类比 #节点/真人导师完课率 #节点/架构延迟5周 #节点/代码作为练习场 #节点/Claude-Code边做边补 #节点/初级工程师提前面对用户 #节点/职业变化比演示慢
 - 2026-08-03: 新增《yc-qm-面向企业的多人智能体平台-AllenTang》；原始作者：微信公众号「架构师带你玩转AI」AllenTang 2026-08-03 推送（编译 YC 开源 QM 项目 https://github.com/yc-software/qm / 原文 https://mp.weixin.qq.com/s/O8O6ttb-z9KmwjG4C9fe-Q）；获取时间:2026-08-03 14:41 Asia/Shanghai；原文约 3424 字；raw（原文 9789B + digest 8607B）+ wiki/01-ai-agents（编译页 7896B + digest 3944B）已写入；挂到 01-ai-agents/index.md（**新增分区"YC-QM 多人智能体协作平台（多租户底座 + 持久电脑 + 4 适配器 · 2026-08-03 新增）⭐⭐"**）+ master-index.md（最近更新顶部⭐⭐ 2 条：主条目+digest）+ log.md 末尾；**核心命题**"QM 是 YC 开源的多人智能体协作平台——从'个人助理'到'多人协作'靠 scope 隔离；6 大特性：无头核心 + 持久电脑 + 4 个 Harness 适配器 + Durable by default + 智能体=你本人 + 3 种安全 posture + 5 条工程文化铁律"；**关键数字**（**7 项** Scope 隔离资源 / **4 个** Harness 适配器 Pi/OpenCode/Codex/Claude Code / **3 种** 安全 Posture Strict/Auto/Dangerous / **7 天** npm 包静置 / **5 条** 工程文化铁律 / **状态落 Postgres** Durable by default）；**8 节点**（1. Scope 隔离 7 项资源 / 2. 持久电脑 Durable Computer / 3. 4 个 Harness 适配器 / 4. Durable by default / 5. 智能体=你本人 / 6. 3 种安全 Posture + 命令策略 + 7 天 npm 静置 / 7. 收文字不收代码 + 5 条工程文化铁律 / 8. 多租户底座定位）；**3 反直觉点**（聊天机器人思路进企业必死——QM 不做聊天机器人做多租户底座 scope 是灵魂不是特性 / 状态不落内存是铁律不是建议——任何进程内 Map/环形缓冲会被蓝绿部署抹掉 / 坦诚披露"还不安全"是专业——SECURITY.md 主动列已知局限 + 供应链 7 天静置 + 收文字不收代码——开源界几乎独一份）；**6 个对 Seetong 借鉴动作**（**Seetong Scope 体检** 识别客户工单/SDK 仓库/Harmony 设备/4G IPC 监控 4 类隔离场景按"人/项目/设备"切 scope / **持久电脑类比** Seetong AI 助手每个 Skill 工具链 神策/TAPD/Git 按"工具已装、状态在册"原则改造 / **Durable by default** Seetong AI 助手 cron/Skill 状态/客户工单升级全进 Postgres 避免部署丢任务 / **4 Harness 适配器思路** Seetong AI 助手不绑死单一模型/框架 OpenClaw 已支持多 Agent runtime 切换方向正确 / **3 种 Posture + 命令策略** Seetong AI 助手对生产/凭据/不可逆操作分级 Strict/Auto/Dangerous + 递归删除/破坏性 SQL 硬性拒绝 / **5 条工程文化铁律入 SKILL.md** 修每一处/让系统更简单/独立审查/不留注释/收文字不收代码——前 4 条做编码规则第 5 条改提案实现解耦流程）；**与 [[万字长文拆解Agent-架构设计-四-多-Agent-协作]]（7/22 同作者）形成"多 Agent 编排 / 多租户底座"对偶**；**与 [[phodal-项目记住-Coding-Agent-5步法]]（2026-08-03 同日）形成"治理 / 落地"对偶**——本文 5 条工程文化铁律 + Phodal 5 步法（AGENTS.md / 文档路由 / Skill / CLI / Loop Discovery）；**与 [[0xCodez-Agent-Harness-14-Steps]] [[HarnessEngineering企业级实战]] [[Harness工程AgentLoop]] [[Lilian-Weng-Harness-Engineering-自我改进]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[agent-architecture]] 强关联**——补完 01-ai-agents 现有"Harness 路线图 + 实战 + 理论框架 + 多 Agent 编排 + 企业 Agent 落地"主线偏"多租户底座 + Scope 隔离 + 持久电脑 + 4 Harness 适配器 + Durable by default + 收文字不收代码"缺位的"企业级 Agent 平台多租户架构 + 工程文化铁律"维度 ⭐⭐；**分类理由**：本文是"YC 开源 QM 项目深度解读 + 多人智能体协作平台架构 + 持久电脑 + 4 Harness 适配器 + 5 条工程文化铁律"综合 主轴是企业级 Agent 平台架构（不是 Agent 通用理论），不放 02-ai-coding（不是工程方法论）也不放 06-ai-tech（不是宏观行业分析）；放 01-ai-agents 与 [[万字长文拆解Agent-架构设计-四-多-Agent-协作]]（同作者 7/22）+ [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] + [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] 同主线保持一致性 且补完偏"单 Agent / 多 Agent 编排 / Harness 路线图"缺位的"多租户底座 + Scope 隔离 + 持久电脑 + 4 Harness 适配器 + Durable by default + 工程文化铁律"维度；**透明玻璃自检**：wiki 7896B（≤8K 字节）/ digest 3944B（≤4K 字节）/ 节点 8（6-10）/ H2 5 wiki / H2 5 digest（≤5）/ 表格 0 wiki + 表格 1 digest（≤2）/ 0 陈词（无"显而易见""不言而喻""众所周知""具有重要意义"）/ 称呼违规 0 条 / 0 标点违规 ⭐⭐；**待补证**："4 个 Harness 适配器（Pi/OpenCode/Codex/Claude Code）"是 AllenTang 文章快照 QM 主仓库 master 分支可能更新；"7 项 scope 隔离资源"是 AllenTang 归纳非官方完整列表；"3 种安全 Posture + 命令策略 + 供应链 7 天静置"是 QM 官方 SECURITY.md 与 npm 配置 二手解读无独立验证；公众号名未在 HTML meta 暴露 按内容定位为「架构师带你玩转AI」与同作者 7/22 [[万字长文拆解Agent-架构设计-四-多-Agent-协作]] 同编辑；发布时间未在 HTML meta 标注 推断 2026-07 末至 2026-08；**已知限制**：本文是 AllenTang 解读/二手编译 非官方文档；"聊天机器人思路进企业必死"是 AllenTang 自己观点 行业内有不同声音（如 Capihom/LaterCast 编译三连的 [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]] 更温和）；QM 自身还很早期 官方 SECURITY.md 主动列已知局限；Seetong 借鉴动作 6 条按 30-50 人小团队做裁剪——Scope 体检最优先（识别 4 类隔离场景）→ Durable by default 第二（cron/Skill 状态全进 Postgres）→ 5 条工程文化铁律第三（编码规则改造）→ 其他按需；"4 Harness 适配器思路"OpenClaw 已支持多 Agent runtime 切换本文印证方向正确无需新动作；"3 种 Posture + 命令策略"当前 Seetong AI 助手对部分生产操作有人工确认 尚未做完整分级；**建议补条目** [[AllenTang]] 作者（暂未建）/ [[QM]] YC 开源多人智能体协作平台（暂未建）/ [[yc-software]] YC 开源组织（暂未建）/ [[Scope]] 多租户作用域隔离概念（暂未建）/ [[Durable-Computer]] 持久电脑概念（暂未建）/ [[Durable-by-default]] 持久化优先原则（暂未建）/ [[Multiplayer-Agent]] 多人智能体协作（暂未建）；**标签** #主题/Multiplayer-Agent #主题/Scope隔离 #主题/Harness适配器 #主题/持久电脑 #主题/Durable-by-default #主题/安全Posture #主题/工程文化 #主题/Seetong借鉴 #主题/多人协作 #主题/多租户 #主题/收文字不收代码 #手法/Scope隔离 #手法/持久化优先 #手法/工程文化铁律 #场景/企业级Agent平台 #场景/多人协作 #公众号/架构师带你玩转AI #作者/AllenTang #项目/QM #公司/yc-software #公司/YC #节点/Scope隔离7项资源 #节点/持久电脑Durable-Computer #节点/4个Harness适配器 #节点/Durable-by-default #节点/智能体等于你本人 #节点/3种安全Posture #节点/收文字不收代码 #节点/多租户底座定位
  - 2026-08-04: 新增《Capihom-Whatnot-CPO-产品经理是否按人头配齐》；来源：微信公众号「晚点再听LaterCast」Capihom 2026-08-03（原文 https://mp.weixin.qq.com/s/ZCdViv1WsSNeyv7U591tBw；一手 Lenny's Podcast《This CPO regrets that product management exists》/ Tom Verrilli / https://www.youtube.com/watch?v=ruvis-VWg2s）。已写入 raw 原文存档 + digest、`wiki/03-productivity` 正式条目、分类索引、总索引和 raw 索引；核心是“AI 压缩等待判断的时间，不替代产品判断和生产责任”，以按需配置 PM、Know then go、IC 不离场、数据底座与地面真相 8 节点组织；明确标注 Whatnot 单一案例及数据未独立核验。
- - 2026-08-06: 新增《实战从零开始构建一个Coding Agent：Violin》；来源：微信公众号「得物技术」作者酒米，发布时间 2026-08-05，原文链接 https://mp.weixin.qq.com/s/yFHRoAi6fe2dduXXlM8Tzw；已写入 `raw/2026-08-05-得物技术-实战从零开始构建一个Coding-Agent-Violin.md`、对应 digest、`wiki/01-ai-agents/实战从零开始构建一个Coding-Agent-Violin.md`，并同步分类索引和 master-index；核心是 Agent Loop + 模型适配 + Tool Registry + Session/compaction + Resources + EventBus/Lua + TCP/JSON Lines；明确标注 tools 参数未完整序列化、Lua 插件无权限隔离、ACP 未接入，以及图片文字未 OCR 的证据边界。
- - 2026-08-06: 新增《Agent评测漫谈 —— 由浅入深讲解Agent评测》；来源：微信公众号「美团技术团队」作者图灵Agent评测，原文发布时间 2026-08-06，原文链接 https://mp.weixin.qq.com/s/gZKWRqznB8sNBFf69fBIvw；已写入 `raw/2026-08-06-图灵-Agent评测漫谈-由浅入深讲解Agent评测.md`、对应 digest、`wiki/01-ai-agents/Agent评测漫谈-由浅入深讲解Agent评测.md` 及 wiki digest，并同步 01-ai-agents/index.md 和 master-index.md；核心是 Response / Trajectory 双评测、Trace 观测、评测搭桥、Rubric 二元化、Good/Bad Case 飞轮，以及长程 Agent 的 Task、回放、沙箱、归因、回归和准入准出；明确标注配图文字未 OCR，文中案例与数字按作者团队经验处理。
+ - 2026-08-06: 新增《实战从零开始构建一个Coding Agent：Violin》；来源：微信公众号「得物技术」作者酒米，发布时间 2026-08-05，原文链接 https://mp.weixin.qq.com/s/yFHRoAi6fe2dduXXlM8Tzw；已写入 `raw/得物技术-实战从零开始构建一个Coding-Agent-Violin.md`、对应 digest、`wiki/01-ai-agents/实战从零开始构建一个Coding-Agent-Violin.md`，并同步分类索引和 master-index；核心是 Agent Loop + 模型适配 + Tool Registry + Session/compaction + Resources + EventBus/Lua + TCP/JSON Lines；明确标注 tools 参数未完整序列化、Lua 插件无权限隔离、ACP 未接入，以及图片文字未 OCR 的证据边界。
+ - 2026-08-06: 新增《Agent评测漫谈 —— 由浅入深讲解Agent评测》；来源：微信公众号「美团技术团队」作者图灵Agent评测，原文发布时间 2026-08-06，原文链接 https://mp.weixin.qq.com/s/gZKWRqznB8sNBFf69fBIvw；已写入 `raw/图灵-Agent评测漫谈-由浅入深讲解Agent评测.md`、对应 digest、`wiki/01-ai-agents/Agent评测漫谈-由浅入深讲解Agent评测.md` 及 wiki digest，并同步 01-ai-agents/index.md 和 master-index.md；核心是 Response / Trajectory 双评测、Trace 观测、评测搭桥、Rubric 二元化、Good/Bad Case 飞轮，以及长程 Agent 的 Task、回放、沙箱、归因、回归和准入准出；明确标注配图文字未 OCR，文中案例与数字按作者团队经验处理。

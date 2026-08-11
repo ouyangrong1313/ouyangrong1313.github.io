@@ -1,7 +1,12 @@
 ---
 title: Datawhale - Claude Code 之父的老板，坦白 Agent 协作方法（Digest）
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/AI-Coding, #场景/公众号长文, #节点/Agent-Loop, #节点/Claude-Code]
+tags:
+  - 主题/AI-Agent
+  - 主题/AI-Coding
+  - 场景/公众号长文
+  - 节点/Agent-Loop
+  - 节点/Claude-Code
 date: 2026-07-06
 source: 微信公众号 / Datawhale（编译 Lenny's Podcast 访谈 Fiona Fung）
 source_url: https://mp.weixin.qq.com/s/c9Vkx_2l2PRSY__GjUlHuQ
@@ -63,20 +68,20 @@ source_url: https://mp.weixin.qq.com/s/c9Vkx_2l2PRSY__GjUlHuQ
 ## 强关联
 
 ### 上游（基于 / 来自）
-- [[loonggg-Claude-Code-技能心法-11条建议]]：Claude Code 团队内部使用 Skills 的经验——本文"spec 入仓 + Claude code review"是从 Skill 心法到协作方法论的延伸
-- [[Claude-Code首席设计师Meaghan-Choi工作流]]：Claude Code 团队首席设计师工作流——本文是同团队的管理者视角
-- [[Claude-Code一周年回顾-Boris-Cat]]：Claude Code 之父 Boris Cherny 一周年回顾——本文是 Boris 老板 Fiona 的对应视角
-- [[Claude-Code-主动式Agent-Routines]]：Claude Code 的 Routines 功能详解——本文是 Routine 在管理者工作中的具体应用
+- [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]]：Claude Code 团队内部使用 Skills 的经验——本文"spec 入仓 + Claude code review"是从 Skill 心法到协作方法论的延伸
+- [[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]]：Claude Code 团队首席设计师工作流——本文是同团队的管理者视角
+- [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]]：Claude Code 之父 Boris Cherny 一周年回顾——本文是 Boris 老板 Fiona 的对应视角
+- [[02-ai-coding/Claude-Code-主动式Agent-Routines]]：Claude Code 的 Routines 功能详解——本文是 Routine 在管理者工作中的具体应用
 
 ### 下游（应用于 / 验证于）
-- [[Addy-Osmani-Loop-Engineering]]：Loop 验证视角——本文的"验证取代编写"是 Loop 验证在跨角色场景的扩展
-- [[WonderLearner-Alice-Claude-Code之父的新洞察]]：Boris Cherny 视角的"AI 对团队岗位冲击"——本文是 Boris 老板 Fiona 的对应视角
+- [[02-ai-coding/Addy-Osmani-Loop-Engineering]]：Loop 验证视角——本文的"验证取代编写"是 Loop 验证在跨角色场景的扩展
+- [[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]：Boris Cherny 视角的"AI 对团队岗位冲击"——本文是 Boris 老板 Fiona 的对应视角
 
 ### 同级（横向 / 并列）
-- [[Laurel-CPO-Jiaona-Zhang-公司OS]]：同 AI 时代团队 OS 主线（Laurel 谈"公司 OS 怎么搭"，Fiona 谈"Claude Code 团队怎么跑"）
-- [[快刀青衣-OpenAI高管教练四层能力]]：同主线"AI 时代个人/团队能力升级"——本文给"管理者 + 团队协作"维度的具体方法论
-- [[Multica-AI-Native-组织-人是最慢的节点]]：同样是"人跟不上 Agent"的视角——本文是同主线不同公司样本（Anthropic vs Multica）
-- [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]：AI Native 组织成熟度对照——本文是 L4-L5 阶段的"Claude Code 团队实证"
+- [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]]：同 AI 时代团队 OS 主线（Laurel 谈"公司 OS 怎么搭"，Fiona 谈"Claude Code 团队怎么跑"）
+- [[03-productivity/快刀青衣-OpenAI高管教练四层能力]]：同主线"AI 时代个人/团队能力升级"——本文给"管理者 + 团队协作"维度的具体方法论
+- [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]：同样是"人跟不上 Agent"的视角——本文是同主线不同公司样本（Anthropic vs Multica）
+- [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]：AI Native 组织成熟度对照——本文是 L4-L5 阶段的"Claude Code 团队实证"
 
 ## 备注
 

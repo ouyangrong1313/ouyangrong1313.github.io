@@ -7,7 +7,7 @@ Matt Van Horn 最近写了一篇长文，把他用 Claude Code 的所有技巧�
 ## 分类提炼
 
 - 场景：AI Coding / 公众号长文
-- 标签：#主题/AI-Coding #场景/公众号长文
+- 标签： #主题/AI-Coding #场景/公众号长文
 - 类型：自动编译草稿 / 待人工复核
 
 ## 要点列表
@@ -22,7 +22,7 @@ Matt Van Horn 最近写了一篇长文，把他用 Claude Code 的所有技巧�
 
 ## 标签
 
-#主题/AI-Coding #场景/公众号长文
+ #主题/AI-Coding #场景/公众号长文
 
 ## 相关链接
 

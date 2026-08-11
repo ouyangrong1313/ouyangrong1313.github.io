@@ -90,6 +90,6 @@
 ## 相关资源
 
 - 原文：[[2026-05-07-阿里HarnessEngineering企业级实战]]
-- 相关：[[Harness工程AgentLoop]] / [[harness-engineering]]
+- 相关：[[01-ai-agents/Harness工程AgentLoop]] / [[01-ai-agents/harness-engineering]]
 - Anthropic: https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents
 - OpenAI: https://openai.com/index/harness-engineering/

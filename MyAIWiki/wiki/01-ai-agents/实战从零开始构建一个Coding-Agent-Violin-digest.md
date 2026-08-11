@@ -1,16 +1,22 @@
 ---
 title: 实战从零开始构建一个Coding Agent：Violin（速查）
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/AI-Coding, #主题/Agent-Loop, #主题/Agent-架构, #主题/Skill, #主题/插件系统]
+tags:
+  - 主题/AI-Agent
+  - 主题/AI-Coding
+  - 主题/Agent-Loop
+  - 主题/Agent-架构
+  - 主题/Skill
+  - 主题/插件系统
 nodes: [Agent-Loop, Model-Adapter, Tool-Registry, Session, Context-Compaction, Resources, EventBus, TCP-JSON-Lines]
-links: [[实战从零开始构建一个Coding-Agent-Violin]], [[Harness工程AgentLoop]], [[WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[Lilian-Weng-Harness-Engineering-自我改进]]
+links: [[01-ai-agents/实战从零开始构建一个Coding-Agent-Violin]], [[01-ai-agents/Harness工程AgentLoop]], [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]
 date: 2026-08-06
 source: 微信公众号 / 得物技术
 ---
 
 # 实战从零开始构建一个Coding Agent：Violin（速查）
 
-> 原文：[[实战从零开始构建一个Coding-Agent-Violin]]；作者酒米；得物技术；发布时间 2026-08-05。
+> 原文：[[01-ai-agents/实战从零开始构建一个Coding-Agent-Violin]]；作者酒米；得物技术；发布时间 2026-08-05。
 
 ## 一句话总结
 
@@ -55,6 +61,6 @@ Coding Agent 的底层是一个可控循环：问模型、执行工具、把结�
 
 ## 相关链接
 
-- 原文 raw：`../../raw/2026-08-05-得物技术-实战从零开始构建一个Coding-Agent-Violin.md`
-- 原文 digest：`../../raw/2026-08-05-得物技术-实战从零开始构建一个Coding-Agent-Violin-digest.md`
-- [[Harness工程AgentLoop]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[Lilian-Weng-Harness-Engineering-自我改进]] [[Hermes-Agent重构得物数仓工作流]]
+- 原文 raw：`../../raw/得物技术-实战从零开始构建一个Coding-Agent-Violin.md`
+- 原文 digest：`../../raw/得物技术-实战从零开始构建一个Coding-Agent-Violin-digest.md`
+- [[01-ai-agents/Harness工程AgentLoop]] [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] [[01-ai-agents/Hermes-Agent重构得物数仓工作流]]

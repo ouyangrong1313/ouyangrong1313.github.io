@@ -1,7 +1,7 @@
 # Hermes+Obsidian+LLM Wiki 本地知识库搭建
 
 > 来源：Roland.W @rwayne | 2026-05-13
-> 标签：#主题/AIAgent #场景/落地案例
+> 标签： #主题/AIAgent #场景/落地案例
 
 ## 解决的问题
 

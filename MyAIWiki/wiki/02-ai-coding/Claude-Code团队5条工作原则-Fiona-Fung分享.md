@@ -5,7 +5,7 @@
 - **原始作者**：**Fiona Fung**（Anthropic Claude Code 团队工程总监）
 - 原始场合：Anthropic 内部分享（半小时演讲）
 - 编译时间：2026-06-03
-- 来源层：raw（已存 `raw/articles/Claude-Code团队5条工作原则-Fiona-Fung分享.md`）
+- 来源层：raw（已存 `raw/Claude-Code团队5条工作原则-Fiona-Fung分享.md`）
 
 ## 核心结论（一句话）
 
@@ -14,9 +14,9 @@
 ## 分类提炼
 
 - 场景：AI-native 组织 / 规划 / 自动化 / Code Review / 招聘 / 团队建设
-- 标签：#主题/AI-Coding #主题/AI-Native #主题/工程管理 #主题/组织文化 #手法/范式反思 #场景/Anthropic一手
+- 标签： #主题/AI-Coding #主题/AI-Native #主题/工程管理 #主题/组织文化 #手法/范式反思 #场景/Anthropic一手
 - 类型：一手经验 / 范式宣言 / 5 条原则
-- 关联主线：与 [[Claude-Code负责人谈AI原生工程组织]]、[[54万行代码的顿悟]]、[[AI-Coding的顿悟时刻]]、[[YC如何进行AI-Native组织改造]] 同主线
+- 关联主线：与 [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]]、[[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]、[[02-ai-coding/AI-Coding的顿悟时刻]]、[[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]] 同主线
 
 ## 5 条原则速览
 
@@ -195,13 +195,13 @@
 
 ## 我的判断（编译者注）
 
-1. **5 条原则和 [[54万行代码的顿悟]]、[[YC如何进行AI-Native组织改造]] 高度互补**：
+1. **5 条原则和 [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]、[[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]] 高度互补**：
    - 那两篇偏"组织/范式"层
    - 本文偏"具体实操"层（JIT 规划 / 自动化肌肉记忆 / Trust but verify / 团队 harness）
    - **三层合并**：范式 → 组织 → 实操 = 完整的 AI-native 蓝图
 
 2. **"JIT 规划"是 PR/原型先行 + 文档后补的最强背书**：
-   - 和 [[Codex配置原则总览]] 的"配置必须符合团队语境"原则一致
+   - 和 [[02-ai-coding/Codex配置原则总览]] 的"配置必须符合团队语境"原则一致
    - 适用于我们的 Seetong 团队：**别再写长篇设计文档了**，有想法先做原型，能用了再说
 
 3. **"Trust but verify"是 AI 时代 Code Review 的金标准**：
@@ -238,14 +238,14 @@
 
 ## 适合关联的主题
 
-- [[Claude-Code负责人谈AI原生工程组织]] — 同主线（组织侧）
-- [[54万行代码的顿悟]] — 工程师个人范式
-- [[AI-Coding的顿悟时刻]] — 团队流程 + Scrum 反思
-- [[YC如何进行AI-Native组织改造]] — YC 内部 AI 改造一手
-- [[Codex配置原则总览]] / [[Codex配置优化清单-从Harness视角]] — Harness / Skill 设计
-- [[多Agent使用边界与并行判定]] — 应该补 JIT 规划 / Trust but verify / 团队 harness
-- [[知识卡片编译模板-长文如何压成raw-digest-wiki三层]] — JIT 规划的另一个样本
-- [[任务类型到验证模板]] — 验证流程往前推的具体实施
+- [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]] — 同主线（组织侧）
+- [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] — 工程师个人范式
+- [[02-ai-coding/AI-Coding的顿悟时刻]] — 团队流程 + Scrum 反思
+- [[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]] — YC 内部 AI 改造一手
+- [[02-ai-coding/Codex配置原则总览]] / [[02-ai-coding/Codex配置优化清单-从Harness视角]] — Harness / Skill 设计
+- [[02-ai-coding/多Agent使用边界与并行判定]] — 应该补 JIT 规划 / Trust but verify / 团队 harness
+- [[02-ai-coding/知识卡片编译模板-长文如何压成raw-digest-wiki三层]] — JIT 规划的另一个样本
+- [[02-ai-coding/任务类型到验证模板]] — 验证流程往前推的具体实施
 
 ## 行动建议
 

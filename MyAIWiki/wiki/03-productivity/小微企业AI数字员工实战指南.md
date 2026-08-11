@@ -1,9 +1,17 @@
 ---
 title: 小微企业 AI 数字员工实战指南
 category: 03-productivity
-tags: [#主题/效率, #主题/AI-Agent, #场景/落地案例, #节点/数字员工, #节点/智能体, #节点/AI-Native, #节点/Small-Business, #节点/Prompt-Engineering]
+tags:
+  - 主题/效率
+  - 主题/AI-Agent
+  - 场景/落地案例
+  - 节点/数字员工
+  - 节点/智能体
+  - 节点/AI-Native
+  - 节点/Small-Business
+  - 节点/Prompt-Engineering
 nodes: [数字员工, 扣子Coze, Dify, 智能体平台, 提示词工程, 工作流思维, 内核稳定性, 90天路线图, pace-vs-spin, 小老板AI化]
-links: [[快刀青衣-OpenAI高管教练四层能力]], [[Laurel-CPO-Jiaona-Zhang-公司OS]], [[小龙虾-OpenClaw-Agent价值与边界]], [[AI-Coding的顿悟时刻]], [[深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]], [[与AI一起做产品的六条原则]], [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]], [[宁向东-企业家凭什么能看见别人看不见的机会]], [[Multica-AI-Native-组织-人是最慢的节点]], [[0xCodez-Agent-Harness-14-Steps]]
+links: [[03-productivity/快刀青衣-OpenAI高管教练四层能力]], [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]], [[01-ai-agents/小龙虾-OpenClaw-Agent价值与边界]], [[02-ai-coding/AI-Coding的顿悟时刻]], [[02-ai-coding/深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]], [[03-productivity/与AI一起做产品的六条原则]], [[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]], [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]], [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]], [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]]
 date: 2026-07-06
 source: 综合实战指南（桌面版同步）
 source_url: file:///Users/topsee/Desktop/小微企业AI数字员工实战指南.md
@@ -189,21 +197,21 @@ original_source: https://www.lennysnewsletter.com/p/the-new-inner-game-your-unfa
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- **[[快刀青衣-OpenAI高管教练四层能力]]**：本文核心方法论来源——Joe Hudson 的 4 层能力是数字员工落地的"软基础"
-- **[[Laurel-CPO-Jiaona-Zhang-公司OS]]**：公司 OS 方法论——把 1% AI 高手操作沉淀成全公司技能，与"数字员工团队"思路同源
-- **[[小龙虾-OpenClaw-Agent价值与边界]]**：Agent 价值与边界——不存在通用 Agent，要按场景拆 5 类小 Agent（与本文"6 类数字员工"对应）
+- **[[03-productivity/快刀青衣-OpenAI高管教练四层能力]]**：本文核心方法论来源——Joe Hudson 的 4 层能力是数字员工落地的"软基础"
+- **[[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]]**：公司 OS 方法论——把 1% AI 高手操作沉淀成全公司技能，与"数字员工团队"思路同源
+- **[[01-ai-agents/小龙虾-OpenClaw-Agent价值与边界]]**：Agent 价值与边界——不存在通用 Agent，要按场景拆 5 类小 Agent（与本文"6 类数字员工"对应）
 
 ### 下游（应用于 / 验证于）
 - 暂无，待补充（这是 2026-07 第一个"小老板 AI 化"系统化指南）
 
 ### 同级（横向 / 并列）
-- **[[AI-Coding的顿悟时刻]]**：未来瓶颈 = 需求定义+架构设计（与小老板"先想清楚搭哪个数字员工"对应）
-- **[[深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]]**：工厂工程师思维（搭工厂比造车重要——对应"搭数字员工团队比单工具重要"）
-- **[[与AI一起做产品的六条原则]]**：AI 放大器+减法+品味+80 分（与小老板"AI 做 80% 自己做 20%"同源）
-- **[[WonderLearner-Alice-Claude-Code之父的新洞察]]**：5 类角色原型（小老板也是 5 类角色之一：选型者/搭团队者/Sweeper/Grower/Maintainer）
-- **[[宁向东-企业家凭什么能看见别人看不见的机会]]**：观察+试验（与"先跑通最小闭环"对应）
-- **[[Multica-AI-Native-组织-人是最慢的节点]]**：4 人+几十 Agent（与小老板"1 人+5 数字员工"是同思路不同规模）
-- **[[0xCodez-Agent-Harness-14-Steps]]**：Harness 是 Loop 的地基（数字员工需要 Harness：明确岗位+流程+边界）
+- **[[02-ai-coding/AI-Coding的顿悟时刻]]**：未来瓶颈 = 需求定义+架构设计（与小老板"先想清楚搭哪个数字员工"对应）
+- **[[02-ai-coding/深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]]**：工厂工程师思维（搭工厂比造车重要——对应"搭数字员工团队比单工具重要"）
+- **[[03-productivity/与AI一起做产品的六条原则]]**：AI 放大器+减法+品味+80 分（与小老板"AI 做 80% 自己做 20%"同源）
+- **[[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]**：5 类角色原型（小老板也是 5 类角色之一：选型者/搭团队者/Sweeper/Grower/Maintainer）
+- **[[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]]**：观察+试验（与"先跑通最小闭环"对应）
+- **[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]**：4 人+几十 Agent（与小老板"1 人+5 数字员工"是同思路不同规模）
+- **[[01-ai-agents/0xCodez-Agent-Harness-14-Steps]]**：Harness 是 Loop 的地基（数字员工需要 Harness：明确岗位+流程+边界）
 
 ## 我的理解
 

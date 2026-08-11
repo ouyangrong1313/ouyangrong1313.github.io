@@ -1,9 +1,29 @@
 ---
 title: Lilian Weng Harness Engineering for Self-Improvement — 翁荔的 Harness 学术原典
 category: 01-ai-agents
-tags: [主题/Harness, 主题/RSI, 主题/学术原典, 主题/翁荔, 主题/工程哲学, 主题/Anthropic, 主题/Thinking-Machines-Lab, 主题/Seetong借鉴, 场景/微信编译, 场景/AI-Researchers, 节点/Harness定义, 节点/操作系统类比, 节点/三种设计模式, 节点/五段优化路径, 节点/三类自动化优化, 节点/RL_reward_hacking, 节点/内部化预测, 节点/人在抽象栈高层, 作者/翁荔-Lilian-Weng, 编辑/Datawhale]
+tags:
+  - 主题/Harness
+  - 主题/RSI
+  - 主题/学术原典
+  - 主题/翁荔
+  - 主题/工程哲学
+  - 主题/Anthropic
+  - 主题/Thinking-Machines-Lab
+  - 主题/Seetong借鉴
+  - 场景/微信编译
+  - 场景/AI-Researchers
+  - 节点/Harness定义
+  - 节点/操作系统类比
+  - 节点/三种设计模式
+  - 节点/五段优化路径
+  - 节点/三类自动化优化
+  - 节点/RL_reward_hacking
+  - 节点/内部化预测
+  - 节点/人在抽象栈高层
+  - 作者/翁荔-Lilian-Weng
+  - 编辑/Datawhale
 nodes: [Harness定义, 操作系统类比, 三种设计模式, 五段优化路径, 三类自动化优化, RL优化_reward_hacking风险, Harness内部化预测, 人在抽象栈高层]
-links: [[0xCodez-Agent-Harness-14-Steps]], [[HarnessEngineering企业级实战]], [[Harness工程AgentLoop]], [[Code-is-cheap-AI-Native-五倍效率]], [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]], [[Loop-Engineering-验证才是瓶颈]], [[Addy-Osmani-Loop-Engineering]], [[字节跳动洪定坤-AI-Coding的实践与探索]], [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]], [[AI-Native企业-Agent团队和AI-Factory重写公司体系]], [[Multica-AI-Native-组织-人是最慢的节点]], [[Leeka-Task-Decomposition-Agentic-Workflow]], [[小龙虾-OpenClaw-Agent价值与边界]], [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
+links: [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]], [[01-ai-agents/HarnessEngineering企业级实战]], [[01-ai-agents/Harness工程AgentLoop]], [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]], [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]], [[02-ai-coding/Addy-Osmani-Loop-Engineering]], [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]], [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]], [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]], [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]], [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]], [[01-ai-agents/小龙虾-OpenClaw-Agent价值与边界]], [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
 date: 2026-07-08
 source: 微信公众号「Datawhale干货」2026-07-08 推送 / 翁荔 Lilian Weng（编译）
 ---
@@ -30,9 +50,9 @@ source: 微信公众号「Datawhale干货」2026-07-08 推送 / 翁荔 Lilian We
 1. **Harness 定义**：包裹在基础模型外面的系统，负责编排执行过程——思考规划、工具调用、上下文感知、持久状态、评估结果。翁荔把"agent = LLM + 记忆 + 工具 + 规划 + 行动"作为对比起点，但 Harness 不再只是 prompt 模板，而是更接近运行时 + 软件系统设计。
 2. **操作系统类比**：Harness 应该像 OS 把复杂逻辑封装起来同时保持接口简单；config、工具接口、协议会随行业发展逐渐标准化（类似 prompt engineering 时代的标准化）。
 3. **3 种设计模式**：① 工作流自动化（loop engineering，Karpathy autoresearch 是干净例子） ② 文件系统作为持久记忆（状态存文件，不塞上下文） ③ 子 Agent 与后端任务（显式可检查，父 agent 跑进程管理器）。
-4. **5 段优化路径**：指令 prompt → 结构化上下文 → 工作流 → harness 代码 → optimizer 代码。模型越强，能驾驭的目标越复杂（与 [[0xCodez-Agent-Harness-14-Steps]] 14 步路线图交叉印证）。
+4. **5 段优化路径**：指令 prompt → 结构化上下文 → 工作流 → harness 代码 → optimizer 代码。模型越强，能驾驭的目标越复杂（与 [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] 14 步路线图交叉印证）。
 5. **3 类自动化优化**：ACE（context 当工作记忆，rollout + 批评 + 环境反馈整合）/ MCE（反思+进化搜索自动生成 context 策略，组合空间 `(M choose K)`）/ Meta-Harness（直接搜 harness 代码，如 Darwin Gödel Machine 在 SWE-bench 20%→50%）。
-6. **RL 优化 Harness 的 reward hacking 风险**：模型可能绕过测试、修改测试用例、删功能性代码以让测试通过；必须保持在线训练 + 真实环境持续验证，否则就是"装腔作势"——与 [[Loop-Engineering-验证才是瓶颈]] 验证闸门呼应。
+6. **RL 优化 Harness 的 reward hacking 风险**：模型可能绕过测试、修改测试用例、删功能性代码以让测试通过；必须保持在线训练 + 真实环境持续验证，否则就是"装腔作势"——与 [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] 验证闸门呼应。
 7. **Harness 内部化预测**：harness 层改进会被内化进核心模型，但接口保留（类似 prompt engineering 历史——指令微调提升后，手工 prompt 技巧变得不那么核心，但"指定目标/约束/上下文/评估"的需求没消失）。这意味着**真正有效的 Harness 看起来"什么都没做"**。
 8. **人在抽象栈高层**：harness design 仍由人主导，未来人往抽象栈更高层移动而非被从循环里挪走。3 类约束划分：硬编码 / 模型判断 / 运行时反馈——这 3 类划分仍由人主导。
 
@@ -44,21 +64,21 @@ source: 微信公众号「Datawhale干货」2026-07-08 推送 / 翁荔 Lilian We
 - Karpathy autoresearch 仓库（工作流自动化案例）
 
 ### 下游（应用于 / 验证于）
-- [[0xCodez-Agent-Harness-14-Steps]] 14 步路线图 → 本文"5 段优化路径"对应"harness 代码→optimizer 代码"
-- [[HarnessEngineering企业级实战]] 阿里 25%→90% AI 代码率 → 印证 Harness 与模型同等重要
-- [[Harness工程AgentLoop]] 5 大工程决策 + 4 失效场景 → 印证"3 种设计模式"
-- [[Code-is-cheap-AI-Native-五倍效率]] 水流理论 + 6 种 checkpoint → 印证"Harness 应该刻意简洁通用"
-- [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] 12 专家 + DAG → 印证"子 Agent 与后端任务"
-- [[字节跳动洪定坤-AI-Coding的实践与探索]] 3×3×100 实验 → 印证"RL 优化 Harness 风险"
-- [[Addy-Osmani-Loop-Engineering]] 5+1 积木 → 印证"工作流自动化模式"
+- [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] 14 步路线图 → 本文"5 段优化路径"对应"harness 代码→optimizer 代码"
+- [[01-ai-agents/HarnessEngineering企业级实战]] 阿里 25%→90% AI 代码率 → 印证 Harness 与模型同等重要
+- [[01-ai-agents/Harness工程AgentLoop]] 5 大工程决策 + 4 失效场景 → 印证"3 种设计模式"
+- [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]] 水流理论 + 6 种 checkpoint → 印证"Harness 应该刻意简洁通用"
+- [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] 12 专家 + DAG → 印证"子 Agent 与后端任务"
+- [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] 3×3×100 实验 → 印证"RL 优化 Harness 风险"
+- [[02-ai-coding/Addy-Osmani-Loop-Engineering]] 5+1 积木 → 印证"工作流自动化模式"
 
 ### 同级（横向 / 并列）
-- [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] Anthropic 团队视角（管理者）
-- [[AI-Native企业-Agent团队和AI-Factory重写公司体系]] Groupon 视角（VP 工程）
-- [[Multica-AI-Native-组织-人是最慢的节点]] 极端样本（4 人+几十 Agent）
-- [[Leeka-Task-Decomposition-Agentic-Workflow]] 任务拆解视角
-- [[小龙虾-OpenClaw-Agent价值与边界]] "什么时候选 Agent" 视角
-- [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] 单 Agent 端到端 4 层 8 步
+- [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] Anthropic 团队视角（管理者）
+- [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]] Groupon 视角（VP 工程）
+- [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]] 极端样本（4 人+几十 Agent）
+- [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]] 任务拆解视角
+- [[01-ai-agents/小龙虾-OpenClaw-Agent价值与边界]] "什么时候选 Agent" 视角
+- [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] 单 Agent 端到端 4 层 8 步
 
 ## 正文要点（5 条）+ Seetong 借鉴动作（6 条）
 
@@ -74,11 +94,11 @@ source: 微信公众号「Datawhale干货」2026-07-08 推送 / 翁荔 Lilian We
 | # | 借鉴动作 | 对应翁荔节点 | 关联条目 |
 |---|---|---|---|
 | 1 | **CLI 工具分类体检**：Seetong AI 助手工具集按"文件/shell/搜索/编辑/版本控制/测试/文档/agent 调度/通讯/用户交互"10 类盘点，识别缺哪一类 | 节点 1 定义 | - |
-| 2 | **工作流自动化优先（5+1 积木）**：Seetong AI 助手按 Loop 思路搭 5 个积木（自动化/技能/子代理/连接器/验证器）+ 1 个拒绝机制 | 节点 3 模式① | [[Addy-Osmani-Loop-Engineering]] [[AI循环-Claude-GPT和Mira到底什么才是真正好用的]] |
-| 3 | **文件系统作为持久记忆**：Seetong 状态文件（spec/codemap/新对话上下文）替代"全塞上下文" | 节点 3 模式② | [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] product-state.json 模式 |
-| 4 | **5 段优化路径对照**：Seetong AI 助手自评当前在哪一段（指令 prompt？结构化上下文？工作流？harness 代码？optimizer 代码？）——明确下一步演进方向 | 节点 4 路径 | [[0xCodez-Agent-Harness-14-Steps]] |
+| 2 | **工作流自动化优先（5+1 积木）**：Seetong AI 助手按 Loop 思路搭 5 个积木（自动化/技能/子代理/连接器/验证器）+ 1 个拒绝机制 | 节点 3 模式① | [[02-ai-coding/Addy-Osmani-Loop-Engineering]] [[02-ai-coding/AI循环-Claude-GPT和Mira到底什么才是真正好用的]] |
+| 3 | **文件系统作为持久记忆**：Seetong 状态文件（spec/codemap/新对话上下文）替代"全塞上下文" | 节点 3 模式② | [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] product-state.json 模式 |
+| 4 | **5 段优化路径对照**：Seetong AI 助手自评当前在哪一段（指令 prompt？结构化上下文？工作流？harness 代码？optimizer 代码？）——明确下一步演进方向 | 节点 4 路径 | [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] |
 | 5 | **Harness 内部化季度复盘**：每季度 review——哪些"老 prompt 技巧"已被模型内化（删掉）？哪些"老 harness 设计"反而限制了模型能力（重写）？ | 节点 7 内部化 | - |
-| 6 | **人在抽象栈高层**：Seetong 主人+黄松佳+谭伟+张威按"Harness 设计评审 + 边界设定"角色走，**不**在 harness 代码细节里写 | 节点 8 人在高层 | [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] "Fiona 团队 8 倍产出靠慢方法论" |
+| 6 | **人在抽象栈高层**：Seetong 主人+黄松佳+谭伟+张威按"Harness 设计评审 + 边界设定"角色走，**不**在 harness 代码细节里写 | 节点 8 人在高层 | [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] "Fiona 团队 8 倍产出靠慢方法论" |
 
 ## 备注与限制
 

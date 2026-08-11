@@ -84,6 +84,6 @@ Harness 会不会被模型"吞噬"？
 
 ## 相关资源
 
-- 原文：[[2026-05-07-Harness工程AgentLoop]]
+- 原文：[[01-ai-agents/Harness工程AgentLoop]]
 - GitHub: https://github.com/shareAI-lab/learn-claude-code
-- 相关：[[Skills驱动推理新范式]] / [[agent-architecture]]
+- 相关：[[01-ai-agents/Skills驱动推理新范式]] / [[01-ai-agents/agent-architecture]]

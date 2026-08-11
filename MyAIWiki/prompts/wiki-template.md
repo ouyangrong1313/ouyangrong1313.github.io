@@ -18,7 +18,10 @@
 ---
 title: {文章标题}
 category: {01-ai-agents | 02-ai-coding | 03-productivity | 04-app-dev | 05-content-creation | 06-ai-tech | 07-rag-systems}
-tags: [#主题/xxx, #场景/xxx, #节点/xxx]
+tags:
+  - 主题/xxx
+  - 场景/xxx
+  - 节点/xxx
 nodes: [{节点1}, {节点2}, {节点3}, {节点4}, {节点5}]
 links: [[{已有文章1}]], [[{已有文章2}]], [[{已有文章3}]]
 date: {YYYY-MM-DD}
@@ -37,7 +40,7 @@ source: {微信公众号 / 智见AI}
 
 ## 分类提炼
 - 场景：{应用场景}
-- 标签：{复述 frontmatter.tags}
+- 标签： {正文标签，如 #主题/xxx #场景/xxx #节点/xxx}
 - 类型：{方法论 / 实操框架 / 案例分析 / 技术拆解 / ...}
 
 ## 知识节点（5-10 个独立概念）
@@ -143,7 +146,7 @@ source: {微信公众号 / 智见AI}
 |------|------|------|------|
 | `title` | ✅ | 字符串 | 文章标题 |
 | `category` | ✅ | 枚举 | 01-ai-agents / 02-ai-coding / 03-productivity / 04-app-dev / 05-content-creation / 06-ai-tech / 07-rag-systems |
-| `tags` | ✅ | 数组 | 标签数组，使用 `#主题/xxx #场景/xxx #节点/xxx` 格式 |
+| `tags` | ✅ | 数组 | YAML 值不带 `#`，例如 `主题/xxx`；正文标签须写成 `标签： #主题/xxx` |
 | `nodes` | ✅ | 数组 | 知识节点数组（5-10 个） |
 | `links` | ⚠️ | 数组 | 至少 1 个内链（推荐 3+） |
 | `date` | ✅ | YYYY-MM-DD | 写入日期 |
@@ -182,21 +185,20 @@ source: {微信公众号 / 智见AI}
 ### 写完后跑
 
 ```bash
-# 1. 验证 frontmatter
+# 1. 验证 frontmatter、链接和索引
+python3 scripts/wiki-health-check.py
+
+# 2. 验证节点与反链检索
 python3 scripts/wiki-query.py node "{节点名}"
-
-# 2. 验证关联图谱链接是否真实存在
 python3 scripts/wiki-query.py backlink "{文章名}"
-
-# 3. 加入索引
-python3 scripts/update-index.py  # 【未来脚本】
 ```
 
 ### 触发 Lint
 
 ```bash
-# 跑一次轻量 lint（只检查新增文章）
-python3 scripts/lint-new.py  # 【未来脚本】
+# 跑一次可修复的格式规范化，再复查
+python3 scripts/wiki-health-check.py --fix
+python3 scripts/wiki-health-check.py
 ```
 
 ---

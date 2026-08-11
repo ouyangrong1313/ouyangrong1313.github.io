@@ -4,20 +4,26 @@ author: 叶小钗(微信公众号同名,成都 TGO 7 组组长)
 date: 2026-07-13
 slug: 生产级Agent全景
 category: 02-ai-coding
-tags: [Agent全景, Harness, AI原生组织, 人才招聘, Workflow矩阵, 企业转型]
+tags:
+  - Agent全景
+  - Harness
+  - AI原生组织
+  - 人才招聘
+  - Workflow矩阵
+  - 企业转型
 rating: ⭐⭐⭐
 source_wechat: https://mp.weixin.qq.com/s/rZEqIQR-RcNBWMH_9xq2bw
 source_topic: 上月为某企业 6 场生产级 Agent 系统性培训理论部分整理
-digest: "[[生产级Agent全景-digest]]"
+digest: "[[02-ai-coding/生产级Agent全景-digest]]"
 related:
-  - "[[叶小钗-AI原生组织方法论-2026版]]"
-  - "[[AI-团队协作-Loop-SDD]]"
-  - "[[0xCodez-Agent-Harness-14-Steps]]"
-  - "[[Lilian-Weng-Harness-Engineering-自我改进]]"
-  - "[[WorkBuddy-Harness工程复盘]]"
-  - "[[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]"
-  - "[[Multica-AI-Native-组织-人是最慢的节点]]"
-  - "[[Capihom-AI-Native企业-Agent团队和AI-Factory重写公司体系]]"
+  - "[[02-ai-coding/叶小钗-AI原生组织方法论-2026版]]"
+  - "[[01-ai-agents/AI-团队协作-Loop-SDD]]"
+  - "[[01-ai-agents/0xCodez-Agent-Harness-14-Steps]]"
+  - "[[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]"
+  - "[[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]"
+  - "[[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]"
+  - "[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]"
+  - "[[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]"
 ---
 
 # 生产级 Agent 全景:架构、Harness 工程、组织与人才
@@ -100,18 +106,18 @@ Manus 用 CodeAct 思路 → Codex/Claude Code 扩到通用工作 → Coding Age
 ### 关联图谱
 
 **上游(本文论点的来源)**:
-- [[叶小钗-AI原生组织方法论-2026版]] —— 同作者叶小钗 7-07 篇,AI 原生组织 3.0 公式是本文基础
-- [[AI-团队协作-Loop-SDD]] —— 同作者更早 SDD 篇
-- [[0xCodez-Agent-Harness-14-Steps]] —— Harness 落地骨架 14 步
+- [[02-ai-coding/叶小钗-AI原生组织方法论-2026版]] —— 同作者叶小钗 7-07 篇,AI 原生组织 3.0 公式是本文基础
+- [[01-ai-agents/AI-团队协作-Loop-SDD]] —— 同作者更早 SDD 篇
+- [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] —— Harness 落地骨架 14 步
 
 **下游(本文论点的应用)**:
-- [[Lilian-Weng-Harness-Engineering-自我改进]] —— Harness OS 类比(理论框架)
-- [[WorkBuddy-Harness工程复盘]] —— 产品视角 Harness 一体化
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] —— Harness OS 类比(理论框架)
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]] —— 产品视角 Harness 一体化
 
 **同级(横向 / 关联)**:
-- [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] —— Anthropic 实证
-- [[Multica-AI-Native-组织-人是最慢的节点]] —— AI 原生组织极端样本
-- [[Capihom-AI-Native企业-Agent团队和AI-Factory重写公司体系]] —— Groupon 实证
+- [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] —— Anthropic 实证
+- [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]] —— AI 原生组织极端样本
+- [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]] —— Groupon 实证
 
 ## 正文要点(8 条 = 主张 + 案例 + 操作)
 

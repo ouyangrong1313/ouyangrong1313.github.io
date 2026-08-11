@@ -7,7 +7,7 @@
 ## 分类提炼
 
 - 场景：Codex CLI / oh-my-codex / 长任务协作 / 个人工作台优化
-- 标签：#主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践 #场景/技术博客
+- 标签： #主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践 #场景/技术博客
 - 类型：改造路线 / 配置清单 / 执行优先级
 
 ## 为什么现在该做这一步
@@ -148,14 +148,14 @@ Escalation rule:
 
 ## 当前最值得新增的页面
 
-- [[任务类型到验证模板]]
-- [[Codex长期线程设计草案]]
-- [[Codex工具入口与能力边界]]
-- [[多Agent使用边界与并行判定]]
+- [[02-ai-coding/任务类型到验证模板]]
+- [[02-ai-coding/Codex长期线程设计草案]]
+- [[02-ai-coding/Codex工具入口与能力边界]]
+- [[02-ai-coding/多Agent使用边界与并行判定]]
 
 ## 相关链接
 
-- [[来自Codex官方团队的分享-如何把Codex用到极致]]
-- [[Codex配置优化清单-从Harness视角]]
-- [[MyAIWiki写入规范与验证模板]]
-- [[知识卡片编译模板-长文如何压成raw-digest-wiki三层]]
+- [[02-ai-coding/来自Codex官方团队的分享-如何把Codex用到极致]]
+- [[02-ai-coding/Codex配置优化清单-从Harness视角]]
+- [[02-ai-coding/MyAIWiki写入规范与验证模板]]
+- [[02-ai-coding/知识卡片编译模板-长文如何压成raw-digest-wiki三层]]

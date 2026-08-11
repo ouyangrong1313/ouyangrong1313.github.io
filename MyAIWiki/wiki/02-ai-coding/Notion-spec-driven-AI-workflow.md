@@ -1,9 +1,25 @@
 ---
 title: "规范驱动开发：Notion 的 AI 工程工作流程丨How I AI"
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI-Native, #主题/SDD, #主题/Harness, #主题/工程管理, #主题/DevX, #节点/规范驱动开发, #节点/Spec, #节点/Notion-AI, #节点/Codex, #节点/Code-Review, #节点/验证闭环, #手法/案例拆解, #手法/反例论证, #场景/编译长文, #场景/工程团队]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Native
+  - 主题/SDD
+  - 主题/Harness
+  - 主题/工程管理
+  - 主题/DevX
+  - 节点/规范驱动开发
+  - 节点/Spec
+  - 节点/Notion-AI
+  - 节点/Codex
+  - 节点/Code-Review
+  - 节点/验证闭环
+  - 手法/案例拆解
+  - 手法/反例论证
+  - 场景/编译长文
+  - 场景/工程团队
 nodes: [Spec-driven-Development, Whisper-Codex流水线, 救CI, Standup-Prep自动化, Boxy-@Codex出PR, 我不懂PR评审, Spec-Verification可执行资产, 工程师角色重构]
-links: [[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]], [[AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]], [[AI-Coding的顿悟时刻]], [[Claude-Code团队5条工作原则-Fiona-Fung分享]], [[Claude-Code负责人谈AI原生工程组织]], [[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]], [[54万行代码的顿悟-Markdown才是新编程方式]]
+links: [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]], [[02-ai-coding/AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]], [[02-ai-coding/AI-Coding的顿悟时刻]], [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]], [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]], [[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]], [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]
 date: 2026-06-09
 source: 微信公众号 / Capihom（编译自 Latent Space《How I AI》播客，嘉宾：Notion 工程师 Ryan Nystrom）
 ---
@@ -23,9 +39,9 @@ source: 微信公众号 / Capihom（编译自 Latent Space《How I AI》播客�
 ## 分类提炼
 
 - **场景**：AI-Native 工程团队 / Spec 驱动的研发流水线 / 工程师角色重构
-- **标签**：#主题/AI-Coding #主题/SDD #主题/Harness #主题/DevX
+- **标签**： #主题/AI-Coding #主题/SDD #主题/Harness #主题/DevX
 - **类型**：实战案例 / 编译长文 / 播客精炼
-- **价值层级**：⭐⭐（一线 AI-Native 团队的真实流水线，与 [[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] [[AI-Coding的顿悟时刻]] [[Claude-Code团队5条工作原则-Fiona-Fung分享]] 互为镜像）
+- **价值层级**：⭐⭐（一线 AI-Native 团队的真实流水线，与 [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] [[02-ai-coding/AI-Coding的顿悟时刻]] [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] 互为镜像）
 
 ## 知识节点（8 个独立概念）
 
@@ -45,18 +61,18 @@ source: 微信公众号 / Capihom（编译自 Latent Space《How I AI》播客�
 - 同源案例基础：Notion AI / Custom Agents 团队的实战沉淀
 
 ### 下游（应用于 / 验证于）
-- [[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]：从工具/方法论视角做对照——Spec-Kit 拉上限(强秩序) / BMAD 拉下限(角色化+圆桌) / Notion 这条是"已经跑通的活案例"
-- [[AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]]：SDD 工具谱系中的 Notion 实战坐标
-- [[AI-Coding的顿悟时刻]]：Spec→LDD 流水线、工程师角色向两端收缩的"组织层/个人层"印证
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]]：瓶颈转移到验证/评审/安全 + JIT 规划 + 团队级 harness——Notion 这条把"验证前置 + spec 驱动"做了完整工程化落地
-- [[Claude-Code负责人谈AI原生工程组织]]：AI 原生组织的另一种描述口径
-- [[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]：Egalitarian + Trust by default 的组织层注脚
-- [[54万行代码的顿悟-Markdown才是新编程方式]]：Markdown 是新编程方式 + Tokenmaxxing 的"个人层"版本
+- [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]：从工具/方法论视角做对照——Spec-Kit 拉上限(强秩序) / BMAD 拉下限(角色化+圆桌) / Notion 这条是"已经跑通的活案例"
+- [[02-ai-coding/AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]]：SDD 工具谱系中的 Notion 实战坐标
+- [[02-ai-coding/AI-Coding的顿悟时刻]]：Spec→LDD 流水线、工程师角色向两端收缩的"组织层/个人层"印证
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]：瓶颈转移到验证/评审/安全 + JIT 规划 + 团队级 harness——Notion 这条把"验证前置 + spec 驱动"做了完整工程化落地
+- [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]]：AI 原生组织的另一种描述口径
+- [[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]：Egalitarian + Trust by default 的组织层注脚
+- [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]：Markdown 是新编程方式 + Tokenmaxxing 的"个人层"版本
 
 ### 同级（横向 / 并列 / 镜像）
-- [[Anthropic万字长文三个判断和一个阳谋]]：执行力的零价格 / 验收能力——本篇是"验收能力"的一线落地版
-- [[买了一样的AI为什么别家的比你的强]]：skill 沉淀视角——本篇的 spec 仓库 = 一种"组织级 skill"
-- [[为什么说React是比HTML更合适的AI设计稿格式]]：结构化文本优先——spec 进仓库与 React 组件化是同一精神
+- [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]]：执行力的零价格 / 验收能力——本篇是"验收能力"的一线落地版
+- [[02-ai-coding/买了一样的AI为什么别家的比你的强]]：skill 沉淀视角——本篇的 spec 仓库 = 一种"组织级 skill"
+- [[02-ai-coding/为什么说React是比HTML更合适的AI设计稿格式]]：结构化文本优先——spec 进仓库与 React 组件化是同一精神
 
 ## 正文要点（8 条）
 
@@ -148,4 +164,4 @@ Ryan 的建议：**先打通一小段，再把整条链路慢慢换掉，阻力�
 ## 写作引用建议
 
 - 引用本篇时优先用：spec 是 agent 的施工说明书 / 一次等待会卡住整个验证回路 / 速度问题直接变 AI 采用问题 / 高频会议没消失，低质量汇报先被淘汰 / code review 从社交阻力里拽出来
-- 与本篇强关联的引用方向：[[AI-Coding的顿悟时刻]]（"未来瓶颈 = 需求定义 + 架构设计"） / [[Anthropic万字长文三个判断和一个阳谋]]（验收能力） / [[Claude-Code团队5条工作原则]]（瓶颈转移到验证/评审/安全）
+- 与本篇强关联的引用方向：[[02-ai-coding/AI-Coding的顿悟时刻]]（"未来瓶颈 = 需求定义 + 架构设计"） / [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]]（验收能力） / [[Claude-Code团队5条工作原则]]（瓶颈转移到验证/评审/安全）

@@ -1,9 +1,18 @@
 ---
 title: 如何构建一个更"好"的知识库 - Digest
 category: 07-rag-systems
-tags: [#主题/RAG系统, #主题/知识工程, #主题/RAGAS, #主题/阿里, #节点/RAG双引擎, #节点/RAGAS三维度, #节点/8步构建流程, #节点/AutoRAG, #场景/速读摘要]
+tags:
+  - 主题/RAG系统
+  - 主题/知识工程
+  - 主题/RAGAS
+  - 主题/阿里
+  - 节点/RAG双引擎
+  - 节点/RAGAS三维度
+  - 节点/8步构建流程
+  - 节点/AutoRAG
+  - 场景/速读摘要
 nodes: [RAG-双引擎本质, RAGAS-三维度评估, 检索-质量指标, 生成-质量指标, 8-步构建流程, RAG-vs-LongContext, AutoRAG-自动化优化]
-links: [[如何构建一个更好的知识库]]
+links: [[07-rag-systems/如何构建一个更好的知识库]]
 date: 2026-06-11
 source: 微信公众号 / 阿里 idealab 团队
 ---
@@ -89,10 +98,10 @@ source: 微信公众号 / 阿里 idealab 团队
 
 ## 关联
 
-- [[如何构建一个更好的知识库]] - 完整编译版
-- [[rag-fundamentals]] [[rag-vs-finetuning]] - RAG 基础
-- [[AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]] - RAG 演进全景
-- [[知识库分层编排-从RAG到Agent-native-KCL]] - 第 5 种范式「金字塔」
+- [[07-rag-systems/如何构建一个更好的知识库]] - 完整编译版
+- [[07-rag-systems/rag-fundamentals]] [[07-rag-systems/rag-vs-finetuning]] - RAG 基础
+- [[07-rag-systems/AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]] - RAG 演进全景
+- [[07-rag-systems/知识库分层编排-从RAG到Agent-native-KCL]] - 第 5 种范式「金字塔」
 
 ## 备注
 

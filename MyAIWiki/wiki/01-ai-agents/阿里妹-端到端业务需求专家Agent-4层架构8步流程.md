@@ -1,9 +1,27 @@
 ---
 title: "阿里妹:端到端业务需求专家 Agent——4 层架构 × 8 步流程"
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/Loop, #主题/Harness, #主题/工程实践, #主题/AI-Native, #主题/多Agent协作, #节点/业务需求专家Agent, #节点/4层架构, #节点/8步流程, #节点/不直接升级, #节点/质量门禁硬规则化, #节点/反馈留痕, #节点/Agent-Team, #手法/方法论, #手法/工程实操, #公司/阿里妹, #场景/Agent落地, #场景/业务需求]
+tags:
+  - 主题/AI-Agent
+  - 主题/Loop
+  - 主题/Harness
+  - 主题/工程实践
+  - 主题/AI-Native
+  - 主题/多Agent协作
+  - 节点/业务需求专家Agent
+  - 节点/4层架构
+  - 节点/8步流程
+  - 节点/不直接升级
+  - 节点/质量门禁硬规则化
+  - 节点/反馈留痕
+  - 节点/Agent-Team
+  - 手法/方法论
+  - 手法/工程实操
+  - 公司/阿里妹
+  - 场景/Agent落地
+  - 场景/业务需求
 nodes: [业务需求专家Agent, 串联成本瓶颈, 4层横向架构, 8步纵向流程, 不直接升级原则, 质量门禁硬规则化, 反馈留痕到平台, Agent-Team拆分准则]
-links: [[APPSO-Codex-Claude-Code-Loop-Engineering]], [[Addy-Osmani-Loop-Engineering]], [[Loop-Engineering-详解-把反馈循环放进工程现场]], [[Agentic-Engineering-AI-Workbench]], [[Addy-Osmani-agent-skills-设计哲学]], [[Multica-AI-Native-组织-人是最慢的节点]], [[清华沈阳-自进化AI新物种]], [[从零设计生产级-Multi-Agent-Harness]], [[Skill-Self-Evolution]], [[seetong-tapd-version-review]]
+links: [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]], [[02-ai-coding/Addy-Osmani-Loop-Engineering]], [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]], [[02-ai-coding/Agentic-Engineering-AI-Workbench]], [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]], [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]], [[01-ai-agents/清华沈阳-自进化AI新物种]], [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]], [[01-ai-agents/Skill-Self-Evolution]], [[seetong-tapd-version-review]]
 source: https://mp.weixin.qq.com/s/9o_z-Poj9r4dbwe3NlC1pw
 author: 森叶(阿里妹)
 date: 2026-06-15
@@ -71,14 +89,14 @@ date: 2026-06-15
 
 ## 关联图谱(3 段)
 
-- **上游(产业入门)→ 本文(阿里内部落地)→ 下游(技能形态)**:[[APPSO-Codex-Claude-Code-Loop-Engineering]] → 本文 4 层 × 8 步 → [[Addy-Osmani-agent-skills-设计哲学]]
-- **同级(Loop 主题)**:[[Addy-Osmani-Loop-Engineering]] + [[Loop-Engineering-详解-把反馈循环放进工程现场]] + [[Agentic-Engineering-AI-Workbench]]
-- **同级(组织/Harness 视角)**:[[Multica-AI-Native-组织-人是最慢的节点]] + [[清华沈阳-自进化AI新物种]] + [[从零设计生产级-Multi-Agent-Harness]]
+- **上游(产业入门)→ 本文(阿里内部落地)→ 下游(技能形态)**:[[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]] → 本文 4 层 × 8 步 → [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]]
+- **同级(Loop 主题)**:[[02-ai-coding/Addy-Osmani-Loop-Engineering]] + [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] + [[02-ai-coding/Agentic-Engineering-AI-Workbench]]
+- **同级(组织/Harness 视角)**:[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]] + [[01-ai-agents/清华沈阳-自进化AI新物种]] + [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]
 
 ## 对 Seetong / OpenClaw / MyAIWiki 的 5 个可借鉴动作
 
 1. **复用 MyAIWiki 的 raw/wiki 分层**——`raw/` 就是项目记忆层,`wiki/` 就是长期知识层,继续坚持"过程材料先留 raw,结项后才进 wiki"。
-2. **把硬规则放到提示词前面**——这跟 [[Skill-Self-Evolution]] 的"验证 Gate 必填 + 失败自动回滚"是同一思路。
+2. **把硬规则放到提示词前面**——这跟 [[01-ai-agents/Skill-Self-Evolution]] 的"验证 Gate 必填 + 失败自动回滚"是同一思路。
 3. **给 [[seetong-tapd-version-review]] 补"结项审计表"**——稳定知识进 wiki,流程改进进 SKILL 候选,一次性材料进 raw,待补证单列回填。
 4. **把 Seetong 技能从"按主题"升级到"按阶段+按主题"**——补 `seetong-clarify` / `seetong-plan` / `seetong-execute` / `seetong-finish` 4 阶段编排。
 5. **用这篇文章的 3 大问题做自查**——接入成本是否足够低?循环命中/误报/回滚/成本/证据 5 项指标是否有基线?KMP 跨端是否适合拆成多 Agent?

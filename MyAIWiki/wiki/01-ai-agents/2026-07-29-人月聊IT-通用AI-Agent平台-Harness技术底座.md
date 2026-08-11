@@ -1,9 +1,20 @@
 ---
 title: "一个通用的AI Agent平台应该具备哪些Harness工程技术底座能力"
 category: 01-ai-agents
-tags: ["#主题/AI-Agent", "#主题/Harness", "#主题/Agent平台", "#主题/Context-Engineering", "#主题/MCP", "#主题/安全沙箱", "#主题/可观测性", "#节点/分层记忆", "#节点/会话快照", "#节点/上下文调度", "#场景/公众号长文"]
+tags:
+  - 主题/AI-Agent",
+  - 主题/Harness",
+  - 主题/Agent平台",
+  - 主题/Context-Engineering",
+  - 主题/MCP",
+  - 主题/安全沙箱",
+  - 主题/可观测性",
+  - 节点/分层记忆",
+  - 节点/会话快照",
+  - 节点/上下文调度",
+  - 场景/公众号长文
 nodes: ["分层记忆", "会话快照", "上下文调度", "Skill生命周期", "MCP运行时", "异步任务", "浏览器桥接", "多Agent隔离", "安全沙箱", "全链路追踪"]
-links: ["[[储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]]", "[[WorkBuddy-Harness工程复盘-从模型到可用Agent]]", "[[lencx-Agent开发指南-技术太多-该怎么学]]", "[[若飞-Agent-记忆与可验证自我改进怎么设计]]", "[[从零设计生产级-Multi-Agent-Harness]]", "[[腾讯-AI-Agent-Skill-测评方案落地]]"]
+links: ["[[01-ai-agents/储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]]", "[[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]", "[[01-ai-agents/lencx-Agent开发指南-技术太多-该怎么学]]", "[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]", "[[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]", "[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]"]
 date: 2026-07-30
 source: "微信公众号「人月聊IT」/ 何明璐"
 ---
@@ -22,7 +33,7 @@ source: "微信公众号「人月聊IT」/ 何明璐"
 ## 分类提炼
 
 - 场景：通用 Agent 平台、企业 Harness、跨会话与自动化运行
-- 标签：#主题/AI-Agent #主题/Harness #主题/Agent平台 #主题/Context-Engineering #主题/MCP #主题/安全沙箱 #主题/可观测性
+- 标签： #主题/AI-Agent #主题/Harness #主题/Agent平台 #主题/Context-Engineering #主题/MCP #主题/安全沙箱 #主题/可观测性
 - 类型：架构能力地图 / 开源代码解读 / 平台工程清单
 - 分类理由：本文把 Agent 平台拆成可独立建设的基础设施模块，补充本库 Agent OS 主线的运行时与控制面细节。
 
@@ -58,20 +69,20 @@ source: "微信公众号「人月聊IT」/ 何明璐"
 
 ### 上游（基于 / 来自）
 
-- [[储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]]：提供从 Prompt 到 Agent OS 的五层演进视图；本文将其压到记忆、运行时、安全和观测等具体部件。
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]：说明 Context、Memory、Skill、MCP、Harness 和 Loop 的产品层分工；本文补运行时实现能力。
-- [[lencx-Agent开发指南-技术太多-该怎么学]]：其可信完成与动作回执，为会话状态、权限与 Trace 提供交付视角。
+- [[01-ai-agents/储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]]：提供从 Prompt 到 Agent OS 的五层演进视图；本文将其压到记忆、运行时、安全和观测等具体部件。
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：说明 Context、Memory、Skill、MCP、Harness 和 Loop 的产品层分工；本文补运行时实现能力。
+- [[01-ai-agents/lencx-Agent开发指南-技术太多-该怎么学]]：其可信完成与动作回执，为会话状态、权限与 Trace 提供交付视角。
 
 ### 下游（应用于 / 验证于）
 
-- [[若飞-Agent-记忆与可验证自我改进怎么设计]]：可将本文的分层记忆、会话状态与规则边界，落实为读取/写入链和经验晋升门。
-- [[腾讯-AI-Agent-Skill-测评方案落地]]：Trace、成功率和工具失败率可转化为可复跑的评测基线。
-- [[从零设计生产级-Multi-Agent-Harness]]：本文的多 Agent 隔离、安全沙箱和外部能力管理，可作为其生产级架构部件清单。
+- [[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]：可将本文的分层记忆、会话状态与规则边界，落实为读取/写入链和经验晋升门。
+- [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]：Trace、成功率和工具失败率可转化为可复跑的评测基线。
+- [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]：本文的多 Agent 隔离、安全沙箱和外部能力管理，可作为其生产级架构部件清单。
 
 ### 同级（横向 / 并列）
 
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]：偏产品和方法论解释；本文偏通用平台的工程能力目录。
-- [[储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]]：偏 Agent OS 的演进框架；本文偏底层运行时的拆件与边界。
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：偏产品和方法论解释；本文偏通用平台的工程能力目录。
+- [[01-ai-agents/储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]]：偏 Agent OS 的演进框架；本文偏底层运行时的拆件与边界。
 
 ### 证据边界
 
@@ -82,5 +93,5 @@ source: "微信公众号「人月聊IT」/ 何明璐"
 ## 相关链接
 
 - [原文](https://mp.weixin.qq.com/s/g9gsWggIqMqQtlU4jeBUKA)
-- [原文摘要](../../raw/2026-07-29-人月聊IT-通用AI-Agent平台-Harness技术底座-digest.md)
+- [原文摘要](../../raw/人月聊IT-通用AI-Agent平台-Harness技术底座-digest.md)
 - [速读版](./2026-07-29-人月聊IT-通用AI-Agent平台-Harness技术底座-digest.md)

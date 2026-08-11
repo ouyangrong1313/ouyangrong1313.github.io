@@ -56,11 +56,13 @@
 MyAIWiki/
 ├── .ai-wiki-schema.md      # AI 维护规则（核心！）
 ├── log.md                   # 时间序变更记录
-├── raw/                     # 原始素材区（不可修改）
-│   ├── inbox/              # 待处理入口（新素材先放这里）
-│   ├── articles/           # 已处理的原文存档
+├── raw/                     # 原始素材与拆解
+│   ├── {slug}.md           # 已归档原文
+│   ├── {slug}-digest.md    # 原文拆解
+│   ├── inbox/              # 可选待处理入口
 │   ├── notes/              # 随手记的笔记
-│   └── screenshots/        # 截图/图片素材（预留）
+│   ├── screenshots/        # 截图/图片素材（预留）
+│   └── source-cache/       # 网页抓取的 HTML/TXT 缓存
 │
 ├── wiki/                    # 编译后的知识库（AI 写）
 │   ├── master-index.md      # 主索引
@@ -79,7 +81,11 @@ MyAIWiki/
 │   │   └── index.md
 │   │
 │   ├── 04-app-dev/         # APP 研发流程 ⭐
-│   │   └── index.md
+│   │   ├── index.md
+│   │   ├── ios/index.md
+│   │   ├── android/index.md
+│   │   ├── architecture/index.md
+│   │   └── ai-integration/index.md
 │   │
 │   ├── 05-content-creation/ # 内容创作
 │   │   ├── index.md
@@ -94,7 +100,8 @@ MyAIWiki/
 │   └── 07-rag-systems/      # RAG 系统
 │       └── index.md
 │
-├── prompts/                 # 提示词模板
+├── prompts/                 # 提示词模板与生成的精修提示词
+│   ├── generated/           # 自动生成的精修提示词
 │   └── bug-fix.md
 │
 └── CLAUDE.md                # 本文件
@@ -116,12 +123,12 @@ MyAIWiki/
 
 新素材处理流程：
 ```
-收到文章链接 → 保存到 raw/inbox/ → 编译成 wiki 页面 → 删除 inbox 中的原文
+收到文章链接 → 保存到 raw/{slug}.md → 编译成 wiki 页面 → 保留 raw 原文与 digest
 ```
 
 **为什么需要 Inbox？**
-- 减少信息焦虑：不确定要不要存档？先丢 inbox，定期处理
-- 避免 raw/ 变成垃圾堆：新素材直接进 inbox，有价值才转正
+- 减少信息焦虑：不确定要不要存档？可先丢 inbox，定期处理
+- 避免 raw/ 变成垃圾堆：确认保留后写入根目录的标准 `{slug}.md`，不新增平行归档目录
 
 ---
 
@@ -131,7 +138,8 @@ MyAIWiki/
 2. **英文全部小写**
 3. **中文保持原样**
 4. **digest 后缀**：原文的拆解版本统一用 `-digest.md` 后缀
-5. **版本控制**：如需版本，用 `_v1`、`_v2`（下划线）
+5. **日期写入元数据**：不要将获取日期写入文件名；原文中的“日期/获取时间”字段是唯一日期来源
+6. **版本控制**：如需版本，用 `_v1`、`_v2`（下划线）
 
 **示例**：
 - `谷歌开源agent-skills.md` — 原文
@@ -218,6 +226,8 @@ MyAIWiki/
 ---
 
 ## 标签体系
+
+> 书写规则：frontmatter 的 `tags` 使用不带 `#` 的 YAML 值；正文 Obsidian 标签必须位于行首或空白之后，例如 `标签： #主题/AI-Coding`。
 
 ### 按主题
 - `#主题/AI-Agent` - AI Agent 相关

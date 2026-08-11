@@ -3,7 +3,7 @@ title: Anthropic 40 万场对话研究 - 专业杠杆 - Digest
 slug: Anthropic-40万场-专业杠杆-digest
 date: 2026-06-25
 category: 01-ai-agents
-related: "[[Anthropic-40万场-专业杠杆]]"
+related: "[[01-ai-agents/Anthropic-40万场-专业杠杆]]"
 ---
 
 # Anthropic 40 万场对话研究 - Digest
@@ -70,9 +70,9 @@ AI 时代你是哪类人？
 
 ## 关联图谱
 
-**上游/平行**：[[清华沈阳-自进化AI新物种]] / [[章文龙-AI分身时代-在场重新定价]] / [[Nikesh-Arora-模型过剩与记忆护城河]] / [[Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] / [[Multica-AI-Native-组织-人是最慢的节点]]
+**上游/平行**：[[01-ai-agents/清华沈阳-自进化AI新物种]] / [[06-ai-tech/章文龙-AI分身时代-在场重新定价]] / [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]] / [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] / [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]
 
-**下游（Seetong 落地）**：[[AI-PM核心技能-观测评估与反馈闭环]] / [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] / [[0xCodez-Agent-Harness-14-Steps]] / [[Addy-Osmani-Loop-Engineering]]
+**下游（Seetong 落地）**：[[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]] / [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] / [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[02-ai-coding/Addy-Osmani-Loop-Engineering]]
 
 ## 一句话带回去
 

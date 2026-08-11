@@ -50,7 +50,7 @@ source: 微信公众号「InfoQ Pro」2026-06-26 深度访谈
 
 **5 个 Seetong 借鉴**:① db9 案例体检 → 识别 Seetong 哪些模块可工厂化(重复+模式化+文档完备)② 技术栈锁定体检 → 评估 Seetong iOS ObjC + Android Java + Harmony ArkTS 跨端迁移可行性 ③ AI 讨好型人格防御 → 必须有"老登"做最终判断,Agent 测试结果必须独立验证 ④ "老登"价值重定义 → 老工程师转"判断+掌舵"(代码评审/架构决策/技术选型/关键 Input) ⑤ 维护之争决策 → 新功能工厂化,老屎山慎重重写(滕昱警告"PR merge 进来 release 就要延期")
 
-**关联**:**下游三连击** [[字节跳动洪定坤-AI-Coding的实践与探索]] 大厂 VP 视角 + [[深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]] 创业公司创始人视角 + **本文实战派视角**;[[清华沈阳-自进化AI新物种]] 自进化 + [[0xCodez-Agent-Harness-14-Steps]] / [[Harness不是目的-知识才是护城河]] Harness + [[与AI一起做产品的六条原则]] 6 原则做"为什么"的人;**同级** [[面向Skills编程-淘宝企业购端到端研发提效实践]] 阿里淘系 + [[Claude-Code团队5条工作原则-Fiona-Fung分享]] Anthropic
+**关联**:**下游三连击** [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] 大厂 VP 视角 + [[02-ai-coding/深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]] 创业公司创始人视角 + **本文实战派视角**;[[01-ai-agents/清华沈阳-自进化AI新物种]] 自进化 + [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] Harness + [[03-productivity/与AI一起做产品的六条原则]] 6 原则做"为什么"的人;**同级** [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] 阿里淘系 + [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] Anthropic
 
 **备注**:db9 数据可信度高(黄东旭自述);4 大重写案例均有具体来源;未公开:db9 harness 设计 / AI 造假测试具体形态;**三连击价值**:本文 + 字节 + Warp = AI Coding 落地"三方视角"完整主线(大厂 VP / 创业公司创始人 / 实战派);**本仓库缺位补完**:02-ai-coding 现有主线偏方法论,**缺位"具体项目实证 + 大量重写案例 + 维护之争两派分岔"**,本文补完
 

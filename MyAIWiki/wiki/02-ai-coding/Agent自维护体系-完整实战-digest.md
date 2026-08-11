@@ -3,9 +3,12 @@ title: Soyoger Agent 自维护体系 - Digest
 date: 2026-07-20
 slug: Agent自维护体系-完整实战-digest
 category: 02-ai-coding
-tags: [Loop-Engineering, Agent自维护, Skill设计]
+tags:
+  - Loop-Engineering
+  - Agent自维护
+  - Skill设计
 rating: ⭐⭐
-source: "[[Agent自维护体系-完整实战]]"
+source: "[[02-ai-coding/Agent自维护体系-完整实战]]"
 ---
 
 # Soyoger Agent 自维护体系 - Digest
@@ -48,7 +51,7 @@ source: "[[Agent自维护体系-完整实战]]"
 
 ## 关联与限制
 
-**关联**：方法论同主线 [[Loop-Engineering-验证才是瓶颈]] / [[Addy-Osmani-Loop-Engineering]] / [[架构腐朽与Loop-Engineering]] / [[AI循环-Claude-GPT和Mira到底什么才是真正好用的]]；前置层 [[Lilian-Weng-Harness-Engineering-自我改进]]；同主线 [[loonggg-Claude-Code-技能心法-11条建议]] / [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] / [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]。
+**关联**：方法论同主线 [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] / [[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[02-ai-coding/架构腐朽与Loop-Engineering]] / [[02-ai-coding/AI循环-Claude-GPT和Mira到底什么才是真正好用的]]；前置层 [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]；同主线 [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]] / [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] / [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]。
 
 **待补证**：月 20 人天 / 80% 降本 / 6 零件顺序均为 Soyoger 单团队经验，无行业基准；工具链 30% 占比也是经验值。
 

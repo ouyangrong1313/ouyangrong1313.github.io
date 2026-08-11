@@ -3,9 +3,13 @@ title: 生产级 Agent 全景 - Digest
 date: 2026-07-13
 slug: 生产级Agent全景-digest
 category: 02-ai-coding
-tags: [Agent全景, Harness, AI原生组织, 人才招聘]
+tags:
+  - Agent全景
+  - Harness
+  - AI原生组织
+  - 人才招聘
 rating: ⭐⭐
-source: "[[生产级Agent全景]]"
+source: "[[02-ai-coding/生产级Agent全景]]"
 ---
 
 # 生产级 Agent 全景 - Digest
@@ -58,20 +62,20 @@ source: "[[生产级Agent全景]]"
 
 ### 上游
 
-- [[叶小钗-AI原生组织方法论-2026版]] —— 同作者 7-07 篇,3.0 公式是本文基础
-- [[AI-团队协作-Loop-SDD]] —— 同作者更早 SDD 篇
-- [[0xCodez-Agent-Harness-14-Steps]] —— Harness 落地骨架 14 步
+- [[02-ai-coding/叶小钗-AI原生组织方法论-2026版]] —— 同作者 7-07 篇,3.0 公式是本文基础
+- [[01-ai-agents/AI-团队协作-Loop-SDD]] —— 同作者更早 SDD 篇
+- [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] —— Harness 落地骨架 14 步
 
 ### 下游
 
-- [[Lilian-Weng-Harness-Engineering-自我改进]] —— Harness OS 类比(理论框架)
-- [[WorkBuddy-Harness工程复盘]] —— 产品视角 Harness 一体化
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] —— Harness OS 类比(理论框架)
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]] —— 产品视角 Harness 一体化
 
 ### 同级
 
-- [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] —— Anthropic 实证
-- [[Multica-AI-Native-组织-人是最慢的节点]] —— AI 原生组织极端样本
-- [[Capihom-AI-Native企业-Agent团队和AI-Factory重写公司体系]] —— Groupon 实证
+- [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] —— Anthropic 实证
+- [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]] —— AI 原生组织极端样本
+- [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]] —— Groupon 实证
 
 ### 备注
 

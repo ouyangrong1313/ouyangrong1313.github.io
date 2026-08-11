@@ -1,9 +1,18 @@
 ---
 title: 别再反复教 Coding Agent——让项目记住自己如何工作的五个步骤
 category: 02-ai-coding
-tags: [#主题/Coding-Agent #主题/项目记忆 #主题/AGENTS-md #主题/Skill设计 #主题/CLI设计 #主题/Harness #主题/Loop-Discovery #主题/Seetong借鉴 #作者/Phodal]
+tags:
+  - 主题/Coding-Agent
+  - 主题/项目记忆
+  - 主题/AGENTS-md
+  - 主题/Skill设计
+  - 主题/CLI设计
+  - 主题/Harness
+  - 主题/Loop-Discovery
+  - 主题/Seetong借鉴
+  - 作者/Phodal
 nodes: [AGENTS-md项目地图, 渐进式披露, 文档任务路由, Skill探索门槛, CLI优先MCP兜底, Agent-Work-Loop, Loop-Discovery沉淀决策树, 写进仓库不等于实践生效]
-links: [[phodal-Better-Harness-任务级证据评估]], [[Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]], [[面向Skills编程-淘宝企业购端到端研发提效实践]], [[loonggg-Claude-Code-技能心法-11条建议]], [[Agent自维护体系-完整实战]], [[腾讯-AI-Agent-Skill-测评方案落地]], [[lencx-Agent开发指南-技术太多-该怎么学]], [[Skill-Self-Evolution]], [[Loop-Engineering-验证才是瓶颈]], [[54万行代码的顿悟-Markdown才是新编程方式]], [[AI-Coding的顿悟时刻]]
+links: [[01-ai-agents/phodal-Better-Harness-任务级证据评估]], [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]], [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]], [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]], [[02-ai-coding/Agent自维护体系-完整实战]], [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]], [[01-ai-agents/lencx-Agent开发指南-技术太多-该怎么学]], [[01-ai-agents/Skill-Self-Evolution]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]], [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]], [[02-ai-coding/AI-Coding的顿悟时刻]]
 date: 2026-08-03
 source: 微信公众号 / Phodal（原文链接 https://mp.weixin.qq.com/s/1FrHNkfVpp8CE7keWt_lbQ）
 ---
@@ -11,7 +20,7 @@ source: 微信公众号 / Phodal（原文链接 https://mp.weixin.qq.com/s/1FrHN
 # 别再反复教 Coding Agent——让项目记住自己如何工作的五个步骤
 
 - 原文链接：https://mp.weixin.qq.com/s/1FrHNkfVpp8CE7keWt_lbQ
-- 作者：Phodal（Better Harness / QoderAI；同作者 7/28 已编 [[phodal-Better-Harness-任务级证据评估]]）
+- 作者：Phodal（Better Harness / QoderAI；同作者 7/28 已编 [[01-ai-agents/phodal-Better-Harness-任务级证据评估]]）
 - 仓库：https://github.com/QoderAI/better-harness
 - 发布时间：推断 2026-08 / 获取时间：2026-08-03 10:29 / 原文约 4346 字
 
@@ -22,7 +31,7 @@ source: 微信公众号 / Phodal（原文链接 https://mp.weixin.qq.com/s/1FrHN
 - 场景：AI Coding 项目工程化 / Agent 友好型项目结构化
 - 类型：方法论 + 落地 SOP
 - 主线：02-ai-coding / Skill 设计 + Harness 工程化
-- 同作者姊妹篇：[[phodal-Better-Harness-任务级证据评估]]（7/28）——本文是 Better Harness 落地的"项目侧"篇，7/28 是"评估侧"篇
+- 同作者姊妹篇：[[01-ai-agents/phodal-Better-Harness-任务级证据评估]]（7/28）——本文是 Better Harness 落地的"项目侧"篇，7/28 是"评估侧"篇
 
 ## 知识节点（8 个独立概念）+ 正文要点（5 条）
 
@@ -39,9 +48,9 @@ source: 微信公众号 / Phodal（原文链接 https://mp.weixin.qq.com/s/1FrHN
 
 ## 关联图谱
 
-- **上游：** [[phodal-Better-Harness-任务级证据评估]]（同作者 7/28，对偶必读）[[lencx-Agent开发指南-技术太多-该怎么学]] [[Skill-Self-Evolution]] [[Loop-Engineering-验证才是瓶颈]]
-- **下游：** [[Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] [[面向Skills编程-淘宝企业购端到端研发提效实践]] [[loonggg-Claude-Code-技能心法-11条建议]] [[Agent自维护体系-完整实战]] [[腾讯-AI-Agent-Skill-测评方案落地]]
-- **同级：** [[54万行代码的顿悟-Markdown才是新编程方式]] [[AI-Coding的顿悟时刻]] [[Task-类型到验证模板]]
+- **上游：** [[01-ai-agents/phodal-Better-Harness-任务级证据评估]]（同作者 7/28，对偶必读）[[01-ai-agents/lencx-Agent开发指南-技术太多-该怎么学]] [[01-ai-agents/Skill-Self-Evolution]] [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]
+- **下游：** [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]] [[02-ai-coding/Agent自维护体系-完整实战]] [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]
+- **同级：** [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] [[02-ai-coding/AI-Coding的顿悟时刻]] [[Task-类型到验证模板]]
 
 ## 6 个对 Seetong 团队可借鉴动作
 
@@ -56,6 +65,6 @@ source: 微信公众号 / Phodal（原文链接 https://mp.weixin.qq.com/s/1FrHN
 
 1. **作者来源：** Phodal，公众号名未在 HTML meta 暴露；按内容与 Better Harness 仓库作者一致。
 2. **发布时间：** 推断 2026-08。
-3. **关联首选：** 与 [[phodal-Better-Harness-任务级证据评估]]（同作者 7/28 编译）形成"评估 / 落地"对偶，**两文应一起读**。
+3. **关联首选：** 与 [[01-ai-agents/phodal-Better-Harness-任务级证据评估]]（同作者 7/28 编译）形成"评估 / 落地"对偶，**两文应一起读**。
 4. **可证伪点：** "相似需求 ≥ 2 次"是经验门槛非可量化阈值；Seetong 30-50 人小团队建议改为"≥ 3 次"更稳。
 5. **不适用：** 一次性项目 / 1 人小工具 / 教学 Demo——本文最小单元（入口/命令/风险/导航 4 项）才能落地。

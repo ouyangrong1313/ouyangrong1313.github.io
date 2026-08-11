@@ -119,5 +119,5 @@ Skill 是**仅追加为主**的：
 
 ---
 
-标签：#主题/AI Agent · #主题/Skill设计 · #场景/技术博客
+标签： #主题/AI Agent · #主题/Skill设计 · #场景/技术博客
 原文：https://mp.weixin.qq.com/s/vXOpiUiAK-fG6GUgi2sD-A

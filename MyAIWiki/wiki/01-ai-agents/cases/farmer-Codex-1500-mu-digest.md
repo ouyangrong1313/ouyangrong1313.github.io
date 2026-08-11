@@ -1,9 +1,15 @@
 ---
 title: "一个农民，用 Codex 管理了 1500 亩地 - Digest"
 category: 01-ai-agents
-tags: [#主题/行业落地, #场景/农业, #场景/落地案例, #节点/农业AI全景, #节点/ChatGPT到Codex, #节点/工具低估]
+tags:
+  - 主题/行业落地
+  - 场景/农业
+  - 场景/落地案例
+  - 节点/农业AI全景
+  - 节点/ChatGPT到Codex
+  - 节点/工具低估
 nodes: [农业-AI-全景案例, 病虫害多模态识别, 卫星遥感主动监测, IoT温室远程控制, 农业知识库客服机器人, ChatGPT到Codex学习干活二分, 先学习再落地普通人AI路径, 工具低估与行业AI落地反思]
-links: [[farmer-Codex-1500-mu]]
+links: [[01-ai-agents/cases/farmer-Codex-1500-mu]]
 date: 2026-06-09
 source: 微信公众号 / AI小范儿（转载自 chatgptpro.substack.com，原始素材来自 OpenAI 官方案例）
 ---
@@ -56,10 +62,10 @@ source: 微信公众号 / AI小范儿（转载自 chatgptpro.substack.com，原�
 ## 与已有文章的关联
 
 - **强关联**（同主线"AI 落地"）：
-  - [[AI时代给人类留了最后一份工作-是农民]]（同是"农民+AI"——本篇是 OpenAI 官方案例，那篇是 Brett Goldstein 的 Context Farmer 概念；案例 vs 战略两面）
-  - [[Agent时代架构师系统能力]]（系统化能力不限于研发）
-  - [[从Prompt-Context到Harness-工程的三次进化与终局之战]]（Harness 思想不限于研发——农民用的"ChatGPT+Codex"也是简易 Harness）
-  - [[good-ai-pm-bad-ai-pm|Good AI PM / Bad AI PM]]（稀缺的是真实业务问题）
+  - [[01-ai-agents/AI时代给人类留了最后一份工作-是农民]]（同是"农民+AI"——本篇是 OpenAI 官方案例，那篇是 Brett Goldstein 的 Context Farmer 概念；案例 vs 战略两面）
+  - [[01-ai-agents/Agent时代架构师系统能力]]（系统化能力不限于研发）
+  - [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]（Harness 思想不限于研发——农民用的"ChatGPT+Codex"也是简易 Harness）
+  - [[01-ai-agents/good-ai-pm-bad-ai-pm|Good AI PM / Bad AI PM]]（稀缺的是真实业务问题）
 
 ## 3 个对 Seetong 团队可借鉴的动作
 

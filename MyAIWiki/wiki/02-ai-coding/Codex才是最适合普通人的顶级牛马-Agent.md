@@ -432,11 +432,11 @@ UI、视频、内容、自动化任务都一样：越具体越好改。
 
 ## 关联阅读
 
-- [[从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]]
-- [[OpenClaw-vs-Hermes-多-Agent-架构设计]]
-- [[从零设计生产级-Multi-Agent-Harness]]
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
-- [[OpenClaw的正确打开方式]]
-- [[skills]]
-- [[vibe-coding]]
-- [[谷歌开源agent-skills]]
+- [[02-ai-coding/从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]]
+- [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]]
+- [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+- [[01-ai-agents/OpenClaw的正确打开方式]]
+- [[02-ai-coding/skills]]
+- [[02-ai-coding/vibe-coding]]
+- [[02-ai-coding/谷歌开源agent-skills]]

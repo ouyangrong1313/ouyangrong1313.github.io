@@ -1,7 +1,12 @@
 ---
 title: AI-Native 企业 - Digest（速读摘要）
 category: 01-ai-agents
-tags: [#主题/AI-Native #主题/企业Agent #主题/Truth-Layer #主题/Eval #主题/组织变革]
+tags:
+  - 主题/AI-Native
+  - 主题/企业Agent
+  - 主题/Truth-Layer
+  - 主题/Eval
+  - 主题/组织变革
 date: 2026-07-07
 source: 微信公众号「晚点再听LaterCast」2026-07-07 推送（Augmented U 节目《Building the AI-Native Enterprise》/ Masha Sharma / Groupon VP）
 ---
@@ -64,11 +69,11 @@ source: 微信公众号「晚点再听LaterCast」2026-07-07 推送（Augmented 
 
 ## 关联
 
-- **同主线（AI Native 团队/组织图）**——[[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]（Anthropic 实证）+ [[Multica-AI-Native-组织-人是最慢的节点]]（4 人+几十 Agent 极端样本）+ [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]（L3-L4 阶段数据框架）
-- **同公众号主线**——[[未来属于垂直领域Agent]]（同晚点再听LaterCast，那篇是"未来形态预测"，本文是"Groupon 企业实证"）
-- **同 Capihom 编译系列**——[[Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]]（垂直行业商业化）+ [[Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]]（Codex 团队视角）
-- **方法论上游**——[[Addy-Osmani-Loop-Engineering]] Loop 5+1 积木（本文"先让小循环跑起来"对应 Loop 最小可用版）+ [[Laurel-CPO-Jiaona-Zhang-公司OS]]（同样是"公司 OS"视角，Laurel 给方法，本文给实证）
-- **方法论下游（Seetong 落地）**——[[腾讯-AI-Agent-Skill-测评方案落地]] 用例基线 + [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] 知识库结构化 + [[Leeka-Task-Decomposition-Agentic-Workflow]] 任务拆解
+- **同主线（AI Native 团队/组织图）**——[[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]（Anthropic 实证）+ [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]（4 人+几十 Agent 极端样本）+ [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]（L3-L4 阶段数据框架）
+- **同公众号主线**——[[01-ai-agents/未来属于垂直领域Agent]]（同晚点再听LaterCast，那篇是"未来形态预测"，本文是"Groupon 企业实证"）
+- **同 Capihom 编译系列**——[[01-ai-agents/Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]]（垂直行业商业化）+ [[02-ai-coding/Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]]（Codex 团队视角）
+- **方法论上游**——[[02-ai-coding/Addy-Osmani-Loop-Engineering]] Loop 5+1 积木（本文"先让小循环跑起来"对应 Loop 最小可用版）+ [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]]（同样是"公司 OS"视角，Laurel 给方法，本文给实证）
+- **方法论下游（Seetong 落地）**——[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]] 用例基线 + [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] 知识库结构化 + [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]] 任务拆解
 
 ## 备注
 

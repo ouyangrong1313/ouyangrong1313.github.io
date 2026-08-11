@@ -1,7 +1,13 @@
 ---
 title: Loop Engineering 的另一半:验证才是瓶颈(速读摘要)
 category: 01-ai-agents
-tags: [#主题/Loop-Engineering, #主题/AI-Agent, #主题/工程实践, #主题/AI评测, #主题/Agent-Loop, #主题/补完]
+tags:
+  - 主题/Loop-Engineering
+  - 主题/AI-Agent
+  - 主题/工程实践
+  - 主题/AI评测
+  - 主题/Agent-Loop
+  - 主题/补完
 type: digest
 date: 2026-06-18
 source: 微信公众号 / 深思 SenseAI(翻译/编译) 2026-06-17
@@ -41,6 +47,6 @@ source: 微信公众号 / 深思 SenseAI(翻译/编译) 2026-06-17
 
 ## 关联 + 备注
 
-**关联**:Harness=骨架 / Loop=循环 / 闸门=验证三角 — 与 [[Harness工程AgentLoop]] [[HarnessEngineering企业级实战]] [[0xCodez-Agent-Harness-14-Steps]] [[阿里云开发者-淘宝主播Agent的Harness工程实战]] 形成完整主线 | Loop 补完篇 — [[Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解-把反馈循环放进工程现场]] / [[APPSO-Codex-Claude-Code-Loop-Engineering]] 偏编排,本文偏验证 | 评测 [[腾讯-AI-Agent-Skill-测评方案落地]] | 治理 [[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]] | 自进化 [[Skill-Self-Evolution]] 与 EvoSkill/SkillOpt 三学派对话 | 阿里 [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] | Claude Code [[Claude-Code一周年回顾-Boris-Cat]] / [[Claude-Code首席设计师Meaghan-Choi工作流]]
+**关联**:Harness=骨架 / Loop=循环 / 闸门=验证三角 — 与 [[01-ai-agents/Harness工程AgentLoop]] [[01-ai-agents/HarnessEngineering企业级实战]] [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] 形成完整主线 | Loop 补完篇 — [[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] / [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]] 偏编排,本文偏验证 | 评测 [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]] | 治理 [[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]] | 自进化 [[01-ai-agents/Skill-Self-Evolution]] 与 EvoSkill/SkillOpt 三学派对话 | 阿里 [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] | Claude Code [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]] / [[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]]
 
 **备注**:原文英文,深思 SenseAI 翻译+补刀 | "外循环还半残"经验判断无度量 | "99.8% 通过"跑分无生产对比 | Bun "反驳层 agent"作用未拆解 | "内循环成熟"无跨模型对比

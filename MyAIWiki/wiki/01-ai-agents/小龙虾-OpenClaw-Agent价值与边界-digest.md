@@ -50,8 +50,8 @@ date: 2026-06-29
 
 ## 关联 + 备注
 
-- **关联**:`[[Leeka-Task-Decomposition-Agentic-Workflow]]` `[[Addy-Osmani-Loop-Engineering]]` `[[0xCodez-Agent-Harness-14-Steps]]` `[[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]` `[[阿里云开发者-淘宝主播Agent的Harness工程实战]]` `[[清华沈阳-自进化AI新物种]]` `[[Multica-AI-Native-组织-人是最慢的节点]]`
-- **互补关系**:本文"该不该拆/什么时候选 Agent" + `[[Leeka-Task-Decomposition-Agentic-Workflow]]`"怎么拆" = 完整闭环("选"+"拆"互补)
-- **反向参考**:`[[Harness不是目的-知识才是护城河]]`(知识护城河比 Harness 重要);本文"翻译 3 类"也是"业务架构比 Agent 重要"
+- **关联**:`[[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]]` `[[02-ai-coding/Addy-Osmani-Loop-Engineering]]` `[[01-ai-agents/0xCodez-Agent-Harness-14-Steps]]` `[[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]` `[[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]]` `[[01-ai-agents/清华沈阳-自进化AI新物种]]` `[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]`
+- **互补关系**:本文"该不该拆/什么时候选 Agent" + `[[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]]`"怎么拆" = 完整闭环("选"+"拆"互补)
+- **反向参考**:`[[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]`(知识护城河比 Harness 重要);本文"翻译 3 类"也是"业务架构比 Agent 重要"
 - **特别发现**:作者用"小龙虾 OpenClaw"做反面案例——本机 OpenClaw 是 gateway 平台,不是单一 Agent 用途
 - **透明玻璃自检**:wiki 7.8K(≤8K)/ digest 3.7K(≤4K)/ 节点 10(6-10)/ H2 3 wiki / H2 5 digest(≤5)/ 表格 0 wiki / 表格 1 digest(≤2)/ 0 陈词 ⭐⭐⭐

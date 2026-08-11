@@ -5,9 +5,26 @@ date: 2026-06-17
 source: 微信公众号 Capihom 2026-06-17 编译（原始来源：Anthropic applied AI 团队 Maya 的演讲"Build a proactive agent workflow with Claude Code"）
 source_url: https://mp.weixin.qq.com/s/kvtDAdTe2H4hTUXc3FEaVg
 youtube_url: https://www.youtube.com/watch?v=eSP7PLTXNy8
-tags: [#主题/AI-Coding, #主题/Claude-Code, #主题/主动式Agent, #主题/工作流设计, #主题/Anthropic实践, #节点/Routines, #节点/主动式Agent, #节点/三大基础设施负担, #节点/最小配置, #节点/触发器, #节点/上下文=成功的上限, #节点/可转向性, #节点/渐进路径, #手法/反例论证, #手法/产品视角, #场景/AI工作流, #场景/PM工具箱]
+tags:
+  - 主题/AI-Coding
+  - 主题/Claude-Code
+  - 主题/主动式Agent
+  - 主题/工作流设计
+  - 主题/Anthropic实践
+  - 节点/Routines
+  - 节点/主动式Agent
+  - 节点/三大基础设施负担
+  - 节点/最小配置
+  - 节点/触发器
+  - 节点/上下文=成功的上限
+  - 节点/可转向性
+  - 节点/渐进路径
+  - 手法/反例论证
+  - 手法/产品视角
+  - 场景/AI工作流
+  - 场景/PM工具箱
 nodes: [主动式Agent, Routines, 三大基础设施负担, Routines最小配置, 托管会话, 触发器, 上下文=成功的上限, 可转向性]
-links: [[Claude-Code首席设计师Meaghan-Choi工作流]], [[Claude-Code一周年回顾-Boris-Cat]], [[Anthropic万字长文三个判断和一个阳谋]], [[claude-code-dynamic-workflows]], [[Addy-Osmani-Loop-Engineering]], [[Loop-Engineering-详解-把反馈循环放进工程现场]], [[APPSO-Codex-Claude-Code-Loop-Engineering]], [[Agentic-Engineering-AI-Workbench]], [[Claude-Code之父品味不是人类护城河]], [[Claude-Code作者Boris-28分钟教你写真正有效的Prompts]]
+links: [[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]], [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]], [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]], [[02-ai-coding/claude-code-dynamic-workflows]], [[02-ai-coding/Addy-Osmani-Loop-Engineering]], [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]], [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]], [[02-ai-coding/Agentic-Engineering-AI-Workbench]], [[02-ai-coding/Claude-Code之父品味不是人类护城河]], [[02-ai-coding/Claude-Code作者Boris-28分钟教你写真正有效的Prompts]]
 ---
 
 # Claude Code：如何能构建主动式 Agent 工作流？
@@ -22,7 +39,7 @@ links: [[Claude-Code首席设计师Meaghan-Choi工作流]], [[Claude-Code一周�
 
 - **分类**:02-ai-coding（Claude Code 工具使用 + 工作流设计）
 - **类型**:Anthropic 内部演讲浓缩稿（Capihom 编译）
-- **位置**:Anthropic **第一次把 Routines 当作"产品定位"对外讲** — 与 [[Claude-Code首席设计师Meaghan-Choi工作流]]（同公司同系列）、[[Claude-Code一周年回顾-Boris-Cat]]（Routine 异步化的产品化落地）形成"工具使用 + 战略定位"四角
+- **位置**:Anthropic **第一次把 Routines 当作"产品定位"对外讲** — 与 [[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]]（同公司同系列）、[[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]]（Routine 异步化的产品化落地）形成"工具使用 + 战略定位"四角
 - **节点数**:8
 
 ## 8 个知识节点
@@ -42,22 +59,22 @@ links: [[Claude-Code首席设计师Meaghan-Choi工作流]], [[Claude-Code一周�
 
 ### 上游(基于 / 来自)
 
-- [[Claude-Code首席设计师Meaghan-Choi工作流]] — 同一公司同系列产品,Meaghan Choi 演示 worktree 并行 + 全链路自动化
-- [[Claude-Code一周年回顾-Boris-Cat]] — Routine 异步化 + Auto Mode 反直觉安全;**Routines 是 Routine 异步化的产品化落地**
-- [[Anthropic万字长文三个判断和一个阳谋]] — Anthropic 战略主线;慢变量安全垫与本文"主动式 agent"是同主线
-- [[claude-code-dynamic-workflows]] — 动态工作流的具体实现
+- [[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]] — 同一公司同系列产品,Meaghan Choi 演示 worktree 并行 + 全链路自动化
+- [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]] — Routine 异步化 + Auto Mode 反直觉安全;**Routines 是 Routine 异步化的产品化落地**
+- [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]] — Anthropic 战略主线;慢变量安全垫与本文"主动式 agent"是同主线
+- [[02-ai-coding/claude-code-dynamic-workflows]] — 动态工作流的具体实现
 
 ### 下游(应用于 / 验证于)
 
-- [[Addy-Osmani-Loop-Engineering]] — 5+1 积木中的 **Automations = Routines 的方法论原典**
-- [[Loop-Engineering-详解-把反馈循环放进工程现场]] — 4 入口(触发/沙箱/验收/账本)中"触发"对应本篇触发器设计
-- [[APPSO-Codex-Claude-Code-Loop-Engineering]] — 产业同向共振;4 人物(Boris/Cat Wu/Tibo/Addy)同向信号
-- [[Agentic-Engineering-AI-Workbench]] — 5 层结构工作台包含这种托管会话
+- [[02-ai-coding/Addy-Osmani-Loop-Engineering]] — 5+1 积木中的 **Automations = Routines 的方法论原典**
+- [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] — 4 入口(触发/沙箱/验收/账本)中"触发"对应本篇触发器设计
+- [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]] — 产业同向共振;4 人物(Boris/Cat Wu/Tibo/Addy)同向信号
+- [[02-ai-coding/Agentic-Engineering-AI-Workbench]] — 5 层结构工作台包含这种托管会话
 
 ### 同级(横向 / 并列)
 
-- [[Claude-Code之父品味不是人类护城河]] — Anthropic 战略主线另一视角
-- [[Claude-Code作者Boris-28分钟教你写真正有效的Prompts]] — Boris Cherny 工作流方法论
+- [[02-ai-coding/Claude-Code之父品味不是人类护城河]] — Anthropic 战略主线另一视角
+- [[02-ai-coding/Claude-Code作者Boris-28分钟教你写真正有效的Prompts]] — Boris Cherny 工作流方法论
 
 ## 正文要点(主张 + 案例 + 操作)
 
@@ -85,6 +102,6 @@ links: [[Claude-Code首席设计师Meaghan-Choi工作流]], [[Claude-Code一周�
 - **与本工作区 Seetong 主线的强关联**:
   - Seetong OpenClaw HEARTBEAT / 简报 cron / 神策友盟反馈 dry-run / Login 成功率每日巡检 — 都是 Seetong 现有"主动式 agent"雏形
   - 5+1 积木的 Automations = Routines 的方法论抽象
-  - 本文与 [[APPSO-Codex-Claude-Code-Loop-Engineering]] 的"4 个对 Seetong 可借鉴动作"高度对应
+  - 本文与 [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]] 的"4 个对 Seetong 可借鉴动作"高度对应
   - Maya 三大基础设施负担 = seetong-execute / seetong-plan / seetong-finish 等 Skill 设计的 checklist
-- **速读摘要**:见同目录 [[Claude-Code-主动式Agent-Routines-digest]]
+- **速读摘要**:见同目录 [[02-ai-coding/Claude-Code-主动式Agent-Routines-digest]]

@@ -6,7 +6,7 @@ AI 正在压缩 PM 的协调型劳动，真正拉开差距的将不再是文档�
 
 ## 分类提炼
 - 场景：AI 产品管理 / Agent 工作流 / 研发协作
-- 标签：#主题/AI-Agent #主题/AI科技 #主题/APP研发 #场景/公众号长文 #场景/产品方法论
+- 标签： #主题/AI-Agent #主题/AI科技 #主题/APP研发 #场景/公众号长文 #场景/产品方法论
 - 类型：观点提炼 / 方法论映射
 
 ## 要点列表
@@ -20,5 +20,5 @@ AI 正在压缩 PM 的协调型劳动，真正拉开差距的将不再是文档�
 
 ## 相关链接
 - 原文链接：https://mp.weixin.qq.com/s/7TMDbPzqWAI7JuWHBQKJew
-- 相关页面：[[garry-tan-ai-second-brain]]
-- 相关页面：[[claude-obsidian-second-brain]]
+- 相关页面：[[01-ai-agents/garry-tan-ai-second-brain]]
+- 相关页面：[[02-ai-coding/claude-obsidian-second-brain]]

@@ -2,26 +2,26 @@
 title: BillionWrites - 尼古拉斯·特斯拉的自学方法，帮你成为所在领域的颠覆者
 category: 03-productivity
 tags:
-  - "#主题/自学方法论"
-  - "#主题/战略性无聊"
-  - "#主题/基于项目的学习"
-  - "#主题/视觉化模拟"
-  - "#主题/默认模式网络"
-  - "#主题/AI时代个体成长"
-  - "#主题/创造性整合"
-  - "#场景/个人学习"
-  - "#公众号/BillionWrites"
-  - "#作者/Stephen-Petro"
+  - 主题/自学方法论
+  - 主题/战略性无聊
+  - 主题/基于项目的学习
+  - 主题/视觉化模拟
+  - 主题/默认模式网络
+  - 主题/AI时代个体成长
+  - 主题/创造性整合
+  - 场景/个人学习
+  - 公众号/BillionWrites
+  - 作者/Stephen-Petro
 nodes: 战略性无聊, 默认模式网络, 无聊窗口实践, 基于项目的学习, 项目化三标尺, 视觉化即模拟, 三原理叠加的创新系统, AI 时代有机整合护城河
 links:
-  - "[[快刀青衣-OpenAI高管教练四层能力]]"
-  - "[[苏姿丰-MIT演讲-工程师本能]]"
-  - "[[宁向东-企业家凭什么能看见别人看不见的机会]]"
-  - "[[与AI一起做产品的六条原则]]"
-  - "[[Laurel-CPO-Jiaona-Zhang-公司OS]]"
-  - "[[若飞-用ClaudeCode搭建AI学习系统]]"
-  - "[[Karpathy LLM Wiki 系统]]"
-  - "[[ai-learning-expert-perspective]]"
+  - "[[03-productivity/快刀青衣-OpenAI高管教练四层能力]]"
+  - "[[03-productivity/笔记侠-苏姿丰-MIT演讲-工程师本能]]"
+  - "[[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]]"
+  - "[[03-productivity/与AI一起做产品的六条原则]]"
+  - "[[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]]"
+  - "[[02-ai-coding/若飞-用ClaudeCode搭建AI学习系统]]"
+  - "[[03-productivity/karpathy-knowledge-system]]"
+  - "[[03-productivity/ai-learning-expert-perspective]]"
 date: 2026-07-19
 source: 微信公众号「BillionWrites」 / 原作者 Stephen Petro（YouTube @stephenpetro411）/ 编辑 vava / [原文链接](https://mp.weixin.qq.com/s/opmjbAxZxosSj5Cbrf3z0g)
 ---
@@ -62,18 +62,18 @@ source: 微信公众号「BillionWrites」 / 原作者 Stephen Petro（YouTube @
 
 ### 上游（基于 / 来自）
 
-- **元认知 + 内在稳定性**：与 [[快刀青衣-OpenAI高管教练四层能力]] 同主线——战略性无聊涉及"思考自身思考的能力"（元认知），与"情绪清晰度 + 失败能力 + 自我对话"互补"软技能 + 自学方法"双视角。
-- **工程师本能 + 拆解**：与 [[苏姿丰-MIT演讲-工程师本能]] 同主线——基于项目的学习是"拆解 + 有条不紊 + 一步步攻克"的工程化版本，把"造出来"作为本能训练路径。
-- **观察 + 试验**：与 [[宁向东-企业家凭什么能看见别人看不见的机会]] 互补——基于项目本质是"通过试验学习"，与克里斯坦森创新 4 行为（提问/观察/试验/交际）的"果断试验"维度直接呼应。
+- **元认知 + 内在稳定性**：与 [[03-productivity/快刀青衣-OpenAI高管教练四层能力]] 同主线——战略性无聊涉及"思考自身思考的能力"（元认知），与"情绪清晰度 + 失败能力 + 自我对话"互补"软技能 + 自学方法"双视角。
+- **工程师本能 + 拆解**：与 [[03-productivity/笔记侠-苏姿丰-MIT演讲-工程师本能]] 同主线——基于项目的学习是"拆解 + 有条不紊 + 一步步攻克"的工程化版本，把"造出来"作为本能训练路径。
+- **观察 + 试验**：与 [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]] 互补——基于项目本质是"通过试验学习"，与克里斯坦森创新 4 行为（提问/观察/试验/交际）的"果断试验"维度直接呼应。
 
 ### 下游（应用于 / 验证于）
 
-- **AI 时代产品决策**：与 [[与AI一起做产品的六条原则]] 强关联——基于项目的学习落地到"做真实的东西"，对应 6 原则的"减法 + 80 分 + 一致性 + 共情"，项目化实践是产品决策的具象化。
-- **公司 OS + Captain model**：与 [[Laurel-CPO-Jiaona-Zhang-公司OS]] 互补——基于项目的学习对应工作流中"造出来"环节，Captain model + 公司 OS 给方法工具，三原理叠加提供"为什么这样做"的元方法。
+- **AI 时代产品决策**：与 [[03-productivity/与AI一起做产品的六条原则]] 强关联——基于项目的学习落地到"做真实的东西"，对应 6 原则的"减法 + 80 分 + 一致性 + 共情"，项目化实践是产品决策的具象化。
+- **公司 OS + Captain model**：与 [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]] 互补——基于项目的学习对应工作流中"造出来"环节，Captain model + 公司 OS 给方法工具，三原理叠加提供"为什么这样做"的元方法。
 
 ### 同级（横向 / 并列）
 
-- **AI 时代个体自学四角**：本文 + [[Karpathy LLM Wiki 系统]] + [[ai-learning-expert-perspective]] + [[若飞-用ClaudeCode搭建AI学习系统]]——同一硬币的"自学方法论"四个面：本文偏创造性（战略性无聊 + 项目化 + 视觉化）；若飞偏结构化测试反馈（4 文件 + 3 周节奏）；Karpathy 偏系统工程（compounding knowledge + LLM Wiki）；专家视角偏长期主义。
+- **AI 时代个体自学四角**：本文 + [[03-productivity/karpathy-knowledge-system]] + [[03-productivity/ai-learning-expert-perspective]] + [[02-ai-coding/若飞-用ClaudeCode搭建AI学习系统]]——同一硬币的"自学方法论"四个面：本文偏创造性（战略性无聊 + 项目化 + 视觉化）；若飞偏结构化测试反馈（4 文件 + 3 周节奏）；Karpathy 偏系统工程（compounding knowledge + LLM Wiki）；专家视角偏长期主义。
 
 ## 5 个对 Seetong 团队可借鉴动作
 
@@ -88,4 +88,4 @@ source: 微信公众号「BillionWrites」 / 原作者 Stephen Petro（YouTube @
 - **二次创作**：原文非 Stephen Petro 直接写作，是 YouTube 视频的公众号翻译改编版（编辑 vava 标注）；BillionWrites 在翻译前加了中文引言 + 嵌入读者留言实操补充（野牛/抱一/屠图/安馨 4 条）。
 - **Tesla 引述未独立验证**：1882 布达佩斯公园散步 → 旋转磁场构想 是 Stephen Petro 视频中转述，未给独立史料来源。
 - **神经科学概念性引用**：默认模式网络 / 元认知 / 视觉化激活神经回路 是"概念性引用"，原文未给具体论文序号。
-- **分类理由**：放 `03-productivity` 而非 `05-content-creation` 或 `06-ai-tech`——本文是"个人自学方法论 + 创造性整合 + AI 时代学习"，与现有 [[快刀青衣-OpenAI高管教练四层能力]] / [[苏姿丰-MIT演讲-工程师本能]] / [[宁向东-企业家凭什么能看见别人看不见的机会]] / [[若飞-用ClaudeCode搭建AI学习系统]] 同主线"AI 时代个体成长 / 自学方法论"，且补完 03-productivity 偏"工程视角 + 决策视角 + 哲学视角"缺位的"创造性自学 + 战略性无聊 + 心智模拟"维度。
+- **分类理由**：放 `03-productivity` 而非 `05-content-creation` 或 `06-ai-tech`——本文是"个人自学方法论 + 创造性整合 + AI 时代学习"，与现有 [[03-productivity/快刀青衣-OpenAI高管教练四层能力]] / [[03-productivity/笔记侠-苏姿丰-MIT演讲-工程师本能]] / [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]] / [[02-ai-coding/若飞-用ClaudeCode搭建AI学习系统]] 同主线"AI 时代个体成长 / 自学方法论"，且补完 03-productivity 偏"工程视角 + 决策视角 + 哲学视角"缺位的"创造性自学 + 战略性无聊 + 心智模拟"维度。

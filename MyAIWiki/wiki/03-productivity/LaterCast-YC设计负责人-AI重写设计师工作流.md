@@ -2,24 +2,24 @@
 title: LaterCast-YC设计负责人-AI重写设计师工作流
 category: 03-productivity
 tags:
-  - "#主题/设计工作流"
-  - "#主题/AI设计协作"
-  - "#主题/上下文工程"
-  - "#主题/disposable-design"
-  - "#主题/human-vs-machine-interface"
-  - "#节点/语音外化意图"
-  - "#节点/Paxel工作流观察"
-  - "#节点/soul-md长期记忆"
-  - "#节点/16版本探索"
-  - "#作者/E-Bufar"
-  - "#来源/Y-Combinator-Design-Review"
-  - "#公众号/晚点再听LaterCast"
+  - 主题/设计工作流
+  - 主题/AI设计协作
+  - 主题/上下文工程
+  - 主题/disposable-design
+  - 主题/human-vs-machine-interface
+  - 节点/语音外化意图
+  - 节点/Paxel工作流观察
+  - 节点/soul-md长期记忆
+  - 节点/16版本探索
+  - 作者/E-Bufar
+  - 来源/Y-Combinator-Design-Review
+  - 公众号/晚点再听LaterCast
 nodes: 语音外化意图｜Paxel工作流观察｜human-vs-machine双界面｜disposable-design｜soul.md长期记忆｜16版本探索｜边界与手工保留｜品牌代码反馈回路
 links:
-  - "[[与AI一起做产品的六条原则]]"
-  - "[[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]"
-  - "[[OpenAI-AI原生组织-4条工作原则]]"
-  - "[[用AI解决真正的业务问题]]"
+  - "[[03-productivity/与AI一起做产品的六条原则]]"
+  - "[[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]"
+  - "[[06-ai-tech/OpenAI-AI原生组织-4条工作原则]]"
+  - "[[06-ai-tech/用AI解决真正的业务问题]]"
 date: 2026-07-16
 source: 微信公众号「晚点再听LaterCast」2026-07-15 推送 / 一手 Y Combinator Design Review《YC's Head of Design Shows You How To Design With AI》 / 原文 https://mp.weixin.qq.com/s/AoSfMdoczU1Fsa1XTczNHg
 ---
@@ -37,7 +37,7 @@ source: 微信公众号「晚点再听LaterCast」2026-07-15 推送 / 一手 Y C
 
 > 设计师的工作流正在从“熟练操作工具”转向“把意图说清楚、把上下文准备好、再为自己造出一组随时可以丢弃的工具”——AI 不是替代设计判断，而是把第一次尝试的成本压低，让判断、取舍和想象力更早发生。
 
-**分类理由**：本文是“设计工作流 / PM-设计-工程协作 / 上下文工程 / 工具自造 / 品牌代码化”方法论，核心是工作姿势变化而非宏观行业趋势。放 `03-productivity` 比 `06-ai-tech` 更贴切，与 [[与AI一起做产品的六条原则]]、[[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]] 同主线，补完现有 `03-productivity` 主线偏“AI 时代产品决策 / 角色重塑”维度里缺位的“设计师工作流如何被 AI 改写”视角。
+**分类理由**：本文是“设计工作流 / PM-设计-工程协作 / 上下文工程 / 工具自造 / 品牌代码化”方法论，核心是工作姿势变化而非宏观行业趋势。放 `03-productivity` 比 `06-ai-tech` 更贴切，与 [[03-productivity/与AI一起做产品的六条原则]]、[[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]] 同主线，补完现有 `03-productivity` 主线偏“AI 时代产品决策 / 角色重塑”维度里缺位的“设计师工作流如何被 AI 改写”视角。
 
 ## 知识节点（8 个独立概念）
 
@@ -53,8 +53,8 @@ source: 微信公众号「晚点再听LaterCast」2026-07-15 推送 / 一手 Y C
 ## 关联图谱
 
 ### 上游
-- [[与AI一起做产品的六条原则]]（同为 AI 时代产品 / 设计工作方式变迁）
-- [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]（角色与分工变化的同级补充）
+- [[03-productivity/与AI一起做产品的六条原则]]（同为 AI 时代产品 / 设计工作方式变迁）
+- [[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]（角色与分工变化的同级补充）
 
 ### 下游
 - Seetong 的 PM / 设计 / 工程协作方式重写
@@ -62,8 +62,8 @@ source: 微信公众号「晚点再听LaterCast」2026-07-15 推送 / 一手 Y C
 - human / machine 双界面设计
 
 ### 同级
-- [[用AI解决真正的业务问题]]（为问题找 AI，不为 AI 找问题）
-- [[OpenAI-AI原生组织-4条工作原则]]（把意图和上下文说清楚，对应组织侧“Update quickly / Find a way”）
+- [[06-ai-tech/用AI解决真正的业务问题]]（为问题找 AI，不为 AI 找问题）
+- [[06-ai-tech/OpenAI-AI原生组织-4条工作原则]]（把意图和上下文说清楚，对应组织侧“Update quickly / Find a way”）
 
 ## 正文要点与 Seetong 借鉴动作（合并表）
 

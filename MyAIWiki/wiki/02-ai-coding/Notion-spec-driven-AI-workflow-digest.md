@@ -1,9 +1,17 @@
 ---
 title: "规范驱动开发：Notion 的 AI 工程工作流程 - Digest"
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/SDD, #主题/Harness, #主题/DevX, #节点/规范驱动开发, #节点/Codex, #节点/Boxy, #场景/编译长文]
+tags:
+  - 主题/AI-Coding
+  - 主题/SDD
+  - 主题/Harness
+  - 主题/DevX
+  - 节点/规范驱动开发
+  - 节点/Codex
+  - 节点/Boxy
+  - 场景/编译长文
 nodes: [Spec-driven-Development, Whisper-Codex流水线, 救CI, Standup-Prep自动化, Boxy-@Codex出PR, 我不懂PR评审, Spec-Verification, 工程师角色重构]
-links: [[Notion-spec-driven-AI-workflow]]
+links: [[02-ai-coding/Notion-spec-driven-AI-workflow]]
 date: 2026-06-09
 source: 微信公众号 / Capihom（编译自 Latent Space《How I AI》播客，嘉宾：Notion 工程师 Ryan Nystrom）
 ---
@@ -55,13 +63,13 @@ source: 微信公众号 / Capihom（编译自 Latent Space《How I AI》播客�
 ## 与已有文章的关联
 
 - **强关联**：
-  - [[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]（工具/方法论对照）
-  - [[AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]]（SDD 工具谱系坐标）
-  - [[AI-Coding的顿悟时刻]]（Spec→LDD 流水线 + 工程师向两端收缩）
-  - [[Claude-Code团队5条工作原则-Fiona-Fung分享]]（验证/评审/安全瓶颈转移）
-  - [[Anthropic万字长文三个判断和一个阳谋]]（"验收能力"的一线落地版）
+  - [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]（工具/方法论对照）
+  - [[02-ai-coding/AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]]（SDD 工具谱系坐标）
+  - [[02-ai-coding/AI-Coding的顿悟时刻]]（Spec→LDD 流水线 + 工程师向两端收缩）
+  - [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]（验证/评审/安全瓶颈转移）
+  - [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]]（"验收能力"的一线落地版）
 - **同级**：
-  - [[Claude-Code负责人谈AI原生工程组织]]
-  - [[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]
-  - [[54万行代码的顿悟-Markdown才是新编程方式]]（个人层 vs 组织层）
-  - [[买了一样的AI为什么别家的比你的强]]（spec 仓库 = 一种"组织级 skill"）
+  - [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]]
+  - [[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]
+  - [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]（个人层 vs 组织层）
+  - [[02-ai-coding/买了一样的AI为什么别家的比你的强]]（spec 仓库 = 一种"组织级 skill"）

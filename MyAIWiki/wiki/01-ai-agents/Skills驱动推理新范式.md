@@ -83,7 +83,7 @@ TALE、CoD、NoWait 这类方法通过预算或措辞约束压缩思考，难题
 
 ## 标签
 
-#主题/AI-Agent #主题/RAG系统 #主题/AI-Coding #手法/权威背书 #场景/技术博客
+ #主题/AI-Agent #主题/RAG系统 #主题/AI-Coding #手法/权威背书 #场景/技术博客
 
 ## 相关链接
 

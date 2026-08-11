@@ -2,24 +2,24 @@
 title: Leeka讲RPA - 我用大白话让 Claude 给我打工，写出周入2万刀的小程序
 category: 02-ai-coding
 tags:
-  - "#主题/Claude-Code"
-  - "#主题/Vibe-Coding"
-  - "#主题/AI编程平民化"
-  - "#主题/自然语言编程"
-  - "#主题/Anti-Black-Window"
-  - "#主题/编排者"
-  - "#场景/小白入门"
-  - "#场景/ToDo实操"
-  - "#公众号/Leeka讲RPA"
-  - "#作者/Leeka"
+  - 主题/Claude-Code
+  - 主题/Vibe-Coding
+  - 主题/AI编程平民化
+  - 主题/自然语言编程
+  - 主题/Anti-Black-Window
+  - 主题/编排者
+  - 场景/小白入门
+  - 场景/ToDo实操
+  - 公众号/Leeka讲RPA
+  - 作者/Leeka
 nodes: 技术敬畏感的心理突破, Ollie 周入 2 万美元案例实证, Anti-Black-Window 路径, 编排者角色重定义, 9to5 降维打击, To-Do 2 分钟 Demo, 零代码 Vercel 部署, Leeka 商业化钩子
 links:
-  - "[[vibe-coding]]"
-  - "[[Claude-Code一周年回顾-Boris-Cat]]"
-  - "[[54万行代码的顿悟-Markdown才是新编程方式]]"
-  - "[[loonggg-Claude-Code-技能心法-11条建议]]"
-  - "[[字节跳动洪定坤-AI-Coding的实践与探索]]"
-  - "[[面向Skills编程-淘宝企业购端到端研发提效实践]]"
+  - "[[02-ai-coding/vibe-coding]]"
+  - "[[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]]"
+  - "[[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]"
+  - "[[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]]"
+  - "[[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]]"
+  - "[[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]]"
 date: 2026-07-19
 source: 微信公众号「Leeka讲RPA」 / 作者 Leeka / [原文链接](https://mp.weixin.qq.com/s/3bFnc4SZsDtqJIHEbUyOKg)
 ---
@@ -58,17 +58,17 @@ source: 微信公众号「Leeka讲RPA」 / 作者 Leeka / [原文链接](https:/
 
 ### 上游（基于 / 来自）
 
-- **Vibe Coding 思潮**：本文是 [[vibe-coding]] 的"大白话推广版"，作者同一时期的《Vibe Coding才是普通人的翻身机会》直接呼应——同一硬币，"工程师视角"与"非工程师视角"的两面。
-- **自然语言编程趋势**：与 [[54万行代码的顿悟-Markdown才是新编程方式]] 同主线——代码→Markdown/自然语言的编程语言迁移，本文是这条主线在"小白侧"的延伸。
+- **Vibe Coding 思潮**：本文是 [[02-ai-coding/vibe-coding]] 的"大白话推广版"，作者同一时期的《Vibe Coding才是普通人的翻身机会》直接呼应——同一硬币，"工程师视角"与"非工程师视角"的两面。
+- **自然语言编程趋势**：与 [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] 同主线——代码→Markdown/自然语言的编程语言迁移，本文是这条主线在"小白侧"的延伸。
 
 ### 下游（应用于 / 验证于）
 
-- **Claude Code 工程化心法**：与 [[loonggg-Claude-Code-技能心法-11条建议]] 互补——本文"非工程读者 + 大白话推广"，那篇"Anthropic 团队 11 条工程心法"，两者共同覆盖"小白入门→工程化精进"的完整曲线。
-- **企业 AI Coding 落地实证**：与 [[字节跳动洪定坤-AI-Coding的实践与探索]] 形成对照——字节"工程视角指标治理（10x vs 1.6x + 3×3×100 实验 + TRAE 5.6 万亿 Token/天）" vs 本文"小白视角情感化入门（20000 美元首周 + 2 分钟 ToDo）"，同一趋势在不同读者群体的两种表达。
+- **Claude Code 工程化心法**：与 [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]] 互补——本文"非工程读者 + 大白话推广"，那篇"Anthropic 团队 11 条工程心法"，两者共同覆盖"小白入门→工程化精进"的完整曲线。
+- **企业 AI Coding 落地实证**：与 [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] 形成对照——字节"工程视角指标治理（10x vs 1.6x + 3×3×100 实验 + TRAE 5.6 万亿 Token/天）" vs 本文"小白视角情感化入门（20000 美元首周 + 2 分钟 ToDo）"，同一趋势在不同读者群体的两种表达。
 
 ### 同级（横向 / 并列）
 
-- **AI 编程平民化三角**：本文 + [[vibe-coding]] + [[54万行代码的顿悟-Markdown才是新编程方式]]——模型经济学反转（Code is Cheap）下，"业务逻辑清晰度 > 语法熟练度"成为新护城河。
+- **AI 编程平民化三角**：本文 + [[02-ai-coding/vibe-coding]] + [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]——模型经济学反转（Code is Cheap）下，"业务逻辑清晰度 > 语法熟练度"成为新护城河。
 
 ## 正文要点（已并入"8 个核心独立概念"+"5 个对 Seetong 借鉴动作"两段，避免重复堆砌）
 

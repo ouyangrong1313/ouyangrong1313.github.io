@@ -1,9 +1,17 @@
 ---
 title: Claude Tag - Karpathy 第三范式（Slack 异步协作）
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/ClaudeCode, #主题/Slack, #主题/异步协作, #场景/产品介绍, #场景/公众号长文, #节点/Agent-Loop, #节点/Harness]
+tags:
+  - 主题/AI-Agent
+  - 主题/ClaudeCode
+  - 主题/Slack
+  - 主题/异步协作
+  - 场景/产品介绍
+  - 场景/公众号长文
+  - 节点/Agent-Loop
+  - 节点/Harness
 nodes: [Claude Tag, Slack协作, 第三范式, 自洽实体, ambient模式, 异步执行, 频道权限隔离, 价值观不可调教, 厂商agent, 开源替代, openclaw, 65%代码贡献]
-links: [[Claude-Code-主动式Agent-Routines]], [[Claude-Code首席设计师Meaghan-Choi工作流]], [[Claude-Code一周年回顾-Boris-Cat]], [[Anthropic万字长文三个判断和一个阳谋]], [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+links: [[02-ai-coding/Claude-Code-主动式Agent-Routines]], [[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]], [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]], [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]], [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
 date: 2026-06-24
 source: 微信公众号「逛逛 GitHub」（猜测）逛逛 2026-06-24
 ---
@@ -19,10 +27,10 @@ source: 微信公众号「逛逛 GitHub」（猜测）逛逛 2026-06-24
 ## 分类提炼
 
 - **场景**：AI Agent 团队协作 | Claude 企业级落地 | 异步 Agent 范式
-- **标签**：#主题/AI-Agent #主题/ClaudeCode #主题/Slack #主题/异步协作
+- **标签**： #主题/AI-Agent #主题/ClaudeCode #主题/Slack #主题/异步协作
 - **类型**：产品发布 + 权威评论 + 争议解读
 - **来源**：微信公众号（逛逛 GitHub 猜测）2026-06-24
-- **关联**：[[Claude-Code-主动式Agent-Routines]] | [[Claude-Code首席设计师Meaghan-Choi工作流]] | [[Claude-Code一周年回顾-Boris-Cat]] | [[Anthropic万字长文三个判断和一个阳谋]]
+- **关联**：[[02-ai-coding/Claude-Code-主动式Agent-Routines]] | [[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]] | [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]] | [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]]
 
 ## 要点列表
 
@@ -80,4 +88,4 @@ source: 微信公众号「逛逛 GitHub」（猜测）逛逛 2026-06-24
 
 ---
 
-标签：#主题/AI-Agent #主题/ClaudeCode #主题/Slack #主题/异步协作 #主题/开源替代 #手法/权威背书 #手法/对比冲突 #手法/争议放大 #场景/公众号长文 #场景/产品介绍
+标签： #主题/AI-Agent #主题/ClaudeCode #主题/Slack #主题/异步协作 #主题/开源替代 #手法/权威背书 #手法/对比冲突 #手法/争议放大 #场景/公众号长文 #场景/产品介绍

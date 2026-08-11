@@ -7,7 +7,7 @@ AI-native 工程组织的重点，不是让工程师“写得更快”，而是�
 ## 分类提炼
 
 - 场景：AI Coding / 工程管理 / 团队流程改造
-- 标签：#主题/AI-Coding #主题/工程管理 #主题/Agent组织 #手法/流程治理
+- 标签： #主题/AI-Coding #主题/工程管理 #主题/Agent组织 #手法/流程治理
 - 类型：访谈编译 / 组织方法论 / 团队实践启发
 
 ## 要点列表
@@ -61,6 +61,6 @@ AI-native 工程组织的重点，不是让工程师“写得更快”，而是�
 
 ## 相关链接
 
-- [[Claude-Code在大代码库中的最佳实践-从Anthropic官方指南到可落地Harness方法]]
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
-- [[知识卡片编译模板-长文如何压成raw-digest-wiki三层]]
+- [[02-ai-coding/Claude-Code在大代码库中的最佳实践-从Anthropic官方指南到可落地Harness方法]]
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+- [[02-ai-coding/知识卡片编译模板-长文如何压成raw-digest-wiki三层]]

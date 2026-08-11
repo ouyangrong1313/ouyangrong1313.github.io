@@ -422,11 +422,11 @@ Hermes 更像一个：
 
 ## 关联阅读
 
-- [[OpenClaw的正确打开方式]]
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
-- [[从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]]
-- [[谷歌开源agent-skills]]
-- [[Agent Harness 解析：智能体架构深度拆解]]
-- [[Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
-- [[agent-architectures]]
-- [[workflow-vs-agent]]
+- [[01-ai-agents/OpenClaw的正确打开方式]]
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+- [[02-ai-coding/从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]]
+- [[02-ai-coding/谷歌开源agent-skills]]
+- [[06-ai-tech/Agent Harness 解析：智能体架构深度拆解]]
+- [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
+- [[01-ai-agents/agent-architectures]]
+- [[01-ai-agents/workflow-vs-agent]]

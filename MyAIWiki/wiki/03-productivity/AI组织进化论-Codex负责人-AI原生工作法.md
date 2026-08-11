@@ -1,9 +1,18 @@
 ---
 title: AI 原生工作法：Codex 负责人谈团队新的工作模式
 category: 03-productivity
-tags: [#主题/AI时代工作方法, #主题/AI原生团队, #主题/Codex-OpenAI, #主题/Agent优先, #主题/工作方法论, #主题/多线程任务管理, #主题/工程师新角色, #场景/Seetong借鉴, #作者/AI组织进化论]
+tags:
+  - 主题/AI时代工作方法
+  - 主题/AI原生团队
+  - 主题/Codex-OpenAI
+  - 主题/Agent优先
+  - 主题/工作方法论
+  - 主题/多线程任务管理
+  - 主题/工程师新角色
+  - 场景/Seetong借鉴
+  - 作者/AI组织进化论
 nodes: [十个要点短规格, Codex参与思考, 多线程管理任务, 工程师建设环境, AGENTS.md是地图, 计划只做两种, 角色边界模糊责任不模糊, 用户是开发系统一部分, 招聘看做过什么]
-links: [[OpenAI-AI原生组织-4条工作原则]], [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]], [[LaterCast-YC设计负责人-AI重写设计师工作流]], [[笔记侠-十布-这-是以后的工作方式]], [[笔记侠-苏姿丰-MIT演讲-工程师本能]], [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]], [[harness-engineering]], [[loop-engineering]]
+links: [[06-ai-tech/OpenAI-AI原生组织-4条工作原则]], [[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]], [[03-productivity/LaterCast-YC设计负责人-AI重写设计师工作流]], [[03-productivity/笔记侠-十布-这-是以后的工作方式]], [[03-productivity/笔记侠-苏姿丰-MIT演讲-工程师本能]], [[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]], [[01-ai-agents/harness-engineering]], [[loop-engineering]]
 date: 2026-07-21
 source: 微信公众号「AI组织进化论」2026-07-21（一手 Peter Yang 访谈 OpenAI Codex 负责人 Alex + 开发者体验负责人 Romain / 原文 https://mp.weixin.qq.com/s/5EMMIaXwJm6SL7nYcCoi0g）
 ---
@@ -56,13 +65,13 @@ source: 微信公众号「AI组织进化论」2026-07-21（一手 Peter Yang 访
 - 企业级 Agent 团队组织设计 / AI 原生团队工作流 / Agent 工程化
 
 ### 同级（横向）
-- [[OpenAI-AI原生组织-4条工作原则]] 同主线 AI 原生组织
-- [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]] 系统型人才 + 平台 80%
-- [[LaterCast-YC设计负责人-AI重写设计师工作流]] 设计师 AI 工作流
-- [[笔记侠-十布-这-是以后的工作方式]] AI 原生组织实战（影刀）
-- [[笔记侠-苏姿丰-MIT演讲-工程师本能]] 工程师本能 4 关键词
-- [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]] 5 类角色原型
-- [[harness-engineering]] 工程化主线 / [[loop-engineering]] 验证主线
+- [[06-ai-tech/OpenAI-AI原生组织-4条工作原则]] 同主线 AI 原生组织
+- [[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]] 系统型人才 + 平台 80%
+- [[03-productivity/LaterCast-YC设计负责人-AI重写设计师工作流]] 设计师 AI 工作流
+- [[03-productivity/笔记侠-十布-这-是以后的工作方式]] AI 原生组织实战（影刀）
+- [[03-productivity/笔记侠-苏姿丰-MIT演讲-工程师本能]] 工程师本能 4 关键词
+- [[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]] 5 类角色原型
+- [[01-ai-agents/harness-engineering]] 工程化主线 / [[loop-engineering]] 验证主线
 
 ## 6 个对 Seetong 借鉴动作
 
@@ -77,9 +86,9 @@ source: 微信公众号「AI组织进化论」2026-07-21（一手 Peter Yang 访
 
 - **一手**：Peter Yang 访谈 OpenAI Codex 产品负责人 Alex + 开发者体验负责人 Romain
 - **未独立验证**：4 条普通团队原则未在 Codex 之外团队验证；"短期 8 周 + 长期判断"是 Codex 内部节奏未给公开依据
-- **本批对比**：与 [[OpenAI-AI原生组织-4条工作原则]] 形成"宏观原则 + 具体执行"对偶；与 [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]] 同"AI 原生团队"主线
+- **本批对比**：与 [[06-ai-tech/OpenAI-AI原生组织-4条工作原则]] 形成"宏观原则 + 具体执行"对偶；与 [[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]] 同"AI 原生团队"主线
 
 - [原文链接](https://mp.weixin.qq.com/s/5EMMIaXwJm6SL7nYcCoi0g)
 - [How OpenAI's Codex Team Builds with Codex](https://www.youtube.com/watch?v=9qXc-THAvc0)
 - [OpenAI: Harness engineering](https://openai.com/index/harness-engineering/)
-- [[OpenAI-AI原生组织-4条工作原则]] / [[harness-engineering]] / [[loop-engineering]]
+- [[06-ai-tech/OpenAI-AI原生组织-4条工作原则]] / [[01-ai-agents/harness-engineering]] / [[loop-engineering]]

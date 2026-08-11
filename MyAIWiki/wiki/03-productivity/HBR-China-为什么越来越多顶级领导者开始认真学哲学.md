@@ -1,9 +1,19 @@
 ---
 title: 为什么越来越多的顶级领导者，开始认真学哲学？
 category: 03-productivity
-tags: [#主题/哲学素养, #主题/价值判断, #主题/领导者决策, #节点/本体论, #节点/认识论, #节点/伦理学, #节点/phronesis实践智慧, #场景/AI时代决策, #场景/Seetong借鉴, #场景/AI工具假设]
+tags:
+  - 主题/哲学素养
+  - 主题/价值判断
+  - 主题/领导者决策
+  - 节点/本体论
+  - 节点/认识论
+  - 节点/伦理学
+  - 节点/phronesis实践智慧
+  - 场景/AI时代决策
+  - 场景/Seetong借鉴
+  - 场景/AI工具假设
 nodes: [AI时代竞争-模型能力加价值判断, 本体论-企业目的Friedman-vs-Drucker, 苹果客户数据本体论-你不是我们的产品, 认识论-丰田现地现物, 认识论-Tonys-Chocolonely五项采购原则, 伦理学-Anthropic-20262-vs-五角大楼, 伦理学-10-收入损失测试, phronesis-实践智慧]
-links: [[宁向东-企业家凭什么能看见别人看不见的机会]], [[Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]], [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]], [[与AI一起做产品的六条原则]], [[深思圈-消费护城河不是注意力是环境]]
+links: [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]], [[01-ai-agents/Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]], [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]], [[03-productivity/与AI一起做产品的六条原则]], [[06-ai-tech/深思圈-消费护城河不是注意力是环境]]
 date: 2026-07-01
 source: 哈佛商业评论（Harvard Business Review 中文版 / HBR-China）2026-07-01 推送；原作者 Faisal Hoque（SHADOKA / NextChapter 创始人）+ Paul Scade（SHADOKA / NextChapter 合伙人 / 利物浦大学荣誉研究员）+ Pranay Sanklecha（哲学家 / 作家 / 管理顾问，专攻技术伦理与实践领导力）+ Sverre Spoelstra（隆德大学组织学教授 / 哥本哈根商学院领导力与战略学副教授 / 著有《领导力与组织：哲学导论》）；编校 周强
 ---
@@ -43,15 +53,15 @@ source: 哈佛商业评论（Harvard Business Review 中文版 / HBR-China）202
 - Anthropic Claude 宪法 + Amanda Askell（牛津哲学博士）
 
 ### 下游（应用于 / 验证于）
-- **现有 [[宁向东-企业家凭什么能看见别人看不见的机会]]**（同 03-productivity 7/01 新增"认知方法论与创新决策"）——本文是同主线的"哲学决策"维度，与宁向东"主导者认知方式"形成"**创新认知 + 哲学决策**"双视角
-- **现有 [[Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]]**（同 01-ai-agents 7/01 "行业落地案例"）——本文是"AI 时代领导者哲学"，Avoca 是"AI Agent 商业化"，形成"**AI Agent 商业化 + AI 时代领导者哲学**"双主线
-- **现有 [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]]**（同 03-productivity "组织管理"）——本文聚焦"个体哲学决策"，陈春花聚焦"组织设计方式"，形成"**个体哲学 + 组织设计**"双视角
-- **现有 [[与AI一起做产品的六条原则]]**（同 03-productivity "产品决策"）——本文提供"哲学假设"维度（本体论 / 认识论 / 伦理学），与"AI 时代产品决策原则"互补
+- **现有 [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]]**（同 03-productivity 7/01 新增"认知方法论与创新决策"）——本文是同主线的"哲学决策"维度，与宁向东"主导者认知方式"形成"**创新认知 + 哲学决策**"双视角
+- **现有 [[01-ai-agents/Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]]**（同 01-ai-agents 7/01 "行业落地案例"）——本文是"AI 时代领导者哲学"，Avoca 是"AI Agent 商业化"，形成"**AI Agent 商业化 + AI 时代领导者哲学**"双主线
+- **现有 [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]]**（同 03-productivity "组织管理"）——本文聚焦"个体哲学决策"，陈春花聚焦"组织设计方式"，形成"**个体哲学 + 组织设计**"双视角
+- **现有 [[03-productivity/与AI一起做产品的六条原则]]**（同 03-productivity "产品决策"）——本文提供"哲学假设"维度（本体论 / 认识论 / 伦理学），与"AI 时代产品决策原则"互补
 
 ### 同级（横向 / 并列）
-- [[深思圈-消费护城河不是注意力是环境]] —— 06-ai-tech 商业哲学主线
-- [[凯文凯利-真正的好生意都在卖看不见的东西]] —— 06-ai-tech 商业哲学主线
-- [[章文龙-AI分身时代-在场重新定价]] —— 06-ai-tech AI 时代个人定位
+- [[06-ai-tech/深思圈-消费护城河不是注意力是环境]] —— 06-ai-tech 商业哲学主线
+- [[06-ai-tech/凯文凯利-真正的好生意都在卖看不见的东西]] —— 06-ai-tech 商业哲学主线
+- [[06-ai-tech/章文龙-AI分身时代-在场重新定价]] —— 06-ai-tech AI 时代个人定位
 
 ## 6 个对 Seetong 团队可借鉴动作
 
@@ -73,6 +83,6 @@ source: 哈佛商业评论（Harvard Business Review 中文版 / HBR-China）202
 
 ---
 
-**相关链接**：原始 raw `raw/2026-07-HBR-China-为什么越来越多顶级领导者开始认真学哲学/` | 原文摘要同目录 `-digest.md` | 本页 digest `wiki/03-productivity/HBR-China-为什么越来越多顶级领导者开始认真学哲学-digest.md` | 强关联 [[宁向东-企业家凭什么能看见别人看不见的机会]] [[Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]] [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]] [[与AI一起做产品的六条原则]]
+**相关链接**：原始 raw `raw/HBR-China-为什么越来越多顶级领导者开始认真学哲学.md` | 原文摘要 `raw/HBR-China-为什么越来越多顶级领导者开始认真学哲学-digest.md` | 本页 digest `wiki/03-productivity/HBR-China-为什么越来越多顶级领导者开始认真学哲学-digest.md` | 强关联 [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]] [[01-ai-agents/Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]] [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]] [[03-productivity/与AI一起做产品的六条原则]]
 
 **透明玻璃自检**：wiki 5.4K(≤8K) ✓ / digest 2.5K(≤4K) ✓ / 节点 8(6-10) ✓ / H2 5(≤5) ✓ / 表格 0(≤2) ✓ / 0 陈词 ✓ ⭐⭐⭐

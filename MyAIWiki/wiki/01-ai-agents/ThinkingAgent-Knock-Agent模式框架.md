@@ -1,9 +1,21 @@
 ---
 title: Agent 模式框架：从个人助手、流程嵌入，到企业智能 —— Knock 谈 4 模式 + 三层落地路径
 category: 01-ai-agents
-tags: [#主题/Agent设计模式, #主题/Reflection, #主题/Tool-Use, #主题/Planning, #主题/Multi-Agent, #主题/Workflow-vs-Agent, #主题/企业Agent落地, #主题/Seetong借鉴, #主题/ThinkingAgent, #场景/Agent架构, #作者/Knock, #来源/ThinkingAgent]
+tags:
+  - 主题/Agent设计模式
+  - 主题/Reflection
+  - 主题/Tool-Use
+  - 主题/Planning
+  - 主题/Multi-Agent
+  - 主题/Workflow-vs-Agent
+  - 主题/企业Agent落地
+  - 主题/Seetong借鉴
+  - 主题/ThinkingAgent
+  - 场景/Agent架构
+  - 作者/Knock
+  - 来源/ThinkingAgent
 nodes: [Chatbot-vs-Copilot-vs-Agent-vs-MultiAgent, Reflection自我修改, Tool-Use工具使用, Planning先想后做, Multi-Agent团队协作, Workflow-vs-Agent, 三层路径, 5大误区]
-links: [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]], [[Leeka-Task-Decomposition-Agentic-Workflow]], [[0xCodez-Agent-Harness-14-Steps]], [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[未来属于垂直领域Agent]], [[Capihom-AI-Native企业-Agent团队和AI-Factory重写公司体系]]
+links: [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]], [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]], [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]], [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[01-ai-agents/未来属于垂直领域Agent]], [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]
 date: 2026-07-17
 source: 微信公众号「ThinkingAgent」/ Knock
 ---
@@ -44,17 +56,17 @@ source: 微信公众号「ThinkingAgent」/ Knock
 - 企业三层落地路径（个人助手 → 流程嵌入 → 企业智能）
 
 ### 同级（横向 / 并列）
-- [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]（**同作者 Knock 2 周内连发**——5 级是组织维度，本文 5 误区是 Agent 实施维度，两文结合 = "AI Native 完整工程化框架"）
-- [[Leeka-Task-Decomposition-Agentic-Workflow]]（Planning 节点具体化）
-- [[0xCodez-Agent-Harness-14-Steps]]（Tool Use 具体落地骨架）
-- [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]（单 Agent 端到端 4 层 8 步印证"单 Agent 优先"）
-- [[未来属于垂直领域Agent]]（Domain-Specific 拆解印证 Workflow vs Agent 区分）
-- [[Capihom-AI-Native企业-Agent团队和AI-Factory重写公司体系]]（Groupon 实证：truth layer + eval 印证 5 误区第 4 条）
+- [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]（**同作者 Knock 2 周内连发**——5 级是组织维度，本文 5 误区是 Agent 实施维度，两文结合 = "AI Native 完整工程化框架"）
+- [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]]（Planning 节点具体化）
+- [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]]（Tool Use 具体落地骨架）
+- [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]（单 Agent 端到端 4 层 8 步印证"单 Agent 优先"）
+- [[01-ai-agents/未来属于垂直领域Agent]]（Domain-Specific 拆解印证 Workflow vs Agent 区分）
+- [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]（Groupon 实证：truth layer + eval 印证 5 误区第 4 条）
 
 ## 正文要点（6 条核心论证 + Seetong 借鉴动作）
 
 1. **Agent vs Chatbot 本质区别** → 盘点 Seetong AI 助手所有 Skill，按 4 类重新分类——纯问答类（设备 FAQ）保留 Chatbot，辅助类（日志解读）归 Copilot，目标驱动类（自动 Bug 归类）必须 Agent 化。
-2. **Reflection 不能单独使用** → Seetong AI 助手写代码 Skill 必配"Reviewer 子 Skill"循环 2-3 轮（对应 [[Loop-Engineering-验证才是瓶颈]] 验证闸门）。
+2. **Reflection 不能单独使用** → Seetong AI 助手写代码 Skill 必配"Reviewer 子 Skill"循环 2-3 轮（对应 [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] 验证闸门）。
 3. **Tool Use 必建治理** → Seetong AI 助手 Tool Use 治理 8 项——权限管理/工具白名单/调用日志/审计留痕/沙箱/人工确认/回滚/风险分级。
 4. **Planning 适合多步骤任务** → Seetong AI 助手"Bug 自动修复"Skill 必走 Planning——目标（修 Bug）→ 拆解（读代码/找根因/写补丁/加测试/验证）→ 执行 → 检查 → 调整。
 5. **从单 Agent 开始，能单 Agent 解决就不要多 Agent** → Seetong 1-2 个"5 步能解决"复杂任务（订单异常分析/配网失败诊断）做成单 Agent + Workflow；验证后再考虑 Multi-Agent。

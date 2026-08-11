@@ -46,4 +46,4 @@
 - **嘉宾**：Elizabeth Stone，Netflix CPTO（前 CTO，2024 接管工程/产品/设计）；前 Lyft 科学副总裁 / Nuna COO / 经济学家 / 华尔街交易员
 - **未独立验证**："80% 通用"具体百分比是经验值；"AI 熟练度每季度更新"是 Netflix 内部机制未公开
 - **配套**：raw 原文 + wiki 编译页（≤8K）+ wiki digest（本文件，≤4K）
-- **标签**：#主题/AI时代工作方法 #主题/系统思维 #主题/组织设计 #主题/岗位流动 #主题/Netflix #主题/Lenny-Podcast #主题/产品技术负责人 #主题/设计师价值迁移 #场景/Seetong借鉴 #作者/Elizabeth-Stone #公众号/Capihom #播客/Lenny's-Podcast #公司/Netflix
+- **标签**： #主题/AI时代工作方法 #主题/系统思维 #主题/组织设计 #主题/岗位流动 #主题/Netflix #主题/Lenny-Podcast #主题/产品技术负责人 #主题/设计师价值迁移 #场景/Seetong借鉴 #作者/Elizabeth-Stone #公众号/Capihom #播客/Lenny's-Podcast #公司/Netflix

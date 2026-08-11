@@ -5,8 +5,8 @@ url: https://mp.weixin.qq.com/s/1urI2Y673O40ya6i1sIZ8g
 author: Anthropic（翻译：金色传说大聪明）
 date: 2026-05-15
 tags:
-  - #主题/AIAgent
-  - #场景/创业指南
+  - 主题/AIAgent
+  - 场景/创业指南
 ---
 
 # AI Native 创业手册

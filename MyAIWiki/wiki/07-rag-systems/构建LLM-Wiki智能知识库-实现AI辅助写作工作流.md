@@ -371,11 +371,11 @@
 
 ## 关联阅读
 
-- [[AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]]
-- [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]]
-- [[企业知识库认知底座]]
-- [[从 Agent Harness 到知识复利：结合 OpenClaw 的一体化理解]]
-- [[claude-obsidian-second-brain]]
-- [[obsidian-claude-code-os]]
-- [[karpathy-knowledge-system]]
+- [[07-rag-systems/AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]]
+- [[01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain]]
+- [[06-ai-tech/企业知识库认知底座]]
+- [[06-ai-tech/从 Agent Harness 到知识复利：结合 OpenClaw 的一体化理解]]
+- [[02-ai-coding/claude-obsidian-second-brain]]
+- [[03-productivity/obsidian-claude-code-os]]
+- [[03-productivity/karpathy-knowledge-system]]
 - [[writing-plans]]

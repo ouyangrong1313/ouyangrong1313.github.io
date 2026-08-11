@@ -10,4 +10,4 @@
 
 ## 相关链接
 
-- [[agent-architecture]]
+- [[01-ai-agents/agent-architecture]]

@@ -1,9 +1,26 @@
 ---
 title: "一个农民，用 Codex 管理了 1500 亩地"
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/行业落地, #主题/Codex, #主题/普通人AI, #场景/落地案例, #场景/农业, #场景/非技术行业, #节点/农业AI全景, #节点/多模态病虫害识别, #节点/卫星遥感主动监测, #节点/IoT温室控制, #节点/农业知识库, #节点/ChatGPT到Codex, #节点/普通人AI路径, #节点/工具低估, #手法/案例拆解, #手法/反问反思]
+tags:
+  - 主题/AI-Agent
+  - 主题/行业落地
+  - 主题/Codex
+  - 主题/普通人AI
+  - 场景/落地案例
+  - 场景/农业
+  - 场景/非技术行业
+  - 节点/农业AI全景
+  - 节点/多模态病虫害识别
+  - 节点/卫星遥感主动监测
+  - 节点/IoT温室控制
+  - 节点/农业知识库
+  - 节点/ChatGPT到Codex
+  - 节点/普通人AI路径
+  - 节点/工具低估
+  - 手法/案例拆解
+  - 手法/反问反思
 nodes: [农业-AI-全景案例-Hiroki-Tomiyasu, 病虫害多模态识别, 卫星遥感主动监测, IoT温室远程控制, 农业知识库客服机器人, ChatGPT到Codex学习干活二分, 先学习再落地普通人AI路径, 工具低估与行业AI落地反思]
-links: [[AI时代给人类留了最后一份工作-是农民]], [[Agent时代架构师系统能力]], [[从Prompt-Context到Harness-工程的三次进化与终局之战]]
+links: [[01-ai-agents/AI时代给人类留了最后一份工作-是农民]], [[01-ai-agents/Agent时代架构师系统能力]], [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]
 date: 2026-06-09
 source: 微信公众号 / AI小范儿（转载自 chatgptpro.substack.com，原始素材来自 OpenAI 官方案例）
 ---
@@ -23,7 +40,7 @@ source: 微信公众号 / AI小范儿（转载自 chatgptpro.substack.com，原�
 ## 分类提炼
 
 - **场景**：非技术行业 AI 落地 / 农业 AI 全景案例 / 普通人用 AI 解决工作问题
-- **标签**：#主题/行业落地 #场景/农业 #场景/落地案例
+- **标签**： #主题/行业落地 #场景/农业 #场景/落地案例
 - **类型**：行业案例 / 案例转载 + 反思
 - **价值层级**：⭐（OpenAI 官方案例 + 极致反差——农民 → 1500 亩 → AI 落地）
 
@@ -42,16 +59,16 @@ source: 微信公众号 / AI小范儿（转载自 chatgptpro.substack.com，原�
 
 ### 上游（基于 / 来自）
 - 原始素材：OpenAI 官方案例《Hiroki Tomiyasu》（chatgptpro.substack.com）
-- [[AI时代给人类留了最后一份工作-是农民]]：同是"农民 + AI"主题但视角不同——本篇是 OpenAI 官方案例（一线 AI 落地），那篇是 Brett Goldstein 的 Context Farmer 概念（哲学/战略层）。两个"农民"代表同主线的"案例 vs 战略"两面
+- [[01-ai-agents/AI时代给人类留了最后一份工作-是农民]]：同是"农民 + AI"主题但视角不同——本篇是 OpenAI 官方案例（一线 AI 落地），那篇是 Brett Goldstein 的 Context Farmer 概念（哲学/战略层）。两个"农民"代表同主线的"案例 vs 战略"两面
 
 ### 下游（应用于 / 验证于）
-- [[Agent时代架构师系统能力]]：架构师系统能力的"行业落地"验证——非技术行业也能用 AI 工具系统化改造工作
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]]：Harness 思想不限于研发——农民用的"ChatGPT 学习 + Codex 落地"也是一种简易 Harness
+- [[01-ai-agents/Agent时代架构师系统能力]]：架构师系统能力的"行业落地"验证——非技术行业也能用 AI 工具系统化改造工作
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]：Harness 思想不限于研发——农民用的"ChatGPT 学习 + Codex 落地"也是一种简易 Harness
 
 ### 同级（横向 / 并列）
-- [[good-ai-pm-bad-ai-pm|Good AI PM / Bad AI PM]]：AI 时代真正稀缺的是真实业务问题（与本篇"重复出现、没人解决的问题"同主线）
-- [[AI-PM核心技能-观测评估与反馈闭环]]：业务问题识别是闭环起点
-- [[OpenClaw-vs-Hermes-多-Agent-架构设计]]：多 Agent 架构的另一面——单一 Agent + 真实业务流也能跑
+- [[01-ai-agents/good-ai-pm-bad-ai-pm|Good AI PM / Bad AI PM]]：AI 时代真正稀缺的是真实业务问题（与本篇"重复出现、没人解决的问题"同主线）
+- [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]]：业务问题识别是闭环起点
+- [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]]：多 Agent 架构的另一面——单一 Agent + 真实业务流也能跑
 - 各类"AI 落地案例"——本篇作为"非技术行业"代表
 
 ## 正文要点（8 条）
@@ -162,4 +179,4 @@ source: 微信公众号 / AI小范儿（转载自 chatgptpro.substack.com，原�
 ## 写作引用建议
 
 - 引用本篇时优先用："下一个被 Codex 改造的行业不是高科技行业，而是你所在的行业" / "你工作里有没有一个每天重复出现、却一直没人解决的问题" / "ChatGPT 帮学，Codex 帮做" / "工具没有行业/人群限制，更像一种新生产力"
-- 强关联引用：[[AI时代给人类留了最后一份工作-是农民]]（同是"农民+AI"但视角：案例 vs 战略）/ [[good-ai-pm-bad-ai-pm|Good AI PM / Bad AI PM]]（稀缺的是真实业务问题）/ [[Agent时代架构师系统能力]]（系统化能力不限于研发）
+- 强关联引用：[[01-ai-agents/AI时代给人类留了最后一份工作-是农民]]（同是"农民+AI"但视角：案例 vs 战略）/ [[01-ai-agents/good-ai-pm-bad-ai-pm|Good AI PM / Bad AI PM]]（稀缺的是真实业务问题）/ [[01-ai-agents/Agent时代架构师系统能力]]（系统化能力不限于研发）

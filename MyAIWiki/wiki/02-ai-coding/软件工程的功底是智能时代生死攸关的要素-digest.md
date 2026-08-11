@@ -41,7 +41,7 @@ AI 让写代码更便宜了，但让**软件工程的基本功**变得更贵、�
 
 ## 适合关联的主题
 
-- [[vibe-coding]]
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
-- [[Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
-- [[企业知识库认知底座]]
+- [[02-ai-coding/vibe-coding]]
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+- [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
+- [[06-ai-tech/企业知识库认知底座]]

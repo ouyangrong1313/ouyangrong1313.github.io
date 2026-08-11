@@ -34,10 +34,10 @@
 - 品牌代码化试点：把活动页 / 视觉模板做成参数化系统，而不是每次重做。
 
 ## 关联
-- [[与AI一起做产品的六条原则]]
-- [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]
-- [[OpenAI-AI原生组织-4条工作原则]]
-- [[用AI解决真正的业务问题]]
+- [[03-productivity/与AI一起做产品的六条原则]]
+- [[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]
+- [[06-ai-tech/OpenAI-AI原生组织-4条工作原则]]
+- [[06-ai-tech/用AI解决真正的业务问题]]
 
 ## 备注
 - LaterCast 不是逐字 transcript，而是对 YC Design Review 的中文整理和方法论抽取。

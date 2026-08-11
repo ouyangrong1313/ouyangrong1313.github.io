@@ -2,10 +2,10 @@
 title: OpenAI-AI原生组织-4条工作原则 - Digest
 category: 06-ai-tech
 tags:
-  - "#主题/AI原生组织"
-  - "#主题/OpenAI"
-  - "#主题/工作原则"
-  - "#作者/AI组织进化论"
+  - 主题/AI原生组织
+  - 主题/OpenAI
+  - 主题/工作原则
+  - 作者/AI组织进化论
 date: 2026-07-15
 source: 微信公众号「AI组织进化论」2026-07 / 综合 OpenAI Operating Principles / 原文 https://mp.weixin.qq.com/s/nDPqVJkzdGkwnSv_QSgtgw
 ---
@@ -54,5 +54,5 @@ source: 微信公众号「AI组织进化论」2026-07 / 综合 OpenAI Operating 
 ## 关联 + 备注
 
 - **上游**：OpenAI Operating Principles + Codex 系列 + GPT-5.6 提示指南
-- **同级**：[[麦肯锡-AI提效只是第一波红利]] / [[Nikesh-Arora-模型过剩与记忆护城河]] / [[用AI解决真正的业务问题]] / [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] / [[Capihom-AI-Native企业-Agent团队和AI-Factory重写公司体系]]
+- **同级**：[[06-ai-tech/麦肯锡-AI提效只是第一波红利]] / [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]] / [[06-ai-tech/用AI解决真正的业务问题]] / [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] / [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]
 - **限制**：公众号二次创作；4 条原则翻译转述；GPT-5.6 ultra 4 Agent 未独立验证；课程广告已剔除

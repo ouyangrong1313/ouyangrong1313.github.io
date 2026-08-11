@@ -49,9 +49,9 @@
 ## 关联 + 备注
 
 ### 强关联（同 01-ai-agents）
-- [[AI-团队协作-Loop-SDD-digest]] —— **最相关的同级文章**；叶小钗的 SDD "6 段式 Spec 骨架" + 本文"ADR/PRD/BDD"是同源异流：组织级协作契约 + 工程级 Linter 强校验
-- [[0xCodez-Agent-Harness-14-Steps]] —— Harness 工程的 Hooks/Loop 节点在规范治理维度的具体落地
-- [[agent-skills-systematic-survey]] —— 技能契约化思路互补：Skill 是"怎么做"，ADR/PRD/BDD 是"为什么 + 做什么 + 怎么验"
+- [[01-ai-agents/AI-团队协作-Loop-SDD-digest]] —— **最相关的同级文章**；叶小钗的 SDD "6 段式 Spec 骨架" + 本文"ADR/PRD/BDD"是同源异流：组织级协作契约 + 工程级 Linter 强校验
+- [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] —— Harness 工程的 Hooks/Loop 节点在规范治理维度的具体落地
+- [[01-ai-agents/agent-skills-systematic-survey]] —— 技能契约化思路互补：Skill 是"怎么做"，ADR/PRD/BDD 是"为什么 + 做什么 + 怎么验"
 
 ### 下游（待补充）
 - 暂无（待 Seetong 三端 SDK 实践后补充具体落地页）
@@ -66,4 +66,4 @@
 
 ## 标签
 
-#主题/AI-Agent #主题/AI-Coding #场景/技术博客 #节点/Harness #节点/Context-Engineering #节点/Agent-Loop #节点/Memory #节点/Spec-Driven #手法/焦虑共鸣 #手法/对比冲突 #手法/权威背书
+ #主题/AI-Agent #主题/AI-Coding #场景/技术博客 #节点/Harness #节点/Context-Engineering #节点/Agent-Loop #节点/Memory #节点/Spec-Driven #手法/焦虑共鸣 #手法/对比冲突 #手法/权威背书

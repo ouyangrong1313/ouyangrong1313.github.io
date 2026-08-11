@@ -254,9 +254,9 @@ index.md 按以下主题分组维护，新页面归入对应分类：
 
 ## 相关链接
 
-- [[obsidian-claude-code-os]]
+- [[03-productivity/obsidian-claude-code-os]]
 - [[../01-ai-agents/AI时代给人类留了最后一份工作-是农民]]
 
 ## 标签
 
-#主题/效率 #场景/技术博客
+ #主题/效率 #场景/技术博客

@@ -5,9 +5,31 @@ date: 2026-06-17
 source: X (@0xCodez) - Codez 长文 2026-06-16
 source_url: https://x.com/0xCodez/status/2066867539305459732
 project: .claude/ harness 14 步从 0 到 self-improving
-tags: [#主题/AI-Agent, #主题/AI-Coding, #主题/Harness, #主题/Loop, #主题/Self-Improving, #节点/Harness-Engineering, #节点/CLAUDE-md, #节点/settings-json, #节点/Subagent, #节点/Skill, #节点/Hooks, #节点/Memory, #节点/Loop, #节点/STATE-md, #节点/Reviewer, #节点/4件套, #节点/8反模式, #手法/反例论证, #手法/工程框架, #手法/路径指南, #场景/X长文, #场景/ClaudeCode]
+tags:
+  - 主题/AI-Agent
+  - 主题/AI-Coding
+  - 主题/Harness
+  - 主题/Loop
+  - 主题/Self-Improving
+  - 节点/Harness-Engineering
+  - 节点/CLAUDE-md
+  - 节点/settings-json
+  - 节点/Subagent
+  - 节点/Skill
+  - 节点/Hooks
+  - 节点/Memory
+  - 节点/Loop
+  - 节点/STATE-md
+  - 节点/Reviewer
+  - 节点/4件套
+  - 节点/8反模式
+  - 手法/反例论证
+  - 手法/工程框架
+  - 手法/路径指南
+  - 场景/X长文
+  - 场景/ClaudeCode
 nodes: [Harness-定义, 4件套, 三层关系, CLAUDE-md-500tokens, settings-json-权限, Subagent-隔离, Skill-复用, Hooks-强制, Loop-定时, Dynamic-Workflow, Memory复利, State-md三段式, Self-Improving-闭环, 8反模式-CheckList, Harness-顺序论, Reviewer-子Agent, 强制vs建议, Loop-on-Bad-Harness]
-links: [[harness-engineering]], [[Harness工程AgentLoop]], [[HarnessEngineering企业级实战]], [[Addy-Osmani-Loop-Engineering]], [[Loop-Engineering-详解-把反馈循环放进工程现场]], [[APPSO-Codex-Claude-Code-Loop-Engineering]], [[陈进-读完Agent-Loop工程手册]], [[Skill-Self-Evolution]]
+links: [[01-ai-agents/harness-engineering]], [[01-ai-agents/Harness工程AgentLoop]], [[01-ai-agents/HarnessEngineering企业级实战]], [[02-ai-coding/Addy-Osmani-Loop-Engineering]], [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]], [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]], [[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]], [[01-ai-agents/Skill-Self-Evolution]]
 ---
 
 # Agent Harness 14 步路线图
@@ -17,9 +39,9 @@ links: [[harness-engineering]], [[Harness工程AgentLoop]], [[HarnessEngineering
 **作者**：Codez (@0xCodez) · 2026-06-16 · 原文：[X 长文](https://x.com/0xCodez/status/2066867539305459732)
 **互动**：likes 564 / retweets 87 / bookmarks 993 / views 84,721
 **与既存文档关系**：
-- 概念体系见 [[harness-engineering]]（Rule/Skill/Subagent/Workflow/Scripts/MCP 六件套）
-- 工程实现细节见 [[Harness工程AgentLoop]]（生命周期/上下文/工具/容错/调度）
-- 上层 Loop 范式见 [[Addy-Osmani-Loop-Engineering]]（Loop 是 Harness 套上 timer）
+- 概念体系见 [[01-ai-agents/harness-engineering]]（Rule/Skill/Subagent/Workflow/Scripts/MCP 六件套）
+- 工程实现细节见 [[01-ai-agents/Harness工程AgentLoop]]（生命周期/上下文/工具/容错/调度）
+- 上层 Loop 范式见 [[02-ai-coding/Addy-Osmani-Loop-Engineering]]（Loop 是 Harness 套上 timer）
 
 本文定位：**从 0 到 self-improving 的具体路径与顺序**。
 
@@ -217,12 +239,12 @@ Self-Improving System = Harness + Loop + Memory（且顺序不能反）
 
 ## 相关链接
 
-- 原文 raw：[../../raw/2026-06-17-0xCodez-Agent-Harness-14-Steps.md](../../raw/2026-06-17-0xCodez-Agent-Harness-14-Steps.md)
-- 拆解 digest：[../../raw/2026-06-17-0xCodez-Agent-Harness-14-Steps-digest.md](../../raw/2026-06-17-0xCodez-Agent-Harness-14-Steps-digest.md)
+- 原文 raw：[../../raw/0xCodez-Agent-Harness-14-Steps.md](../../raw/0xCodez-Agent-Harness-14-Steps.md)
+- 拆解 digest：[../../raw/0xCodez-Agent-Harness-14-Steps-digest.md](../../raw/0xCodez-Agent-Harness-14-Steps-digest.md)
 - 同主题 wiki：[./harness-engineering.md](./harness-engineering.md)（6 核心概念体系）
 - 同主题 wiki：[./Harness工程AgentLoop.md](./Harness工程AgentLoop.md)（工程实现细节）
 - 同主题 wiki：[./HarnessEngineering企业级实战.md](./HarnessEngineering企业级实战.md)
 - 上层 Loop 范式：[../02-ai-coding/Addy-Osmani-Loop-Engineering.md](../02-ai-coding/Addy-Osmani-Loop-Engineering.md)
 - 作者 Substack：https://movez.substack.com/
 
-标签：#主题/AIAgent #主题/AI-Coding #手法/体系框架 #手法/工程实践 #场景/X长文 #场景/ClaudeCode
+标签： #主题/AIAgent #主题/AI-Coding #手法/体系框架 #手法/工程实践 #场景/X长文 #场景/ClaudeCode

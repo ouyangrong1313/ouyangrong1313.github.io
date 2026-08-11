@@ -54,9 +54,9 @@
 
 ## 关联
 - **上游**：Peter Steinberger "从 Prompt 到 Loop" / Boris Cherny 公开实践 / Reddit 220 万讨论
-- **同级 Loop 主线四视角**：[[Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解-把反馈循环放进工程现场]] / [[APPSO-Codex-Claude-Code-Loop-Engineering]] / 本文
-- **治理/护栏延伸**：[[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] / [[Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] / [[Skill-Self-Evolution]]
-- **AI Native 组织**：[[Multica-AI-Native-组织-人是最慢的节点]] / [[清华沈阳-自进化AI新物种]]
+- **同级 Loop 主线四视角**：[[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] / [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]] / 本文
+- **治理/护栏延伸**：[[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] / [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] / [[01-ai-agents/Skill-Self-Evolution]]
+- **AI Native 组织**：[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]] / [[01-ai-agents/清华沈阳-自进化AI新物种]]
 
 ## 备注
 - **二手解读**：作者明示未接触 Peter Steinberger / Boris Cherny 原始全文

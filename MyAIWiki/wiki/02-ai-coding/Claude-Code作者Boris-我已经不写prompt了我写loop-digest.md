@@ -60,8 +60,8 @@
 ## 我的理解
 
 - **这是 Dynamic Workflow 主题的"第 3 篇"**——三篇配套看最完整：
-  - [[claude-code-dynamic-workflows]]（6-3 英文官方版）：侧重六种模式 + Prompt 示例
-  - [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]（上午 Feisky 版）：侧重判断 + 取舍
+  - [[02-ai-coding/claude-code-dynamic-workflows]]（6-3 英文官方版）：侧重六种模式 + Prompt 示例
+  - [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]（上午 Feisky 版）：侧重判断 + 取舍
   - **本篇（Boris 实战版）**：侧重 API 三件套 + 避坑指南
 
 - **"写 loop 不写 prompt" 是 2026 年最值得记住的范式转变**——跟 [[Claude-Code团队只招聘两类人]] 是同一团队在两个层面的呼应
@@ -74,12 +74,12 @@
 
 ## 适合关联的主题
 
-- [[claude-code-dynamic-workflows]]
-- [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
-- [[Claude-Code团队只招聘两类人-会做梦的人+懂底层的人]]
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]]
-- [[Harness工程AgentLoop]]
-- [[HarnessEngineering企业级实战]]
-- [[Skills驱动推理新范式]]
-- [[陈春花-AI时代管理者重建判断权]]
+- [[02-ai-coding/claude-code-dynamic-workflows]]
+- [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+- [[02-ai-coding/Claude-Code团队只招聘两类人-会做梦的人+懂底层的人]]
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]
+- [[01-ai-agents/Harness工程AgentLoop]]
+- [[01-ai-agents/HarnessEngineering企业级实战]]
+- [[01-ai-agents/Skills驱动推理新范式]]
+- [[01-ai-agents/陈春花-AI时代管理者重建判断权]]

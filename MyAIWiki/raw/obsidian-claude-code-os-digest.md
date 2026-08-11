@@ -155,10 +155,10 @@ AI 还会自动把碎片归类成 Concepts 和 Summary。
 
 ## 标签
 
-#主题/效率 #手法/权威背书 #手法/对比冲突 #场景/技术博客
+ #主题/效率 #手法/权威背书 #手法/对比冲突 #场景/技术博客
 
 ## 相关链接
 
-- [[wiki/productivity/index]]
-- [[wiki/ai-coding/index]]
+- [[wiki/03-productivity/index]]
+- [[wiki/02-ai-coding/index]]
 - [[raw/karpathy-knowledge-base-system]]

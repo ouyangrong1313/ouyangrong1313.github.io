@@ -1,9 +1,17 @@
 ---
 title: 字节跳动洪定坤:AI Coding 的实践与探索
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/字节, #主题/Harness, #主题/Vibe-Coding, #主题/AI指标, #主题/原型驱动, #场景/企业级落地, #场景/大会演讲]
+tags:
+  - 主题/AI-Coding
+  - 主题/字节
+  - 主题/Harness
+  - 主题/Vibe-Coding
+  - 主题/AI指标
+  - 主题/原型驱动
+  - 场景/企业级落地
+  - 场景/大会演讲
 nodes: [指标陷阱, 3×3×100实验, Vibe-Coding边界, Harness-基建, 原型驱动, 系统化-AI-Development, 人人都是程序员, 组织化建设]
-links: [[Vibe Coding]], [[从Prompt-Context到Harness-工程的三次进化与终局之战]], [[0xCodez-Agent-Harness-14-Steps]], [[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]], [[Anthropic万字长文三个判断和一个阳谋]], [[面向Skills编程-淘宝企业购端到端研发提效实践]], [[Claude-Code团队5条工作原则-Fiona-Fung分享]], [[AI-Coding的顿悟时刻]], [[54万行代码的顿悟-Markdown才是新编程方式]]
+links: [[02-ai-coding/vibe-coding]], [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]], [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]], [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]], [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]], [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]], [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]], [[02-ai-coding/AI-Coding的顿悟时刻]], [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]
 date: 2026-06-26
 source: 微信公众号「字节跳动」转载自稀土掘金技术社区(2026-06-23 火山引擎 Force 原动力大会演讲)
 ---
@@ -39,9 +47,9 @@ source: 微信公众号「字节跳动」转载自稀土掘金技术社区(2026-
 
 ### 关联图谱
 
-- **上游**:字节 TRAE 工具平台 1 年实战(2025.7 → 2026.6) + AI Coding 行业从"工具试用"进入"企业落地"阶段 + 阿里 [[面向Skills编程-淘宝企业购端到端研发提效实践]] 同期实践
-- **下游**:[[Vibe Coding]] 可交付性数据补完 + [[从Prompt-Context到Harness-工程的三次进化与终局之战]] Harness=基建 视角补完 + [[0xCodez-Agent-Harness-14-Steps]] Harness 14 步 + [[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] Spec 落地 + [[Anthropic万字长文三个判断和一个阳谋]] 字节 vs Anthropic 行业判断
-- **同级**:[[面向Skills编程-淘宝企业购端到端研发提效实践]] 阿里淘系同口径 + [[Claude-Code团队5条工作原则-Fiona-Fung分享]] Anthropic 团队实践 + [[54万行代码的顿悟-Markdown才是新编程方式]] / [[AI-Coding的顿悟时刻]] 个人/工程层范式
+- **上游**:字节 TRAE 工具平台 1 年实战(2025.7 → 2026.6) + AI Coding 行业从"工具试用"进入"企业落地"阶段 + 阿里 [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] 同期实践
+- **下游**:[[02-ai-coding/vibe-coding]] 可交付性数据补完 + [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]] Harness=基建 视角补完 + [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] Harness 14 步 + [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] Spec 落地 + [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]] 字节 vs Anthropic 行业判断
+- **同级**:[[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] 阿里淘系同口径 + [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] Anthropic 团队实践 + [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] / [[02-ai-coding/AI-Coding的顿悟时刻]] 个人/工程层范式
 
 ### 正文要点(3 段合并)
 

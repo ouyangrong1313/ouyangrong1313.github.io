@@ -1,7 +1,15 @@
 ---
 title: 万字长文拆解Agent 架构设计（四）：多 Agent 协作（速读摘要）
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/Claude-Code, #主题/多-Agent, #主题/Context-Engineering, #主题/Agent-Architecture, #主题/Sub-Agent, #场景/公众号长文, #来源/架构师带你玩转AI]
+tags:
+  - 主题/AI-Agent
+  - 主题/Claude-Code
+  - 主题/多-Agent
+  - 主题/Context-Engineering
+  - 主题/Agent-Architecture
+  - 主题/Sub-Agent
+  - 场景/公众号长文
+  - 来源/架构师带你玩转AI
 type: digest
 date: 2026-07-27
 source: 微信公众号「架构师带你玩转AI」2026-07-22 推送 / AllenTang
@@ -49,6 +57,6 @@ source: 微信公众号「架构师带你玩转AI」2026-07-22 推送 / AllenTan
 
 ## 关联 + 备注
 
-**关联**：[[OpenClaw-vs-Hermes-多-Agent-架构设计]] / [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] / [[未来属于垂直领域Agent]] / [[多Agent使用边界与并行判定]] / [[图工程-Graph-Engineering-来了-LangChain说不是新东西]] / [[从零设计生产级-Multi-Agent-Harness]] / [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]
+**关联**：[[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]] / [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] / [[01-ai-agents/未来属于垂直领域Agent]] / [[02-ai-coding/多Agent使用边界与并行判定]] / [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]] / [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]] / [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]
 
 **备注**：这篇文章补的是多 Agent runtime 机制这一层，不是“为什么需要多 Agent”的宏观论证，也不是“如何落成生产系统”的完整工程手册。

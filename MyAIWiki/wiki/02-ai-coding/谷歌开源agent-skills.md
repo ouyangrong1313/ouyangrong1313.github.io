@@ -1,7 +1,7 @@
 # 谷歌 Agent Skills：23000+ Stars 的 AI 编程纪律包
 
 > **数据快照提醒**：本篇为 2026-04-27 旧版（20 skills / 23k star）。
-> **最新完整解读**（2026-06-15 / **58.9k Star / 23 skills / 7 命令 + 3 角色 + 4 清单 / 4 设计哲学 + 7 块统一骨架 + Google 工程文化内嵌**）请看 [[Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]]。
+> **最新完整解读**（2026-06-15 / **58.9k Star / 23 skills / 7 命令 + 3 角色 + 4 清单 / 4 设计哲学 + 7 块统一骨架 + Google 工程文化内嵌**）请看 [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]]。
 > 本文保留作为项目历史快照参考。
 
 ## 核心结论
@@ -64,7 +64,7 @@ Claude Code、Cursor、Gemini CLI、Windsurf、GitHub Copilot、Codex
 
 ## 标签
 
-#主题/AI-Coding #手法/权威背书
+ #主题/AI-Coding #手法/权威背书
 
 ## 相关链接
 

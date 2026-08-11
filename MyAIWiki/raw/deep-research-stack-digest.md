@@ -179,10 +179,10 @@ CrewAI 三个原语解决阶段分离：
 
 ## 标签
 
-#主题/AI-Agent #手法/对比冲突 #手法/权威背书 #场景/技术博客
+ #主题/AI-Agent #手法/对比冲突 #手法/权威背书 #场景/技术博客
 
 ## 相关链接
 
-- [[wiki/ai-agents/index]]
-- [[wiki/ai-coding/cat-wu-interview]]
+- [[wiki/01-ai-agents/index]]
+- [[wiki/02-ai-coding/cat-wu-interview]]
 - [[wiki/rag-systems/rag-fundamentals]]

@@ -45,7 +45,7 @@ source: 微信公众号「字节跳动」转载自稀土掘金技术社区(2026-
 
 ## 关联与备注
 
-**关联**:**上游** 字节 TRAE 1 年实战 / [[Vibe Coding]] / [[Anthropic万字长文三个判断和一个阳谋]] / [[面向Skills编程-淘宝企业购端到端研发提效实践]];**下游** [[从Prompt-Context到Harness-工程的三次进化与终局之战]] / [[0xCodez-Agent-Harness-14-Steps]] / [[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] / [[Claude-Code团队5条工作原则-Fiona-Fung分享]] / [[AI-Coding的顿悟时刻]] / [[54万行代码的顿悟-Markdown才是新编程方式]];**同级** [[面向Skills编程-淘宝企业购端到端研发提效实践]] 阿里同口径
+**关联**:**上游** 字节 TRAE 1 年实战 / [[02-ai-coding/vibe-coding]] / [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]] / [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]];**下游** [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]] / [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] / [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] / [[02-ai-coding/AI-Coding的顿悟时刻]] / [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]];**同级** [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] 阿里同口径
 
 **备注**:数据可信度高(字节官方公开);900 次实验未公开具体模型/框架名单;TRAE 团队数据需注意"做 AI Coding 工具的团队本身可能用得更激进"幸存者偏差;原型驱动+系统化 AI Development 实操为现场口述具体技术栈和工时未公开;TRAE Work 企业版发布日期未公开
 

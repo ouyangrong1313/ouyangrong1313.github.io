@@ -132,7 +132,7 @@ Anthropic 团队合并了 **22,000 行** Claude 写的代码，原来两个工�
 
 ---
 
-标签：#主题/AI Coding #手法/趋势洞察 #场景/技术博客
+标签： #主题/AI Coding #手法/趋势洞察 #场景/技术博客
 
 相关链接：
 - 原文：https://mp.weixin.qq.com/s/uajs9vOpVPqBzGFBw7zxtQ

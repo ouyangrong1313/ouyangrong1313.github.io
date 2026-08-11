@@ -3,9 +3,14 @@ title: 麦肯锡《The real AI advantage》- Digest
 date: 2026-07-13
 slug: 麦肯锡-AI提效只是第一波红利-digest
 category: 06-ai-tech
-tags: [AI战略, 组织转型, 学习代谢率, agentic-commerce, outcome-based]
+tags:
+  - AI战略
+  - 组织转型
+  - 学习代谢率
+  - agentic-commerce
+  - outcome-based
 rating: ⭐⭐
-source: "[[麦肯锡-AI提效只是第一波红利]]"
+source: "[[06-ai-tech/麦肯锡-AI提效只是第一波红利]]"
 ---
 
 # 麦肯锡《The real AI advantage》- Digest
@@ -58,20 +63,20 @@ source: "[[麦肯锡-AI提效只是第一波红利]]"
 
 ### 上游
 
-- [[Nikesh-Arora-模型过剩与记忆护城河]] —— 模型过剩 90% 印证本文
-- [[章文龙-AI分身时代-在场重新定价]] —— "哪些事必须亲自做" 呼应 judgment
-- [[凯文凯利-真正的好生意都在卖看不见的东西]] —— friction / data / judgment 都是"看不见的东西"
+- [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]] —— 模型过剩 90% 印证本文
+- [[06-ai-tech/章文龙-AI分身时代-在场重新定价]] —— "哪些事必须亲自做" 呼应 judgment
+- [[06-ai-tech/凯文凯利-真正的好生意都在卖看不见的东西]] —— friction / data / judgment 都是"看不见的东西"
 
 ### 下游
 
-- [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]] —— outcome-based 早期版本
-- [[清华沈阳-自进化AI新物种]] —— 自进化 AI 与"学习代谢率"同源
+- [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]] —— outcome-based 早期版本
+- [[01-ai-agents/清华沈阳-自进化AI新物种]] —— 自进化 AI 与"学习代谢率"同源
 
 ### 同级
 
-- [[Multica-AI-Native-组织-人是最慢的节点]] —— "组织最慢" 印证"组织最难"
-- [[Addy-Osmani-Loop-Engineering]] —— 5+1 积木 是 metabolic rate 工程化
-- [[Loop-Engineering-验证才是瓶颈]] —— 验证闸门 是 metabolic rate 硬约束
+- [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]] —— "组织最慢" 印证"组织最难"
+- [[02-ai-coding/Addy-Osmani-Loop-Engineering]] —— 5+1 积木 是 metabolic rate 工程化
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] —— 验证闸门 是 metabolic rate 硬约束
 
 ### 备注
 

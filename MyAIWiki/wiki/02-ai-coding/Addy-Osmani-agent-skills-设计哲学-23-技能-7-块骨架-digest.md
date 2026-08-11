@@ -1,7 +1,12 @@
 ---
 title: "Addy Osmani agent-skills 设计哲学 - Digest"
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/Skill, #节点/反合理化, #节点/统一骨架, #场景/方法论]
+tags:
+  - 主题/AI-Coding
+  - 主题/Skill
+  - 节点/反合理化
+  - 节点/统一骨架
+  - 场景/方法论
 date: 2026-06-15
 source: 微信公众号 / ColaAI
 ---
@@ -54,10 +59,10 @@ Chrome 团队 Lead 把"资深工程师工作流"打包成 **23 技能 + 7 命令
 
 ## 关联
 
-- 旧版(4-27):[[谷歌开源agent-skills]] 20 skills / 23k star
-- 同主线:[[Addy-Osmani-Loop-Engineering]] | [[Loop-Engineering-详解-把反馈循环放进工程现场]] | [[APPSO-Codex-Claude-Code-Loop-Engineering]]
-- 同形态:[[PM-Skills-Marketplace-产品经理必备skill]] | [[Agentic-Engineering-AI-Workbench]]
-- 团队沉淀:[[从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]]
+- 旧版(4-27):[[02-ai-coding/谷歌开源agent-skills]] 20 skills / 23k star
+- 同主线:[[02-ai-coding/Addy-Osmani-Loop-Engineering]] | [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] | [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]]
+- 同形态:[[02-ai-coding/PM-Skills-Marketplace-产品经理必备skill]] | [[02-ai-coding/Agentic-Engineering-AI-Workbench]]
+- 团队沉淀:[[02-ai-coding/从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]]
 
 ## 备注
 

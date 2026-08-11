@@ -1,9 +1,19 @@
 ---
 title: Better Harness：用任务证据评估并持续改进 AI Coding 工作流
 category: 01-ai-agents
-tags: ["#主题/AI-Agent", "#主题/Harness", "#主题/Loop-Engineering", "#主题/AI-Coding", "#节点/Agent-Work-Loop", "#节点/任务证据", "#节点/证据边界", "#节点/Findings", "#场景/开源项目", "#场景/公众号长文"]
+tags:
+  - 主题/AI-Agent",
+  - 主题/Harness",
+  - 主题/Loop-Engineering",
+  - 主题/AI-Coding",
+  - 节点/Agent-Work-Loop",
+  - 节点/任务证据",
+  - 节点/证据边界",
+  - 节点/Findings",
+  - 场景/开源项目",
+  - 场景/公众号长文
 nodes: ["任务级证据", "证据边界", "三类证据", "Agent-Work-Loop", "可追溯Finding", "前馈反馈", "评估校准", "纵向复验"]
-links: ["[[Lilian-Weng-Harness-Engineering-自我改进]]", "[[Harness工程AgentLoop]]", "[[WorkBuddy-Harness工程复盘-从模型到可用Agent]]", "[[Loop-Engineering-验证才是瓶颈]]", "[[若飞-Agent-记忆与可验证自我改进怎么设计]]"]
+links: ["[[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]", "[[01-ai-agents/Harness工程AgentLoop]]", "[[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]", "[[01-ai-agents/Loop-Engineering-验证才是瓶颈]]", "[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]"]
 date: 2026-07-30
 source: 微信公众号「phodal」2026-07-28 / QoderAI Better Harness 开源项目
 ---
@@ -23,7 +33,7 @@ source: 微信公众号「phodal」2026-07-28 / QoderAI Better Harness 开源项
 ## 分类提炼
 
 - 场景：Coding Agent 工作流诊断、Harness 建设、持续改进
-- 标签：#主题/AI-Agent #主题/Harness #主题/Loop-Engineering #主题/AI-Coding #节点/Agent-Work-Loop #节点/任务证据 #节点/证据边界 #节点/Findings
+- 标签： #主题/AI-Agent #主题/Harness #主题/Loop-Engineering #主题/AI-Coding #节点/Agent-Work-Loop #节点/任务证据 #节点/证据边界 #节点/Findings
 - 类型：开源工具拆解 / 评估模型 / 工程实践
 
 ## 知识节点（8 个独立概念）
@@ -85,23 +95,23 @@ Better Harness 公开的对象不是单条 Prompt，而是相互连接的三层�
 
 ### 上游（基于 / 来自）
 
-- [[Lilian-Weng-Harness-Engineering-自我改进]]：给出 Harness 是模型外部运行系统、应围绕反馈演进的理论坐标。
-- [[Harness工程AgentLoop]]：提供 Loop 走向工业交付时需要工程决策与失败处理的骨架。
-- [[Loop-Engineering-验证才是瓶颈]]：说明 Better Harness 的“改动验证”和证据边界为什么不能被总分替代。
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]：给出 Harness 是模型外部运行系统、应围绕反馈演进的理论坐标。
+- [[01-ai-agents/Harness工程AgentLoop]]：提供 Loop 走向工业交付时需要工程决策与失败处理的骨架。
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]：说明 Better Harness 的“改动验证”和证据边界为什么不能被总分替代。
 
 ### 下游（应用于 / 验证于）
 
-- [[若飞-Agent-记忆与可验证自我改进怎么设计]]：可把连续报告中被证实的经验，经过准入与回归门后再升级为长期记忆或 Skill。
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]：其前馈与反馈分层为三类证据和五维工作循环提供产品化解释。
+- [[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]：可把连续报告中被证实的经验，经过准入与回归门后再升级为长期记忆或 Skill。
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：其前馈与反馈分层为三类证据和五维工作循环提供产品化解释。
 
 ### 同级（横向 / 并列）
 
-- [[Lilian-Weng-Harness-Engineering-自我改进]]：偏理论与递归自我改进；本文偏任务证据、报告和运行实现。
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]：偏概念分层；本文给出开源评估工具的具体边界。
-- [[Loop-Engineering-验证才是瓶颈]]：偏验证器的上限；本文把验证扩展成可追溯证据与修复工作流。
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]：偏理论与递归自我改进；本文偏任务证据、报告和运行实现。
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：偏概念分层；本文给出开源评估工具的具体边界。
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]：偏验证器的上限；本文把验证扩展成可追溯证据与修复工作流。
 
 ## 相关链接
 
 - 原文：[Better Harness 开源了：立即把 Harness 专家带进你的 AI Coding 工具](https://mp.weixin.qq.com/s/PuMpxU1ruXlTgT_JWKoHfQ?scene=1&click_id=8)
 - 项目：[QoderAI/better-harness](https://github.com/QoderAI/better-harness)
-- 原文摘要：[2026-07-28-phodal-Better-Harness-开源-digest](../../raw/2026-07-28-phodal-Better-Harness-开源-digest.md)
+- 原文摘要：[2026-07-28-phodal-Better-Harness-开源-digest](../../raw/phodal-Better-Harness-开源-digest.md)

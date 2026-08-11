@@ -32,9 +32,9 @@
 
 ## 关联
 
-- 上游:[[APPSO-Codex-Claude-Code-Loop-Engineering]]
-- 同级:[[Addy-Osmani-Loop-Engineering]] [[Loop-Engineering-详解-把反馈循环放进工程现场]] [[Agentic-Engineering-AI-Workbench]]
-- 下游:[[Addy-Osmani-agent-skills-设计哲学]]
+- 上游:[[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]]
+- 同级:[[02-ai-coding/Addy-Osmani-Loop-Engineering]] [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] [[02-ai-coding/Agentic-Engineering-AI-Workbench]]
+- 下游:[[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]]
 
 ## 备注
 

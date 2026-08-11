@@ -3,7 +3,7 @@ title: Nikesh Arora 模型过剩与记忆护城河 - Digest
 slug: Nikesh-Arora-模型过剩与记忆护城河-digest
 date: 2026-06-25
 category: 06-ai-tech
-related: "[[Nikesh-Arora-模型过剩与记忆护城河]]"
+related: "[[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]"
 ---
 
 # Nikesh Arora 模型过剩与记忆护城河 - Digest
@@ -59,9 +59,9 @@ related: "[[Nikesh-Arora-模型过剩与记忆护城河]]"
 
 ## 关联图谱
 
-**上游/平行**：[[章文龙-AI分身时代-在场重新定价]]（个人视角护城河）/ [[凯文凯利-真正的好生意都在卖看不见的东西]]（记忆=看不见的资产）/ [[清华沈阳-自进化AI新物种]]（模型过剩 vs 自进化方向）
+**上游/平行**：[[06-ai-tech/章文龙-AI分身时代-在场重新定价]]（个人视角护城河）/ [[06-ai-tech/凯文凯利-真正的好生意都在卖看不见的东西]]（记忆=看不见的资产）/ [[01-ai-agents/清华沈阳-自进化AI新物种]]（模型过剩 vs 自进化方向）
 
-**下游（工程落地）**：[[Multica-AI-Native-组织-人是最慢的节点]]（组织瓶颈=人 vs 模型瓶颈=上下文）/ [[阿里云开发者-淘宝主播Agent的Harness工程实战]]（记忆对账/信任度闭环）/ [[Addy-Osmani-Loop-Engineering]]（Sub-agents + Memory-on-Disk）
+**下游（工程落地）**：[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]（组织瓶颈=人 vs 模型瓶颈=上下文）/ [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]]（记忆对账/信任度闭环）/ [[02-ai-coding/Addy-Osmani-Loop-Engineering]]（Sub-agents + Memory-on-Disk）
 
 ## 一句话带回去
 

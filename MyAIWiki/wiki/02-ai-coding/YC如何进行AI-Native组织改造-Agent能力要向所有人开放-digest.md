@@ -1,7 +1,7 @@
 # YC 如何进行 AI-Native 组织改造 - Digest
 
 - 原文链接：https://mp.weixin.qq.com/s/dcpsur_udGz6tLW-yARU8w
-- 原文：[[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]
+- 原文：[[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]
 - 抓取时间：2026-06-03
 
 ## 一句话总结
@@ -43,16 +43,16 @@ YC 合伙人 Pete Koomen 主导搭建 AI-Native 基础设施，**一年内演化
 
 ## 关键人物一致关系（重要发现）
 
-文中的 **Gary** 就是 [[54万行代码的顿悟]] 的作者 **Garry Tan**（YC 总裁）。文里提到的 **Gbrain** 就是 [[54万行代码的顿悟]] 里的 **GBrain**（8 层 AI 第二大脑）。**这是同一个人/同一段时间的不同侧面表达。**
+文中的 **Gary** 就是 [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] 的作者 **Garry Tan**（YC 总裁）。文里提到的 **Gbrain** 就是 [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] 里的 **GBrain**（8 层 AI 第二大脑）。**这是同一个人/同一段时间的不同侧面表达。**
 
 **数据交叉印证**：
-- [[54万行代码的顿悟]]：54 万行 Rails 代码（Gary's List）
+- [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]：54 万行 Rails 代码（Gary's List）
 - 本文："一月到二月我用 Rails 写了约五十万行代码"
 - **完全吻合** → 同一项目的两次叙述
 
 ## 我的理解
 
-- **本文是 [[54万行代码的顿悟]] 的官方补完**：54 万行顿悟讲"工程师个人范式"，本文讲"组织层面"（Egalitarian + Trust by default + 工具/Skill 注册表 + Dream Cycle）。**合起来 = 工程师个人 + 团队流程 + 组织结构** 三层完整的 AI-native 蓝图
+- **本文是 [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] 的官方补完**：54 万行顿悟讲"工程师个人范式"，本文讲"组织层面"（Egalitarian + Trust by default + 工具/Skill 注册表 + Dream Cycle）。**合起来 = 工程师个人 + 团队流程 + 组织结构** 三层完整的 AI-native 蓝图
 - **"偷偷推 PR 开放生产数据库"是 YC 的"卢德分子"故事**：在 AI 时代，"违规"往往就是创新
 - **"Skill + Skillify + check resolvable" 是超级具体的可操作新方法论**：之前讲 "Skillify it" 循环，本文补完 **check resolvable + DRY + MECE**。**新组合**：Skillify 完必 check resolvable，保证 skill 库健康
 - **"Dream Cycle" 是 AI-Native 组织的关键基础设施**：我们的 MyAIWiki 知识库**就是缺这个机制** —— 可以考虑加一个 weekly dream cycle，让 AI 读本周新加内容自动归并、提炼、改进

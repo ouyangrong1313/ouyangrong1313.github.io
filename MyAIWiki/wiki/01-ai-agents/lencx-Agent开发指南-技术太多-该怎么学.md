@@ -1,9 +1,17 @@
 ---
 title: "Agent 开发指南：技术太多，该怎么学？"
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/Harness工程, #主题/Agent基础设施, #主题/Agent-Skills, #主题/浏览器自动化, #主题/可信执行, #场景/公众号长文, #作者/lencx]
+tags:
+  - 主题/AI-Agent
+  - 主题/Harness工程
+  - 主题/Agent基础设施
+  - 主题/Agent-Skills
+  - 主题/浏览器自动化
+  - 主题/可信执行
+  - 场景/公众号长文
+  - 作者/lencx
 nodes: [可信完成, 动作回执, Harness边界, Goal契约, 五类记忆, 状态合流, 浏览器能力平面, Agent-readable-surface, Skill供应链]
-links: [[harness-engineering]], [[Loop-Engineering-验证才是瓶颈]], [[若飞-Agent-记忆与可验证自我改进怎么设计]], [[Skill-Self-Evolution]], [[OpenClaw-vs-Hermes-多-Agent-架构设计]], [[图工程-Graph-Engineering-来了-LangChain说不是新东西]], [[腾讯-AI-Agent-Skill-测评方案落地]], [[架构腐朽与Loop-Engineering]]
+links: [[01-ai-agents/harness-engineering]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]], [[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]], [[01-ai-agents/Skill-Self-Evolution]], [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]], [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]], [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]], [[02-ai-coding/架构腐朽与Loop-Engineering]]
 date: 2026-07-29
 source: "微信公众号「浮之静」/ lencx，2026-07-28"
 ---
@@ -13,7 +21,7 @@ source: "微信公众号「浮之静」/ lencx，2026-07-28"
 - 原文链接：https://mp.weixin.qq.com/s/Mx1pclSLzkRFXKEME24TYA
 - 作者：lencx
 - 发布：2026-07-28
-- 原始素材：[[2026-07-lencx-Agent开发指南-技术太多-该怎么学]]
+- 原始素材：[[01-ai-agents/lencx-Agent开发指南-技术太多-该怎么学]]
 
 ## 核心结论
 
@@ -42,20 +50,20 @@ source: "微信公众号「浮之静」/ lencx，2026-07-28"
 
 ### 上游（基于 / 来自）
 
-- [[harness-engineering]]：本文将 Harness 从“工程环境”扩展为跨状态、身份、恢复和验证的责任外壳。
-- [[图工程-Graph-Engineering-来了-LangChain说不是新东西]]：Graph 只描述任务拓扑，本文将它放回 Context、Loop、Skill 与 Harness 的边界关系中。
-- [[OpenClaw-vs-Hermes-多-Agent-架构设计]]：该文的 Gateway、进程和会话边界，可解释本文所说的异步入口与状态合流。
+- [[01-ai-agents/harness-engineering]]：本文将 Harness 从“工程环境”扩展为跨状态、身份、恢复和验证的责任外壳。
+- [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]]：Graph 只描述任务拓扑，本文将它放回 Context、Loop、Skill 与 Harness 的边界关系中。
+- [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]]：该文的 Gateway、进程和会话边界，可解释本文所说的异步入口与状态合流。
 
 ### 下游（应用于 / 验证于）
 
-- [[Loop-Engineering-验证才是瓶颈]]：本文“可信完成”的判断由 Loop 中的验证器、回归和证据闭环具体化。
-- [[若飞-Agent-记忆与可验证自我改进怎么设计]]：五类记忆的分层进一步落到候选经验准入、证据、权限与回滚链。
-- [[腾讯-AI-Agent-Skill-测评方案落地]]：本文主张的 verifier、负向路径和副作用验证，可在 Agent 评测维度与基线中落地。
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]：本文“可信完成”的判断由 Loop 中的验证器、回归和证据闭环具体化。
+- [[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]：五类记忆的分层进一步落到候选经验准入、证据、权限与回滚链。
+- [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]：本文主张的 verifier、负向路径和副作用验证，可在 Agent 评测维度与基线中落地。
 
 ### 同级（横向 / 并列）
 
-- [[Skill-Self-Evolution]]：二者都把 Skill 视为程序性资产；本文补上发现、安装和执行的供应链治理，后者聚焦独立验证下的演化。
-- [[架构腐朽与Loop-Engineering]]：同为 lencx 的工程反思，前者讨论长期代码与反馈循环，本文扩大到整个 Agent 执行基础设施。
+- [[01-ai-agents/Skill-Self-Evolution]]：二者都把 Skill 视为程序性资产；本文补上发现、安装和执行的供应链治理，后者聚焦独立验证下的演化。
+- [[02-ai-coding/架构腐朽与Loop-Engineering]]：同为 lencx 的工程反思，前者讨论长期代码与反馈循环，本文扩大到整个 Agent 执行基础设施。
 
 ## 正文要点
 
@@ -71,4 +79,4 @@ source: "微信公众号「浮之静」/ lencx，2026-07-28"
 - 文中列举的收购、实验性 API、性能数据和路线图不构成稳定产品承诺，落地前应验证发布日期、当前兼容性和原始公告。
 - “Agent-readable surface”是本文归纳的工程方向，不等同于某个单一标准；MCP、WebMCP、CLI contract 与 Agent Skills 仍在并行演进。
 - [[2026-07-lencx-Agent开发指南-技术太多-该怎么学-digest]]：7 个分析角度和 21 个写作钩子。
-- [[harness-engineering]]、[[Loop-Engineering-验证才是瓶颈]]、[[若飞-Agent-记忆与可验证自我改进怎么设计]]、[[Skill-Self-Evolution]]：可按 Harness、验证、Memory、Skill 四条主线继续查询。
+- [[01-ai-agents/harness-engineering]]、[[01-ai-agents/Loop-Engineering-验证才是瓶颈]]、[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]、[[01-ai-agents/Skill-Self-Evolution]]：可按 Harness、验证、Memory、Skill 四条主线继续查询。

@@ -1,9 +1,18 @@
 ---
 title: Whatnot CPO：每个团队都需要产品经理吗？
 category: 03-productivity
-tags: [#主题/产品组织, #主题/AI时代工作方法, #主题/系统思维, #主题/判断力, #主题/产品经理, #主题/数据责任, #场景/产品团队, #公众号/晚点再听LaterCast, #作者/Capihom]
+tags:
+  - 主题/产品组织
+  - 主题/AI时代工作方法
+  - 主题/系统思维
+  - 主题/判断力
+  - 主题/产品经理
+  - 主题/数据责任
+  - 场景/产品团队
+  - 公众号/晚点再听LaterCast
+  - 作者/Capihom
 nodes: [按需配置PM, Know-then-go, IC不离场, 等待时间压缩, 数据底座上移, 行动者空地, 地面真相, 少数用户保护]
-links: [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]], [[Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]], [[Laurel-CPO-Jiaona-Zhang-公司OS]], [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]], [[与AI一起做产品的六条原则]]
+links: [[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]], [[02-ai-coding/Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]], [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]], [[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]], [[03-productivity/与AI一起做产品的六条原则]]
 date: 2026-08-04
 source: 微信公众号「晚点再听LaterCast」Capihom 2026-08-03 编译 Lenny's Podcast《This CPO regrets that product management exists》
 ---
@@ -38,7 +47,7 @@ source: 微信公众号「晚点再听LaterCast」Capihom 2026-08-03 编译 Lenn
 ### 上游
 
 - Lenny's Podcast《This CPO regrets that product management exists》：Tom Verrilli 对 Whatnot 产品组织与 AI 工作方式的访谈。
-- [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]]：同为 LaterCast/Lenny 的组织能力视角，强调跨职能流动不能降低专业标准。
+- [[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]]：同为 LaterCast/Lenny 的组织能力视角，强调跨职能流动不能降低专业标准。
 
 ### 下游
 
@@ -48,9 +57,9 @@ source: 微信公众号「晚点再听LaterCast」Capihom 2026-08-03 编译 Lenn
 
 ### 同级
 
-- [[Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]]：OpenAI 视角认为实现变便宜后稀缺资源是品味与调度；本文补充 Whatnot 的一线判断与组织选择。
-- [[Laurel-CPO-Jiaona-Zhang-公司OS]]：公司 OS 把高手做法沉淀为可调用技能；本文提醒流程化前仍要保留地面事实与明确 Owner。
-- [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]：岗位边界流动、责任更集中；本文提供 PM/数据侧的实际后果。
+- [[02-ai-coding/Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]]：OpenAI 视角认为实现变便宜后稀缺资源是品味与调度；本文补充 Whatnot 的一线判断与组织选择。
+- [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]]：公司 OS 把高手做法沉淀为可调用技能；本文提醒流程化前仍要保留地面事实与明确 Owner。
+- [[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]：岗位边界流动、责任更集中；本文提供 PM/数据侧的实际后果。
 
 ## 正文要点
 
@@ -78,5 +87,5 @@ source: 微信公众号「晚点再听LaterCast」Capihom 2026-08-03 编译 Lenn
 ## 相关链接
 
 - [[2026-08-03-Capihom-Whatnot-CPO-产品经理是否按人头配齐-digest]]
-- [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]]
-- [[Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]]
+- [[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]]
+- [[02-ai-coding/Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]]

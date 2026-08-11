@@ -4,7 +4,7 @@ category: 02-ai-coding
 date: 2026-06-22
 source: 微信公众号 / 架构师 JiaGouX —若飞
 source_url: https://mp.weixin.qq.com/s/YScRbcLfQYJWY7QLHXWp9A
-main_entry: [[若飞-用ClaudeCode搭建AI学习系统]]
+main_entry: [[02-ai-coding/若飞-用ClaudeCode搭建AI学习系统]]
 ---
 
 # 若飞：用 Claude Code 搭建自己的 AI 学习系统 — Digest
@@ -50,14 +50,14 @@ main_entry: [[若飞-用ClaudeCode搭建AI学习系统]]
 
 ## 关联
 
-**主条目**：[[若飞-用ClaudeCode搭建AI学习系统]]
-**上游**：[[Loop-Engineering-详解-把反馈循环放进工程现场]] / [[Agentic-Engineering-AI-Workbench]] / [[Addy-Osmani-Loop-Engineering]] / [[Claude-Code-主动式Agent-Routines]] / [[Claude-Code一周年回顾-Boris-Cat]] / [[Claude-Code之父品味不是人类护城河]]
+**主条目**：[[02-ai-coding/若飞-用ClaudeCode搭建AI学习系统]]
+**上游**：[[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] / [[02-ai-coding/Agentic-Engineering-AI-Workbench]] / [[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[02-ai-coding/Claude-Code-主动式Agent-Routines]] / [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]] / [[02-ai-coding/Claude-Code之父品味不是人类护城河]]
 **下游**：[[seetong-daily-briefing]] / [[seetong-tapd-version-review]]
-**同级**：[[APPSO-Codex-Claude-Code-Loop-Engineering]] / [[ai-learning-expert-perspective]] / [[karpathy-knowledge-system]]
+**同级**：[[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]] / [[03-productivity/ai-learning-expert-perspective]] / [[03-productivity/karpathy-knowledge-system]]
 
 ## 备注
 
 - 速读版：核心结论 + 速查表 + 3 prompt 模板 + 反直觉 + Seetong 借鉴动作 + 关联
-- 完整编译页：同目录 [[若飞-用ClaudeCode搭建AI学习系统]]
+- 完整编译页：同目录 [[02-ai-coding/若飞-用ClaudeCode搭建AI学习系统]]
 - 本文是若飞 Harness/Loop 主线"个人学习场景版"——同作者 Loop-Engineering-详解、Agentic-Engineering-AI-Workbench 的"学习场景迁移"
 - 学习科学背书：Karpicke & Roediger / Dunlosky / Bastani / Bloom

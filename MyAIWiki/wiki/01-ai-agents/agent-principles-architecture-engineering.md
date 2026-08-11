@@ -269,9 +269,9 @@
 
 ## 相关链接
 
-- [[ai-personal-knowledge-base-problems|AI 个人知识库：为什么还是那么难用]] — 知识系统需要权威负责
-- [[llm-agent-unified-memory-framework|LLM Agent 统一记忆框架综述]] — 记忆系统对比
+- [[01-ai-agents/ai-personal-knowledge-base-problems|AI 个人知识库：为什么还是那么难用]] — 知识系统需要权威负责
+- [[01-ai-agents/llm-agent-unified-memory-framework|LLM Agent 统一记忆框架综述]] — 记忆系统对比
 
 ## 标签
 
-#主题/AI-Agent #场景/技术博客
+ #主题/AI-Agent #场景/技术博客

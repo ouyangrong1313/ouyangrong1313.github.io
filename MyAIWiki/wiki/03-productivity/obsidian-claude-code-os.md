@@ -62,9 +62,9 @@ AI 自动把碎片归类成：
 
 ## 标签
 
-#主题/效率 #场景/技术博客
+ #主题/效率 #场景/技术博客
 
 ## 相关链接
 
 - [[index]]
-- [[karpathy-knowledge-system]]
+- [[03-productivity/karpathy-knowledge-system]]

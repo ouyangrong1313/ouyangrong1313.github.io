@@ -1,9 +1,17 @@
 ---
 title: WAIC 观察笔记：那些活人感的笨功夫，是 AI 时代最重要的护城河
 category: 03-productivity
-tags: [#主题/AI时代工作方法, #主题/WAIC-2026, #主题/AI基础设施, #主题/能力鸿沟, #主题/笨功夫护城河, #主题/个人应对, #场景/Seetong借鉴, #作者/快刀青衣]
+tags:
+  - 主题/AI时代工作方法
+  - 主题/WAIC-2026
+  - 主题/AI基础设施
+  - 主题/能力鸿沟
+  - 主题/笨功夫护城河
+  - 主题/个人应对
+  - 场景/Seetong借鉴
+  - 作者/快刀青衣
 nodes: [AI成为共同基础设施, 评价尺子变稳定, 工作拆开接走, 工作拆开长新任务, 能力鸿沟, 3类动作自检, 笨功夫护城河, 我是执行还是定义任务, 现实世界改造慢]
-links: [[快刀青衣-OpenAI高管教练四层能力]], [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]], [[LaterCast-YC设计负责人-AI重写设计师工作流]], [[AI组织进化论-Codex负责人-AI原生工作法]], [[笔记侠-十布-这-是以后的工作方式]], [[深思圈-思考外包能动性]]
+links: [[03-productivity/快刀青衣-OpenAI高管教练四层能力]], [[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]], [[03-productivity/LaterCast-YC设计负责人-AI重写设计师工作流]], [[03-productivity/AI组织进化论-Codex负责人-AI原生工作法]], [[03-productivity/笔记侠-十布-这-是以后的工作方式]], [[06-ai-tech/深思圈-思考外包能动性]]
 date: 2026-07-21
 source: 微信公众号「快刀青衣」2026-07 推送（WAIC 2026 观察笔记最后一期 / 原文 https://mp.weixin.qq.com/s/-QmSX3jEbQ3uaVvXEWgdfA）
 ---
@@ -74,11 +82,11 @@ source: 微信公众号「快刀青衣」2026-07 推送（WAIC 2026 观察笔记
 - 个人 AI 时代定位 / 团队能力分配 / 职业转型规划 / 能力鸿沟监测
 
 ### 同级（横向）
-- [[快刀青衣-OpenAI高管教练四层能力]] 同作者"AI 时代软实力"主线
-- [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]] 系统型人才 + 平台 80%
-- [[AI组织进化论-Codex负责人-AI原生工作法]] AI 原生团队工作法
-- [[笔记侠-十布-这-是以后的工作方式]] AI 原生组织 + 招聘 5 步
-- [[深思圈-思考外包能动性]] 外包苦役 vs 外包判断边界
+- [[03-productivity/快刀青衣-OpenAI高管教练四层能力]] 同作者"AI 时代软实力"主线
+- [[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]] 系统型人才 + 平台 80%
+- [[03-productivity/AI组织进化论-Codex负责人-AI原生工作法]] AI 原生团队工作法
+- [[03-productivity/笔记侠-十布-这-是以后的工作方式]] AI 原生组织 + 招聘 5 步
+- [[06-ai-tech/深思圈-思考外包能动性]] 外包苦役 vs 外包判断边界
 
 ## 6 个对 Seetong 借鉴动作
 
@@ -93,8 +101,8 @@ source: 微信公众号「快刀青衣」2026-07 推送（WAIC 2026 观察笔记
 
 - **作者**：快刀青衣（个人类公众号，WAIC 观察笔记系列共 3+ 期，本文是最后一期）
 - **未独立验证**：83:18 大模型/Agent 企业比例来自"得到大脑知识库"WAIC 参展主体梳理（具体数据口径需查原报告）；工程师配方 60→2-3 天、货代 2 月→2 分钟来自"流水席直播"嘉宾口述（具体公司名/产品名未给）；联合国"能力鸿沟"7/19 论坛引述需对照原视频
-- **本批对比**：与 [[快刀青衣-OpenAI高管教练四层能力]] 同作者形成"内（4 层能力训练）+ 外（4 大趋势 + 能力鸿沟）"双视角；与 [[WAIC之夜-Physical-AI-下一个范式]] 06-ai-tech 同 WAIC 主线不同侧重
+- **本批对比**：与 [[03-productivity/快刀青衣-OpenAI高管教练四层能力]] 同作者形成"内（4 层能力训练）+ 外（4 大趋势 + 能力鸿沟）"双视角；与 [[06-ai-tech/WAIC之夜-Physical-AI-下一个范式]] 06-ai-tech 同 WAIC 主线不同侧重
 
 - [原文链接](https://mp.weixin.qq.com/s/-QmSX3jEbQ3uaVvXEWgdfA)
-- [[快刀青衣-OpenAI高管教练四层能力]] 同作者主线
-- [[WAIC之夜-Physical-AI-下一个范式]] 06-ai-tech 同 WAIC 主线
+- [[03-productivity/快刀青衣-OpenAI高管教练四层能力]] 同作者主线
+- [[06-ai-tech/WAIC之夜-Physical-AI-下一个范式]] 06-ai-tech 同 WAIC 主线

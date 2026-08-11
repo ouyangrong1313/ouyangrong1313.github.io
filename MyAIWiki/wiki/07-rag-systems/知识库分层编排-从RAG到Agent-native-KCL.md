@@ -1,9 +1,27 @@
 ---
 title: 知识库分层编排:从 RAG 到 Agent-native Knowledge Context Layer——金字塔(Pyramid KB)给知识加上结构
 category: 07-rag-systems
-tags: [#主题/RAG系统, #主题/AI-Coding, #主题/AI-Agent, #主题/知识工程, #节点/RAG天花板, #节点/四个常见症状, #节点/Naive-RAG, #节点/LLM-Wiki, #节点/Graphify, #节点/GraphRAG, #节点/金字塔五层, #节点/7种有向边, #节点/角色感知, #节点/变更驱动更新, #节点/Pyramid+RAG混合, #手法/范式对比, #手法/工程实践, #场景/知识库方法论]
+tags:
+  - 主题/RAG系统
+  - 主题/AI-Coding
+  - 主题/AI-Agent
+  - 主题/知识工程
+  - 节点/RAG天花板
+  - 节点/四个常见症状
+  - 节点/Naive-RAG
+  - 节点/LLM-Wiki
+  - 节点/Graphify
+  - 节点/GraphRAG
+  - 节点/金字塔五层
+  - 节点/7种有向边
+  - 节点/角色感知
+  - 节点/变更驱动更新
+  - 节点/Pyramid+RAG混合
+  - 手法/范式对比
+  - 手法/工程实践
+  - 场景/知识库方法论
 nodes: [RAG天花板, 四个常见症状, Naive-RAG, LLM-Wiki, Graphify, GraphRAG, 金字塔五层, 7种有向边, 角色感知, 变更驱动更新, Pyramid+RAG混合]
-links: [[AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]], [[构建LLM-Wiki智能知识库-实现AI辅助写作工作流]], [[如何使用AI打造智能高效省Token的AI知识库-LLM-Wiki-Skill设计详解]], [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]], [[ai-personal-knowledge-base-problems]], [[hermes-obsidian-llm-wiki-knowledge-base]], [[从软件工程基本功到Agent落地:结合OpenClaw与Claude Code的实践理解]], [[Claude-Code团队5条工作原则-Fiona-Fung分享]], [[Claude-Code首席设计师Meaghan-Choi工作流]]
+links: [[07-rag-systems/AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]], [[07-rag-systems/构建LLM-Wiki智能知识库-实现AI辅助写作工作流]], [[07-rag-systems/如何使用AI打造智能高效省Token的AI知识库-LLM-Wiki-Skill设计详解]], [[01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain]], [[01-ai-agents/ai-personal-knowledge-base-problems]], [[01-ai-agents/hermes-obsidian-llm-wiki-knowledge-base]], [[02-ai-coding/从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]], [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]], [[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]]
 date: 2026-06-10
 source: 微信公众号 / 板牙(个人技术实践 + 独立思考 + 内部知识库评测)
 ---
@@ -23,7 +41,7 @@ source: 微信公众号 / 板牙(个人技术实践 + 独立思考 + 内部知�
 ## 分类提炼
 
 - 场景:知识库方法论 / Agent 驱动的第二大脑 / 工程团队知识沉淀
-- 标签:#主题/RAG系统 #主题/知识工程 #节点/金字塔五层 #节点/角色感知
+- 标签: #主题/RAG系统 #主题/知识工程 #节点/金字塔五层 #节点/角色感知
 - 类型:方法论 / 范式对比 / 评测分析
 
 ## 知识节点(11 个独立概念)
@@ -44,18 +62,18 @@ source: 微信公众号 / 板牙(个人技术实践 + 独立思考 + 内部知�
 
 ### 上游(基于 / 来自)
 
-- [[AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]] - RAG → NotebookLM → LLM Wiki 三阶段演进的背景,本篇补完"LLM Wiki 之上的 Pyramid"
-- [[构建LLM-Wiki智能知识库-实现AI辅助写作工作流]] - method/concepts/raw 三层结构的写作工作流;本篇的金字塔 5 层是更通用的抽象
-- [[如何使用AI打造智能高效省Token的AI知识库-LLM-Wiki-Skill设计详解]] - moss 的 grep 查询 Skill;本篇的"分层关键词打分 + 图谱扩展"是类似思路的更体系化版本
-- [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]] - Obsidian Wiki / GBrain 深度分析;本篇的 Pyramid 与 Obsidian Wiki 高度互补
-- [[ai-personal-knowledge-base-problems]] - 传统个人知识库的痛点,本篇的金字塔部分回应了"找不到层次"这一痛点
-- [[hermes-obsidian-llm-wiki-knowledge-base]] - Obsidian + LLM Wiki 混合实现
+- [[07-rag-systems/AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]] - RAG → NotebookLM → LLM Wiki 三阶段演进的背景,本篇补完"LLM Wiki 之上的 Pyramid"
+- [[07-rag-systems/构建LLM-Wiki智能知识库-实现AI辅助写作工作流]] - method/concepts/raw 三层结构的写作工作流;本篇的金字塔 5 层是更通用的抽象
+- [[07-rag-systems/如何使用AI打造智能高效省Token的AI知识库-LLM-Wiki-Skill设计详解]] - moss 的 grep 查询 Skill;本篇的"分层关键词打分 + 图谱扩展"是类似思路的更体系化版本
+- [[01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain]] - Obsidian Wiki / GBrain 深度分析;本篇的 Pyramid 与 Obsidian Wiki 高度互补
+- [[01-ai-agents/ai-personal-knowledge-base-problems]] - 传统个人知识库的痛点,本篇的金字塔部分回应了"找不到层次"这一痛点
+- [[01-ai-agents/hermes-obsidian-llm-wiki-knowledge-base]] - Obsidian + LLM Wiki 混合实现
 
 ### 下游(应用于 / 验证于)
 
-- [[从软件工程基本功到Agent落地:结合OpenClaw与Claude Code的实践理解]] - 软件工程基本功在 Agent 时代的延续,本篇的"L1 原则 / L2 架构 / L3 规范"是软件工程思维的具象化
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]] - "自动化肌肉记忆"与本篇"变更驱动更新"是同主线
-- [[Claude-Code首席设计师Meaghan-Choi工作流]] - Meaghan 强调"AI 自动巡逻产品质量"是 Routine 思路,本篇的"绑定到工作流触发器"是知识库侧的同主线
+- [[02-ai-coding/从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]] - 软件工程基本功在 Agent 时代的延续,本篇的"L1 原则 / L2 架构 / L3 规范"是软件工程思维的具象化
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] - "自动化肌肉记忆"与本篇"变更驱动更新"是同主线
+- [[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]] - Meaghan 强调"AI 自动巡逻产品质量"是 Routine 思路,本篇的"绑定到工作流触发器"是知识库侧的同主线
 
 ## 正文要点(10 条)
 
@@ -187,10 +205,10 @@ Phase 3 后审计 → 对比 Before/After 覆盖率改进
 
 ## 我的理解
 
-- **"给知识加上结构"是 2026 年 AI 知识库的核心命题** —— 不再是"哪种范式最好",而是"在顶层加结构化路由和导航层";这与 [[AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]] 的"LLM Wiki 是 RAG 之后的下一阶段"主线一致,**但本篇明确指出 LLM Wiki 的局限(wiki 页面之间的关联通过 wikilink 手动维护,无自动关系推断)**,并用金字塔补上这一环
+- **"给知识加上结构"是 2026 年 AI 知识库的核心命题** —— 不再是"哪种范式最好",而是"在顶层加结构化路由和导航层";这与 [[07-rag-systems/AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]] 的"LLM Wiki 是 RAG 之后的下一阶段"主线一致,**但本篇明确指出 LLM Wiki 的局限(wiki 页面之间的关联通过 wikilink 手动维护,无自动关系推断)**,并用金字塔补上这一环
 - **"5 层抽象分层"是软件工程思维在知识库上的具象化** —— L1 原则 / L2 架构 / L3 规范 / L4 实现 / L5 经验 = 对应 SOLID/ADR/ESLint/代码模板/故障复盘;**类比法律体系(宪法/法律/规章/手册/判例)是把抽象层次具象化的最强抓手**;**对 Seetong 团队**:Seetong 当前 Seetong-iOS / Seetong-Android 知识库可考虑按此 5 层重新组织,尤其是 L5 经验层(故障复盘/线上排查 SOP)目前散落在各人笔记,可统一沉淀
 - **"角色感知 + 上下文预算"是 Agent 时代的关键设计模式** —— 不再"所有人看同一份文档",而是"架构师看 L1+L2,开发者看 L2-L4,测试看 L3+L5";**对 Seetong 团队**:不同角色(开发/测试/PM/客服)对同一份"异地组网"知识应该有不同的入口和深度,这件事可以立刻用 Pyramid 思路做小试点
-- **"变更驱动更新"是知识库保鲜的工程化关键** —— 不是"每月检查一次",而是绑定到架构评审/Lint 变更/依赖升级/故障复盘/新服务上线等已有工作流;**与 [[Claude-Code团队5条工作原则-Fiona-Fung分享]] 的"自动化肌肉记忆"是同主线** —— 让维护成为流程的一部分,而不是额外工作;**对 Seetong 团队**:TAPD 需求/Bug 流可作为知识库更新的天然触发器(需求创建时补 L2+L4,Bug 关闭时补 L5)
+- **"变更驱动更新"是知识库保鲜的工程化关键** —— 不是"每月检查一次",而是绑定到架构评审/Lint 变更/依赖升级/故障复盘/新服务上线等已有工作流;**与 [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] 的"自动化肌肉记忆"是同主线** —— 让维护成为流程的一部分,而不是额外工作;**对 Seetong 团队**:TAPD 需求/Bug 流可作为知识库更新的天然触发器(需求创建时补 L2+L4,Bug 关闭时补 L5)
 - **"Pyramid+RAG Hybrid"是 2026 年最实用的工程方案** —— 金字塔做分层定位(0 API)+ 向量检索补深度(1 API);**Pyramid+RAG Hit@3=89% vs Naive RAG 75%**,且**对导航类查询从 0% → 93.3%**(从完全答不到到基本答到);**对 Seetong 团队**:可考虑用 Obsidian / Logseq 作为 L1-L4 分层承载 + LanceDB / Chroma 作为向量检索补深度,搭一个"5 层 + 向量"的轻量 Pyramid
 - **"评测方法 + 局限性声明"是这篇文章最值得学习的工程态度** —— 明确说"单评估者 / 非盲评 / 评测集由 LLM 生成可能存在分布偏差 / 仅单一团队知识库测试",而不是直接下结论"Pyramid 最好";**这种"敢给数据 + 敢说不确定"的态度本身就是知识工程的态度**
 
@@ -206,15 +224,15 @@ Phase 3 后审计 → 对比 Before/After 覆盖率改进
 
 - 原文:https://mp.weixin.qq.com/s/_IlrlfGpPa42VhTaKNAj6A
 - 关联 wiki:
-  - [[AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]] - RAG → NotebookLM → LLM Wiki 三阶段演进的背景,本篇补完"LLM Wiki 之上的 Pyramid"
-  - [[构建LLM-Wiki智能知识库-实现AI辅助写作工作流]] - method/concepts/raw 三层结构的写作工作流
-  - [[如何使用AI打造智能高效省Token的AI知识库-LLM-Wiki-Skill设计详解]] - moss 的 grep 查询 Skill
-  - [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]] - Obsidian Wiki / GBrain 深度分析
-  - [[ai-personal-knowledge-base-problems]] - 传统个人知识库的痛点
-  - [[hermes-obsidian-llm-wiki-knowledge-base]] - Obsidian + LLM Wiki 混合实现
-  - [[从软件工程基本功到Agent落地:结合OpenClaw与Claude Code的实践理解]] - 软件工程基本功在 Agent 时代的延续
-  - [[Claude-Code团队5条工作原则-Fiona-Fung分享]] - "自动化肌肉记忆"与"变更驱动更新"是同主线
-  - [[Claude-Code首席设计师Meaghan-Choi工作流]] - "AI 自动巡逻产品质量"与"绑定工作流触发器"是同主线
+  - [[07-rag-systems/AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]] - RAG → NotebookLM → LLM Wiki 三阶段演进的背景,本篇补完"LLM Wiki 之上的 Pyramid"
+  - [[07-rag-systems/构建LLM-Wiki智能知识库-实现AI辅助写作工作流]] - method/concepts/raw 三层结构的写作工作流
+  - [[07-rag-systems/如何使用AI打造智能高效省Token的AI知识库-LLM-Wiki-Skill设计详解]] - moss 的 grep 查询 Skill
+  - [[01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain]] - Obsidian Wiki / GBrain 深度分析
+  - [[01-ai-agents/ai-personal-knowledge-base-problems]] - 传统个人知识库的痛点
+  - [[01-ai-agents/hermes-obsidian-llm-wiki-knowledge-base]] - Obsidian + LLM Wiki 混合实现
+  - [[02-ai-coding/从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]] - 软件工程基本功在 Agent 时代的延续
+  - [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] - "自动化肌肉记忆"与"变更驱动更新"是同主线
+  - [[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]] - "AI 自动巡逻产品质量"与"绑定工作流触发器"是同主线
 - 参考文献:
   - Karpathy, A. (2025). LLM Wiki Pattern: https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
   - Shamsi, S. (2025). Graphify: Knowledge Graphs for Code: https://github.com/safishamsi/graphify

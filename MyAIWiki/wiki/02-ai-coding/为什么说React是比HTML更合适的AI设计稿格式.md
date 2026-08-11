@@ -1,9 +1,19 @@
 ---
 title: 为什么说 React 是比 HTML 更合适的 AI 设计稿格式
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI设计稿, #主题/Coding-Agent, #节点/React, #节点/组件化, #节点/Claude-Design, #节点/树形结构, #节点/data.jsx, #节点/Git版本管理, #场景/公众号长文]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI设计稿
+  - 主题/Coding-Agent
+  - 节点/React
+  - 节点/组件化
+  - 节点/Claude-Design
+  - 节点/树形结构
+  - 节点/data.jsx
+  - 节点/Git版本管理
+  - 场景/公众号长文
 nodes: [React-设计稿, Claude-Design, 组件化, 树形结构, 设计系统, data.jsx, Git版本管理, 设计驱动迭代]
-links: [[54万行代码的顿悟-Markdown才是新编程方式]], [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
+links: [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]], [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
 date: 2026-06-08
 source: 微信公众号 / 宝玉
 ---
@@ -21,7 +31,7 @@ source: 微信公众号 / 宝玉
 
 ## 分类提炼
 - 场景：AI 设计工具选型、Coding Agent 协作链、设计稿协作
-- 标签：#主题/AI-Coding #主题/AI设计稿 #节点/React #节点/Claude-Design
+- 标签： #主题/AI-Coding #主题/AI设计稿 #节点/React #节点/Claude-Design
 - 类型：方法论 / 工具选型论证 / 设计工具评论
 
 ## 知识节点（8 个独立概念）
@@ -38,15 +48,15 @@ source: 微信公众号 / 宝玉
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- [[54万行代码的顿悟-Markdown才是新编程方式]]：同一主线——"结构化文本是 AI 时代一等公民"，本篇是其在设计侧的延伸
-- [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]：结构比提示词更重要——React 树形结构就是设计稿侧的"harness"
+- [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]：同一主线——"结构化文本是 AI 时代一等公民"，本篇是其在设计侧的延伸
+- [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]：结构比提示词更重要——React 树形结构就是设计稿侧的"harness"
 
 ### 下游（应用于 / 验证于）
 - （待补：可关联到具体设计工具的选型实践 / Coding Agent 设计稿编辑工作流）
 
 ### 同级（横向 / 并列）
-- [[AI-Coding的顿悟时刻]]：AI Coding 整体范式转变，与本篇"AI 设计稿格式"是同议题不同侧面
-- [[软件工程的功底是智能时代生死攸关的要素]]：设计系统 / 组件库是工程基本功的体现
+- [[02-ai-coding/AI-Coding的顿悟时刻]]：AI Coding 整体范式转变，与本篇"AI 设计稿格式"是同议题不同侧面
+- [[02-ai-coding/软件工程的功底是智能时代生死攸关的要素]]：设计系统 / 组件库是工程基本功的体现
 
 ## 正文要点（7 条）
 
@@ -104,8 +114,8 @@ Agent 自动改代码
 
 - 原文：https://mp.weixin.qq.com/s/8qoeupzHJir2Osv8jYkdCA
 - 关联 wiki：
-  - [[54万行代码的顿悟-Markdown才是新编程方式]] - 结构化文本是 AI 时代一等公民
-  - [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] - 结构比提示词更重要
-  - [[AI-Coding的顿悟时刻]] - AI Coding 范式转变
-  - [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] - Harness 思想
+  - [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] - 结构化文本是 AI 时代一等公民
+  - [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] - 结构比提示词更重要
+  - [[02-ai-coding/AI-Coding的顿悟时刻]] - AI Coding 范式转变
+  - [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] - Harness 思想
 - Claude Design 相关产品（待补链接）

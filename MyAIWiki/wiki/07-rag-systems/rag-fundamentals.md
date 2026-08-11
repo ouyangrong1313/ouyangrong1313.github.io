@@ -88,9 +88,9 @@ Query → 检索 → Context → LLM → Response
 
 ## 标签
 
-#主题/RAG系统 #场景/技术博客
+ #主题/RAG系统 #场景/技术博客
 
 ## 相关链接
 
 - [[index]]
-- [[wiki/ai-coding/prompt-engineering|Prompt Engineering]]（路径格式待修正）
+- [[wiki/02-ai-coding/prompt-engineering|Prompt Engineering]]（路径格式待修正）

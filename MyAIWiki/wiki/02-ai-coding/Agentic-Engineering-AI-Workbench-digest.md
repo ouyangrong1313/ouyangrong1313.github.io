@@ -1,9 +1,20 @@
 ---
 title: "Agentic Engineering 实战 - Digest"
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI-Native, #主题/工作台, #主题/Harness, #主题/权限治理, #节点/AI工作台五层, #节点/plan-md, #节点/CLAUDE-md, #节点/Skill过程资产, #场景/编译长文, #场景/工程团队]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Native
+  - 主题/工作台
+  - 主题/Harness
+  - 主题/权限治理
+  - 节点/AI工作台五层
+  - 节点/plan-md
+  - 节点/CLAUDE-md
+  - 节点/Skill过程资产
+  - 场景/编译长文
+  - 场景/工程团队
 nodes: [AI-工作台五层, 可控并行, plan-md任务协议, 5层上下文3档载入, CLAUDE-md三段式, Skill-过程资产, Subagents-隔离原则, 团队3层权限]
-links: [[Agentic-Engineering-AI-Workbench]]
+links: [[02-ai-coding/Agentic-Engineering-AI-Workbench]]
 date: 2026-06-09
 source: 微信公众号 / 架构师 JiaGouX（若飞）—— 编译自 Matt Van Horn、John Kim、Kaxil Naik、Simon Willison、Addy Osmani 等多篇
 ---
@@ -70,21 +81,21 @@ source: 微信公众号 / 架构师 JiaGouX（若飞）—— 编译自 Matt Van
 ## 与已有文章的关联
 
 - **强关联**（本篇是它们的"团队工程化版"）：
-  - [[every-agentic-engineering-hack-2026-06]]（Matt Van Horn 个人 YOLO 母本）
-  - [[claude-code-dynamic-workflows]]（plan = 动态可执行）
-  - [[从Prompt-Context到Harness-工程的三次进化与终局之战]]（"上下文不是越多越好" = Harness 思想具体化）
-  - [[Notion-spec-driven-AI-workflow]]（plan.md 的一种更严格形式：spec 进仓库 + verification）
-  - [[AI-Coding的顿悟时刻]]（Spec→LDD + 工程师向两端收缩）
-  - [[多Agent使用边界与并行判定]]（"可控并行 5 问"是更具体的可执行版）
-  - [[任务类型到验证模板]]（PR 模板 = 验证证据前置）
-  - [[买了一样的AI为什么别家的比你的强]]（Skill = 过程资产 = 组织内 skill 沉淀）
-  - [[Claude-Code团队5条工作原则-Fiona-Fung分享]]（Trust but verify + 团队级 harness）
+  - [[02-ai-coding/every-agentic-engineering-hack-2026-06]]（Matt Van Horn 个人 YOLO 母本）
+  - [[02-ai-coding/claude-code-dynamic-workflows]]（plan = 动态可执行）
+  - [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]（"上下文不是越多越好" = Harness 思想具体化）
+  - [[02-ai-coding/Notion-spec-driven-AI-workflow]]（plan.md 的一种更严格形式：spec 进仓库 + verification）
+  - [[02-ai-coding/AI-Coding的顿悟时刻]]（Spec→LDD + 工程师向两端收缩）
+  - [[02-ai-coding/多Agent使用边界与并行判定]]（"可控并行 5 问"是更具体的可执行版）
+  - [[02-ai-coding/任务类型到验证模板]]（PR 模板 = 验证证据前置）
+  - [[02-ai-coding/买了一样的AI为什么别家的比你的强]]（Skill = 过程资产 = 组织内 skill 沉淀）
+  - [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]（Trust but verify + 团队级 harness）
 - **同级**：
-  - [[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]（plan.md 8 段结构可与 Spec-Kit spec.md 对照）
-  - [[Claude-Code负责人谈AI原生工程组织]]
-  - [[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]
-  - [[54万行代码的顿悟-Markdown才是新编程方式]]（个人层 vs 团队层）
-  - [[Anthropic万字长文三个判断和一个阳谋]]（"验收能力"主线，本篇是工程化落地版）
+  - [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]（plan.md 8 段结构可与 Spec-Kit spec.md 对照）
+  - [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]]
+  - [[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]
+  - [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]（个人层 vs 团队层）
+  - [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]]（"验收能力"主线，本篇是工程化落地版）
 - **原始素材延伸**：
   - Matt Van Horn《Every Agentic Engineering Hack I Know》
   - John Kim《How I use Claude Code》(Meta Staff Engineer)

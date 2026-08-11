@@ -1,9 +1,22 @@
 ---
 title: Karpathy autoresearch：从上下文工程到自主研究循环
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI-Agent, #主题/Loop-Engineering, #主题/Context-Engineering, #节点/autoresearch, #节点/固定评分器, #节点/单文件搜索空间, #节点/五分钟预算, #节点/val_bpb, #节点/棘轮提交, #节点/实验账本, #节点/多Agent扩展边界, #场景/开源实现]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Agent
+  - 主题/Loop-Engineering
+  - 主题/Context-Engineering
+  - 节点/autoresearch
+  - 节点/固定评分器
+  - 节点/单文件搜索空间
+  - 节点/五分钟预算
+  - 节点/val_bpb
+  - 节点/棘轮提交
+  - 节点/实验账本
+  - 节点/多Agent扩展边界
+  - 场景/开源实现
 nodes: [autoresearch, 固定评分器, 单文件搜索空间, 五分钟预算, val_bpb, 棘轮提交, 实验账本, 多Agent扩展边界]
-links: [[Lilian-Weng-Harness-Engineering-自我改进]], [[Loop-Engineering-验证才是瓶颈]], [[Code-is-cheap-AI-Native-五倍效率]], [[Agentic-Engineering-AI-Workbench]], [[AndrejKarpathy-AI写代码-只需要问自己这一个问题]]
+links: [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]], [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]], [[02-ai-coding/Agentic-Engineering-AI-Workbench]], [[02-ai-coding/AndrejKarpathy-AI写代码-只需要问自己这一个问题]]
 date: 2026-07-28
 source: 微信公众号「AgenticHub」二手解读；Andrej Karpathy GitHub 一手实现
 ---
@@ -16,8 +29,8 @@ source: 微信公众号「AgenticHub」二手解读；Andrej Karpathy GitHub 一
 - 一手进展更新：https://x.com/karpathy/status/2031135152349524125
 - 公众号发布时间：2026-07-27 21:30 Asia/Shanghai
 - 官方仓库创建：2026-03-06；获取时 Star：92,180（2026-07-28）
-- 原始素材：`../../raw/2026-07-27-AgenticHub-Karpathy-autoresearch.md`
-- 速读摘要：`../../raw/2026-07-27-AgenticHub-Karpathy-autoresearch-digest.md`
+- 原始素材：`../../raw/AgenticHub-Karpathy-autoresearch.md`
+- 速读摘要：`../../raw/AgenticHub-Karpathy-autoresearch-digest.md`
 
 ## 核心结论（一句话）
 
@@ -87,17 +100,17 @@ uv run train.py
 ### 上游（基于 / 来自）
 
 - Karpathy `autoresearch`：一手代码、评测约束和 Agent 循环的唯一事实基线。
-- [[Lilian-Weng-Harness-Engineering-自我改进]]：将 autoresearch 归为工作流自动化的干净案例。
-- [[Loop-Engineering-验证才是瓶颈]]：补充“循环是否值得运行取决于验证器”的通用原则。
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]：将 autoresearch 归为工作流自动化的干净案例。
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]：补充“循环是否值得运行取决于验证器”的通用原则。
 
 ### 下游（应用于 / 验证于）
 
-- [[Code-is-cheap-AI-Native-五倍效率]]：将“高频生成”放入 checkpoint 与多层验证的工程框架。
-- [[Agentic-Engineering-AI-Workbench]]：把受控计划、隔离和验证迁移到常规软件工程工作台。
+- [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]]：将“高频生成”放入 checkpoint 与多层验证的工程框架。
+- [[02-ai-coding/Agentic-Engineering-AI-Workbench]]：把受控计划、隔离和验证迁移到常规软件工程工作台。
 
 ### 同级（横向 / 并列）
 
-- [[AndrejKarpathy-AI写代码-只需要问自己这一个问题]]：同样讨论 AI 承担执行的边界，但重点是“何时交给 AI”，本页重点是“交给 AI 后怎样形成可回退的研究循环”。
+- [[02-ai-coding/AndrejKarpathy-AI写代码-只需要问自己这一个问题]]：同样讨论 AI 承担执行的边界，但重点是“何时交给 AI”，本页重点是“交给 AI 后怎样形成可回退的研究循环”。
 
 ## 相关链接
 

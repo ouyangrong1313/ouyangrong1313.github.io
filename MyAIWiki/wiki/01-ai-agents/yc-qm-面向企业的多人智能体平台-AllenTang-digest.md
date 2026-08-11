@@ -37,7 +37,7 @@ QM 是 YC 开源的多人智能体协作平台——从"个人助理"到"多人�
 
 ## 关联（强）
 
-- **同作者姊妹篇：** [[万字长文拆解Agent-架构设计-四-多-Agent-协作]]（7/22）——"多 Agent 编排 / 多租户底座"对偶
-- **同日姊妹篇：** [[phodal-项目记住-Coding-Agent-5步法]]（8/3）——"治理 / 落地"对偶
-- **Harness 路线图：** [[0xCodez-Agent-Harness-14-Steps]] [[HarnessEngineering企业级实战]] [[Lilian-Weng-Harness-Engineering-自我改进]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[agent-architecture]]
-- **企业级 Agent：** [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] [[阿里云开发者-淘宝主播Agent的Harness工程实战]] [[腾讯-AI-Agent-Skill-测评方案落地]]
+- **同作者姊妹篇：** [[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]]（7/22）——"多 Agent 编排 / 多租户底座"对偶
+- **同日姊妹篇：** [[02-ai-coding/phodal-项目记住-Coding-Agent-5步法]]（8/3）——"治理 / 落地"对偶
+- **Harness 路线图：** [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] [[01-ai-agents/HarnessEngineering企业级实战]] [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[01-ai-agents/agent-architecture]]
+- **企业级 Agent：** [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]

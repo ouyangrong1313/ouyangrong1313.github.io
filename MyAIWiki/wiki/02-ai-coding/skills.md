@@ -1,10 +1,12 @@
 # Skills 命令手册
 
-Obsidian 负责"记"，Claude Code 负责"想"和"做"。以下是一套标准化 Skills，覆盖知识库的完整生命周期。
+Obsidian 负责"记"，Claude Code 负责"想"和"做"。项目内已注册的 Codex Skills 是 `$compile-link` 和 `$wiki-health`；下文的 `/summary`、`/weekly`、`/idea` 仍是手工工作流说明，不应误认为已安装的 Skill。
 
 ---
 
 ## /compile — 编译文章到知识库
+
+**实际入口**：`.codex/skills/compile-link/SKILL.md`
 
 **触发条件**：用户提供微信公众号/X/网页链接，要求整理知识库
 
@@ -25,15 +27,19 @@ Obsidian 负责"记"，Claude Code 负责"想"和"做"。以下是一套标准�
 ```
 
 **分类参考**：
-- AI Agent 相关 → `wiki/ai-agents/`
-- AI Coding 相关 → `wiki/ai-coding/`
-- 效率工具 → `wiki/productivity/`
-- AI 技术趋势 → `wiki/ai-tech/`
-- 内容创作 → `wiki/content-creation/`
+- AI Agent 相关 → `wiki/01-ai-agents/`
+- AI Coding 相关 → `wiki/02-ai-coding/`
+- 效率工具 → `wiki/03-productivity/`
+- APP 研发 → `wiki/04-app-dev/`
+- 内容创作 → `wiki/05-content-creation/`
+- AI 技术趋势 → `wiki/06-ai-tech/`
+- RAG 系统 → `wiki/07-rag-systems/`
 
 ---
 
 ## /lint — 知识库体检
+
+**实际入口**：`.codex/skills/wiki-health/SKILL.md`
 
 **触发条件**：用户要求检查知识库健康状态
 
@@ -56,10 +62,14 @@ Obsidian 负责"记"，Claude Code 负责"想"和"做"。以下是一套标准�
 
 **输出格式**：
 ```
-知识库健康报告
-├── 🔴 需要修复
-├── 🟡 待优化
-└── 🟢 正常
+python3 scripts/wiki-health-check.py
+
+# 仅修正 frontmatter tags 和正文标签空白边界后复查
+python3 scripts/wiki-health-check.py --fix
+
+# 修复唯一可判定的链接别名，并补齐分类索引入口
+python3 scripts/wiki-health-check.py --fix-link-aliases --fix-indexes
+python3 scripts/wiki-health-check.py
 ```
 
 ---
@@ -107,40 +117,40 @@ Obsidian 负责"记"，Claude Code 负责"想"和"做"。以下是一套标准�
 1. 记录灵感的核心观点
 2. 标注可能的应用场景
 3. 关联到已有的知识节点
-4. 存入 `raw/ideas/{日期}-{一句话描述}.md`
+4. 存入 `raw/notes/{日期}-{一句话描述}.md`
 
 ---
 
 ## 标签体系
 
 ### 按主题
-#主题/AI-Agent
-#主题/APP研发
-#主题/AI-Coding
-#主题/内容创作
-#主题/效率
-#主题/AI科技
-#主题/RAG系统
+ #主题/AI-Agent
+ #主题/APP研发
+ #主题/AI-Coding
+ #主题/内容创作
+ #主题/效率
+ #主题/AI科技
+ #主题/RAG系统
 
 ### 按手法
-#手法/焦虑共鸣
-#手法/对比冲突
-#手法/好奇心循环
-#手法/权威背书
-#手法/开头钩子
-#手法/文章结构
+ #手法/焦虑共鸣
+ #手法/对比冲突
+ #手法/好奇心循环
+ #手法/权威背书
+ #手法/开头钩子
+ #手法/文章结构
 
 ### 按场景
-#场景/知识付费
-#场景/技术博客
-#场景/公众号长文
-#场景/产品介绍
-#场景/落地案例
+ #场景/知识付费
+ #场景/技术博客
+ #场景/公众号长文
+ #场景/产品介绍
+ #场景/落地案例
 
 ---
 
 ## 相关链接
 
 - [[index]]
-- [[prompt-engineering]]
-- [[harness-engineering]]
+- [[02-ai-coding/prompt-engineering]]
+- [[01-ai-agents/harness-engineering]]

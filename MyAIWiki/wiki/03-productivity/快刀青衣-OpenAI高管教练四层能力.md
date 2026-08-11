@@ -1,9 +1,16 @@
 ---
 title: OpenAI 高管教练眼中，AI 时代最稀缺的四层能力
 category: 03-productivity
-tags: [#主题/效率, #场景/公众号长文, #节点/AI-Native, #节点/Inner-Game, #节点/Emotional-Intelligence, #节点/Self-Leadership, #节点/Soft-Skill]
+tags:
+  - 主题/效率
+  - 场景/公众号长文
+  - 节点/AI-Native
+  - 节点/Inner-Game
+  - 节点/Emotional-Intelligence
+  - 节点/Self-Leadership
+  - 节点/Soft-Skill
 nodes: [情绪清晰度, 智慧堆栈, 关系债, pace-vs-spin, side-quest, 黄金算法, 肩膀上的小矮人, 三段式小脚本, 内在稳定性, 硬生产力]
-links: [[HBR-China-为什么越来越多顶级领导者开始认真学哲学]], [[宁向东-企业家凭什么能看见别人看不见的机会]], [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]], [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]], [[Multica-AI-Native-组织-人是最慢的节点]], [[Anthropic-40万场-专业杠杆]], [[深思圈-消费护城河不是注意力是环境]]
+links: [[03-productivity/HBR-China-为什么越来越多顶级领导者开始认真学哲学]], [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]], [[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]], [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]], [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]], [[01-ai-agents/Anthropic-40万场-专业杠杆]], [[06-ai-tech/深思圈-消费护城河不是注意力是环境]]
 date: 2026-07-06
 source: 微信公众号 / 快刀青衣
 source_url: https://mp.weixin.qq.com/s/MYdhWoys_0svUi9EBix2aQ
@@ -28,7 +35,7 @@ original_source: https://www.lennysnewsletter.com/p/the-new-inner-game-your-unfa
 - **场景**：AI 时代个人成长 / 高管认知升级 / 软技能迁移
 - **类型**：方法论 + 实操工具（黄金算法 + side quest + 三段式脚本）
 - **核心人物**：Joe Hudson（OpenAI 高管教练）+ 山姆·奥特曼 + 李松蔚 + 李笑来 + 脱不花
-- **标签**：#主题/效率 #场景/公众号长文 #节点/AI-Native #节点/Inner-Game #节点/Emotional-Intelligence
+- **标签**： #主题/效率 #场景/公众号长文 #节点/AI-Native #节点/Inner-Game #节点/Emotional-Intelligence
 
 ## 知识节点（10 个）
 
@@ -48,18 +55,18 @@ original_source: https://www.lennysnewsletter.com/p/the-new-inner-game-your-unfa
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- **[[Anthropic-40万场-专业杠杆]]**：Joe Hudson 的观察与 Anthropic 40 万场研究形成"软+硬"双视角 —— Anthropic 讲专家"硬杠杆"（3200 词输出），Joe 讲"软杠杆"（内在稳定性）
-- **[[HBR-China-为什么越来越多顶级领导者开始认真学哲学]]**：HBR 论证哲学素养像财务素养一样必备，Joe Hudson 给出具体可训练的 4 层技能（更落地）
-- **[[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]**：Alice/Boris Cherny 的 5 类角色原型强调判断力审美被 AI 放大，Joe Hudson 给出"判断力怎么练"的具体工具
+- **[[01-ai-agents/Anthropic-40万场-专业杠杆]]**：Joe Hudson 的观察与 Anthropic 40 万场研究形成"软+硬"双视角 —— Anthropic 讲专家"硬杠杆"（3200 词输出），Joe 讲"软杠杆"（内在稳定性）
+- **[[03-productivity/HBR-China-为什么越来越多顶级领导者开始认真学哲学]]**：HBR 论证哲学素养像财务素养一样必备，Joe Hudson 给出具体可训练的 4 层技能（更落地）
+- **[[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]**：Alice/Boris Cherny 的 5 类角色原型强调判断力审美被 AI 放大，Joe Hudson 给出"判断力怎么练"的具体工具
 
 ### 下游（应用于 / 验证于）
 - 暂无，待补充
 
 ### 同级（横向 / 并列）
-- **[[宁向东-企业家凭什么能看见别人看不见的机会]]**：宁向东讲"敢于冒险不是核心、带着根本问题去观察+果断试验"，Joe 讲判断力"不被情绪回避"——同一硬币另一面（认知方法论 vs 情绪方法论）
-- **[[陈春花-从岗位到角色-AI时代组织设计的新逻辑]]**：陈春花讲"岗位→角色"，Joe 讲"角色需要的能力=内在稳定性"——上下篇关系
-- **[[Multica-AI-Native-组织-人是最慢的节点]]**：Multica 讲"人是组织瓶颈"的哲学判断，Joe 给出减少人作为瓶颈的 4 个具体工具
-- **[[深思圈-消费护城河不是注意力是环境]]**：深思圈讲"护城河从可规模化的层迁移到难规模化的层"，Joe 讲"能力从工具层迁移到内在层"——同主线
+- **[[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]]**：宁向东讲"敢于冒险不是核心、带着根本问题去观察+果断试验"，Joe 讲判断力"不被情绪回避"——同一硬币另一面（认知方法论 vs 情绪方法论）
+- **[[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]]**：陈春花讲"岗位→角色"，Joe 讲"角色需要的能力=内在稳定性"——上下篇关系
+- **[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]**：Multica 讲"人是组织瓶颈"的哲学判断，Joe 给出减少人作为瓶颈的 4 个具体工具
+- **[[06-ai-tech/深思圈-消费护城河不是注意力是环境]]**：深思圈讲"护城河从可规模化的层迁移到难规模化的层"，Joe 讲"能力从工具层迁移到内在层"——同主线
 
 ## 正文要点（6 条）
 
@@ -176,20 +183,20 @@ Joe 的答案：**AI 正在把知识层和执行层拉平。当你不断用工�
 
 ## 我的理解
 
-- 这篇文章是 AI 时代个人能力升级的"软实力总览"——之前看过 [[Anthropic-40万场-专业杠杆]]（Anthropic 数据实证）、[[Multica-AI-Native-组织-人是最慢的节点]]（组织哲学反思）、[[HBR-China-为什么越来越多顶级领导者开始认真学哲学]]（哲学素养论证），但 Joe Hudson 第一次给出 4 个**可训练**的工具（黄金算法 + 关系债 + pace-vs-spin + 三段式小脚本）
+- 这篇文章是 AI 时代个人能力升级的"软实力总览"——之前看过 [[01-ai-agents/Anthropic-40万场-专业杠杆]]（Anthropic 数据实证）、[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]（组织哲学反思）、[[03-productivity/HBR-China-为什么越来越多顶级领导者开始认真学哲学]]（哲学素养论证），但 Joe Hudson 第一次给出 4 个**可训练**的工具（黄金算法 + 关系债 + pace-vs-spin + 三段式小脚本）
 - 对我最有触动的金句：**"问题可能不在 AI 工具上，而在 AI 浓度最高的地方，差距落在内在稳定性"** —— 我们 Seetong AI 助手项目一直在工具层升级（Skill、Harness、Memory），但忽略了"主人的内在系统"也要升级；本文是给主人和 lead 团队的"反求诸己"提醒
 - 对 Seetong 项目的影响：① 黄金算法入月度决策 checklist ② 关系债入 lead 月报 ③ side quest 试点 AI 助手小原型 ④ 三段式小脚本入 SKILL.md 头部
 - 写文章可以学习的点：**先抛悬念（学 AI 越学越焦虑的反差）+ 引一手来源（Joe Hudson 在 OpenAI 内部观察）+ 拆解 4 层具体工具 + 回到开头呼应**——结构清晰、情绪节奏稳
 
 ## 适合关联的主题
 
-- **[[HBR-China-为什么越来越多顶级领导者开始认真学哲学]]**：HBR 论证哲学素养必备，本文给具体可训练的工具（互补）
-- **[[宁向东-企业家凭什么能看见别人看不见的机会]]**：宁向东"带着根本问题去观察+果断试验"，Joe 讲"不被情绪回避"——同一硬币另一面
-- **[[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]**：Alice 强调判断力审美被 AI 放大，本文给具体怎么练
-- **[[陈春花-从岗位到角色-AI时代组织设计的新逻辑]]**：陈春花"岗位→角色"，Joe 讲"角色需要的能力=内在稳定性"
-- **[[Multica-AI-Native-组织-人是最慢的节点]]**：Multica 哲学判断"人是瓶颈"，Joe 给减少人作为瓶颈的 4 个具体工具
-- **[[Anthropic-40万场-专业杠杆]]**：Anthropic 实证研究讲"硬杠杆"（专家 3200 词 vs 新手 600 词），Joe Hudson 讲"软杠杆"——形成完整"专业能力"双视角
-- **[[深思圈-消费护城河不是注意力是环境]]**：深思圈讲"护城河从可规模化的层迁移到难规模化的层"，Joe 讲"能力从工具层迁移到内在层"——同主线
+- **[[03-productivity/HBR-China-为什么越来越多顶级领导者开始认真学哲学]]**：HBR 论证哲学素养必备，本文给具体可训练的工具（互补）
+- **[[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]]**：宁向东"带着根本问题去观察+果断试验"，Joe 讲"不被情绪回避"——同一硬币另一面
+- **[[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]**：Alice 强调判断力审美被 AI 放大，本文给具体怎么练
+- **[[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]]**：陈春花"岗位→角色"，Joe 讲"角色需要的能力=内在稳定性"
+- **[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]**：Multica 哲学判断"人是瓶颈"，Joe 给减少人作为瓶颈的 4 个具体工具
+- **[[01-ai-agents/Anthropic-40万场-专业杠杆]]**：Anthropic 实证研究讲"硬杠杆"（专家 3200 词 vs 新手 600 词），Joe Hudson 讲"软杠杆"——形成完整"专业能力"双视角
+- **[[06-ai-tech/深思圈-消费护城河不是注意力是环境]]**：深思圈讲"护城河从可规模化的层迁移到难规模化的层"，Joe 讲"能力从工具层迁移到内在层"——同主线
 
 ## 透明玻璃自检
 

@@ -145,9 +145,9 @@ MemTree、MemoryOS、MemOS 等层次化或树状方法表现突出。**多层结
 
 - 论文：https://arxiv.org/abs/2604.01707
 - 代码：https://github.com/Yanchen398/Memory-in-the-LLM-Era
-- [[记忆是-agent-基建]]
-- [[deep-research-stack]]
+- [[01-ai-agents/记忆是-agent-基建]]
+- [[01-ai-agents/deep-research-stack]]
 
 ## 标签
 
-#主题/AI-Agent #场景/技术博客
+ #主题/AI-Agent #场景/技术博客

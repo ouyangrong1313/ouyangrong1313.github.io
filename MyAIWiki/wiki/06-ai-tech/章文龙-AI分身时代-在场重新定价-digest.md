@@ -44,8 +44,8 @@
 
 ## 关联（同级 + 上游）
 
-- **同级**（关注"AI 时代什么不可外包"）：[[透明玻璃-写作的最高境界]] / [[与AI一起做产品的六条原则]] / [[清华沈阳-自进化AI新物种]]
-- **同级**（Loop/AI Native 组织）：[[Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-验证才是瓶颈]] / [[Multica-AI-Native-组织-人是最慢的节点]]
+- **同级**（关注"AI 时代什么不可外包"）：[[05-content-creation/透明玻璃-写作的最高境界]] / [[03-productivity/与AI一起做产品的六条原则]] / [[01-ai-agents/清华沈阳-自进化AI新物种]]
+- **同级**（Loop/AI Native 组织）：[[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] / [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]
 - **上游理论**：阿伦特《人的条件》（劳作/工作/行动三分）/ 戈夫曼《日常生活的自我呈现》（社交是表演）/ 吉布森生态心理学（注意力被环境召唤）
 
 ## 备注

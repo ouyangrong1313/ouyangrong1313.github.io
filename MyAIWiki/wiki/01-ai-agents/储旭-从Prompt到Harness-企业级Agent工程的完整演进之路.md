@@ -1,9 +1,18 @@
 ---
 title: 从 Prompt 到 Harness：企业级 Agent 工程的完整演进之路
 category: 01-ai-agents
-tags: [#主题/Agent架构, #主题/Harness工程, #主题/上下文管理, #主题/数据完整性, #主题/Action-Space, #主题/企业级Agent, #主题/Agent-OS, #场景/Seetong借鉴, #作者/储旭]
+tags:
+  - 主题/Agent架构
+  - 主题/Harness工程
+  - 主题/上下文管理
+  - 主题/数据完整性
+  - 主题/Action-Space
+  - 主题/企业级Agent
+  - 主题/Agent-OS
+  - 场景/Seetong借鉴
+  - 作者/储旭
 nodes: [LLM四大先天约束, 三层工程演进, 四层上下文防线, 三层记忆, 单一表示原则, 从防御到赋能, Agent-OS五层架构, Capability-Runtime, 五层认知模型]
-links: [[0xCodez-Agent-Harness-14-Steps]], [[HarnessEngineering企业级实战]], [[Lilian-Weng-Harness-Engineering-自我改进]], [[若飞-Agent-记忆与可验证自我改进怎么设计]], [[InfoQ-Sam-Bhagwat-Harness长成Claw-心智争夺战]], [[WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[loop-engineering]]
+links: [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]], [[01-ai-agents/HarnessEngineering企业级实战]], [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]], [[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]], [[01-ai-agents/InfoQ-Sam-Bhagwat-Harness长成Claw-心智争夺战]], [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[loop-engineering]]
 date: 2026-07-21
 source: 微信公众号「阿里妹」2026-07（作者 储旭(槿柏) / 原文链接 https://mp.weixin.qq.com/s/xH4cyBJJJlG9cfcmSU5ztA）
 ---
@@ -80,7 +89,7 @@ source: 微信公众号「阿里妹」2026-07（作者 储旭(槿柏) / 原文�
 - 企业级 Agent 平台搭建 / OpenClaw 阶段定位（S1 → S2 → Agent OS）/ 断点续传 + 事件溯源 / 从五层修复管道迁移到 parameterBindings
 
 ### 同级（横向）
-- [[0xCodez-Agent-Harness-14-Steps]] 14 步路线图 / [[HarnessEngineering企业级实战]] 阿里 25%→90% AI 代码率 / [[Lilian-Weng-Harness-Engineering-自我改进]] Anthropic Harness 理论框架 / [[若飞-Agent-记忆与可验证自我改进怎么设计]] Memory 治理控制面 / [[InfoQ-Sam-Bhagwat-Harness长成Claw-心智争夺战]] Claw 阶段 / [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] 产品视角 Harness 实战 / [[loop-engineering]] Loop Engineering 验证主线
+- [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] 14 步路线图 / [[01-ai-agents/HarnessEngineering企业级实战]] 阿里 25%→90% AI 代码率 / [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] Anthropic Harness 理论框架 / [[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]] Memory 治理控制面 / [[01-ai-agents/InfoQ-Sam-Bhagwat-Harness长成Claw-心智争夺战]] Claw 阶段 / [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]] 产品视角 Harness 实战 / [[loop-engineering]] Loop Engineering 验证主线
 
 ## 7 个对 Seetong 借鉴动作
 
@@ -101,4 +110,4 @@ source: 微信公众号「阿里妹」2026-07（作者 储旭(槿柏) / 原文�
 - **未独立验证**：④ 工具设计半衰期未给可量化指标；⑤ 信任状态机 shadow → active 转换阈值未明
 
 - [原文链接](https://mp.weixin.qq.com/s/xH4cyBJJJlG9cfcmSU5ztA)
-- [[0xCodez-Agent-Harness-14-Steps]] Harness 路线图 / [[HarnessEngineering企业级实战]] 阿里 Harness / [[loop-engineering]] Loop Engineering 验证主线
+- [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] Harness 路线图 / [[01-ai-agents/HarnessEngineering企业级实战]] 阿里 Harness / [[loop-engineering]] Loop Engineering 验证主线

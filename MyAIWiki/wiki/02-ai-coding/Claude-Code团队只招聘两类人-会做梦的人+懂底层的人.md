@@ -1,9 +1,18 @@
 ---
 title: Claude Code 团队只招聘两类人：会做梦的人 + 懂底层的人
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI-Agent, #主题/管理学, #场景/公众号长文, #节点/Claude-Code, #节点/Harness, #节点/Agent-Loop, #节点/瓶颈位移, #节点/AI-管理]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Agent
+  - 主题/管理学
+  - 场景/公众号长文
+  - 节点/Claude-Code
+  - 节点/Harness
+  - 节点/Agent-Loop
+  - 节点/瓶颈位移
+  - 节点/AI-管理
 nodes: [瓶颈位移, JIT 规划, Trust but Verify, 会做梦的人, 懂底层的人, 原始产出量, 街头信用, dogfood, double click, Source of Truth, Onboarding 爬坡, 角色模糊, AI 团队改造]
-links: [[Claude-Code团队5条工作原则-Fiona-Fung分享]], [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]], [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]], [[HarnessEngineering企业级实战]], [[AI-Coding的顿悟时刻]], [[Harness不是目的-知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]], [[陈春花-AI时代管理者重建判断权]]
+links: [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]], [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]], [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]], [[01-ai-agents/HarnessEngineering企业级实战]], [[02-ai-coding/AI-Coding的顿悟时刻]], [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]], [[01-ai-agents/陈春花-AI时代管理者重建判断权]]
 date: 2026-06-04
 source: 微信公众号 / 老章很忙（编译自 Anthropic 官方博客 + 28 分钟视频演讲）
 ---
@@ -22,7 +31,7 @@ source: 微信公众号 / 老章很忙（编译自 Anthropic 官方博客 + 28 �
 
 ## 分类提炼
 - 场景：AI 时代工程团队管理、组织改造、招聘
-- 标签：#主题/AI-Coding #主题/管理学 #节点/Claude-Code #节点/瓶颈位移
+- 标签： #主题/AI-Coding #主题/管理学 #节点/Claude-Code #节点/瓶颈位移
 - 类型：演讲解读 / 组织实践 / 招聘方法论
 
 ## 知识节点
@@ -44,18 +53,18 @@ source: 微信公众号 / 老章很忙（编译自 Anthropic 官方博客 + 28 �
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]]：同一团队的另一组方法论（瓶颈转移/JIT 规划/自动化肌肉记忆/Trust but verify/Taste is scarce typing is not）
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]：Harness 是组织改造的技术基础
-- [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]：动态工作流对应"代码评审"环节的 AI 化
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]：同一团队的另一组方法论（瓶颈转移/JIT 规划/自动化肌肉记忆/Trust but verify/Taste is scarce typing is not）
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]：Harness 是组织改造的技术基础
+- [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]：动态工作流对应"代码评审"环节的 AI 化
 
 ### 下游（应用于 / 验证于）
-- [[HarnessEngineering企业级实战]]：Harness 落地的组织改造
-- [[Harness不是目的-知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]：组织改造的判断基础——知识沉淀比工程化更重要
-- [[AI-Coding的顿悟时刻]]：AI Coding 组织演化的整体判断
+- [[01-ai-agents/HarnessEngineering企业级实战]]：Harness 落地的组织改造
+- [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]：组织改造的判断基础——知识沉淀比工程化更重要
+- [[02-ai-coding/AI-Coding的顿悟时刻]]：AI Coding 组织演化的整体判断
 
 ### 同级（横向 / 并列）
-- [[陈春花-AI时代管理者重建判断权]]：管理学视角的 AI 时代判断——和本篇"AI 时代工程团队改造"互补
-- [[Harness工程AgentLoop]]：组织改造的工程层落地
+- [[01-ai-agents/陈春花-AI时代管理者重建判断权]]：管理学视角的 AI 时代判断——和本篇"AI 时代工程团队改造"互补
+- [[01-ai-agents/Harness工程AgentLoop]]：组织改造的工程层落地
 
 ## 正文要点
 
@@ -197,20 +206,20 @@ source: 微信公众号 / 老章很忙（编译自 Anthropic 官方博客 + 28 �
 
 ## 我的理解
 
-- **跟 [[Claude-Code团队5条工作原则-Fiona-Fung分享]] 是同一团队的不同切面**——Fiona 分享侧重"原则"，本篇侧重"动作"
-- **跟 [[陈春花-AI时代管理者重建判断权]] 是一体两面**——陈春花说"管理判断权不能外包"，本篇展示 Claude Code 团队怎么用"Manager 必做 IC + 吃狗粮"在工程层面把判断权接回来
+- **跟 [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] 是同一团队的不同切面**——Fiona 分享侧重"原则"，本篇侧重"动作"
+- **跟 [[01-ai-agents/陈春花-AI时代管理者重建判断权]] 是一体两面**——陈春花说"管理判断权不能外包"，本篇展示 Claude Code 团队怎么用"Manager 必做 IC + 吃狗粮"在工程层面把判断权接回来
 - **"the shift" 是这篇文章最值钱的判断**——所有 5 个改造动作都建立在这一个观察上：**"流程很少会自己死掉"**。国内团队最大的盲区是"加了 AI 工具但旧流程不动"
 - **"会做梦的人 + 懂底层的人"** 这种人才画像对**小团队特别重要**——大厂可以分开招两类人各占 1/2；**小团队更看重 T 型——一个人同时有两类特质**
 - **老章补的"spec check 进 repo" 是个非常落地的妥协**——纯 code 即真相对一般业务团队不现实
 
 ## 适合关联的主题
 
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]]
-- [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
-- [[HarnessEngineering企业级实战]]
-- [[Harness不是目的-知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
-- [[AI-Coding的顿悟时刻]]
-- [[陈春花-AI时代管理者重建判断权]]
-- [[Harness工程AgentLoop]]
-- [[Claude-Code在大代码库中的最佳实践]]
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]
+- [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+- [[01-ai-agents/HarnessEngineering企业级实战]]
+- [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
+- [[02-ai-coding/AI-Coding的顿悟时刻]]
+- [[01-ai-agents/陈春花-AI时代管理者重建判断权]]
+- [[01-ai-agents/Harness工程AgentLoop]]
+- [[02-ai-coding/Claude-Code在大代码库中的最佳实践-从Anthropic官方指南到可落地Harness方法]]

@@ -44,12 +44,12 @@ source: 微信公众号「深思 SenseAI」编译自 Zach Lloyd @zachlloydtweets
 1. **COGS 视角体检** — AI Coding 投入产出比作为最高级指标
 2. **1300 待办反思** — 先盘"不该做"再谈"谁能做"
 3. **做什么 vs 怎么做的边界** — "怎么做"工厂化,"做什么"留给人
-4. **递归自我改进雏形** — 跑分失败→沉淀 Skill 约束→下次自动跑(对照 [[面向Skills编程-淘宝企业购端到端研发提效实践]] ADJUSTMENT_PLAN)
+4. **递归自我改进雏形** — 跑分失败→沉淀 Skill 约束→下次自动跑(对照 [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] ADJUSTMENT_PLAN)
 5. **人在环里 = 失败的纪律** — 经常介入同一类问题,优先补 Skill 约束,不是继续"复盘"
 
 ## 关联与备注
 
-**关联**:**上游** AI Coding 三阶段范式迁移 + Warp 6 万星仓库 + Paul Bakaus 反向观点;**下游** [[字节跳动洪定坤-AI-Coding的实践与探索]] 字节 vs Warp 对照 + [[清华沈阳-自进化AI新物种]] 递归自我改进 + [[0xCodez-Agent-Harness-14-Steps]] / [[Harness不是目的-知识才是护城河]] Harness 视角 + [[与AI一起做产品的六条原则]] 6 原则做"为什么"的人;**同级** [[面向Skills编程-淘宝企业购端到端研发提效实践]] 阿里淘系
+**关联**:**上游** AI Coding 三阶段范式迁移 + Warp 6 万星仓库 + Paul Bakaus 反向观点;**下游** [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] 字节 vs Warp 对照 + [[01-ai-agents/清华沈阳-自进化AI新物种]] 递归自我改进 + [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] Harness 视角 + [[03-productivity/与AI一起做产品的六条原则]] 6 原则做"为什么"的人;**同级** [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] 阿里淘系
 
 **备注**:深思圈编译,Lloyd 备忘录原话推文公开可信度较高;原始发布日期未公开(可推断 2026-05/06);Warp Oz 6 万星仓库具体 GitHub 链接未给出;Bakaus 原文暂未直接引用,后续可加 [[Paul-Bakaus-人留最后20%]] 同月对比笔记;**本仓库缺位补完**:02-ai-coding 现有主线偏"怎么做"(Harness/Loop/Skills),**缺位"工厂化思维 + COGS 视角 + 递归自我改进"反思性内容**,本文补完
 

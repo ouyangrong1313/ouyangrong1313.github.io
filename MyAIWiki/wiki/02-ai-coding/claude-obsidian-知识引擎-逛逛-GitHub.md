@@ -1,9 +1,17 @@
 ---
 title: claude-obsidian 知识引擎（7200 Star 项目实践）
 category: 02-ai-coding
-tags: [#主题/AI知识库, #主题/Obsidian, #主题/ClaudeCode, #主题/第二大脑, #场景/公众号长文, #场景/开源项目, #节点/LLM-Wiki, #节点/Skill]
+tags:
+  - 主题/AI知识库
+  - 主题/Obsidian
+  - 主题/ClaudeCode
+  - 主题/第二大脑
+  - 场景/公众号长文
+  - 场景/开源项目
+  - 节点/LLM-Wiki
+  - 节点/Skill
 nodes: [claude-obsidian, 知识复利, compounding knowledge, 矛盾检测, 会话记忆, 健康检查, 本地Markdown, 跨项目复用, 7200 Star]
-links: [[claude-obsidian-second-brain]], [[obsidian-claude-code-os]], [[hermes-obsidian-llm-wiki-knowledge-base]], [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]], [[2026-06-如何使用AI打造智能高效省Token的AI知识库-LLM-Wiki-Skill设计详解]]
+links: [[02-ai-coding/claude-obsidian-second-brain]], [[03-productivity/obsidian-claude-code-os]], [[01-ai-agents/hermes-obsidian-llm-wiki-knowledge-base]], [[01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain]], [[07-rag-systems/如何使用AI打造智能高效省Token的AI知识库-LLM-Wiki-Skill设计详解]]
 date: 2026-06-24
 source: 微信公众号「逛逛 GitHub」逛逛 2026-06-23
 ---
@@ -19,10 +27,10 @@ source: 微信公众号「逛逛 GitHub」逛逛 2026-06-23
 ## 分类提炼
 
 - **场景**：AI Coding 工作流 | 个人知识管理 | 开源工具实战
-- **标签**：#主题/AI知识库 #主题/Obsidian #主题/ClaudeCode #主题/第二大脑
+- **标签**： #主题/AI知识库 #主题/Obsidian #主题/ClaudeCode #主题/第二大脑
 - **类型**：实操指南 + 开源项目介绍
 - **来源**：微信公众号「逛逛 GitHub」2026-06-23
-- **关联**：[[claude-obsidian-second-brain]] | [[obsidian-claude-code-os]] | [[hermes-obsidian-llm-wiki-knowledge-base]] | [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]] | [[2026-06-如何使用AI打造智能高效省Token的AI知识库-LLM-Wiki-Skill设计详解]]
+- **关联**：[[02-ai-coding/claude-obsidian-second-brain]] | [[03-productivity/obsidian-claude-code-os]] | [[01-ai-agents/hermes-obsidian-llm-wiki-knowledge-base]] | [[01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain]] | [[07-rag-systems/如何使用AI打造智能高效省Token的AI知识库-LLM-Wiki-Skill设计详解]]
 
 ## 要点列表
 
@@ -101,4 +109,4 @@ claude plugin install claude-obsidian@agricidaniel-claude-obsidian
 
 ---
 
-标签：#主题/AI知识库 #主题/Obsidian #主题/ClaudeCode #主题/第二大脑 #主题/开源项目 #手法/产品种草 #手法/权威背书 #手法/工具安利 #场景/公众号长文 #场景/开源项目
+标签： #主题/AI知识库 #主题/Obsidian #主题/ClaudeCode #主题/第二大脑 #主题/开源项目 #手法/产品种草 #手法/权威背书 #手法/工具安利 #场景/公众号长文 #场景/开源项目

@@ -96,5 +96,5 @@ npx skills@latest add mattpocock/skills/triage-issue
 ---
 
 ## 标签
-标签：#主题/AI Coding #主题/Claude Code #场景/技术博客 #手法/权威背书 #手法/教程型
+标签： #主题/AI Coding #主题/Claude Code #场景/技术博客 #手法/权威背书 #手法/教程型
 相关链接：https://github.com/mattpocock/skills

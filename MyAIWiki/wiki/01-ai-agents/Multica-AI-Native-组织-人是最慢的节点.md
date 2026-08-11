@@ -1,9 +1,18 @@
 ---
 title: "Multica：人是最慢的节点，4 人 + 几十个 Agent 的 AI Native 组织长什么样"
 category: 01-ai-agents
-tags: [#主题/AI-Native, #主题/AI-Agent, #主题/多Agent协作, #主题/组织变革, #主题/人机协作, #主题/认知衰减, #公司/Multica, #场景/Agent平台, #场景/小团队]
+tags:
+  - 主题/AI-Native
+  - 主题/AI-Agent
+  - 主题/多Agent协作
+  - 主题/组织变革
+  - 主题/人机协作
+  - 主题/认知衰减
+  - 公司/Multica
+  - 场景/Agent平台
+  - 场景/小团队
 nodes: [Agent协作层, 三类角色, 最多两层, 去中间层, 端到端负责, AgentIdle率, 人是瓶颈, 信任未建立, 思考退化, 网络效应壁垒]
-links: [[Claude-Code一周年回顾-Boris-Cat]], [[AI-PM核心技能-观测评估与反馈闭环]], [[OpenClaw-vs-Hermes-多-Agent-架构设计]], [[从零设计生产级-Multi-Agent-Harness]], [[make-for-agent-qi-shi-huan-shi-make-for-human]], [[54万行代码的顿悟]], [[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]], [[AI-Coding的顿悟时刻]]
+links: [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]], [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]], [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]], [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]], [[01-ai-agents/make-for-agent-qi-shi-huan-shi-make-for-human]], [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]], [[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]], [[02-ai-coding/AI-Coding的顿悟时刻]]
 date: 2026-06-11
 source: 微信公众号 / 腾讯研究院
 ---
@@ -17,19 +26,19 @@ source: 微信公众号 / 腾讯研究院
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- [[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]：YC 视角的 Agent 能力开放与 Egalitarian 思想
-- [[AI-PM核心技能-观测评估与反馈闭环]]：AI 时代稀缺的不是产能而是判断力（上游共识）
-- [[Claude-Code一周年回顾-Boris-Cat]]：Boris + Cat 一周年回顾里"不再 review 代码 / Agent 自主验证"同源
-- [[54万行代码的顿悟]]：未来瓶颈在需求定义和架构设计
+- [[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]：YC 视角的 Agent 能力开放与 Egalitarian 思想
+- [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]]：AI 时代稀缺的不是产能而是判断力（上游共识）
+- [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]]：Boris + Cat 一周年回顾里"不再 review 代码 / Agent 自主验证"同源
+- [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]：未来瓶颈在需求定义和架构设计
 
 ### 下游（应用于 / 验证于）
-- [[OpenClaw-vs-Hermes-多-Agent-架构设计]]：用 Multica 案例验证多 Agent 架构的"角色边界 + 层级最小化"路径
-- [[从零设计生产级-Multi-Agent-Harness]]：为多 Agent Harness 的"角色定义 / 信任建立 / idle 率监控"提供实战输入
-- [[make-for-agent-qi-shi-huan-shi-make-for-human|Make for Agent]]：Multica 是"Make for Agent"理念的协作层落地
+- [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]]：用 Multica 案例验证多 Agent 架构的"角色边界 + 层级最小化"路径
+- [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]：为多 Agent Harness 的"角色定义 / 信任建立 / idle 率监控"提供实战输入
+- [[01-ai-agents/make-for-agent-qi-shi-huan-shi-make-for-human|Make for Agent]]：Multica 是"Make for Agent"理念的协作层落地
 
 ### 同级（横向 / 并列）
-- [[AI-Coding的顿悟时刻]]：工程师个人范式 vs 团队流程（个人 ↔ 组织的同一主题）
-- [[如何更科学、方向可控的实现 Skill 的「自进化」？|Skill-Self-Evolution]]：单 Agent Skill 进化（聚焦 Agent 本身能力）vs Multica 聚焦多 Agent 协作层
+- [[02-ai-coding/AI-Coding的顿悟时刻]]：工程师个人范式 vs 团队流程（个人 ↔ 组织的同一主题）
+- [[01-ai-agents/Skill-Self-Evolution|Skill-Self-Evolution]]：单 Agent Skill 进化（聚焦 Agent 本身能力）vs Multica 聚焦多 Agent 协作层
 
 ## 核心论点
 
@@ -164,5 +173,5 @@ source: 微信公众号 / 腾讯研究院
 
 ---
 
-*完整访谈快问快答与产品演示细节见 [[../../raw/2026-06-TencentIR-Multica-AI-Native-组织]] 原文。*
-*速读摘要见 [[Multica-AI-Native-组织-人是最慢的节点-digest]]。*
+*完整访谈快问快答与产品演示细节见 [[../../raw/TencentIR-Multica-AI-Native-组织]] 原文。*
+*速读摘要见 [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点-digest]]。*

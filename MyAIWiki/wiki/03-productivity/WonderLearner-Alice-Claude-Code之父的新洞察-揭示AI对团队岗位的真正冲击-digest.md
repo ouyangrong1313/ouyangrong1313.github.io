@@ -1,7 +1,11 @@
 ---
 title: Claude Code 之父的新洞察 - Digest
 category: 03-productivity
-tags: [#主题/AI时代产品, #主题/产研团队, #主题/Boris-Cherny, #主题/判断力价值]
+tags:
+  - 主题/AI时代产品
+  - 主题/产研团队
+  - 主题/Boris-Cherny
+  - 主题/判断力价值
 date: 2026-07-02
 source: 微信公众号「WonderLearner」/ 作者 Alice / 一手来源 Boris Cherny X
 ---
@@ -53,11 +57,11 @@ Boris Cherny 观察到 AI 时代产研团队的 5 类角色原型(Prototyper/Bui
 
 ## 关联
 
-- [[Anthropic-40万场-专业杠杆]] — 同 Anthropic 主题
-- [[与AI一起做产品的六条原则]] — 同 03-productivity"AI 时代产品设计"
-- [[多Agent协作-Loop-SDD]] — 同 团队协作/流程驱动
-- [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]] — "岗位→角色"主线
-- [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]] — **同日编译**,本文补完其 L1-L3 "角色原型"维度
-- [[清华沈阳-自进化AI新物种]] / [[宁向东-企业家凭什么能看见别人看不见的机会]] / [[HBR-China-为什么越来越多顶级领导者开始认真学哲学]] — AI 时代组织/个人/哲学决策主线
+- [[01-ai-agents/Anthropic-40万场-专业杠杆]] — 同 Anthropic 主题
+- [[03-productivity/与AI一起做产品的六条原则]] — 同 03-productivity"AI 时代产品设计"
+- [[01-ai-agents/AI-团队协作-Loop-SDD]] — 同 团队协作/流程驱动
+- [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]] — "岗位→角色"主线
+- [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]] — **同日编译**,本文补完其 L1-L3 "角色原型"维度
+- [[01-ai-agents/清华沈阳-自进化AI新物种]] / [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]] / [[03-productivity/HBR-China-为什么越来越多顶级领导者开始认真学哲学]] — AI 时代组织/个人/哲学决策主线
 
-完整版见 [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]
+完整版见 [[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]

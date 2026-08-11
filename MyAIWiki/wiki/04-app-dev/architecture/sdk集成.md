@@ -92,4 +92,4 @@ typedef void (^STSDKErrorBlock)(NSError *error);
 
 ## 标签
 
-#主题/APP研发 #NativeSDK #C-CPP #iOS/SDK集成
+ #主题/APP研发 #NativeSDK #C-CPP #iOS/SDK集成

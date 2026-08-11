@@ -43,7 +43,7 @@
 
 ## 适合关联的主题
 
-- [[从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]]
-- [[从零设计生产级-Multi-Agent-Harness]]
-- [[vibe-coding]]
-- [[skills]]
+- [[02-ai-coding/从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]]
+- [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]
+- [[02-ai-coding/vibe-coding]]
+- [[02-ai-coding/skills]]

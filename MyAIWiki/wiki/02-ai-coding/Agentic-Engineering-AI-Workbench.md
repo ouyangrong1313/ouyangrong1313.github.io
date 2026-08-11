@@ -1,9 +1,32 @@
 ---
 title: "Agentic Engineering 实战：把计划、上下文和验证做成 AI 工作台"
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI-Native, #主题/Harness, #主题/工作台, #主题/SDD, #主题/权限治理, #主题/工程管理, #节点/AI工作台五层, #节点/可控并行, #节点/plan-md, #节点/上下文工程, #节点/CLAUDE-md, #节点/Skill过程资产, #节点/Subagents隔离, #节点/团队权限, #节点/威胁模型, #节点/PR模板, #手法/案例拆解, #手法/范式归纳, #手法/可执行模板, #场景/编译长文, #场景/工程团队, #场景/AI-Native转型]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Native
+  - 主题/Harness
+  - 主题/工作台
+  - 主题/SDD
+  - 主题/权限治理
+  - 主题/工程管理
+  - 节点/AI工作台五层
+  - 节点/可控并行
+  - 节点/plan-md
+  - 节点/上下文工程
+  - 节点/CLAUDE-md
+  - 节点/Skill过程资产
+  - 节点/Subagents隔离
+  - 节点/团队权限
+  - 节点/威胁模型
+  - 节点/PR模板
+  - 手法/案例拆解
+  - 手法/范式归纳
+  - 手法/可执行模板
+  - 场景/编译长文
+  - 场景/工程团队
+  - 场景/AI-Native转型
 nodes: [AI-工作台五层, 可控并行, plan-md任务协议, 5层上下文3档载入, CLAUDE-md三段式, Skill-过程资产, Subagents-隔离原则, 团队3层权限]
-links: [[every-agentic-engineering-hack-2026-06]], [[claude-code-dynamic-workflows]], [[从Prompt-Context到Harness-工程的三次进化与终局之战]], [[AI-Coding的顿悟时刻]], [[Notion-spec-driven-AI-workflow]], [[多Agent使用边界与并行判定]], [[任务类型到验证模板]], [[Claude-Code团队5条工作原则-Fiona-Fung分享]], [[买了一样的AI为什么别家的比你的强]], [[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]
+links: [[02-ai-coding/every-agentic-engineering-hack-2026-06]], [[02-ai-coding/claude-code-dynamic-workflows]], [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]], [[02-ai-coding/AI-Coding的顿悟时刻]], [[02-ai-coding/Notion-spec-driven-AI-workflow]], [[02-ai-coding/多Agent使用边界与并行判定]], [[02-ai-coding/任务类型到验证模板]], [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]], [[02-ai-coding/买了一样的AI为什么别家的比你的强]], [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]
 date: 2026-06-09
 source: 微信公众号 / 架构师 JiaGouX（若飞）—— 编译自 Matt Van Horn、John Kim、Kaxil Naik、Simon Willison、Addy Osmani 等多篇
 ---
@@ -23,9 +46,9 @@ source: 微信公众号 / 架构师 JiaGouX（若飞）—— 编译自 Matt Van
 ## 分类提炼
 
 - **场景**：AI-Native 工程团队 / 工作台分层治理 / 工程师角色升级
-- **标签**：#主题/AI-Coding #主题/AI-Native #主题/Harness #主题/工作台
+- **标签**： #主题/AI-Coding #主题/AI-Native #主题/Harness #主题/工作台
 - **类型**：实战方法论 / 编译长文 / 范式归纳
-- **价值层级**：⭐⭐⭐（这是 [[every-agentic-engineering-hack-2026-06]]（个人 YOLO 版）的"团队工程化版"——把 Matt 的 Hacks 翻译成可治理的工程交付物）
+- **价值层级**：⭐⭐⭐（这是 [[02-ai-coding/every-agentic-engineering-hack-2026-06]]（个人 YOLO 版）的"团队工程化版"——把 Matt 的 Hacks 翻译成可治理的工程交付物）
 
 ## 知识节点（8 个独立概念）
 
@@ -42,24 +65,24 @@ source: 微信公众号 / 架构师 JiaGouX（若飞）—— 编译自 Matt Van
 
 ### 上游（基于 / 来自）
 - 原始素材：Matt Van Horn（个人 YOLO 派）/ John Kim（克制工程派）/ Kaxil Naik（4 个月不写代码派）/ Simon Willison（context engineering 命名者）/ Addy Osmani（Agent Skills 综述）
-- [[every-agentic-engineering-hack-2026-06]]：本篇的"个人版母本"——Matt Van Horn 的 22 Hacks
-- [[claude-code-dynamic-workflows]]：本篇 plan.md 思路与 Dynamic Workflows 是同一精神（plan 是动态可执行的）
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]]：本篇"上下文不是越多越好"是 Harness 思想的具体化
-- [[买了一样的AI为什么别家的比你的强]]：本篇"Skill = 过程资产"与 Hiten Shah "Skill 战略"是同一信号的组织内落地版
+- [[02-ai-coding/every-agentic-engineering-hack-2026-06]]：本篇的"个人版母本"——Matt Van Horn 的 22 Hacks
+- [[02-ai-coding/claude-code-dynamic-workflows]]：本篇 plan.md 思路与 Dynamic Workflows 是同一精神（plan 是动态可执行的）
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]：本篇"上下文不是越多越好"是 Harness 思想的具体化
+- [[02-ai-coding/买了一样的AI为什么别家的比你的强]]：本篇"Skill = 过程资产"与 Hiten Shah "Skill 战略"是同一信号的组织内落地版
 
 ### 下游（应用于 / 验证于）
-- [[Notion-spec-driven-AI-workflow]]：spec-driven 是 plan.md 的一种更严格形式（spec 进仓库 + verification）
-- [[AI-Coding的顿悟时刻]]："Spec→LDD 流水线 + 未来瓶颈=需求定义+架构设计"——本篇 5 层工作台是同主线的"工程化版本"
-- [[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]：本篇 plan.md 8 段结构可与 Spec-Kit 的 spec.md 对照
-- [[多Agent使用边界与并行判定]]：本篇"可控并行 5 问 + 任务卡"是更具体的可执行版
-- [[任务类型到验证模板]]：本篇"PR 模板 + 验证证据前置"是该主线在 Agent 时代的延续
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]]：本篇"团队权限渐进"与 Fiona "Trust but verify + 团队级 harness"是同主线
+- [[02-ai-coding/Notion-spec-driven-AI-workflow]]：spec-driven 是 plan.md 的一种更严格形式（spec 进仓库 + verification）
+- [[02-ai-coding/AI-Coding的顿悟时刻]]："Spec→LDD 流水线 + 未来瓶颈=需求定义+架构设计"——本篇 5 层工作台是同主线的"工程化版本"
+- [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]：本篇 plan.md 8 段结构可与 Spec-Kit 的 spec.md 对照
+- [[02-ai-coding/多Agent使用边界与并行判定]]：本篇"可控并行 5 问 + 任务卡"是更具体的可执行版
+- [[02-ai-coding/任务类型到验证模板]]：本篇"PR 模板 + 验证证据前置"是该主线在 Agent 时代的延续
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]：本篇"团队权限渐进"与 Fiona "Trust but verify + 团队级 harness"是同主线
 
 ### 同级（横向 / 并列 / 镜像）
-- [[Claude-Code负责人谈AI原生工程组织]]：组织层视角
-- [[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]：组织层视角
-- [[54万行代码的顿悟-Markdown才是新编程方式]]：个人层视角（Markdown 是新编程方式）
-- [[Anthropic万字长文三个判断和一个阳谋]]："验收能力"主线，本篇是工程化落地版
+- [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]]：组织层视角
+- [[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]：组织层视角
+- [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]：个人层视角（Markdown 是新编程方式）
+- [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]]："验收能力"主线，本篇是工程化落地版
 
 ## 正文要点（8 条）
 
@@ -297,4 +320,4 @@ PR 模板（必带 7 项）：
 ## 写作引用建议
 
 - 引用本篇时优先用：工作台搭得越清楚，Agent 干活越有边界 / Agent 正在从代码助手变成执行层 / 代码生成几乎免费以后，review 变成瓶颈 / Agent 会静默失败 / 计划留得下来，上下文找得到，验证跑得起来，权限边界说得清，失败经验下次还能用
-- 强关联引用：[[every-agentic-engineering-hack-2026-06]]（个人版母本）/ [[AI-Coding的顿悟时刻]]（"Spec→LDD + 工程师向两端收缩"）/ [[Notion-spec-driven-AI-workflow]]（plan.md 的一种更严格形式）/ [[Claude-Code团队5条工作原则-Fiona-Fung分享]]（Trust but verify + 团队级 harness）
+- 强关联引用：[[02-ai-coding/every-agentic-engineering-hack-2026-06]]（个人版母本）/ [[02-ai-coding/AI-Coding的顿悟时刻]]（"Spec→LDD + 工程师向两端收缩"）/ [[02-ai-coding/Notion-spec-driven-AI-workflow]]（plan.md 的一种更严格形式）/ [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]（Trust but verify + 团队级 harness）

@@ -86,10 +86,10 @@ Clarification → Planning → Iterative Execution
 
 ## 标签
 
-#主题/AI-Agent #场景/技术博客
+ #主题/AI-Agent #场景/技术博客
 
 ## 相关链接
 
 - [[index]]
-- [[agent-architectures]]
-- [[harness-engineering]]
+- [[01-ai-agents/agent-architectures]]
+- [[01-ai-agents/harness-engineering]]

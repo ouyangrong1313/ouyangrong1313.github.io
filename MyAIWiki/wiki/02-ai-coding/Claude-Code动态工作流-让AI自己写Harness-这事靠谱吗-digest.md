@@ -47,19 +47,19 @@ Claude Code 的 **Dynamic Workflows** 把"写 Harness"这件事也交给 Claude 
 
 ## 我的理解
 
-- 跟 [[Harness不是目的，知识才是护城河]] 是同一判断的两个侧面：工程化重要但不是终局
+- 跟 [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] 是同一判断的两个侧面：工程化重要但不是终局
 - **80/20 实战**：日常工作别上动态工作流（成本不划算），只在"知道复杂 + 验证成本高"时用
 - **对 MyAIWiki 的启发**：动态工作流可以"保存成静态"——这正是 Skill 沉淀的逻辑
-- 跟 [[claude-code-dynamic-workflows]]（6-3 写的英文编译版）配套看，那篇侧重六种模式 + Prompt 示例，本篇侧重 Feisky 的判断和取舍
+- 跟 [[02-ai-coding/claude-code-dynamic-workflows]]（6-3 写的英文编译版）配套看，那篇侧重六种模式 + Prompt 示例，本篇侧重 Feisky 的判断和取舍
 
 ## 适合关联的主题
 
-- [[claude-code-dynamic-workflows]]
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]]
-- [[HarnessEngineering企业级实战]]
-- [[Harness工程AgentLoop]]
-- [[Claude-Code在大代码库中的最佳实践]]
-- [[Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
-- [[AI-Coding的顿悟时刻]]
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]]
+- [[02-ai-coding/claude-code-dynamic-workflows]]
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]
+- [[01-ai-agents/HarnessEngineering企业级实战]]
+- [[01-ai-agents/Harness工程AgentLoop]]
+- [[02-ai-coding/Claude-Code在大代码库中的最佳实践-从Anthropic官方指南到可落地Harness方法]]
+- [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
+- [[02-ai-coding/AI-Coding的顿悟时刻]]
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]

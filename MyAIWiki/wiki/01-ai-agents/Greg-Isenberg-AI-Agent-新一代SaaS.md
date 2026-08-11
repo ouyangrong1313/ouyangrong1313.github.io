@@ -1,9 +1,32 @@
 ---
 title: Greg Isenberg AI Agent 新一代 SaaS — 卖工作而非卖软件
 category: 01-ai-agents
-tags: [主题/Agent产品方向, 主题/SaaS转型, 主题/商业模式, 主题/Capihom主线, 主题/硅谷播客, 主题/Anthropic, 主题/Seetong借鉴, 主题/工作流筛选, 主题/最小Agent, 主题/评测, 场景/微信编译, 场景/AI产品方向, 节点/SaaS卖工作, 节点/5特征工作流, 节点/甜点区, 节点/旁听员工, 节点/Agent-spec-7件事, 节点/4种最小Agent, 节点/控制台评测, 节点/30天计划, 作者/Greg-Isenberg, 编辑/Capihom, 公司/Late-Checkout]
+tags:
+  - 主题/Agent产品方向
+  - 主题/SaaS转型
+  - 主题/商业模式
+  - 主题/Capihom主线
+  - 主题/硅谷播客
+  - 主题/Anthropic
+  - 主题/Seetong借鉴
+  - 主题/工作流筛选
+  - 主题/最小Agent
+  - 主题/评测
+  - 场景/微信编译
+  - 场景/AI产品方向
+  - 节点/SaaS卖工作
+  - 节点/5特征工作流
+  - 节点/甜点区
+  - 节点/旁听员工
+  - 节点/Agent-spec-7件事
+  - 节点/4种最小Agent
+  - 节点/控制台评测
+  - 节点/30天计划
+  - 作者/Greg-Isenberg
+  - 编辑/Capihom
+  - 公司/Late-Checkout
 nodes: [SaaS卖工作, 5特征工作流筛选, 甜点区, 旁听员工10-20次, Agent-spec-7件事, 4种最小Agent, 控制台评测建立信任, 30天试点计划]
-links: [[AI-Native企业-Agent团队和AI-Factory重写公司体系]], [[Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]], [[Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]], [[未来属于垂直领域Agent]], [[Make-for-Agent-qi-shi-huan-shi-make-for-human]], [[Lilian-Weng-Harness-Engineering-自我改进]], [[Loop-Engineering-验证才是瓶颈]], [[Addy-Osmani-Loop-Engineering]], [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]], [[Multica-AI-Native-组织-人是最慢的节点]], [[Leeka-Task-Decomposition-Agentic-Workflow]], [[小龙虾-OpenClaw-Agent价值与边界]]
+links: [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]], [[01-ai-agents/Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]], [[02-ai-coding/Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]], [[01-ai-agents/未来属于垂直领域Agent]], [[01-ai-agents/make-for-agent-qi-shi-huan-shi-make-for-human]], [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]], [[02-ai-coding/Addy-Osmani-Loop-Engineering]], [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]], [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]], [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]], [[01-ai-agents/小龙虾-OpenClaw-Agent价值与边界]]
 date: 2026-07-08
 source: 微信公众号「Capihom」2026-07-08 推送 / Greg Isenberg Startup Ideas Podcast 编译
 ---
@@ -44,20 +67,20 @@ source: 微信公众号「Capihom」2026-07-08 推送 / Greg Isenberg Startup Id
 - Anthropic Agent 指南（"很多 Agent 任务应该先被当成 workflow"）
 
 ### 下游（应用于 / 验证于）
-- [[AI-Native企业-Agent团队和AI-Factory重写公司体系]] Groupon 视角——本文"Agent 接住工作"在 Masha Sharma 那篇"AI Factory 团队重写公司体系"得到企业实证
-- [[Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]] Capihom 同主线——本文"卖工作"在 Avoca 上门服务 Agent 案例得到具体化
-- [[未来属于垂直领域Agent]] 垂直化路径印证 Greg 的"细分行业 + 20 项工作"工作流筛选法
-- [[Make-for-Agent-qi-shi-huan-shi-make-for-human]] 责任链 + 上下文基建——本文"Agent 做工作，wrapper 创造信任"是该篇 "Make for Agent 还是 Make for Human" 的具体化
-- [[Lilian-Weng-Harness-Engineering-自我改进]] Harness OS 类比 → 本文"Agent 接触现有软件"是 OS 类比的具体化
-- [[Loop-Engineering-验证才是瓶颈]] 验证闸门 → 本文"控制台 + 评测"是 Loop 验证的产品化
-- [[Addy-Osmani-Loop-Engineering]] 5+1 积木 → 本文 4 种最小 Agent 是 Loop 渐进思路的精简版
+- [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]] Groupon 视角——本文"Agent 接住工作"在 Masha Sharma 那篇"AI Factory 团队重写公司体系"得到企业实证
+- [[01-ai-agents/Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]] Capihom 同主线——本文"卖工作"在 Avoca 上门服务 Agent 案例得到具体化
+- [[01-ai-agents/未来属于垂直领域Agent]] 垂直化路径印证 Greg 的"细分行业 + 20 项工作"工作流筛选法
+- [[01-ai-agents/make-for-agent-qi-shi-huan-shi-make-for-human]] 责任链 + 上下文基建——本文"Agent 做工作，wrapper 创造信任"是该篇 "Make for Agent 还是 Make for Human" 的具体化
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] Harness OS 类比 → 本文"Agent 接触现有软件"是 OS 类比的具体化
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] 验证闸门 → 本文"控制台 + 评测"是 Loop 验证的产品化
+- [[02-ai-coding/Addy-Osmani-Loop-Engineering]] 5+1 积木 → 本文 4 种最小 Agent 是 Loop 渐进思路的精简版
 
 ### 同级（横向 / 并列）
-- [[Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]] Capihom 同主线（Codex 产品工作 vs Greg Agent 产品方向 = 互补）
-- [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] Anthropic 团队视角（管理者视角 vs Greg 创始人视角）
-- [[Multica-AI-Native-组织-人是最慢的节点]] 极端样本（4 人+几十 Agent vs Greg 硅谷范式）
-- [[Leeka-Task-Decomposition-Agentic-Workflow]] 任务拆解视角（中文工程方法论 vs Greg 硅谷产品方法论）
-- [[小龙虾-OpenClaw-Agent价值与边界]] "什么时候选 Agent"（"该不该" vs Greg "怎么卖" = 决策树前后两段）
+- [[02-ai-coding/Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]] Capihom 同主线（Codex 产品工作 vs Greg Agent 产品方向 = 互补）
+- [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] Anthropic 团队视角（管理者视角 vs Greg 创始人视角）
+- [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]] 极端样本（4 人+几十 Agent vs Greg 硅谷范式）
+- [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]] 任务拆解视角（中文工程方法论 vs Greg 硅谷产品方法论）
+- [[01-ai-agents/小龙虾-OpenClaw-Agent价值与边界]] "什么时候选 Agent"（"该不该" vs Greg "怎么卖" = 决策树前后两段）
 
 ## 正文要点（5 条）+ Seetong 借鉴动作（6 条）
 
@@ -72,12 +95,12 @@ source: 微信公众号「Capihom」2026-07-08 推送 / Greg Isenberg Startup Id
 
 | # | 借鉴动作 | 对应 Greg 节点 | 关联条目 |
 |---|---|---|---|
-| 1 | **Seetong 内部"卖工作"清单**：列出 Seetong 团队 20 个重复工作（设备分诊/反馈归类/工时填写/排班/日报/SOP 检索等）→ 按 5 维打分选 1 个最小 Agent 切入点 | 节点 2 + 5 维筛选 | [[Leeka-Task-Decomposition-Agentic-Workflow]] 任务拆解法 |
-| 2 | **Seetong 客服"接住整份工作"路线图**：从"接电话/回邮件/记录工单" → "接住反馈 + 内部消化 + 派单 + 回访"（单工具 → 完整工作）| 节点 1 + 4 节点 1 | [[AI-Native企业-Agent团队和AI-Factory重写公司体系]] |
-| 3 | **Seetong 销售/产品"旁听 10-20 次"**：找客服+工程师+产品各 10-20 次实际工作录屏 → 拆解判断路径 → 写入 Agent spec | 节点 4 旁听员工 | [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] |
-| 4 | **Seetong AI 助手最小 Agent 选型**：用 4 类（批准/分流/协调/限定动作）选择 Seetong 第一个 Agent 落点 → **推荐"分流型"：反馈分诊 → 自动归类 + 自动派单**| 节点 6 4 种最小 Agent | [[Loop-Engineering-验证才是瓶颈]] |
-| 5 | **Seetong Agent spec 7 件事模板**：把每个 Agent 的触发/上下文/工具/自主动作/批准点/真人升级/成功标准 7 项写到 skill.md 顶部（不要在 prompt 里散落）| 节点 5 spec 7 件事 | [[Lilian-Weng-Harness-Engineering-自我改进]] Harness 操作系统 |
-| 6 | **Seetong 控制台 + 评测**：给客户/产品经理看"今日处理 N 条 + 平均响应 X 秒 + 转人工率 Y%" + 50 个真实工单的路由测试结果——控制台 = 信任机制 | 节点 7 控制台评测 | [[Loop-Engineering-验证才是瓶颈]] |
+| 1 | **Seetong 内部"卖工作"清单**：列出 Seetong 团队 20 个重复工作（设备分诊/反馈归类/工时填写/排班/日报/SOP 检索等）→ 按 5 维打分选 1 个最小 Agent 切入点 | 节点 2 + 5 维筛选 | [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]] 任务拆解法 |
+| 2 | **Seetong 客服"接住整份工作"路线图**：从"接电话/回邮件/记录工单" → "接住反馈 + 内部消化 + 派单 + 回访"（单工具 → 完整工作）| 节点 1 + 4 节点 1 | [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]] |
+| 3 | **Seetong 销售/产品"旁听 10-20 次"**：找客服+工程师+产品各 10-20 次实际工作录屏 → 拆解判断路径 → 写入 Agent spec | 节点 4 旁听员工 | [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] |
+| 4 | **Seetong AI 助手最小 Agent 选型**：用 4 类（批准/分流/协调/限定动作）选择 Seetong 第一个 Agent 落点 → **推荐"分流型"：反馈分诊 → 自动归类 + 自动派单**| 节点 6 4 种最小 Agent | [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] |
+| 5 | **Seetong Agent spec 7 件事模板**：把每个 Agent 的触发/上下文/工具/自主动作/批准点/真人升级/成功标准 7 项写到 skill.md 顶部（不要在 prompt 里散落）| 节点 5 spec 7 件事 | [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] Harness 操作系统 |
+| 6 | **Seetong 控制台 + 评测**：给客户/产品经理看"今日处理 N 条 + 平均响应 X 秒 + 转人工率 Y%" + 50 个真实工单的路由测试结果——控制台 = 信任机制 | 节点 7 控制台评测 | [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] |
 
 ## 备注与限制
 

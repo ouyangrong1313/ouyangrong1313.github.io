@@ -50,7 +50,7 @@ date: 2026-06-29
 
 ## 关联 + 备注
 
-- **关联**：`[[0xCodez-Agent-Harness-14-Steps]]` / `[[Addy-Osmani-Loop-Engineering]]` / `[[阿里妹-端到端业务需求专家Agent]]` / `[[阿里云开发者-淘宝主播Agent的Harness工程实战]]` / `[[清华沈阳-自进化AI新物种]]` / `[[Multica-AI-Native-组织-人是最慢的节点]]` / `[[Harness不是目的-知识才是护城河]]`
+- **关联**：`[[01-ai-agents/0xCodez-Agent-Harness-14-Steps]]` / `[[02-ai-coding/Addy-Osmani-Loop-Engineering]]` / `[[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]` / `[[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]]` / `[[01-ai-agents/清华沈阳-自进化AI新物种]]` / `[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]` / `[[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]`
 - **分类理由**：本文是 Agent 落地方法论，与 Addy（Loop 验证）/ 0xCodez（Harness 14 步）/ 阿里妹（4 层 8 步）同主线"Agent 落地方法"
-- **"拆"+"测"互补**：本文（Leeka 任务拆解）+ `[[Addy-Osmani-Loop-Engineering]]`（验证才是瓶颈）= Agent 落地完整闭环
+- **"拆"+"测"互补**：本文（Leeka 任务拆解）+ `[[02-ai-coding/Addy-Osmani-Loop-Engineering]]`（验证才是瓶颈）= Agent 落地完整闭环
 - **透明玻璃自检**：wiki ?K（≤8K）/ digest ?K（≤4K）/ 节点 10（6-10）/ H2 ? wiki / H2 ? digest（≤5）/ 表格 ? wiki / 表格 ? digest（≤2）/ 0 陈词 ⭐⭐⭐

@@ -58,14 +58,14 @@ Lilian Weng（翁荔）把"Harness 是包裹在裸模型和真实场景之间的
 
 ## 强关联（同主线 8 个强关联）
 
-- [[0xCodez-Agent-Harness-14-Steps]] 14 步路线图 → 5 段路径对应 harness 代码→optimizer 代码
-- [[HarnessEngineering企业级实战]] 阿里 25%→90% → 印证 Harness = 模型
-- [[Harness工程AgentLoop]] 5 工程决策 → 印证 3 种设计模式
-- [[Code-is-cheap-AI-Native-五倍效率]] 水流理论 → 印证 Harness 简洁
-- [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] 12 专家 + DAG → 印证子 Agent
-- [[字节跳动洪定坤-AI-Coding的实践与探索]] 3×3×100 → 印证 RL 风险
-- [[Loop-Engineering-验证才是瓶颈]] 验证闸门 → 印证 reward hacking
-- [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] 团队视角
+- [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] 14 步路线图 → 5 段路径对应 harness 代码→optimizer 代码
+- [[01-ai-agents/HarnessEngineering企业级实战]] 阿里 25%→90% → 印证 Harness = 模型
+- [[01-ai-agents/Harness工程AgentLoop]] 5 工程决策 → 印证 3 种设计模式
+- [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]] 水流理论 → 印证 Harness 简洁
+- [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] 12 专家 + DAG → 印证子 Agent
+- [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] 3×3×100 → 印证 RL 风险
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] 验证闸门 → 印证 reward hacking
+- [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] 团队视角
 
 ## 备注与限制
 

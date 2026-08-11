@@ -1,9 +1,14 @@
 ---
 title: 与 AI 一起做产品的六条原则 - Digest
 category: 03-productivity
-tags: [#主题/AI时代产品设计, #主题/产品管理, #主题/工作方法, #节点/6反问决策框架, #场景/速读摘要]
+tags:
+  - 主题/AI时代产品设计
+  - 主题/产品管理
+  - 主题/工作方法
+  - 节点/6反问决策框架
+  - 场景/速读摘要
 nodes: [AI-放大器原则, 减法-人砍要狠, 品味-沉淀-context, 80分-交付门槛, 共情-替用户感受, 一致性-同物同UI, 6-反问决策框架]
-links: [[与AI一起做产品的六条原则]]
+links: [[03-productivity/与AI一起做产品的六条原则]]
 date: 2026-06-11
 source: 微信公众号 / AGENT橘
 ---
@@ -67,10 +72,10 @@ source: 微信公众号 / AGENT橘
 
 ## 关联
 
-- [[与AI一起做产品的六条原则]] - 完整编译版
-- [[Good-AI-PM-Bad-AI-PM]] - AI 时代 PM 行为级对照
-- [[AI-PM核心技能-观测评估与反馈闭环]] - PM 核心技能
-- [[problem-first把方案翻转回问题]] - 同 PM 主线
+- [[03-productivity/与AI一起做产品的六条原则]] - 完整编译版
+- [[01-ai-agents/good-ai-pm-bad-ai-pm]] - AI 时代 PM 行为级对照
+- [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]] - PM 核心技能
+- [[02-ai-coding/problem-first把方案翻转回问题]] - 同 PM 主线
 
 ## 备注
 

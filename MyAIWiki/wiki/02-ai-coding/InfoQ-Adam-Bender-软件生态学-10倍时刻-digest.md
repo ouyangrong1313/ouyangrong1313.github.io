@@ -4,7 +4,7 @@ category: 02-ai-coding
 date: 2026-06-17
 source: 微信公众号 InfoQ 2026-06-17 编译
 source_url: https://mp.weixin.qq.com/s/JiX1X9EQy8Cimm_Yg0pyTg
-main_entry: [[InfoQ-Adam-Bender-软件生态学-10倍时刻]]
+main_entry: [[02-ai-coding/InfoQ-Adam-Bender-软件生态学-10倍时刻]]
 ---
 
 # 软件生态学与 10 倍代码时刻 — Digest
@@ -37,12 +37,12 @@ main_entry: [[InfoQ-Adam-Bender-软件生态学-10倍时刻]]
 
 ## 关联
 
-**主条目**:[[InfoQ-Adam-Bender-软件生态学-10倍时刻]]
-**上游**:[[Addy-Osmani-Loop-Engineering]] / [[APPSO-Codex-Claude-Code-Loop-Engineering]] / [[软件工程的功底是智能时代生死攸关的要素]]
-**下游**:[[Claude-Code一周年回顾-Boris-Cat]] / [[Anthropic万字长文三个判断和一个阳谋]] / [[从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]]
+**主条目**:[[02-ai-coding/InfoQ-Adam-Bender-软件生态学-10倍时刻]]
+**上游**:[[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]] / [[02-ai-coding/软件工程的功底是智能时代生死攸关的要素]]
+**下游**:[[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]] / [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]] / [[02-ai-coding/从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]]
 
 ## 备注
 
 - 速读版:核心结论 + 反直觉 + Seetong 借鉴动作 + 关联指针
-- 完整编译页:同目录 [[InfoQ-Adam-Bender-软件生态学-10倍时刻]] (5.9K)
+- 完整编译页:同目录 [[02-ai-coding/InfoQ-Adam-Bender-软件生态学-10倍时刻]] (5.9K)
 - 演讲原视频:https://www.youtube.com/watch?v=2n41YjR5QfU (比微信文本更完整)

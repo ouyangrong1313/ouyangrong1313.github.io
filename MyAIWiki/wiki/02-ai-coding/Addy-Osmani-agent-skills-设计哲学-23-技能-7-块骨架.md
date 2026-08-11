@@ -1,9 +1,25 @@
 ---
 title: "Addy Osmani agent-skills 设计哲学:23 技能 + 7 块骨架 + 4 个杀手锏"
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI-Agent, #主题/Skill, #主题/工程实践, #主题/Harness, #节点/agent-skills, #节点/反合理化, #节点/统一骨架, #节点/渐进式披露, #节点/7命令流水线, #节点/Google工程文化, #手法/方法论, #手法/对比冲突, #公司/Addy-Osmani, #场景/工具推荐, #场景/方法论落地]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Agent
+  - 主题/Skill
+  - 主题/工程实践
+  - 主题/Harness
+  - 节点/agent-skills
+  - 节点/反合理化
+  - 节点/统一骨架
+  - 节点/渐进式披露
+  - 节点/7命令流水线
+  - 节点/Google工程文化
+  - 手法/方法论
+  - 手法/对比冲突
+  - 公司/Addy-Osmani
+  - 场景/工具推荐
+  - 场景/方法论落地
 nodes: [agent-skills, AI-抄近路问题, 4个设计哲学, 7块统一骨架, 23技能全生命周期, 7命令流水线, 3角色4清单, Google工程文化整合]
-links: [[谷歌开源agent-skills]], [[Addy-Osmani-Loop-Engineering]], [[Loop-Engineering-详解-把反馈循环放进工程现场]], [[Agentic-Engineering-AI-Workbench]], [[PM-Skills-Marketplace-产品经理必备skill]], [[APPSO-Codex-Claude-Code-Loop-Engineering]], [[从软件工程基本功到Agent落地:结合OpenClaw与Claude Code的实践理解]], [[从Prompt-Context到Harness-工程的三次进化与终局之战]]
+links: [[02-ai-coding/谷歌开源agent-skills]], [[02-ai-coding/Addy-Osmani-Loop-Engineering]], [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]], [[02-ai-coding/Agentic-Engineering-AI-Workbench]], [[02-ai-coding/PM-Skills-Marketplace-产品经理必备skill]], [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]], [[02-ai-coding/从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]], [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]
 date: 2026-06-15
 source: 微信公众号 / ColaAI 2026-06-15 整理自 GitHub addyosmani/agent-skills v0.6.0(58.9k Stars)
 ---
@@ -35,11 +51,11 @@ agent-skills = 把"资深工程师工作流"打包成 23 技能 + 7 命令,治�
 
 ## 关联图谱
 
-**上游**:Addy Osmani 2026-06-09 [[Addy-Osmani-Loop-Engineering]] Loop 方法论(本文是 Loop 在"工程化落体"维度的具象化);《Software Engineering at Google》(23 技能内嵌该书工程文化)。
+**上游**:Addy Osmani 2026-06-09 [[02-ai-coding/Addy-Osmani-Loop-Engineering]] Loop 方法论(本文是 Loop 在"工程化落体"维度的具象化);《Software Engineering at Google》(23 技能内嵌该书工程文化)。
 
 **下游**:Claude Code / Cursor 等 8+ AI 编程工具的具体接入(仓库 docs 目录有每工具说明);任何想"给 AI 立规矩"的工程团队可复用 7 块骨架和 4 设计哲学。
 
-**同级**:同主线 [[Addy-Osmani-Loop-Engineering]] + [[Loop-Engineering-详解-把反馈循环放进工程现场]] + [[APPSO-Codex-Claude-Code-Loop-Engineering]] —— 本文补"Skill 库是 Loop 的工程化落体"第四视角;同形态 [[PM-Skills-Marketplace-产品经理必备skill]] PM 域 Skill 库 + [[Agentic-Engineering-AI-Workbench]] AI 工作台;同设计 [[从Prompt-Context到Harness-工程的三次进化与终局之战]] Harness 层次 + [[从软件工程基本功到Agent落地:结合OpenClaw与Claude Code的实践理解]] 团队已有沉淀。
+**同级**:同主线 [[02-ai-coding/Addy-Osmani-Loop-Engineering]] + [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] + [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]] —— 本文补"Skill 库是 Loop 的工程化落体"第四视角;同形态 [[02-ai-coding/PM-Skills-Marketplace-产品经理必备skill]] PM 域 Skill 库 + [[02-ai-coding/Agentic-Engineering-AI-Workbench]] AI 工作台;同设计 [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]] Harness 层次 + [[02-ai-coding/从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]] 团队已有沉淀。
 
 ## 正文要点与借鉴动作(8+3 条)
 
@@ -60,5 +76,5 @@ agent-skills = 把"资深工程师工作流"打包成 23 技能 + 7 命令,治�
 - **评测缺口**:项目未公开"使用 23 技能 vs 不使用"的代码质量对照数据;**Seetong 可作首批 7 命令完整落地样板**
 - **覆盖度**:7 命令覆盖开发全流程,未覆盖"上线后监控 / 客户反馈 / 数据回流"
 - **项目**:https://github.com/addyosmani/agent-skills | **原文**:https://mp.weixin.qq.com/s/ZU81MGzo5j0bwd6i7CfZCw
-- **旧版 wiki**:[[谷歌开源agent-skills]] 4-27(20 skills / 23k star)
-- **同主线**:[[Addy-Osmani-Loop-Engineering]] | [[Loop-Engineering-详解-把反馈循环放进工程现场]] | [[APPSO-Codex-Claude-Code-Loop-Engineering]]
+- **旧版 wiki**:[[02-ai-coding/谷歌开源agent-skills]] 4-27(20 skills / 23k star)
+- **同主线**:[[02-ai-coding/Addy-Osmani-Loop-Engineering]] | [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] | [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]]

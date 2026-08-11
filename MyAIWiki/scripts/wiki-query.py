@@ -87,11 +87,9 @@ def parse_frontmatter(content: str) -> Tuple[Dict, str]:
         return v.strip().strip('"').strip("'").strip()
 
     def parse_inline_list(v: str) -> List[str]:
-        """解析 [a, b, c] 格式的内联列表"""
+        """解析方括号或逗号分隔的列表。"""
         v = v.strip()
-        if not (v.startswith("[") and v.endswith("]")):
-            return []
-        inner = v[1:-1]
+        inner = v[1:-1] if v.startswith("[") and v.endswith("]") else v
         # 按 , 分割（但不能切到 [[...]] 内的内容）
         # 先把 [[...]] 临时占位
         protected = re.sub(r"\[\[([^\]]+)\]\]", lambda m: "[[" + m.group(1).replace(",", "〈,〉") + "]]", inner)
@@ -119,8 +117,8 @@ def parse_frontmatter(content: str) -> Tuple[Dict, str]:
                 # 列表开始（下一行会是 - xxx）
                 fm[key] = []
                 current_list_key = key
-            elif value.startswith("[") and value.endswith("]"):
-                # 内联列表
+            elif key in {"tags", "nodes", "links"}:
+                # 新模板使用 YAML 列表；兼容旧页面的逗号分隔写法。
                 fm[key] = parse_inline_list(value)
                 current_list_key = None
             else:

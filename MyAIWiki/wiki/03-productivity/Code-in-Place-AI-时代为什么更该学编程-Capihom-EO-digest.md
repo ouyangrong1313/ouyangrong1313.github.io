@@ -37,7 +37,7 @@ AI 会写代码，所以你更该学编程——基础决定 AI 放大是产出�
 
 ## 关联（强）
 
-- **Capihom 编译三连：** 本文（8/3）+ [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]]（7/21）+ [[LaterCast-YC设计负责人-AI重写设计师工作流]]（7/16）
-- **同日姊妹篇：** [[phodal-项目记住-Coding-Agent-5步法]]（8/3）
-- **学习 / 代码变便宜主线：** [[深思圈-思考外包能动性]] [[与AI一起做产品的六条原则]] [[BillionWrites-特斯拉自学方法-战略性无聊-项目化-视觉化]] [[Code-is-cheap-AI-Native-五倍效率]] [[Karpathy-autoresearch-从上下文工程到自主研究循环]]
-- **02-ai-coding Skill / AI 时代软实力：** [[Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] [[Agent自维护体系-完整实战]] [[laurel-cpo-jiaona-zhang-公司OS]] [[快刀青衣-OpenAI高管教练四层能力]]
+- **Capihom 编译三连：** 本文（8/3）+ [[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]]（7/21）+ [[03-productivity/LaterCast-YC设计负责人-AI重写设计师工作流]]（7/16）
+- **同日姊妹篇：** [[02-ai-coding/phodal-项目记住-Coding-Agent-5步法]]（8/3）
+- **学习 / 代码变便宜主线：** [[06-ai-tech/深思圈-思考外包能动性]] [[03-productivity/与AI一起做产品的六条原则]] [[03-productivity/BillionWrites-特斯拉自学方法-战略性无聊-项目化-视觉化]] [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]] [[02-ai-coding/Karpathy-autoresearch-从上下文工程到自主研究循环]]
+- **02-ai-coding Skill / AI 时代软实力：** [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] [[02-ai-coding/Agent自维护体系-完整实战]] [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]] [[03-productivity/快刀青衣-OpenAI高管教练四层能力]]

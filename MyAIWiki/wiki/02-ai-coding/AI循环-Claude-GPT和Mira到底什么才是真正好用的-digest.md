@@ -1,7 +1,14 @@
 ---
 title: AI循环：Claude、GPT和Mira，到底什么才是真正好用的(速读摘要)
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI-Agent, #节点/Agent-Loop, #节点/Harness, #节点/Skill, #节点/子代理, #节点/Mira]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Agent
+  - 节点/Agent-Loop
+  - 节点/Harness
+  - 节点/Skill
+  - 节点/子代理
+  - 节点/Mira
 type: digest
 date: 2026-07-05
 source: X（Twitter） / 淘沙者（TheSandPicker）@Etudecn 2026-07-03
@@ -39,6 +46,6 @@ source: X（Twitter） / 淘沙者（TheSandPicker）@Etudecn 2026-07-03
 
 ## 关联 + 备注
 
-**关联**：[[深思SenseAI-Loop-Engineering-验证才是瓶颈]] / [[Claude-Code作者Boris-我已经不写prompt了我写loop]] / [[loonggg-Claude-Code-技能心法-11条建议]] / [[深思圈-530万人-自循环-提示词]] / [[oh-my-codex-让CodexCLI拥有专家团队]] / [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+**关联**：[[01-ai-agents/Loop-Engineering-验证才是瓶颈]] / [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]] / [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]] / [[01-ai-agents/530万人-自循环-提示词]] / [[02-ai-coding/oh-my-codex]] / [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
 
 **备注**：互动约 58 回复 / 167 转发 / 27 万浏览；单任务 token 量级约 50K–200K；Mira 部分明显带软广色彩，阅读时要把概念框架与产品宣传拆开看；只适合“高频、可验证、端到端能自己做完、完成标准客观”的任务。

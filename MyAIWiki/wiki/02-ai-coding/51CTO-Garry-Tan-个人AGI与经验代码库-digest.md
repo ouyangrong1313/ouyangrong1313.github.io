@@ -1,9 +1,16 @@
 ---
 title: Garry Tan 个人 AGI 与经验代码库 - Digest
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/Skill, #主题/个人知识库, #主题/经验资产, #节点/经验代码库, #节点/确定性边界, #节点/知识库治理]
+tags:
+  - 主题/AI-Coding
+  - 主题/Skill
+  - 主题/个人知识库
+  - 主题/经验资产
+  - 节点/经验代码库
+  - 节点/确定性边界
+  - 节点/知识库治理
 nodes: [经验代码库, Skill化, 上下文检索, 确定性边界, 一次性工作, 个人经验归属, 知识库治理, 权限与审计]
-links: [[51CTO-Garry-Tan-个人AGI与经验代码库]], [[54万行代码的顿悟-Markdown才是新编程方式]], [[买了一样的AI为什么别家的比你的强]]
+links: [[02-ai-coding/51CTO-Garry-Tan-个人AGI与经验代码库]], [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]], [[02-ai-coding/买了一样的AI为什么别家的比你的强]]
 date: 2026-08-10
 source: 微信公众号 / 51CTO 技术栈
 ---
@@ -37,9 +44,9 @@ source: 微信公众号 / 51CTO 技术栈
 
 ## 关联与限制
 
-- [[54万行代码的顿悟-Markdown才是新编程方式]]：Markdown 指令层与 Skill pack。
-- [[买了一样的AI为什么别家的比你的强]]：组织级 Skill 护城河。
-- [[phodal-项目记住-Coding-Agent-5步法]]：项目级经验路由与验证。
+- [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]：Markdown 指令层与 Skill pack。
+- [[02-ai-coding/买了一样的AI为什么别家的比你的强]]：组织级 Skill 护城河。
+- [[02-ai-coding/phodal-项目记住-Coding-Agent-5步法]]：项目级经验路由与验证。
 
 本文为 51CTO 二手整理；文章中的规模、效率和案例数字均未独立核验。
 

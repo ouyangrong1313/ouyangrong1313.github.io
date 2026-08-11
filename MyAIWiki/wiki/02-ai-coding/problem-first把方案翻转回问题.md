@@ -1,9 +1,23 @@
 ---
 title: /problem-first：把方案翻转回问题
 category: 02-ai-coding
-tags: [#主题/产品管理, #主题/工作流设计, #主题/AI工具, #节点/problem-first核心, #节点/解压方案当研究材料, #节点/Munger翻转, #节点/8个部分输出, #节点/假设挑战带验证, #节点/三个替代框架, #节点/逆向筛选漏斗, #节点/协议优于提示词, #场景/产品路线图, #场景/需求沟通, #手法/反例论证]
+tags:
+  - 主题/产品管理
+  - 主题/工作流设计
+  - 主题/AI工具
+  - 节点/problem-first核心
+  - 节点/解压方案当研究材料
+  - 节点/Munger翻转
+  - 节点/8个部分输出
+  - 节点/假设挑战带验证
+  - 节点/三个替代框架
+  - 节点/逆向筛选漏斗
+  - 节点/协议优于提示词
+  - 场景/产品路线图
+  - 场景/需求沟通
+  - 手法/反例论证
 nodes: [problem-first核心, 解压方案当研究材料, Munger翻转, 8个部分输出, 假设挑战带验证, 三个替代框架, 逆向筛选漏斗, 协议优于提示词]
-links: [[买了一样的AI为什么别家的比你的强]], [[Anthropic万字爆火长文的三个判断,以及一个值得警惕的阳谋]], [[Claude-Code之父品味不是人类护城河]], [[AI-Coding的顿悟时刻]]
+links: [[02-ai-coding/买了一样的AI为什么别家的比你的强]], [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]], [[02-ai-coding/Claude-Code之父品味不是人类护城河]], [[02-ai-coding/AI-Coding的顿悟时刻]]
 date: 2026-06-08
 source: 微信公众号 / 深思圈（编译自 George @nurijanian on X）
 ---
@@ -23,7 +37,7 @@ source: 微信公众号 / 深思圈（编译自 George @nurijanian on X）
 ## 分类提炼
 
 - 场景：产品管理 / 工作流设计 / AI 工具 / 需求沟通
-- 标签：#主题/产品管理 #主题/工作流设计 #节点/假设挑战带验证 #节点/三个替代框架
+- 标签： #主题/产品管理 #主题/工作流设计 #节点/假设挑战带验证 #节点/三个替代框架
 - 类型：方法论 / 工具介绍 / 案例分析
 
 ## 知识节点（8 个独立概念）
@@ -40,15 +54,15 @@ source: 微信公众号 / 深思圈（编译自 George @nurijanian on X）
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- [[买了一样的AI为什么别家的比你的强]]：Hiten Shah 的 200+ skill 库是 PM OS 200+ 技能的源头；/problem-first 是其中之一
-- [[Anthropic万字爆火长文的三个判断,以及一个值得警惕的阳谋]]：快刀青衣拆解的"验收能力稀缺"在 /problem-first 里得到具体工具（"假设挑战带验证"）
+- [[02-ai-coding/买了一样的AI为什么别家的比你的强]]：Hiten Shah 的 200+ skill 库是 PM OS 200+ 技能的源头；/problem-first 是其中之一
+- [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]]：快刀青衣拆解的"验收能力稀缺"在 /problem-first 里得到具体工具（"假设挑战带验证"）
 
 ### 下游（应用于 / 验证于）
-- [[Claude-Code之父品味不是人类护城河]]：Boris 强调"经验是负债 / 年轻人天然用模型思维"，/problem-first 是这个判断的 PM 对应物
-- [[AI-Coding的顿悟时刻]]：未来瓶颈 = 需求定义 + 架构设计；/problem-first 是需求定义的具体工具
+- [[02-ai-coding/Claude-Code之父品味不是人类护城河]]：Boris 强调"经验是负债 / 年轻人天然用模型思维"，/problem-first 是这个判断的 PM 对应物
+- [[02-ai-coding/AI-Coding的顿悟时刻]]：未来瓶颈 = 需求定义 + 架构设计；/problem-first 是需求定义的具体工具
 
 ### 同级（横向 / 并列）
-- [[为什么说React是比HTML更合适的AI设计稿格式]]：宝玉的"React 是 AI 时代设计稿格式" = 协议 = 8 个固定部分
+- [[02-ai-coding/为什么说React是比HTML更合适的AI设计稿格式]]：宝玉的"React 是 AI 时代设计稿格式" = 协议 = 8 个固定部分
 
 ## 正文要点（6 节 + 总结）
 
@@ -163,8 +177,8 @@ source: 微信公众号 / 深思圈（编译自 George @nurijanian on X）
 - 原文：https://mp.weixin.qq.com/s/S3nyYPPS-ahYtKYMrr5jjQ
 - 原始文章：George @nurijanian on X / prodmgmt.world
 - 关联 wiki：
-  - [[买了一样的AI为什么别家的比你的强]] - Hiten Shah 200+ skill 是 PM OS 200+ 技能的源头
-  - [[Anthropic万字爆火长文的三个判断,以及一个值得警惕的阳谋]] - 验收能力 = 假设挑战带验证
-  - [[Claude-Code之父品味不是人类护城河]] - 经验是负债 / Generalist 黄金时代
-  - [[AI-Coding的顿悟时刻]] - 未来瓶颈 = 需求定义 + 架构设计
-  - [[为什么说React是比HTML更合适的AI设计稿格式]] - 协议 = 8 个固定部分
+  - [[02-ai-coding/买了一样的AI为什么别家的比你的强]] - Hiten Shah 200+ skill 是 PM OS 200+ 技能的源头
+  - [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]] - 验收能力 = 假设挑战带验证
+  - [[02-ai-coding/Claude-Code之父品味不是人类护城河]] - 经验是负债 / Generalist 黄金时代
+  - [[02-ai-coding/AI-Coding的顿悟时刻]] - 未来瓶颈 = 需求定义 + 架构设计
+  - [[02-ai-coding/为什么说React是比HTML更合适的AI设计稿格式]] - 协议 = 8 个固定部分

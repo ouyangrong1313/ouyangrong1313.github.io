@@ -3,7 +3,11 @@ title: 用Agent评测思路管理AI Coding——31万行代码AI重构实践
 source: https://mp.weixin.qq.com/s/CTY5mdgKh6TmPrO6xsKhWQ
 date: 2026-05-07
 author: 美团技术团队
-tags: #主题/AI Coding #手法/对比冲突 #手法/权威背书 #场景/技术博客
+tags:
+  - 主题/AI-Coding
+  - 手法/对比冲突
+  - 手法/权威背书
+  - 场景/技术博客
 ---
 
 # 用Agent评测思路管理AI Coding——31万行代码AI重构实践
@@ -73,10 +77,10 @@ Human-in-the-loop 模式：人界定范围和风险，AI 做脏活
 
 ## 标签
 
-#主题/AI Coding #手法/对比冲突 #手法/权威背书 #场景/技术博客
+ #主题/AI Coding #手法/对比冲突 #手法/权威背书 #场景/技术博客
 
 ## 相关链接
 
-- [[vibe-coding|Vibe Coding：用 AI 写代码的正确姿势]]
-- [[oh-my-codex|oh-my-codex：让 Codex CLI 拥有专家团队]]
+- [[02-ai-coding/vibe-coding|Vibe Coding：用 AI 写代码的正确姿势]]
+- [[02-ai-coding/oh-my-codex|oh-my-codex：让 Codex CLI 拥有专家团队]]
 - [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-却在-Harness|Claude Code 架构深度解读]]

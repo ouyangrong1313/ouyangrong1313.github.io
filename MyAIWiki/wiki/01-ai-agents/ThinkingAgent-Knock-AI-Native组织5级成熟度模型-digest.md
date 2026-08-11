@@ -1,7 +1,11 @@
 ---
 title: AI Native 组织 5 级成熟度模型 - Digest
 category: 01-ai-agents
-tags: [#主题/AI-Native-组织, #主题/Agent落地, #主题/BCG, #主题/Deloitte]
+tags:
+  - 主题/AI-Native-组织
+  - 主题/Agent落地
+  - 主题/BCG
+  - 主题/Deloitte
 date: 2026-07-02
 source: 微信公众号「ThinkingAgent」/ 作者 Knock
 ---
@@ -60,7 +64,7 @@ source: 微信公众号「ThinkingAgent」/ 作者 Knock
 
 ## 关联
 
-- **同级**：[[Multica-AI-Native-组织-人是最慢的节点]] / [[Laurel-CPO-Jiaona-Zhang-公司OS]] / [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]] / [[宁向东-企业家凭什么能看见别人看不见的机会]] / [[HBR-China-为什么越来越多顶级领导者开始认真学哲学]] / [[清华沈阳-自进化AI新物种]] / [[Nikesh-Arora-模型过剩与记忆护城河]]
+- **同级**：[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]] / [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]] / [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]] / [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]] / [[03-productivity/HBR-China-为什么越来越多顶级领导者开始认真学哲学]] / [[01-ai-agents/清华沈阳-自进化AI新物种]] / [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]
 - **下游**：6 个 L4-L5 终态案例(造船厂/电信/薪资/消费品/欧洲零售银行/7-Eleven Rita)
 
 ## 备注
@@ -68,4 +72,4 @@ source: 微信公众号「ThinkingAgent」/ 作者 Knock
 - 数据全部来自 BCG 2025-2026 + Deloitte 2026 + WEF 2025 官方报告
 - 主体都是欧美调研,中国/印度数据未单列;Seetong 借鉴时需本地化
 - 主要面向 1000+ 员工大型企业,Seetong 作为中小型团队参考时需裁剪
-- 完整版见 [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]
+- 完整版见 [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]

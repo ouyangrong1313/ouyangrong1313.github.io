@@ -1,9 +1,16 @@
 ---
 title: Claude Code 动态工作流：让 AI 自己写 Harness，这事靠谱吗
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI-Agent, #场景/公众号长文, #节点/Claude-Code, #节点/Harness, #节点/Context-Engineering, #节点/Multi-Agent]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Agent
+  - 场景/公众号长文
+  - 节点/Claude-Code
+  - 节点/Harness
+  - 节点/Context-Engineering
+  - 节点/Multi-Agent
 nodes: [动态工作流, 静态工作流, 偷懒, 自我偏爱, 目标漂移, 扇出合并, 对抗验证, 锦标赛模式, 隔离区, Harness 自我内化, Opus 4.8, ultracode]
-links: [[claude-code-dynamic-workflows]], [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]], [[从Prompt-Context到Harness-工程的三次进化与终局之战]], [[AI-Coding的顿悟时刻]], [[HarnessEngineering企业级实战]], [[Harness工程AgentLoop]], [[Claude-Code在大代码库中的最佳实践]]
+links: [[02-ai-coding/claude-code-dynamic-workflows]], [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]], [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]], [[02-ai-coding/AI-Coding的顿悟时刻]], [[01-ai-agents/HarnessEngineering企业级实战]], [[01-ai-agents/Harness工程AgentLoop]], [[02-ai-coding/Claude-Code在大代码库中的最佳实践-从Anthropic官方指南到可落地Harness方法]]
 date: 2026-06-04
 source: 微信公众号 / Feisky（编译自 Anthropic 官方博客）
 ---
@@ -23,7 +30,7 @@ source: 微信公众号 / Feisky（编译自 Anthropic 官方博客）
 
 ## 分类提炼
 - 场景：复杂任务自动化、Agent 工程化、AI Coding 进阶
-- 标签：#主题/AI-Coding #主题/AI-Agent #节点/Claude-Code #节点/Harness
+- 标签： #主题/AI-Coding #主题/AI-Agent #节点/Claude-Code #节点/Harness
 - 类型：技术解读 / 范式跃迁 / 案例分析
 
 ## 知识节点
@@ -44,18 +51,18 @@ source: 微信公众号 / Feisky（编译自 Anthropic 官方博客）
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- [[claude-code-dynamic-workflows]]：6-3 写的同主题英文原始博客编译版（侧重六种模式 + Prompt 示例）
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]：Harness 是 Agent 系统护城河的总论
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]]：从 Prompt 到 Context 到 Harness 的工程化路径
+- [[02-ai-coding/claude-code-dynamic-workflows]]：6-3 写的同主题英文原始博客编译版（侧重六种模式 + Prompt 示例）
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]：Harness 是 Agent 系统护城河的总论
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]：从 Prompt 到 Context 到 Harness 的工程化路径
 
 ### 下游（应用于 / 验证于）
-- [[HarnessEngineering企业级实战]]：动态工作流是 Harness 落地的最新形态
-- [[Harness工程AgentLoop]]：动态工作流 + Agent Loop 的结合
-- [[Claude-Code在大代码库中的最佳实践]]：大代码库任务正好命中动态工作流的强项
+- [[01-ai-agents/HarnessEngineering企业级实战]]：动态工作流是 Harness 落地的最新形态
+- [[01-ai-agents/Harness工程AgentLoop]]：动态工作流 + Agent Loop 的结合
+- [[02-ai-coding/Claude-Code在大代码库中的最佳实践-从Anthropic官方指南到可落地Harness方法]]：大代码库任务正好命中动态工作流的强项
 
 ### 同级（横向 / 并列）
-- [[AI-Coding的顿悟时刻]]：AI Coding 整体演化的判断
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]]：另一支团队对 Claude Code 用法的判断
+- [[02-ai-coding/AI-Coding的顿悟时刻]]：AI Coding 整体演化的判断
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]：另一支团队对 Claude Code 用法的判断
 
 ## 正文要点
 
@@ -151,17 +158,17 @@ ultracode  # 触发词
 
 - **Harness 也可能是中间状态**——这是这篇文章最有哲学意味的判断。"Harness 可能像 prompt engineering 一样，是大模型发展过程中的一个中间状态……下一代模型根本不需要外部编排，自己就能在内部完成任务分解和对抗验证"
 - **动态 vs 静态不是替代关系**——文章明确说"两者不矛盾，动态工作流可以保存下来变成静态的"
-- **对 MyAIWiki 的启发**：**这跟 [[Harness不是目的，知识才是护城河]] 是同一判断的两个侧面**——工程化重要但不是终局，知识沉淀和判断力才是
+- **对 MyAIWiki 的启发**：**这跟 [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] 是同一判断的两个侧面**——工程化重要但不是终局，知识沉淀和判断力才是
 - **实战判断**（按 80/20）：日常工作流**别上动态工作流**（成本不划算），只在"知道这件事复杂 + 验证成本高"时才用
 
 ## 适合关联的主题
 
-- [[claude-code-dynamic-workflows]]
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]]
-- [[HarnessEngineering企业级实战]]
-- [[Harness工程AgentLoop]]
-- [[Claude-Code在大代码库中的最佳实践]]
-- [[Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
-- [[AI-Coding的顿悟时刻]]
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]]
+- [[02-ai-coding/claude-code-dynamic-workflows]]
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]
+- [[01-ai-agents/HarnessEngineering企业级实战]]
+- [[01-ai-agents/Harness工程AgentLoop]]
+- [[02-ai-coding/Claude-Code在大代码库中的最佳实践-从Anthropic官方指南到可落地Harness方法]]
+- [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
+- [[02-ai-coding/AI-Coding的顿悟时刻]]
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]

@@ -1,9 +1,18 @@
 ---
 title: Claude Code 之父的新洞察 - AI 时代产研团队 5 类角色原型与判断力价值
 category: 03-productivity
-tags: [#主题/AI时代产品, #主题/产研团队, #主题/角色重塑, #主题/Discovery-vs-Delivery, #主题/判断力价值, #主题/Anthropic, #主题/Boris-Cherny, #场景/产品研究, #作者/Alice]
+tags:
+  - 主题/AI时代产品
+  - 主题/产研团队
+  - 主题/角色重塑
+  - 主题/Discovery-vs-Delivery
+  - 主题/判断力价值
+  - 主题/Anthropic
+  - 主题/Boris-Cherny
+  - 场景/产品研究
+  - 作者/Alice
 nodes: [5类角色原型-Prototyper-Builder-Sweeper-Grower-Maintainer, 角色不绑定传统职能, 能力放大器加任务代理-双方向推开, Discovery-vs-Delivery, 流程性工作先自动化-判断性凸显, AI-揭示什么才是真正需要思考的, 判断力价值高于AI-工具熟练度, 团队变小-责任变大]
-links: [[Anthropic-40万场-专业杠杆]], [[与AI一起做产品的六条原则]], [[多Agent协作-Loop-SDD]], [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]], [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]], [[清华沈阳-自进化AI新物种]], [[HBR-China-为什么越来越多顶级领导者开始认真学哲学]]
+links: [[01-ai-agents/Anthropic-40万场-专业杠杆]], [[03-productivity/与AI一起做产品的六条原则]], [[01-ai-agents/AI-团队协作-Loop-SDD]], [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]], [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]], [[01-ai-agents/清华沈阳-自进化AI新物种]], [[03-productivity/HBR-China-为什么越来越多顶级领导者开始认真学哲学]]
 date: 2026-07-02
 source: 微信公众号「WonderLearner」/ 作者 Alice / 2026-07-01 19:31 推送 / 一手来源 Boris Cherny (Anthropic Claude Code 负责人) X 推文 / https://mp.weixin.qq.com/s/O41amqbOTShqbaKxivYJ8w
 ---
@@ -41,12 +50,12 @@ source: 微信公众号「WonderLearner」/ 作者 Alice / 2026-07-01 19:31 推�
 ## 关联图谱与 Seetong 借鉴动作
 
 **上游/同级**
-- [[Anthropic-40万场-专业杠杆]] — 同 Anthropic 主题(都谈"AI 时代什么不可替代")
-- [[与AI一起做产品的六条原则]] — 同 03-productivity"AI 时代产品设计"
-- [[多Agent协作-Loop-SDD]] — 同 团队协作/流程驱动
-- [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]] — 同样谈"岗位→角色"主线
-- [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]] — **同日编译**,本文补完其 L1-L3 "角色原型"维度
-- [[清华沈阳-自进化AI新物种]] / [[宁向东-企业家凭什么能看见别人看不见的机会]] / [[HBR-China-为什么越来越多顶级领导者开始认真学哲学]] — AI 时代组织/个人/哲学决策主线
+- [[01-ai-agents/Anthropic-40万场-专业杠杆]] — 同 Anthropic 主题(都谈"AI 时代什么不可替代")
+- [[03-productivity/与AI一起做产品的六条原则]] — 同 03-productivity"AI 时代产品设计"
+- [[01-ai-agents/AI-团队协作-Loop-SDD]] — 同 团队协作/流程驱动
+- [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]] — 同样谈"岗位→角色"主线
+- [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]] — **同日编译**,本文补完其 L1-L3 "角色原型"维度
+- [[01-ai-agents/清华沈阳-自进化AI新物种]] / [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]] / [[03-productivity/HBR-China-为什么越来越多顶级领导者开始认真学哲学]] — AI 时代组织/个人/哲学决策主线
 
 **下游/验证于**
 - Cagan "Discovery Trio" 概念(PM + 设计师 + 工程负责人 = 未来产品团队)

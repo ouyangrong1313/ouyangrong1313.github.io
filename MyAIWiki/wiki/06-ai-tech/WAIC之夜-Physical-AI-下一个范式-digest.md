@@ -3,9 +3,12 @@ title: WAIC 2026 Physical AI 圆桌 - Digest
 date: 2026-07-20
 slug: WAIC之夜-Physical-AI-下一个范式-digest
 category: 06-ai-tech
-tags: [Physical-AI, 具身智能, 世界模型]
+tags:
+  - Physical-AI
+  - 具身智能
+  - 世界模型
 rating: ⭐⭐
-source: "[[WAIC之夜-Physical-AI-下一个范式]]"
+source: "[[06-ai-tech/WAIC之夜-Physical-AI-下一个范式]]"
 ---
 
 # WAIC 2026 Physical AI 圆桌 - Digest
@@ -33,7 +36,7 @@ source: "[[WAIC之夜-Physical-AI-下一个范式]]"
 
 **三家路线对比**：黄晓煌偏物理仿真（结构化数据 + 参数化模型）；骆怡航走融合（视频+物理强化+本体+Ego）；张直政走通用具身 + limited space。时间表：黄隐含审慎 / 骆 3-5 年 / 张"比数字 AI 短"。
 
-3 个反直觉点：(1) 纯视频路线未必输给物理仿真（80% 工作相似，最后 20% 才分道扬镳）；(2) Physical AI 落地比想象中快（limited space 内追求全面通用即可）；(3) One Model One System（模型最终内化 Harness——与 [[Lilian-Weng-Harness-Engineering-自我改进]] "5 段优化路径"同主线）。
+3 个反直觉点：(1) 纯视频路线未必输给物理仿真（80% 工作相似，最后 20% 才分道扬镳）；(2) Physical AI 落地比想象中快（limited space 内追求全面通用即可）；(3) One Model One System（模型最终内化 Harness——与 [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] "5 段优化路径"同主线）。
 
 5 句核心金句详见主条目；3 个反直觉点见上。
 
@@ -48,7 +51,7 @@ source: "[[WAIC之夜-Physical-AI-下一个范式]]"
 
 ## 关联、待补证与限制
 
-**关联**：方法论对偶 [[Lilian-Weng-Harness-Engineering-自我改进]]；样本对偶 [[Multica-AI-Native-组织-人是最慢的节点]]/[[Nikesh-Arora-模型过剩与记忆护城河]]；数据洞察对偶 [[深思圈-消费护城河不是注意力是环境]]；组织战略对偶 [[麦肯锡-AI提效只是第一波红利]]/[[OpenAI-AI原生组织-4条工作原则]]。
+**关联**：方法论对偶 [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]；样本对偶 [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]/[[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]；数据洞察对偶 [[06-ai-tech/深思圈-消费护城河不是注意力是环境]]；组织战略对偶 [[06-ai-tech/麦肯锡-AI提效只是第一波红利]]/[[06-ai-tech/OpenAI-AI原生组织-4条工作原则]]。
 
 **待补证**：3 类二手数字嘉宾口播未给具体出处；3 家进度未展开；二手报道非嘉宾本人书面确认。
 

@@ -4,7 +4,7 @@
 - 原文作者：Garry Tan（Y Combinator 总裁）
 - 原文出处：X 长文 https://x.com/garrytan/status/2061454423034110372
 - 编译时间：2026-06-03
-- 来源层：raw（已存 `raw/articles/54万行代码的顿悟-Markdown才是新编程方式.md`）
+- 来源层：raw（已存 `raw/54万行代码的顿悟-Markdown才是新编程方式.md`）
 
 ## 核心结论（一句话）
 
@@ -13,9 +13,9 @@
 ## 分类提炼
 
 - 场景：AI Coding / Agent 工程 / Skill 设计 / 工程组织 / 范式反思
-- 标签：#主题/AI-Coding #主题/AI-Agent #主题/Harness #主题/工程管理 #主题/Skill #手法/范式反思 #手法/经济反转 #场景/YC公开课
+- 标签： #主题/AI-Coding #主题/AI-Agent #主题/Harness #主题/工程管理 #主题/Skill #手法/范式反思 #手法/经济反转 #场景/YC公开课
 - 类型：方法论整理 / 范式宣言 / 实战启发
-- 关联主线：与 [[Claude-Code负责人谈AI原生工程组织]]、[[从Prompt-Context到Harness-工程的三次进化与终局之战]] 同主线，但视角更激进
+- 关联主线：与 [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]]、[[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]] 同主线，但视角更激进
 
 ## 三个反转（核心方法论）
 
@@ -95,7 +95,7 @@ Garry **已经拥有 350+ 个 skill pack**，覆盖大多数个人和工作任�
 
 ## 我的判断（编译者注）
 
-1. **这文章和 [[Claude-Code负责人谈AI原生工程组织]] 互为镜像**：
+1. **这文章和 [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]] 互为镜像**：
    - 那篇是 Anthropic 的工程负责人讲组织侧瓶颈迁移
    - 这篇是 YC 总裁讲工程师侧的范式迁移
    - **合起来看**：AI-native 团队不只是"组织要变"，连"写代码这件事本身"都要变
@@ -108,7 +108,7 @@ Garry **已经拥有 350+ 个 skill pack**，覆盖大多数个人和工作任�
 3. **"测试 Markdown" 这一步是当前最缺的实践**：
    - 大多数团队有"测试代码"但没"测试 Markdown"
    - 没有 LLM 评估 + 集成测试的 skill pack 不可靠
-   - 这就是 [[任务类型到验证模板]] 应该补的一个新类型：**"知识/Markdown/Skill 验证"**
+   - 这就是 [[02-ai-coding/任务类型到验证模板]] 应该补的一个新类型：**"知识/Markdown/Skill 验证"**
 
 4. **"审计委员会"陷阱在 Seetong 这种存量代码项目里也常见**：
    - 看看我们有多少 sanitizers / validators / 重试逻辑是在不信任模型
@@ -121,7 +121,7 @@ Garry **已经拥有 350+ 个 skill pack**，覆盖大多数个人和工作任�
 
 ## 适合关联的主题
 
-- [[51CTO-Garry-Tan-个人AGI与经验代码库]]：同一轮 Garry Tan 观点的治理补充，说明 Skill 不仅是 Markdown 指令层，还必须沉淀经验来源、确定性边界、归属和权限审计。
+- [[02-ai-coding/51CTO-Garry-Tan-个人AGI与经验代码库]]：同一轮 Garry Tan 观点的治理补充，说明 Skill 不仅是 Markdown 指令层，还必须沉淀经验来源、确定性边界、归属和权限审计。
 - AI 时代编程范式
 - Markdown as Code / Prompt as Code
 - Skill 设计 / Skill pack

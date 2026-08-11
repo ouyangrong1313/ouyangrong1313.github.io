@@ -43,6 +43,6 @@
 
 ## 关联（强）
 
-- **同作者姊妹篇：** [[phodal-Better-Harness-任务级证据评估]]（7/28）
-- **Skill 落地主线：** [[Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] [[面向Skills编程-淘宝企业购端到端研发提效实践]] [[loonggg-Claude-Code-技能心法-11条建议]] [[Agent自维护体系-完整实战]] [[腾讯-AI-Agent-Skill-测评方案落地]]
-- **Harness / AI Coding 基础：** [[lencx-Agent开发指南-技术太多-该怎么学]] [[Skill-Self-Evolution]] [[Loop-Engineering-验证才是瓶颈]] [[54万行代码的顿悟-Markdown才是新编程方式]] [[AI-Coding的顿悟时刻]]
+- **同作者姊妹篇：** [[01-ai-agents/phodal-Better-Harness-任务级证据评估]]（7/28）
+- **Skill 落地主线：** [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]] [[02-ai-coding/Agent自维护体系-完整实战]] [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]
+- **Harness / AI Coding 基础：** [[01-ai-agents/lencx-Agent开发指南-技术太多-该怎么学]] [[01-ai-agents/Skill-Self-Evolution]] [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] [[02-ai-coding/AI-Coding的顿悟时刻]]

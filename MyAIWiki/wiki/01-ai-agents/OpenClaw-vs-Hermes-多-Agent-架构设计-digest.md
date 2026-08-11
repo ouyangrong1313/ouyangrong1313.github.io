@@ -44,7 +44,7 @@ OpenClaw 和 Hermes 都是多 Agent 架构，但两者的核心差异不在“�
 
 ## 适合关联的主题
 
-- [[OpenClaw的正确打开方式]]
-- [[workflow-vs-agent]]
-- [[agent-architectures]]
-- [[从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]]
+- [[01-ai-agents/OpenClaw的正确打开方式]]
+- [[01-ai-agents/workflow-vs-agent]]
+- [[01-ai-agents/agent-architectures]]
+- [[02-ai-coding/从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]]

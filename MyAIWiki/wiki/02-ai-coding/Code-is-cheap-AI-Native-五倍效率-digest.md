@@ -41,6 +41,6 @@ source: 微信公众号「无岳」2026-07-03 推送(阿里妹导读)
 
 ## 关联 + 备注
 
-**关联**:同主线(Harness 落地)[[阿里云开发者-淘宝主播Agent的Harness工程实战]] [[0xCodez-Agent-Harness-14-Steps]] / 同主线(AI Coding 范式)[[AI-Coding的顿悟时刻]] [[54万行代码的顿悟-Markdown才是新编程方式]] / 同主线(SDD / Skill / Loop / Skills)[[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] [[Skill-Self-Evolution]] [[Addy-Osmani-Loop-Engineering]] [[面向Skills编程-淘宝企业购端到端研发提效实践]]
+**关联**:同主线(Harness 落地)[[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / 同主线(AI Coding 范式)[[02-ai-coding/AI-Coding的顿悟时刻]] [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] / 同主线(SDD / Skill / Loop / Skills)[[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] [[01-ai-agents/Skill-Self-Evolution]] [[02-ai-coding/Addy-Osmani-Loop-Engineering]] [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]]
 
 **备注**:70 万行 / 6 种动作占比是作者自报口径未独立验证;"代码是卫生纸" + "不看代码"都有硬边界(权限/支付/安全/数据删除路径、基础库/SDK/infra 核心、隐式 contract 多的老系统、没有灰度和回滚机制的线上改动);本文补完已有 02-ai-coding 主线缺位的"AI Native 研发范式完整方法论"维度

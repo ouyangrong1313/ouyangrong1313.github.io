@@ -1,9 +1,17 @@
 ---
 title: 万字长文拆解Agent 架构设计（四）：多 Agent 协作
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/Claude-Code, #主题/多-Agent, #主题/Context-Engineering, #主题/Agent-Architecture, #主题/Sub-Agent, #场景/公众号长文, #来源/架构师带你玩转AI]
+tags:
+  - 主题/AI-Agent
+  - 主题/Claude-Code
+  - 主题/多-Agent
+  - 主题/Context-Engineering
+  - 主题/Agent-Architecture
+  - 主题/Sub-Agent
+  - 场景/公众号长文
+  - 来源/架构师带你玩转AI
 nodes: [上下文切分优于能力切分, 编排者执行者互补权限, Task工具委派接口, 子Agent定义三读者, 新桌子效应, 最后一条消息回传, 权限交集裁剪, 模型即调度器]
-links: [[OpenClaw-vs-Hermes-多-Agent-架构设计]], [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]], [[未来属于垂直领域Agent]], [[多Agent使用边界与并行判定]], [[图工程-Graph-Engineering-来了-LangChain说不是新东西]], [[从零设计生产级-Multi-Agent-Harness]], [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]
+links: [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]], [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]], [[01-ai-agents/未来属于垂直领域Agent]], [[02-ai-coding/多Agent使用边界与并行判定]], [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]], [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]], [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]
 date: 2026-07-27
 source: 微信公众号「架构师带你玩转AI」2026-07-22 推送 / AllenTang
 ---
@@ -25,7 +33,7 @@ source: 微信公众号「架构师带你玩转AI」2026-07-22 推送 / AllenTan
 ## 分类提炼
 
 - **场景**：Claude Code 子 Agent 设计 / 多 Agent 编排 / 上下文工程
-- **标签**：#主题/AI-Agent #主题/Claude-Code #主题/多-Agent #主题/Context-Engineering #主题/Agent-Architecture #主题/Sub-Agent #场景/公众号长文 #来源/架构师带你玩转AI
+- **标签**： #主题/AI-Agent #主题/Claude-Code #主题/多-Agent #主题/Context-Engineering #主题/Agent-Architecture #主题/Sub-Agent #场景/公众号长文 #来源/架构师带你玩转AI
 - **类型**：架构拆解 / runtime 设计 / 子 Agent 原语说明
 - **最强增量**：把“新桌子效应”“最后一条消息回传”“权限交集裁剪”“模型即调度器”讲成一组可以直接迁移到其他 Agent 系统里的设计规则
 
@@ -44,21 +52,21 @@ source: 微信公众号「架构师带你玩转AI」2026-07-22 推送 / AllenTan
 
 ### 上游（基于 / 来自）
 
-- [[OpenClaw-vs-Hermes-多-Agent-架构设计]]：那篇从会话边界和进程边界解释多 Agent 架构差异，这篇补上了 Claude Code 子 Agent 在上下文边界上的 runtime 机制。
-- [[未来属于垂直领域Agent]]：domain-specific 拆分强调“为什么要拆成多个小 Agent”，本文进一步解释“拆出来以后怎样靠新上下文和权限裁剪保持稳定”。
-- [[图工程-Graph-Engineering-来了-LangChain说不是新东西]]：图工程讲“边为什么成立”，本文讲“子 Agent 为什么能成立”；两者都把系统收益归到上下文/依赖切分，而不是名词热度。
+- [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]]：那篇从会话边界和进程边界解释多 Agent 架构差异，这篇补上了 Claude Code 子 Agent 在上下文边界上的 runtime 机制。
+- [[01-ai-agents/未来属于垂直领域Agent]]：domain-specific 拆分强调“为什么要拆成多个小 Agent”，本文进一步解释“拆出来以后怎样靠新上下文和权限裁剪保持稳定”。
+- [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]]：图工程讲“边为什么成立”，本文讲“子 Agent 为什么能成立”；两者都把系统收益归到上下文/依赖切分，而不是名词热度。
 
 ### 下游（应用于 / 验证于）
 
-- [[从零设计生产级-Multi-Agent-Harness]]：把本文的上下文隔离、权限边界和子 Agent 返回契约推进成生产级多 Agent Harness 骨架。
-- [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：用 12 专家并行、DAG 协作和评审节点验证“模型决定并行，系统兜住边界”这条工程路线。
-- [[多Agent使用边界与并行判定]]：把本文的 runtime 机制收束成日常可执行判定句：不是任务一复杂就该多 Agent，而是要先看上下文负载和边界清晰度。
+- [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]：把本文的上下文隔离、权限边界和子 Agent 返回契约推进成生产级多 Agent Harness 骨架。
+- [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：用 12 专家并行、DAG 协作和评审节点验证“模型决定并行，系统兜住边界”这条工程路线。
+- [[02-ai-coding/多Agent使用边界与并行判定]]：把本文的 runtime 机制收束成日常可执行判定句：不是任务一复杂就该多 Agent，而是要先看上下文负载和边界清晰度。
 
 ### 同级（横向 / 并列）
 
-- [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]：动态工作流强调让模型临场画图，本文解释 Claude Code 最底层能支撑这件事的子 Agent 原语是什么。
-- [[图工程-Graph-Engineering-来了-LangChain说不是新东西]]：一篇讲拓扑，一篇讲子 Agent 运行时；合起来才完整回答“多 Agent 到底怎么拆、怎么跑”。
-- [[OpenClaw-vs-Hermes-多-Agent-架构设计]]：一篇讲架构形态，一篇讲运行机制；同属多 Agent 基础理解层。
+- [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]：动态工作流强调让模型临场画图，本文解释 Claude Code 最底层能支撑这件事的子 Agent 原语是什么。
+- [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]]：一篇讲拓扑，一篇讲子 Agent 运行时；合起来才完整回答“多 Agent 到底怎么拆、怎么跑”。
+- [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]]：一篇讲架构形态，一篇讲运行机制；同属多 Agent 基础理解层。
 
 ## 正文要点（6 条）
 
@@ -93,13 +101,13 @@ source: 微信公众号「架构师带你玩转AI」2026-07-22 推送 / AllenTan
 
 - 文章是 Claude Code 架构拆解系列中的一篇，重点在 runtime 原语，不是完整官方源码逐行注释。
 - 文中的 TypeScript 代码是概念化复写，更适合帮助建立心智模型，而不是作为现成框架直接照搬。
-- 这篇文章最适合和 [[OpenClaw-vs-Hermes-多-Agent-架构设计]]、[[图工程-Graph-Engineering-来了-LangChain说不是新东西]]、[[从零设计生产级-Multi-Agent-Harness]] 连读，分别补“形态”“拓扑”“工程骨架”三块。
+- 这篇文章最适合和 [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]]、[[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]]、[[01-ai-agents/从零设计生产级-Multi-Agent-Harness]] 连读，分别补“形态”“拓扑”“工程骨架”三块。
 
 ## 相关链接
 
-- [[万字长文拆解Agent-架构设计-四-多-Agent-协作-digest]]
-- [[OpenClaw-vs-Hermes-多-Agent-架构设计]]
-- [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
-- [[图工程-Graph-Engineering-来了-LangChain说不是新东西]]
-- [[从零设计生产级-Multi-Agent-Harness]]
-- [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]
+- [[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作-digest]]
+- [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]]
+- [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
+- [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]]
+- [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]
+- [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]

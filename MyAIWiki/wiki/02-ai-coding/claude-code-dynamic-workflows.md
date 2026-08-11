@@ -2,7 +2,7 @@
 
 > 来源：Anthropic 工程师 Thariq Shihipar & Sid Bidasaria 2026-06-03 长文（132万 浏览 · 6,210 喜欢 · 1.4万 引用）
 > 原文：https://x.com/trq212/status/2061907337154367865
-> 关联：[[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] · [[从Prompt-Context到Harness-工程的三次进化与终局之战]] · [[claude-code-dynamic-workflows-digest|速读摘要]]
+> 关联：[[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] · [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]] · [[claude-code-dynamic-workflows-digest|速读摘要]]
 
 ---
 
@@ -162,14 +162,14 @@
 - 这是 Agent 工程的权限分层新思路
 
 ### Harness 哲学被官方背书
-- 印证 [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] 的判断
-- 印证 [[从Prompt-Context到Harness-工程的三次进化与终局之战]] 的框架
+- 印证 [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] 的判断
+- 印证 [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]] 的框架
 - Anthropic 自家工程师"现写 harness"是 harness 哲学的延伸——**harness 应该被动态构造**
 
 ---
 
 ## 标签
 
-#主题/AI-Coding #主题/AI-Agent #主题/AI-Tech
-#场景/技术博客 #场景/产品介绍
-#手法/权威背书 #手法/案例驱动 #手法/对比冲突
+ #主题/AI-Coding #主题/AI-Agent #主题/AI-Tech
+ #场景/技术博客 #场景/产品介绍
+ #手法/权威背书 #手法/案例驱动 #手法/对比冲突

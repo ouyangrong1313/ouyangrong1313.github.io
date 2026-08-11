@@ -1,9 +1,22 @@
 ---
 title: "OpenClaw + Seetong 配置优化方案 P0 落地"
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/Agent配置, #主题/Seetong, #主题/OpenClaw, #节点/任务分级, #节点/验证Gate, #节点/Skill自进化, #节点/通用规则, #场景/Agent配置优化, #场景/Seetong-iOS研发, #手法/规则提炼, #手法/增量优化, #手法/避免过度设计]
+tags:
+  - 主题/AI-Agent
+  - 主题/Agent配置
+  - 主题/Seetong
+  - 主题/OpenClaw
+  - 节点/任务分级
+  - 节点/验证Gate
+  - 节点/Skill自进化
+  - 节点/通用规则
+  - 场景/Agent配置优化
+  - 场景/Seetong-iOS研发
+  - 手法/规则提炼
+  - 手法/增量优化
+  - 手法/避免过度设计
 nodes: [Goal&Task-任务分级, 验证-Gate-优先, Skill-自进化护栏, 薄路由厚技能厚数据, OC-崩溃风险, MCP-数据路由, Seetong-AGENTS-硬规则, OpenClaw-三件套, 拟生命-数字生命, 不可解释-但-可验证]
-links: [[清华沈阳-自进化AI新物种]], [[OpenClaw-使用案例与技巧]], [[OpenClaw-的正确-打开方式]], [[Skill-Self-Evolution]], [[Harness-Engineering-企业级实战]], [[如何更科学方向可控的实现-Skill-自进化]], [[Addy-Osmani-Loop-Engineering]]
+links: [[01-ai-agents/清华沈阳-自进化AI新物种]], [[01-ai-agents/openclaw-shi-yong-an-li-ji-qiao]], [[01-ai-agents/OpenClaw的正确打开方式]], [[01-ai-agents/Skill-Self-Evolution]], [[01-ai-agents/HarnessEngineering企业级实战]], [[如何更科学方向可控的实现-Skill-自进化]], [[02-ai-coding/Addy-Osmani-Loop-Engineering]]
 date: 2026-06-15
 source: 综合 OpenClaw 实战经验 + 清华沈阳《自进化 AI》+ EvoSkill / SkillOpt / Addy Osmani Loop Engineering 等多源沉淀
 ---

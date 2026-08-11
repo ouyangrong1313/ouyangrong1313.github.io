@@ -98,9 +98,9 @@ ViewModel 负责：
 
 ## 相关文档
 
-- [[ios/qmui组件库]] - View 层组件
+- [[04-app-dev/ios/qmui组件库]] - View 层组件
 - [[ios/项目规范]] - 编码规范
 
 ## 标签
 
-#主题/APP研发 #MVC #架构
+ #主题/APP研发 #MVC #架构

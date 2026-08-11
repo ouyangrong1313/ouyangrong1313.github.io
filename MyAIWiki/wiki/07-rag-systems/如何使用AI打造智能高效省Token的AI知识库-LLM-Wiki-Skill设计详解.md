@@ -1,9 +1,16 @@
 ---
 title: 如何使用 AI 打造一个智能、高效、省 Token 的 AI 知识库？LLM-Wiki Skill 设计详解
 category: 07-rag-systems
-tags: [#主题/AI-Coding, #主题/AI-Agent, #场景/公众号长文, #节点/LLM-Wiki, #节点/Memory, #节点/Skill, #节点/Context-Engineering]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Agent
+  - 场景/公众号长文
+  - 节点/LLM-Wiki
+  - 节点/Memory
+  - 节点/Skill
+  - 节点/Context-Engineering
 nodes: [LLM-Wiki, 知识节点, 三层存储, grep 查询, 发芽报告, 主题融合, Token 经济, 意图识别绕过, 命令式查询, 图谱关系]
-links: [[AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]], [[构建LLM-Wiki智能知识库-实现AI辅助写作工作流]], [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]], [[hermes-obsidian-llm-wiki-knowledge-base]], [[ai-personal-knowledge-base-problems]]
+links: [[07-rag-systems/AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]], [[07-rag-systems/构建LLM-Wiki智能知识库-实现AI辅助写作工作流]], [[01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain]], [[01-ai-agents/hermes-obsidian-llm-wiki-knowledge-base]], [[01-ai-agents/ai-personal-knowledge-base-problems]]
 date: 2026-06-04
 source: 微信公众号 / moss
 ---
@@ -20,7 +27,7 @@ source: 微信公众号 / moss
 
 ## 分类提炼
 - 场景：个人知识库 / 团队知识沉淀 / Agent 驱动的第二大脑
-- 标签：#主题/AI-Coding #主题/AI-Agent #节点/LLM-Wiki #节点/Memory
+- 标签： #主题/AI-Coding #主题/AI-Agent #节点/LLM-Wiki #节点/Memory
 - 类型：方法论 / 工程实操 / Skill 设计
 
 ## 知识节点
@@ -39,17 +46,17 @@ source: 微信公众号 / moss
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- [[AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]]：RAG → NotebookLM → LLM-Wiki 的技术演进背景
-- [[ai-personal-knowledge-base-problems]]：传统个人知识库的痛点分析
-- [[hermes-obsidian-llm-wiki-knowledge-base]]：Obsidian + LLM Wiki 的混合实现
+- [[07-rag-systems/AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]]：RAG → NotebookLM → LLM-Wiki 的技术演进背景
+- [[01-ai-agents/ai-personal-knowledge-base-problems]]：传统个人知识库的痛点分析
+- [[01-ai-agents/hermes-obsidian-llm-wiki-knowledge-base]]：Obsidian + LLM Wiki 的混合实现
 
 ### 下游（应用于 / 验证于）
-- [[MyAIWiki写入规范与验证模板]]：本 Wiki 正是 LLM-Wiki 方法论的具体应用
+- [[02-ai-coding/MyAIWiki写入规范与验证模板]]：本 Wiki 正是 LLM-Wiki 方法论的具体应用
 - [[.ai-wiki-schema]]：本 Wiki 的 schema 是 LLM-Wiki 思想的工程化
 
 ### 同级（横向 / 并列）
-- [[构建LLM-Wiki智能知识库-实现AI辅助写作工作流]]：同作者 moss 的 LLM-Wiki 上篇
-- [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]]：LLM-Wiki + Obsidian 的深度分析
+- [[07-rag-systems/构建LLM-Wiki智能知识库-实现AI辅助写作工作流]]：同作者 moss 的 LLM-Wiki 上篇
+- [[01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain]]：LLM-Wiki + Obsidian 的深度分析
 
 ## 正文要点
 
@@ -86,17 +93,17 @@ source: 微信公众号 / moss
 - 核心不是"做工具"，而是**改变存储 + 改变查询的范式**：
   - 存储：从"整篇文章" → "独立知识节点"
   - 查询：从"问 LLM" → "grep 命令"
-- 跟 [[AI-Coding的顿悟时刻]] 的判断一致：复利来自 Skill / Memory / Context Engineering，不是单条 prompt
+- 跟 [[02-ai-coding/AI-Coding的顿悟时刻]] 的判断一致：复利来自 Skill / Memory / Context Engineering，不是单条 prompt
 - MyAIWiki 的下一阶段重点：**所有新文章按知识节点 + 关联图谱写，老文章逐步加 frontmatter**
 
 ## 适合关联的主题
 
-- [[AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]]
-- [[构建LLM-Wiki智能知识库-实现AI辅助写作工作流]]
-- [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]]
-- [[hermes-obsidian-llm-wiki-knowledge-base]]
-- [[ai-personal-knowledge-base-problems]]
-- [[rag-fundamentals]]
-- [[llm-agent-unified-memory-framework]]
-- [[claude-obsidian-second-brain]]
-- [[MyAIWiki写入规范与验证模板]]
+- [[07-rag-systems/AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]]
+- [[07-rag-systems/构建LLM-Wiki智能知识库-实现AI辅助写作工作流]]
+- [[01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain]]
+- [[01-ai-agents/hermes-obsidian-llm-wiki-knowledge-base]]
+- [[01-ai-agents/ai-personal-knowledge-base-problems]]
+- [[07-rag-systems/rag-fundamentals]]
+- [[01-ai-agents/llm-agent-unified-memory-framework]]
+- [[02-ai-coding/claude-obsidian-second-brain]]
+- [[02-ai-coding/MyAIWiki写入规范与验证模板]]

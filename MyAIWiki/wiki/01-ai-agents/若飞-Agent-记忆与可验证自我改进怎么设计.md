@@ -1,9 +1,23 @@
 ---
 title: 若飞 Agent 记忆与可验证自我改进怎么设计
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/记忆系统, #主题/Harness, #主题/验证, #主题/Self-Harness, #主题/工程治理, #场景/公众号长文, #作者/若飞, #节点/经验变更系统, #节点/读取链, #节点/写入链, #节点/六层资产, #节点/状态感知检索, #节点/五道门]
+tags:
+  - 主题/AI-Agent
+  - 主题/记忆系统
+  - 主题/Harness
+  - 主题/验证
+  - 主题/Self-Harness
+  - 主题/工程治理
+  - 场景/公众号长文
+  - 作者/若飞
+  - 节点/经验变更系统
+  - 节点/读取链
+  - 节点/写入链
+  - 节点/六层资产
+  - 节点/状态感知检索
+  - 节点/五道门
 nodes: [经验变更系统, 读取链, 写入链, 六层资产, 候选经验晋升单, 状态感知检索, 五道门, 四阶段试点]
-links: [[Lilian-Weng-Harness-Engineering-自我改进]], [[Loop-Engineering-验证才是瓶颈]], [[记忆是-agent-基建]], [[阿里云开发者-淘宝主播Agent的Harness工程实战]], [[WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[腾讯-AI-Agent-Skill-测评方案落地]], [[OpenClaw的正确打开方式]], [[若飞-用ClaudeCode搭建AI学习系统]]
+links: [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]], [[01-ai-agents/记忆是-agent-基建]], [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]], [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]], [[01-ai-agents/OpenClaw的正确打开方式]], [[02-ai-coding/若飞-用ClaudeCode搭建AI学习系统]]
 date: 2026-07-20
 source: 微信公众号 / 架构师（JiaGouX）—若飞
 ---
@@ -23,7 +37,7 @@ source: 微信公众号 / 架构师（JiaGouX）—若飞
 ## 分类提炼
 
 - 场景：Agent Memory / Self-Harness / 验证闭环 / 公众号长文
-- 标签：#主题/AI-Agent #主题/记忆系统 #主题/Harness #主题/验证 #主题/Self-Harness #主题/工程治理
+- 标签： #主题/AI-Agent #主题/记忆系统 #主题/Harness #主题/验证 #主题/Self-Harness #主题/工程治理
 - 类型：方法论 / 架构治理 / 渐进落地指南
 
 ## 知识节点（8 个独立概念）
@@ -41,23 +55,23 @@ source: 微信公众号 / 架构师（JiaGouX）—若飞
 
 ### 上游（基于 / 来自）
 
-- [[记忆是-agent-基建]]：把“记忆不是附件，是 Agent 基建”继续推进到“记忆怎样治理、怎样晋升、怎样回滚”。
-- [[Lilian-Weng-Harness-Engineering-自我改进]]：翁荔给出 Self-Harness、reward hacking 和可编辑表面的理论框架，本文把这些抽象判断压成 Memory / Skill / Harness / Policy 的工程分层。
-- [[Loop-Engineering-验证才是瓶颈]]：Samuel McDonnell 讲“验证才是产品”，本文把验证进一步嵌入经验晋升与读取 / 写入链。
-- [[若飞-用ClaudeCode搭建AI学习系统]]：同一作者的“反馈契约”视角，在这里升级成 Goal / Evidence / Action / Verdict / Next state 的经验留痕骨架。
+- [[01-ai-agents/记忆是-agent-基建]]：把“记忆不是附件，是 Agent 基建”继续推进到“记忆怎样治理、怎样晋升、怎样回滚”。
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]：翁荔给出 Self-Harness、reward hacking 和可编辑表面的理论框架，本文把这些抽象判断压成 Memory / Skill / Harness / Policy 的工程分层。
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]：Samuel McDonnell 讲“验证才是产品”，本文把验证进一步嵌入经验晋升与读取 / 写入链。
+- [[02-ai-coding/若飞-用ClaudeCode搭建AI学习系统]]：同一作者的“反馈契约”视角，在这里升级成 Goal / Evidence / Action / Verdict / Next state 的经验留痕骨架。
 
 ### 下游（应用于 / 验证于）
 
-- [[阿里云开发者-淘宝主播Agent的Harness工程实战]]：本文的 Policy / Approval / 记忆分层，可以直接映射到淘宝主播高风险场景的审批与信任度闭环。
-- [[腾讯-AI-Agent-Skill-测评方案落地]]：本文的验证器四层与“执行者 / 验证者分离”，能直接落到腾讯评测闭环的角色拆分里。
-- [[OpenClaw的正确打开方式]]：Dreaming / MEMORY 的沉淀问题，可以用本文的读取链、写入链和失效关系重新解释。
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]：WorkBuddy 的 Memory / Context / Harness 一体化结构，在本文里得到“怎样准入、怎样默认化”的治理补充。
+- [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]]：本文的 Policy / Approval / 记忆分层，可以直接映射到淘宝主播高风险场景的审批与信任度闭环。
+- [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]：本文的验证器四层与“执行者 / 验证者分离”，能直接落到腾讯评测闭环的角色拆分里。
+- [[01-ai-agents/OpenClaw的正确打开方式]]：Dreaming / MEMORY 的沉淀问题，可以用本文的读取链、写入链和失效关系重新解释。
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：WorkBuddy 的 Memory / Context / Harness 一体化结构，在本文里得到“怎样准入、怎样默认化”的治理补充。
 
 ### 同级（横向 / 并列）
 
-- [[0xCodez-Agent-Harness-14-Steps]]：0xCodez 讲 Harness + Loop + Memory 三件套路线图，本文补的是“Memory 怎样不毒化之后每次运行”。
-- [[InfoQ-Sam-Bhagwat-Harness长成Claw-心智争夺战]]：Sam 讲 Harness 向 Claw 演化，本文讲 Claw 真要持续学习就必须把 Memory 晋升做成控制面。
-- [[Nikesh-Arora-模型过剩与记忆护城河]]：Nikesh 从公司战略视角谈“记忆是护城河”，本文给出这条护城河怎样避免“记错一次、放大一生”的工程答案。
+- [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]]：0xCodez 讲 Harness + Loop + Memory 三件套路线图，本文补的是“Memory 怎样不毒化之后每次运行”。
+- [[01-ai-agents/InfoQ-Sam-Bhagwat-Harness长成Claw-心智争夺战]]：Sam 讲 Harness 向 Claw 演化，本文讲 Claw 真要持续学习就必须把 Memory 晋升做成控制面。
+- [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]：Nikesh 从公司战略视角谈“记忆是护城河”，本文给出这条护城河怎样避免“记错一次、放大一生”的工程答案。
 
 ## 正文要点（6 条）
 

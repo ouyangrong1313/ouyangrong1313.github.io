@@ -82,10 +82,10 @@ AI 不能只依赖当前对话，需要"整个项目的记性"：
 
 ## 标签
 
-#主题/AI-Agent #场景/技术博客
+ #主题/AI-Agent #场景/技术博客
 
 ## 相关链接
 
 - [[index]]
-- [[agent-architecture]]
-- [[tool-use]]
+- [[01-ai-agents/agent-architecture]]
+- [[01-ai-agents/tool-use]]

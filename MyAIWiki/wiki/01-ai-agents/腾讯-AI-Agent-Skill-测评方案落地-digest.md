@@ -4,7 +4,7 @@ category: 01-ai-agents
 date: 2026-06-17
 source: 微信公众号 腾讯程序员 2026-06-17
 source_url: https://mp.weixin.qq.com/s/PUbGqheJhFMmb6hGj1ZtOw
-main_entry: [[腾讯-AI-Agent-Skill-测评方案落地]]
+main_entry: [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]
 ---
 
 # 腾讯 TEG Agent Skill 测评方案 — Digest
@@ -37,13 +37,13 @@ main_entry: [[腾讯-AI-Agent-Skill-测评方案落地]]
 
 ## 关联
 
-**主条目**:[[腾讯-AI-Agent-Skill-测评方案落地]]
-**上游**:[[Skill-Self-Evolution]] / [[陈进-读完Agent-Loop工程手册]] / [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
-**下游**:[[用Agent评测思路管理AI-Coding-31万行代码AI重构实践]] / [[如何构建一个更"好"的知识库]] / [[seetong-batch-issue-rootcause-analysis]] / [[seetong-daily-briefing]]
-**同级**:[[清华沈阳-自进化AI新物种]] / [[Multica-AI-Native-组织]]
+**主条目**:[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]
+**上游**:[[01-ai-agents/Skill-Self-Evolution]] / [[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]] / [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
+**下游**:[[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]] / [[07-rag-systems/如何构建一个更好的知识库]] / [[seetong-batch-issue-rootcause-analysis]] / [[seetong-daily-briefing]]
+**同级**:[[01-ai-agents/清华沈阳-自进化AI新物种]] / [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]
 
 ## 备注
 
 - 速读版:核心结论 + 反直觉 + Seetong 借鉴动作 + 关联指针
-- 完整编译页:同目录 [[腾讯-AI-Agent-Skill-测评方案落地]]
+- 完整编译页:同目录 [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]
 - 落地项目:TPerf 性能平台智能分析 Agent(腾讯 TEG 网关测试团队,生产环境跑通)

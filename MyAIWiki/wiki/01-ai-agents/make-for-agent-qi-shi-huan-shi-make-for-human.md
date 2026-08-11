@@ -6,7 +6,7 @@
 
 ## 分类提炼
 - 场景：AI Agent / 产品设计 / 企业协作 / Agent Workspace
-- 标签：#主题/AI-Agent #主题/AI产品 #概念/身份系统 #概念/责任链 #概念/上下文工程 #场景/公众号长文
+- 标签： #主题/AI-Agent #主题/AI产品 #概念/身份系统 #概念/责任链 #概念/上下文工程 #场景/公众号长文
 - 类型：观点提炼 / 闭门讨论纪要 / 产品方法论
 
 ## 要点列表
@@ -21,10 +21,10 @@
 - 全文最重要的收束是：Make for Agent，本质上是在做 Make for Responsibility。
 
 ## 与既有知识的连接
-- 可与 [[good-ai-pm-bad-ai-pm]] 对照：两篇都强调 AI 时代真正稀缺的不是表层产出，而是获取真实上下文、做判断和承担责任的能力。
-- 可与 [[Agent时代架构师系统能力]] 互补：该文从产品责任链出发，这篇更偏工程系统能力，如上下文分层、工具契约、Harness、权限收口。
-- 可与 [[agent-principles-architecture-engineering]] 联读：那篇强调 Harness 和验证边界，这篇把“为什么需要这些边界”提升到责任设计层。
-- 可与 [[workflow-vs-agent]] 一起看：是否使用 Agent，不应只看任务复杂度，还要看责任容器是否成熟。
+- 可与 [[01-ai-agents/good-ai-pm-bad-ai-pm]] 对照：两篇都强调 AI 时代真正稀缺的不是表层产出，而是获取真实上下文、做判断和承担责任的能力。
+- 可与 [[01-ai-agents/Agent时代架构师系统能力]] 互补：该文从产品责任链出发，这篇更偏工程系统能力，如上下文分层、工具契约、Harness、权限收口。
+- 可与 [[01-ai-agents/agent-principles-architecture-engineering]] 联读：那篇强调 Harness 和验证边界，这篇把“为什么需要这些边界”提升到责任设计层。
+- 可与 [[01-ai-agents/workflow-vs-agent]] 一起看：是否使用 Agent，不应只看任务复杂度，还要看责任容器是否成熟。
 
 ## 对我的启发
 - 做 Agent 产品，不要一上来就卷“像不像人”“会不会聊天”，先问：谁授权、谁担责、谁验收、谁回滚。
@@ -34,7 +34,7 @@
 
 ## 相关链接
 - 原文链接：https://mp.weixin.qq.com/s/CZxwlhWg6PxwDmsIY0YXuw
-- 原文归档：[[../raw/articles/2026-05/make-for-agent-qi-shi-huan-shi-make-for-human]]
-- 相关页面：[[good-ai-pm-bad-ai-pm]]
-- 相关页面：[[Agent时代架构师系统能力]]
-- 相关页面：[[agent-principles-architecture-engineering]]
+- 原文归档：[[../raw/make-for-agent-qi-shi-huan-shi-make-for-human]]
+- 相关页面：[[01-ai-agents/good-ai-pm-bad-ai-pm]]
+- 相关页面：[[01-ai-agents/Agent时代架构师系统能力]]
+- 相关页面：[[01-ai-agents/agent-principles-architecture-engineering]]

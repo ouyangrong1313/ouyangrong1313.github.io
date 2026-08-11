@@ -60,8 +60,8 @@
 
 ## 我的理解
 
-- **跟 [[Claude-Code团队5条工作原则-Fiona-Fung分享]] 是同一团队的不同切面**——Fiona 侧重原则，本篇侧重动作
-- **跟 [[陈春花-AI时代管理者重建判断权]] 是一体两面**——陈春花说"管理判断权不能外包"，本篇展示"Manager 必做 IC + 吃狗粮"是工程层的判断权接回
+- **跟 [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] 是同一团队的不同切面**——Fiona 侧重原则，本篇侧重动作
+- **跟 [[01-ai-agents/陈春花-AI时代管理者重建判断权]] 是一体两面**——陈春花说"管理判断权不能外包"，本篇展示"Manager 必做 IC + 吃狗粮"是工程层的判断权接回
 - **"the shift" 是最值钱的判断**——所有 5 个改造动作都建立在这一个观察上
 - **国内团队最大盲区**：加了 AI 工具但旧流程不动
 - **"会做梦的人 + 懂底层的人"** 对小团队特别重要——大厂可分开招，**小团队更看重 T 型**
@@ -69,12 +69,12 @@
 
 ## 适合关联的主题
 
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]]
-- [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
-- [[HarnessEngineering企业级实战]]
-- [[Harness不是目的-知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
-- [[AI-Coding的顿悟时刻]]
-- [[陈春花-AI时代管理者重建判断权]]
-- [[Harness工程AgentLoop]]
-- [[Claude-Code在大代码库中的最佳实践]]
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]
+- [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+- [[01-ai-agents/HarnessEngineering企业级实战]]
+- [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
+- [[02-ai-coding/AI-Coding的顿悟时刻]]
+- [[01-ai-agents/陈春花-AI时代管理者重建判断权]]
+- [[01-ai-agents/Harness工程AgentLoop]]
+- [[02-ai-coding/Claude-Code在大代码库中的最佳实践-从Anthropic官方指南到可落地Harness方法]]

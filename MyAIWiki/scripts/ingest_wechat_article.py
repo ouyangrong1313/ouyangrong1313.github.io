@@ -98,7 +98,7 @@ def main() -> int:
         if args.polish_prompt_output:
             prompt_path = Path(args.polish_prompt_output).expanduser()
         else:
-            prompt_path = output_root / "raw" / f"{paths.raw.stem}-polish-prompt.md"
+            prompt_path = output_root / "prompts" / "generated" / f"{paths.raw.stem}-polish-prompt.md"
         prompt_path.parent.mkdir(parents=True, exist_ok=True)
         prompt_path.write_text(prompt, encoding="utf-8")
         print(f"polish_prompt: written -> {prompt_path}")

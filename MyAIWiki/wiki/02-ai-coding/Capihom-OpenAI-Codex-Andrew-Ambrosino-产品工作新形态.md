@@ -1,9 +1,25 @@
 ---
 title: Capihom-Lenny-Andrew-OpenAI-Codex-产品工作新形态
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/产品工作形态, #主题/Codex, #主题/品味, #主题/AI时代产品设计, #场景/产品方法论, #作者/Capihom, #作者/Andrew-Ambrosino, #公司/OpenAI, #节点/产品流程倒过来, #节点/品味-调度能力, #节点/选对表达媒介, #节点/PM-不能取消, #节点/baby-version代码库, #节点/Codex-home-base, #节点/别和流程绑定-要和结果绑定]
+tags:
+  - 主题/AI-Coding
+  - 主题/产品工作形态
+  - 主题/Codex
+  - 主题/品味
+  - 主题/AI时代产品设计
+  - 场景/产品方法论
+  - 作者/Capihom
+  - 作者/Andrew-Ambrosino
+  - 公司/OpenAI
+  - 节点/产品流程倒过来
+  - 节点/品味-调度能力
+  - 节点/选对表达媒介
+  - 节点/PM-不能取消
+  - 节点/baby-version代码库
+  - 节点/Codex-home-base
+  - 节点/别和流程绑定-要和结果绑定
 nodes: [产品流程倒过来, 品味-调度能力, 选对表达媒介, baby-version代码库, PM-不能取消, Codex-home-base, 别和流程绑定-要和结果绑定, Codex周活500万]
-links: [[OpenAI最新报告解读-Codex正在进入知识工作的主战场]], [[Claude-Code-主动式Agent-Routines]], [[与AI一起做产品的六条原则]], [[Laurel-CPO-Jiaona-Zhang-公司OS]], [[字节跳动洪定坤-AI-Coding的实践与探索]], [[深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]]
+links: [[02-ai-coding/OpenAI最新报告解读-Codex正在进入知识工作的主战场]], [[02-ai-coding/Claude-Code-主动式Agent-Routines]], [[03-productivity/与AI一起做产品的六条原则]], [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]], [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]], [[02-ai-coding/深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]]
 date: 2026-06-30
 source: 微信公众号 Capihom 2026-06-30 编译自 Lenny's Podcast "OpenAI Codex lead on the new shape of product work"，嘉宾 Andrew Ambrosino
 ---
@@ -43,12 +59,12 @@ source: 微信公众号 Capihom 2026-06-30 编译自 Lenny's Podcast "OpenAI Cod
 - 媒体/PR/财务/法务（Codex 内部全员使用场景）
 
 ### 同级（横向 / 并列）
-- [[OpenAI最新报告解读-Codex正在进入知识工作的主战场]]（同 Capihom 编译，同 Codex 主线）
-- [[Claude-Code-主动式Agent-Routines]]（同 Capihom 编译，同 OpenAI 主动式 Agent 主线）
-- [[与AI一起做产品的六条原则]]（产品方法论 - AGENT橘 团队实践）
-- [[Laurel-CPO-Jiaona-Zhang-公司OS]]（AI 时代 PM/Captain model）
-- [[字节跳动洪定坤-AI-Coding的实践与探索]]（AI Coding 团队重定义）
-- [[深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]]（工程师角色重定义 - 工厂化视角）
+- [[02-ai-coding/OpenAI最新报告解读-Codex正在进入知识工作的主战场]]（同 Capihom 编译，同 Codex 主线）
+- [[02-ai-coding/Claude-Code-主动式Agent-Routines]]（同 Capihom 编译，同 OpenAI 主动式 Agent 主线）
+- [[03-productivity/与AI一起做产品的六条原则]]（产品方法论 - AGENT橘 团队实践）
+- [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]]（AI 时代 PM/Captain model）
+- [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]]（AI Coding 团队重定义）
+- [[02-ai-coding/深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]]（工程师角色重定义 - 工厂化视角）
 
 ## 6 个对 Seetong 团队可借鉴动作
 
@@ -57,7 +73,7 @@ source: 微信公众号 Capihom 2026-06-30 编译自 Lenny's Podcast "OpenAI Cod
 3. **Seetong baby version 试点**：参考"简化版 Cursor/Codex"模式，Seetong 内部建轻量产品代码库快速试 sidebar / pane / chat 交互（如 AI 语义搜索的新交互模式）
 4. **Seetong App 升级 = home base**：不重做摄像头 SDK / 4G 模组固件，让 Codex/AI 理解任务 + 调用工具 + 补接口（如 Seetong App 直接调用抖音/微信分享能力，不重做分享 UI）
 5. **保存好想法等模型跳一下**：欧阳荣每月"AI 进步观察"笔记，记录暂未实现但值得等模型能力的产品想法（参考 Andrew 的"11 月准备好"案例）
-6. **PM 角色不被简化**：黄松佳（产品经理）不能被"所有人都叫 builder"替代；他的工作 = 区域防守 + 把 Seetong 混乱想法引到产品形态（参考 [[Laurel-CPO-Jiaona-Zhang-公司OS]] 的 Captain model）
+6. **PM 角色不被简化**：黄松佳（产品经理）不能被"所有人都叫 builder"替代；他的工作 = 区域防守 + 把 Seetong 混乱想法引到产品形态（参考 [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]] 的 Captain model）
 
 ## 备注与限制
 
@@ -65,4 +81,4 @@ source: 微信公众号 Capihom 2026-06-30 编译自 Lenny's Podcast "OpenAI Cod
 - 原文 4 段公众号结尾广告/二维码，编译已剔除
 - 未提供具体收入/增长数字，主要讲产品工作形态 + Codex 内部使用
 - "PM 不能取消"立场是 Andrew 个人观点，但 Lenny 频道 + OpenAI 背书有相当说服力
-- 关联指针：[[OpenAI最新报告解读-Codex正在进入知识工作的主战场]] [[Claude-Code-主动式Agent-Routines]] [[与AI一起做产品的六条原则]] [[Laurel-CPO-Jiaona-Zhang-公司OS]] [[字节跳动洪定坤-AI-Coding的实践与探索]] [[深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]]
+- 关联指针：[[02-ai-coding/OpenAI最新报告解读-Codex正在进入知识工作的主战场]] [[02-ai-coding/Claude-Code-主动式Agent-Routines]] [[03-productivity/与AI一起做产品的六条原则]] [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]] [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] [[02-ai-coding/深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]]

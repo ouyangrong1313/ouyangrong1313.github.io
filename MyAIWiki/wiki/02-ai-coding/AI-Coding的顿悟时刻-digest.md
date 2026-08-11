@@ -1,7 +1,7 @@
 # AI Coding 的顿悟时刻 - Digest
 
 - 原文链接：https://mp.weixin.qq.com/s/zx5yCntR5QfRdbBrWElCOQ
-- 原文：[[AI-Coding的顿悟时刻]]
+- 原文：[[02-ai-coding/AI-Coding的顿悟时刻]]
 - 抓取时间：2026-06-03
 
 ## 一句话总结
@@ -28,7 +28,7 @@
 
 ## 我的理解
 
-- **和 [[54万行代码的顿悟]] 互为补充**：
+- **和 [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] 互为补充**：
   - 那篇是"工程师个人范式"（Markdown 是新编程方式）
   - 这篇是"团队流程 + 组织重构"（Spec/LDD + Scrum 反思 + 裁员）
   - **合起来**：AI-native 团队需要个人范式 + 团队流程 + 组织结构三层都变

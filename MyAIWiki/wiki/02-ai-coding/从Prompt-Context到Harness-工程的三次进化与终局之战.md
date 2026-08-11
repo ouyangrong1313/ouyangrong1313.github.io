@@ -7,7 +7,7 @@ AI 工程的真正升级路径不是“更会写 Prompt”，而是从表达任�
 ## 分类提炼
 
 - 场景：AI Coding、Agent 研发方法论、团队级 AI 工程落地
-- 标签：#主题/AI-Coding #主题/AI-Agent #手法/权威背书 #手法/对比冲突 #场景/公众号长文
+- 标签： #主题/AI-Coding #主题/AI-Agent #手法/权威背书 #手法/对比冲突 #场景/公众号长文
 - 类型：方法论综述 / 认知升级 / 框架型文章
 
 ## 要点列表
@@ -53,11 +53,11 @@ AI 工程的真正升级路径不是“更会写 Prompt”，而是从表达任�
 
 ## 标签
 
-#主题/AI-Coding #主题/AI-Agent #手法/权威背书 #手法/对比冲突 #场景/公众号长文
+ #主题/AI-Coding #主题/AI-Agent #手法/权威背书 #手法/对比冲突 #场景/公众号长文
 
 ## 相关链接
 
-- [[prompt-engineering]]
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
-- [[用Agent评测思路管理AI-Coding-31万行代码重构实践]]
-- [[HarnessEngineering企业级实战]]
+- [[02-ai-coding/prompt-engineering]]
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+- [[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]]
+- [[01-ai-agents/HarnessEngineering企业级实战]]

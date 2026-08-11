@@ -42,7 +42,7 @@ date: 2026-06-29
 
 ## 关联 + 备注
 
-- **关联**：`[[乔布斯1995遗失访谈]]` / `[[透明玻璃-写作的最高境界]]` / `[[ogilvy-10-writing-rules-with-claude-skill]]` / `[[use-ai-well-become-more-valuable]]` / `[[APPSO-Obsidian+Codex-Karpathy同款本地知识库]]`
-- **乔布斯双视角资料**：本文（Stanton 同事视角谈乔布斯特质）+ `[[乔布斯1995遗失访谈]]`（乔布斯本人视角）= 乔布斯完整资料
+- **关联**：`[[05-content-creation/乔布斯1995遗失访谈]]` / `[[05-content-creation/透明玻璃-写作的最高境界]]` / `[[05-content-creation/ogilvy-10-writing-rules-with-claude-skill]]` / `[[03-productivity/use-ai-well-become-more-valuable]]` / `[[03-productivity/APPSO-Obsidian+Codex-Karpathy同款本地知识库]]`
+- **乔布斯双视角资料**：本文（Stanton 同事视角谈乔布斯特质）+ `[[05-content-creation/乔布斯1995遗失访谈]]`（乔布斯本人视角）= 乔布斯完整资料
 - **分类理由**：本文是"创造方法论+个人品牌建设"采访翻译，与 ogilvy 写作规则/透明玻璃写作哲学/乔布斯 1995 遗失访谈同主线"内容创作与个人品牌"；放 05-content-creation 而非 03-productivity（核心是创作哲学，不是工作流工具）
 - **透明玻璃自检**：wiki ?K（≤8K）/ digest ?K（≤4K）/ 节点 8（6-10）/ H2 3 wiki / H2 5 digest（≤5）/ 表格 0 wiki / 表格 1 digest（≤2）/ 0 陈词 ⭐⭐⭐

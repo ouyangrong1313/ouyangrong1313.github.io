@@ -4,10 +4,20 @@ author: Knock
 date: 2026-07-16
 slug: 研发工程化升级-Coding-Agent-AI-Testing与Verification-First
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/Coding-Agent, #主题/AI-Testing, #主题/Verification-First, #主题/研发效能, #节点/Probe-and-Refine, #节点/覆盖率陷阱, #节点/概率验证, #场景/公众号长文, #作者/Knock]
+tags:
+  - 主题/AI-Coding
+  - 主题/Coding-Agent
+  - 主题/AI-Testing
+  - 主题/Verification-First
+  - 主题/研发效能
+  - 节点/Probe-and-Refine
+  - 节点/覆盖率陷阱
+  - 节点/概率验证
+  - 场景/公众号长文
+  - 作者/Knock
 nodes: [Coding-Agent三代进化, Agentic-Coding工作流, Probe-and-Refine, 覆盖率陷阱, Agentic-Testing, Verification-First四层, 概率验证, 研发效能量化与分层信任]
-links: [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]], [[生产级Agent全景]], [[字节跳动洪定坤-AI-Coding的实践与探索]], [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]], [[Loop-Engineering-验证才是瓶颈]], [[Code-is-cheap-AI-Native-五倍效率]], [[用Agent评测思路管理AI-Coding-31万行代码重构实践]], [[Claude-Code团队5条工作原则-Fiona-Fung分享]]
-digest: "[[研发工程化升级-Coding-Agent-AI-Testing与Verification-First-digest]]"
+links: [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]], [[02-ai-coding/生产级Agent全景]], [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]], [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]], [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]], [[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]], [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]
+digest: "[[02-ai-coding/研发工程化升级-Coding-Agent-AI-Testing与Verification-First-digest]]"
 source: 微信公众号「ThinkingAgent」/ 作者 Knock
 source_wechat: https://mp.weixin.qq.com/s/N3mJOygkf4uOaho7V6q58Q
 ---
@@ -19,7 +29,7 @@ source_wechat: https://mp.weixin.qq.com/s/N3mJOygkf4uOaho7V6q58Q
 - 作者：Knock
 - 发布时间：2026-07-15
 - 获取时间：2026-07-16 Asia/Shanghai
-- 速读摘要：[[研发工程化升级-Coding-Agent-AI-Testing与Verification-First-digest]]
+- 速读摘要：[[02-ai-coding/研发工程化升级-Coding-Agent-AI-Testing与Verification-First-digest]]
 
 ## 核心结论（一句话）
 
@@ -28,7 +38,7 @@ source_wechat: https://mp.weixin.qq.com/s/N3mJOygkf4uOaho7V6q58Q
 ## 分类提炼
 
 - 场景：AI Coding 落地 / 研发流程治理 / 团队效能评估
-- 标签：#主题/AI-Coding #主题/Coding-Agent #主题/AI-Testing #主题/Verification-First #主题/研发效能 #节点/Probe-and-Refine #节点/覆盖率陷阱 #节点/概率验证 #场景/公众号长文 #作者/Knock
+- 标签： #主题/AI-Coding #主题/Coding-Agent #主题/AI-Testing #主题/Verification-First #主题/研发效能 #节点/Probe-and-Refine #节点/覆盖率陷阱 #节点/概率验证 #场景/公众号长文 #作者/Knock
 - 类型：方法论综述 / 指标框架 / 落地清单
 - 分类理由：核心是 AI Coding 进入组织后的验证、评测和治理，不是纯 Agent 架构或宏观行业评论，放 `02-ai-coding` 最贴切。
 
@@ -47,21 +57,21 @@ source_wechat: https://mp.weixin.qq.com/s/N3mJOygkf4uOaho7V6q58Q
 
 ### 上游（基于 / 来自）
 
-- [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]：同作者 Knock 更偏组织成熟度，这篇是把组织侧框架压回研发工程面。
-- [[生产级Agent全景]]：同样把 Coding Agent 视作 Agent 落地早期优势场景，这篇进一步追问“怎么验证和治理它”。
-- [[Code-is-cheap-AI-Native-五倍效率]]：同主线“写代码变便宜后，真正贵的是边界和收口”；这篇把收口手段拆成测试、验证和指标。
+- [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]：同作者 Knock 更偏组织成熟度，这篇是把组织侧框架压回研发工程面。
+- [[02-ai-coding/生产级Agent全景]]：同样把 Coding Agent 视作 Agent 落地早期优势场景，这篇进一步追问“怎么验证和治理它”。
+- [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]]：同主线“写代码变便宜后，真正贵的是边界和收口”；这篇把收口手段拆成测试、验证和指标。
 
 ### 下游（应用于 / 验证于）
 
-- [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：本文的 Verification、指标和分层治理，适合落到腾讯那种知识库 + 状态文件 + DAG 工作流体系里。
-- [[用Agent评测思路管理AI-Coding-31万行代码重构实践]]：文章里的 AI Testing 和概率验证，可以继续延伸到 Agent 评测与质量闸门。
-- [[字节跳动洪定坤-AI-Coding的实践与探索]]：字节“10x 写代码速度只换来 1.6x 吞吐”的现实，正好反证本文“提效不等于可交付”。
+- [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：本文的 Verification、指标和分层治理，适合落到腾讯那种知识库 + 状态文件 + DAG 工作流体系里。
+- [[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]]：文章里的 AI Testing 和概率验证，可以继续延伸到 Agent 评测与质量闸门。
+- [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]]：字节“10x 写代码速度只换来 1.6x 吞吐”的现实，正好反证本文“提效不等于可交付”。
 
 ### 同级（横向 / 并列）
 
-- [[Loop-Engineering-验证才是瓶颈]]：同主线“验证比生成更稀缺”；本文把验证拆到了需求 / 设计 / 实现 / 运行四层。
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]]：Fiona 的“Trust but verify”与这篇“分层信任模型”互为管理侧和工程侧解释。
-- [[大家都在说软件工厂-但90的CEO不知道自己公司在第几级]]：那篇给成熟度阶梯，这篇给验证和信任抓手。
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]：同主线“验证比生成更稀缺”；本文把验证拆到了需求 / 设计 / 实现 / 运行四层。
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]：Fiona 的“Trust but verify”与这篇“分层信任模型”互为管理侧和工程侧解释。
+- [[02-ai-coding/大家都在说软件工厂-但90的CEO不知道自己公司在第几级]]：那篇给成熟度阶梯，这篇给验证和信任抓手。
 
 ## 正文要点、借鉴动作与限制
 

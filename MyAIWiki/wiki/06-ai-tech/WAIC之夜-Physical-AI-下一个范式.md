@@ -6,18 +6,23 @@ source_roundtable: WAIC 2026「腾讯WAIC之夜」圆桌实录（2026-07-17 上�
 date: 2026-07-20
 slug: WAIC之夜-Physical-AI-下一个范式
 category: 06-ai-tech
-tags: [Physical-AI, 具身智能, 世界模型, Harness-Model共生, 数据飞轮]
+tags:
+  - Physical-AI
+  - 具身智能
+  - 世界模型
+  - Harness-Model共生
+  - 数据飞轮
 rating: ⭐⭐⭐
 source_wechat: https://mp.weixin.qq.com/s/R13v1uVIIL9HfW4r4ezDkg
-digest: "[[WAIC之夜-Physical-AI-下一个范式-digest]]"
+digest: "[[06-ai-tech/WAIC之夜-Physical-AI-下一个范式-digest]]"
 related:
-  - "[[Lilian-Weng-Harness-Engineering-自我改进]]"
-  - "[[深思圈-消费护城河不是注意力是环境]]"
-  - "[[Nikesh-Arora-模型过剩与记忆护城河]]"
-  - "[[Multica-AI-Native-组织-人是最慢的节点]]"
-  - "[[麦肯锡-AI提效只是第一波红利]]"
-  - "[[OpenAI-AI原生组织-4条工作原则]]"
-  - "[[傅盛-李飞飞-机器人世界模型与人的自主性]]"
+  - "[[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]"
+  - "[[06-ai-tech/深思圈-消费护城河不是注意力是环境]]"
+  - "[[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]"
+  - "[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]"
+  - "[[06-ai-tech/麦肯锡-AI提效只是第一波红利]]"
+  - "[[06-ai-tech/OpenAI-AI原生组织-4条工作原则]]"
+  - "[[06-ai-tech/傅盛-李飞飞-机器人世界模型与人的自主性]]"
 ---
 
 # WAIC 2026 圆桌：Physical AI 是 Agentic AI 之后的下一个范式吗？
@@ -62,7 +67,7 @@ related:
 
 ### 节点 6：Harness-Model 共生与 One Model One System
 
-"Harness 是数据飞轮，Model 是能力支撑，二者不可分。"与 [[Lilian-Weng-Harness-Engineering-自我改进]] "5 段优化路径 prompt→上下文→工作流→harness 代码→optimizer 代码"在终局判断上同主线。**激进结论**："One Model One System"——Harness 最终被内化进模型，Digital AI 与 Physical AI 会大一统（"空间智能是 Physical AI 的一个子集"）。
+"Harness 是数据飞轮，Model 是能力支撑，二者不可分。"与 [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] "5 段优化路径 prompt→上下文→工作流→harness 代码→optimizer 代码"在终局判断上同主线。**激进结论**："One Model One System"——Harness 最终被内化进模型，Digital AI 与 Physical AI 会大一统（"空间智能是 Physical AI 的一个子集"）。
 
 ### 节点 7：数据难题 = 物理世界数字化
 
@@ -78,7 +83,7 @@ related:
 
 **下游**：机器人企业落地节奏；Three capability world model 工程化；One Model One System 终局进度。
 
-**同级**：方法论对偶 [[Lilian-Weng-Harness-Engineering-自我改进]]；战略对偶 [[Nikesh-Arora-模型过剩与记忆护城河]]；样本对偶 [[Multica-AI-Native-组织-人是最慢的节点]]；数据洞察对偶 [[深思圈-消费护城河不是注意力是环境]]；组织战略对偶 [[麦肯锡-AI提效只是第一波红利]] / [[OpenAI-AI原生组织-4条工作原则]]；机制补充 [[傅盛-李飞飞-机器人世界模型与人的自主性]]（物理数据、世界模拟、行动规划与反馈闭环）。
+**同级**：方法论对偶 [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]；战略对偶 [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]；样本对偶 [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]；数据洞察对偶 [[06-ai-tech/深思圈-消费护城河不是注意力是环境]]；组织战略对偶 [[06-ai-tech/麦肯锡-AI提效只是第一波红利]] / [[06-ai-tech/OpenAI-AI原生组织-4条工作原则]]；机制补充 [[06-ai-tech/傅盛-李飞飞-机器人世界模型与人的自主性]]（物理数据、世界模拟、行动规划与反馈闭环）。
 
 ## 6 个对 Seetong 团队可借鉴动作
 

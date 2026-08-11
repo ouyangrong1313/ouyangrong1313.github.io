@@ -1,9 +1,16 @@
 ---
 title: Agent Loop 才火一个月，Graph Engineering 又来了，但只要我学得足够慢，就什么都不用学了
 category: 01-ai-agents
-tags: [#主题/Agent架构, #主题/Loop-Engineering, #主题/Graph-Engineering, #节点/AI炒冷饭, #节点/Node-Edge, #节点/数据依赖, #场景/Agent落地]
+tags:
+  - 主题/Agent架构
+  - 主题/Loop-Engineering
+  - 主题/Graph-Engineering
+  - 节点/AI炒冷饭
+  - 节点/Node-Edge
+  - 节点/数据依赖
+  - 场景/Agent落地
 nodes: [AI炒冷饭循环, Agent-Loop复盘, Graph-Engineering-定义, Node-Edge模型, 数据依赖≠执行顺序, 线性流程是退化图, Graph-适用边界与代价, Loop-vs-Graph-本质是组织与工程两层]
-links: [[AI-团队协作-Loop-SDD]], [[AdrianPunk115-Graph-Engineering-从0到1小白完整教程]], [[图工程-Graph-Engineering-来了-LangChain说不是新东西]], [[万字长文拆解Agent-架构设计-四-多-Agent-协作]], [[叶小钗-AI原生组织方法论-2026版]], [[生产级Agent全景]], [[Harness工程AgentLoop]], [[Loop-Engineering-验证才是瓶颈]]
+links: [[01-ai-agents/AI-团队协作-Loop-SDD]], [[01-ai-agents/AdrianPunk115-Graph-Engineering-从0到1小白完整教程]], [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]], [[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]], [[02-ai-coding/叶小钗-AI原生组织方法论-2026版]], [[02-ai-coding/生产级Agent全景]], [[01-ai-agents/Harness工程AgentLoop]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]
 date: 2026-07-30
 source: 微信公众号「叶小钗」2026-07-30 推送；作者 叶小钗（同名公众号，自我标签 1-3-25；成都 TGO 7 组组长；研究 AI 原生 + Loop 工程 + Harness + 员工蒸馏；协助几家公司做 AI 原生组织落地）
 ---
@@ -32,11 +39,11 @@ source: 微信公众号「叶小钗」2026-07-30 推送；作者 叶小钗（同
 
 ## 关联图谱
 
-**上游**：叶小钗 6/22 [[AI-团队协作-Loop-SDD]]（本文是叶小钗 Loop 主线的"vs Graph"对照篇）；7/07 [[叶小钗-AI原生组织方法论-2026版]]；7/13 [[生产级Agent全景]]；2026-07-18 OpenClaw 作者 Peter Steinberger X 推文——本文直接触发点。
+**上游**：叶小钗 6/22 [[01-ai-agents/AI-团队协作-Loop-SDD]]（本文是叶小钗 Loop 主线的"vs Graph"对照篇）；7/07 [[02-ai-coding/叶小钗-AI原生组织方法论-2026版]]；7/13 [[02-ai-coding/生产级Agent全景]]；2026-07-18 OpenClaw 作者 Peter Steinberger X 推文——本文直接触发点。
 
 **下游**：Seetong AI 助手先跑 Loop 不盲目追 Graph；Skill 拆解参考 Node-Edge 模型；编排多 Skill 时区分执行顺序 vs 数据依赖。
 
-**同级**：[[AdrianPunk115-Graph-Engineering-从0到1小白完整教程]]（7/26 与本文同期市场鼓吹 Graph）；[[图工程-Graph-Engineering-来了-LangChain说不是新东西]]（LangChain 视角认为 Graph 不是新东西）；[[万字长文拆解Agent-架构设计-四-多-Agent-协作]]（多 Agent 协作 = Graph 实践）；[[Harness工程AgentLoop]] + [[Loop-Engineering-验证才是瓶颈]]（Loop 工程视角，与本文 Loop 定义一致）；[[bdd-adr-prd-agent-closed-loop]]（"闭环"含义与本文 Loop 一致）。
+**同级**：[[01-ai-agents/AdrianPunk115-Graph-Engineering-从0到1小白完整教程]]（7/26 与本文同期市场鼓吹 Graph）；[[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]]（LangChain 视角认为 Graph 不是新东西）；[[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]]（多 Agent 协作 = Graph 实践）；[[01-ai-agents/Harness工程AgentLoop]] + [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]（Loop 工程视角，与本文 Loop 定义一致）；[[01-ai-agents/bdd-adr-prd-agent-closed-loop]]（"闭环"含义与本文 Loop 一致）。
 
 ## 6 个对 Seetong 团队可借鉴动作
 
@@ -56,6 +63,6 @@ source: 微信公众号「叶小钗」2026-07-30 推送；作者 叶小钗（同
 
 ---
 
-**相关链接**：原始 raw `raw/2026-07-30-叶小钗-Agent-Loop-vs-Graph-Engineering.md` | 原文摘要同目录 `-digest.md` | 本页 digest `wiki/01-ai-agents/叶小钗-Agent-Loop-vs-Graph-Engineering-digest.md` | 强关联 [[AI-团队协作-Loop-SDD]] [[AdrianPunk115-Graph-Engineering-从0到1小白完整教程]] [[Loop-Engineering-验证才是瓶颈]]
+**相关链接**：原始 raw `raw/叶小钗-Agent-Loop-vs-Graph-Engineering.md` | 原文摘要同目录 `-digest.md` | 本页 digest `wiki/01-ai-agents/叶小钗-Agent-Loop-vs-Graph-Engineering-digest.md` | 强关联 [[01-ai-agents/AI-团队协作-Loop-SDD]] [[01-ai-agents/AdrianPunk115-Graph-Engineering-从0到1小白完整教程]] [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]
 
 **透明玻璃自检**：wiki ≤8K ✓ / digest ≤4K ✓ / 节点 8(6-10) ✓ / H2 5(≤5) ✓ / 表格 0(≤2) ✓ / 0 陈词 ✓ ⭐⭐⭐

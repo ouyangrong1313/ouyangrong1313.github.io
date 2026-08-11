@@ -4,7 +4,12 @@ author: 李伟山
 source: https://mp.weixin.qq.com/s/b1VL28GX5d17sKPfkSbIsw
 date: 2026-05-20
 publisher: 腾讯云开发者
-tags: #主题/AI-Coding #主题/AI-Agent #手法/权威背书 #手法/对比冲突 #场景/公众号长文
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Agent
+  - 手法/权威背书
+  - 手法/对比冲突
+  - 场景/公众号长文
 ---
 
 # 从Prompt、Context到Harness，工程的三次进化与终局之战
@@ -339,4 +344,4 @@ OpenAI 在实验总结中提出了一个关键工程哲学：
 来源：腾讯云开发者
 原文链接：https://mp.weixin.qq.com/s/b1VL28GX5d17sKPfkSbIsw
 
-标签：#主题/AI-Coding #主题/AI-Agent #手法/权威背书 #手法/对比冲突 #场景/公众号长文
+标签： #主题/AI-Coding #主题/AI-Agent #手法/权威背书 #手法/对比冲突 #场景/公众号长文

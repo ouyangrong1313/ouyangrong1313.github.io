@@ -22,12 +22,12 @@ trigger: 用户发来一个 URL + 任何"编译知识库"语境
 
 ## 输入规范
 
-| 字段 | 必填 | 默认 | 说明 |
-|------|------|------|------|
-| URL | ✅ | — | 要编译的文章链接 |
-| 分类 | ⚠️ | 02-ai-coding | wiki 分类（01-ai-agents / 02-ai-coding / 03-productivity / 04-app-dev / 05-content-creation / 06-ai-tech / 07-rag-systems） |
-| 是否短链 | ⚠️ | 否 | X 推文等短内容标 true，节省 digest 篇幅 |
-| force | ⚠️ | 否 | 已存在文件时是否覆盖 |
+| 字段    | 必填  | 默认           | 说明                                                                                                                      |
+| ----- | --- | ------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| URL   | ✅   | —            | 要编译的文章链接                                                                                                                |
+| 分类    | ⚠️  | 02-ai-coding | wiki 分类（01-ai-agents / 02-ai-coding / 03-productivity / 04-app-dev / 05-content-creation / 06-ai-tech / 07-rag-systems） |
+| 是否短链  | ⚠️  | 否            | X 推文等短内容标 true，节省 digest 篇幅                                                                                             |
+| force | ⚠️  | 否            | 已存在文件时是否覆盖                                                                                                              |
 
 ## 5 步流程
 
@@ -45,13 +45,13 @@ fetch → raw → digest → wiki → index+log
 
 ### Step 2：raw（原文存档）
 
-- 文件命名：`raw/{YYYY-MM-DD}-{slug}.md`（`{slug}` = URL 主题 lowercase-with-hyphen）
+- 文件命名：`raw/{slug}.md`（`{slug}` = 标题的稳定 slug；日期写入正文元数据，不写入文件名）
 - 包含：原文链接、作者、发布日期、平台、关键数据、完整正文
-- 底部添加：`标签：#主题/xxx #手法/xxx #场景/xxx #节点/xxx`
+- 底部添加：`标签： #主题/xxx #手法/xxx #场景/xxx #节点/xxx`
 
 ### Step 3：digest（拆解版）
 
-- 文件命名：`raw/{YYYY-MM-DD}-{slug}-digest.md`
+- 文件命名：`raw/{slug}-digest.md`
 - 包含：1 句话总结 + 5 条核心观点 + 关键参数表 + 5 句核心金句 + 5 个对 Seetong/MyAIWiki 借鉴动作 + 关联图谱
 - **透明玻璃自检**：≤4K 字节、6-10 节点、≤5 个 H2
 
@@ -98,16 +98,16 @@ fetch → raw → digest → wiki → index+log
 
 ## 反合理化（不偷懒借口表）
 
-| 偷懒借口 | 反驳 |
-|---------|------|
-| "原文很短，不需要 digest/wiki" | 短文也要走完整流程——重点是分类+节点+关联，不是字数 |
-| "原文是英文，跳过中文 digest" | 英文也编译中文 digest——这是中英对照知识库的价值 |
-| "已有相关页面，跳过编译" | 已有页面要更新（增量添加）不是跳过；新页面要建（去重差异化） |
-| "抓取失败，就用用户给的文字版" | 文字版也要打 raw 标签 + 来源说明，不直接当原文 |
-| "AI 跑全套质量不稳，留人工" | 这违背"AI 跑全套"约定；如确实质量差，先跑完再二次精修 |
-| "分类不确定，先放 02-ai-coding" | 不确定就 AskUserQuestion；不要默认 |
-| "8K 字节超了，先这样" | 重新压缩到 8K 内——内容密度比字数重要 |
-| "5 个借鉴动作想不出来，跳过" | 想不出 5 个就做 3 个真实的；不要凑 5 个假的 |
+| 偷懒借口                    | 反驳                             |
+| ----------------------- | ------------------------------ |
+| "原文很短，不需要 digest/wiki"  | 短文也要走完整流程——重点是分类+节点+关联，不是字数    |
+| "原文是英文，跳过中文 digest"     | 英文也编译中文 digest——这是中英对照知识库的价值   |
+| "已有相关页面，跳过编译"           | 已有页面要更新（增量添加）不是跳过；新页面要建（去重差异化） |
+| "抓取失败，就用用户给的文字版"        | 文字版也要打 raw 标签 + 来源说明，不直接当原文    |
+| "AI 跑全套质量不稳，留人工"        | 这违背"AI 跑全套"约定；如确实质量差，先跑完再二次精修  |
+| "分类不确定，先放 02-ai-coding" | 不确定就 AskUserQuestion；不要默认      |
+| "8K 字节超了，先这样"           | 重新压缩到 8K 内——内容密度比字数重要          |
+| "5 个借鉴动作想不出来，跳过"        | 想不出 5 个就做 3 个真实的；不要凑 5 个假的     |
 
 ## 与现有组件的关系
 
@@ -118,7 +118,8 @@ fetch → raw → digest → wiki → index+log
 | `scripts/apply_wechat_polish_output.py` | 把精修结果回写文件 | Step 3-4 精修环节 |
 | `prompts/wiki-template.md` | 新文章结构模板 | Step 4 严格遵循 |
 | `prompts/wechat-compile-polish.md` | 精修提示词 | Step 3-4 精修环节 |
-| `scripts/wiki-query.py` | 查询/验证工具 | Step 5 验证 frontmatter/links |
+| `scripts/wiki-query.py` | 查询工具 | Step 5 验证节点与检索结果 |
+| `scripts/wiki-health-check.py` | 结构体检工具 | Step 5 验证 frontmatter/links/index/tag syntax |
 | `prompts/bug-fix.md` | 另一个独立 Skill | 与本 Skill **无关**，不串 |
 
 ## 快速测试
@@ -135,4 +136,4 @@ fetch → raw → digest → wiki → index+log
 
 ---
 
-**最后更新**：2026-06-22 ｜ **设计来源**：`raw/2026-06-22-undefinedKi-AI-Second-Brain-10-Step-Guide-digest.md` Step 8 + [[Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] 反合理化节
+**最后更新**：2026-06-22 ｜ **设计来源**：`raw/undefinedKi-AI-Second-Brain-10-Step-Guide-digest.md` Step 8 + [[Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] 反合理化节

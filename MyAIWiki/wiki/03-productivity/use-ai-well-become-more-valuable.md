@@ -83,9 +83,9 @@ AI削平了专业入场门槛：
 
 ## 相关链接
 
-- [[ai-learning-expert-perspective|AI 学习：专家视角]] — 学习要打破边界
-- [[ai-personal-knowledge-base-problems|AI 个人知识库：为什么还是那么难用]] — 知识系统需要权威负责
+- [[03-productivity/ai-learning-expert-perspective|AI 学习：专家视角]] — 学习要打破边界
+- [[01-ai-agents/ai-personal-knowledge-base-problems|AI 个人知识库：为什么还是那么难用]] — 知识系统需要权威负责
 
 ## 标签
 
-#主题/效率 #场景/公众号长文
+ #主题/效率 #场景/公众号长文

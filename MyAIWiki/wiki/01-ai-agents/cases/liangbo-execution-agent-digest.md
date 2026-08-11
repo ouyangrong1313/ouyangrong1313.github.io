@@ -1,9 +1,16 @@
 ---
 title: "东方屹腾：执行型 Agent 从零到稳定交付 - Digest"
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/执行型Agent, #主题/Harness, #场景/落地案例, #场景/企业SaaS, #节点/机械状态平面, #节点/会话统一状态平面]
+tags:
+  - 主题/AI-Agent
+  - 主题/执行型Agent
+  - 主题/Harness
+  - 场景/落地案例
+  - 场景/企业SaaS
+  - 节点/机械状态平面
+  - 节点/会话统一状态平面
 nodes: [执行型Agent分野, 控制叙事二元论, ReAct到规划执行, HITL阻塞续作, 机械状态平面, 会话统一状态平面, 锚账集与分层记忆]
-links: [[liangbo-execution-agent]]
+links: [[01-ai-agents/cases/liangbo-execution-agent]]
 date: 2026-07-17
 source: ADPS 企业 Agent 系统蓝皮书 v0.2 / 梁博 / 上海东方屹腾案例
 ---
@@ -50,12 +57,12 @@ source: ADPS 企业 Agent 系统蓝皮书 v0.2 / 梁博 / 上海东方屹腾案�
 
 ## 与已有文章的关联
 
-- [[未来属于垂直领域Agent]]：为什么企业 Agent 要更小、更专、更可控
-- [[Leeka-Task-Decomposition-Agentic-Workflow]]：任务拆解、数据契约、HITL checkpoint 的配套方法
-- [[阿里云开发者-淘宝主播Agent的Harness工程实战]]：高风险生产场景里的审批门、幂等性和状态治理
-- [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：状态文件、DAG 和脚本化执行的对照案例
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]：从产品视角补齐 Harness / Context / Skill 的解释层
-- [[Lilian-Weng-Harness-Engineering-自我改进]]：从理论原典补齐“模型重要性 = Harness 重要性”
+- [[01-ai-agents/未来属于垂直领域Agent]]：为什么企业 Agent 要更小、更专、更可控
+- [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]]：任务拆解、数据契约、HITL checkpoint 的配套方法
+- [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]]：高风险生产场景里的审批门、幂等性和状态治理
+- [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：状态文件、DAG 和脚本化执行的对照案例
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：从产品视角补齐 Harness / Context / Skill 的解释层
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]：从理论原典补齐“模型重要性 = Harness 重要性”
 
 ## 4 个提醒
 

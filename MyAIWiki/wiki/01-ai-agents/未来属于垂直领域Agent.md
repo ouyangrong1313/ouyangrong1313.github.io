@@ -1,9 +1,15 @@
 ---
 title: 未来属于垂直领域 Agent
 category: 01-ai-agents
-tags: [#主题/多Agent编排, #主题/Domain-Specific, #主题/企业Agent, #主题/Token经济, #主题/Harness, #主题/Seetong借鉴]
+tags:
+  - 主题/多Agent编排
+  - 主题/Domain-Specific
+  - 主题/企业Agent
+  - 主题/Token经济
+  - 主题/Harness
+  - 主题/Seetong借鉴
 nodes: composition-over-inheritance, 80%token效率, 2027编排年, 4大原语, 递归子Agent, 集成先卡, 工具堆叠反噬, 2026-token价格反转
-links: [[Leeka-Task-Decomposition-Agentic-Workflow]], [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[0xCodez-Agent-Harness-14-Steps]], [[小龙虾-OpenClaw-Agent价值与边界]], [[Multica-AI-Native-组织-人是最慢的节点]], [[Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]]
+links: [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]], [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]], [[01-ai-agents/小龙虾-OpenClaw-Agent价值与边界]], [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]], [[01-ai-agents/Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]]
 date: 2026-07-03
 source: 微信公众号「晚点再听LaterCast」2026-07-03 编译自 AI Engineer 大会 Justin Schroeder 演讲;原视频 https://www.youtube.com/watch?v=spNAUEgq_A8
 ---
@@ -37,7 +43,7 @@ source: 微信公众号「晚点再听LaterCast」2026-07-03 编译自 AI Engine
 
 - **上游**:软件工程 composition over inheritance / NASA 阿波罗登月专家+消息协同 / Vercel AI SDK & Eve
 - **下游**:2026 H2 domain-specific agent 框架爆发 / 2027 multi-agent orchestration 主流 / 销售/法务/客服递归子 Agent
-- **同级**:[[Leeka-Task-Decomposition-Agentic-Workflow]](怎么拆)/ [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]](4 层 8 步)/ [[0xCodez-Agent-Harness-14-Steps]](Harness 14 步)/ [[小龙虾-OpenClaw-Agent价值与边界]](不存在通用 Agent)/ [[Multica-AI-Native-组织-人是最慢的节点]](4 人+几十 Agent 极端样本)/ [[Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]](垂直行业商业化)
+- **同级**:[[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]](怎么拆)/ [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]](4 层 8 步)/ [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]](Harness 14 步)/ [[01-ai-agents/小龙虾-OpenClaw-Agent价值与边界]](不存在通用 Agent)/ [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]](4 人+几十 Agent 极端样本)/ [[01-ai-agents/Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]](垂直行业商业化)
 
 ## 正文要点(5 条)
 

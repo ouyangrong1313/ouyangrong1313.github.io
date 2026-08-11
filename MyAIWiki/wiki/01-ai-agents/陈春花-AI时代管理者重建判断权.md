@@ -1,9 +1,17 @@
 ---
 title: 陈春花：AI 时代管理者重建判断权
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/管理学, #场景/公众号长文, #节点/判断权, #节点/AI-管理, #节点/Harness, #节点/Agent-Loop, #节点/AI-觉醒]
+tags:
+  - 主题/AI-Agent
+  - 主题/管理学
+  - 场景/公众号长文
+  - 节点/判断权
+  - 节点/AI-管理
+  - 节点/Harness
+  - 节点/Agent-Loop
+  - 节点/AI-觉醒
 nodes: [判断权, 有限理性, 计算理性, 智力物替, 局部最优, 自动化平庸, 算法替罪羊, 双重觉醒, 价值校准, AI 决策复核, 角色重构, 人机共生]
-links: [[AI-PM核心技能-观测评估与反馈闭环]], [[HarnessEngineering企业级实战]], [[Harness不是目的-知识才是护城河：一个-AI-工程交付团队的知识沉淀实践]], [[Agent时代架构师系统能力]], [[Harness工程AgentLoop]], [[Skills驱动推理新范式]], [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
+links: [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]], [[01-ai-agents/HarnessEngineering企业级实战]], [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]], [[01-ai-agents/Agent时代架构师系统能力]], [[01-ai-agents/Harness工程AgentLoop]], [[01-ai-agents/Skills驱动推理新范式]], [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
 date: 2026-06-04
 source: 微信公众号 / 陈春花（chunnuanhuakai-cch）
 ---
@@ -21,7 +29,7 @@ source: 微信公众号 / 陈春花（chunnuanhuakai-cch）
 
 ## 分类提炼
 - 场景：AI 时代管理决策、组织治理、人机协作
-- 标签：#主题/管理学 #主题/AI-Agent #节点/判断权 #节点/人机共生
+- 标签： #主题/管理学 #主题/AI-Agent #节点/判断权 #节点/人机共生
 - 类型：管理学理论 / 案例分析 / 制度设计
 
 ## 知识节点
@@ -42,18 +50,18 @@ source: 微信公众号 / 陈春花（chunnuanhuakai-cch）
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- [[Harness不是目的-知识才是护城河：一个-AI-工程交付团队的知识沉淀实践]]：同一判断（工程化不是终局，价值判断才是）
-- [[AI-PM核心技能-观测评估与反馈闭环]]：PM 视角的 AI 时代能力升级——观测、评估、反馈闭环
-- [[HarnessEngineering企业级实战]]：Harness 是手段不是目的，制度设计是上层
+- [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]：同一判断（工程化不是终局，价值判断才是）
+- [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]]：PM 视角的 AI 时代能力升级——观测、评估、反馈闭环
+- [[01-ai-agents/HarnessEngineering企业级实战]]：Harness 是手段不是目的，制度设计是上层
 
 ### 下游（应用于 / 验证于）
-- [[Harness工程AgentLoop]]：Agent Loop 层面的价值校准和决策复核
-- [[Skills驱动推理新范式]]：Skill 沉淀是"管理判断"的可执行化形式
-- [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]：动态工作流需要"价值校准"作为上层制度
+- [[01-ai-agents/Harness工程AgentLoop]]：Agent Loop 层面的价值校准和决策复核
+- [[01-ai-agents/Skills驱动推理新范式]]：Skill 沉淀是"管理判断"的可执行化形式
+- [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]：动态工作流需要"价值校准"作为上层制度
 
 ### 同级（横向 / 并列）
-- [[Agent时代架构师系统能力]]：AI 时代架构师的能力要求——系统设计 + 价值判断
-- [[Skills驱动推理新范式]]：从"判"到"沉淀"的工程化路径
+- [[01-ai-agents/Agent时代架构师系统能力]]：AI 时代架构师的能力要求——系统设计 + 价值判断
+- [[01-ai-agents/Skills驱动推理新范式]]：从"判"到"沉淀"的工程化路径
 
 ## 正文要点
 
@@ -148,8 +156,8 @@ AI 正在接管高频、规则化的判断领域：HR 简历筛选、金融风�
 
 ## 我的理解
 
-- **跟 [[Harness不是目的-知识才是护城河]] 是同一判断的两个侧面**：那篇从工程角度说"工程化不是终局"，本篇从管理角度说"判断权不能外包"
-- **跟 [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] 是配套的**：动态工作流是技术能力升级，本篇是上层制度约束——两者必须配套，**没有制度约束的技术升级会更危险**
+- **跟 [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] 是同一判断的两个侧面**：那篇从工程角度说"工程化不是终局"，本篇从管理角度说"判断权不能外包"
+- **跟 [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] 是配套的**：动态工作流是技术能力升级，本篇是上层制度约束——两者必须配套，**没有制度约束的技术升级会更危险**
 - **对研发团队的具体启发**：
   - 任何 AI Coding 工具的引入都要"价值校准"——它帮我们写代码，但代码质量标准由人定
   - "AI 决策复核"对应到 Seetong 工作流：TAPD 需求评审不能完全交给 AI
@@ -158,11 +166,11 @@ AI 正在接管高频、规则化的判断领域：HR 简历筛选、金融风�
 
 ## 适合关联的主题
 
-- [[AI-PM核心技能-观测评估与反馈闭环]]
-- [[HarnessEngineering企业级实战]]
-- [[Harness不是目的-知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
-- [[Agent时代架构师系统能力]]
-- [[Harness工程AgentLoop]]
-- [[Skills驱动推理新范式]]
-- [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
-- [[OpenClaw-vs-Hermes-多-Agent-架构设计]]
+- [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]]
+- [[01-ai-agents/HarnessEngineering企业级实战]]
+- [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
+- [[01-ai-agents/Agent时代架构师系统能力]]
+- [[01-ai-agents/Harness工程AgentLoop]]
+- [[01-ai-agents/Skills驱动推理新范式]]
+- [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
+- [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]]

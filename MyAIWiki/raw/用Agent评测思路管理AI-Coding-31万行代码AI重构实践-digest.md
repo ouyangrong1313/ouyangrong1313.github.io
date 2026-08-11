@@ -1,7 +1,11 @@
 ---
 title: 用Agent评测思路管理AI Coding —— 拆解笔记
 source: https://mp.weixin.qq.com/s/CTY5mdgKh6TmPrO6xsKhWQ
-tags: #主题/AI Coding #手法/对比冲突 #手法/权威背书 #场景/技术博客
+tags:
+  - 主题/AI-Coding
+  - 手法/对比冲突
+  - 手法/权威背书
+  - 场景/技术博客
 ---
 
 # 拆解笔记：用Agent评测思路管理AI Coding
@@ -70,4 +74,4 @@ tags: #主题/AI Coding #手法/对比冲突 #手法/权威背书 #场景/技术
 
 ## 标签
 
-#主题/AI Coding #手法/对比冲突 #手法/权威背书 #场景/技术博客
+ #主题/AI Coding #手法/对比冲突 #手法/权威背书 #场景/技术博客

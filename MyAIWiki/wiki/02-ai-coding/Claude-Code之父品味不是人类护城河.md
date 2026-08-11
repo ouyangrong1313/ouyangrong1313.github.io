@@ -1,9 +1,23 @@
 ---
 title: Claude Code 之父：「品味」不是人类护城河；当工程师不再写代码，招聘看什么？
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI行业战略, #主题/Anthropic, #节点/Claude-Code起源, #节点/写Loops范式, #节点/抽象层级提升, #节点/Generalist黄金时代, #节点/MTS文化, #节点/少招人多给Tokens, #节点/品味被模型侵蚀, #节点/价值观护城河, #场景/编译长文, #场景/行业分析, #手法/访谈实录]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI行业战略
+  - 主题/Anthropic
+  - 节点/Claude-Code起源
+  - 节点/写Loops范式
+  - 节点/抽象层级提升
+  - 节点/Generalist黄金时代
+  - 节点/MTS文化
+  - 节点/少招人多给Tokens
+  - 节点/品味被模型侵蚀
+  - 节点/价值观护城河
+  - 场景/编译长文
+  - 场景/行业分析
+  - 手法/访谈实录
 nodes: [Claude-Code起源, 写Loops范式, 抽象层级提升, Generalist黄金时代, MTS文化, 少招人多给Tokens, 品味被模型侵蚀, 价值观护城河]
-links: [[Claude-Code作者Boris-我已经不写prompt了我写loop]], [[买了一样的AI为什么别家的比你的强]], [[Anthropic万字长文三个判断和一个阳谋]], [[AI-Coding的顿悟时刻]]
+links: [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]], [[02-ai-coding/买了一样的AI为什么别家的比你的强]], [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]], [[02-ai-coding/AI-Coding的顿悟时刻]]
 date: 2026-06-08
 source: 微信公众号 / 机器之心（编译自 Boris Cherny 访谈）
 ---
@@ -22,7 +36,7 @@ source: 微信公众号 / 机器之心（编译自 Boris Cherny 访谈）
 
 ## 分类提炼
 - 场景：AI Coding 范式 / Anthropic 战略 / 组织方法论
-- 标签：#主题/AI-Coding #主题/Anthropic #节点/写Loops范式 #节点/价值观护城河
+- 标签： #主题/AI-Coding #主题/Anthropic #节点/写Loops范式 #节点/价值观护城河
 - 类型：访谈实录 / 战略洞察 / 行业分析
 
 ## 知识节点（8 个独立概念）
@@ -39,17 +53,17 @@ source: 微信公众号 / 机器之心（编译自 Boris Cherny 访谈）
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- [[Claude-Code作者Boris-我已经不写prompt了我写loop]]：同一作者多次访谈反复强调"写 loop"，本文是更详细的版本
-- [[Anthropic万字长文三个判断和一个阳谋]]：同主线，Anthropic 长文的数据 + 本篇访谈的具体实践相互印证
+- [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]]：同一作者多次访谈反复强调"写 loop"，本文是更详细的版本
+- [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]]：同主线，Anthropic 长文的数据 + 本篇访谈的具体实践相互印证
 
 ### 下游（应用于 / 验证于）
-- [[买了一样的AI为什么别家的比你的强]]：Hiten Shah 的"模型是商品 skill 才是资产"是组织视角；Boris 的"写 Loops"是个人视角
-- [[AI-Coding的顿悟时刻]]：工厂模式半年标配 + 未来瓶颈=需求定义+架构设计 = 跟"Generalist 黄金时代"是同一信号
+- [[02-ai-coding/买了一样的AI为什么别家的比你的强]]：Hiten Shah 的"模型是商品 skill 才是资产"是组织视角；Boris 的"写 Loops"是个人视角
+- [[02-ai-coding/AI-Coding的顿悟时刻]]：工厂模式半年标配 + 未来瓶颈=需求定义+架构设计 = 跟"Generalist 黄金时代"是同一信号
 
 ### 同级（横向 / 并列）
-- [[54万行代码的顿悟-Markdown才是新编程方式]]：抽象层级持续提升是同一主线
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]：Harness 思想
-- [[Claude-Code负责人谈AI原生工程组织]]：Anthropic 的组织方法论
+- [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]：抽象层级持续提升是同一主线
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]：Harness 思想
+- [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]]：Anthropic 的组织方法论
 
 ## 正文要点（10 条）
 
@@ -165,7 +179,7 @@ Boris 想了一下，说：**价值观**。
 ## 我的理解
 
 - **"我的工作已经变成写 Loops" 是 2026 年 AI Coding 范式最具体的一句话** — 跟 Boris 自己 6-04 那篇是同一句话的两次表达
-- **跟 [[Anthropic万字长文三个判断和一个阳谋]] 同主线** — 快刀青衣拆的"执行力零价格 / 验收能力 / 慢变量"在 Boris 访谈里得到最具体验证
+- **跟 [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]] 同主线** — 快刀青衣拆的"执行力零价格 / 验收能力 / 慢变量"在 Boris 访谈里得到最具体验证
 - **"经验是负债" 对 Seetong 团队是个警钟** — Boris 看到资深工程师"花好几个月 unlearn"；需要主动识别哪些"老经验"会被模型挑战
 - **"价值观是最后护城河" 是 Hiten Shah 的"skill 战略"在个人层面的延伸** — 模型吞噬技能，最后剩下的是"做对的事情"的判断
 
@@ -174,10 +188,10 @@ Boris 想了一下，说：**价值观**。
 - 原文：https://mp.weixin.qq.com/s/7xojGo-W7COYmWP3mxghOA
 - 原始视频：https://www.youtube.com/watch?v=RkQQ7WEor7w&t=1s
 - 关联 wiki：
-  - [[Claude-Code作者Boris-我已经不写prompt了我写loop]] - Boris 多次访谈反复强调"写 loop"
-  - [[买了一样的AI为什么别家的比你的强]] - skill 战略
-  - [[Anthropic万字长文三个判断和一个阳谋]] - 同一主线
-  - [[AI-Coding的顿悟时刻]] - AI 编程范式转变
-  - [[54万行代码的顿悟-Markdown才是新编程方式]] - 抽象层级持续提升
-  - [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] - Harness 思想
-  - [[Claude-Code负责人谈AI原生工程组织]] - Anthropic 的组织方法论
+  - [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]] - Boris 多次访谈反复强调"写 loop"
+  - [[02-ai-coding/买了一样的AI为什么别家的比你的强]] - skill 战略
+  - [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]] - 同一主线
+  - [[02-ai-coding/AI-Coding的顿悟时刻]] - AI 编程范式转变
+  - [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] - 抽象层级持续提升
+  - [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] - Harness 思想
+  - [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]] - Anthropic 的组织方法论

@@ -3,9 +3,14 @@ title: Andrej Karpathy：AI写代码，只需要问自己这一个问题 - Diges
 date: 2026-07-15
 slug: AndrejKarpathy-AI写代码-只需要问自己这一个问题-digest
 category: 02-ai-coding
-tags: [Karpathy, AI-Coding, Skill, GitHub工作流, 判断执行分界]
+tags:
+  - Karpathy
+  - AI-Coding
+  - Skill
+  - GitHub工作流
+  - 判断执行分界
 rating: ⭐⭐
-source: "[[AndrejKarpathy-AI写代码-只需要问自己这一个问题]]"
+source: "[[02-ai-coding/AndrejKarpathy-AI写代码-只需要问自己这一个问题]]"
 ---
 
 # Andrej Karpathy：AI写代码，只需要问自己这一个问题 - Digest
@@ -51,6 +56,6 @@ source: "[[AndrejKarpathy-AI写代码-只需要问自己这一个问题]]"
 
 ## 关联 + 备注
 
-**关联**：AI Coding 边界 [[AI-Coding的顿悟时刻]] / [[Code-is-cheap-AI-Native-五倍效率]] | Skill 工程 [[面向Skills编程-淘宝企业购端到端研发提效实践]] / [[loonggg-Claude-Code-技能心法-11条建议]] / [[Skill-Self-Evolution]] | 验证 [[Loop-Engineering-验证才是瓶颈]]
+**关联**：AI Coding 边界 [[02-ai-coding/AI-Coding的顿悟时刻]] / [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]] | Skill 工程 [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] / [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]] / [[01-ai-agents/Skill-Self-Evolution]] | 验证 [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]
 
 **备注**：本文前半段是 Karpathy 判断框架，后半段是 rvaniaaa 项目拆解；公众号末尾引流、小程序、点赞分享等交互噪声已剔除。

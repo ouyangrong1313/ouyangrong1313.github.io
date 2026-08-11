@@ -1,7 +1,12 @@
 ---
 title: AI 原生组织方法论（叶小钗 / 2026-07 成都演讲）— Digest
 category: 02-ai-coding
-tags: [#主题/AI-Native #主题/组织方法论 #主题/SDD #主题/AI操作系统 #主题/团队演进]
+tags:
+  - 主题/AI-Native
+  - 主题/组织方法论
+  - 主题/SDD
+  - 主题/AI操作系统
+  - 主题/团队演进
 date: 2026-07-07
 source: 微信公众号「叶小钗」2026-07-07 推送（作者 叶小钗 / 成都 AI 应用生态大会演讲整理稿 2026-07-04/05）
 ---
@@ -72,12 +77,12 @@ source: 微信公众号「叶小钗」2026-07-07 推送（作者 叶小钗 / 成
 
 ## 关联
 
-- **同作者主线**——[[AI-团队协作-Loop-SDD]]（叶小钗 2026-06-22 SDD 三核心角色 / AI 进入组织 4 层爬坡）；本文是 SDD 之后的"组织全景图升级版"
-- **同"AI Native 组织"主线**——[[Capihom-AI-Native企业-Agent团队和AI-Factory重写公司体系]]（Groupon 实证，2026-07-07 晚点再听LaterCast）+ [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]（Anthropic 实证，2026-07-06 Datawhale）+ [[Multica-AI-Native-组织-人是最慢的节点]]（极端样本）；形成"叶小钗公式派 / Capihom 实证派 / Fiona 实证派 / Multica 极端样本"四角
-- **同主线（组织成熟度）**——[[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]] 团队三阶段类似 Knock 5 级成熟度
-- **方法论上游**——[[Laurel-CPO-Jiaona-Zhang-公司OS]] 公司 OS 视角 + [[Code-is-cheap-AI-Native-五倍效率]] AI Native 范式 + [[清华沈阳-自进化AI新物种]] FDE 组织进化协议
-- **方法论下游（Seetong 落地）**——[[OpenClaw的正确打开方式]] + [[OpenClaw-vs-Hermes-多-Agent-架构设计]]（OpenClaw 本身就是 AI 操作系统候选）
-- **关联**——[[0xCodez-Agent-Harness-14-Steps]] + [[Leeka-Task-Decomposition-Agentic-Workflow]]（SDD 是上层方法论，本文是组织视角）
+- **同作者主线**——[[01-ai-agents/AI-团队协作-Loop-SDD]]（叶小钗 2026-06-22 SDD 三核心角色 / AI 进入组织 4 层爬坡）；本文是 SDD 之后的"组织全景图升级版"
+- **同"AI Native 组织"主线**——[[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]（Groupon 实证，2026-07-07 晚点再听LaterCast）+ [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]（Anthropic 实证，2026-07-06 Datawhale）+ [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]（极端样本）；形成"叶小钗公式派 / Capihom 实证派 / Fiona 实证派 / Multica 极端样本"四角
+- **同主线（组织成熟度）**——[[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]] 团队三阶段类似 Knock 5 级成熟度
+- **方法论上游**——[[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]] 公司 OS 视角 + [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]] AI Native 范式 + [[01-ai-agents/清华沈阳-自进化AI新物种]] FDE 组织进化协议
+- **方法论下游（Seetong 落地）**——[[01-ai-agents/OpenClaw的正确打开方式]] + [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]]（OpenClaw 本身就是 AI 操作系统候选）
+- **关联**——[[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] + [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]]（SDD 是上层方法论，本文是组织视角）
 
 ## 备注
 

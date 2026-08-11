@@ -1,9 +1,22 @@
 ---
 title: Garry Tan：个人 AGI 藏在自己的经验代码库里
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/Skill, #主题/个人知识库, #主题/经验资产, #主题/Agent, #节点/经验代码库, #节点/Skill化, #节点/上下文检索, #节点/确定性边界, #节点/知识库治理, #场景/公众号长文, #作者/Garry-Tan, #来源/51CTO]
+tags:
+  - 主题/AI-Coding
+  - 主题/Skill
+  - 主题/个人知识库
+  - 主题/经验资产
+  - 主题/Agent
+  - 节点/经验代码库
+  - 节点/Skill化
+  - 节点/上下文检索
+  - 节点/确定性边界
+  - 节点/知识库治理
+  - 场景/公众号长文
+  - 作者/Garry-Tan
+  - 来源/51CTO
 nodes: [经验代码库, Skill化, 上下文检索, 确定性边界, 一次性工作, 个人经验归属, 知识库治理, 权限与审计]
-links: [[54万行代码的顿悟-Markdown才是新编程方式]], [[garry-tan-ai-second-brain]], [[买了一样的AI为什么别家的比你的强]], [[phodal-项目记住-Coding-Agent-5步法]], [[Agent自维护体系-完整实战]]
+links: [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]], [[01-ai-agents/garry-tan-ai-second-brain]], [[02-ai-coding/买了一样的AI为什么别家的比你的强]], [[02-ai-coding/phodal-项目记住-Coding-Agent-5步法]], [[02-ai-coding/Agent自维护体系-完整实战]]
 date: 2026-08-10
 source: 微信公众号 / 51CTO 技术栈（姜篇，二手整理 Garry Tan 演讲）
 ---
@@ -22,9 +35,9 @@ source: 微信公众号 / 51CTO 技术栈（姜篇，二手整理 Garry Tan 演�
 ## 分类提炼
 
 - 场景：AI Coding / 个人知识系统 / 团队经验沉淀
-- 标签：#主题/AI-Coding #主题/Skill #主题/个人知识库 #主题/经验资产 #节点/确定性边界 #节点/知识库治理
+- 标签： #主题/AI-Coding #主题/Skill #主题/个人知识库 #主题/经验资产 #节点/确定性边界 #节点/知识库治理
 - 类型：方法论整理 / 个人工作系统 / Skill 治理
-- 与已有 Garry Tan 页面区别：[[54万行代码的顿悟-Markdown才是新编程方式]] 讨论 Markdown 与 Skill pack 的工程范式；本文补足经验来源、确定性边界、归属和长期治理。
+- 与已有 Garry Tan 页面区别：[[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] 讨论 Markdown 与 Skill pack 的工程范式；本文补足经验来源、确定性边界、归属和长期治理。
 
 ## 知识节点（8 个独立概念）
 
@@ -41,18 +54,18 @@ source: 微信公众号 / 51CTO 技术栈（姜篇，二手整理 Garry Tan 演�
 
 ### 上游（基于 / 来自）
 
-- [[garry-tan-ai-second-brain]]：提供“厚数据 + 厚技能”的个人 AI 系统背景；本文将其收敛为经验资产的输入、执行与治理边界。
-- [[54万行代码的顿悟-Markdown才是新编程方式]]：说明 Markdown 可成为可维护的指令层；本文补充 Skill 文件应保存什么、哪些内容不能交给自然语言。
+- [[01-ai-agents/garry-tan-ai-second-brain]]：提供“厚数据 + 厚技能”的个人 AI 系统背景；本文将其收敛为经验资产的输入、执行与治理边界。
+- [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]：说明 Markdown 可成为可维护的指令层；本文补充 Skill 文件应保存什么、哪些内容不能交给自然语言。
 
 ### 下游（应用于 / 验证于）
 
-- [[phodal-项目记住-Coding-Agent-5步法]]：把经验从个人文件夹延伸到项目级 AGENTS.md、文档路由、Skill 和 CLI 的放置决策。
-- [[Agent自维护体系-完整实战]]：将排障经验写入知识库，并用独立验证和人工审批避免错误经验自动放大。
+- [[02-ai-coding/phodal-项目记住-Coding-Agent-5步法]]：把经验从个人文件夹延伸到项目级 AGENTS.md、文档路由、Skill 和 CLI 的放置决策。
+- [[02-ai-coding/Agent自维护体系-完整实战]]：将排障经验写入知识库，并用独立验证和人工审批避免错误经验自动放大。
 
 ### 同级（横向 / 并列）
 
-- [[买了一样的AI为什么别家的比你的强]]：从公司视角解释 Skill 为何是机构知识护城河；本文补上个人可迁移经验与保密边界。
-- [[undefinedKi-AI-Second-Brain-10-Step-Guide]]：两者同属个人记忆系统；该页偏工具栈与落地步骤，本文偏经验资产的内容与治理。
+- [[02-ai-coding/买了一样的AI为什么别家的比你的强]]：从公司视角解释 Skill 为何是机构知识护城河；本文补上个人可迁移经验与保密边界。
+- [[02-ai-coding/undefinedKi-AI-Second-Brain-10-Step-Guide]]：两者同属个人记忆系统；该页偏工具栈与落地步骤，本文偏经验资产的内容与治理。
 
 ## 正文要点、Seetong 借鉴与证据边界
 

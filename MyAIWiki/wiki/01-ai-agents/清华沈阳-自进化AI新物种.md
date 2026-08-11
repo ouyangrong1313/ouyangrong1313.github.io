@@ -1,9 +1,29 @@
 ---
 title: "清华教授沈阳把AI逼成了会自己进化的「新物种」"
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/自进化AI, #主题/FDE, #节点/RSI, #节点/FDE, #节点/自进化AI, #节点/不可解释但可验证, #节点/Tokenizer经济, #节点/智能形态分化, #节点/状态树叙事, #节点/营销短视频, #节点/AGI奇点, #节点/提示的考古奇点, #场景/技术博客, #场景/产品介绍, #场景/学术访谈, #手法/权威背书, #手法/对比冲突, #手法/概念定义, #手法/新词创造]
+tags:
+  - 主题/AI-Agent
+  - 主题/自进化AI
+  - 主题/FDE
+  - 节点/RSI
+  - 节点/FDE
+  - 节点/自进化AI
+  - 节点/不可解释但可验证
+  - 节点/Tokenizer经济
+  - 节点/智能形态分化
+  - 节点/状态树叙事
+  - 节点/营销短视频
+  - 节点/AGI奇点
+  - 节点/提示的考古奇点
+  - 场景/技术博客
+  - 场景/产品介绍
+  - 场景/学术访谈
+  - 手法/权威背书
+  - 手法/对比冲突
+  - 手法/概念定义
+  - 手法/新词创造
 nodes: [RSI-递归自进化, FDE-自进化企业改造, 不可解释但可验证, Token-稀缺性-拟生命, 智能形态-维度差, ZeeLin-AutoResearch, ZeeLin-Story-状态树, ZeeLin-元相-营销, 提示的-考古奇点, 创造力放大系数]
-links: [[Skill-Self-Evolution]], [[Harness-Engineering-企业级实战]], [[Agent-Skills-系统性综述]], [[OpenClaw-使用案例与技巧]], [[Agent-时代-架构师系统能力]], [[Good-AI-PM-Bad-AI-PM]]
+links: [[01-ai-agents/Skill-Self-Evolution]], [[01-ai-agents/HarnessEngineering企业级实战]], [[01-ai-agents/agent-skills-systematic-survey]], [[01-ai-agents/openclaw-shi-yong-an-li-ji-qiao]], [[01-ai-agents/Agent时代架构师系统能力]], [[01-ai-agents/good-ai-pm-bad-ai-pm]]
 date: 2026-06-15
 source: 微信公众号 / 新智元（对话清华教授沈阳 / ZeeLin 智灵动力 首席科学家）
 ---
@@ -23,7 +43,7 @@ source: 微信公众号 / 新智元（对话清华教授沈阳 / ZeeLin 智灵�
 ## 分类提炼
 
 - **场景**：自进化 AI 框架 / 企业级 FDE / 数字生命实验 / AI 营销 / AI 叙事
-- **标签**：#主题/AI-Agent #主题/自进化AI #主题/FDE
+- **标签**： #主题/AI-Agent #主题/自进化AI #主题/FDE
 - **类型**：学术访谈 / 产品矩阵 / 概念定义
 - **价值层级**：⭐⭐⭐（自进化 AI 体系化产品矩阵 + 三个原创概念 + FDE 商业落地框架）
 
@@ -43,9 +63,9 @@ source: 微信公众号 / 新智元（对话清华教授沈阳 / ZeeLin 智灵�
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- [[Skill-Self-Evolution]]：Trace2Skill / EvoSkill / SkillOpt 三学派的自进化方案——本篇 ZeeLin 框架是同类工程化实现
-- [[Harness-Engineering-企业级实战]]：Harness 工程化基础——本篇 FDE 是 Harness 在企业级场景的范式升级
-- [[Agent-Skills-系统性综述]]：Skill 工程综述——本篇 ZeeLin Story 3.0 状态树是 Skill 在叙事侧的前沿应用
+- [[01-ai-agents/Skill-Self-Evolution]]：Trace2Skill / EvoSkill / SkillOpt 三学派的自进化方案——本篇 ZeeLin 框架是同类工程化实现
+- [[01-ai-agents/HarnessEngineering企业级实战]]：Harness 工程化基础——本篇 FDE 是 Harness 在企业级场景的范式升级
+- [[01-ai-agents/agent-skills-systematic-survey]]：Skill 工程综述——本篇 ZeeLin Story 3.0 状态树是 Skill 在叙事侧的前沿应用
 
 ### 下游（应用于 / 验证于）
 - FDE 30%–50% 岗位重构空间（信息处理类部门实测）——可用于企业级 AI 改造 ROI 测算
@@ -53,9 +73,9 @@ source: 微信公众号 / 新智元（对话清华教授沈阳 / ZeeLin 智灵�
 - 「AI 科学家」近 20 万用户——验证科研聊天化的市场可行性
 
 ### 同级（横向 / 并列）
-- [[OpenClaw-使用案例与技巧]]：OpenClaw（龙虾）的具体应用——本篇是其「数字生命雏形」理论框架
-- [[Agent-时代-架构师系统能力]]：Agent 时代架构师能力图谱——本篇「FDE 岗位拆解」是其中组织能力章节的具体落地
-- [[Good-AI-PM-Bad-AI-PM]]：AI 时代 PM 核心能力——本篇「什么不能被 AI 吞噬」是其商业护城河版
+- [[01-ai-agents/openclaw-shi-yong-an-li-ji-qiao]]：OpenClaw（龙虾）的具体应用——本篇是其「数字生命雏形」理论框架
+- [[01-ai-agents/Agent时代架构师系统能力]]：Agent 时代架构师能力图谱——本篇「FDE 岗位拆解」是其中组织能力章节的具体落地
+- [[01-ai-agents/good-ai-pm-bad-ai-pm]]：AI 时代 PM 核心能力——本篇「什么不能被 AI 吞噬」是其商业护城河版
 
 ## 关键产品矩阵（5 条产品线）
 

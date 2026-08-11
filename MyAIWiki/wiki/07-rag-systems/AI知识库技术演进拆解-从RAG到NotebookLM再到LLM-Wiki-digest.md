@@ -42,7 +42,7 @@ NotebookLM 不是“脱离 RAG”的新物种，而是把文档理解、多索�
 
 ## 适合关联的主题
 
-- [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]]
-- [[企业知识库认知底座]]
-- [[llm-agent-unified-memory-framework]]
-- [[karpathy-knowledge-system]]
+- [[01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain]]
+- [[06-ai-tech/企业知识库认知底座]]
+- [[01-ai-agents/llm-agent-unified-memory-framework]]
+- [[03-productivity/karpathy-knowledge-system]]

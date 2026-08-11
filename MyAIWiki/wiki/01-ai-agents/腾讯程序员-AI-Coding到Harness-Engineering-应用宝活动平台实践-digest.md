@@ -1,7 +1,15 @@
 ---
 title: 从 AI Coding 到 Harness Engineering 应用宝活动平台端到端实践(速读摘要)
 category: 01-ai-agents
-tags: [#主题/Harness, #主题/AI-Agent, #主题/知识库, #主题/端到端开发, #主题/多Agent, #主题/工程实践, #主题/腾讯, #场景/活动平台]
+tags:
+  - 主题/Harness
+  - 主题/AI-Agent
+  - 主题/知识库
+  - 主题/端到端开发
+  - 主题/多Agent
+  - 主题/工程实践
+  - 主题/腾讯
+  - 场景/活动平台
 type: digest
 date: 2026-07-05
 source: 微信公众号 / 腾讯程序员 2026-07-05(腾讯应用宝活动平台团队 / zimingxing、kinglongli、yifhao)
@@ -42,6 +50,6 @@ source: 微信公众号 / 腾讯程序员 2026-07-05(腾讯应用宝活动平台
 
 ## 关联 + 备注
 
-**关联**:Harness 主线 [[Harness工程AgentLoop]] / [[HarnessEngineering企业级实战]] / [[阿里云开发者-淘宝主播Agent的Harness工程实战]] / [[0xCodez-Agent-Harness-14-Steps]] / [[harness-engineering]] | 端到端 [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] / [[Hermes-Agent重构得物数仓工作流]] | Loop [[Loop-Engineering-验证才是瓶颈]] / [[Addy-Osmani-Loop-Engineering]] | 任务拆解 [[Leeka-Task-Decomposition-Agentic-Workflow]] | AI Coding 范式 [[Code-is-cheap-AI-Native-五倍效率]] / [[字节跳动洪定坤-AI-Coding的实践与探索]] | 多 Agent [[OpenClaw-vs-Hermes-多-Agent-架构设计]] / [[从零设计生产级-Multi-Agent-Harness]]
+**关联**:Harness 主线 [[01-ai-agents/Harness工程AgentLoop]] / [[01-ai-agents/HarnessEngineering企业级实战]] / [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] / [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[01-ai-agents/harness-engineering]] | 端到端 [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] / [[01-ai-agents/Hermes-Agent重构得物数仓工作流]] | Loop [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] / [[02-ai-coding/Addy-Osmani-Loop-Engineering]] | 任务拆解 [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]] | AI Coding 范式 [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]] / [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] | 多 Agent [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]] / [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]
 
 **备注**:作者 zimingxing / kinglongli / yifhao 腾讯应用宝活动平台团队 | 仅覆盖 Go 后台业务 | 整套体系重度依赖 codebuddy cli | 团队自评"刚起步能跑,缺自进化/评估/工具解耦" | 7 条核心原则是沉淀式非实证 | 文末附 Mac 应用宝推广与正文无关

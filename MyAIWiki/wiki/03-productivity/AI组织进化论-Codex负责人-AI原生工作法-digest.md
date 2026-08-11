@@ -42,4 +42,4 @@
 - **一手**：Peter Yang 访谈 OpenAI Codex 产品负责人 Alex + 开发者体验负责人 Romain
 - **未独立验证**：4 条普通团队原则未在 Codex 之外团队验证；"短期 8 周 + 长期判断"是 Codex 内部节奏未给公开依据
 - **配套**：raw + wiki 编译页（≤8K）+ wiki digest（本文件 ≤4K）
-- **标签**：#主题/AI时代工作方法 #主题/AI原生团队 #主题/Codex-OpenAI #主题/Agent优先 #主题/工作方法论 #场景/Seetong借鉴 #作者/AI组织进化论 #公司/OpenAI #产品/Codex
+- **标签**： #主题/AI时代工作方法 #主题/AI原生团队 #主题/Codex-OpenAI #主题/Agent优先 #主题/工作方法论 #场景/Seetong借鉴 #作者/AI组织进化论 #公司/OpenAI #产品/Codex

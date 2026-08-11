@@ -1,9 +1,19 @@
 ---
 title: 端到端10倍提效：英伟达研发团队如何用Agent重塑工作流
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/AI-Coding, #主题/工作流, #主题/组织提效, #节点/端到端闭环, #节点/数字工程师, #节点/可验证反馈, #节点/人机分工, #场景/企业研发, #场景/公众号长文]
+tags:
+  - 主题/AI-Agent
+  - 主题/AI-Coding
+  - 主题/工作流
+  - 主题/组织提效
+  - 节点/端到端闭环
+  - 节点/数字工程师
+  - 节点/可验证反馈
+  - 节点/人机分工
+  - 场景/企业研发
+  - 场景/公众号长文
 nodes: [端到端工作链, 数字工程师, 任务四段式, 执行反馈闭环, 主动暴露遗漏, 证据网络, 人机责任分工, Agent落地四条件]
-links: [[OpenAI最新报告解读-Codex正在进入知识工作的主战场]], [[Anthropic-40万场-专业杠杆]], [[Lilian-Weng-Harness-Engineering-自我改进]], [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]], [[Loop-Engineering-验证才是瓶颈]], [[HarnessEngineering企业级实战]]
+links: [[02-ai-coding/OpenAI最新报告解读-Codex正在进入知识工作的主战场]], [[01-ai-agents/Anthropic-40万场-专业杠杆]], [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]], [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]], [[01-ai-agents/HarnessEngineering企业级实战]]
 date: 2026-08-05
 source: 微信公众号 / AI组织进化论
 source_wechat: https://mp.weixin.qq.com/s/qKOScQgH8cDQSWuYDsoAUA
@@ -24,7 +34,7 @@ source_original: https://openai.com/index/nvidia/
 ## 分类提炼
 
 - 场景：企业研发、内部工具、机器学习研究、AI 原生工作流
-- 标签：#主题/AI-Agent #主题/AI-Coding #主题/工作流 #主题/组织提效 #场景/企业研发
+- 标签： #主题/AI-Agent #主题/AI-Coding #主题/工作流 #主题/组织提效 #场景/企业研发
 - 类型：客户案例解读 / Agent 工作流实证
 - 证据等级：二手解读；关键数字来自 OpenAI 客户案例和受访者陈述
 
@@ -43,20 +53,20 @@ source_original: https://openai.com/index/nvidia/
 
 ### 上游（基于 / 来自）
 
-- [[OpenAI最新报告解读-Codex正在进入知识工作的主战场]]：从 Codex 进入知识工作，延伸到企业研发与科研端到端流程。
-- [[Anthropic-40万场-专业杠杆]]：同为 Agent 使用实证，说明专业判断和完整任务链仍由人设定方向。
-- [[Lilian-Weng-Harness-Engineering-自我改进]]：提供“模型之外的 Harness 决定执行质量”的工程理论背景。
+- [[02-ai-coding/OpenAI最新报告解读-Codex正在进入知识工作的主战场]]：从 Codex 进入知识工作，延伸到企业研发与科研端到端流程。
+- [[01-ai-agents/Anthropic-40万场-专业杠杆]]：同为 Agent 使用实证，说明专业判断和完整任务链仍由人设定方向。
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]：提供“模型之外的 Harness 决定执行质量”的工程理论背景。
 
 ### 下游（应用于 / 验证于）
 
-- [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]：把目标、约束、执行和验收落成企业需求 Agent 的分层流程。
-- [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：用状态文件、专家 Agent、DAG 和脚本把长链路工程化。
-- [[Loop-Engineering-验证才是瓶颈]]：补足自动反馈和可验证停止条件，约束 Agent 的持续执行。
+- [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]：把目标、约束、执行和验收落成企业需求 Agent 的分层流程。
+- [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：用状态文件、专家 Agent、DAG 和脚本把长链路工程化。
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]：补足自动反馈和可验证停止条件，约束 Agent 的持续执行。
 
 ### 同级（横向 / 并列）
 
-- [[HarnessEngineering企业级实战]]：同样关注从原型推进到生产，而本文更突出 NVIDIA 的工程与科研双场景。
-- [[OpenAI-AI原生组织-4条工作原则]]：从组织原则角度解释为什么工具接入会进一步改变工作方式和需求边界。
+- [[01-ai-agents/HarnessEngineering企业级实战]]：同样关注从原型推进到生产，而本文更突出 NVIDIA 的工程与科研双场景。
+- [[06-ai-tech/OpenAI-AI原生组织-4条工作原则]]：从组织原则角度解释为什么工具接入会进一步改变工作方式和需求边界。
 
 ## 正文要点
 

@@ -1,7 +1,13 @@
 ---
 title: 叶小钗 Agent Loop vs Graph Engineering - Digest
 category: 01-ai-agents
-tags: [#主题/Agent架构, #主题/Loop-Engineering, #主题/Graph-Engineering, #节点/AI炒冷饭, #节点/Node-Edge, #节点/数据依赖]
+tags:
+  - 主题/Agent架构
+  - 主题/Loop-Engineering
+  - 主题/Graph-Engineering
+  - 节点/AI炒冷饭
+  - 节点/Node-Edge
+  - 节点/数据依赖
 date: 2026-07-30
 ---
 
@@ -49,6 +55,6 @@ date: 2026-07-30
 
 ## 关联与备注
 
-**关联**：[[AI-团队协作-Loop-SDD]] [[叶小钗-AI原生组织方法论-2026版]] [[生产级Agent全景]] 同作者主线；[[AdrianPunk115-Graph-Engineering-从0到1小白完整教程]] [[图工程-Graph-Engineering-来了-LangChain说不是新东西]] 同期 Graph；[[万字长文拆解Agent-架构设计-四-多-Agent-协作]] Graph 实践；[[Harness工程AgentLoop]] [[Loop-Engineering-验证才是瓶颈]] Loop 一致。
+**关联**：[[01-ai-agents/AI-团队协作-Loop-SDD]] [[02-ai-coding/叶小钗-AI原生组织方法论-2026版]] [[02-ai-coding/生产级Agent全景]] 同作者主线；[[01-ai-agents/AdrianPunk115-Graph-Engineering-从0到1小白完整教程]] [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]] 同期 Graph；[[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]] Graph 实践；[[01-ai-agents/Harness工程AgentLoop]] [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] Loop 一致。
 
 **备注与限制**：作者个人观点无实验数据；立场偏保守与同期鼓吹 Graph 相反，Seetong 借鉴应交叉对照；7/18 Steinberger 推文只是提问不代表 OpenClaw 已转向 Graph；本文最大元判断 = "Loop vs Graph 是个伪命题"——不应陷入"哪个新就用哪个"循环。

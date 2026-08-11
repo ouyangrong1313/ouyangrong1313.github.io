@@ -10,9 +10,9 @@ captured: 2026-06-14
 
 > 拆解 7 角度 + 21 个开头钩子 + 6 类写作手法
 
-完整版见 [[../../raw/2026-06-PM-Skills-Marketplace-产品经理必备skill-digest|raw/digest 原文]]。
+完整版见 [[../../raw/PM-Skills-Marketplace-产品经理必备skill-digest|raw/digest 原文]]。
 
-正式条目见 [[PM-Skills-Marketplace-产品经理必备skill]]。
+正式条目见 [[02-ai-coding/PM-Skills-Marketplace-产品经理必备skill]]。
 
 ---
 
@@ -94,20 +94,20 @@ captured: 2026-06-14
 
 ## 相关链接
 
-- [[PM-Skills-Marketplace-产品经理必备skill]] — 正式 wiki 条目
-- [[mattpocock-skills]]
-- [[Skill-Self-Evolution]]
+- [[02-ai-coding/PM-Skills-Marketplace-产品经理必备skill]] — 正式 wiki 条目
+- [[02-ai-coding/mattpocock-skills]]
+- [[01-ai-agents/Skill-Self-Evolution]]
 - [原文](https://mp.weixin.qq.com/s/7t3pCljov14VbIDXcsYuBw)
 
 ---
 
 标签：
-#主题/AI-Coding
-#主题/产品经理
-#主题/Skill
-#手法/案例叙事
-#手法/痛点共鸣
-#手法/数据冲击
-#场景/工具推荐
-#场景/方法论落地
-#场景/公众号长文
+ #主题/AI-Coding
+ #主题/产品经理
+ #主题/Skill
+ #手法/案例叙事
+ #手法/痛点共鸣
+ #手法/数据冲击
+ #场景/工具推荐
+ #场景/方法论落地
+ #场景/公众号长文

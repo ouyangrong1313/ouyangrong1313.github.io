@@ -1,9 +1,14 @@
 ---
 title: 透明玻璃——写作的最高境界 - Digest
 category: 05-content-creation
-tags: [#主题/写作方法论, #主题/反AI焦虑, #节点/透明玻璃核心, #节点/精准表达-5-技巧, #场景/速读摘要]
+tags:
+  - 主题/写作方法论
+  - 主题/反AI焦虑
+  - 节点/透明玻璃核心
+  - 节点/精准表达-5-技巧
+  - 场景/速读摘要
 nodes: [透明-玻璃-核心定义, 精准-凝练-自然, 三阶段-简单-绚丽-简单, 减法-思维, 工匠-精神, 精准表达-5-技巧]
-links: [[透明玻璃-写作的最高境界]]
+links: [[05-content-creation/透明玻璃-写作的最高境界]]
 date: 2026-06-11
 source: 微信公众号 / 红豆范
 ---
@@ -79,9 +84,9 @@ source: 微信公众号 / 红豆范
 
 ## 关联
 
-- [[透明玻璃-写作的最高境界]] - 完整编译版
-- [[ogilvy-10-writing-rules-with-claude-skill]] - 经典写作理论 + AI 复活范式
-- [[与AI一起做产品的六条原则]] - AI 时代产品设计("人做减法"的工程版)
+- [[05-content-creation/透明玻璃-写作的最高境界]] - 完整编译版
+- [[05-content-creation/ogilvy-10-writing-rules-with-claude-skill]] - 经典写作理论 + AI 复活范式
+- [[03-productivity/与AI一起做产品的六条原则]] - AI 时代产品设计("人做减法"的工程版)
 
 ## 备注
 

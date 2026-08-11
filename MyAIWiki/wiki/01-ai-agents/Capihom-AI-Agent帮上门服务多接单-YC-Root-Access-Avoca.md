@@ -1,9 +1,21 @@
 ---
 title: Capihom：AI Agent 正在帮上门服务多接单（YC Root Access / Avoca）
 category: 01-ai-agents
-tags: [#主题/AI-Agent商业化, #主题/垂直行业落地, #主题/实体经济, #主题/AI-Workforce, #节点/Avoca, #节点/YC, #节点/FDE, #手法/预算归属迁移, #手法/客户痴迷, #场景/上门服务, #场景/Seetong借鉴, #场景/客服AI化]
+tags:
+  - 主题/AI-Agent商业化
+  - 主题/垂直行业落地
+  - 主题/实体经济
+  - 主题/AI-Workforce
+  - 节点/Avoca
+  - 节点/YC
+  - 节点/FDE
+  - 手法/预算归属迁移
+  - 手法/客户痴迷
+  - 场景/上门服务
+  - 场景/Seetong借鉴
+  - 场景/客服AI化
 nodes: [AI-workforce重新定位预算归属, 垂直实体经济切入-高客单价高电话依赖, 85收入来自电话-单电话2-3万美元, AI先接60-70-nuisance-calls, 系统化客户痴迷-从100餐厅到上门服务, 3个客户爱你原则, system-of-record走向intelligence-action, forward-deployed-engineering]
-links: [[Leeka-Task-Decomposition-Agentic-Workflow]], [[小龙虾-OpenClaw-Agent价值与边界]], [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[深思圈-消费护城河不是注意力是环境]], [[Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]], [[宁向东-企业家凭什么能看见别人看不见的机会]]
+links: [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]], [[01-ai-agents/小龙虾-OpenClaw-Agent价值与边界]], [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[06-ai-tech/深思圈-消费护城河不是注意力是环境]], [[02-ai-coding/Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]], [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]]
 date: 2026-07-01
 source: 微信公众号「Capihom」2026-07-01 推送；硅谷 AI 创业与科技播客总结类；节目来源 YC Root Access《The AI Agents Helping Home Services Book More Jobs》（原视频 https://www.youtube.com/watch?v=EHp1HgwCo9I）；受访者 Apurva Shrivastava + Tyson Chen（Avoca 联合创始人 / YC W23）；采访者 Garry Tan（Y Combinator CEO）
 ---
@@ -36,22 +48,22 @@ source: 微信公众号「Capihom」2026-07-01 推送；硅谷 AI 创业与科�
 
 ### 上游（基于 / 来自）
 - **YC Root Access 节目**：Garry Tan（YC CEO）主持的硅谷 AI 创业播客；本次是 Avoca 创始人对谈
-- **AI 时代预算迁移主线**：与 [[Nikesh-Arora-模型过剩与记忆护城河]]（护城河迁移到 context graph）同主线，**本文更具体到"垂直行业商业化"**
+- **AI 时代预算迁移主线**：与 [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]（护城河迁移到 context graph）同主线，**本文更具体到"垂直行业商业化"**
 - **丰田生产系统 kaizen**：Garry 用的类比——一线员工参与改造流程，重复枯燥的工位会变成可优化的系统
 - **Nuro human-in-the-loop 经验**：Tyson 早期在自动驾驶公司的 context engineering 经验
 - **Retool / Palantir FDE 经验**：forward deployed engineering 的方法论起源
 
 ### 下游（应用于 / 验证于）
-- **现有 [[Leeka-Task-Decomposition-Agentic-Workflow]]**（任务拆解）——本文是"垂直行业商业化"视角，与 Leeka "任务拆解 + 标准化 SOP"形成**"商业化路径"+"任务拆解"互补**
-- **现有 [[小龙虾-OpenClaw-Agent价值与边界]]**（Agent 价值与边界）——本文印证"不存在通用 Agent"：Avoca 只做"上门服务公司接电话"一个窄切口；与"翻译 3 类真实需求"中的"高价值专业决策"+"受控的自由"呼应
-- **现有 [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]**（端到端 Agent）——本文给出**商业化阶段的端到端**：从 system of record 走向 system of action
-- **现有 [[清华沈阳-自进化AI新物种]]**（自进化 AI）——本文中 FDE 和"客户痴迷"是自进化 AI 的具体落地路径
+- **现有 [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]]**（任务拆解）——本文是"垂直行业商业化"视角，与 Leeka "任务拆解 + 标准化 SOP"形成**"商业化路径"+"任务拆解"互补**
+- **现有 [[01-ai-agents/小龙虾-OpenClaw-Agent价值与边界]]**（Agent 价值与边界）——本文印证"不存在通用 Agent"：Avoca 只做"上门服务公司接电话"一个窄切口；与"翻译 3 类真实需求"中的"高价值专业决策"+"受控的自由"呼应
+- **现有 [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]**（端到端 Agent）——本文给出**商业化阶段的端到端**：从 system of record 走向 system of action
+- **现有 [[01-ai-agents/清华沈阳-自进化AI新物种]]**（自进化 AI）——本文中 FDE 和"客户痴迷"是自进化 AI 的具体落地路径
 - **AI 时代的"prompt engineer" + "agent trainer" 职业**：本文中"原来的 CSR 被提到调度岗位 / 训练 AI agent"是这一职业路径的早期实证
 
 ### 同级（横向 / 并列）
-- [[Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]] —— **同 Capihom 编译系列**，本文补完偏"产品工作形态"之外的"AI 创业商业化路径"维度
-- [[深思圈-消费护城河不是注意力是环境]] —— 06-ai-tech 商业哲学主线
-- [[宁向东-企业家凭什么能看见别人看不见的机会]] —— 03-productivity 认知方法论主线（同日编译）
+- [[02-ai-coding/Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]] —— **同 Capihom 编译系列**，本文补完偏"产品工作形态"之外的"AI 创业商业化路径"维度
+- [[06-ai-tech/深思圈-消费护城河不是注意力是环境]] —— 06-ai-tech 商业哲学主线
+- [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]] —— 03-productivity 认知方法论主线（同日编译）
 
 ## 5 个对 Seetong 团队可借鉴动作
 
@@ -72,6 +84,6 @@ source: 微信公众号「Capihom」2026-07-01 推送；硅谷 AI 创业与科�
 
 ---
 
-**相关链接**：原始 raw `raw/2026-07-Capihom-AI-Agent帮上门服务多接单/` | 原文摘要同目录 `-digest.md` | 本页 digest `wiki/01-ai-agents/Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca-digest.md` | 强关联 [[Leeka-Task-Decomposition-Agentic-Workflow]] [[小龙虾-OpenClaw-Agent价值与边界]] [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] [[Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]] [[宁向东-企业家凭什么能看见别人看不见的机会]]
+**相关链接**：原始 raw `raw/Capihom-AI-Agent帮上门服务多接单.md` | 原文摘要 `raw/Capihom-AI-Agent帮上门服务多接单-digest.md` | 本页 digest `wiki/01-ai-agents/Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca-digest.md` | 强关联 [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]] [[01-ai-agents/小龙虾-OpenClaw-Agent价值与边界]] [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] [[02-ai-coding/Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]] [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]]
 
 **透明玻璃自检**：wiki 5.3K(≤8K) ✓ / digest 2.6K(≤4K) ✓ / 节点 8(6-10) ✓ / H2 5(≤5) ✓ / 表格 0(≤2) ✓ / 0 陈词 ✓ ⭐⭐⭐

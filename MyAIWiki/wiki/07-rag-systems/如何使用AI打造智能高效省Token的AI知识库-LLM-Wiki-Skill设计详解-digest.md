@@ -42,7 +42,7 @@
   - 已经做了：链接抓取 + 按分类整理到 `wiki/<分类>/`
   - 还没做：独立的"知识节点"层、grep 命令式检索、每日发芽报告、主题融合生成
 - 文章作者 moss 同时也是 `构建 LLM-Wiki 智能知识库` 那篇的作者，这篇是它的**实操/工程化**篇
-- 跟 [[AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]] 配套看：上篇讲"为什么 LLM-Wiki 是趋势"，本篇讲"具体怎么实现"
+- 跟 [[07-rag-systems/AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]] 配套看：上篇讲"为什么 LLM-Wiki 是趋势"，本篇讲"具体怎么实现"
 
 ## 落地 MyAIWiki 的具体改造点
 
@@ -56,11 +56,11 @@
 
 ## 适合关联的主题
 
-- [[AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]]
-- [[构建LLM-Wiki智能知识库-实现AI辅助写作工作流]]
-- [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]]
-- [[hermes-obsidian-llm-wiki-knowledge-base]]
-- [[ai-personal-knowledge-base-problems]]
-- [[rag-fundamentals]]
-- [[llm-agent-unified-memory-framework]]
-- [[claude-obsidian-second-brain]]
+- [[07-rag-systems/AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]]
+- [[07-rag-systems/构建LLM-Wiki智能知识库-实现AI辅助写作工作流]]
+- [[01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain]]
+- [[01-ai-agents/hermes-obsidian-llm-wiki-knowledge-base]]
+- [[01-ai-agents/ai-personal-knowledge-base-problems]]
+- [[07-rag-systems/rag-fundamentals]]
+- [[01-ai-agents/llm-agent-unified-memory-framework]]
+- [[02-ai-coding/claude-obsidian-second-brain]]

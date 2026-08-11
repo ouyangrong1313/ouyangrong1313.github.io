@@ -1,16 +1,21 @@
 ---
 title: Agent评测漫谈 —— 由浅入深讲解Agent评测（速查）
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/Agent评测, #主题/长程Agent, #主题/可观测性, #主题/评测基础设施]
+tags:
+  - 主题/AI-Agent
+  - 主题/Agent评测
+  - 主题/长程Agent
+  - 主题/可观测性
+  - 主题/评测基础设施
 nodes: [Response-Evaluation, Trajectory-Evaluation, Rubric二元化, Good-Bad-Case飞轮, Task评测, Evaluation-Harness, 长程评测基础设施]
-links: [[Agent评测漫谈-由浅入深讲解Agent评测]], [[腾讯-AI-Agent-Skill-测评方案落地]], [[用Agent评测思路管理AI-Coding-31万行代码重构实践]], [[研发工程化升级-Coding-Agent-AI-Testing与Verification-First]]
+links: [[01-ai-agents/Agent评测漫谈-由浅入深讲解Agent评测]], [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]], [[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]], [[02-ai-coding/研发工程化升级-Coding-Agent-AI-Testing与Verification-First]]
 date: 2026-08-06
 source: 微信公众号「美团技术团队」/ 图灵Agent评测
 ---
 
 # Agent评测漫谈 —— 由浅入深讲解Agent评测（速查）
 
-> 原文：[[Agent评测漫谈-由浅入深讲解Agent评测]]；作者图灵Agent评测；来源「美团技术团队」；发布时间 2026-08-06。
+> 原文：[[01-ai-agents/Agent评测漫谈-由浅入深讲解Agent评测]]；作者图灵Agent评测；来源「美团技术团队」；发布时间 2026-08-06。
 
 ## 一句话总结
 
@@ -54,6 +59,6 @@ Agent 评测从“回答是否正确”升级为“任务是否完成、过程�
 
 ## 关联
 
-- [[腾讯-AI-Agent-Skill-测评方案落地]]：评分器、五维指标、用例基线和 Trace。
-- [[用Agent评测思路管理AI-Coding-31万行代码重构实践]]：评测驱动工程改造。
-- [[研发工程化升级-Coding-Agent-AI-Testing与Verification-First]]：测试、验证前移和分层信任。
+- [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]：评分器、五维指标、用例基线和 Trace。
+- [[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]]：评测驱动工程改造。
+- [[02-ai-coding/研发工程化升级-Coding-Agent-AI-Testing与Verification-First]]：测试、验证前移和分层信任。

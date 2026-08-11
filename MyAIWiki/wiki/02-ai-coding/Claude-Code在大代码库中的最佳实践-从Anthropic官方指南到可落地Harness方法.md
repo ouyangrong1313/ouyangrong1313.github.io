@@ -409,12 +409,12 @@ Claude Code 在团队里推广得顺，通常都有明确责任人来维护：
 
 ## 关联阅读
 
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
-- [[OpenClaw的正确打开方式]]
-- [[从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]]
-- [[用Agent评测思路管理AI-Coding-31万行代码重构实践]]
-- [[谷歌开源agent-skills]]
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+- [[01-ai-agents/OpenClaw的正确打开方式]]
+- [[02-ai-coding/从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]]
+- [[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]]
+- [[02-ai-coding/谷歌开源agent-skills]]
 
 ## 标签
 
-#主题/AI-Coding #主题/Claude-Code #主题/Harness-Engineering #主题/Agentic-Search #来源/微信公众号
+ #主题/AI-Coding #主题/Claude-Code #主题/Harness-Engineering #主题/Agentic-Search #来源/微信公众号

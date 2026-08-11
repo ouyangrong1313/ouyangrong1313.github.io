@@ -2,24 +2,24 @@
 title: OpenAI-AI原生组织-4条工作原则
 category: 06-ai-tech
 tags:
-  - "#主题/AI原生组织"
-  - "#主题/OpenAI"
-  - "#主题/工作原则"
-  - "#主题/Update-Latency"
-  - "#主题/Agent-与组织管理"
-  - "#节点/Find-a-way"
-  - "#节点/Creativity-over-control"
-  - "#节点/Update-quickly"
-  - "#节点/Intense-focus"
-  - "#作者/AI组织进化论"
-  - "#来源/OpenAI-Careers"
+  - 主题/AI原生组织
+  - 主题/OpenAI
+  - 主题/工作原则
+  - 主题/Update-Latency
+  - 主题/Agent-与组织管理
+  - 节点/Find-a-way
+  - 节点/Creativity-over-control
+  - 节点/Update-quickly
+  - 节点/Intense-focus
+  - 作者/AI组织进化论
+  - 来源/OpenAI-Careers
 nodes: OpenAI真正护城河｜Find-a-way｜Creativity-over-control｜Update-quickly｜Intense-focus｜Update-Latency｜Agent与组织同构｜AI原生vs传统组织
 links:
-  - "[[麦肯锡-AI提效只是第一波红利]]"
-  - "[[Nikesh-Arora-模型过剩与记忆护城河]]"
-  - "[[用AI解决真正的业务问题]]"
-  - "[[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]"
-  - "[[Capihom-AI-Native企业-Agent团队和AI-Factory重写公司体系]]"
+  - "[[06-ai-tech/麦肯锡-AI提效只是第一波红利]]"
+  - "[[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]"
+  - "[[06-ai-tech/用AI解决真正的业务问题]]"
+  - "[[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]"
+  - "[[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]"
 date: 2026-07-15
 source: 微信公众号「AI组织进化论」2026-07 推送 / 综合 OpenAI Careers 页面 Operating Principles + Codex 系列文档 / 原文 https://mp.weixin.qq.com/s/nDPqVJkzdGkwnSv_QSgtgw
 ---
@@ -65,7 +65,7 @@ source: 微信公众号「AI组织进化论」2026-07 推送 / 综合 OpenAI Car
 
 ### 同级（横向 / 并列）
 
-- [[麦肯锡-AI提效只是第一波红利]]（咨询机构视角对偶）/ [[Nikesh-Arora-模型过剩与记忆护城河]]（Palo Alto CEO 视角）/ [[用AI解决真正的业务问题]]（媒体视角）/ [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]（Anthropic 实证对照）/ [[Capihom-AI-Native企业-Agent团队和AI-Factory重写公司体系]]（Groupon 工程主管实证）
+- [[06-ai-tech/麦肯锡-AI提效只是第一波红利]]（咨询机构视角对偶）/ [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]（Palo Alto CEO 视角）/ [[06-ai-tech/用AI解决真正的业务问题]]（媒体视角）/ [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]（Anthropic 实证对照）/ [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]（Groupon 工程主管实证）
 
 ## 正文要点 + Seetong 借鉴动作
 
@@ -92,9 +92,9 @@ source: 微信公众号「AI组织进化论」2026-07 推送 / 综合 OpenAI Car
 
 **相关链接**：
 
-- 原文 raw/digest 见 `raw/2026-07-AI组织进化论-OpenAI-AI原生组织-4条工作原则*.md`
+- 原文 raw/digest 见 `raw/AI组织进化论-OpenAI-AI原生组织-4条工作原则*.md`
 - Wiki digest 见 `wiki/06-ai-tech/OpenAI-AI原生组织-4条工作原则-digest.md`
-- 同分类已挂载：[[麦肯锡-AI提效只是第一波红利]] [[Nikesh-Arora-模型过剩与记忆护城河]] [[用AI解决真正的业务问题]]
+- 同分类已挂载：[[06-ai-tech/麦肯锡-AI提效只是第一波红利]] [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]] [[06-ai-tech/用AI解决真正的业务问题]]
 
 ---
 

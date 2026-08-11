@@ -4,22 +4,27 @@ author: AI组织进化论（编译自 Anthropic 官方报告）
 date: 2026-06-25
 slug: Anthropic-40万场-专业杠杆
 category: 01-ai-agents
-tags: [Agent落地, 实证研究, 专业判断, 专家杠杆, 70/20分工]
+tags:
+  - Agent落地
+  - 实证研究
+  - 专业判断
+  - 专家杠杆
+  - 70/20分工
 rating: ⭐⭐⭐
 source: AI组织进化论 2026-06 编译
 source_wechat: https://mp.weixin.qq.com/s/IdgwhwlIf7Icf5VmLS35yA
 report: 《Agentic coding and persistent returns to expertise》2026-06-16
 data: 2025-10~2026-04 / 40万场 / 23.5万用户
-digest: "[[Anthropic-40万场-专业杠杆-digest]]"
+digest: "[[01-ai-agents/Anthropic-40万场-专业杠杆-digest]]"
 related:
-  - "[[清华沈阳-自进化AI新物种]]"
-  - "[[章文龙-AI分身时代-在场重新定价]]"
-  - "[[Nikesh-Arora-模型过剩与记忆护城河]]"
-  - "[[Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]"
-  - "[[Multica-AI-Native-组织-人是最慢的节点]]"
-  - "[[AI-PM核心技能-观测评估与反馈闭环]]"
-  - "[[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]"
-  - "[[0xCodez-Agent-Harness-14-Steps]]"
+  - "[[01-ai-agents/清华沈阳-自进化AI新物种]]"
+  - "[[06-ai-tech/章文龙-AI分身时代-在场重新定价]]"
+  - "[[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]"
+  - "[[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]"
+  - "[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]"
+  - "[[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]]"
+  - "[[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]"
+  - "[[01-ai-agents/0xCodez-Agent-Harness-14-Steps]]"
 ---
 
 # Anthropic 40 万场对话研究：专业杠杆
@@ -105,8 +110,8 @@ Anthropic 不按职位判断专家，按**任务中表现**的 3 个信号：①
 
 **关联图谱**：
 
-- **上游/平行**：[[清华沈阳-自进化AI新物种]]（不可解释但可验证=专家才能建"验证器"）/ [[章文龙-AI分身时代-在场重新定价]]（"懂业务的人更值钱"="在场"在企业端的价值回归）/ [[Nikesh-Arora-模型过剩与记忆护城河]]（模型过剩 vs 专家杠杆，互为正反）/ [[Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]（知识=护城河的具体形态）/ [[Multica-AI-Native-组织-人是最慢的节点]]（"人是最慢节点" vs "专家是最值钱节点"）
-- **下游（Seetong 落地）**：[[AI-PM核心技能-观测评估与反馈闭环]]（观测评估=专家"知道验证什么"的能力）/ [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]（Agent 端到端 4 层="完整任务链"工程化）/ [[0xCodez-Agent-Harness-14-Steps]]（Harness 14 步=70/20 决策分工的工程骨架）
+- **上游/平行**：[[01-ai-agents/清华沈阳-自进化AI新物种]]（不可解释但可验证=专家才能建"验证器"）/ [[06-ai-tech/章文龙-AI分身时代-在场重新定价]]（"懂业务的人更值钱"="在场"在企业端的价值回归）/ [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]（模型过剩 vs 专家杠杆，互为正反）/ [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]（知识=护城河的具体形态）/ [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]（"人是最慢节点" vs "专家是最值钱节点"）
+- **下游（Seetong 落地）**：[[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]]（观测评估=专家"知道验证什么"的能力）/ [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]（Agent 端到端 4 层="完整任务链"工程化）/ [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]]（Harness 14 步=70/20 决策分工的工程骨架）
 
 ## 自检 / 限制 / 一句话带回去
 

@@ -1,7 +1,13 @@
 ---
 title: 面向 Skills 编程——淘宝企业购端到端研发提效实践(速读摘要)
 category: 02-ai-coding
-tags: [#主题/Skills编程, #主题/AI-Coding, #主题/工程实践, #主题/SDD, #主题/Agent-Skills, #场景/企业级落地]
+tags:
+  - 主题/Skills编程
+  - 主题/AI-Coding
+  - 主题/工程实践
+  - 主题/SDD
+  - 主题/Agent-Skills
+  - 场景/企业级落地
 type: digest
 date: 2026-06-18
 source: 微信公众号 / 大淘宝技术(官亭) 2026-06-17 14:20
@@ -34,11 +40,11 @@ source: 微信公众号 / 大淘宝技术(官亭) 2026-06-17 14:20
 1. **用"质量瓶颈在知识工程"做体检**:Skill 成功率卡在 60-70%?**优先排查 references 完整度**,不换模型——50%→90% 全靠知识注入
 2. **复制"三层架构"重写 Seetong 适配层 Skill**:Seetong 三端适配——**原子能力层**(API/Socket/DB)+ **模板层**(端口无关流程)+ **适配层**(AI 填充端差异),预期代码量 -60%
 3. **借鉴 ADJUSTMENT_PLAN 五步闭环建高频问题约束库**:Seetong 11 类 iOS 6 大漏洞/4G 6 类问题列表沉淀为 Skill 约束(对应 [[seetong-ios-quality-review]] / [[seetong-batch-issue-rootcause-analysis]])
-4. **"事前约束→运行时约束→事后审查→人工卡点"作为 SOP 四层防线**:事前 references 禁止项 + 运行时 Hook 拦截(对应 [[阿里云开发者-淘宝主播Agent的Harness工程实战]] 五层防护)+ 事后 Trace 审查 + 人工卡点(改版本号/主分支二次确认)
+4. **"事前约束→运行时约束→事后审查→人工卡点"作为 SOP 四层防线**:事前 references 禁止项 + 运行时 Hook 拦截(对应 [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] 五层防护)+ 事后 Trace 审查 + 人工卡点(改版本号/主分支二次确认)
 5. **写"Seetong 端到端生码平台" P0 小试点**:TAPD→神策→友盟→反馈→周报(对应 [[seetong-tapd-version-review]] + [[seetong-daily-briefing]] + [[seetong-weekly-report]]),7 天内成功率 baseline→80%
 
 ## 关联 + 备注
 
-**关联**:阿里淘系 [[阿里云开发者-淘宝主播Agent的Harness工程实战]] / [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] | Skill [[Skill-Self-Evolution]] / [[Agent Skills 系统性综述]] / [[谷歌开源 agent-skills]] / [[Addy-Osmani-agent-skills-设计哲学]] | SDD/Spec [[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] / [[AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]] | Loop [[Loop-Engineering-验证才是瓶颈]] | 评测 [[腾讯-AI-Agent-Skill-测评方案落地]]
+**关联**:阿里淘系 [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] / [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] | Skill [[01-ai-agents/Skill-Self-Evolution]] / [[01-ai-agents/agent-skills-systematic-survey]] / [[02-ai-coding/谷歌开源agent-skills]] / [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] | SDD/Spec [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] / [[02-ai-coding/AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]] | Loop [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] | 评测 [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]
 
 **备注**:作者官亭,招聘 zezhou.jzz@taobao.com | 阶段 5 未规模化 | "字段遗漏率 0%"多项目稳定待验证

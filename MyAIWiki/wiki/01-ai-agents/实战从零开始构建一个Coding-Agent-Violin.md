@@ -1,9 +1,16 @@
 ---
 title: 实战从零开始构建一个Coding Agent：Violin
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/AI-Coding, #主题/Agent-Loop, #主题/Agent-架构, #主题/Skill, #主题/插件系统, #场景/公众号长文]
+tags:
+  - 主题/AI-Agent
+  - 主题/AI-Coding
+  - 主题/Agent-Loop
+  - 主题/Agent-架构
+  - 主题/Skill
+  - 主题/插件系统
+  - 场景/公众号长文
 nodes: [Agent-Loop, 模型适配层, Tool-System, Session树, Context-Compaction, Resources注入, EventBus插件, TCP-JSON-Lines, Zig-Python分层, Agent安全边界]
-links: [[Harness工程AgentLoop]], [[WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]], [[Lilian-Weng-Harness-Engineering-自我改进]], [[若飞-Agent-记忆与可验证自我改进怎么设计]], [[Hermes-Agent重构得物数仓工作流]]
+links: [[01-ai-agents/Harness工程AgentLoop]], [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]], [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]], [[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]], [[01-ai-agents/Hermes-Agent重构得物数仓工作流]]
 date: 2026-08-06
 source: 微信公众号 / 得物技术
 source_wechat: https://mp.weixin.qq.com/s/yFHRoAi6fe2dduXXlM8Tzw
@@ -24,7 +31,7 @@ source_wechat: https://mp.weixin.qq.com/s/yFHRoAi6fe2dduXXlM8Tzw
 ## 分类提炼
 
 - 场景：Coding Agent 学习、Agent Runtime 设计、个人 Agent 工程实践
-- 标签：#主题/AI-Agent #主题/AI-Coding #主题/Agent-Loop #主题/Agent-架构 #主题/Skill #主题/插件系统
+- 标签： #主题/AI-Agent #主题/AI-Coding #主题/Agent-Loop #主题/Agent-架构 #主题/Skill #主题/插件系统
 - 类型：源码/架构拆解 + toy project 实战 + 协议设计
 - 项目：Violin；Zig 服务端 / Python TUI 客户端；TCP + JSON Lines
 - 证据等级：作者项目实践与设计说明；不是成熟商用系统的性能或安全验证报告
@@ -47,20 +54,20 @@ source_wechat: https://mp.weixin.qq.com/s/yFHRoAi6fe2dduXXlM8Tzw
 ### 上游（基于 / 来自）
 
 - **Pi / how-pi-agent-works**：Violin 借鉴三层分离、EventBus、工具注册表、插件系统和 JSONL Session 的设计思路。
-- [[Harness工程AgentLoop]]：提供 Agent Loop 与 Harness 工程的概念背景，本文将其落到 Zig toy project 的模块边界。
-- [[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]]：同一 Agent Loop 主题的工程问题清单，补充本文未展开的治理与边界问题。
+- [[01-ai-agents/Harness工程AgentLoop]]：提供 Agent Loop 与 Harness 工程的概念背景，本文将其落到 Zig toy project 的模块边界。
+- [[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]]：同一 Agent Loop 主题的工程问题清单，补充本文未展开的治理与边界问题。
 
 ### 下游（应用于 / 验证于）
 
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]：把模型、上下文、工具、记忆、Harness 和 Loop 组合成更接近生产的 Agent 系统。
-- [[Lilian-Weng-Harness-Engineering-自我改进]]：将工具、状态、反馈和自我改进放进可持续运行的 Harness。
-- [[Hermes-Agent重构得物数仓工作流]]：把同一类 Agent 构件用于真实数仓流程，增加工作区、状态机、预演和人工确认门。
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：把模型、上下文、工具、记忆、Harness 和 Loop 组合成更接近生产的 Agent 系统。
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]：将工具、状态、反馈和自我改进放进可持续运行的 Harness。
+- [[01-ai-agents/Hermes-Agent重构得物数仓工作流]]：把同一类 Agent 构件用于真实数仓流程，增加工作区、状态机、预演和人工确认门。
 
 ### 同级（横向 / 并列）
 
-- [[若飞-Agent-记忆与可验证自我改进怎么设计]]：从记忆准入、验证和自我改进角度补充 Session/compaction。
-- [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]：从业务 Agent 的分层与流程编排角度对照 Violin 的运行时分层。
-- [[Loop-Engineering-验证才是瓶颈]]：补充“循环能够运行”之后，如何通过反馈与验证把 Agent 推向可靠交付。
+- [[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]：从记忆准入、验证和自我改进角度补充 Session/compaction。
+- [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]：从业务 Agent 的分层与流程编排角度对照 Violin 的运行时分层。
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]：补充“循环能够运行”之后，如何通过反馈与验证把 Agent 推向可靠交付。
 
 ## 正文要点
 
@@ -82,8 +89,8 @@ source_wechat: https://mp.weixin.qq.com/s/yFHRoAi6fe2dduXXlM8Tzw
 
 ### 相关链接
 
-- 原文 raw：`../../raw/2026-08-05-得物技术-实战从零开始构建一个Coding-Agent-Violin.md`
-- 原文 digest：`../../raw/2026-08-05-得物技术-实战从零开始构建一个Coding-Agent-Violin-digest.md`
-- 同主题：[[Harness工程AgentLoop]] [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]] [[Lilian-Weng-Harness-Engineering-自我改进]]
+- 原文 raw：`../../raw/得物技术-实战从零开始构建一个Coding-Agent-Violin.md`
+- 原文 digest：`../../raw/得物技术-实战从零开始构建一个Coding-Agent-Violin-digest.md`
+- 同主题：[[01-ai-agents/Harness工程AgentLoop]] [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]] [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]
 
 > 透明玻璃自检：wiki 10 节点；digest 8 个核心观点 + 7 个分析角度、21 个钩子；原文图片资源已保留，图片文字未 OCR；文章中的工具清单只确认“6 个基本工具”，未凭空补写名称。

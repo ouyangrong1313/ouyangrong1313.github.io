@@ -1,9 +1,18 @@
 ---
 title: 从埋点需求到规则资产:Hermes Agent 重构得物数仓工作流
 category: 01-ai-agents
-tags: [#主题/Harness, #主题/Agent-选型, #主题/工作流重构, #主题/数据研发, #主题/规则资产化, #主题/阿里, #场景/数仓, #场景/埋点, #公司/得物]
+tags:
+  - 主题/Harness
+  - 主题/Agent-选型
+  - 主题/工作流重构
+  - 主题/数据研发
+  - 主题/规则资产化
+  - 主题/阿里
+  - 场景/数仓
+  - 场景/埋点
+  - 公司/得物
 nodes: [数仓埋点承接-分散信息拼装, Hermes-vs-OpenClaw选型逻辑, 四个工程构件, 能力边界-编排者非生成器, 单Agent编排+多能力模块, 四类资产化能力底座, 风险治理三道门, 规模化落地路径-证据对齐]
-links: [[阿里云开发者-淘宝主播Agent的Harness工程实战]], [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[Skill-Self-Evolution]], [[Agent Skills 系统性综述]], [[谷歌开源 agent-skills]], [[Addy-Osmani-agent-skills-设计哲学]], [[PM-Skills-Marketplace-产品经理必备skill]], [[Loop-Engineering-验证才是瓶颈]], [[Addy-Osmani-Loop-Engineering]], [[腾讯-AI-Agent-Skill-测评方案落地]]
+links: [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]], [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[01-ai-agents/Skill-Self-Evolution]], [[01-ai-agents/agent-skills-systematic-survey]], [[02-ai-coding/谷歌开源agent-skills]], [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]], [[02-ai-coding/PM-Skills-Marketplace-产品经理必备skill]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]], [[02-ai-coding/Addy-Osmani-Loop-Engineering]], [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]
 date: 2026-06-18
 source: 微信公众号 / 得物技术(小诘、博温) 2026-06-17
 原始链接: https://mp.weixin.qq.com/s/hGma3I1jMF5KsDZQK_6X4Q
@@ -36,17 +45,17 @@ source: 微信公众号 / 得物技术(小诘、博温) 2026-06-17
 - **可迁移场景**:指标发布 / 配置变更 / 数据质量排查(同机制 + 换事实源和工具接口)
 
 ### 同级(横向 / 并列)
-- 阿里淘系 Harness:[[阿里云开发者-淘宝主播Agent的Harness工程实战]](主播=实时交互高风险)/ [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
-- 得物同主线:[[Skill-Self-Evolution]] / [[用 LLM Agent 重构告警排查流程]] / [[Claude Code Harness 工程:数仓侧落地方案]]
-- Skill 主线:[[Agent Skills 系统性综述]] / [[谷歌开源 agent-skills]] / [[Addy-Osmani-agent-skills-设计哲学]] / [[PM-Skills-Marketplace-产品经理必备skill]]
-- Loop 主题:[[Loop-Engineering-验证才是瓶颈]](本文"3 道门"硬证据 vs 那篇 Loop 验证闸门)
-- 评测主线:[[腾讯-AI-Agent-Skill-测评方案落地]] "测评是 Demo→生产必须跨过的门槛"同主线
-- 风险治理:[[阿里云开发者-淘宝主播Agent的Harness工程实战]] 5 层纵深防御 + 记忆对账
+- 阿里淘系 Harness:[[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]](主播=实时交互高风险)/ [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
+- 得物同主线:[[01-ai-agents/Skill-Self-Evolution]] / [[用 LLM Agent 重构告警排查流程]] / [[Claude Code Harness 工程:数仓侧落地方案]]
+- Skill 主线:[[01-ai-agents/agent-skills-systematic-survey]] / [[02-ai-coding/谷歌开源agent-skills]] / [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] / [[02-ai-coding/PM-Skills-Marketplace-产品经理必备skill]]
+- Loop 主题:[[01-ai-agents/Loop-Engineering-验证才是瓶颈]](本文"3 道门"硬证据 vs 那篇 Loop 验证闸门)
+- 评测主线:[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]] "测评是 Demo→生产必须跨过的门槛"同主线
+- 风险治理:[[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] 5 层纵深防御 + 记忆对账
 
 ## 5 个对 Seetong 团队可借鉴动作
 
 1. **写"Seetong 需求承接 4 个工程构件"试点**:TAPD 接入 + 状态机看板(每步责任人)+ 规则包(11 类 iOS 6 大漏洞/4G 6 类问题检查清单)+ 结构化接口(预演+放行),目标全链路可回放可审计(对应 [[seetong-tapd-version-review]])。
-2. **按"上线前 3 道门"建 Seetong 自动化 SOP**:**事实源门**(文档/讨论/结论齐)+ **预演门**(测试环境跑通)+ **责任门**(责任人确认),任何缺证据都停(对应 [[阿里云开发者-淘宝主播Agent的Harness工程实战]] 5 层防护 + [[seetong-batch-issue-rootcause-analysis]])。
+2. **按"上线前 3 道门"建 Seetong 自动化 SOP**:**事实源门**(文档/讨论/结论齐)+ **预演门**(测试环境跑通)+ **责任门**(责任人确认),任何缺证据都停(对应 [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] 5 层防护 + [[seetong-batch-issue-rootcause-analysis]])。
 3. **借鉴"4 类资产化能力底座"重写 Seetong Skill 库**:**规则包**(三端 API + 已知 bug 模式)+ **工作区**(每版本产物/讨论归档)+ **看板**(TAPD 状态机)+ **结构化接口**(TAPD/神策/友盟/反馈 API 封装为 MCP)。
 4. **用"能力边界划分"为 Seetong AI 助手定位**:**AI 做"判断前准备"**,**人做真判断**(业务语义/优先级/敏感字段/下游影响/生产放行),不让 AI 直接给最终方案(对应 [[seetong-requirement-clarifier]])。
 5. **用"4 个量化指标"做 Seetong 自动化效果评估**:**准备时间/交付周期/评审通过率/返工原因**——只有指标和看板/日志/确认记录一一对应,链路才具备扩大使用工程基础(对应 [[seetong-weekly-report]])。
@@ -61,4 +70,4 @@ source: 微信公众号 / 得物技术(小诘、博温) 2026-06-17
 - 规则包版本管理 / 多人协作冲突解决未展开
 - 与 OpenClaw 对比只在"能力定位"层面,无 Benchmark 数据
 - 原文:https://mp.weixin.qq.com/s/hGma3I1jMF5KsDZQK_6X4Q
-- raw:[../../raw/2026-06-17-得物技术-Hermes-Agent重构得物数仓工作流.md](../../raw/2026-06-17-得物技术-Hermes-Agent重构得物数仓工作流.md) | digest:[./Hermes-Agent重构得物数仓工作流-digest.md](./Hermes-Agent重构得物数仓工作流-digest.md)
+- raw:[../../raw/得物技术-Hermes-Agent重构得物数仓工作流.md](../../raw/得物技术-Hermes-Agent重构得物数仓工作流.md) | digest:[./Hermes-Agent重构得物数仓工作流-digest.md](./Hermes-Agent重构得物数仓工作流-digest.md)

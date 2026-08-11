@@ -3,8 +3,8 @@
 - 原文链接:https://mp.weixin.qq.com/s/Lpsl52F_oiFwMBDV7dL8RQ
 - 作者:AI 训练营系列作者(公众号文章,未具名)
 - 编译时间:2026-06-05
-- 来源层:raw(已存 `raw/articles/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD.md`)
-- 拆解:[[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD-digest]]
+- 来源层:raw(已存 `raw/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD.md`)
+- 拆解:[[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD-digest]]
 
 ## 核心结论(一句话)
 
@@ -13,9 +13,9 @@
 ## 分类提炼
 
 - 场景:AI Coding / 重构迁移 / 团队流程改造 / AI 原生组织
-- 标签:#主题/AI-Coding #主题/AI-Native #主题/AI-Agent #主题/Harness #主题/SDD #主题/工程管理 #手法/范式反思 #手法/工程实践 #场景/重构迁移
+- 标签: #主题/AI-Coding #主题/AI-Native #主题/AI-Agent #主题/Harness #主题/SDD #主题/工程管理 #手法/范式反思 #手法/工程实践 #场景/重构迁移
 - 类型:实战对比 / 工具评测 / 组织建设反思
-- 关联主线:与 [[AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]]、[[Claude-Code负责人谈AI原生工程组织]]、[[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]、[[AI-Coding的顿悟时刻]] 互文
+- 关联主线:与 [[02-ai-coding/AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]]、[[02-ai-coding/Claude-Code负责人谈AI原生工程组织]]、[[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]、[[02-ai-coding/AI-Coding的顿悟时刻]] 互文
 
 ---
 
@@ -207,10 +207,10 @@ SDD 回答的是底层问题:**当 AI 开始进入研发流程之后,团队应�
 
 ## 关联阅读
 
-- [[AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]] — Spec-Kit / OpenSpec / Superpowers 三剑客详解
-- [[AI-Coding的顿悟时刻]] — 工厂模式 + Spec → LDD + 4% / 100% 财务模型 + 组织向两端收缩
-- [[Claude-Code负责人谈AI原生工程组织]] — 瓶颈从写代码迁移到验证/评审/协作
-- [[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]] — YC / Garry Tan / Pete Koomen 的 AI-native 组织观点
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]] — JIT 规划 + Trust but verify + Taste is scarce
-- [[54万行代码的顿悟-Markdown才是新编程方式]] — 个人范式:Markdown 是新编程方式
-- [[Codex才是最适合普通人的顶级牛马-Agent]] — 多 Agent 协作实操
+- [[02-ai-coding/AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]] — Spec-Kit / OpenSpec / Superpowers 三剑客详解
+- [[02-ai-coding/AI-Coding的顿悟时刻]] — 工厂模式 + Spec → LDD + 4% / 100% 财务模型 + 组织向两端收缩
+- [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]] — 瓶颈从写代码迁移到验证/评审/协作
+- [[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]] — YC / Garry Tan / Pete Koomen 的 AI-native 组织观点
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] — JIT 规划 + Trust but verify + Taste is scarce
+- [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] — 个人范式:Markdown 是新编程方式
+- [[02-ai-coding/Codex才是最适合普通人的顶级牛马-Agent]] — 多 Agent 协作实操

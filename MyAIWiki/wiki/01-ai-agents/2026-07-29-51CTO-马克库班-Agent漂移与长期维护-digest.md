@@ -1,9 +1,14 @@
 ---
 title: "马克·库班谈 Agent 漂移与长期维护 - Digest"
 category: 01-ai-agents
-tags: ["#主题/AI-Agent", "#主题/Harness", "#主题/Agent运维", "#主题/回归测试", "#节点/Agent漂移"]
+tags:
+  - 主题/AI-Agent",
+  - 主题/Harness",
+  - 主题/Agent运维",
+  - 主题/回归测试",
+  - 节点/Agent漂移
 nodes: ["Agent漂移", "任务回归", "模型隔离", "运行证据", "人工接管"]
-links: ["[[2026-07-29-51CTO-马克库班-Agent漂移与长期维护]]", "[[phodal-Better-Harness-任务级证据评估]]", "[[Loop-Engineering-验证才是瓶颈]]"]
+links: ["[[01-ai-agents/2026-07-29-51CTO-马克库班-Agent漂移与长期维护]]", "[[01-ai-agents/phodal-Better-Harness-任务级证据评估]]", "[[01-ai-agents/Loop-Engineering-验证才是瓶颈]]"]
 date: 2026-07-30
 source: "微信公众号「51CTO技术栈」/ 姜篇"
 ---
@@ -35,7 +40,7 @@ source: "微信公众号「51CTO技术栈」/ 姜篇"
 
 ## 关联与边界
 
-- [[phodal-Better-Harness-任务级证据评估]]：任务证据与纵向复验。
-- [[腾讯-AI-Agent-Skill-测评方案落地]]：将固定任务集实现为评测基线。
-- [[Loop-Engineering-验证才是瓶颈]]：验证器决定自动化可放权的上限。
+- [[01-ai-agents/phodal-Better-Harness-任务级证据评估]]：任务证据与纵向复验。
+- [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]：将固定任务集实现为评测基线。
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]：验证器决定自动化可放权的上限。
 - 本文为公众号对访谈的二手整理；数字与引语应以视频为准，不能作为通用投入或收益基准。

@@ -1,7 +1,13 @@
 ---
 title: 研发工程化升级：Coding Agent、AI Testing、Verification First与研发效能 - Digest
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/Coding-Agent, #主题/AI-Testing, #主题/Verification-First, #主题/研发效能, #作者/Knock]
+tags:
+  - 主题/AI-Coding
+  - 主题/Coding-Agent
+  - 主题/AI-Testing
+  - 主题/Verification-First
+  - 主题/研发效能
+  - 作者/Knock
 date: 2026-07-16
 source: 微信公众号「ThinkingAgent」/ 作者 Knock / 原文 https://mp.weixin.qq.com/s/N3mJOygkf4uOaho7V6q58Q
 ---
@@ -56,7 +62,7 @@ source: 微信公众号「ThinkingAgent」/ 作者 Knock / 原文 https://mp.wei
 
 ## 关联 + 备注
 
-- **同作者主线**：[[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]
-- **同主题**：[[生产级Agent全景]] / [[Code-is-cheap-AI-Native-五倍效率]] / [[Loop-Engineering-验证才是瓶颈]]
-- **落地对照**：[[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] / [[字节跳动洪定坤-AI-Coding的实践与探索]] / [[用Agent评测思路管理AI-Coding-31万行代码重构实践]]
+- **同作者主线**：[[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]
+- **同主题**：[[02-ai-coding/生产级Agent全景]] / [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]] / [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]
+- **落地对照**：[[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] / [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] / [[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]]
 - **限制**：文中价格、基准、ROI 和案例数字多为作者二次整理或示意计算；`Probe-and-Refine` 与 `Probabilistic Verification` 的论文来源需要二次补证。

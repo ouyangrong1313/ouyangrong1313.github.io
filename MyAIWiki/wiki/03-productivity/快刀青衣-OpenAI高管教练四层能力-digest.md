@@ -1,9 +1,14 @@
 ---
 title: OpenAI 高管教练四层能力 - Digest
 category: 03-productivity
-tags: [#主题/效率, #场景/公众号长文, #节点/AI-Native, #节点/Inner-Game, #节点/Emotional-Intelligence]
+tags:
+  - 主题/效率
+  - 场景/公众号长文
+  - 节点/AI-Native
+  - 节点/Inner-Game
+  - 节点/Emotional-Intelligence
 nodes: [情绪清晰度, 智慧堆栈, 关系债, pace-vs-spin, side-quest, 黄金算法, 肩膀上的小矮人, 三段式小脚本]
-links: [[HBR-China-为什么越来越多顶级领导者开始认真学哲学]], [[宁向东-企业家凭什么能看见别人看不见的机会]], [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]], [[Anthropic-40万场-专业杠杆]]
+links: [[03-productivity/HBR-China-为什么越来越多顶级领导者开始认真学哲学]], [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]], [[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]], [[01-ai-agents/Anthropic-40万场-专业杠杆]]
 date: 2026-07-06
 source: 微信公众号 / 快刀青衣
 source_url: https://mp.weixin.qq.com/s/MYdhWoys_0svUi9EBix2aQ
@@ -60,12 +65,12 @@ original_source: https://www.lennysnewsletter.com/p/the-new-inner-game-your-unfa
 
 ## 强关联
 
-- **[[HBR-China-为什么越来越多顶级领导者开始认真学哲学]]** —— 同主线"AI 时代软技能变硬生产力"，HBR 讲哲学素养，本文讲情绪清晰度（更具体可操作）
-- **[[宁向东-企业家凭什么能看见别人看不见的机会]]** —— 宁向东"带着根本问题去观察+果断试验"，Joe 判断力"不被情绪回避"= 同一硬币另一面
-- **[[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]** —— Alice/5 类角色原型强调判断力审美被 AI 放大，本文给出具体训练方法
-- **[[陈春花-从岗位到角色-AI时代组织设计的新逻辑]]** —— 陈春花讲"岗位→角色"，本文讲"角色需要的能力=内在稳定性"
-- **[[Multica-AI-Native-组织-人是最慢的节点]]** —— Multica 讲"人是组织瓶颈"，本文给具体怎么减少人作为瓶颈的 4 个工具
-- **[[Anthropic-40万场-专业杠杆]]** —— Anthropic 实证"专家杠杆"，Joe Hudson 是"软杠杆"，"数据+人"双视角
+- **[[03-productivity/HBR-China-为什么越来越多顶级领导者开始认真学哲学]]** —— 同主线"AI 时代软技能变硬生产力"，HBR 讲哲学素养，本文讲情绪清晰度（更具体可操作）
+- **[[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]]** —— 宁向东"带着根本问题去观察+果断试验"，Joe 判断力"不被情绪回避"= 同一硬币另一面
+- **[[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]** —— Alice/5 类角色原型强调判断力审美被 AI 放大，本文给出具体训练方法
+- **[[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]]** —— 陈春花讲"岗位→角色"，本文讲"角色需要的能力=内在稳定性"
+- **[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]** —— Multica 讲"人是组织瓶颈"，本文给具体怎么减少人作为瓶颈的 4 个工具
+- **[[01-ai-agents/Anthropic-40万场-专业杠杆]]** —— Anthropic 实证"专家杠杆"，Joe Hudson 是"软杠杆"，"数据+人"双视角
 
 ## 透明玻璃自检
 

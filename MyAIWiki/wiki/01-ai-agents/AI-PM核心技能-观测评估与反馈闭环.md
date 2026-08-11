@@ -5,7 +5,7 @@ AI 时代产品经理的关键竞争力，不再只是写需求和排优先级�
 
 ## 分类提炼
 - 场景：AI 产品管理、需求优先级、产品学习系统
-- 标签：#主题/AI-Agent #主题/AI-Coding #主题/APP研发 #场景/公众号长文
+- 标签： #主题/AI-Agent #主题/AI-Coding #主题/APP研发 #场景/公众号长文
 - 类型：方法论 / 实操框架 / 岗位能力升级
 
 ## 要点列表（3-7 条）
@@ -24,11 +24,11 @@ AI 时代产品经理的关键竞争力，不再只是写需求和排优先级�
 
 ## 相关链接
 - [[index]]
-- [[good-ai-pm-bad-ai-pm|Good AI PM / Bad AI PM：AI 时代，PM 藏不住了]]
-- [[openclaw-shi-yong-an-li-ji-qiao|OpenClaw使用案例与技巧]]
-- [[Harness工程AgentLoop]]
-- [[Skills驱动推理新范式]]
+- [[01-ai-agents/good-ai-pm-bad-ai-pm|Good AI PM / Bad AI PM：AI 时代，PM 藏不住了]]
+- [[01-ai-agents/openclaw-shi-yong-an-li-ji-qiao|OpenClaw使用案例与技巧]]
+- [[01-ai-agents/Harness工程AgentLoop]]
+- [[01-ai-agents/Skills驱动推理新范式]]
 
 ## 来源
-- 原文：[/Users/topsee/ouyangrong1313/MyAIWiki/raw/articles/AI-PM核心技能-观测评估与反馈闭环.md]
-- 拆解：[[../../raw/articles/AI-PM核心技能-观测评估与反馈闭环-digest.md]]
+- 原文：[/Users/topsee/ouyangrong1313/MyAIWiki/raw/AI-PM核心技能-观测评估与反馈闭环.md]
+- 拆解：[[../../raw/AI-PM核心技能-观测评估与反馈闭环-digest.md]]

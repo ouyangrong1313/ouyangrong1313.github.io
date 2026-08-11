@@ -42,7 +42,7 @@
 
 ## 适合关联的主题
 
-- [[AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]]
-- [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]]
-- [[企业知识库认知底座]]
-- [[obsidian-claude-code-os]]
+- [[07-rag-systems/AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]]
+- [[01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain]]
+- [[06-ai-tech/企业知识库认知底座]]
+- [[03-productivity/obsidian-claude-code-os]]

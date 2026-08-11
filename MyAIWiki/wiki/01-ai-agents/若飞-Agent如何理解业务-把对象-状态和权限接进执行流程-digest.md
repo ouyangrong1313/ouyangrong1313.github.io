@@ -1,7 +1,15 @@
 ---
 title: 一文讲清 Agent 如何理解业务：把对象、状态和权限接进执行流程（速读摘要）
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/业务理解, #主题/对象状态权限, #主题/权限治理, #主题/业务执行, #主题/Harness, #场景/公众号长文, #作者/若飞]
+tags:
+  - 主题/AI-Agent
+  - 主题/业务理解
+  - 主题/对象状态权限
+  - 主题/权限治理
+  - 主题/业务执行
+  - 主题/Harness
+  - 场景/公众号长文
+  - 作者/若飞
 type: digest
 date: 2026-07-27
 source: 微信公众号「架构师（JiaGouX）」2026-07-26 推送 / 若飞
@@ -50,6 +58,6 @@ source: 微信公众号「架构师（JiaGouX）」2026-07-26 推送 / 若飞
 
 ## 关联 + 备注
 
-**关联**：[[若飞-Agent-记忆与可验证自我改进怎么设计]] / [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] / [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] / [[图工程-Graph-Engineering-来了-LangChain说不是新东西]] / [[从零设计生产级-Multi-Agent-Harness]] / [[AI-PM核心技能-观测评估与反馈闭环]] / [[Loop-Engineering-详解-把反馈循环放进工程现场]] / [[Agentic-Engineering-AI-Workbench]]
+**关联**：[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]] / [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] / [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] / [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]] / [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]] / [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]] / [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] / [[02-ai-coding/Agentic-Engineering-AI-Workbench]]
 
 **备注**：这篇文章最值钱的不是“再教你补 Prompt”，而是把业务理解压成一组可执行契约：对象、状态、权限、动作、证据、测试、放权边界。

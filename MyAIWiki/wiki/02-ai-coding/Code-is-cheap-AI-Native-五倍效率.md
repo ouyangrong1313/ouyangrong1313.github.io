@@ -1,9 +1,14 @@
 ---
 title: Code is cheap - AI Native 研发范式
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/Harness工程, #主题/AI-Native研发, #主题/代码廉价化, #主题/Seetong借鉴]
+tags:
+  - 主题/AI-Coding
+  - 主题/Harness工程
+  - 主题/AI-Native研发
+  - 主题/代码廉价化
+  - 主题/Seetong借鉴
 nodes: code-is-cheap, harness定义, 水流理论, 最小混沌单元, 6种checkpoint动作, 5层safety-net, 复述机制, 代码廉价化4层级
-links: [[阿里云开发者-淘宝主播Agent的Harness工程实战]], [[AI-Coding的顿悟时刻]], [[0xCodez-Agent-Harness-14-Steps]], [[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]], [[Skill-Self-Evolution]], [[Addy-Osmani-Loop-Engineering]], [[面向Skills编程-淘宝企业购端到端研发提效实践]]
+links: [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]], [[02-ai-coding/AI-Coding的顿悟时刻]], [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]], [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]], [[01-ai-agents/Skill-Self-Evolution]], [[02-ai-coding/Addy-Osmani-Loop-Engineering]], [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]]
 date: 2026-07-03
 source: 微信公众号「无岳」2026-07-03 推送(阿里妹导读);原文链接 https://mp.weixin.qq.com/s/t04ysxZN2qEc3986r2gyTA
 ---
@@ -37,7 +42,7 @@ source: 微信公众号「无岳」2026-07-03 推送(阿里妹导读);原文链�
 
 - **上游**:软件工程协作姿态 / SDD(Spec-Driven Development)/ Lost in the Middle 论文(Liu et al. 2023, Stanford)/ sdd-riper 项目 RIPER 五阶段门禁
 - **下游**:Case A 0→1 项目 adaptive-room-harness(已开源)/ Case B 1→N"敏感资源外发审批"治理(Tair 两段式幂等 processing lock 60s + active pending 30min)/ 团队 Harness 能力 skills 化
-- **同级**:[[阿里云开发者-淘宝主播Agent的Harness工程实战]] Harness 落地 / [[AI-Coding的顿悟时刻]] AI Coding 范式 / [[0xCodez-Agent-Harness-14-Steps]] Harness 14 步骨架 / [[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] SDD 主线 / [[Skill-Self-Evolution]] Skill 沉淀 / [[Addy-Osmani-Loop-Engineering]] Loop 验证 / [[面向Skills编程-淘宝企业购端到端研发提效实践]] Skills 工程实战 23.5→8 人日
+- **同级**:[[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] Harness 落地 / [[02-ai-coding/AI-Coding的顿悟时刻]] AI Coding 范式 / [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] Harness 14 步骨架 / [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] SDD 主线 / [[01-ai-agents/Skill-Self-Evolution]] Skill 沉淀 / [[02-ai-coding/Addy-Osmani-Loop-Engineering]] Loop 验证 / [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] Skills 工程实战 23.5→8 人日
 
 ## 正文要点(5 条)
 

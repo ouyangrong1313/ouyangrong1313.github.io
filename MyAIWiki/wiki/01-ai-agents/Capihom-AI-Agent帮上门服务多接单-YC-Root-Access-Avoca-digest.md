@@ -56,15 +56,15 @@
 ## 关联 + 备注
 
 ### 强关联（同 01-ai-agents）
-- [[Leeka-Task-Decomposition-Agentic-Workflow]] —— "商业化路径" + "任务拆解"互补
-- [[小龙虾-OpenClaw-Agent价值与边界]] —— 印证"不存在通用 Agent" + "受控的自由"
-- [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] —— 端到端 Agent 商业化阶段
+- [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]] —— "商业化路径" + "任务拆解"互补
+- [[01-ai-agents/小龙虾-OpenClaw-Agent价值与边界]] —— 印证"不存在通用 Agent" + "受控的自由"
+- [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] —— 端到端 Agent 商业化阶段
 
 ### 同 Capihom 编译系列（同日 6/30 + 7/01）
-- [[Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]] —— 同主线补完"产品工作形态" + "AI 创业商业化"
+- [[02-ai-coding/Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]] —— 同主线补完"产品工作形态" + "AI 创业商业化"
 
 ### 同日编译（双主线）
-- [[宁向东-企业家凭什么能看见别人看不见的机会]] —— 03-productivity 认知方法论主线
+- [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]] —— 03-productivity 认知方法论主线
 
 ### 关键风险提示
 - **原视频未看**：仅基于 Capihom 编译版，Avoca 创始人原话可能更丰富

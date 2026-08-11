@@ -61,12 +61,12 @@ Greg Isenberg 把"SaaS 卖软件"翻成"**Agent SaaS 卖工作**"——Agent 产
 
 ## 强关联（同主线 6 个）
 
-- [[AI-Native企业-Agent团队和AI-Factory重写公司体系]] Groupon 实证
-- [[Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]] Capihom 同主线
-- [[Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]] Capihom 同主线（产品工作）
-- [[Lilian-Weng-Harness-Engineering-自我改进]] Harness OS
-- [[Loop-Engineering-验证才是瓶颈]] 验证闸门 → 评测
-- [[Addy-Osmani-Loop-Engineering]] 5+1 积木 → 4 种最小 Agent
+- [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]] Groupon 实证
+- [[01-ai-agents/Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]] Capihom 同主线
+- [[02-ai-coding/Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]] Capihom 同主线（产品工作）
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] Harness OS
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] 验证闸门 → 评测
+- [[02-ai-coding/Addy-Osmani-Loop-Engineering]] 5+1 积木 → 4 种最小 Agent
 
 ## 备注与限制
 

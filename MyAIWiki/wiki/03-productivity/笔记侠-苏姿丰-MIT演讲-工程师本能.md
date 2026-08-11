@@ -1,9 +1,19 @@
 ---
 title: 苏姿丰 MIT 演讲——工程师本能
 category: 03-productivity
-tags: [#主题/思维方式, #主题/AI时代通用能力, #主题/组织管理, #节点/工程师本能, #节点/任务拆解, #节点/苏姿丰, #节点/AMD, #手法/拆解难题, #场景/AI时代, #场景/管理层]
+tags:
+  - 主题/思维方式
+  - 主题/AI时代通用能力
+  - 主题/组织管理
+  - 节点/工程师本能
+  - 节点/任务拆解
+  - 节点/苏姿丰
+  - 节点/AMD
+  - 手法/拆解难题
+  - 场景/AI时代
+  - 场景/管理层
 nodes: 工程师本能4关键词, 学知识vs解决问题, 苏姿丰接手AMD第一问, 指令式管理vs工程师式管理, 工程师本能共享化, AI放大器, UROP早动手, 不确定中创造确定性
-links: [[快刀青衣-OpenAI高管教练四层能力]], [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]], [[宁向东-企业家凭什么能看见别人看不见的机会]], [[HBR-China-为什么越来越多顶级领导者开始认真学哲学]], [[叶小钗-AI原生组织方法论-2026版]], [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]], [[Multica-AI-Native-组织-人是最慢的节点]], [[Laurel-CPO-Jiaona-Zhang-公司OS]], [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]], [[Leeka-Task-Decomposition-Agentic-Workflow]], [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]], [[小龙虾-OpenClaw-Agent价值与边界]]
+links: [[03-productivity/快刀青衣-OpenAI高管教练四层能力]], [[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]], [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]], [[03-productivity/HBR-China-为什么越来越多顶级领导者开始认真学哲学]], [[02-ai-coding/叶小钗-AI原生组织方法论-2026版]], [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]], [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]], [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]], [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]], [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]], [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]], [[01-ai-agents/小龙虾-OpenClaw-Agent价值与边界]]
 date: 2026-07-09
 source: 微信公众号「笔记侠(Notesman)」2026-07 推送 / 贾宁 责编 / 苏姿丰 2026-05 MIT 毕业典礼演讲原典
 ---
@@ -52,18 +62,18 @@ source: 微信公众号「笔记侠(Notesman)」2026-07 推送 / 贾宁 责编 /
 - 任何面对真实复杂问题的场景（市场/创业/技术）
 
 ### 同级（横向 / 并列）
-- 与 [[快刀青衣-OpenAI高管教练四层能力]]：**内在稳定性（情绪清晰度/关系债/失败能力/自我对话）+ 工程师本能（拆解/有条不紊/一步步攻克）——"软技能 + 硬能力"双视角**
-- 与 [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]：**5 类角色原型（Prototyper/Builder/Sweeper/Grower/Maintainer）+ 工程师本能（拆解难题通用能力）——"角色定位 + 能力升级"双视角**
-- 与 [[宁向东-企业家凭什么能看见别人看不见的机会]]：**4 大行为特征（提问/观察/试验/交际）+ 工程师本能 4 关键词 ——"创新认知 + 通用能力"双视角**
-- 与 [[HBR-China-为什么越来越多顶级领导者开始认真学哲学]]：**哲学素养（本体论/认识论/伦理学/phronesis）+ 工程师本能（拆解/有条不紊）——"价值判断 + 问题解决"双视角**
-- 与 [[叶小钗-AI原生组织方法论-2026版]]：**AI 原生组织 3.0 公式（员工 AI 能力 + 机制流程匹配 + 组织评价匹配 + AI 操作系统）+ 工程师本能共享化 ——"完整公式 + 核心能力"互补**
-- 与 [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]：**5 级成熟度（L1 试点 → L5 自主）+ 工程师本能（组织内人数）——"组织成熟度 + 核心能力"互补**
-- 与 [[Multica-AI-Native-组织-人是最慢的节点]]：**4 人+几十 Agent 极端样本 + 工程师本能（AMD 9000 亿美元样本）——"极端小 + 主流大"两极对照**
-- 与 [[Laurel-CPO-Jiaona-Zhang-公司OS]]：**公司 OS（工作地图/烦人重复动作起点/Slack 入口/AI Ops 专职/Captain model）+ 工程师式管理（驱动思考 vs 驱动执行）——"OS 落地 + 管理思维"互补**
-- 与 [[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]：**Anthropic 协作方法（验证取代编写/spec 入仓/Agency-Accountability）+ 工程师本能（拆解+有条不紊）——"团队协作 + 通用能力"双视角**
-- 与 [[Leeka-Task-Decomposition-Agentic-Workflow]]：**任务拆解四步法（标准化/拆解+连接/双向开发/MCP 整合）+ 工程师本能 4 关键词（拆解/有条不紊/一步步攻克）——直接呼应"拆解"**
-- 与 [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]]：**从岗位到角色（个体-任务-能力-关系重塑）+ 工程师本能共享化 ——"组织设计哲学 + 能力共享化"互补**
-- 与 [[小龙虾-OpenClaw-Agent价值与边界]]：**"不存在通用 Agent / 受控的自由 / 老板要 Agent ≠ 真要 Agent"+ 工程师本能（用户表达无限 vs 业务分支有限）——"该不该用 Agent + 怎么训练通用能力"决策树前后两段**
+- 与 [[03-productivity/快刀青衣-OpenAI高管教练四层能力]]：**内在稳定性（情绪清晰度/关系债/失败能力/自我对话）+ 工程师本能（拆解/有条不紊/一步步攻克）——"软技能 + 硬能力"双视角**
+- 与 [[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]：**5 类角色原型（Prototyper/Builder/Sweeper/Grower/Maintainer）+ 工程师本能（拆解难题通用能力）——"角色定位 + 能力升级"双视角**
+- 与 [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]]：**4 大行为特征（提问/观察/试验/交际）+ 工程师本能 4 关键词 ——"创新认知 + 通用能力"双视角**
+- 与 [[03-productivity/HBR-China-为什么越来越多顶级领导者开始认真学哲学]]：**哲学素养（本体论/认识论/伦理学/phronesis）+ 工程师本能（拆解/有条不紊）——"价值判断 + 问题解决"双视角**
+- 与 [[02-ai-coding/叶小钗-AI原生组织方法论-2026版]]：**AI 原生组织 3.0 公式（员工 AI 能力 + 机制流程匹配 + 组织评价匹配 + AI 操作系统）+ 工程师本能共享化 ——"完整公式 + 核心能力"互补**
+- 与 [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]：**5 级成熟度（L1 试点 → L5 自主）+ 工程师本能（组织内人数）——"组织成熟度 + 核心能力"互补**
+- 与 [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]：**4 人+几十 Agent 极端样本 + 工程师本能（AMD 9000 亿美元样本）——"极端小 + 主流大"两极对照**
+- 与 [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]]：**公司 OS（工作地图/烦人重复动作起点/Slack 入口/AI Ops 专职/Captain model）+ 工程师式管理（驱动思考 vs 驱动执行）——"OS 落地 + 管理思维"互补**
+- 与 [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]：**Anthropic 协作方法（验证取代编写/spec 入仓/Agency-Accountability）+ 工程师本能（拆解+有条不紊）——"团队协作 + 通用能力"双视角**
+- 与 [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]]：**任务拆解四步法（标准化/拆解+连接/双向开发/MCP 整合）+ 工程师本能 4 关键词（拆解/有条不紊/一步步攻克）——直接呼应"拆解"**
+- 与 [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]]：**从岗位到角色（个体-任务-能力-关系重塑）+ 工程师本能共享化 ——"组织设计哲学 + 能力共享化"互补**
+- 与 [[01-ai-agents/小龙虾-OpenClaw-Agent价值与边界]]：**"不存在通用 Agent / 受控的自由 / 老板要 Agent ≠ 真要 Agent"+ 工程师本能（用户表达无限 vs 业务分支有限）——"该不该用 Agent + 怎么训练通用能力"决策树前后两段**
 
 ## 正文要点（4 段核心论证）
 
@@ -121,8 +131,8 @@ source: 微信公众号「笔记侠(Notesman)」2026-07 推送 / 贾宁 责编 /
 
 - 原文链接：https://mp.weixin.qq.com/s/u5-Pp5JqFXyLAiXOgmiC4Q
 - 笔记侠公众号（Notesman）
-- raw 原文：`raw/2026-07-笔记侠-苏姿丰-MIT演讲-工程师本能.md`
-- raw digest：`raw/2026-07-笔记侠-苏姿丰-MIT演讲-工程师本能-digest.md`
+- raw 原文：`raw/笔记侠-苏姿丰-MIT演讲-工程师本能.md`
+- raw digest：`raw/笔记侠-苏姿丰-MIT演讲-工程师本能-digest.md`
 - digest 速读：`03-productivity/笔记侠-苏姿丰-MIT演讲-工程师本能-digest.md`
 
 ---

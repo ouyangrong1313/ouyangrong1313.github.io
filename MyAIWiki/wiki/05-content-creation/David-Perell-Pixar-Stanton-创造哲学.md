@@ -1,9 +1,23 @@
 ---
 title: David Perell 采访 Andrew Stanton：皮克斯创作智慧与哲学
 category: 05-content-creation
-tags: [#主题/创造哲学, #主题/写作, #主题/个人品牌, #主题/内容创作, #主题/乔布斯, #主题/皮克斯, #主题/David-Perell, #主题/How-I-Write, #节点/沙漠十年, #节点/远见卓识, #节点/披头士法则, #节点/智囊团, #节点/娱乐创意天赋, #节点/乔布斯老板悖论]
+tags:
+  - 主题/创造哲学
+  - 主题/写作
+  - 主题/个人品牌
+  - 主题/内容创作
+  - 主题/乔布斯
+  - 主题/皮克斯
+  - 主题/David-Perell
+  - 主题/How-I-Write
+  - 节点/沙漠十年
+  - 节点/远见卓识
+  - 节点/披头士法则
+  - 节点/智囊团
+  - 节点/娱乐创意天赋
+  - 节点/乔布斯老板悖论
 nodes: [沙漠十年, 远见卓识与极度耐心, 直击问题核心, 娱乐创意天赋, 皮克斯智囊团5人, 披头士法则, 乔布斯老板悖论, 玩具总动员学到一切]
-links: [[乔布斯1995遗失访谈]], [[透明玻璃-写作的最高境界]], [[ogilvy-10-writing-rules-with-claude-skill]], [[use-ai-well-become-more-valuable]], [[APPSO-Obsidian+Codex-Karpathy同款本地知识库]]
+links: [[05-content-creation/乔布斯1995遗失访谈]], [[05-content-creation/透明玻璃-写作的最高境界]], [[05-content-creation/ogilvy-10-writing-rules-with-claude-skill]], [[03-productivity/use-ai-well-become-more-valuable]], [[03-productivity/APPSO-Obsidian+Codex-Karpathy同款本地知识库]]
 date: 2026-06-29
 source: 微信公众号（写作/创意类）2026-06-29 翻译 David Perell《How I Write》专栏《Meet The Writer Behind Toy Story, Nemo and Wall-E》
 ---
@@ -23,7 +37,7 @@ source: 微信公众号（写作/创意类）2026-06-29 翻译 David Perell《Ho
 ### 分类提炼
 
 - 场景：创作哲学 / 个人品牌建设 / 写作方法论
-- 标签：`#主题/创造哲学` `#主题/写作` `#主题/个人品牌` `#主题/内容创作` `#主题/乔布斯` `#主题/皮克斯` `#主题/David-Perell` `#主题/How-I-Write`
+- 标签： #主题/创造哲学 #主题/写作 #主题/个人品牌 #主题/内容创作 #主题/乔布斯 #主题/皮克斯 #主题/David-Perell #主题/How-I-Write
 - 类型：人物访谈翻译（采访者+受访者双人结构）
 
 ## 知识节点（8 个独立概念）
@@ -50,11 +64,11 @@ source: 微信公众号（写作/创意类）2026-06-29 翻译 David Perell《Ho
 - AI 时代内容创作：用娱乐的视角看待一切（区别于纯工具视角）
 
 ### 同级（横向 / 并列）
-- [[乔布斯1995遗失访谈]] - 同主线"乔布斯 + 创造哲学"，05-content-creation 已有（强关联！**本文+乔布斯访谈=乔布斯双视角**）
-- [[透明玻璃-写作的最高境界]] - 写作哲学（透明玻璃）
-- [[ogilvy-10-writing-rules-with-claude-skill]] - David Ogilvy 10 条写作规则 + Claude Skill 实践
-- [[use-ai-well-become-more-valuable]] - 用好 AI 的人更值钱（个人品牌视角）
-- [[APPSO-Obsidian+Codex-Karpathy同款本地知识库]] - Karpathy 同款本地知识库（个人 OS 主线）
+- [[05-content-creation/乔布斯1995遗失访谈]] - 同主线"乔布斯 + 创造哲学"，05-content-creation 已有（强关联！**本文+乔布斯访谈=乔布斯双视角**）
+- [[05-content-creation/透明玻璃-写作的最高境界]] - 写作哲学（透明玻璃）
+- [[05-content-creation/ogilvy-10-writing-rules-with-claude-skill]] - David Ogilvy 10 条写作规则 + Claude Skill 实践
+- [[03-productivity/use-ai-well-become-more-valuable]] - 用好 AI 的人更值钱（个人品牌视角）
+- [[03-productivity/APPSO-Obsidian+Codex-Karpathy同款本地知识库]] - Karpathy 同款本地知识库（个人 OS 主线）
 
 ### 正文要点（5 条）
 
@@ -76,12 +90,12 @@ source: 微信公众号（写作/创意类）2026-06-29 翻译 David Perell《Ho
 ### 备注与限制
 
 - 本文是 David Perell 采访 Andrew Stanton 的中文翻译版，受访者不是乔布斯本人，是**Andrew Stanton 作为皮克斯同事谈乔布斯特质**
-- 与 [[乔布斯1995遗失访谈]] 强对照：**乔布斯 1995 是乔布斯本人遗失访谈（本人视角）**，本文是 Stanton 视角（同事视角）——形成乔布斯双视角资料
-- 与 [[透明玻璃-写作的最高境界]] 区别：透明玻璃是写作/表达的方法论（主人原创视角），本文是人物特质的提炼（采访翻译视角）
+- 与 [[05-content-creation/乔布斯1995遗失访谈]] 强对照：**乔布斯 1995 是乔布斯本人遗失访谈（本人视角）**，本文是 Stanton 视角（同事视角）——形成乔布斯双视角资料
+- 与 [[05-content-creation/透明玻璃-写作的最高境界]] 区别：透明玻璃是写作/表达的方法论（主人原创视角），本文是人物特质的提炼（采访翻译视角）
 - **未展开**：David Perell《How I Write》专栏本身的方法论；其他 5 位智囊团成员（除 John 外）的个人特质
 - **不适用**：把"沙漠十年"理解为"忍耐 10 年没有成果"——乔布斯同期在皮克斯做出《玩具总动员》，绝非空等
 
 ### 相关链接
 
 - 原文：https://mp.weixin.qq.com/s/JevwoRRVxSG_82mwXUrQFA | 原始英文：David Perell《How I Write》 https://perell.com
-- 同主线 [[乔布斯1995遗失访谈]]（本人视角）/ [[透明玻璃-写作的最高境界]] / [[use-ai-well-become-more-valuable]] / [[APPSO-Obsidian+Codex-Karpathy同款本地知识库]]
+- 同主线 [[05-content-creation/乔布斯1995遗失访谈]]（本人视角）/ [[05-content-creation/透明玻璃-写作的最高境界]] / [[03-productivity/use-ai-well-become-more-valuable]] / [[03-productivity/APPSO-Obsidian+Codex-Karpathy同款本地知识库]]

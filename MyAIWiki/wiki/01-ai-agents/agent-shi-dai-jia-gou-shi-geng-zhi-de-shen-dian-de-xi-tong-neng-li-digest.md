@@ -3,9 +3,9 @@
 > **来源**：架构师（JiaGouX）公众号
 > **日期**：2026年5月
 > **链接**：https://mp.weixin.qq.com/s/Litoqoj9WHmV1wCnxybdVQ
-> **主题**：#主题/AI-Agent
-> **手法**：#手法/权威背书 #手法/好奇心循环
-> **场景**：#场景/技术博客
+> **主题**： #主题/AI-Agent
+> **手法**： #手法/权威背书 #手法/好奇心循环
+> **场景**： #场景/技术博客
 
 ---
 
@@ -174,8 +174,8 @@ Agent 时代，框架半衰期极短，但**系统能力不会**。本文提出�
 
 ## 相关链接
 
-- [[Agent 原理、架构与工程实践]]
-- [[记忆是 Agent 基建]]
+- [[01-ai-agents/agent-principles-architecture-engineering]]
+- [[01-ai-agents/记忆是-agent-基建]]
 - [[Harness 正在成为新后端]]
-- [[Skills驱动推理新范式]]
-- [[OpenClaw的正确打开方式]]
+- [[01-ai-agents/Skills驱动推理新范式]]
+- [[01-ai-agents/OpenClaw的正确打开方式]]

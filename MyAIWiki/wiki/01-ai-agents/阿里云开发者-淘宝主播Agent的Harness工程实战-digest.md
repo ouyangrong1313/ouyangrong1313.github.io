@@ -1,7 +1,14 @@
 ---
 title: 淘宝主播 Agent 的 Harness 工程实战(速读摘要)
 category: 01-ai-agents
-tags: [#主题/Harness, #主题/AI-Agent, #主题/工程实践, #主题/记忆系统, #主题/AI安全, #主题/阿里, #场景/直播]
+tags:
+  - 主题/Harness
+  - 主题/AI-Agent
+  - 主题/工程实践
+  - 主题/记忆系统
+  - 主题/AI安全
+  - 主题/阿里
+  - 场景/直播
 type: digest
 date: 2026-06-18
 source: 微信公众号 / 阿里云开发者(阿里妹系列) 2026-06-17
@@ -39,11 +46,11 @@ source: 微信公众号 / 阿里云开发者(阿里妹系列) 2026-06-17
 1. **Harness 六元组体检**:给 Seetong 所有 Skill 落表自查 E/T/C/S/L/V,补缺后再谈提升效率
 2. **业务/框架分层重写 Skill 库**:`seetong-tapd-version-review` / `seetong-bug-triage` / `seetong-daily-briefing` 改"Skill 声明+框架兜底"
 3. **记忆三层用到简报**:`seetong-daily-briefing` 加 L2(神策/友盟/TAPD)+ L3(运营类别),矛盾 ≥ 3 次主动确认
-4. **Approval 4 档作为操作硬规则**:auto/soft-gate/hard-gate/block,合并 [[Claude-Code一周年回顾-Boris-Cat]] "Auto Mode 比手动更安全"
+4. **Approval 4 档作为操作硬规则**:auto/soft-gate/hard-gate/block,合并 [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]] "Auto Mode 比手动更安全"
 5. **写"Seetong PlanEngine" 7 天小试点**:周报流程按 PlanEngine 5 目标重写,5 项指标对比 vs ReAct
 
 ## 关联 + 备注
 
-**关联**:Harness 主线 [[Harness工程AgentLoop]] / [[HarnessEngineering企业级实战]] / [[0xCodez-Agent-Harness-14-Steps]] / [[harness-engineering]] | 阿里妹同源 [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] | 记忆 [[记忆是-agent-基建]] / [[llm-agent-unified-memory-framework]] | Loop [[Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解-把反馈循环放进工程现场]] / [[APPSO-Codex-Claude-Code-Loop-Engineering]] | Agent 安全+评测 [[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]] / [[腾讯-AI-Agent-Skill-测评方案落地]]
+**关联**:Harness 主线 [[01-ai-agents/Harness工程AgentLoop]] / [[01-ai-agents/HarnessEngineering企业级实战]] / [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[01-ai-agents/harness-engineering]] | 阿里妹同源 [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] | 记忆 [[01-ai-agents/记忆是-agent-基建]] / [[01-ai-agents/llm-agent-unified-memory-framework]] | Loop [[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] / [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]] | Agent 安全+评测 [[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]] / [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]
 
 **备注**:作者署名未标注 / 2.6 节"响应超时"行被截断 / "矛盾累积 ≥ 3 次"经验值 / trust 4 档无话术模板 / 主播 Agent A/B 数字未披露 / 沙箱 64KB 是经验值

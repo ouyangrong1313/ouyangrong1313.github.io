@@ -389,9 +389,9 @@ OpenClaw 的 `sessions_spawn`、`sessions_send`、`subagents` 很有代表性：
 OpenClaw 真正有潜力的地方，恰恰在后者。
 
 ## 相关链接
-- [[Agent Harness 解析：智能体架构深度拆解]]
+- [[06-ai-tech/Agent Harness 解析：智能体架构深度拆解]]
 - [[AI Agent]]
-- [[AI Coding]]
+- [[02-ai-coding/index]]
 - [[OpenClaw]]
 - [[Claude Code]]
 - [[Context Engineering]]

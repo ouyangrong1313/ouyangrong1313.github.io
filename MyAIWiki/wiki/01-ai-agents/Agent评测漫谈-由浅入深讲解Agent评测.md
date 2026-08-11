@@ -1,13 +1,20 @@
 ---
 title: Agent评测漫谈 —— 由浅入深讲解Agent评测
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/Agent评测, #主题/长程Agent, #主题/Skill评测, #主题/可观测性, #主题/评测基础设施, #场景/公众号长文]
+tags:
+  - 主题/AI-Agent
+  - 主题/Agent评测
+  - 主题/长程Agent
+  - 主题/Skill评测
+  - 主题/可观测性
+  - 主题/评测基础设施
+  - 场景/公众号长文
 nodes: [Response-Evaluation, Trajectory-Evaluation, 评测搭桥, Rubric二元化, Good-Bad-Case飞轮, Task评测, Evaluation-Harness, 长程Agent评测基础设施]
-links: [[腾讯-AI-Agent-Skill-测评方案落地]], [[用Agent评测思路管理AI-Coding-31万行代码重构实践]], [[研发工程化升级-Coding-Agent-AI-Testing与Verification-First]], [[Harness工程AgentLoop]], [[WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[2026-07-29-51CTO-马克库班-Agent漂移与长期维护]]
+links: [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]], [[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]], [[02-ai-coding/研发工程化升级-Coding-Agent-AI-Testing与Verification-First]], [[01-ai-agents/Harness工程AgentLoop]], [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[01-ai-agents/2026-07-29-51CTO-马克库班-Agent漂移与长期维护]]
 date: 2026-08-06
 source: 微信公众号「美团技术团队」/ 图灵Agent评测
 source_wechat: https://mp.weixin.qq.com/s/gZKWRqznB8sNBFf69fBIvw
-digest: [[Agent评测漫谈-由浅入深讲解Agent评测-digest]]
+digest: [[01-ai-agents/Agent评测漫谈-由浅入深讲解Agent评测-digest]]
 ---
 
 # Agent评测漫谈 —— 由浅入深讲解Agent评测
@@ -17,7 +24,7 @@ digest: [[Agent评测漫谈-由浅入深讲解Agent评测-digest]]
 - 作者：图灵Agent评测
 - 发布时间：2026-08-06
 - 获取时间：2026-08-06
-- 速读摘要：[[Agent评测漫谈-由浅入深讲解Agent评测-digest]]
+- 速读摘要：[[01-ai-agents/Agent评测漫谈-由浅入深讲解Agent评测-digest]]
 
 ## 核心结论（一句话）
 
@@ -26,7 +33,7 @@ digest: [[Agent评测漫谈-由浅入深讲解Agent评测-digest]]
 ## 分类提炼
 
 - 场景：Agent / Skill 研发、长程 Agent 运行、评测平台建设
-- 标签：#主题/AI-Agent #主题/Agent评测 #主题/长程Agent #主题/Skill评测 #主题/可观测性 #主题/评测基础设施
+- 标签： #主题/AI-Agent #主题/Agent评测 #主题/长程Agent #主题/Skill评测 #主题/可观测性 #主题/评测基础设施
 - 类型：Agent 评测方法论 + 长程 Agent 基础设施设计
 - 证据边界：美团图灵评测团队的实践总结与行业调研；文中配图表格未做 OCR，经验数字不等于通用基准。
 
@@ -45,19 +52,19 @@ digest: [[Agent评测漫谈-由浅入深讲解Agent评测-digest]]
 
 ### 上游（基于 / 来自）
 
-- [[腾讯-AI-Agent-Skill-测评方案落地]]：提供评分器、评测维度、用例基线和 Trace 输出的工业实践背景。
-- [[Harness工程AgentLoop]]：提供 Agent Loop 与运行时工程视角，本文进一步追问如何验证执行链路。
+- [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]：提供评分器、评测维度、用例基线和 Trace 输出的工业实践背景。
+- [[01-ai-agents/Harness工程AgentLoop]]：提供 Agent Loop 与运行时工程视角，本文进一步追问如何验证执行链路。
 
 ### 下游（应用于 / 验证于）
 
-- [[用Agent评测思路管理AI-Coding-31万行代码重构实践]]：把 Agent 评测思路用于大规模 AI Coding 改造与质量管理。
-- [[研发工程化升级-Coding-Agent-AI-Testing与Verification-First]]：把评测继续接到测试、验证前移和分层信任。
-- [[2026-07-29-51CTO-马克库班-Agent漂移与长期维护]]：将回归、观测和人工接管延伸到长期运行维护。
+- [[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]]：把 Agent 评测思路用于大规模 AI Coding 改造与质量管理。
+- [[02-ai-coding/研发工程化升级-Coding-Agent-AI-Testing与Verification-First]]：把评测继续接到测试、验证前移和分层信任。
+- [[01-ai-agents/2026-07-29-51CTO-马克库班-Agent漂移与长期维护]]：将回归、观测和人工接管延伸到长期运行维护。
 
 ### 同级（横向 / 并列）
 
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]：从模型、上下文、工具、记忆和 Harness 组合角度补充生产化视角。
-- [[Lilian-Weng-Harness-Engineering-自我改进]]：从反馈、验证和自我改进角度补充评测基础设施的长期闭环。
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：从模型、上下文、工具、记忆和 Harness 组合角度补充生产化视角。
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]：从反馈、验证和自我改进角度补充评测基础设施的长期闭环。
 
 ## 正文要点（6 条）
 
@@ -77,8 +84,8 @@ digest: [[Agent评测漫谈-由浅入深讲解Agent评测-digest]]
 
 ## 相关链接
 
-- 原文 raw：`../../raw/2026-08-06-图灵-Agent评测漫谈-由浅入深讲解Agent评测.md`
-- 原文 digest：`../../raw/2026-08-06-图灵-Agent评测漫谈-由浅入深讲解Agent评测-digest.md`
-- 相关页面：[[腾讯-AI-Agent-Skill-测评方案落地]] [[用Agent评测思路管理AI-Coding-31万行代码重构实践]] [[研发工程化升级-Coding-Agent-AI-Testing与Verification-First]]
+- 原文 raw：`../../raw/图灵-Agent评测漫谈-由浅入深讲解Agent评测.md`
+- 原文 digest：`../../raw/图灵-Agent评测漫谈-由浅入深讲解Agent评测-digest.md`
+- 相关页面：[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]] [[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]] [[02-ai-coding/研发工程化升级-Coding-Agent-AI-Testing与Verification-First]]
 
 > 透明玻璃自检：8 个节点；wiki / digest 均带 frontmatter；原文为 HTML 纯文本抽取，图片文字未 OCR；文中案例与数字按作者团队经验处理，未扩展为通用基准。

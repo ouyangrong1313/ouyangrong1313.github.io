@@ -1,9 +1,29 @@
 ---
 title: "如何更科学、方向可控的实现 Skill 的「自进化」？"
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/Agent-Skills, #主题/自进化, #主题/Skill优化, #主题/科学工程, #主题/可验证性, #节点/Skill自进化痛点, #节点/离线优化在线验证, #节点/Trace2Skill归纳法, #节点/EvoSkill自验证, #节点/SkillOpt训练范式, #节点/前沿集合算法, #节点/Skill即参数, #节点/学习率约束, #节点/可验证性飞轮, #手法/论文综述, #手法/范式归纳, #手法/对比矩阵, #场景/Agent-Skill落地, #场景/企业级自进化]
+tags:
+  - 主题/AI-Agent
+  - 主题/Agent-Skills
+  - 主题/自进化
+  - 主题/Skill优化
+  - 主题/科学工程
+  - 主题/可验证性
+  - 节点/Skill自进化痛点
+  - 节点/离线优化在线验证
+  - 节点/Trace2Skill归纳法
+  - 节点/EvoSkill自验证
+  - 节点/SkillOpt训练范式
+  - 节点/前沿集合算法
+  - 节点/Skill即参数
+  - 节点/学习率约束
+  - 节点/可验证性飞轮
+  - 手法/论文综述
+  - 手法/范式归纳
+  - 手法/对比矩阵
+  - 场景/Agent-Skill落地
+  - 场景/企业级自进化
 nodes: [Skill-自进化痛点, 离线优化在线验证, Trace2Skill-归纳法, EvoSkill-自验证, SkillOpt-训练范式, 前沿集合-Frontier, Skill-即参数, 可验证性-飞轮]
-links: [[买了一样的AI为什么别家的比你的强]], [[Agent Skills 系统性综述]], [[谷歌开源 agent-skills]], [[Skills驱动推理新范式]], [[Notion-spec-driven-AI-workflow]], [[Agentic-Engineering-AI-Workbench]], [[从Prompt-Context到Harness-工程的三次进化与终局之战]]
+links: [[02-ai-coding/买了一样的AI为什么别家的比你的强]], [[01-ai-agents/agent-skills-systematic-survey]], [[02-ai-coding/谷歌开源agent-skills]], [[01-ai-agents/Skills驱动推理新范式]], [[02-ai-coding/Notion-spec-driven-AI-workflow]], [[02-ai-coding/Agentic-Engineering-AI-Workbench]], [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]
 date: 2026-06-09
 source: 微信公众号 / 阿里妹（飞樰）—— 深度解析 Trace2Skill（阿里千问）/ EvoSkill（Sentient Labs）/ SkillOpt（微软 + 高校）三篇论文
 ---
@@ -23,7 +43,7 @@ source: 微信公众号 / 阿里妹（飞樰）—— 深度解析 Trace2Skill�
 ## 分类提炼
 
 - **场景**：Agent Skill 自进化 / 企业级 Agent 调优 / Skill 体系建设
-- **标签**：#主题/Agent-Skills #主题/自进化 #主题/可验证性
+- **标签**： #主题/Agent-Skills #主题/自进化 #主题/可验证性
 - **类型**：技术综述 / 论文精解 / 范式归纳
 - **价值层级**：⭐⭐⭐（Agent Skill 体系从"提示词工程"升级到"科学工程"的开创性综述）
 
@@ -42,21 +62,21 @@ source: 微信公众号 / 阿里妹（飞樰）—— 深度解析 Trace2Skill�
 
 ### 上游（基于 / 来自）
 - 3 篇论文：Trace2Skill（阿里千问）/ EvoSkill（Sentient Labs）/ SkillOpt（微软 + 上交 / 同济 / 复旦）
-- [[买了一样的AI为什么别家的比你的强]]：Hiten Shah 提的"Skill 战略"——本篇给出 Skill 自进化的工程化实现路径
-- [[Agent Skills 系统性综述]]：Skill 的工程综述——本篇是其"自进化"专门深入
-- [[谷歌开源 agent-skills]]：skill 的开源实现——本篇是 skill 自进化的学术 + 开源进展
-- [[Skills驱动推理新范式]]：TRS（用技能卡片降低推理 Token 成本）——本篇是 Skill 体系的下游进化范式
+- [[02-ai-coding/买了一样的AI为什么别家的比你的强]]：Hiten Shah 提的"Skill 战略"——本篇给出 Skill 自进化的工程化实现路径
+- [[01-ai-agents/agent-skills-systematic-survey]]：Skill 的工程综述——本篇是其"自进化"专门深入
+- [[02-ai-coding/谷歌开源agent-skills]]：skill 的开源实现——本篇是 skill 自进化的学术 + 开源进展
+- [[01-ai-agents/Skills驱动推理新范式]]：TRS（用技能卡片降低推理 Token 成本）——本篇是 Skill 体系的下游进化范式
 
 ### 下游（应用于 / 验证于）
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]]：本篇 SkillOpt 的"Skill 即参数"是把"工程 = 训练范式"做到 Skill 空间的极致
-- [[Notion-spec-driven-AI-workflow]]：Notion 的 spec-driven 是"先人工写 spec 再让 agent 执行"——本篇 EvoSkill / SkillOpt 是"自动从轨迹中沉淀 / 优化 spec"
-- [[Agentic-Engineering-AI-Workbench]]：本篇 SkillOpt "可验证性 = 飞轮"是 AI 工作台"验证"层的科学化版本
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]：本篇 SkillOpt 的"Skill 即参数"是把"工程 = 训练范式"做到 Skill 空间的极致
+- [[02-ai-coding/Notion-spec-driven-AI-workflow]]：Notion 的 spec-driven 是"先人工写 spec 再让 agent 执行"——本篇 EvoSkill / SkillOpt 是"自动从轨迹中沉淀 / 优化 spec"
+- [[02-ai-coding/Agentic-Engineering-AI-Workbench]]：本篇 SkillOpt "可验证性 = 飞轮"是 AI 工作台"验证"层的科学化版本
 
 ### 同级（横向 / 并列）
-- [[agent-architectures]]：Agent 架构层（ReAct / Plan-and-Execute 等）——本篇是 Skill 进化层
-- [[harness-engineering]]：Harness 视角——本篇 SkillOpt 强调 "Harness 无关" 部署
-- [[Harness工程AgentLoop]]：Harness Agent Loop——本篇 SkillOpt 引入"训练范式"是 Loop 范式的延伸
-- [[AI-PM核心技能-观测评估与反馈闭环]]：评测体系是 Skill 自进化的基础——本篇与其"反馈闭环"主线同
+- [[01-ai-agents/agent-architectures]]：Agent 架构层（ReAct / Plan-and-Execute 等）——本篇是 Skill 进化层
+- [[01-ai-agents/harness-engineering]]：Harness 视角——本篇 SkillOpt 强调 "Harness 无关" 部署
+- [[01-ai-agents/Harness工程AgentLoop]]：Harness Agent Loop——本篇 SkillOpt 引入"训练范式"是 Loop 范式的延伸
+- [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]]：评测体系是 Skill 自进化的基础——本篇与其"反馈闭环"主线同
 
 ## 正文要点（8 条）
 
@@ -224,4 +244,4 @@ Agent 产生轨迹
 ## 写作引用建议
 
 - 引用本篇时优先用："Agent 进化从经验主义走向科学工程" / "Skill 即参数" / "可验证性 = Agent 飞轮" / "从人力驱动到算力驱动" / "前沿集合 = 容量固定的精英池" / "Trace2Skill = 归纳法 / EvoSkill = 自验证 / SkillOpt = 训练范式"
-- 强关联引用：[[买了一样的AI为什么别家的比你的强]]（Skill 战略）/ [[Agent Skills 系统性综述]]（Skill 综述）/ [[从Prompt-Context到Harness-工程的三次进化与终局之战]]（Harness 思想延伸到 Skill 训练）/ [[Notion-spec-driven-AI-workflow]]（spec-driven 是 Skill 自进化的对照）
+- 强关联引用：[[02-ai-coding/买了一样的AI为什么别家的比你的强]]（Skill 战略）/ [[01-ai-agents/agent-skills-systematic-survey]]（Skill 综述）/ [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]（Harness 思想延伸到 Skill 训练）/ [[02-ai-coding/Notion-spec-driven-AI-workflow]]（spec-driven 是 Skill 自进化的对照）

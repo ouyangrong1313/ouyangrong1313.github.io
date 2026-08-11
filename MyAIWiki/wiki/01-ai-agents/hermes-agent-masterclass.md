@@ -3,7 +3,7 @@
 - 来源：Twitter/X @akshay_pachaar
 - 原文：https://x.com/akshay_pachaar/status/2054564519280804028
 - 编译日期：2026-05-14
-- 标签：#主题/AIAgent #场景/技术教程
+- 标签： #主题/AIAgent #场景/技术教程
 
 ## 核心要点
 
@@ -43,4 +43,4 @@ hermes
 
 ## 相关资料
 
-- [[hermes-obsidian-llm-wiki-knowledge-base]] - Roland.W 的 Hermes+Obsidian+LLM Wiki 本地知识库方案
+- [[01-ai-agents/hermes-obsidian-llm-wiki-knowledge-base]] - Roland.W 的 Hermes+Obsidian+LLM Wiki 本地知识库方案

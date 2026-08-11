@@ -1,9 +1,19 @@
 ---
 title: Claude Code 作者 Boris 28 分钟教你写真正有效的 Prompts
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/提示词, #主题/Claude-Code, #主题/效率, #场景/视频推荐, #场景/X长文, #手法/权威背书, #手法/稀缺对比, #手法/免费锚定, #手法/案例驱动]
+tags:
+  - 主题/AI-Coding
+  - 主题/提示词
+  - 主题/Claude-Code
+  - 主题/效率
+  - 场景/视频推荐
+  - 场景/X长文
+  - 手法/权威背书
+  - 手法/稀缺对比
+  - 手法/免费锚定
+  - 手法/案例驱动
 nodes: [CLAUDE.md, 内存快捷方式, 并行会话, 提示模式, Boris-Cherny, 提示词工程化, 免费vs付费]
-links: [[articles/2026-06-06-precis0x-Boris-Claude-Code-28min-Video|原文]] · [[articles/2026-06-06-precis0x-Boris-Claude-Code-28min-Video-digest|拆解]] · [[every-agentic-engineering-hack-2026-06|Matt Van Horn 的 22 个 Hacks]] · [[Claude-Code团队5条工作原则-Fiona-Fung分享]] · [[claude-code-dynamic-workflows]]
+links: [[articles/2026-06-06-precis0x-Boris-Claude-Code-28min-Video|原文]] · [[articles/2026-06-06-precis0x-Boris-Claude-Code-28min-Video-digest|拆解]] · [[02-ai-coding/every-agentic-engineering-hack-2026-06|Matt Van Horn 的 22 个 Hacks]] · [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] · [[02-ai-coding/claude-code-dynamic-workflows]]
 date: 2026-06-06
 source: X / @precisox（推荐）/ Boris Cherny（视频作者）
 stats: 88万 浏览 / 69 转推 / 1,360 引用 / 8,335 喜欢 / 1.5万 书签（2026-06-07 抓取）
@@ -85,15 +95,15 @@ stats: 88万 浏览 / 69 转推 / 1,360 引用 / 8,335 喜欢 / 1.5万 书签（
 
 - [[articles/2026-06-06-precis0x-Boris-Claude-Code-28min-Video|原文存档]] — 推文完整正文
 - [[articles/2026-06-06-precis0x-Boris-Claude-Code-28min-Video-digest|拆解文档]] — 5 角度 + 钩子库
-- [[every-agentic-engineering-hack-2026-06|Matt Van Horn 的 22 个 Hacks]] — 一线工程化展开
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]] — 团队视角工作原则
-- [[claude-code-dynamic-workflows|Claude Code 动态工作流]] — Anthropic 官方 dynamic workflow
-- [[Codex才是最适合普通人的顶级牛马-Agent]] — Codex 工作台对照
+- [[02-ai-coding/every-agentic-engineering-hack-2026-06|Matt Van Horn 的 22 个 Hacks]] — 一线工程化展开
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] — 团队视角工作原则
+- [[02-ai-coding/claude-code-dynamic-workflows|Claude Code 动态工作流]] — Anthropic 官方 dynamic workflow
+- [[02-ai-coding/Codex才是最适合普通人的顶级牛马-Agent]] — Codex 工作台对照
 
 ---
 
 ## 标签
 
-#主题/AI-Coding #主题/提示词 #主题/Claude-Code #主题/效率
-#场景/视频推荐 #场景/X长文
-#手法/权威背书 #手法/稀缺对比 #手法/免费锚定 #手法/案例驱动
+ #主题/AI-Coding #主题/提示词 #主题/Claude-Code #主题/效率
+ #场景/视频推荐 #场景/X长文
+ #手法/权威背书 #手法/稀缺对比 #手法/免费锚定 #手法/案例驱动

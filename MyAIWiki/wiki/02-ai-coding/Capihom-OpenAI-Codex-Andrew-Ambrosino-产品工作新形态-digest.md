@@ -1,7 +1,12 @@
 ---
 title: Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态-digest
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/产品工作形态, #主题/Codex, #主题/品味, #场景/速读]
+tags:
+  - 主题/AI-Coding
+  - 主题/产品工作形态
+  - 主题/Codex
+  - 主题/品味
+  - 场景/速读
 date: 2026-06-30
 source: 微信公众号 Capihom 2026-06-30 编译
 ---
@@ -51,7 +56,7 @@ source: 微信公众号 Capihom 2026-06-30 编译
 4. **Seetong App 升级 = home base**：不重做摄像头 SDK，让 AI 理解任务 + 调用工具 + 补接口
 5. **PM 角色不被简化**：黄松佳（产品经理）不能被"所有人都叫 builder"替代
 
-**6 关联**：[[OpenAI最新报告解读-Codex正在进入知识工作的主战场]] [[Claude-Code-主动式Agent-Routines]] [[与AI一起做产品的六条原则]] [[Laurel-CPO-Jiaona-Zhang-公司OS]] [[字节跳动洪定坤-AI-Coding的实践与探索]] [[深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]]
+**6 关联**：[[02-ai-coding/OpenAI最新报告解读-Codex正在进入知识工作的主战场]] [[02-ai-coding/Claude-Code-主动式Agent-Routines]] [[03-productivity/与AI一起做产品的六条原则]] [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]] [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] [[02-ai-coding/深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]]
 
 ## 备注
 

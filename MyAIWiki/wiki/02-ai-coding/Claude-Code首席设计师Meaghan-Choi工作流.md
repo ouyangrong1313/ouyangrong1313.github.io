@@ -1,9 +1,26 @@
 ---
 title: Claude Code 首席设计师的 AI 工作流:从并行到自动巡逻,人只在判断环节介入
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI-Native, #主题/Anthropic, #主题/Harness, #主题/工作流设计, #节点/Worktree并行, #节点/AI自决给理由, #节点/全链路自动化, #节点/AI自动巡逻, #节点/Auto模式+Loop, #节点/Opus1M上下文, #节点/AI设计边界, #节点/先把流程搭好等模型升级, #手法/方法论, #手法/反例论证, #场景/编译长文, #场景/Anthropic一手]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Native
+  - 主题/Anthropic
+  - 主题/Harness
+  - 主题/工作流设计
+  - 节点/Worktree并行
+  - 节点/AI自决给理由
+  - 节点/全链路自动化
+  - 节点/AI自动巡逻
+  - 节点/Auto模式+Loop
+  - 节点/Opus1M上下文
+  - 节点/AI设计边界
+  - 节点/先把流程搭好等模型升级
+  - 手法/方法论
+  - 手法/反例论证
+  - 场景/编译长文
+  - 场景/Anthropic一手
 nodes: [Worktree并行, AI自决给理由, 全链路自动化, AI自动巡逻, Auto模式+Loop, Opus1M上下文, AI设计边界, 先把流程搭好等模型升级]
-links: [[Claude-Code作者Boris-我已经不写prompt了我写loop]], [[Claude-Code之父品味不是人类护城河]], [[Claude-Code团队5条工作原则-Fiona-Fung分享]], [[Addy-Osmani-Loop-Engineering]], [[Agentic-Engineering-AI-Workbench]], [[买了一样的AI为什么别家的比你的强]], [[多Agent使用边界与并行判定]], [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+links: [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]], [[02-ai-coding/Claude-Code之父品味不是人类护城河]], [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]], [[02-ai-coding/Addy-Osmani-Loop-Engineering]], [[02-ai-coding/Agentic-Engineering-AI-Workbench]], [[02-ai-coding/买了一样的AI为什么别家的比你的强]], [[02-ai-coding/多Agent使用边界与并行判定]], [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
 date: 2026-06-10
 source: 微信公众号 / loonggg(编译自 Anthropic Claude Code 首席设计师 Meaghan Choi 演示)
 ---
@@ -24,7 +41,7 @@ source: 微信公众号 / loonggg(编译自 Anthropic Claude Code 首席设计�
 ## 分类提炼
 
 - 场景:Anthropic 内部工作流 / 个人 AI 工作流 / 团队 AI 化
-- 标签:#主题/AI-Coding #主题/Anthropic #节点/Worktree并行 #节点/Auto模式+Loop
+- 标签: #主题/AI-Coding #主题/Anthropic #节点/Worktree并行 #节点/Auto模式+Loop
 - 类型:方法论 / 一手观察 / 跨职能自动化
 
 ## 知识节点(8 个独立概念)
@@ -42,17 +59,17 @@ source: 微信公众号 / loonggg(编译自 Anthropic Claude Code 首席设计�
 
 ### 上游(基于 / 来自)
 
-- [[Claude-Code作者Boris-我已经不写prompt了我写loop]] - "写 Loops" 是 AI Coding 下一阶段,本文"auto + loop"是同一信号的 Claude Code 内化版
-- [[Claude-Code之父品味不是人类护城河]] - Boris 谈品味被模型侵蚀,Meaghan 谈当下 AI 设计仍不够好,两者互补 = "AI 边界今天在哪,明天会移动到哪"
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]] - "Trust but verify" 规则的 AI 监控化 = 同一个 Anthropic 内部思路的不同切面
-- [[Addy-Osmani-Loop-Engineering]] - 5+1 积木(auto / worktree / skill / mcp / sub-agent / memory)与本文方法完全对应
+- [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]] - "写 Loops" 是 AI Coding 下一阶段,本文"auto + loop"是同一信号的 Claude Code 内化版
+- [[02-ai-coding/Claude-Code之父品味不是人类护城河]] - Boris 谈品味被模型侵蚀,Meaghan 谈当下 AI 设计仍不够好,两者互补 = "AI 边界今天在哪,明天会移动到哪"
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] - "Trust but verify" 规则的 AI 监控化 = 同一个 Anthropic 内部思路的不同切面
+- [[02-ai-coding/Addy-Osmani-Loop-Engineering]] - 5+1 积木(auto / worktree / skill / mcp / sub-agent / memory)与本文方法完全对应
 
 ### 下游(应用于 / 验证于)
 
-- [[Agentic-Engineering-AI-Workbench]] - "AI 工作台"五层结构(计划/上下文/执行/验证/治理)= 本文方法论的结构化版本
-- [[买了一样的AI为什么别家的比你的强]] - "AI 自己做初判 + 给理由"是 Hiten Shah "模型是商品,判断是资产"在个人层面的具体实现
-- [[多Agent使用边界与并行判定]] - "同时开 4-5 个 Claude"需要先用"任务卡 + 隔离 + 可验证结果 + 合并规则"判定并行是否值得
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] - 强模型也需 Harness,auto/loop 本身是 Harness 的一部分
+- [[02-ai-coding/Agentic-Engineering-AI-Workbench]] - "AI 工作台"五层结构(计划/上下文/执行/验证/治理)= 本文方法论的结构化版本
+- [[02-ai-coding/买了一样的AI为什么别家的比你的强]] - "AI 自己做初判 + 给理由"是 Hiten Shah "模型是商品,判断是资产"在个人层面的具体实现
+- [[02-ai-coding/多Agent使用边界与并行判定]] - "同时开 4-5 个 Claude"需要先用"任务卡 + 隔离 + 可验证结果 + 合并规则"判定并行是否值得
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] - 强模型也需 Harness,auto/loop 本身是 Harness 的一部分
 
 ## 正文要点(8 条)
 
@@ -146,13 +163,13 @@ source: 微信公众号 / loonggg(编译自 Anthropic Claude Code 首席设计�
 
 ## 我的理解
 
-- **"先把流程搭好,等模型升级"是 2026 年最高 ROI 的 AI 战略** —— Meaghan 关掉"自动发消息"但保留整套流程 = **永远不浪费自己搭好的工作流**;这条主线与 [[Addy-Osmani-Loop-Engineering]] [[Agentic-Engineering-AI-Workbench]] 是同一信号的不同切面
-- **"auto + loop + Opus 1M 上下文"是 Claude Code 推荐的"高交互"配置组合** —— 但这套组合需要配合 **清晰的护栏(分类器判断风险 / loop 终止条件)**,否则容易失控;与 [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] "模型再强也需要 Harness 约束"互相印证
-- **"用定时任务自动巡逻产品质量"是 Anthropic 内部的"AI 自我监控"实践** —— AI 不只帮工程师写代码,还帮设计师/PM 检查"有没有被绕过";这条与 [[Claude-Code团队5条工作原则-Fiona-Fung分享]] 的 "Trust but verify" 是同一条规则的产品化形式
-- **"AI 做不好设计,人把控方向"是重要的"AI 边界论"** —— 与 [[Claude-Code之父品味不是人类护城河]] Boris 的"品味也会被模型侵蚀"形成互补:**AI 在"判断 + 审美"上边界还在,但边界会持续移动**;人要做的是 **持续把"今天模型做不到"的事结构化地留给未来模型**
-- **"让 AI 自己做决策 + 给理由"是"判断力外包"的具体实现** —— 跟上 [[买了一样的AI为什么别家的比你的强]] 的"模型是商品,判断是资产"主线 —— Meaghan 把"选择哪个方案"这种初级判断也包进 Claude = **判断的颗粒度从"拍板"下沉到"初判 + 解释"**
+- **"先把流程搭好,等模型升级"是 2026 年最高 ROI 的 AI 战略** —— Meaghan 关掉"自动发消息"但保留整套流程 = **永远不浪费自己搭好的工作流**;这条主线与 [[02-ai-coding/Addy-Osmani-Loop-Engineering]] [[02-ai-coding/Agentic-Engineering-AI-Workbench]] 是同一信号的不同切面
+- **"auto + loop + Opus 1M 上下文"是 Claude Code 推荐的"高交互"配置组合** —— 但这套组合需要配合 **清晰的护栏(分类器判断风险 / loop 终止条件)**,否则容易失控;与 [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] "模型再强也需要 Harness 约束"互相印证
+- **"用定时任务自动巡逻产品质量"是 Anthropic 内部的"AI 自我监控"实践** —— AI 不只帮工程师写代码,还帮设计师/PM 检查"有没有被绕过";这条与 [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] 的 "Trust but verify" 是同一条规则的产品化形式
+- **"AI 做不好设计,人把控方向"是重要的"AI 边界论"** —— 与 [[02-ai-coding/Claude-Code之父品味不是人类护城河]] Boris 的"品味也会被模型侵蚀"形成互补:**AI 在"判断 + 审美"上边界还在,但边界会持续移动**;人要做的是 **持续把"今天模型做不到"的事结构化地留给未来模型**
+- **"让 AI 自己做决策 + 给理由"是"判断力外包"的具体实现** —— 跟上 [[02-ai-coding/买了一样的AI为什么别家的比你的强]] 的"模型是商品,判断是资产"主线 —— Meaghan 把"选择哪个方案"这种初级判断也包进 Claude = **判断的颗粒度从"拍板"下沉到"初判 + 解释"**
 - **对 Seetong 团队的 3 个可借鉴动作**:
-  1. **worktree 并行改造**:选一个迭代试"同时 3 个 Codex 跑不同子任务"(参考 [[多Agent使用边界与并行判定]])
+  1. **worktree 并行改造**:选一个迭代试"同时 3 个 Codex 跑不同子任务"(参考 [[02-ai-coding/多Agent使用边界与并行判定]])
   2. **"AI 自动巡逻"小试点**:写一个 cron 任务,每天扫 Seetong Bug / 需求,自动标红"测试已 3 天未响应"等异常
   3. **Opus + 1M 上下文 + auto 模式**:在重决策(架构 / 重大 Bug 排查 / 跨模块重构)任务上用这套配置,先小范围验证
 
@@ -161,11 +178,11 @@ source: 微信公众号 / loonggg(编译自 Anthropic Claude Code 首席设计�
 - 原文:https://mp.weixin.qq.com/s/_WaCCvZ0FgMQiJ1PSVOMwA
 - 演示者:Meaghan Choi(Anthropic,Claude Code 首席设计师)
 - 关联 wiki:
-  - [[Claude-Code作者Boris-我已经不写prompt了我写loop]] - "写 Loops"是 AI Coding 的下一阶段,本文"auto + loop"是同主线
-  - [[Claude-Code之父品味不是人类护城河]] - Boris 谈品味被模型侵蚀,Meaghan 谈当下 AI 设计仍不够好,两者互补
-  - [[Claude-Code团队5条工作原则-Fiona-Fung分享]] - "Trust but verify" 规则的 AI 监控化
-  - [[Addy-Osmani-Loop-Engineering]] - 5+1 积木 + auto + loop 是同一信号的跨产品表达
-  - [[Agentic-Engineering-AI-Workbench]] - "AI 工作台"五层结构 = 本文方法论的结构化版本
-  - [[买了一样的AI为什么别家的比你的强]] - "AI 自己做初判 + 给理由"是判断力外包的具体形式
-  - [[多Agent使用边界与并行判定]] - "同时开 4-5 个 Claude" 需要先判定并行是否值得
-  - [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] - 强模型也需 Harness,auto/loop 本身是 Harness 的一部分
+  - [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]] - "写 Loops"是 AI Coding 的下一阶段,本文"auto + loop"是同主线
+  - [[02-ai-coding/Claude-Code之父品味不是人类护城河]] - Boris 谈品味被模型侵蚀,Meaghan 谈当下 AI 设计仍不够好,两者互补
+  - [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] - "Trust but verify" 规则的 AI 监控化
+  - [[02-ai-coding/Addy-Osmani-Loop-Engineering]] - 5+1 积木 + auto + loop 是同一信号的跨产品表达
+  - [[02-ai-coding/Agentic-Engineering-AI-Workbench]] - "AI 工作台"五层结构 = 本文方法论的结构化版本
+  - [[02-ai-coding/买了一样的AI为什么别家的比你的强]] - "AI 自己做初判 + 给理由"是判断力外包的具体形式
+  - [[02-ai-coding/多Agent使用边界与并行判定]] - "同时开 4-5 个 Claude" 需要先判定并行是否值得
+  - [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] - 强模型也需 Harness,auto/loop 本身是 Harness 的一部分

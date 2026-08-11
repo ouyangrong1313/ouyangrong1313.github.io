@@ -42,7 +42,7 @@
 
 ## 对 Seetong 4 个可借鉴动作
 
-1. **盘点已是 loop 的**:OpenClaw HEARTBEAT、Seetong 日报/周报/简报 cron、神策友盟反馈 dry-run、Login 成功率每日巡检——全是 loop 雏形,写进 [[Codex配置原则总览]] "已是 loop" 清单
+1. **盘点已是 loop 的**:OpenClaw HEARTBEAT、Seetong 日报/周报/简报 cron、神策友盟反馈 dry-run、Login 成功率每日巡检——全是 loop 雏形,写进 [[02-ai-coding/Codex配置原则总览]] "已是 loop" 清单
 2. **选 1 个"高 ROI + 验证便宜"场景试 7 天**:神策崩溃堆栈归类 / TAPD 过期迭代关闭 / 用户反馈去重——都满足"自动 verify=结果可读可点"
 3. **写 Loop 任务卡 8 项必填**:循环名称/触发频率/输入范围/最大运行/权限/验证/停止/交付物
 4. **拒绝为 loop 而 loop**:一次性需求继续用好提示词+Plan 模式;**只有"每周/每天重复+流程稳定+验证便宜"三件齐全才上 loop**
@@ -50,17 +50,17 @@
 ## 关联(三段)
 
 ### 上游
-- [[Addy-Osmani-Loop-Engineering]] — 5+1 积木原始来源
-- [[Loop-Engineering-详解-把反馈循环放进工程现场]] — 若飞中文实操
+- [[02-ai-coding/Addy-Osmani-Loop-Engineering]] — 5+1 积木原始来源
+- [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] — 若飞中文实操
 
 ### 下游
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]]
-- [[Claude-Code一周年回顾-Boris-Cat]]
-- [[claude-code-dynamic-workflows]]
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]
+- [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]]
+- [[02-ai-coding/claude-code-dynamic-workflows]]
 
 ### 同级
-- [[Claude-Code首席设计师Meaghan-Choi工作流]]
-- [[Anthropic万字长文三个判断和一个阳谋]]
+- [[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]]
+- [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]]
 
 ## 限制
 

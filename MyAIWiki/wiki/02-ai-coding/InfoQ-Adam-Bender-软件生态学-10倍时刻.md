@@ -5,9 +5,23 @@ date: 2026-06-17
 source: 微信公众号 InfoQ（编译 宇琪 / 策划 Tina，原始作者 Adam Bender，Google 首席软件工程师）
 source_url: https://mp.weixin.qq.com/s/JiX1X9EQy8Cimm_Yg0pyTg
 youtube_url: https://www.youtube.com/watch?v=2n41YjR5QfU
-tags: [#主题/AI-Coding, #主题/软件工程, #主题/系统瓶颈, #主题/Google-工程文化, #节点/软件生态学, #节点/10倍时刻, #节点/共享命运, #节点/工程是积分编程, #节点/智识掌控, #节点/依赖图二次方增长, #手法/反例论证, #手法/系统思维, #场景/AI时代工程师, #场景/大规模开发]
+tags:
+  - 主题/AI-Coding
+  - 主题/软件工程
+  - 主题/系统瓶颈
+  - 主题/Google-工程文化
+  - 节点/软件生态学
+  - 节点/10倍时刻
+  - 节点/共享命运
+  - 节点/工程是积分编程
+  - 节点/智识掌控
+  - 节点/依赖图二次方增长
+  - 手法/反例论证
+  - 手法/系统思维
+  - 场景/AI时代工程师
+  - 场景/大规模开发
 nodes: [软件生态学, 社会技术系统, 共享命运, 大规模变更, 10倍代码时刻, 工程是积分编程, 依赖图二次方增长, 智识掌控]
-links: [[Addy-Osmani-Loop-Engineering]], [[APPSO-Codex-Claude-Code-Loop-Engineering]], [[Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]], [[Claude-Code一周年回顾-Boris-Cat]], [[Claude-Code首席设计师Meaghan-Choi工作流]], [[Anthropic万字长文三个判断和一个阳谋]], [[软件工程的功底是智能时代生死攸关的要素]], [[从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]], [[PM-Skills-Marketplace-产品经理必备skill]]
+links: [[02-ai-coding/Addy-Osmani-Loop-Engineering]], [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]], [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]], [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]], [[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]], [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]], [[02-ai-coding/软件工程的功底是智能时代生死攸关的要素]], [[02-ai-coding/从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]], [[02-ai-coding/PM-Skills-Marketplace-产品经理必备skill]]
 ---
 
 # 谷歌首席工程师：软件生态学与 10 倍代码时刻
@@ -43,22 +57,22 @@ links: [[Addy-Osmani-Loop-Engineering]], [[APPSO-Codex-Claude-Code-Loop-Engineer
 
 ### 上游(基于 / 来自)
 
-- [[Addy-Osmani-Loop-Engineering]] — 5+1 积木是方法论原典;Bender 讲"Loop 跑起来后 5 个节点会被 10x 撑爆",是同一硬币的另一面
-- [[Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] — Google 工程文化内嵌(同一公司两条线索);agent-skills 23 个技能里 7 块统一骨架是"Google 文化 8 特质"的工程化
-- [[APPSO-Codex-Claude-Code-Loop-Engineering]] — 产业同向共振信号;Loop 时代迁移是"10 倍时刻"的工具层回应
-- [[软件工程的功底是智能时代生死攸关的要素]] — "基本功是生死攸关"与本文"AI 时代真正赢家是基本功最扎实的"是同主线不同角度
+- [[02-ai-coding/Addy-Osmani-Loop-Engineering]] — 5+1 积木是方法论原典;Bender 讲"Loop 跑起来后 5 个节点会被 10x 撑爆",是同一硬币的另一面
+- [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] — Google 工程文化内嵌(同一公司两条线索);agent-skills 23 个技能里 7 块统一骨架是"Google 文化 8 特质"的工程化
+- [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]] — 产业同向共振信号;Loop 时代迁移是"10 倍时刻"的工具层回应
+- [[02-ai-coding/软件工程的功底是智能时代生死攸关的要素]] — "基本功是生死攸关"与本文"AI 时代真正赢家是基本功最扎实的"是同主线不同角度
 
 ### 下游(应用于 / 验证于)
 
-- [[Claude-Code一周年回顾-Boris-Cat]] — Routine 异步化 / Auto Mode 都是"应对 10x 时刻"的工具层落地;Context 极简主义是"智识掌控"在 prompt 层的体现
-- [[Claude-Code首席设计师Meaghan-Choi工作流]] — 全链路自动化 = 本文"自动化优于手工劳作"原则的工程实践
-- [[Anthropic万字长文三个判断和一个阳谋]] — "慢变量安全垫"与本文"工程是慢变量"是同主线
-- [[从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]] — 工程基本功 → Agent / Skill / 知识库 / 验证闭环映射,是"系统层面应对 10x 时刻"的实践路径
+- [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]] — Routine 异步化 / Auto Mode 都是"应对 10x 时刻"的工具层落地;Context 极简主义是"智识掌控"在 prompt 层的体现
+- [[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]] — 全链路自动化 = 本文"自动化优于手工劳作"原则的工程实践
+- [[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]] — "慢变量安全垫"与本文"工程是慢变量"是同主线
+- [[02-ai-coding/从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]] — 工程基本功 → Agent / Skill / 知识库 / 验证闭环映射,是"系统层面应对 10x 时刻"的实践路径
 
 ### 同级(横向 / 并列)
 
-- [[PM-Skills-Marketplace-产品经理必备skill]] — Skill 资产化视角,本文"系统文化"视角,互补
-- [[Loop-Engineering-详解-把反馈循环放进工程现场]] — Loop 设计的另一面
+- [[02-ai-coding/PM-Skills-Marketplace-产品经理必备skill]] — Skill 资产化视角,本文"系统文化"视角,互补
+- [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] — Loop 设计的另一面
 
 ## 正文要点(主张 + 案例 + 操作)
 
@@ -86,11 +100,11 @@ links: [[Addy-Osmani-Loop-Engineering]], [[APPSO-Codex-Claude-Code-Loop-Engineer
 
 ## 备注与限制
 
-- **本演讲在 MyAIWiki 02-ai-coding 体系里的位置**:AI 时代软件工程"基础设施视角" — 与 [[Addy-Osmani-Loop-Engineering]] (方法论原典)、[[Claude-Code一周年回顾-Boris-Cat]] (工具使用)、[[Anthropic万字长文三个判断和一个阳谋]] (战略判断) 互为四角
+- **本演讲在 MyAIWiki 02-ai-coding 体系里的位置**:AI 时代软件工程"基础设施视角" — 与 [[02-ai-coding/Addy-Osmani-Loop-Engineering]] (方法论原典)、[[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]] (工具使用)、[[02-ai-coding/Anthropic万字长文三个判断和一个阳谋]] (战略判断) 互为四角
 - **本次编译的限制**:微信 HTML 抽取的纯文本不含配图/代码块/公式;完整演讲原视频(YouTube)有更多问答环节内容,本文未覆盖
 - **本次未在文中出现但 Adam Bender 反复强调的反问句**:"你对自己今天的开发者生态系统了解多少?你能把它完整画出来吗?" — 适合作为 Seetong 团队季度复盘的开场问
 - **与本工作区 Seetong 主线的强关联**:
   - Seetong-KMP 跨端架构对应"微服务 vs 单体仓库"权衡 — 5 人初创 vs 20 万人企业的选择差异
   - Seetong 跨端构建时间(tps / ios / android / harmony)是"编译时间容量型瓶颈"的具体实例
   - Seetong Tapd 复盘 / 测试基础设施对应"测试计算资源依赖图"的诊断
-- **速读摘要**:见同目录 [[InfoQ-Adam-Bender-软件生态学-10倍时刻-digest]]
+- **速读摘要**:见同目录 [[02-ai-coding/InfoQ-Adam-Bender-软件生态学-10倍时刻-digest]]

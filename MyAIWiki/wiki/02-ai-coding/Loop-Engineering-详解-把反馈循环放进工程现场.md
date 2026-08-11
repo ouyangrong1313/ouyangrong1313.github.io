@@ -1,9 +1,20 @@
 ---
 title: "Loop Engineering 详解：把反馈循环放进工程现场"
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/Harness, #主题/Loop, #主题/工程管理, #主题/工作流设计, #主题/状态记忆, #手法/方法论, #手法/工程实践, #手法/试点设计, #公司/架构师JiaGouX, #场景/小团队试点]
+tags:
+  - 主题/AI-Coding
+  - 主题/Harness
+  - 主题/Loop
+  - 主题/工程管理
+  - 主题/工作流设计
+  - 主题/状态记忆
+  - 手法/方法论
+  - 手法/工程实践
+  - 手法/试点设计
+  - 公司/架构师JiaGouX
+  - 场景/小团队试点
 nodes: [Prompt到Loop层次, 四口架构, 闭环开环, 四条件准入, 五项小表, 任务卡预算, 状态记忆载体, 人在场, 5条保守原则, 7天试点]
-links: [[Addy-Osmani-Loop-Engineering]], [[从Prompt-Context到Harness-工程的三次进化与终局之战]], [[Agentic-Engineering-AI-Workbench]], [[Claude-Code一周年回顾-Boris-Cat]], [[Claude-Code作者Boris-我已经不写prompt了我写loop]], [[Claude-Code之父品味不是人类护城河]], [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]], [[多Agent使用边界与并行判定]], [[Codex配置原则总览]], [[Claude-Code团队5条工作原则-Fiona-Fung分享]]
+links: [[02-ai-coding/Addy-Osmani-Loop-Engineering]], [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]], [[02-ai-coding/Agentic-Engineering-AI-Workbench]], [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]], [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]], [[02-ai-coding/Claude-Code之父品味不是人类护城河]], [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]], [[02-ai-coding/多Agent使用边界与并行判定]], [[02-ai-coding/Codex配置原则总览]], [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]
 date: 2026-06-11
 source: 微信公众号 / 架构师（JiaGouX）—若飞
 ---
@@ -12,25 +23,25 @@ source: 微信公众号 / 架构师（JiaGouX）—若飞
 
 > **核心命题**：Loop Engineering 不是"提示词死了"，而是把 prompt 放回一个**反馈系统**：发现工作 → 分配任务 → 执行 → 验证 → 记录状态 → 决定继续/停止/交给人。若飞（架构师 JiaGouX）在这篇里不争论口号，而是给工程团队一份"小范围试 loop 的实操指南"——**7 天试点 + 5 项准入小表 + 5 条保守原则**。
 >
-> 本文是 [[Addy-Osmani-Loop-Engineering]] 的中文工程化深度解读 + 7 天试点设计 + 中文工程社区视角。
+> 本文是 [[02-ai-coding/Addy-Osmani-Loop-Engineering]] 的中文工程化深度解读 + 7 天试点设计 + 中文工程社区视角。
 
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- [[Addy-Osmani-Loop-Engineering]]：Addy Osmani 原文（5+1 积木系统 / Codex 与 Claude Code 双实现 / 3 个反噬警示），本文是其中文工程化深度解读
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]]：从 Prompt 到 Context 到 Harness 的范式演化，loop 是 Harness 之上的"持续发生"层
-- [[Agentic-Engineering-AI-Workbench]]：AI 工作台 5 层（计划/上下文/执行/验证/治理），是 Loop 的"工作现场"基础
+- [[02-ai-coding/Addy-Osmani-Loop-Engineering]]：Addy Osmani 原文（5+1 积木系统 / Codex 与 Claude Code 双实现 / 3 个反噬警示），本文是其中文工程化深度解读
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]：从 Prompt 到 Context 到 Harness 的范式演化，loop 是 Harness 之上的"持续发生"层
+- [[02-ai-coding/Agentic-Engineering-AI-Workbench]]：AI 工作台 5 层（计划/上下文/执行/验证/治理），是 Loop 的"工作现场"基础
 
 ### 下游（应用于 / 验证于）
-- [[Claude-Code一周年回顾-Boris-Cat]]：Routine 异步化是 loop 的工程化形式
-- [[Claude-Code作者Boris-我已经不写prompt了我写loop]]：Boris 写 loop 驱动 Claude 判断下一步
-- [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]：Harness 动态生成 + Loop 的协作
+- [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]]：Routine 异步化是 loop 的工程化形式
+- [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]]：Boris 写 loop 驱动 Claude 判断下一步
+- [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]：Harness 动态生成 + Loop 的协作
 
 ### 同级（横向 / 并列）
-- [[Claude-Code之父品味不是人类护城河]]：同一 Boris 访谈主线——人的判断力是稀缺资源
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]]：Trust but verify + 团队级 harness
-- [[多Agent使用边界与并行判定]]：多 Agent 并行判定规则
-- [[Codex配置原则总览]]：Codex 配置原则与 loop 的关系
+- [[02-ai-coding/Claude-Code之父品味不是人类护城河]]：同一 Boris 访谈主线——人的判断力是稀缺资源
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]：Trust but verify + 团队级 harness
+- [[02-ai-coding/多Agent使用边界与并行判定]]：多 Agent 并行判定规则
+- [[02-ai-coding/Codex配置原则总览]]：Codex 配置原则与 loop 的关系
 
 ## 核心论点
 
@@ -196,7 +207,7 @@ Loop 适合"**目标清楚、验证便宜、失败可回滚**"的任务：
 - 它能持续处理可验证的小闭环，但模糊的业务判断仍要有人负责
 - 它能让工程师少做重复操作，但不能让工程师少理解系统
 
-## 与原文 [[Addy-Osmani-Loop-Engineering]] 的差异
+## 与原文 [[02-ai-coding/Addy-Osmani-Loop-Engineering]] 的差异
 
 | 维度 | Addy 原文 | 若飞详解 |
 |---|---|---|
@@ -233,5 +244,5 @@ Loop 适合"**目标清楚、验证便宜、失败可回滚**"的任务：
 
 ---
 
-*完整快问快答与产品演示细节见 [[../../raw/2026-06-Ruofei-Loop-Engineering-详解]] 原文。*
-*速读摘要见 [[Loop-Engineering-详解-把反馈循环放进工程现场-digest]]。*
+*完整快问快答与产品演示细节见 [[../../raw/Ruofei-Loop-Engineering-详解]] 原文。*
+*速读摘要见 [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场-digest]]。*

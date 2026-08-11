@@ -7,7 +7,7 @@
 ## 分类提炼
 
 - 场景：AI Coding 工作流设计 / Codex 实战 / 个人与团队协作系统
-- 标签：#主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/权威背书 #场景/公众号长文
+- 标签： #主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/权威背书 #场景/公众号长文
 - 类型：方法论综述 / 官方实践解读 / 工作流指南
 
 ## 要点列表
@@ -45,12 +45,12 @@
 
 ## 标签
 
-#主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/权威背书 #场景/公众号长文
+ #主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/权威背书 #场景/公众号长文
 
 ## 相关链接
 
 - 原文链接：https://mp.weixin.qq.com/s/BzR8QdVkEg2nLtZP1wVXWQ
-- 相关页面：[[Codex才是最适合普通人的顶级牛马-Agent]]
-- 相关页面：[[Codex配置优化清单-从Harness视角]]
-- 相关页面：[[从Prompt-Context到Harness-工程的三次进化与终局之战]]
-- 相关页面：[[MyAIWiki写入规范与验证模板]]
+- 相关页面：[[02-ai-coding/Codex才是最适合普通人的顶级牛马-Agent]]
+- 相关页面：[[02-ai-coding/Codex配置优化清单-从Harness视角]]
+- 相关页面：[[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]
+- 相关页面：[[02-ai-coding/MyAIWiki写入规范与验证模板]]

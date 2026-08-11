@@ -1,9 +1,23 @@
 ---
 title: Anthropic 万字爆火长文的三个判断，以及一个值得警惕的阳谋
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI行业战略, #主题/Anthropic, #节点/执行力的零价格, #节点/技术监工, #节点/AI审AI的盲区, #节点/验收能力, #节点/快变量慢变量, #节点/巴鲁克计划, #节点/可验证暂停机制, #节点/AI自我进化, #节点/主场数据偏置, #场景/编译长文, #场景/行业分析]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI行业战略
+  - 主题/Anthropic
+  - 节点/执行力的零价格
+  - 节点/技术监工
+  - 节点/AI审AI的盲区
+  - 节点/验收能力
+  - 节点/快变量慢变量
+  - 节点/巴鲁克计划
+  - 节点/可验证暂停机制
+  - 节点/AI自我进化
+  - 节点/主场数据偏置
+  - 场景/编译长文
+  - 场景/行业分析
 nodes: [执行力的零价格, 技术监工, AI审AI的盲区, 验收能力, 快变量与慢变量, 巴鲁克计划, 可验证暂停机制, 主场数据偏置]
-links: [[Claude-Code作者Boris-我已经不写prompt了我写loop]], [[从Prompt-Context到Harness-工程的三次进化与终局之战]], [[AI-Coding的顿悟时刻]], [[买了一样的AI为什么别家的比你的强]]
+links: [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]], [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]], [[02-ai-coding/AI-Coding的顿悟时刻]], [[02-ai-coding/买了一样的AI为什么别家的比你的强]]
 date: 2026-06-08
 source: 微信公众号 / 快刀青衣（拆解 Anthropic 长文《When AI builds itself》）
 ---
@@ -22,7 +36,7 @@ source: 微信公众号 / 快刀青衣（拆解 Anthropic 长文《When AI build
 
 ## 分类提炼
 - 场景：AI 行业战略分析 / AI 编程范式
-- 标签：#主题/AI行业战略 #主题/Anthropic #节点/执行力的零价格 #节点/巴鲁克计划
+- 标签： #主题/AI行业战略 #主题/Anthropic #节点/执行力的零价格 #节点/巴鲁克计划
 - 类型：行业分析 / 战略洞察 / 反例论证 / 编译长文
 
 ## 知识节点（8 个独立概念）
@@ -39,17 +53,17 @@ source: 微信公众号 / 快刀青衣（拆解 Anthropic 长文《When AI build
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- [[Claude-Code作者Boris-我已经不写prompt了我写loop]]：Boris 谈"写 loop 不写 prompt"是执行层零价格的开端；本篇是其在行业战略层的延伸
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]]：Harness 思想 = 工程师从"执行"到"判断"的迁移路径
+- [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]]：Boris 谈"写 loop 不写 prompt"是执行层零价格的开端；本篇是其在行业战略层的延伸
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]：Harness 思想 = 工程师从"执行"到"判断"的迁移路径
 
 ### 下游（应用于 / 验证于）
-- [[买了一样的AI为什么别家的比你的强]]：Hiten Shah 谈"模型是商品，skill 才是资产"是判断层的具体形态
-- [[AI-Coding的顿悟时刻]]：未来瓶颈=需求定义+架构设计，跟"验收能力"是同一回事
+- [[02-ai-coding/买了一样的AI为什么别家的比你的强]]：Hiten Shah 谈"模型是商品，skill 才是资产"是判断层的具体形态
+- [[02-ai-coding/AI-Coding的顿悟时刻]]：未来瓶颈=需求定义+架构设计，跟"验收能力"是同一回事
 
 ### 同级（横向 / 并列）
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]：Harness 思想的总论
-- [[Claude-Code负责人谈AI原生工程组织]]：Anthropic 的组织方法论
-- [[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]：从组织视角看 AI 战略
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]：Harness 思想的总论
+- [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]]：Anthropic 的组织方法论
+- [[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]：从组织视角看 AI 战略
 
 ## 正文要点（6 节）
 
@@ -166,10 +180,10 @@ source: 微信公众号 / 快刀青衣（拆解 Anthropic 长文《When AI build
 
 - 原文：https://mp.weixin.qq.com/s/sizLxZEdpSDgjPzo4AtIfg
 - 关联 wiki：
-  - [[Claude-Code作者Boris-我已经不写prompt了我写loop]] - 写 loop 不写 prompt 的范式开端
-  - [[从Prompt-Context到Harness-工程的三次进化与终局之战]] - Harness 思想
-  - [[AI-Coding的顿悟时刻]] - 未来瓶颈=需求定义+架构设计
-  - [[买了一样的AI为什么别家的比你的强]] - skill 是判断层的具体形态
-  - [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] - Harness 思想总论
-  - [[Claude-Code负责人谈AI原生工程组织]] - Anthropic 的组织方法论
-  - [[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]] - YC 的 AI 战略
+  - [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]] - 写 loop 不写 prompt 的范式开端
+  - [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]] - Harness 思想
+  - [[02-ai-coding/AI-Coding的顿悟时刻]] - 未来瓶颈=需求定义+架构设计
+  - [[02-ai-coding/买了一样的AI为什么别家的比你的强]] - skill 是判断层的具体形态
+  - [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] - Harness 思想总论
+  - [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]] - Anthropic 的组织方法论
+  - [[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]] - YC 的 AI 战略

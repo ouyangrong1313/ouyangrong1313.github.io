@@ -2,10 +2,10 @@
 title: 用AI解决真正的业务问题 - Digest
 category: 06-ai-tech
 tags:
-  - "#主题/AI战略"
-  - "#主题/企业AI落地"
-  - "#主题/为问题找AI"
-  - "#来源/HBR-IdeaCast"
+  - 主题/AI战略
+  - 主题/企业AI落地
+  - 主题/为问题找AI
+  - 来源/HBR-IdeaCast
 date: 2026-07-15
 source: 微信公众号「行走的帆」/ 作者 行走的帆 / 一手来源 HBR IdeaCast Josh Tarengel / 原文 https://mp.weixin.qq.com/s/TW1UQNic5_B3cDiEnSCVqQ
 ---
@@ -62,5 +62,5 @@ source: 微信公众号「行走的帆」/ 作者 行走的帆 / 一手来源 HB
 ## 关联 + 备注
 
 - **上游**：HBR IdeaCast 访谈 Josh Tarengel + 《AI for Good》新书
-- **同级**：[[麦肯锡-AI提效只是第一波红利]]（组织战略对偶）/ [[章文龙-AI分身时代-在场重新定价]]（AI 时代哲学）/ [[Nikesh-Arora-模型过剩与记忆护城河]]（CEO 战略）
+- **同级**：[[06-ai-tech/麦肯锡-AI提效只是第一波红利]]（组织战略对偶）/ [[06-ai-tech/章文龙-AI分身时代-在场重新定价]]（AI 时代哲学）/ [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]（CEO 战略）
 - **限制**：作者是公众号主，本文是 HBR IdeaCast 编译稿（二次创作）；5+3 替代边界缺行业细分；案例全在北美，Seetong 借鉴时考虑国内语境

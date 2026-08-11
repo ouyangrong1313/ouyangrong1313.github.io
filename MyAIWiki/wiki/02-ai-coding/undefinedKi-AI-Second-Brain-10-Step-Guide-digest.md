@@ -45,20 +45,20 @@ source: X 推文 / @undefinedKi
 ## 5 个对 Seetong / MyAIWiki 可借鉴动作
 
 1. **MyAIWiki 本库是 Karpathy Wiki 模式的实操实例**——raw + wiki + log + index + CLAUDE.md 五层结构，跑通 4 月以来
-2. **晨间简报升级为 Schedule 任务**——把 [[MyAIWiki写入规范与验证模板]] 的"晨间简报"做成 Claude Desktop Schedule 任务
+2. **晨间简报升级为 Schedule 任务**——把 [[02-ai-coding/MyAIWiki写入规范与验证模板]] 的"晨间简报"做成 Claude Desktop Schedule 任务
 3. **每个 Seetong 项目独立 vault**——`/Volumes/work/sdks/seetong-tps/CLAUDE.md` 单独写角色，全局 CLAUDE.md 不污染
 4. **重复任务做 Skill 而非提示词**——seetong-bug-triage / seetong-prd-review / seetong-weekly-report 补统一骨架
 5. **权限走 Key 不走 prompt**——Seetong-TAPD 工具接 read-only scope；OpenClaw 默认只读，删除/推送走人工审批
 
 ## 关联图谱（精简）
 
-- **上游**：[[karpathy-knowledge-system]] / [[claude-obsidian-second-brain]]（5/12 旧版）/ [[obsidian-claude-code-os]] / [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]] / [[garry-tan-ai-second-brain]] / [[构建LLM-Wiki智能知识库-实现AI辅助写作工作流]]
+- **上游**：[[03-productivity/karpathy-knowledge-system]] / [[02-ai-coding/claude-obsidian-second-brain]]（5/12 旧版）/ [[03-productivity/obsidian-claude-code-os]] / [[01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain]] / [[01-ai-agents/garry-tan-ai-second-brain]] / [[07-rag-systems/构建LLM-Wiki智能知识库-实现AI辅助写作工作流]]
 - **下游**：MyAIWiki 本库 + 三个开源 ready-made 仓库（claude-obsidian / obsidian-second-brain / second-brain-starter）+ Claude Desktop Schedule
-- **同级**：[[Claude-Code-主动式Agent-Routines]] / [[Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解]] / [[APPSO-Codex-Claude-Code-Loop-Engineering]]
+- **同级**：[[02-ai-coding/Claude-Code-主动式Agent-Routines]] / [[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解]] / [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]]
 
 ## 备注与限制
 
 - 原文 6/20 发布，385.6万 浏览；**本工作区已有 6 篇相关页面**，本文价值在"10 步完整实操"+"Schedule"+"keys-not-prompts"
 - 关键工具栈：Claude Desktop（Pro $20/月）+ Obsidian（免费）+ Local REST API 插件 + mcp-obsidian + Schedule
 - **ridark_eth 短推文**（16M 浏览）是本文的引用推广，作为"舆论扩散信号"存档
-- 详细版本：见同目录 [[undefinedKi-AI-Second-Brain-10-Step-Guide]]
+- 详细版本：见同目录 [[02-ai-coding/undefinedKi-AI-Second-Brain-10-Step-Guide]]

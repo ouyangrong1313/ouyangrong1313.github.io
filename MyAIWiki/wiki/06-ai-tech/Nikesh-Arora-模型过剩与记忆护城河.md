@@ -4,19 +4,25 @@ author: 51CTO技术栈（编译自 20VC）
 date: 2026-06-25
 slug: Nikesh-Arora-模型过剩与记忆护城河
 category: 06-ai-tech
-tags: [AI时代战略, 护城河, 记忆, FDE, SaaS, 物理AI]
+tags:
+  - AI时代战略
+  - 护城河
+  - 记忆
+  - FDE
+  - SaaS
+  - 物理AI
 rating: ⭐⭐⭐
 source_interviewee: Nikesh Arora（Palo Alto Networks CEO，前 Google 首席商务官）
 source_youtube: https://youtu.be/v4GN1q7HX1Y
 source_wechat: https://mp.weixin.qq.com/s/4sQxiX10UplAgoZMEs7Mcg
-digest: [[Nikesh-Arora-模型过剩与记忆护城河-digest]]
+digest: [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河-digest]]
 related:
-  - "[[章文龙-AI分身时代-在场重新定价]]"
-  - "[[凯文凯利-真正的好生意都在卖看不见的东西]]"
-  - "[[清华沈阳-自进化AI新物种]]"
-  - "[[Multica-AI-Native-组织-人是最慢的节点]]"
-  - "[[阿里云开发者-淘宝主播Agent的Harness工程实战]]"
-  - "[[Addy-Osmani-Loop-Engineering]]"
+  - "[[06-ai-tech/章文龙-AI分身时代-在场重新定价]]"
+  - "[[06-ai-tech/凯文凯利-真正的好生意都在卖看不见的东西]]"
+  - "[[01-ai-agents/清华沈阳-自进化AI新物种]]"
+  - "[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]"
+  - "[[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]]"
+  - "[[02-ai-coding/Addy-Osmani-Loop-Engineering]]"
 ---
 
 # Nikesh Arora：模型过剩与记忆护城河
@@ -91,7 +97,7 @@ SaaS 给工具让用户选（Excel/CRM/Slack）；AI 应用有观点——agent 
 2. **Token 价格趋势判断**：把 OpenClaw API 月度账单 + 三端 AI 用量画成 12 个月曲线，按"明年降 1/2"准备——会降价就别为今天涨价调产品定价；不会降就长合同锁价
 3. **简报长出观点**：从"报数字"（崩溃率 0.3%）升级为"表态"（0.3% 偏高，建议 iOS 8.4.0 灰度推迟到 6/27）——让简报从工具长成有观点的 agent
 4. **FDE 自检**：写下哪些功能是 FDE 驻场救火（客服帮用户配设备/工程师帮客户改报警阈值/商务帮客户写定制方案）——这些不产品化就是 AI 时代第一批被淘汰
-5. **模型中立幻觉评估**：评估 Seetong 切 A→B 模型改造成本，>30% 就要做模型无关抽象层（参考 [[阿里云开发者-淘宝主播Agent的Harness工程实战]] 的 Reducer 模式）
+5. **模型中立幻觉评估**：评估 Seetong 切 A→B 模型改造成本，>30% 就要做模型无关抽象层（参考 [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] 的 Reducer 模式）
 
 ## 分类理由与关联图谱
 
@@ -99,8 +105,8 @@ SaaS 给工具让用户选（Excel/CRM/Slack）；AI 应用有观点——agent 
 
 **关联图谱**：
 
-- 上游/平行：[[章文龙-AI分身时代-在场重新定价]]（都问"AI 时代什么是真护城河"——章文龙从个人视角，Nikesh 从公司视角）/ [[凯文凯利-真正的好生意都在卖看不见的东西]]（"看不见的东西"指记忆/上下文）/ [[清华沈阳-自进化AI新物种]]（模型过剩 vs 自进化方向）
-- 下游（工程落地）：[[Multica-AI-Native-组织-人是最慢的节点]]（"组织瓶颈=人" vs "模型瓶颈=上下文"）/ [[阿里云开发者-淘宝主播Agent的Harness工程实战]]（记忆对账/信任度闭环 = 工程版"上下文护城河"）/ [[Addy-Osmani-Loop-Engineering]]（Sub-agents + Memory-on-Disk = 上下文护城河的具体形态）
+- 上游/平行：[[06-ai-tech/章文龙-AI分身时代-在场重新定价]]（都问"AI 时代什么是真护城河"——章文龙从个人视角，Nikesh 从公司视角）/ [[06-ai-tech/凯文凯利-真正的好生意都在卖看不见的东西]]（"看不见的东西"指记忆/上下文）/ [[01-ai-agents/清华沈阳-自进化AI新物种]]（模型过剩 vs 自进化方向）
+- 下游（工程落地）：[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]（"组织瓶颈=人" vs "模型瓶颈=上下文"）/ [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]]（记忆对账/信任度闭环 = 工程版"上下文护城河"）/ [[02-ai-coding/Addy-Osmani-Loop-Engineering]]（Sub-agents + Memory-on-Disk = 上下文护城河的具体形态）
 
 ## 自检 / 限制 / 一句话带回去
 

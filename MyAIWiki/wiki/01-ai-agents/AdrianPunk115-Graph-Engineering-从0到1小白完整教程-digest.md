@@ -1,7 +1,14 @@
 ---
 title: Graph Engineering：从 0 到 1 小白完整教程（速读摘要）
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/Graph-Engineering, #主题/Loop-Engineering, #主题/Multi-Agent, #主题/Agent-Topology, #场景/X-Article, #来源/AdrianPunk115]
+tags:
+  - 主题/AI-Agent
+  - 主题/Graph-Engineering
+  - 主题/Loop-Engineering
+  - 主题/Multi-Agent
+  - 主题/Agent-Topology
+  - 场景/X-Article
+  - 来源/AdrianPunk115
 type: digest
 date: 2026-07-27
 source: X Article / Adrian Punk（@AdrianPunk115）
@@ -59,6 +66,6 @@ source: X Article / Adrian Punk（@AdrianPunk115）
 
 ## 关联 + 备注
 
-**关联**：[[图工程-Graph-Engineering-来了-LangChain说不是新东西]] / [[Loop-Engineering-验证才是瓶颈]] / [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] / [[从零设计生产级-Multi-Agent-Harness]] / [[万字长文拆解Agent-架构设计-四-多-Agent-协作]]
+**关联**：[[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]] / [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] / [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]] / [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]] / [[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]]
 
 **备注**：本文是大众解释版，最大价值不是提出新理论，而是把 Graph 的准入、节点、状态、路由、审阅和练习路径讲成新手可执行清单。

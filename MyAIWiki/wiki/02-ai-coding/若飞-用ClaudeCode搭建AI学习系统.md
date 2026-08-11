@@ -1,9 +1,17 @@
 ---
 title: "若飞：用 Claude Code 搭建自己的 AI 学习系统"
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/Claude-Code, #主题/学习方法论, #主题/Harness, #主题/Loop, #手法/工程实践, #公司/架构师JiaGouX, #场景/个人学习]
+tags:
+  - 主题/AI-Coding
+  - 主题/Claude-Code
+  - 主题/学习方法论
+  - 主题/Harness
+  - 主题/Loop
+  - 手法/工程实践
+  - 公司/架构师JiaGouX
+  - 场景/个人学习
 nodes: [学习工作台, 学习Harness四件套, 学习契约, 学习环境瘦身, 答案不提前出现, CLAUDE-md学习陪练, 学习卡与错误记录, 3周节奏与4验收]
-links: [[Loop-Engineering-详解-把反馈循环放进工程现场]], [[Agentic-Engineering-AI-Workbench]], [[Addy-Osmani-Loop-Engineering]], [[APPSO-Codex-Claude-Code-Loop-Engineering]], [[Claude-Code-主动式Agent-Routines]], [[Claude-Code一周年回顾-Boris-Cat]], [[Claude-Code之父品味不是人类护城河]], [[ai-learning-expert-perspective]], [[karpathy-knowledge-system]], [[seetong-daily-briefing]], [[seetong-tapd-version-review]]
+links: [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]], [[02-ai-coding/Agentic-Engineering-AI-Workbench]], [[02-ai-coding/Addy-Osmani-Loop-Engineering]], [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]], [[02-ai-coding/Claude-Code-主动式Agent-Routines]], [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]], [[02-ai-coding/Claude-Code之父品味不是人类护城河]], [[03-productivity/ai-learning-expert-perspective]], [[03-productivity/karpathy-knowledge-system]], [[seetong-daily-briefing]], [[seetong-tapd-version-review]]
 date: 2026-06-22
 source: 微信公众号 / 架构师 JiaGouX —若飞
 source_url: https://mp.weixin.qq.com/s/YScRbcLfQYJWY7QLHXWp9A
@@ -13,7 +21,7 @@ source_url: https://mp.weixin.qq.com/s/YScRbcLfQYJWY7QLHXWp9A
 
 > **核心命题**：AI 学习稀缺的不是答案，缺的是一个能持续暴露问题的环境。Claude Code 维护"学习工作台" = **4 文件**（学习契约/资源/错题集/测试卷）+ **CLAUDE.md 长期陪练规则**（先提示→再追问→再检查→最后才揭示）+ **3 周节奏**（D1→D2→每日故障复现→W2 错题重练→W3 小项目）+ **4 个小验收**（24h 闭卷/换题能做/错误数减少/小项目落地）。
 >
-> 本文是若飞 Harness/Loop 主线"个人学习场景版"——与 [[Loop-Engineering-详解-把反馈循环放进工程现场]]（同作者 7 天试点）、[[Agentic-Engineering-AI-Workbench]]（同作者 AI 工作台 5 层）形成"工程 → 学习"同构迁移。
+> 本文是若飞 Harness/Loop 主线"个人学习场景版"——与 [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]]（同作者 7 天试点）、[[02-ai-coding/Agentic-Engineering-AI-Workbench]]（同作者 AI 工作台 5 层）形成"工程 → 学习"同构迁移。
 
 ## 8 个知识节点
 
@@ -30,11 +38,11 @@ source_url: https://mp.weixin.qq.com/s/YScRbcLfQYJWY7QLHXWp9A
 
 ## 关联图谱
 
-**上游**（基于 / 来自）：[[Loop-Engineering-详解-把反馈循环放进工程现场]]（同作者 4 入口 → 4 文件的同构迁移）/ [[Agentic-Engineering-AI-Workbench]]（同作者 AI 工作台 5 层变体）/ [[Addy-Osmani-Loop-Engineering]]（Loop 主题方法论原典 5+1 积木）/ [[Claude-Code-主动式Agent-Routines]]（主动式 Agent → 学习 routine）/ [[Claude-Code一周年回顾-Boris-Cat]]（Routine 异步化 + Context 极简主义范式来源）/ [[Claude-Code之父品味不是人类护城河]]（Boris "工作变成写 Loops" → 学习契约是 Loop 的学习对应）
+**上游**（基于 / 来自）：[[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]]（同作者 4 入口 → 4 文件的同构迁移）/ [[02-ai-coding/Agentic-Engineering-AI-Workbench]]（同作者 AI 工作台 5 层变体）/ [[02-ai-coding/Addy-Osmani-Loop-Engineering]]（Loop 主题方法论原典 5+1 积木）/ [[02-ai-coding/Claude-Code-主动式Agent-Routines]]（主动式 Agent → 学习 routine）/ [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]]（Routine 异步化 + Context 极简主义范式来源）/ [[02-ai-coding/Claude-Code之父品味不是人类护城河]]（Boris "工作变成写 Loops" → 学习契约是 Loop 的学习对应）
 
 **下游**（应用于 / 验证于）：[[seetong-daily-briefing]]（简报末尾加"每周 1 张核心知识卡"）/ [[seetong-tapd-version-review]]（版本复盘加"答错-答漏-答含糊"清单驱动下一版本）/ 个人学习场景（学 K8s / 学新语言 / 学业务）
 
-**同级**（横向 / 并列）：[[APPSO-Codex-Claude-Code-Loop-Engineering]]（3 个上手前提 = 学习场景的"3 个前提"）/ [[ai-learning-expert-perspective]]（本文是其"用 Claude Code 工具落地版"）/ [[karpathy-knowledge-system]]（关注"知识积累" vs 本文"能力形成"）
+**同级**（横向 / 并列）：[[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]]（3 个上手前提 = 学习场景的"3 个前提"）/ [[03-productivity/ai-learning-expert-perspective]]（本文是其"用 Claude Code 工具落地版"）/ [[03-productivity/karpathy-knowledge-system]]（关注"知识积累" vs 本文"能力形成"）
 
 ## 正文要点（8 段，每段 = 主张 + 案例 + 操作）
 
@@ -68,4 +76,4 @@ source_url: https://mp.weixin.qq.com/s/YScRbcLfQYJWY7QLHXWp9A
 - **作者给的边界**：AI 反馈 ≠ 真实反馈；目标错就走错得更快；事实问题要回第一来源
 - **3 个最实操的 prompt 模板**（学习契约/筛资料/出测验）= 全文最值钱部分
 - **学习科学背书**：Karpicke & Roediger（检索练习促进学习）/ Dunlosky（practice testing 高优先级）/ Bastani（无护栏 AI 风险）/ Bloom（2-sigma = 持续反馈+纠正+再测试——Claude Code 是 2026 年版的"低成本一对一辅导"）
-- **速读摘要**：见同目录 [[若飞-用ClaudeCode搭建AI学习系统-digest]]
+- **速读摘要**：见同目录 [[02-ai-coding/若飞-用ClaudeCode搭建AI学习系统-digest]]

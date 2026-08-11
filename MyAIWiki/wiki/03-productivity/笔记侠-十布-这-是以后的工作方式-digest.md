@@ -41,8 +41,8 @@ source: 微信公众号「笔记侠」/ 十布（影刀创始人兼 CEO）
 
 ## 关联 + 备注
 
-- **同主线** [[笔记侠-苏姿丰-MIT演讲-工程师本能]] [[OpenAI-AI原生组织-4条工作原则]] [[麦肯锡-AI提效只是第一波红利]] [[叶小钗-AI原生组织方法论-2026版]] [[小微企业AI数字员工实战指南]]
-- **强关联** [[WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]] [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]] [[Capihom-AI-Native企业-Agent团队和AI-Factory重写公司体系]]
+- **同主线** [[03-productivity/笔记侠-苏姿丰-MIT演讲-工程师本能]] [[06-ai-tech/OpenAI-AI原生组织-4条工作原则]] [[06-ai-tech/麦肯锡-AI提效只是第一波红利]] [[02-ai-coding/叶小钗-AI原生组织方法论-2026版]] [[03-productivity/小微企业AI数字员工实战指南]]
+- **强关联** [[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]] [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]] [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]
 - **上下游**：上游=工业化/信息化类比 + 华为组织观；下游=影刀 1 万+ 企业服务（招聘/客户评估/财务对账/考勤/销售决策）+ 美团/滴滴/支付宝同构样本
 - **作者**：十布 = 影刀创始人兼 CEO，影刀累计融资 2 亿美金（高瓴/高盛/腾讯）
 - **来源**：2026-06-24 ~ 26 笔记侠 AI 十倍增长营 01 期课程（北京）；第 9736 篇笔记侠深度好文 / 6035 字

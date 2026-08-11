@@ -1,9 +1,21 @@
 ---
 title: 买了一样的 AI，为什么别家的比你的强？因为他把公司最好的人的判断打包进去了
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI-Native, #主题/知识沉淀, #主题/Harness, #节点/Skill, #节点/Prompt, #节点/SKILL-md, #节点/SOP, #节点/机构知识, #节点/护城河, #场景/编译长文, #场景/SaaS]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Native
+  - 主题/知识沉淀
+  - 主题/Harness
+  - 节点/Skill
+  - 节点/Prompt
+  - 节点/SKILL-md
+  - 节点/SOP
+  - 节点/机构知识
+  - 节点/护城河
+  - 场景/编译长文
+  - 场景/SaaS
 nodes: [Skill, 沉默专长, 机构知识, SKILL-md, 技能库, Prompt-vs-Skill, 护城河, Hiten-Shah]
-links: [[从Prompt-Context到Harness-工程的三次进化与终局之战]], [[Claude-Code作者Boris-我已经不写prompt了我写loop]], [[Agent Skills 系统性综述]], [[谷歌开源 agent-skills]], [[AI-Coding的顿悟时刻]]
+links: [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]], [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]], [[01-ai-agents/agent-skills-systematic-survey]], [[02-ai-coding/谷歌开源agent-skills]], [[02-ai-coding/AI-Coding的顿悟时刻]]
 date: 2026-06-08
 source: 微信公众号 / 深思圈（编译自 Hiten Shah 推文，188.3K 浏览）
 ---
@@ -22,7 +34,7 @@ source: 微信公众号 / 深思圈（编译自 Hiten Shah 推文，188.3K 浏�
 
 ## 分类提炼
 - 场景：AI 战略、组织能力沉淀、知识管理
-- 标签：#主题/AI-Native #主题/知识沉淀 #节点/Skill #节点/机构知识
+- 标签： #主题/AI-Native #主题/知识沉淀 #节点/Skill #节点/机构知识
 - 类型：战略洞察 / 组织方法论 / 编译长文
 
 ## 知识节点（8 个独立概念）
@@ -42,16 +54,16 @@ source: 微信公众号 / 深思圈（编译自 Hiten Shah 推文，188.3K 浏�
 - （无强直接上游，是一篇原创战略洞察）
 
 ### 下游（应用于 / 验证于）
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]]：Harness 思想与本篇 skill 战略同主线——Harness 是"工程视角"，skill 是"组织视角"
-- [[Claude-Code作者Boris-我已经不写prompt了我写loop]]：loop 是 skill 的一种动态表达（运行时即时构造的 skill）
-- [[Agent Skills 系统性综述]]：skill 的工程综述
-- [[谷歌开源 agent-skills]]：skill 的开源实现
-- [[AI-Coding的顿悟时刻]]："早期采纳者指数级优势" 与 "先动手的那批人优势比想象的大" 同一信号
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]：Harness 思想与本篇 skill 战略同主线——Harness 是"工程视角"，skill 是"组织视角"
+- [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]]：loop 是 skill 的一种动态表达（运行时即时构造的 skill）
+- [[01-ai-agents/agent-skills-systematic-survey]]：skill 的工程综述
+- [[02-ai-coding/谷歌开源agent-skills]]：skill 的开源实现
+- [[02-ai-coding/AI-Coding的顿悟时刻]]："早期采纳者指数级优势" 与 "先动手的那批人优势比想象的大" 同一信号
 
 ### 同级（横向 / 并列）
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]：Harness 思想的总论
-- [[Skills驱动推理新范式]]：skill 作为推理范式的另一视角
-- [[软件工程的功底是智能时代生死攸关的要素]]：工程基本功与"沉默专长"显性化是同一回事
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]：Harness 思想的总论
+- [[01-ai-agents/Skills驱动推理新范式]]：skill 作为推理范式的另一视角
+- [[02-ai-coding/软件工程的功底是智能时代生死攸关的要素]]：工程基本功与"沉默专长"显性化是同一回事
 
 ## 正文要点（8 条）
 
@@ -117,9 +129,9 @@ Hiten 2016 年招过一个工程师，两年后才发现他脑子里有"团队�
 
 ## 我的理解
 
-- **"模型是商品，skill 才是资产"是 2026 年最锋利的 AI 战略判断**——和 [[从Prompt-Context到Harness-工程的三次进化与终局之战]] 同主线，但视角是"组织战略"而非"工程实现"
+- **"模型是商品，skill 才是资产"是 2026 年最锋利的 AI 战略判断**——和 [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]] 同主线，但视角是"组织战略"而非"工程实现"
 - **"沉默专长"对 Seetong 团队很关键**：张威 / 黄松佳 / 梁添 / 李深生 / 付林青 脑子里都有大量"看不到的判断力"——异地区域的网络处理 / 套餐失效场景 / 报警优先级，**写下来就是 skill，不写就是流失**
-- **"先动手的那批人优势比想象的大"**——和 [[AI-Coding的顿悟时刻]] "工厂模式半年标配" 是同一信号：**早期采纳者会拉开指数级差距**，因为 skill 库有自增强特性
+- **"先动手的那批人优势比想象的大"**——和 [[02-ai-coding/AI-Coding的顿悟时刻]] "工厂模式半年标配" 是同一信号：**早期采纳者会拉开指数级差距**，因为 skill 库有自增强特性
 - **"让人坐下来写" 是真正的瓶颈**——跟 Seetong [[AGENTS.md]] "禁止重复造轮子 + 每次任务以 To-do List 开始" 是同一回事：**纪律和沉淀习惯比任何工具都重要**
 
 ## 相关链接
@@ -127,11 +139,11 @@ Hiten 2016 年招过一个工程师，两年后才发现他脑子里有"团队�
 - 原文：https://mp.weixin.qq.com/s/71V28v6zdXl2S6SdEx0o2A
 - 原始推文：https://x.com/hnshah/status/2062647149582750101
 - 关联 wiki：
-  - [[从Prompt-Context到Harness-工程的三次进化与终局之战]]
-  - [[Claude-Code作者Boris-我已经不写prompt了我写loop]]
-  - [[Agent Skills 系统性综述]]
-  - [[谷歌开源 agent-skills]]
-  - [[AI-Coding的顿悟时刻]]
-  - [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
-  - [[Skills驱动推理新范式]]
-  - [[软件工程的功底是智能时代生死攸关的要素]]
+  - [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]
+  - [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]]
+  - [[01-ai-agents/agent-skills-systematic-survey]]
+  - [[02-ai-coding/谷歌开源agent-skills]]
+  - [[02-ai-coding/AI-Coding的顿悟时刻]]
+  - [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+  - [[01-ai-agents/Skills驱动推理新范式]]
+  - [[02-ai-coding/软件工程的功底是智能时代生死攸关的要素]]

@@ -4,10 +4,19 @@ author: winkrun
 date: 2026-07-15
 slug: AndrejKarpathy-AI写代码-只需要问自己这一个问题
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/Skill, #主题/AI-Agent, #节点/思考发生点, #节点/判断执行分界, #节点/双资深一致, #节点/Workflow-Extractor, #节点/Skill-Score, #场景/公众号长文]
+tags:
+  - 主题/AI-Coding
+  - 主题/Skill
+  - 主题/AI-Agent
+  - 节点/思考发生点
+  - 节点/判断执行分界
+  - 节点/双资深一致
+  - 节点/Workflow-Extractor
+  - 节点/Skill-Score
+  - 场景/公众号长文
 nodes: [思考发生点, 判断执行分界, 双资深一致, 工作流档位切换, Scout-Filter-Reader, Workflow-Extractor, Skill-Score, Reviewer-Publisher]
-links: [[AI-Coding的顿悟时刻]], [[Code-is-cheap-AI-Native-五倍效率]], [[面向Skills编程-淘宝企业购端到端研发提效实践]], [[loonggg-Claude-Code-技能心法-11条建议]], [[Skill-Self-Evolution]], [[Loop-Engineering-验证才是瓶颈]]
-digest: "[[AndrejKarpathy-AI写代码-只需要问自己这一个问题-digest]]"
+links: [[02-ai-coding/AI-Coding的顿悟时刻]], [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]], [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]], [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]], [[01-ai-agents/Skill-Self-Evolution]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]
+digest: "[[02-ai-coding/AndrejKarpathy-AI写代码-只需要问自己这一个问题-digest]]"
 source: 微信公众号 / winkrun
 source_wechat: https://mp.weixin.qq.com/s/yEWfTLs9W3-QblvPbrGUPQ
 ---
@@ -17,7 +26,7 @@ source_wechat: https://mp.weixin.qq.com/s/yEWfTLs9W3-QblvPbrGUPQ
 - 原文链接：https://mp.weixin.qq.com/s/yEWfTLs9W3-QblvPbrGUPQ
 - 来源：微信公众号「winkrun」
 - 获取时间：2026-07-15
-- 速读摘要：[[AndrejKarpathy-AI写代码-只需要问自己这一个问题-digest]]
+- 速读摘要：[[02-ai-coding/AndrejKarpathy-AI写代码-只需要问自己这一个问题-digest]]
 
 ## 核心结论（一句话）
 
@@ -26,9 +35,9 @@ source_wechat: https://mp.weixin.qq.com/s/yEWfTLs9W3-QblvPbrGUPQ
 ## 分类提炼
 
 - 场景：AI Coding / Skill 自进化 / GitHub 工作流蒸馏
-- 标签：#主题/AI-Coding #主题/Skill #主题/AI-Agent #节点/思考发生点 #节点/判断执行分界 #节点/双资深一致 #节点/Workflow-Extractor #节点/Skill-Score #场景/公众号长文
+- 标签： #主题/AI-Coding #主题/Skill #主题/AI-Agent #节点/思考发生点 #节点/判断执行分界 #节点/双资深一致 #节点/Workflow-Extractor #节点/Skill-Score #场景/公众号长文
 - 类型：判断框架 / 流水线拆解 / 工程启发
-- 关联主线：[[AI-Coding的顿悟时刻]] 的“需求与架构最稀缺” + [[Skill-Self-Evolution]] 的“Skill 会持续沉淀”
+- 关联主线：[[02-ai-coding/AI-Coding的顿悟时刻]] 的“需求与架构最稀缺” + [[01-ai-agents/Skill-Self-Evolution]] 的“Skill 会持续沉淀”
 
 ## 知识节点（8 个）
 
@@ -44,19 +53,19 @@ source_wechat: https://mp.weixin.qq.com/s/yEWfTLs9W3-QblvPbrGUPQ
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- [[AI-Coding的顿悟时刻]]：同样强调“执行变便宜后，真正昂贵的是需求与架构判断”；本文把这件事压成更可操作的一句判断题。
-- [[Code-is-cheap-AI-Native-五倍效率]]：同主线“代码越来越便宜，真正贵的是边界、验证和收口”；本文补上“何时放手给 AI”的简单判据。
-- [[Skill-Self-Evolution]]：rvaniaaa 的项目是 Skill 自进化的工程化样本，和该页的三大学派综述形成“原理 ↔ pipeline”互补。
+- [[02-ai-coding/AI-Coding的顿悟时刻]]：同样强调“执行变便宜后，真正昂贵的是需求与架构判断”；本文把这件事压成更可操作的一句判断题。
+- [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]]：同主线“代码越来越便宜，真正贵的是边界、验证和收口”；本文补上“何时放手给 AI”的简单判据。
+- [[01-ai-agents/Skill-Self-Evolution]]：rvaniaaa 的项目是 Skill 自进化的工程化样本，和该页的三大学派综述形成“原理 ↔ pipeline”互补。
 
 ### 下游（应用于 / 验证于）
-- [[面向Skills编程-淘宝企业购端到端研发提效实践]]：本文“先抽 workflow，再变 Skill”的思路，在企业研发交付里被落成可复用的生产线。
-- [[loonggg-Claude-Code-技能心法-11条建议]]：本文生成 Skill 的流水线，需要后者补上“怎么把 Skill 写得真的可用”的方法论。
-- [[Loop-Engineering-验证才是瓶颈]]：本文的 Reviewer / Skill Score / 不自动合并，正好落到“验证闸门才是产品”的验证主线上。
+- [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]]：本文“先抽 workflow，再变 Skill”的思路，在企业研发交付里被落成可复用的生产线。
+- [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]]：本文生成 Skill 的流水线，需要后者补上“怎么把 Skill 写得真的可用”的方法论。
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]：本文的 Reviewer / Skill Score / 不自动合并，正好落到“验证闸门才是产品”的验证主线上。
 
 ### 同级（横向 / 并列）
-- [[undefinedKi-AI-Second-Brain-10-Step-Guide]]：都在讨论“知识如何持续积累”，但那篇偏个人记忆系统，本文偏 Agent 自动吸收新技能。
-- [[买了一样的AI为什么别家的比你的强]]：同主线“模型是商品，判断与 Skill 才是资产”；本文更偏自动发现与编译 Skill 的流水线。
-- [[PM-Skills-Marketplace-产品经理必备skill]]：这篇讲“把方法论打包进 Skill”，本文讲“如何自动找到并发布新 Skill”。
+- [[02-ai-coding/undefinedKi-AI-Second-Brain-10-Step-Guide]]：都在讨论“知识如何持续积累”，但那篇偏个人记忆系统，本文偏 Agent 自动吸收新技能。
+- [[02-ai-coding/买了一样的AI为什么别家的比你的强]]：同主线“模型是商品，判断与 Skill 才是资产”；本文更偏自动发现与编译 Skill 的流水线。
+- [[02-ai-coding/PM-Skills-Marketplace-产品经理必备skill]]：这篇讲“把方法论打包进 Skill”，本文讲“如何自动找到并发布新 Skill”。
 
 ## 正文要点（5 条）
 

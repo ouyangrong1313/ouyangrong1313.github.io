@@ -5,9 +5,25 @@ date: 2026-06-17
 source: 微信公众号 腾讯程序员（作者团队：TEG 云架构平台部 网关测试团队，lead martinskxu）
 source_url: https://mp.weixin.qq.com/s/PUbGqheJhFMmb6hGj1ZtOw
 project: TPerf 性能平台智能分析 Agent
-tags: [#主题/AI-Agent, #主题/Agent测评, #主题/Skill测评, #主题/Agent工程化, #主题/腾讯工程实践, #节点/三类评分器, #节点/五大维度, #节点/用例基线, #节点/结构化Trace, #节点/稳定性评估, #节点/负向触发用例, #手法/反例论证, #手法/工程框架, #手法/基线对比, #场景/Agent工程化, #场景/Skill设计]
+tags:
+  - 主题/AI-Agent
+  - 主题/Agent测评
+  - 主题/Skill测评
+  - 主题/Agent工程化
+  - 主题/腾讯工程实践
+  - 节点/三类评分器
+  - 节点/五大维度
+  - 节点/用例基线
+  - 节点/结构化Trace
+  - 节点/稳定性评估
+  - 节点/负向触发用例
+  - 手法/反例论证
+  - 手法/工程框架
+  - 手法/基线对比
+  - 场景/Agent工程化
+  - 场景/Skill设计
 nodes: [三类评分器, 五大评测维度, 用例基线Baseline, 结构化Trace输出, 三类Agent测评侧重, 负向触发用例, 用例设计5步闭环, 稳定性评估]
-links: [[Skill-Self-Evolution]], [[陈进-读完Agent-Loop工程手册]], [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[用Agent评测思路管理AI-Coding-31万行代码AI重构实践]], [[如何构建一个更"好"的知识库：RAGAS 三维度评估 + 8 步构建流程 + 前沿架构选型]], [[seetong-batch-issue-rootcause-analysis]], [[seetong-daily-briefing]], [[清华沈阳-自进化AI新物种]], [[Multica-AI-Native-组织]]
+links: [[01-ai-agents/Skill-Self-Evolution]], [[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]], [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]], [[07-rag-systems/如何构建一个更好的知识库]], [[seetong-batch-issue-rootcause-analysis]], [[seetong-daily-briefing]], [[01-ai-agents/清华沈阳-自进化AI新物种]], [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]
 ---
 
 # 腾讯 TEG：AI Agent & Skill 测评方案及落地实践
@@ -43,21 +59,21 @@ links: [[Skill-Self-Evolution]], [[陈进-读完Agent-Loop工程手册]], [[阿�
 
 ### 上游(基于 / 来自)
 
-- [[Skill-Self-Evolution]] — Trace2Skill / EvoSkill / SkillOpt 都需要"评测指标"支撑,本套框架是上游基础
-- [[陈进-读完Agent-Loop工程手册]] — Agent Loop 范式跃迁的工程落地配套
-- [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] — 业务需求 Agent 设计与本评测体系互补(设计 vs 评测)
+- [[01-ai-agents/Skill-Self-Evolution]] — Trace2Skill / EvoSkill / SkillOpt 都需要"评测指标"支撑,本套框架是上游基础
+- [[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]] — Agent Loop 范式跃迁的工程落地配套
+- [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] — 业务需求 Agent 设计与本评测体系互补(设计 vs 评测)
 
 ### 下游(应用于 / 验证于)
 
-- [[用Agent评测思路管理AI-Coding-31万行代码AI重构实践]] — 同主线"用 Agent 评测做工程"
-- [[如何构建一个更"好"的知识库：RAGAS 三维度评估 + 8 步构建流程 + 前沿架构选型]] — RAGAS 三维度与本文五大维度同主线
+- [[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]] — 同主线"用 Agent 评测做工程"
+- [[07-rag-systems/如何构建一个更好的知识库]] — RAGAS 三维度与本文五大维度同主线
 - [[seetong-batch-issue-rootcause-analysis]] — Seetong 现成的批量 bug 根因分析场景,可直接套用本评测框架
 - [[seetong-daily-briefing]] — Seetong 每日简报,需要建用例基线(网络 -102 / 自动登录失败 / 注册成功率)
 
 ### 同级(横向 / 并列)
 
-- [[清华沈阳-自进化AI新物种]] — 自进化 AI 也需要评测指标支撑
-- [[Multica-AI-Native-组织]] — Agent idle 率本身就是评测指标的一种
+- [[01-ai-agents/清华沈阳-自进化AI新物种]] — 自进化 AI 也需要评测指标支撑
+- [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]] — Agent idle 率本身就是评测指标的一种
 
 ## 正文要点(主张 + 案例 + 操作)
 
@@ -87,4 +103,4 @@ links: [[Skill-Self-Evolution]], [[陈进-读完Agent-Loop工程手册]], [[阿�
   - Seetong 现成的 skill(seetong-daily-briefing / seetong-tapd-version-review / seetong-batch-issue-rootcause-analysis)都可作为本评测框架的首批目标
   - 5 步闭环可作为 Seetong skill 上线 SOP 候选
   - 三大痛点 = Seetong Skill 自进化当前正面临的挑战
-- **速读摘要**:见同目录 [[腾讯-AI-Agent-Skill-测评方案落地-digest]]
+- **速读摘要**:见同目录 [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地-digest]]

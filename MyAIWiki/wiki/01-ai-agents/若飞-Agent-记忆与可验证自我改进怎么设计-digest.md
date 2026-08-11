@@ -3,8 +3,8 @@
 > 来源：https://mp.weixin.qq.com/s/NUWvuUl0wewAJH_7mv0SDg
 > 公众号：架构师（JiaGouX）—若飞
 > 发布时间：2026-07-19
-> 完整版：[[若飞-Agent-记忆与可验证自我改进怎么设计]]
-> 原文：[[../../raw/2026-07-19-若飞-Agent-记忆与可验证自我改进怎么设计]]
+> 完整版：[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]
+> 原文：[[../../raw/若飞-Agent-记忆与可验证自我改进怎么设计]]
 
 ## 一句话总结
 
@@ -57,14 +57,14 @@
 
 ## 强关联
 
-- [[Lilian-Weng-Harness-Engineering-自我改进]] — Self-Harness 理论原典
-- [[Loop-Engineering-验证才是瓶颈]] — 验证器主线
-- [[记忆是-agent-基建]] — 记忆基建视角
-- [[阿里云开发者-淘宝主播Agent的Harness工程实战]] — 高风险生产场景
-- [[腾讯-AI-Agent-Skill-测评方案落地]] — 评估器工程化
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] — Memory / Context / Harness 结构层
-- [[OpenClaw的正确打开方式]] — Dreaming / MEMORY 落地问题
-- [[若飞-用ClaudeCode搭建AI学习系统]] — 反馈契约的同作者前置篇
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] — Self-Harness 理论原典
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] — 验证器主线
+- [[01-ai-agents/记忆是-agent-基建]] — 记忆基建视角
+- [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] — 高风险生产场景
+- [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]] — 评估器工程化
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]] — Memory / Context / Harness 结构层
+- [[01-ai-agents/OpenClaw的正确打开方式]] — Dreaming / MEMORY 落地问题
+- [[02-ai-coding/若飞-用ClaudeCode搭建AI学习系统]] — 反馈契约的同作者前置篇
 
 ## 备注与限制
 

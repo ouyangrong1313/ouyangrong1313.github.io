@@ -1,7 +1,15 @@
 ---
 title: WorkBuddy Harness 工程复盘：从模型到可用 Agent（速读摘要）
 category: 01-ai-agents
-tags: [#主题/WorkBuddy, #主题/Harness, #主题/Context-Engineering, #主题/Loop-Engineering, #主题/MCP, #主题/Skill, #主题/Memory, #场景/产品拆解]
+tags:
+  - 主题/WorkBuddy
+  - 主题/Harness
+  - 主题/Context-Engineering
+  - 主题/Loop-Engineering
+  - 主题/MCP
+  - 主题/Skill
+  - 主题/Memory
+  - 场景/产品拆解
 type: digest
 date: 2026-07-12
 source: 微信公众号「Founder Park」2026-07-12 推送 / Anne（WorkBuddy 团队策略产品经理）
@@ -62,6 +70,6 @@ source: 微信公众号「Founder Park」2026-07-12 推送 / Anne（WorkBuddy �
 
 ## 关联 + 备注
 
-**关联**：[[Lilian-Weng-Harness-Engineering-自我改进]] / [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] / [[Loop-Engineering-验证才是瓶颈]] / [[0xCodez-Agent-Harness-14-Steps]] / [[HarnessEngineering企业级实战]] / [[AI-团队协作-Loop-SDD]] / [[腾讯-AI-Agent-Skill-测评方案落地]]
+**关联**：[[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] / [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] / [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] / [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[01-ai-agents/HarnessEngineering企业级实战]] / [[01-ai-agents/AI-团队协作-Loop-SDD]] / [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]
 
 **备注**：这篇文章最强的是“解释层”和“结构层”，不是给出可直接复制的代码实现；业务正确性验证缺口被指出了，但没有给出成熟通解。

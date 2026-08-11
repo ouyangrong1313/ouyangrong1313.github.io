@@ -64,7 +64,7 @@ def build_raw_markdown(article: dict) -> str:
         "",
         "---",
         "",
-        "标签：#主题/AI-Coding #场景/公众号长文",
+        "标签： #主题/AI-Coding #场景/公众号长文",
     ]
     return "\n".join(lines).rstrip() + "\n"
 

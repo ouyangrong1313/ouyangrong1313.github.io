@@ -1,9 +1,19 @@
 ---
 title: 工厂工程师,不是产品工程师 — Warp 创始人 Zach Lloyd 内部备忘录编译
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/Agent, #主题/Harness, #主题/工厂化, #主题/COGS, #主题/自进化, #场景/企业级落地, #场景/内部备忘录, #作者/Zach-Lloyd, #作者/深思SenseAI]
+tags:
+  - 主题/AI-Coding
+  - 主题/Agent
+  - 主题/Harness
+  - 主题/工厂化
+  - 主题/COGS
+  - 主题/自进化
+  - 场景/企业级落地
+  - 场景/内部备忘录
+  - 作者/Zach-Lloyd
+  - 作者/深思SenseAI
 nodes: [工厂工程师思维, COGS-重定义, 人在环里-失败, 八步流水线, 递归自我改进, Bakaus-vs-Lloyd两极, 做什么-vs-怎么做, 1300-待办反思]
-links: [[字节跳动洪定坤-AI-Coding的实践与探索]], [[清华沈阳-自进化AI新物种]], [[0xCodez-Agent-Harness-14-Steps]], [[Harness不是目的-知识才是护城河]], [[与AI一起做产品的六条原则]], [[AI-Coding的顿悟时刻]], [[54万行代码的顿悟-Markdown才是新编程方式]], [[面向Skills编程-淘宝企业购端到端研发提效实践]], [[Claude-Code团队5条工作原则-Fiona-Fung分享]]
+links: [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]], [[01-ai-agents/清华沈阳-自进化AI新物种]], [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]], [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]], [[03-productivity/与AI一起做产品的六条原则]], [[02-ai-coding/AI-Coding的顿悟时刻]], [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]], [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]], [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]
 date: 2026-06-26
 source: 微信公众号「深思 SenseAI」编译自 Zach Lloyd @zachlloydtweets 公开的 Warp 内部备忘录《We are now factory engineers, not product engineers》
 ---
@@ -39,8 +49,8 @@ source: 微信公众号「深思 SenseAI」编译自 Zach Lloyd @zachlloydtweets
 ### 关联图谱
 
 - **上游**:AI Coding 从"自动补全 → 交互式 agent → 自动化开发"三阶段范式迁移 + Warp 6 万星开源仓库 + 同月 Paul Bakaus 反向观点
-- **下游**:[[字节跳动洪定坤-AI-Coding的实践与探索]] 字节 vs Warp 同行业不同公司不同解法(字节 TRAE IDE / Warp Oz 工厂平台);[[清华沈阳-自进化AI新物种]] "递归自我改进"主线;[[0xCodez-Agent-Harness-14-Steps]] / [[Harness不是目的-知识才是护城河]] Harness 视角;[[与AI一起做产品的六条原则]] 6 原则做"为什么"的人
-- **同级**:[[面向Skills编程-淘宝企业购端到端研发提效实践]] 阿里淘系工程化补完 + [[Claude-Code团队5条工作原则-Fiona-Fung分享]] Anthropic 团队实践
+- **下游**:[[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] 字节 vs Warp 同行业不同公司不同解法(字节 TRAE IDE / Warp Oz 工厂平台);[[01-ai-agents/清华沈阳-自进化AI新物种]] "递归自我改进"主线;[[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] Harness 视角;[[03-productivity/与AI一起做产品的六条原则]] 6 原则做"为什么"的人
+- **同级**:[[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] 阿里淘系工程化补完 + [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] Anthropic 团队实践
 
 ### 正文要点(3 段)
 
@@ -55,7 +65,7 @@ source: 微信公众号「深思 SenseAI」编译自 Zach Lloyd @zachlloydtweets
 1. **COGS 视角体检**:Seetong AI Coding 算"研发开支"还是"可变成本"?**把"AI Coding 投入产出比"作为最高级指标**
 2. **1300 待办反思**:Seetong TAPD 几百个"待实现"需求里,真正"该做"的占多少?**先盘"不该做"的,再谈"谁能做"**
 3. **做什么 vs 怎么做的边界**:①"怎么做"(需求明确后实现/测试/Review/部署)→ 工厂化 ②"做什么"(该不该做/优先级/方向)→ 留住人
-4. **递归自我改进雏形**:Seetong 跑分失败 → 沉淀为 Skill 约束 → 下次自动跑(对照 [[面向Skills编程-淘宝企业购端到端研发提效实践]] ADJUSTMENT_PLAN);不要每次都"人在环里"修同类问题
+4. **递归自我改进雏形**:Seetong 跑分失败 → 沉淀为 Skill 约束 → 下次自动跑(对照 [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] ADJUSTMENT_PLAN);不要每次都"人在环里"修同类问题
 5. **人在环里 = 失败的纪律**:经常介入同一类问题,**优先补 Skill 约束或自动化工具**,而不是让人继续"复盘"
 
 ## 备注与限制
@@ -63,9 +73,9 @@ source: 微信公众号「深思 SenseAI」编译自 Zach Lloyd @zachlloydtweets
 - **数据可信度**:深思圈是行业知名 AI 翻译/编译号,Lloyd 备忘录原话为推文公开,可信度较高
 - **未公开细节**:Lloyd 备忘录原始发布日期(深思圈文章中只说"上个月 Bakaus" + "这个月 Lloyd",可推断 Lloyd 备忘录在 2026-05/06 发布);Warp Oz 6 万星仓库具体 GitHub 链接;8 步流水线的具体 Agent 工具栈
 - **深思圈主编立场**:不站 Lloyd 也不站 Bakaus,主张"看任务"分工,补完 Lloyd 备忘录的盲点(对"做什么"出奇安静)
-- **本仓库已有强相关主线**:[[字节跳动洪定坤-AI-Coding的实践与探索]] / [[清华沈阳-自进化AI新物种]] / [[0xCodez-Agent-Harness-14-Steps]] / [[Harness不是目的-知识才是护城河]] / [[与AI一起做产品的六条原则]] / [[AI-Coding的顿悟时刻]] / [[54万行代码的顿悟-Markdown才是新编程方式]]
+- **本仓库已有强相关主线**:[[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] / [[01-ai-agents/清华沈阳-自进化AI新物种]] / [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] / [[03-productivity/与AI一起做产品的六条原则]] / [[02-ai-coding/AI-Coding的顿悟时刻]] / [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]
 - **本仓库缺位补完**:02-ai-coding 现有主线偏"怎么做"的工具/方法论(Harness/Loop/Skills),**缺位"工厂化思维 + COGS 视角 + 递归自我改进"** 的反思性内容,本文是这一维度的代表
-- **Bakaus 原文**:[[与AI一起做产品的六条原则]] 暂未直接引用,后续可加 [[Paul-Bakaus-人留最后20%]] 同月对比笔记
+- **Bakaus 原文**:[[03-productivity/与AI一起做产品的六条原则]] 暂未直接引用,后续可加 [[Paul-Bakaus-人留最后20%]] 同月对比笔记
 
 ---
 

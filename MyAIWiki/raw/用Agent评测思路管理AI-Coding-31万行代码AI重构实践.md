@@ -3,7 +3,11 @@ title: 用Agent评测思路管理AI Coding —— 31万行代码AI重构的实�
 author: 美团技术团队
 source: https://mp.weixin.qq.com/s/CTY5mdgKh6TmPrO6xsKhWQ
 date: 2026-05-07
-tags: #主题/AI Coding #手法/对比冲突 #手法/权威背书 #场景/技术博客
+tags:
+  - 主题/AI-Coding
+  - 手法/对比冲突
+  - 手法/权威背书
+  - 场景/技术博客
 ---
 
 # 用Agent评测思路管理AI Coding —— 31万行代码AI重构的实践

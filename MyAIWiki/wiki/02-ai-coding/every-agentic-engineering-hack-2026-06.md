@@ -1,9 +1,20 @@
 ---
 title: Matt Van Horn 的 22 个 Agentic Engineering Hacks
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI-Agent, #主题/效率, #主题/APP研发, #场景/技术博客, #场景/落地案例, #场景/X长文, #手法/案例驱动, #手法/权威背书, #手法/对比冲突, #手法/焦虑共鸣]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Agent
+  - 主题/效率
+  - 主题/APP研发
+  - 场景/技术博客
+  - 场景/落地案例
+  - 场景/X长文
+  - 手法/案例驱动
+  - 手法/权威背书
+  - 手法/对比冲突
+  - 手法/焦虑共鸣
 nodes: [Compound-Engineering, Plan-as-Leash, Human-Signal, last30days, Printing-Press, Agent-Cookie, AI-Psychosis, Skill, Vibe-Coding, Voice-First]
-links: [[claude-code-dynamic-workflows]] · [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] · [[Codex才是最适合普通人的顶级牛马-Agent]] · [[every-agentic-engineering-hack-2026-06-digest|速读摘要]]
+links: [[02-ai-coding/claude-code-dynamic-workflows]] · [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] · [[02-ai-coding/Codex才是最适合普通人的顶级牛马-Agent]] · [[every-agentic-engineering-hack-2026-06-digest|速读摘要]]
 date: 2026-06-03
 source: X / @mvanhorn
 stats: 82万 浏览 / 118 转推 / 391 引用 / 2,768 喜欢 / 8,511 书签（2026-06-07 抓取）
@@ -14,7 +25,7 @@ raw: [[articles/2026-06-03-Matt-Van-Horn-Every-Agentic-Engineering-Hack]]
 
 > 来源：Matt Van Horn @mvanhorn 2026-06-03 长文（**82万 浏览 / 2,768 喜欢 / 8,511 书签**，2026-06-07 抓取）
 > 原文：https://x.com/mvanhorn/status/2061877533885473181
-> 关联：[[claude-code-dynamic-workflows]] · [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] · [[Codex才是最适合普通人的顶级牛马-Agent]] · [[every-agentic-engineering-hack-2026-06-digest|速读摘要]]
+> 关联：[[02-ai-coding/claude-code-dynamic-workflows]] · [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] · [[02-ai-coding/Codex才是最适合普通人的顶级牛马-Agent]] · [[every-agentic-engineering-hack-2026-06-digest|速读摘要]]
 
 ---
 
@@ -165,22 +176,22 @@ claude --dangerously-skip-permissions
 
 ## 关联阅读
 
-- [[claude-code-dynamic-workflows]] — Anthropic 官方 dynamic workflow，与本文形成"官方 vs 一线用户"互文
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] — Harness 哲学的基础理论
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]] — 三层框架
-- [[Codex才是最适合普通人的顶级牛马-Agent]] — Codex 工作台视角
-- [[ClaudeCode用到这个程度-我算是开眼了]] — Claude Code 实战汇编
-- [[vibe-coding]] — Vibe Coding 基础概念
-- [[oh-my-codex]] — Codex 30 个专家团队
-- [[来自Codex官方团队的分享-如何把Codex用到极致]] — Codex 官方用法
-- [[Codex配置优化清单-从Harness视角]] — Codex harness 改造
-- [[claude-code-large-codebase-best-practices]] — 大型代码库实践
-- [[谷歌开源agent-skills]] — Agent Skills 纪律包
+- [[02-ai-coding/claude-code-dynamic-workflows]] — Anthropic 官方 dynamic workflow，与本文形成"官方 vs 一线用户"互文
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] — Harness 哲学的基础理论
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]] — 三层框架
+- [[02-ai-coding/Codex才是最适合普通人的顶级牛马-Agent]] — Codex 工作台视角
+- [[02-ai-coding/ClaudeCode用到这个程度-我算是开眼了]] — Claude Code 实战汇编
+- [[02-ai-coding/vibe-coding]] — Vibe Coding 基础概念
+- [[02-ai-coding/oh-my-codex]] — Codex 30 个专家团队
+- [[02-ai-coding/来自Codex官方团队的分享-如何把Codex用到极致]] — Codex 官方用法
+- [[02-ai-coding/Codex配置优化清单-从Harness视角]] — Codex harness 改造
+- [[02-ai-coding/claude-code-large-codebase-best-practices]] — 大型代码库实践
+- [[02-ai-coding/谷歌开源agent-skills]] — Agent Skills 纪律包
 
 ---
 
 ## 标签
 
-#主题/AI-Coding #主题/AI-Agent #主题/效率 #主题/APP研发
-#场景/技术博客 #场景/落地案例
-#手法/案例驱动 #手法/权威背书 #手法/对比冲突 #手法/焦虑共鸣
+ #主题/AI-Coding #主题/AI-Agent #主题/效率 #主题/APP研发
+ #场景/技术博客 #场景/落地案例
+ #手法/案例驱动 #手法/权威背书 #手法/对比冲突 #手法/焦虑共鸣

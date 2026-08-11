@@ -1,7 +1,7 @@
 # 软件工厂五级阶梯 - Digest
 
 - 原文链接：https://mp.weixin.qq.com/s/HyWmGabUHQUnOYufiQZyCA
-- 原文：[[大家都在说软件工厂-但90的CEO不知道自己公司在第几级]]
+- 原文：[[02-ai-coding/大家都在说软件工厂-但90的CEO不知道自己公司在第几级]]
 - 抓取时间：2026-06-03
 
 ## 一句话总结
@@ -36,11 +36,11 @@
 
 ## 适合关联的主题
 
-- [[Claude-Code负责人谈AI原生工程组织]] — 同主线，从组织侧看瓶颈迁移
-- [[从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]] — 软件工程基本功映射到 Agent 实践
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]] — Harness 是 L2 → L3 的"内部平台"具体化
-- [[用Agent评测思路管理AI-Coding-31万行代码重构实践]] — L3 的"自动化测试通过即合并"在工程上怎么落地
-- [[Codex配置原则总览]] — OpenClaw 团队的"内部 agent 平台"实践
-- [[多Agent使用边界与并行判定]] — 多 agent 协作（第二 agent 审第一 agent）的边界
-- [[Codex配置优化清单-从Harness视角]] — Harness 视角下的 Codex 优化
-- [[Codex才是最适合普通人的顶级牛马-Agent]] — Agent 工作台化的实践启发
+- [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]] — 同主线，从组织侧看瓶颈迁移
+- [[02-ai-coding/从软件工程基本功到Agent落地：结合OpenClaw与Claude Code的实践理解]] — 软件工程基本功映射到 Agent 实践
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]] — Harness 是 L2 → L3 的"内部平台"具体化
+- [[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]] — L3 的"自动化测试通过即合并"在工程上怎么落地
+- [[02-ai-coding/Codex配置原则总览]] — OpenClaw 团队的"内部 agent 平台"实践
+- [[02-ai-coding/多Agent使用边界与并行判定]] — 多 agent 协作（第二 agent 审第一 agent）的边界
+- [[02-ai-coding/Codex配置优化清单-从Harness视角]] — Harness 视角下的 Codex 优化
+- [[02-ai-coding/Codex才是最适合普通人的顶级牛马-Agent]] — Agent 工作台化的实践启发

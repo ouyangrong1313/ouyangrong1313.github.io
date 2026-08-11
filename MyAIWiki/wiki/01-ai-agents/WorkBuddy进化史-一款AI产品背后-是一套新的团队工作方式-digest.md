@@ -32,4 +32,4 @@ WorkBuddy 是 CodeBuddy Agent 能力向通用工作场景的外溢，组织上�
 
 ## 关联
 
-[[WorkBuddy-Harness工程复盘-从模型到可用Agent]]｜[[Multica-AI-Native-组织-人是最慢的节点]]｜[[端到端10倍提效-英伟达研发团队如何用Agent重塑工作流]]｜[[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]
+[[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]｜[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]｜[[01-ai-agents/端到端10倍提效-英伟达研发团队如何用Agent重塑工作流]]｜[[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]

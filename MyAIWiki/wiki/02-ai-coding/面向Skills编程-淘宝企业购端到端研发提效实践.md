@@ -1,9 +1,18 @@
 ---
 title: 面向 Skills 编程——淘宝企业购端到端研发提效实践
 category: 02-ai-coding
-tags: [#主题/Skills编程, #主题/AI-Coding, #主题/工程实践, #主题/SDD, #主题/Agent-Skills, #主题/阿里, #主题/范式升级, #场景/企业级落地, #场景/淘宝企业购]
+tags:
+  - 主题/Skills编程
+  - 主题/AI-Coding
+  - 主题/工程实践
+  - 主题/SDD
+  - 主题/Agent-Skills
+  - 主题/阿里
+  - 主题/范式升级
+  - 场景/企业级落地
+  - 场景/淘宝企业购
 nodes: [面向Skills编程范式, Skills-等于-AI行为契约, Skill-构建四步法, 五阶段演进路径, 知识工程为质量瓶颈, 确定性工程+不确定性AI, 三段式提效数据, 三层架构+ADJUSTMENT_PLAN]
-links: [[阿里云开发者-淘宝主播Agent的Harness工程实战]], [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[Skill-Self-Evolution]], [[Agent Skills 系统性综述]], [[谷歌开源 agent-skills]], [[Addy-Osmani-agent-skills-设计哲学]], [[PM-Skills-Marketplace-产品经理必备skill]], [[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]], [[Notion-spec-driven-AI-workflow]], [[AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]], [[Loop-Engineering-验证才是瓶颈]], [[腾讯-AI-Agent-Skill-测评方案落地]]
+links: [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]], [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[01-ai-agents/Skill-Self-Evolution]], [[01-ai-agents/agent-skills-systematic-survey]], [[02-ai-coding/谷歌开源agent-skills]], [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]], [[02-ai-coding/PM-Skills-Marketplace-产品经理必备skill]], [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]], [[02-ai-coding/Notion-spec-driven-AI-workflow]], [[02-ai-coding/AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]], [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]
 date: 2026-06-18
 source: 微信公众号 / 大淘宝技术(官亭,淘天集团-行业运营技术团队) 2026-06-17 14:20
 原始链接: https://mp.weixin.qq.com/s/8wJhwC4YuaOX-8GXMaFU5g
@@ -36,18 +45,18 @@ source: 微信公众号 / 大淘宝技术(官亭,淘天集团-行业运营技术
 - **OneDay + Aone 沙箱端到端生码平台**:2026.2 探索中
 
 ### 同级(横向 / 并列)
-- 阿里淘系同源:[[阿里云开发者-淘宝主播Agent的Harness工程实战]](主播=实时交互高风险)/ [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
-- Skill 主线:[[Skill-Self-Evolution]] / [[Agent Skills 系统性综述]] / [[谷歌开源 agent-skills]] / [[Addy-Osmani-agent-skills-设计哲学]] / [[PM-Skills-Marketplace-产品经理必备skill]]
-- SDD/Spec 主线:[[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] / [[Notion-spec-driven-AI-workflow]] / [[AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]]
-- Loop 主题:[[Loop-Engineering-验证才是瓶颈]](本文讲 Skills 构建,那篇讲 Loop 验证)/ [[Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解-把反馈循环放进工程现场]]
-- 评测+范式:[[腾讯-AI-Agent-Skill-测评方案落地]] / [[AI-Coding的顿悟时刻]] / [[54万行代码的顿悟-Markdown才是新编程方式]]
+- 阿里淘系同源:[[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]](主播=实时交互高风险)/ [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
+- Skill 主线:[[01-ai-agents/Skill-Self-Evolution]] / [[01-ai-agents/agent-skills-systematic-survey]] / [[02-ai-coding/谷歌开源agent-skills]] / [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] / [[02-ai-coding/PM-Skills-Marketplace-产品经理必备skill]]
+- SDD/Spec 主线:[[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] / [[02-ai-coding/Notion-spec-driven-AI-workflow]] / [[02-ai-coding/AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]]
+- Loop 主题:[[01-ai-agents/Loop-Engineering-验证才是瓶颈]](本文讲 Skills 构建,那篇讲 Loop 验证)/ [[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]]
+- 评测+范式:[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]] / [[02-ai-coding/AI-Coding的顿悟时刻]] / [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]
 
 ## 5 个对 Seetong 团队可借鉴动作
 
 1. **用"质量瓶颈在知识工程"做体检**:Seetong 现有 Skill 库 `seetong-bug-triage` / `seetong-tapd-version-review` / `seetong-daily-briefing` / `seetong-prd` 成功率卡在 60-70%,**优先排查 references 是否有完整领域知识映射规则**,不是换模型——50% → 90% 全靠知识注入。
 2. **复制"三层架构"重写 Seetong 适配层 Skill**:Seetong 三端(Login/Message/Device/Mine)有大量"换端实现"适配代码——**原子能力层**(API/Socket/DB)+ **模板层**(端口无关流程)+ **适配层**(AI 填充端差异),预期代码量 -60%,多端并行零冲突。
 3. **借鉴 ADJUSTMENT_PLAN 五步闭环建高频问题约束库**:`seetong-bug-triage` 跑出的"3 天内同 Bug 复现 2 次根因 X"——**先在 Skill 里加约束条款**,不只写文档;Seetong 已有 11 类 iOS 6 大漏洞/4G 6 类问题列表直接沉淀为 Skill 约束(对应 [[seetong-ios-quality-review]] / [[seetong-batch-issue-rootcause-analysis]])。
-4. **"事前约束→运行时约束→事后审查→人工卡点"作为 Seetong SOP 四层防线**:事前 references 禁止项;运行时 Hook/结构化错误码拦截(对应 [[阿里云开发者-淘宝主播Agent的Harness工程实战]] 五层防护);事后 Trace 审查;人工卡点(改版本号/主分支二次确认)。
+4. **"事前约束→运行时约束→事后审查→人工卡点"作为 Seetong SOP 四层防线**:事前 references 禁止项;运行时 Hook/结构化错误码拦截(对应 [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] 五层防护);事后 Trace 审查;人工卡点(改版本号/主分支二次确认)。
 5. **写"Seetong 端到端生码平台" P0 小试点**:TAPD 需求 → 神策 → 友盟 → 反馈 → 周报(对应 [[seetong-tapd-version-review]] + [[seetong-daily-briefing]] + [[seetong-weekly-report]]),先建 Skill references(Seetong 三端 API + 已知 bug 模式),再试 1 个真实 TAPD 需求端到端跑通,7 天内成功率从 baseline → 80%。
 
 ## 备注与限制
@@ -59,4 +68,4 @@ source: 微信公众号 / 大淘宝技术(官亭,淘天集团-行业运营技术
 - Code Wiki/KBase 试跑数据未披露召回率
 - ADJUSTMENT_PLAN 11 类高频问题具体清单未列
 - 原文:https://mp.weixin.qq.com/s/8wJhwC4YuaOX-8GXMaFU5g
-- raw:[../../raw/2026-06-17-大淘宝技术-面向Skills编程-淘宝企业购端到端研发提效实践.md](../../raw/2026-06-17-大淘宝技术-面向Skills编程-淘宝企业购端到端研发提效实践.md) | digest:[./面向Skills编程-淘宝企业购端到端研发提效实践-digest.md](./面向Skills编程-淘宝企业购端到端研发提效实践-digest.md)
+- raw:[../../raw/大淘宝技术-面向Skills编程-淘宝企业购端到端研发提效实践.md](../../raw/大淘宝技术-面向Skills编程-淘宝企业购端到端研发提效实践.md) | digest:[./面向Skills编程-淘宝企业购端到端研发提效实践-digest.md](./面向Skills编程-淘宝企业购端到端研发提效实践-digest.md)

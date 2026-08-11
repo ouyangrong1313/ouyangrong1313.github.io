@@ -3,7 +3,7 @@
 - 来源：Twitter/X @rwayne
 - 原文：https://x.com/rwayne/status/2054523563248611675
 - 编译日期：2026-05-14
-- 标签：#主题/AIAgent #场景/落地案例
+- 标签： #主题/AIAgent #场景/落地案例
 
 ## 解决的问题
 
@@ -53,4 +53,4 @@ knowledge_base/
 
 ## 相关资料
 
-- [[deep-analysis-llm-wiki-obsidian-wiki-gbrain]] - 阿里云开发者《深度解析 LLM Wiki / Obsidian-Wiki / GBrain》，更深入的技术原理分析
+- [[01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain]] - 阿里云开发者《深度解析 LLM Wiki / Obsidian-Wiki / GBrain》，更深入的技术原理分析

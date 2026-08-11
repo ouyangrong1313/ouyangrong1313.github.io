@@ -1,7 +1,7 @@
 # 54 万行代码的顿悟 - Digest
 
 - 原文链接：https://mp.weixin.qq.com/s/cqyQma3jFUlZf4_uJnH5lA
-- 原文：[[54万行代码的顿悟-Markdown才是新编程方式]]
+- 原文：[[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]
 - 抓取时间：2026-06-03
 
 ## 一句话总结
@@ -25,9 +25,9 @@ YC 总裁 Garry Tan 用 54 万行 Rails 代码构建 Garry's List + 10.5 万 Sta
 
 ## 我的理解
 
-- **这文章和 [[Claude-Code负责人谈AI原生工程组织]] 互为镜像**：那篇是组织侧瓶颈迁移，这篇是工程师侧范式迁移。**合起来看**：AI-native 团队不只是"组织要变"，连"写代码这件事本身"都要变
+- **这文章和 [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]] 互为镜像**：那篇是组织侧瓶颈迁移，这篇是工程师侧范式迁移。**合起来看**：AI-native 团队不只是"组织要变"，连"写代码这件事本身"都要变
 - **"Skill pack" 是范式的真正可操作单元**：之前 [[从Prompt-Context到Harness]] 提出 Harness 是 L2→L3 内部平台，本文说 skill pack 是 agent 工程时代的基本要素。**两者结合**：内部平台 = harness + skill pack 库 + resolver + 评估机制
-- **"测试 Markdown" 这一步是当前最缺的实践**：大多数团队有"测试代码"但没"测试 Markdown"。没有 LLM 评估 + 集成测试的 skill pack 不可靠。这就是 [[任务类型到验证模板]] 应该补的新类型："知识/Markdown/Skill 验证"
+- **"测试 Markdown" 这一步是当前最缺的实践**：大多数团队有"测试代码"但没"测试 Markdown"。没有 LLM 评估 + 集成测试的 skill pack 不可靠。这就是 [[02-ai-coding/任务类型到验证模板]] 应该补的新类型："知识/Markdown/Skill 验证"
 - **"审计委员会"陷阱在 Seetong 这种存量代码项目里也常见**：看看我们有多少 sanitizers / validators / 重试逻辑是在不信任模型
 - **"Tokenmaxxing" 不是花钱本身，是花钱的复利**：不是"用得多就赢"，是"今天用得多 = 提前 2-3 年 = 复利差距"
 - **"代码是新的富士康"这个类比很危险也很有用**：危险在于容易被解读为"少写代码 = 偷懒"；有用在于它把"代码量"和"管控强度"画了等号
@@ -35,15 +35,15 @@ YC 总裁 Garry Tan 用 54 万行 Rails 代码构建 Garry's List + 10.5 万 Sta
 
 ## 适合关联的主题
 
-- [[Claude-Code负责人谈AI原生工程组织]] — 同一时代的另一份 AI-native 组织宣言（组织侧）
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]] — Harness 是 L2-L3 工厂的"内部平台"，与本文的 Markdown 指令层呼应
-- [[Codex配置原则总览]]、[[Codex配置优化清单-从Harness视角]] — OpenClaw 团队自己实践 skill pack / harness 的产物
-- [[Codex才是最适合普通人的顶级牛马-Agent]] — Agent 工作台化的另一面
-- [[软件工程的功底是智能时代生死攸关的要素]] — AI 时代"软件工程基本功"反思
-- [[你不知道的 Agent：原理、架构与工程实践]] — Agent 架构基础
-- [[来自Codex官方团队的分享：如何把Codex用到极致]] — 同样强调"durable threads + 共享记忆"
-- [[多Agent使用边界与并行判定]] — 与本文"系统设计的人"呼应
-- [[知识卡片编译模板-长文如何压成raw-digest-wiki三层]] — 知识库本身的 skill pack 化样本
-- [[任务类型到验证模板]] — 应该补"知识/Markdown/Skill 验证"类型
-- [[你不知道的 Agent：原理、架构与工程实践]] — Agent 架构基础
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] — Harness 视角的深度展开
+- [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]] — 同一时代的另一份 AI-native 组织宣言（组织侧）
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]] — Harness 是 L2-L3 工厂的"内部平台"，与本文的 Markdown 指令层呼应
+- [[02-ai-coding/Codex配置原则总览]]、[[02-ai-coding/Codex配置优化清单-从Harness视角]] — OpenClaw 团队自己实践 skill pack / harness 的产物
+- [[02-ai-coding/Codex才是最适合普通人的顶级牛马-Agent]] — Agent 工作台化的另一面
+- [[02-ai-coding/软件工程的功底是智能时代生死攸关的要素]] — AI 时代"软件工程基本功"反思
+- [[01-ai-agents/you-dont-know-agent-principles-architecture-engineering]] — Agent 架构基础
+- [[02-ai-coding/来自Codex官方团队的分享-如何把Codex用到极致]] — 同样强调"durable threads + 共享记忆"
+- [[02-ai-coding/多Agent使用边界与并行判定]] — 与本文"系统设计的人"呼应
+- [[02-ai-coding/知识卡片编译模板-长文如何压成raw-digest-wiki三层]] — 知识库本身的 skill pack 化样本
+- [[02-ai-coding/任务类型到验证模板]] — 应该补"知识/Markdown/Skill 验证"类型
+- [[01-ai-agents/you-dont-know-agent-principles-architecture-engineering]] — Agent 架构基础
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] — Harness 视角的深度展开

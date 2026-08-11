@@ -1,9 +1,19 @@
 ---
 title: AI 团队协作案例：Loop 隐藏前提 + SDD 组织级补丁（团队治理视角）
 category: 01-ai-agents
-tags: [#主题/Loop-Engineering, #主题/AI-Agent, #主题/SDD, #主题/团队协作, #主题/AI-原生组织, #主题/信息流建设, #节点/个人不等于团队, #节点/Loop隐藏前提, #节点/SDD补丁, #节点/Spec三角色]
+tags:
+  - 主题/Loop-Engineering
+  - 主题/AI-Agent
+  - 主题/SDD
+  - 主题/团队协作
+  - 主题/AI-原生组织
+  - 主题/信息流建设
+  - 节点/个人不等于团队
+  - 节点/Loop隐藏前提
+  - 节点/SDD补丁
+  - 节点/Spec三角色
 nodes: [个人提效不等于团队提效, Loop三个隐藏前提, SDD作为组织级补丁, Spec三核心角色, 六段式Spec骨架, SDD三层次与任务复杂度分级, SDD四步落地路径, AI进入组织四层爬坡]
-links: [[Addy-Osmani-Loop-Engineering]], [[Loop-Engineering-详解-把反馈循环放进工程现场]], [[APPSO-Codex-Claude-Code-Loop-Engineering]], [[Loop-Engineering-验证才是瓶颈]], [[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]], [[530万人-自循环-提示词]], [[Multica-AI-Native-组织-人是最慢的节点]]
+links: [[02-ai-coding/Addy-Osmani-Loop-Engineering]], [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]], [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]], [[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]], [[01-ai-agents/530万人-自循环-提示词]], [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]
 date: 2026-06-22
 source: 微信公众号 叶小钗
 ---
@@ -40,9 +50,9 @@ source: 微信公众号 叶小钗
 - Seetong 团队需求交付流程 / Bug Triage / 项目知识库 / PRD 模板 / AI 落地 roadmap（见借鉴动作）
 
 ### 同级（横向 / 并列）
-- [[Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解-把反馈循环放进工程现场]] / [[APPSO-Codex-Claude-Code-Loop-Engineering]] / [[Loop-Engineering-验证才是瓶颈]] / [[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]] / [[530万人-自循环-提示词]]：Loop 主题 6 视角
-- [[Multica-AI-Native-组织-人是最慢的节点]]：**镜像**——本文"个人提效 ≠ 团队提效"，Multica"人是组织瓶颈不是 Agent"
-- [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]：3 关键设计 ≈ SDD "规格 + 边界 + 验收"
+- [[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] / [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]] / [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] / [[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]] / [[01-ai-agents/530万人-自循环-提示词]]：Loop 主题 6 视角
+- [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]：**镜像**——本文"个人提效 ≠ 团队提效"，Multica"人是组织瓶颈不是 Agent"
+- [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]：3 关键设计 ≈ SDD "规格 + 边界 + 验收"
 
 **Loop 主题 7 视角闭环** = 方法论原典（Addy）+ 中文工程实操（若飞）+ 产业信号（APPSO）+ 治理薄壳（陈进）+ 验证瓶颈（Samuel McDonnell）+ 大众教育版（Anatoli/深思圈）+ **团队协作/组织治理（叶小钗，本文）**
 

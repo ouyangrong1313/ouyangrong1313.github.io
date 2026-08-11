@@ -1,9 +1,15 @@
 ---
 title: OpenAI 最新报告解读：Codex 正在进入知识工作的主战场
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI-Agent, #场景/公众号长文, #节点/Codex, #节点/Context-Engineering, #节点/Skill]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Agent
+  - 场景/公众号长文
+  - 节点/Codex
+  - 节点/Context-Engineering
+  - 节点/Skill
 nodes: [Codex, 知识工作者, 工作流编排, 多任务并行, 知识产物, 数据分析, 上下文碎裂, Agent 采用率, 政策建议]
-links: [[Codex才是最适合普通人的顶级牛马-Agent]], [[AI-Coding的顿悟时刻]], [[Claude-Code在大代码库中的最佳实践]], [[Skills驱动推理新范式]], [[HarnessEngineering企业级实战]], [[AI-PM核心技能-观测评估与反馈闭环]]
+links: [[02-ai-coding/Codex才是最适合普通人的顶级牛马-Agent]], [[02-ai-coding/AI-Coding的顿悟时刻]], [[02-ai-coding/Claude-Code在大代码库中的最佳实践-从Anthropic官方指南到可落地Harness方法]], [[01-ai-agents/Skills驱动推理新范式]], [[01-ai-agents/HarnessEngineering企业级实战]], [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]]
 date: 2026-06-04
 source: 微信公众号 / 智见AI（大鹏飞呀飞）
 ---
@@ -20,7 +26,7 @@ source: 微信公众号 / 智见AI（大鹏飞呀飞）
 
 ## 分类提炼
 - 场景：AI 工具演化、知识工作自动化、Agent 落地方向
-- 标签：#主题/AI-Coding #主题/AI-Agent #场景/公众号长文 #节点/Codex
+- 标签： #主题/AI-Coding #主题/AI-Agent #场景/公众号长文 #节点/Codex
 - 类型：报告解读 / 趋势分析 / 数据驱动
 
 ## 知识节点
@@ -38,16 +44,16 @@ source: 微信公众号 / 智见AI（大鹏飞呀飞）
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- [[Codex才是最适合普通人的顶级牛马-Agent]]：Codex 的基本能力演化（从代码助手到工作台）
-- [[AI-Coding的顿悟时刻]]：AI 编程从 prompt 走向工程化的判断
+- [[02-ai-coding/Codex才是最适合普通人的顶级牛马-Agent]]：Codex 的基本能力演化（从代码助手到工作台）
+- [[02-ai-coding/AI-Coding的顿悟时刻]]：AI 编程从 prompt 走向工程化的判断
 
 ### 下游（应用于 / 验证于）
-- [[Skills驱动推理新范式]]：本报告论证了"Skill 沉淀"比"单条 prompt"更重要的趋势
-- [[HarnessEngineering企业级实战]]：Codex 的工作流编排本质上是 Harness 设计
-- [[AI-PM核心技能-观测评估与反馈闭环]]：知识工作者变多，反馈闭环能力更关键
+- [[01-ai-agents/Skills驱动推理新范式]]：本报告论证了"Skill 沉淀"比"单条 prompt"更重要的趋势
+- [[01-ai-agents/HarnessEngineering企业级实战]]：Codex 的工作流编排本质上是 Harness 设计
+- [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]]：知识工作者变多，反馈闭环能力更关键
 
 ### 同级（横向 / 并列）
-- [[Claude-Code在大代码库中的最佳实践]]：另一个 AI 编程工具的演化视角
+- [[02-ai-coding/Claude-Code在大代码库中的最佳实践-从Anthropic官方指南到可落地Harness方法]]：另一个 AI 编程工具的演化视角
 
 ## 正文要点
 
@@ -106,10 +112,10 @@ source: 微信公众号 / 智见AI（大鹏飞呀飞）
 
 ## 适合关联的主题
 
-- [[Codex才是最适合普通人的顶级牛马-Agent]]
-- [[AI-Coding的顿悟时刻]]
-- [[Claude-Code在大代码库中的最佳实践]]
-- [[Skills驱动推理新范式]]
-- [[HarnessEngineering企业级实战]]
-- [[AI-PM核心技能-观测评估与反馈闭环]]
-- [[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]
+- [[02-ai-coding/Codex才是最适合普通人的顶级牛马-Agent]]
+- [[02-ai-coding/AI-Coding的顿悟时刻]]
+- [[02-ai-coding/Claude-Code在大代码库中的最佳实践-从Anthropic官方指南到可落地Harness方法]]
+- [[01-ai-agents/Skills驱动推理新范式]]
+- [[01-ai-agents/HarnessEngineering企业级实战]]
+- [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]]
+- [[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]]

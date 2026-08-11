@@ -1,9 +1,17 @@
 ---
 title: 图工程（Graph Engineering）来了？LangChain说不是新东西
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/Graph-Engineering, #主题/LangGraph, #主题/Harness, #主题/Loop, #主题/Agent-Topology, #场景/公众号长文, #来源/AI工程化]
+tags:
+  - 主题/AI-Agent
+  - 主题/Graph-Engineering
+  - 主题/LangGraph
+  - 主题/Harness
+  - 主题/Loop
+  - 主题/Agent-Topology
+  - 场景/公众号长文
+  - 来源/AI工程化
 nodes: [线性Agent是退化图, 节点契约, 数据契约边, 钻石拓扑, 验证器节点, 有环图, 动态Send, 图-vs-Harness]
-links: [[0xCodez-Agent-Harness-14-Steps]], [[WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[Lilian-Weng-Harness-Engineering-自我改进]], [[Loop-Engineering-验证才是瓶颈]], [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]], [[从零设计生产级-Multi-Agent-Harness]]
+links: [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]], [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]], [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]], [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]
 date: 2026-07-27
 source: 微信公众号「AI工程化」/ winkrun
 ---
@@ -20,7 +28,7 @@ source: 微信公众号「AI工程化」/ winkrun
 
 ## 分类提炼
 - 场景：Agent 拓扑设计 / 多步骤编排 / LangGraph 方法论
-- 标签：#主题/AI-Agent #主题/Graph-Engineering #主题/LangGraph #主题/Harness #主题/Loop #主题/Agent-Topology #场景/公众号长文 #来源/AI工程化
+- 标签： #主题/AI-Agent #主题/Graph-Engineering #主题/LangGraph #主题/Harness #主题/Loop #主题/Agent-Topology #场景/公众号长文 #来源/AI工程化
 - 类型：方法论拆解 / 拓扑选型 / 图编排解释层
 
 ## 知识节点（8 个独立概念）
@@ -37,19 +45,19 @@ source: 微信公众号「AI工程化」/ winkrun
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- [[0xCodez-Agent-Harness-14-Steps]]：把 Harness / Loop / Memory 的组合关系讲清，本文在此基础上把“拓扑”单独显化。
-- [[Lilian-Weng-Harness-Engineering-自我改进]]：本文“节点里能装完整 Agent、图通常带环”的判断，可视为翁荔 5 段优化路径里的 workflow / harness 视角延伸。
-- [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]：本文最后一段“让 Claude 自己画图”与动态 workflow 是同一条主线。
+- [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]]：把 Harness / Loop / Memory 的组合关系讲清，本文在此基础上把“拓扑”单独显化。
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]：本文“节点里能装完整 Agent、图通常带环”的判断，可视为翁荔 5 段优化路径里的 workflow / harness 视角延伸。
+- [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]：本文最后一段“让 Claude 自己画图”与动态 workflow 是同一条主线。
 
 ### 下游（应用于 / 验证于）
-- [[从零设计生产级-Multi-Agent-Harness]]：把图拓扑落到多 Agent 编排、工具治理和状态管理的工程骨架。
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]：把“图 / Context / Harness / Loop”进一步整合成产品级解释层。
-- [[阿里云开发者-淘宝主播Agent的Harness工程实战]]：用 DAG / Reducer / Approval / Hook 等生产机制验证“图不是只画流程图”。
+- [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]：把图拓扑落到多 Agent 编排、工具治理和状态管理的工程骨架。
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：把“图 / Context / Harness / Loop”进一步整合成产品级解释层。
+- [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]]：用 DAG / Reducer / Approval / Hook 等生产机制验证“图不是只画流程图”。
 
 ### 同级（横向 / 并列）
-- [[Loop-Engineering-验证才是瓶颈]]：本文讲拓扑，Samuel 那篇讲验证闸门；两者拼起来才是闭环。
-- [[未来属于垂直领域Agent]]：两篇都在回答“什么时候拆图、什么时候拆 Agent、什么时候别再堆一个大 Agent”。
-- [[多Agent使用边界与并行判定]]：把本文“下一步是否真的读上一步输出？”收束成更日常的并行判定规则。
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]：本文讲拓扑，Samuel 那篇讲验证闸门；两者拼起来才是闭环。
+- [[01-ai-agents/未来属于垂直领域Agent]]：两篇都在回答“什么时候拆图、什么时候拆 Agent、什么时候别再堆一个大 Agent”。
+- [[02-ai-coding/多Agent使用边界与并行判定]]：把本文“下一步是否真的读上一步输出？”收束成更日常的并行判定规则。
 
 ## 正文要点（6 条）
 
@@ -64,10 +72,10 @@ source: 微信公众号「AI工程化」/ winkrun
 
 - 原文：图工程（Graph Engineering）来了？LangChain说不是新东西
 - LangChain 官方：3 Years of Graph Engineering with LangGraph
-- [[0xCodez-Agent-Harness-14-Steps]]
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]
-- [[Loop-Engineering-验证才是瓶颈]]
-- [[从零设计生产级-Multi-Agent-Harness]]
+- [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]]
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]
+- [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]
 
 ## 备注与限制
 

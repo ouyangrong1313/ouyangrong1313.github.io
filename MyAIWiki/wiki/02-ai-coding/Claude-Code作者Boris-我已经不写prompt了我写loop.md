@@ -1,9 +1,16 @@
 ---
 title: Claude Code 作者 Boris：我已经不写 prompt 了，我写 loop
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI-Agent, #场景/公众号长文, #节点/Claude-Code, #节点/Harness, #节点/Agent-Loop, #节点/Dynamic-Workflow]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Agent
+  - 场景/公众号长文
+  - 节点/Claude-Code
+  - 节点/Harness
+  - 节点/Agent-Loop
+  - 节点/Dynamic-Workflow
 nodes: [Dynamic Workflow, Boris Chernyshev, loop 而非 prompt, agent API, parallel, pipeline, Agentic laziness, Self-preferential bias, Goal drift, Fan-out, Adversarial verification, Tournament, Generate-and-filter, Classify-and-act, Loop until done, token 预算, quarantine, bracket 排序]
-links: [[claude-code-dynamic-workflows]], [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]], [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]], [[Claude-Code团队只招聘两类人-会做梦的人+懂底层的人]], [[Harness工程AgentLoop]], [[HarnessEngineering企业级实战]], [[Skills驱动推理新范式]]
+links: [[02-ai-coding/claude-code-dynamic-workflows]], [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]], [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]], [[02-ai-coding/Claude-Code团队只招聘两类人-会做梦的人+懂底层的人]], [[01-ai-agents/Harness工程AgentLoop]], [[01-ai-agents/HarnessEngineering企业级实战]], [[01-ai-agents/Skills驱动推理新范式]]
 date: 2026-06-04
 source: 微信公众号 / winkrun（编译自 Boris Chernyshev 30 分钟演讲）
 ---
@@ -21,7 +28,7 @@ source: 微信公众号 / winkrun（编译自 Boris Chernyshev 30 分钟演讲�
 
 ## 分类提炼
 - 场景：AI 编程实战、Dynamic Workflow 落地、Boris 工作流揭秘
-- 标签：#主题/AI-Coding #主题/AI-Agent #节点/Claude-Code #节点/Harness
+- 标签： #主题/AI-Coding #主题/AI-Agent #节点/Claude-Code #节点/Harness
 - 类型：实战揭秘 / API 详解 / 避坑指南
 
 ## 知识节点
@@ -48,18 +55,18 @@ source: 微信公众号 / winkrun（编译自 Boris Chernyshev 30 分钟演讲�
 ## 关联图谱
 
 ### 上游（基于 / 来自）
-- [[claude-code-dynamic-workflows]]：6-3 写的英文原始博客编译版（Anthropic 官方视角）
-- [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]：上午写的 Feisky 编译版（侧重判断 + 取舍）
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]：Harness 思想的总论
+- [[02-ai-coding/claude-code-dynamic-workflows]]：6-3 写的英文原始博客编译版（Anthropic 官方视角）
+- [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]：上午写的 Feisky 编译版（侧重判断 + 取舍）
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]：Harness 思想的总论
 
 ### 下游（应用于 / 验证于）
-- [[Harness工程AgentLoop]]：本篇的 agent/parallel/pipeline API 是 Agent Loop 的具体实现
-- [[HarnessEngineering企业级实战]]：Dynamic Workflow 是 Harness 落地的最新形态
-- [[Skills驱动推理新范式]]：保存的 workflow 脚本可作为 Skill 分发
+- [[01-ai-agents/Harness工程AgentLoop]]：本篇的 agent/parallel/pipeline API 是 Agent Loop 的具体实现
+- [[01-ai-agents/HarnessEngineering企业级实战]]：Dynamic Workflow 是 Harness 落地的最新形态
+- [[01-ai-agents/Skills驱动推理新范式]]：保存的 workflow 脚本可作为 Skill 分发
 
 ### 同级（横向 / 并列）
-- [[Claude-Code团队只招聘两类人-会做梦的人+懂底层的人]]：同一团队的组织方法论
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]]：同一团队的工作原则
+- [[02-ai-coding/Claude-Code团队只招聘两类人-会做梦的人+懂底层的人]]：同一团队的组织方法论
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]：同一团队的工作原则
 
 ## 正文要点
 
@@ -173,18 +180,18 @@ Anthropic 发布文档点了三个失败模式：
 
 - **token 预算是真实坑**——`"use 10k tokens"` 这种 prompt 限制**必须成习惯**，否则一个 workflow 能烧掉 5-10 倍预算
 
-- **quarantine 模式**是最有防御价值的工程实践——跟 [[陈春花-AI时代管理者重建判断权]] 的"隔离区"判断是同一回事：**读和写分离，避免 prompt injection 导致的越权**
+- **quarantine 模式**是最有防御价值的工程实践——跟 [[01-ai-agents/陈春花-AI时代管理者重建判断权]] 的"隔离区"判断是同一回事：**读和写分离，避免 prompt injection 导致的越权**
 
 - **"你不再跑任务，你在养管道"**——这个比喻对 Seetong 团队很有启发：核心问题不是"AI 能不能做这个 task"，而是"我能不能维护一个长期跑的管道"
 
 ## 适合关联的主题
 
-- [[claude-code-dynamic-workflows]]
-- [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
-- [[Claude-Code团队只招聘两类人-会做梦的人+懂底层的人]]
-- [[Claude-Code团队5条工作原则-Fiona-Fung分享]]
-- [[Harness工程AgentLoop]]
-- [[HarnessEngineering企业级实战]]
-- [[Skills驱动推理新范式]]
-- [[陈春花-AI时代管理者重建判断权]]
+- [[02-ai-coding/claude-code-dynamic-workflows]]
+- [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]
+- [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]
+- [[02-ai-coding/Claude-Code团队只招聘两类人-会做梦的人+懂底层的人]]
+- [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]]
+- [[01-ai-agents/Harness工程AgentLoop]]
+- [[01-ai-agents/HarnessEngineering企业级实战]]
+- [[01-ai-agents/Skills驱动推理新范式]]
+- [[01-ai-agents/陈春花-AI时代管理者重建判断权]]

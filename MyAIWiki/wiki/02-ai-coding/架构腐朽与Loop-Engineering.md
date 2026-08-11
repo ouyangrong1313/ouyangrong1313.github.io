@@ -2,21 +2,21 @@
 title: 架构腐朽与Loop-Engineering
 category: 02-ai-coding
 tags:
-  - "#主题/架构腐朽"
-  - "#主题/Loop-Engineering"
-  - "#主题/排熵"
-  - "#主题/AI-Coding时代"
-  - "#主题/架构约束代码化"
-  - "#节点/Linux外紧内松"
-  - "#节点/守卫自检"
-  - "#节点/删比改"
-  - "#作者/lencx"
+  - 主题/架构腐朽
+  - 主题/Loop-Engineering
+  - 主题/排熵
+  - 主题/AI-Coding时代
+  - 主题/架构约束代码化
+  - 节点/Linux外紧内松
+  - 节点/守卫自检
+  - 节点/删比改
+  - 作者/lencx
 nodes: 架构五层定义｜腐朽必然性｜重构悖论｜Linux外紧内松｜提交即重构｜守卫自检｜删比改更重要｜Loop-Engineering
 links:
-  - "[[Addy-Osmani-Loop-Engineering]]"
-  - "[[AI循环-Claude-GPT和Mira到底什么才是真正好用的]]"
-  - "[[Loop-Engineering-验证才是瓶颈]]"
-  - "[[loonggg-Claude-Code-技能心法-11条建议]]"
+  - "[[02-ai-coding/Addy-Osmani-Loop-Engineering]]"
+  - "[[02-ai-coding/AI循环-Claude-GPT和Mira到底什么才是真正好用的]]"
+  - "[[01-ai-agents/Loop-Engineering-验证才是瓶颈]]"
+  - "[[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]]"
 date: 2026-07-15
 source: 微信公众号「lencx」2026-07 推送 / 作者 lencx（Mark Text 等开源工具作者）/ 原文 https://mp.weixin.qq.com/s/wINKSDQCroWBvf29h567zA
 ---
@@ -61,7 +61,7 @@ source: 微信公众号「lencx」2026-07 推送 / 作者 lencx（Mark Text 等�
 
 ### 同级（横向 / 并列）
 
-- [[Addy-Osmani-Loop-Engineering]]（Loop 主线原典）/ [[AI循环-Claude-GPT和Mira到底什么才是真正好用的]]（Loop 五步骨架）/ [[Loop-Engineering-验证才是瓶颈]]（验证主题）/ [[loonggg-Claude-Code-技能心法-11条建议]]（Claude Code 团队 Skill 心法）
+- [[02-ai-coding/Addy-Osmani-Loop-Engineering]]（Loop 主线原典）/ [[02-ai-coding/AI循环-Claude-GPT和Mira到底什么才是真正好用的]]（Loop 五步骨架）/ [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]（验证主题）/ [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]]（Claude Code 团队 Skill 心法）
 
 ## 正文要点 + Seetong 借鉴动作
 
@@ -86,11 +86,11 @@ source: 微信公众号「lencx」2026-07 推送 / 作者 lencx（Mark Text 等�
 
 **相关链接**：
 
-- 原文 raw/digest 见 `raw/2026-07-lencx-架构腐朽与Loop-Engineering*.md`
+- 原文 raw/digest 见 `raw/lencx-架构腐朽与Loop-Engineering*.md`
 - Wiki digest 见 `wiki/02-ai-coding/架构腐朽与Loop-Engineering-digest.md`
 - 参考 [18] Addy Osmani Loop Engineering：https://x.com/addyosmani/status/2064127981161959567
 - 参考 [19] Sairahul1 Loops：https://x.com/sairahul1/status/2064277888216555684
-- 同分类已挂载：[[Addy-Osmani-Loop-Engineering]] [[AI循环-Claude-GPT和Mira到底什么才是真正好用的]] [[loonggg-Claude-Code-技能心法-11条建议]] [[Code-is-cheap-AI-Native-五倍效率]]
+- 同分类已挂载：[[02-ai-coding/Addy-Osmani-Loop-Engineering]] [[02-ai-coding/AI循环-Claude-GPT和Mira到底什么才是真正好用的]] [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]] [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]]
 
 ---
 

@@ -1,7 +1,15 @@
 ---
 title: 图工程（Graph Engineering）来了？LangChain说不是新东西（速读摘要）
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/Graph-Engineering, #主题/LangGraph, #主题/Harness, #主题/Loop, #主题/Agent-Topology, #场景/公众号长文, #来源/AI工程化]
+tags:
+  - 主题/AI-Agent
+  - 主题/Graph-Engineering
+  - 主题/LangGraph
+  - 主题/Harness
+  - 主题/Loop
+  - 主题/Agent-Topology
+  - 场景/公众号长文
+  - 来源/AI工程化
 type: digest
 date: 2026-07-27
 source: 微信公众号「AI工程化」2026-07-23 推送 / winkrun
@@ -47,6 +55,6 @@ source: 微信公众号「AI工程化」2026-07-23 推送 / winkrun
 
 ## 关联 + 备注
 
-**关联**：[[0xCodez-Agent-Harness-14-Steps]] / [[WorkBuddy-Harness工程复盘-从模型到可用Agent]] / [[Lilian-Weng-Harness-Engineering-自我改进]] / [[Loop-Engineering-验证才是瓶颈]] / [[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] / [[从零设计生产级-Multi-Agent-Harness]]
+**关联**：[[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]] / [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] / [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] / [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] / [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]
 
 **备注**：本文最强的部分不是“Graph Engineering”这个名词，而是那句很能落地的判定句：**只有下一步真的读取上一步输出时，边才成立。**

@@ -1,9 +1,19 @@
 ---
 title: AI Native 组织 5 级成熟度模型 - BCG/Deloitte/WEF 数据框架
 category: 01-ai-agents
-tags: [#主题/AI-Native-组织, #主题/Agent落地, #主题/组织成熟度, #主题/BCG, #主题/Deloitte, #主题/人机协同, #主题/CEO行动, #场景/方法论框架, #场景/数据驱动, #作者/Knock]
+tags:
+  - 主题/AI-Native-组织
+  - 主题/Agent落地
+  - 主题/组织成熟度
+  - 主题/BCG
+  - 主题/Deloitte
+  - 主题/人机协同
+  - 主题/CEO行动
+  - 场景/方法论框架
+  - 场景/数据驱动
+  - 作者/Knock
 nodes: [5级成熟度模型-L1到L5, 10-20-70-法则, 渐进自主框架-Tier1-4, DRI-Deploy-Reshape-Invent, 4类AI人才, 3个转折点, CEO-3关键行动, AI-Native-7终态特征]
-links: [[Multica-AI-Native-组织-人是最慢的节点]], [[Laurel-CPO-Jiaona-Zhang-公司OS]], [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]], [[宁向东-企业家凭什么能看见别人看不见的机会]], [[HBR-China-为什么越来越多顶级领导者开始认真学哲学]], [[清华沈阳-自进化AI新物种]], [[Nikesh-Arora-模型过剩与记忆护城河]]
+links: [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]], [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]], [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]], [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]], [[03-productivity/HBR-China-为什么越来越多顶级领导者开始认真学哲学]], [[01-ai-agents/清华沈阳-自进化AI新物种]], [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]
 date: 2026-07-02
 source: 微信公众号「ThinkingAgent」/ 作者 Knock / 2026-07-01 15:54 推送 / https://mp.weixin.qq.com/s/N0ddKiAxs6F3t4ezFxakyg
 ---
@@ -43,10 +53,10 @@ source: 微信公众号「ThinkingAgent」/ 作者 Knock / 2026-07-01 15:54 推�
 ## 关联图谱与 Seetong 借鉴动作
 
 **上游/同级**
-- [[Multica-AI-Native-组织-人是最慢的节点]] — 同样谈"组织是 AI 落地瓶颈",本文补完其"5 级数据框架 + 3 转折点 + CEO 行动"维度
-- [[Laurel-CPO-Jiaona-Zhang-公司OS]] — 公司 OS 实操路径(AI Ops/Captain model);本文是"为什么 + 数据框架",Laurel 是"怎么做 + 团队 SOP"
-- [[陈春花-从岗位到角色-AI时代组织设计的新逻辑]] — 岗位→角色组织设计哲学;本文是数据框架,陈春花是哲学论证
-- [[清华沈阳-自进化AI新物种]] / [[Nikesh-Arora-模型过剩与记忆护城河]] / [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] / [[宁向东-企业家凭什么能看见别人看不见的机会]] / [[HBR-China-为什么越来越多顶级领导者开始认真学哲学]] — 同 AI 时代组织管理主线
+- [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]] — 同样谈"组织是 AI 落地瓶颈",本文补完其"5 级数据框架 + 3 转折点 + CEO 行动"维度
+- [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]] — 公司 OS 实操路径(AI Ops/Captain model);本文是"为什么 + 数据框架",Laurel 是"怎么做 + 团队 SOP"
+- [[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]] — 岗位→角色组织设计哲学;本文是数据框架,陈春花是哲学论证
+- [[01-ai-agents/清华沈阳-自进化AI新物种]] / [[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]] / [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] / [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]] / [[03-productivity/HBR-China-为什么越来越多顶级领导者开始认真学哲学]] — 同 AI 时代组织管理主线
 
 **下游/验证于**
 - 6 个 L4-L5 终态案例:造船厂(-40% 投入/-60% 周期)/ 电信(5 倍 数字销售)/ 薪资(+50%)/ 消费品(-60% 创新周期)/ 欧洲零售银行(+50% 生产力/审批数天→30 分钟)/ 7-Eleven Rita(95% 自动化/4 万小时/周)

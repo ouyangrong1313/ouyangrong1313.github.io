@@ -1,9 +1,17 @@
 ---
 title: 淘宝主播 Agent 的 Harness 工程实战
 category: 01-ai-agents
-tags: [#主题/Harness, #主题/AI-Agent, #主题/工程实践, #主题/记忆系统, #主题/AI安全, #主题/阿里, #场景/直播, #场景/生产环境]
+tags:
+  - 主题/Harness
+  - 主题/AI-Agent
+  - 主题/工程实践
+  - 主题/记忆系统
+  - 主题/AI安全
+  - 主题/阿里
+  - 场景/直播
+  - 场景/生产环境
 nodes: [Harness-六元组, 业务框架分层, 逻辑统一物理分治, Reducer-上下文模式, 工具调用三件套, 生命周期Hook, 五层纵深防御, 记忆对账-信任度自进化]
-links: [[Harness工程AgentLoop]], [[HarnessEngineering企业级实战]], [[0xCodez-Agent-Harness-14-Steps]], [[harness-engineering]], [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[记忆是-agent-基建]], [[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]], [[腾讯-AI-Agent-Skill-测评方案落地]], [[从零设计生产级-Multi-Agent-Harness]]
+links: [[01-ai-agents/Harness工程AgentLoop]], [[01-ai-agents/HarnessEngineering企业级实战]], [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]], [[01-ai-agents/harness-engineering]], [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]], [[01-ai-agents/记忆是-agent-基建]], [[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]], [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]], [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]
 date: 2026-06-18
 source: 微信公众号 / 阿里云开发者(阿里妹系列) 2026-06-17 08:30
 原始链接: https://mp.weixin.qq.com/s/Mv5U5kr_viixmB0JJronPA
@@ -37,19 +45,19 @@ source: 微信公众号 / 阿里云开发者(阿里妹系列) 2026-06-17 08:30
 - **Langfuse trace + 离线对抗样本**(极端改价/违规诱导/模糊指令)+ 在线指标看板(操作成功率/审批通过率/主播干预率/端到端延迟)
 
 ### 同级(横向 / 并列)
-- Harness 主线:[[Harness工程AgentLoop]] / [[HarnessEngineering企业级实战]] / [[0xCodez-Agent-Harness-14-Steps]] / [[harness-engineering]]
-- 阿里妹同源:[[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
-- 记忆主线:[[记忆是-agent-基建]] / [[llm-agent-unified-memory-framework]]
-- Loop 主题:[[Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解-把反馈循环放进工程现场]] / [[APPSO-Codex-Claude-Code-Loop-Engineering]]
-- Agent 安全+评测:[[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]] / [[腾讯-AI-Agent-Skill-测评方案落地]]
-- Agent 架构:[[从零设计生产级-Multi-Agent-Harness]] / [[OpenClaw-vs-Hermes-多-Agent-架构设计]]
+- Harness 主线:[[01-ai-agents/Harness工程AgentLoop]] / [[01-ai-agents/HarnessEngineering企业级实战]] / [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[01-ai-agents/harness-engineering]]
+- 阿里妹同源:[[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
+- 记忆主线:[[01-ai-agents/记忆是-agent-基建]] / [[01-ai-agents/llm-agent-unified-memory-framework]]
+- Loop 主题:[[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] / [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]]
+- Agent 安全+评测:[[01-ai-agents/陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]] / [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]
+- Agent 架构:[[01-ai-agents/从零设计生产级-Multi-Agent-Harness]] / [[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]]
 
 ## 5 个对 Seetong 团队可借鉴动作
 
 1. **Harness 六元组体检**:给 Seetong 所有 Skill 落表自查 E/T/C/S/L/V 缺哪一块,补缺后再谈"提升效率"——不要先优化"能跑但不知道对不对"的流程。
 2. **业务/框架分层重写 Skill 库**:`seetong-tapd-version-review` / `seetong-bug-triage` / `seetong-daily-briefing` / `seetong-prd` / `seetong-decompose` 现在"业务规则+工程实现"混在一起,业务一变就要动骨架。改成"**Skill 声明 = 能干什么+风险等级+参数校验,框架兜住上下文/状态/Hook/观测**",业务迭代不再踩工程。
 3. **记忆三层 + 记忆对账用到简报**:`seetong-daily-briefing` 现在是 L1 一句话,缺 L2(神策/友盟/TAPD)和 L3(运营类别)。加 L2+L3 就能给"主播说的关注点 vs 实际数据高发"对账,矛盾 ≥ 3 次触发主动确认。
-4. **Approval 4 档作为 Seetong Agent 操作硬规则**:自动关过期迭代=auto,自动打标签=soft-gate,自动修 7 天未响应 Bug=hard-gate(阻塞等二次确认),自动改版本号/动主分支=block 即时拒绝。与 [[Claude-Code一周年回顾-Boris-Cat]] "Auto Mode 比手动更安全"合并用。
+4. **Approval 4 档作为 Seetong Agent 操作硬规则**:自动关过期迭代=auto,自动打标签=soft-gate,自动修 7 天未响应 Bug=hard-gate(阻塞等二次确认),自动改版本号/动主分支=block 即时拒绝。与 [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]] "Auto Mode 比手动更安全"合并用。
 5. **写"Seetong PlanEngine" 7 天小试点**:挑"每周版本回顾"按 PlanEngine 5 目标(可恢复 Checkpoint/可观测 TraceID/并行调度/增量 Replan/SubAgent 隔离)重写,7 天后用 5 项指标对比 PlanEngine vs 原 ReAct。
 
 ## 备注与限制
@@ -61,4 +69,4 @@ source: 微信公众号 / 阿里云开发者(阿里妹系列) 2026-06-17 08:30
 - 主播 Agent A/B 验证数字未披露
 - 沙箱 64KB stdout 是经验值,未给不同业务量级最优阈值
 - 原始链接:https://mp.weixin.qq.com/s/Mv5U5kr_viixmB0JJronPA
-- raw:[../../raw/2026-06-17-阿里云开发者-淘宝主播Agent的Harness工程实战.md](../../raw/2026-06-17-阿里云开发者-淘宝主播Agent的Harness工程实战.md) | raw-digest:[../../raw/2026-06-17-阿里云开发者-淘宝主播Agent的Harness工程实战-digest.md](../../raw/2026-06-17-阿里云开发者-淘宝主播Agent的Harness工程实战-digest.md) | wiki-digest:[./阿里云开发者-淘宝主播Agent的Harness工程实战-digest.md](./阿里云开发者-淘宝主播Agent的Harness工程实战-digest.md)
+- raw:[../../raw/阿里云开发者-淘宝主播Agent的Harness工程实战.md](../../raw/阿里云开发者-淘宝主播Agent的Harness工程实战.md) | raw-digest:[../../raw/阿里云开发者-淘宝主播Agent的Harness工程实战-digest.md](../../raw/阿里云开发者-淘宝主播Agent的Harness工程实战-digest.md) | wiki-digest:[./阿里云开发者-淘宝主播Agent的Harness工程实战-digest.md](./阿里云开发者-淘宝主播Agent的Harness工程实战-digest.md)

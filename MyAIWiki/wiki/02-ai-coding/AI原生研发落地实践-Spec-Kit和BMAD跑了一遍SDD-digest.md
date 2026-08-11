@@ -1,8 +1,8 @@
 # AI 原生研发落地实践:Spec-Kit 和 BMAD 实战 SDD - Digest
 
 - 原文链接:https://mp.weixin.qq.com/s/Lpsl52F_oiFwMBDV7dL8RQ
-- 原文:[[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]
-- 拆解(raw):`raw/articles/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD-digest.md`
+- 原文:[[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]
+- 拆解(raw):`raw/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD-digest.md`
 - 抓取时间:2026-06-05
 
 ## 一句话总结
@@ -29,19 +29,19 @@
 
 ### 1. 这篇文章在 AI-Native 主线里的位置
 
-- **和 [[AI-Coding的顿悟时刻]] 互为补充**:
+- **和 [[02-ai-coding/AI-Coding的顿悟时刻]] 互为补充**:
   - 那篇是"组织向两端收缩 + 4% 成本换 100% 产出"的财务模型视角
   - 这篇是"AI 真正落地研发流程"的工具/方法论视角
   - **合起来**:既有"该不该做"的判断(财务模型),又有"具体怎么做"的方法(SDD 工具链)
-- **和 [[AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]] 是同主题不同深度**:
+- **和 [[02-ai-coding/AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]] 是同主题不同深度**:
   - 三剑客那篇是"工具目录+对比表"的技术解读
   - 这篇是"在重构迁移项目里真跑过两套工具"的实战经验
   - **合起来**:技术全景 + 实战体感
-- **和 [[Claude-Code负责人谈AI原生工程组织]] 是同一议题的两种回答**:
+- **和 [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]] 是同一议题的两种回答**:
   - 那篇是"瓶颈从写代码迁移到验证/评审/协作"的视角切换
   - 这篇是"AI 进入研发流程后,需求/方案/任务/代码怎么组织"的具体回答
   - **结论互证**:从大方向(瓶颈迁移)到具体方案(SDD + BMAD 圆桌)
-- **和 [[YC如何进行AI-Native组织改造-Agent能力要向所有人开放]] 互文**:
+- **和 [[02-ai-coding/YC如何进行AI-Native组织改造-Agent能力要向所有人开放]] 互文**:
   - YC 那篇强调"Agent 能力要向所有人开放 + Egalitarian"
   - 这篇强调"AI 原生 ≠ 人人用 AI 工具,而是让 AI 进入协作流程"
   - **合起来**:"工具普及"(YC)和"流程重塑"(本文)= AI-native 组织的两条腿

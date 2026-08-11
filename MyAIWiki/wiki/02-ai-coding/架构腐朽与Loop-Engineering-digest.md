@@ -2,10 +2,10 @@
 title: 架构腐朽与Loop-Engineering - Digest
 category: 02-ai-coding
 tags:
-  - "#主题/架构腐朽"
-  - "#主题/Loop-Engineering"
-  - "#主题/AI-Coding时代"
-  - "#作者/lencx"
+  - 主题/架构腐朽
+  - 主题/Loop-Engineering
+  - 主题/AI-Coding时代
+  - 作者/lencx
 date: 2026-07-15
 source: 微信公众号「lencx」/ 作者 lencx（Mark Text 等开源工具作者）/ 原文 https://mp.weixin.qq.com/s/wINKSDQCroWBvf29h567zA
 ---
@@ -54,5 +54,5 @@ source: 微信公众号「lencx」/ 作者 lencx（Mark Text 等开源工具作�
 ## 关联 + 备注
 
 - **上游**：Linux 内核稳定性分配 + Addy Osmani Loop Engineering 推文 + Sairahul1 Loops 推文
-- **同级**：[[Addy-Osmani-Loop-Engineering]] / [[AI循环-Claude-GPT和Mira到底什么才是真正好用的]] / [[Loop-Engineering-验证才是瓶颈]] / [[loonggg-Claude-Code-技能心法-11条建议]] / [[Code-is-cheap-AI-Native-五倍效率]]
+- **同级**：[[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[02-ai-coding/AI循环-Claude-GPT和Mira到底什么才是真正好用的]] / [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] / [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]] / [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]]
 - **限制**：lencx 独立开发者视角；"AI Coding 代码量 10x 增长"是经验判断非独立统计；Linux 内核稳定性简化表述

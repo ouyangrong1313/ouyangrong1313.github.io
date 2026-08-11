@@ -25,7 +25,7 @@ source: 微信公众号「ThinkingAgent」/ Knock
 ## 6 个对 Seetong 借鉴动作
 
 1. **4 类型分级盘点**：Seetong AI 助手所有 Skill 按 4 类重新分类
-2. **Reflection 配 Reviewer 子 Skill**：写代码 Skill 必配 Reviewer 子 Skill 循环 2-3 轮（对应 [[Loop-Engineering-验证才是瓶颈]] 验证闸门）
+2. **Reflection 配 Reviewer 子 Skill**：写代码 Skill 必配 Reviewer 子 Skill 循环 2-3 轮（对应 [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] 验证闸门）
 3. **Tool Use 治理 8 项**：权限/白名单/日志/审计/沙箱/确认/回滚/分级
 4. **Planning 入 Skill 模板**：多步骤任务类 Skill 必走 Planning——目标→拆解→执行→检查→调整
 5. **单 Agent 优先**：1-2 个"5 步能解决"复杂任务做成单 Agent + Workflow，验证后再考虑 Multi-Agent
@@ -46,7 +46,7 @@ source: 微信公众号「ThinkingAgent」/ Knock
 
 ## 关联 + 备注
 
-- **同主线** [[ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]（**同作者 2 周内连发**——5 级组织维度 + 本文 5 误区 Agent 实施维度 = "AI Native 完整工程化框架"）[[Leeka-Task-Decomposition-Agentic-Workflow]] [[0xCodez-Agent-Harness-14-Steps]] [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
-- **强关联** [[Capihom-AI-Native企业-Agent团队和AI-Factory重写公司体系]]（Groupon 实证印证 5 误区第 4 条）[[Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]
+- **同主线** [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]（**同作者 2 周内连发**——5 级组织维度 + 本文 5 误区 Agent 实施维度 = "AI Native 完整工程化框架"）[[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]] [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
+- **强关联** [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]（Groupon 实证印证 5 误区第 4 条）[[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]
 - **作者** Knock = 微信公众号「ThinkingAgent」主理人　**来源** 2026-07-16 08:27 推送，约 8300 字
 - **Seetong 优先级** Tool Use → Reflection → Planning → Multi-Agent　**关键区分** 现有 90% Skill 应是 Workflow 不是 Agent，避免"什么都是 Agent"陷阱

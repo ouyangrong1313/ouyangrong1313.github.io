@@ -1,9 +1,17 @@
 ---
 title: 斯坦福计算机教授：AI 会写代码，你为什么更该学编程
 category: 03-productivity
-tags: [#主题/AI时代学习 #主题/AI时代编程 #主题/AI导师vs真人 #主题/Code-in-Place #主题/Seetong借鉴 #主题/Claude-Code #作者/Chris-Piech #公众号/Capihom]
+tags:
+  - 主题/AI时代学习
+  - 主题/AI时代编程
+  - 主题/AI导师vs真人
+  - 主题/Code-in-Place
+  - 主题/Seetong借鉴
+  - 主题/Claude-Code
+  - 作者/Chris-Piech
+  - 公众号/Capihom
 nodes: [AI放大与基础, 计算器与乘法类比, 真人导师完课率, 架构延迟5周, 代码作为练习场, Claude-Code边做边补, 初级工程师提前面对用户, 职业变化比演示慢]
-links: [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]], [[LaterCast-YC设计负责人-AI重写设计师工作流]], [[phodal-项目记住-Coding-Agent-5步法]], [[Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]], [[Agent自维护体系-完整实战]], [[深思圈-思考外包能动性]], [[与AI一起做产品的六条原则]], [[BillionWrites-特斯拉自学方法-战略性无聊-项目化-视觉化]], [[Code-is-cheap-AI-Native-五倍效率]], [[laurel-cpo-jiaona-zhang-公司OS]], [[快刀青衣-OpenAI高管教练四层能力]], [[Karpathy-autoresearch-从上下文工程到自主研究循环]]
+links: [[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]], [[03-productivity/LaterCast-YC设计负责人-AI重写设计师工作流]], [[02-ai-coding/phodal-项目记住-Coding-Agent-5步法]], [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]], [[02-ai-coding/Agent自维护体系-完整实战]], [[06-ai-tech/深思圈-思考外包能动性]], [[03-productivity/与AI一起做产品的六条原则]], [[03-productivity/BillionWrites-特斯拉自学方法-战略性无聊-项目化-视觉化]], [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]], [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]], [[03-productivity/快刀青衣-OpenAI高管教练四层能力]], [[02-ai-coding/Karpathy-autoresearch-从上下文工程到自主研究循环]]
 date: 2026-08-03
 source: 微信公众号「Capihom（晚点再听LaterCast）」编译（原文链接 https://mp.weixin.qq.com/s/q6oyjUVDp-ftUnHH60-_Kw）
 ---
@@ -22,7 +30,7 @@ source: 微信公众号「Capihom（晚点再听LaterCast）」编译（原文�
 
 - 场景：AI 时代个人学习 / 工程师成长 / 教育方法论 / 类型：教育哲学 + 实证观察
 - 主线：03-productivity / Capihom 编译三连 + AI 时代学习
-- Capihom 编译三连：本文（2026-08-03）+ [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]]（7/21）+ [[LaterCast-YC设计负责人-AI重写设计师工作流]]（7/16）**三文一起读**
+- Capihom 编译三连：本文（2026-08-03）+ [[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]]（7/21）+ [[03-productivity/LaterCast-YC设计负责人-AI重写设计师工作流]]（7/16）**三文一起读**
 
 ## 知识节点（8 个独立概念）+ 正文要点（5 条）
 
@@ -39,9 +47,9 @@ source: 微信公众号「Capihom（晚点再听LaterCast）」编译（原文�
 
 ## 关联图谱
 
-- **上游：** [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]] [[LaterCast-YC设计负责人-AI重写设计师工作流]]（同 Capihom 编译三连）[[深思圈-思考外包能动性]]
-- **下游：** [[phodal-项目记住-Coding-Agent-5步法]]（2026-08-03 同日，本文"基础决定放大"哲学基础）[[Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] [[Agent自维护体系-完整实战]] [[laurel-cpo-jiaona-zhang-公司OS]] [[快刀青衣-OpenAI高管教练四层能力]]
-- **同级：** [[与AI一起做产品的六条原则]] [[BillionWrites-特斯拉自学方法-战略性无聊-项目化-视觉化]] [[Code-is-cheap-AI-Native-五倍效率]] [[Karpathy-autoresearch-从上下文工程到自主研究循环]]
+- **上游：** [[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]] [[03-productivity/LaterCast-YC设计负责人-AI重写设计师工作流]]（同 Capihom 编译三连）[[06-ai-tech/深思圈-思考外包能动性]]
+- **下游：** [[02-ai-coding/phodal-项目记住-Coding-Agent-5步法]]（2026-08-03 同日，本文"基础决定放大"哲学基础）[[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] [[02-ai-coding/Agent自维护体系-完整实战]] [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]] [[03-productivity/快刀青衣-OpenAI高管教练四层能力]]
+- **同级：** [[03-productivity/与AI一起做产品的六条原则]] [[03-productivity/BillionWrites-特斯拉自学方法-战略性无聊-项目化-视觉化]] [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]] [[02-ai-coding/Karpathy-autoresearch-从上下文工程到自主研究循环]]
 
 ## 6 个对 Seetong 团队可借鉴动作
 
@@ -58,5 +66,5 @@ source: 微信公众号「Capihom（晚点再听LaterCast）」编译（原文�
 2. **发布时间：** 推断 2026-07 末至 2026-08 初。
 3. **可证伪点：** "10 个百分点完课率"是 Code in Place 内部实验数据，外部团队未必能复现；"5 周架构问题"是经验观察无严格时间窗口。
 4. **不适用：** 已被验证成熟的简单业务场景；本文主轴是"AI 时代为什么学编程"，对已毕业 / 资深工程师的启发是"5 周后再看架构"。
-5. **关联首选：** 与 [[LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]]（7/21）+ [[LaterCast-YC设计负责人-AI重写设计师工作流]]（7/16）同 Capihom 编译三连，**三文一起读**。
+5. **关联首选：** 与 [[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]]（7/21）+ [[03-productivity/LaterCast-YC设计负责人-AI重写设计师工作流]]（7/16）同 Capihom 编译三连，**三文一起读**。
 6. **公众号噪声：** 关注/分享/点赞/在看/通勤走路/关注我等模板已剔除。

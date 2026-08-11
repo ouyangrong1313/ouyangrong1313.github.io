@@ -1,9 +1,20 @@
 ---
 title: 深度｜Graph Engineering：AI工作流从聊天窗口搬进有向图之后，发生了什么
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/Graph-Engineering, #主题/Multi-Agent, #主题/Agent-Workflow, #主题/AI-Reliability, #节点/任务图, #节点/钻石模式, #节点/人类关卡, #节点/状态记忆, #场景/公众号长文, #来源/深思SenseAI]
+tags:
+  - 主题/AI-Agent
+  - 主题/Graph-Engineering
+  - 主题/Multi-Agent
+  - 主题/Agent-Workflow
+  - 主题/AI-Reliability
+  - 节点/任务图
+  - 节点/钻石模式
+  - 节点/人类关卡
+  - 节点/状态记忆
+  - 场景/公众号长文
+  - 来源/深思SenseAI
 nodes: [任务图, 职责分离, 状态记忆, 人类关卡, 钻石模式, 最小图, 工作流先行, 图的准入]
-links: [[图工程-Graph-Engineering-来了-LangChain说不是新东西]], [[AdrianPunk115-Graph-Engineering-从0到1小白完整教程]], [[叶小钗-Agent-Loop-vs-Graph-Engineering]], [[万字长文拆解Agent-架构设计-四-多-Agent-协作]], [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]
+links: [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]], [[01-ai-agents/AdrianPunk115-Graph-Engineering-从0到1小白完整教程]], [[01-ai-agents/叶小钗-Agent-Loop-vs-Graph-Engineering]], [[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]], [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]
 date: 2026-08-04
 source: 微信公众号「深思SenseAI」/ 深思圈
 ---
@@ -21,7 +32,7 @@ source: 微信公众号「深思SenseAI」/ 深思圈
 ## 分类提炼
 
 - 场景：深度调研、代码审查、客服分流、用户反馈综合等多步骤且需复核的任务。
-- 标签：#主题/AI-Agent #主题/Graph-Engineering #主题/Multi-Agent #主题/Agent-Workflow #主题/AI-Reliability #节点/任务图 #节点/钻石模式 #节点/人类关卡 #节点/状态记忆 #场景/公众号长文 #来源/深思SenseAI
+- 标签： #主题/AI-Agent #主题/Graph-Engineering #主题/Multi-Agent #主题/Agent-Workflow #主题/AI-Reliability #节点/任务图 #节点/钻石模式 #节点/人类关卡 #节点/状态记忆 #场景/公众号长文 #来源/深思SenseAI
 - 类型：方法论解读 / Agent 工作流设计 / 多节点质量控制。
 
 ## 知识节点（8 个独立概念）
@@ -39,20 +50,20 @@ source: 微信公众号「深思SenseAI」/ 深思圈
 
 ### 上游（基于 / 来自）
 
-- [[图工程-Graph-Engineering-来了-LangChain说不是新东西]]：该页用“下游是否真实读取上游输出”定义边；本文进一步用职责分离解释为什么要设置审查节点。
-- [[AdrianPunk115-Graph-Engineering-从0到1小白完整教程]]：该页的状态契约、代码化路由和独立审阅节点，是本文“任务图”可工程化的具体约束。
-- [[万字长文拆解Agent-架构设计-四-多-Agent-协作]]：本文的规划者、研究者、质疑者与人类关卡，可由该页的上下文隔离和权限裁剪机制支撑。
+- [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]]：该页用“下游是否真实读取上游输出”定义边；本文进一步用职责分离解释为什么要设置审查节点。
+- [[01-ai-agents/AdrianPunk115-Graph-Engineering-从0到1小白完整教程]]：该页的状态契约、代码化路由和独立审阅节点，是本文“任务图”可工程化的具体约束。
+- [[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]]：本文的规划者、研究者、质疑者与人类关卡，可由该页的上下文隔离和权限裁剪机制支撑。
 
 ### 下游（应用于 / 验证于）
 
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]：把图、Context、Harness 与 Loop 放进同一解释框架，适合承接本文的状态记忆和质量门禁。
-- [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：多专家并行、审查和汇合的工程实践，为本文的钻石模式提供了研发场景参照。
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：把图、Context、Harness 与 Loop 放进同一解释框架，适合承接本文的状态记忆和质量门禁。
+- [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：多专家并行、审查和汇合的工程实践，为本文的钻石模式提供了研发场景参照。
 
 ### 同级（横向 / 并列）
 
-- [[叶小钗-Agent-Loop-vs-Graph-Engineering]]：该页提醒不要为新概念而建图；与本文共同构成“先判定问题，再选择图”的两面。
-- [[从零设计生产级-Multi-Agent-Harness]]：本文给最小拓扑和人类关卡，该页补充工具治理、预算、记忆与评估等生产约束。
-- [[多Agent使用边界与并行判定]]：将本文“哪些研究可并行、哪些必须审查”的判断收束成日常委派规则。
+- [[01-ai-agents/叶小钗-Agent-Loop-vs-Graph-Engineering]]：该页提醒不要为新概念而建图；与本文共同构成“先判定问题，再选择图”的两面。
+- [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]：本文给最小拓扑和人类关卡，该页补充工具治理、预算、记忆与评估等生产约束。
+- [[02-ai-coding/多Agent使用边界与并行判定]]：将本文“哪些研究可并行、哪些必须审查”的判断收束成日常委派规则。
 
 ## 正文要点
 
@@ -81,11 +92,11 @@ source: 微信公众号「深思SenseAI」/ 深思圈
 ## 相关链接
 
 - 原文：深度｜Graph Engineering：AI工作流从聊天窗口搬进有向图之后，发生了什么
-- [[图工程-Graph-Engineering-来了-LangChain说不是新东西]]
-- [[AdrianPunk115-Graph-Engineering-从0到1小白完整教程]]
-- [[叶小钗-Agent-Loop-vs-Graph-Engineering]]
-- [[万字长文拆解Agent-架构设计-四-多-Agent-协作]]
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]
+- [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]]
+- [[01-ai-agents/AdrianPunk115-Graph-Engineering-从0到1小白完整教程]]
+- [[01-ai-agents/叶小钗-Agent-Loop-vs-Graph-Engineering]]
+- [[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]]
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]
 
 ## 备注与限制
 

@@ -1,9 +1,21 @@
 ---
 title: "Loop Engineering：把 prompt agent 替换为设计循环系统"
 category: 02-ai-coding
-tags: [#主题/AI-Coding, #主题/AI-Agent, #节点/Agent-Loop, #节点/Codex, #节点/Skill, #节点/Harness, #节点/Memory, #手法/范式归纳, #手法/对比冲突, #手法/警示提醒, #场景/技术博客, #场景/方法论]
+tags:
+  - 主题/AI-Coding
+  - 主题/AI-Agent
+  - 节点/Agent-Loop
+  - 节点/Codex
+  - 节点/Skill
+  - 节点/Harness
+  - 节点/Memory
+  - 手法/范式归纳
+  - 手法/对比冲突
+  - 手法/警示提醒
+  - 场景/技术博客
+  - 场景/方法论
 nodes: [Loop-Engineering, 5积木框架, Automations, Worktrees, Skills, MCP-Connectors, Sub-agents, Memory-on-Disk, Cognitive-Surrender, Harness-Loop层次]
-links: [[Claude-Code作者Boris-我已经不写prompt了我写loop]], [[claude-code-dynamic-workflows]], [[Agentic-Engineering-AI-Workbench]], [[Claude-Code之父品味不是人类护城河]], [[买了一样的AI为什么别家的比你的强]], [[从Prompt-Context到Harness-工程的三次进化与终局之战]], [[AI-Coding的顿悟时刻]], [[54万行代码的顿悟-Markdown才是新编程方式]]
+links: [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]], [[02-ai-coding/claude-code-dynamic-workflows]], [[02-ai-coding/Agentic-Engineering-AI-Workbench]], [[02-ai-coding/Claude-Code之父品味不是人类护城河]], [[02-ai-coding/买了一样的AI为什么别家的比你的强]], [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]], [[02-ai-coding/AI-Coding的顿悟时刻]], [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]
 date: 2026-06-09
 source: X / Addy Osmani (@addyosmani) — 2026-06-09 07:30（41万 查看 / 3,266 赞 / 7,605 书签）
 ---
@@ -17,7 +29,7 @@ source: X / Addy Osmani (@addyosmani) — 2026-06-09 07:30（41万 查看 / 3,26
 - 获取时间：2026-06-09
 - 抓取方式：CDP Proxy（X SPA）
 
-> 速读：[[../raw/2026-06-Addy-Osmani-Loop-Engineering-digest|Raw Digest]] · 原文：[[../raw/2026-06-Addy-Osmani-Loop-Engineering|Raw 原文]]
+> 速读：[[../raw/Addy-Osmani-Loop-Engineering-digest|Raw Digest]] · 原文：[[../raw/Addy-Osmani-Loop-Engineering|Raw 原文]]
 
 ## 核心结论（一句话）
 
@@ -27,7 +39,7 @@ source: X / Addy Osmani (@addyosmani) — 2026-06-09 07:30（41万 查看 / 3,26
 
 - **场景**：AI Coding 方法论 · 跨工具 loop 设计 · 工程师角色升级
 - **类型**：跨产品方法论长文（不是单一工具教程，是"两个工具的公约数"）
-- **价值层级**：⭐⭐⭐（与 [[claude-code-dynamic-workflows]] 同级但更上层：本文是**方法论层**，dynamic workflows 是**Claude Code 一侧的具体实现**）
+- **价值层级**：⭐⭐⭐（与 [[02-ai-coding/claude-code-dynamic-workflows]] 同级但更上层：本文是**方法论层**，dynamic workflows 是**Claude Code 一侧的具体实现**）
 - **关键引述两条**（背书强度高）：
   - @steipete："You shouldn't be prompting coding agents anymore. You should be designing loops that prompt your agents."
   - @bcherny（Anthropic Claude Code 负责人）："I don't prompt Claude anymore. I have loops running that prompt Claude and figuring out what to do. My job is to write loops."
@@ -51,24 +63,24 @@ source: X / Addy Osmani (@addyosmani) — 2026-06-09 07:30（41万 查看 / 3,26
 
 ### 上游（基于 / 来自）
 
-- [[Claude-Code作者Boris-我已经不写prompt了我写loop]]：Boris 在 30 分钟演讲里展开 "我的工作 = 写 loop"，本文是**该金句的跨工具方法论化**（Boris 偏 Claude Code dynamic workflows 实现，本文是双工具的公约数）
-- [[claude-code-dynamic-workflows]]：本文"Codex 也有 `/goal`、也用 `SKILL.md`、也走 MCP"的跨工具对称论断，与 Thariq 的 Claude Code Dynamic Workflows 互为镜像——**dynamic workflows 是 Claude Code 一侧的工程实现，loop engineering 是跨产品的设计框架**
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]]：本文"loop engineering 坐在 harness 之上的一层楼"是 Harness 哲学的延伸——Harness 是车间，loop 是工厂
-- [[Agentic-Engineering-AI-Workbench]]：若飞 2026-06-08 编译长文，Addy Osmani 是其编译来源之一（《Agent Skills》那篇），本篇是 Addy 在 loop 这一相邻主题的独立方法论；两篇互为佐证
-- [[买了一样的AI为什么别家的比你的强]]：Hiten Shah "Skill 是资产"——本文"Skill 是 loop 复利的关键"是同一信号在 loop 场景的落地
-- [[54万行代码的顿悟-Markdown才是新编程方式]]：Garry Tan 的 Skillify 循环与本文 "Memory on disk = 复利" 是同一思想的另一表达
+- [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]]：Boris 在 30 分钟演讲里展开 "我的工作 = 写 loop"，本文是**该金句的跨工具方法论化**（Boris 偏 Claude Code dynamic workflows 实现，本文是双工具的公约数）
+- [[02-ai-coding/claude-code-dynamic-workflows]]：本文"Codex 也有 `/goal`、也用 `SKILL.md`、也走 MCP"的跨工具对称论断，与 Thariq 的 Claude Code Dynamic Workflows 互为镜像——**dynamic workflows 是 Claude Code 一侧的工程实现，loop engineering 是跨产品的设计框架**
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]：本文"loop engineering 坐在 harness 之上的一层楼"是 Harness 哲学的延伸——Harness 是车间，loop 是工厂
+- [[02-ai-coding/Agentic-Engineering-AI-Workbench]]：若飞 2026-06-08 编译长文，Addy Osmani 是其编译来源之一（《Agent Skills》那篇），本篇是 Addy 在 loop 这一相邻主题的独立方法论；两篇互为佐证
+- [[02-ai-coding/买了一样的AI为什么别家的比你的强]]：Hiten Shah "Skill 是资产"——本文"Skill 是 loop 复利的关键"是同一信号在 loop 场景的落地
+- [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]：Garry Tan 的 Skillify 循环与本文 "Memory on disk = 复利" 是同一思想的另一表达
 
 ### 下游（应用于 / 验证于）
 
-- [[Claude-Code之父品味不是人类护城河]]：Boris Cherny 访谈里"我的工作已经变成写 Loops"的金句，本文是该金句的系统化展开
-- [[AI-Coding的顿悟时刻]]："未来瓶颈 = 需求定义 + 架构设计"——本文"build the loop, stay the engineer"是同主线的工程化版本
-- [[多Agent使用边界与并行判定]]：本文"worktrees 解机械冲突，人仍是天花板"是该主线在 loop 自动化场景的强化
+- [[02-ai-coding/Claude-Code之父品味不是人类护城河]]：Boris Cherny 访谈里"我的工作已经变成写 Loops"的金句，本文是该金句的系统化展开
+- [[02-ai-coding/AI-Coding的顿悟时刻]]："未来瓶颈 = 需求定义 + 架构设计"——本文"build the loop, stay the engineer"是同主线的工程化版本
+- [[02-ai-coding/多Agent使用边界与并行判定]]：本文"worktrees 解机械冲突，人仍是天花板"是该主线在 loop 自动化场景的强化
 
 ### 同级（横向 / 并列 / 镜像）
 
-- [[Claude-Code作者Boris-我已经不写prompt了我写loop]]：同一金句的姊妹篇——Boris 偏 Anthropic 一侧，Addy 跨工具框架
-- [[claude-code-dynamic-workflows]]：同主题不同层面——动态工作流是单工具实现，loop engineering 是跨工具框架
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]]：同层级——Harness / Loop / Factory 三层抽象的另一视角
+- [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]]：同一金句的姊妹篇——Boris 偏 Anthropic 一侧，Addy 跨工具框架
+- [[02-ai-coding/claude-code-dynamic-workflows]]：同主题不同层面——动态工作流是单工具实现，loop engineering 是跨工具框架
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]：同层级——Harness / Loop / Factory 三层抽象的另一视角
 
 ## 正文要点（7 条）
 
@@ -145,15 +157,15 @@ state file 是整个系统的脊椎——明天的运行从今天停的地方继
 
 ## 标签
 
-#主题/AI-Coding
-#主题/AI-Agent
-#节点/Agent-Loop
-#节点/Codex
-#节点/Skill
-#节点/Harness
-#节点/Memory
-#场景/技术博客
-#场景/方法论
-#手法/范式归纳
-#手法/对比冲突
-#手法/警示提醒
+ #主题/AI-Coding
+ #主题/AI-Agent
+ #节点/Agent-Loop
+ #节点/Codex
+ #节点/Skill
+ #节点/Harness
+ #节点/Memory
+ #场景/技术博客
+ #场景/方法论
+ #手法/范式归纳
+ #手法/对比冲突
+ #手法/警示提醒

@@ -6,18 +6,22 @@ source_wechat: 微信公众号「Soyoger」2026-07-20 推送
 date: 2026-07-20
 slug: Agent自维护体系-完整实战
 category: 02-ai-coding
-tags: [Loop-Engineering, Agent自维护, Skill设计, Sub-Agents]
+tags:
+  - Loop-Engineering
+  - Agent自维护
+  - Skill设计
+  - Sub-Agents
 rating: ⭐⭐⭐
 source: https://mp.weixin.qq.com/s/mxCEO3NxwBrOEsTfAzyzQQ
-digest: "[[Agent自维护体系-完整实战-digest]]"
+digest: "[[02-ai-coding/Agent自维护体系-完整实战-digest]]"
 related:
-  - "[[Loop-Engineering-验证才是瓶颈]]"
-  - "[[Addy-Osmani-Loop-Engineering]]"
-  - "[[架构腐朽与Loop-Engineering]]"
-  - "[[Lilian-Weng-Harness-Engineering-自我改进]]"
-  - "[[loonggg-Claude-Code-技能心法-11条建议]]"
-  - "[[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]"
-  - "[[WorkBuddy-Harness工程复盘-从模型到可用Agent]]"
+  - "[[01-ai-agents/Loop-Engineering-验证才是瓶颈]]"
+  - "[[02-ai-coding/Addy-Osmani-Loop-Engineering]]"
+  - "[[02-ai-coding/架构腐朽与Loop-Engineering]]"
+  - "[[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]"
+  - "[[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]]"
+  - "[[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]"
+  - "[[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]"
 ---
 
 # Soyoger：Agent 自维护体系完整实战（5 动作 6 零件）
@@ -89,9 +93,9 @@ related:
 
 ## 关联图谱
 
-**方法论同主线 Loop**：[[Loop-Engineering-验证才是瓶颈]] / [[Addy-Osmani-Loop-Engineering]] / [[架构腐朽与Loop-Engineering]] / [[AI循环-Claude-GPT和Mira到底什么才是真正好用的]]。
+**方法论同主线 Loop**：[[01-ai-agents/Loop-Engineering-验证才是瓶颈]] / [[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[02-ai-coding/架构腐朽与Loop-Engineering]] / [[02-ai-coding/AI循环-Claude-GPT和Mira到底什么才是真正好用的]]。
 
-**方法论对偶**：[[Lilian-Weng-Harness-Engineering-自我改进]]（Harness 是 Loop 前置层）/ [[loonggg-Claude-Code-技能心法-11条建议]]（"SKILL.md 是操作手册"）/ [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]（状态文件驱动同主线）/ [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]（Context Engineering + 验证闸门工程化）。
+**方法论对偶**：[[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]（Harness 是 Loop 前置层）/ [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]]（"SKILL.md 是操作手册"）/ [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]（状态文件驱动同主线）/ [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]（Context Engineering + 验证闸门工程化）。
 
 ## 6 个对 Seetong 团队可借鉴动作
 

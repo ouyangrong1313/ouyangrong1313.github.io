@@ -47,7 +47,7 @@ date: 2026-06-29
 
 ## 关联 + 备注
 
-- **关联**：`[[karpathy-knowledge-system]]` / `[[claude-obsidian-second-brain]]` / `[[obsidian-claude-code-os]]` / `[[2026-06-22-undefinedKi-AI-Second-Brain-10-Step-Guide]]` / `[[2026-06-22-若飞-用ClaudeCode搭建AI学习系统]]` / `[[2026年了-你的文件管理还停留在新建文件夹吗]]`
+- **关联**：`[[03-productivity/karpathy-knowledge-system]]` / `[[02-ai-coding/claude-obsidian-second-brain]]` / `[[03-productivity/obsidian-claude-code-os]]` / `[[02-ai-coding/undefinedKi-AI-Second-Brain-10-Step-Guide]]` / `[[02-ai-coding/若飞-用ClaudeCode搭建AI学习系统]]` / `[[03-productivity/2026年了-你的文件管理还停留在新建文件夹吗]]`
 - **关键提示**：主人 `~/.openclaw/workspace`（MEMORY.md + SOUL.md + AGENTS.md + skills/ + knowledge/）已是完整 3 层+规则层；本文最大价值是"周一自动复盘"和"体检触发词"两个具体动作
 - **分类理由**：本文是"个人生产力+知识管理"实操指南，与 karpathy-knowledge-system / claude-obsidian-second-brain / obsidian-claude-code-os 同主线"第二大脑"；放 03-productivity 而非 02-ai-coding（APPSO 是产品化方法论视角，不是工程实现视角）
 - **完整 Prompt 模板**已写入 raw 原文，可直接复制使用

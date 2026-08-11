@@ -59,6 +59,6 @@ source: 微信公众号 叶小钗
 4. **Spec 6 段式入 Seetong Bug 描述模板** — TAPD BUG 描述加 6 段，重点约束"AI 重构时不许换组件库/状态枚举/接口命名"
 5. **AI 进入组织的 4 层爬坡做 Seetong 团队 AI 落地 roadmap** — 当前卡 1-2 层，6 个月推 SDD 落地，12-18 月推 Spec 锚定
 
-**关联**：**Loop 7 视角闭环** = Addy/若飞/APPSO/陈进/Samuel McDonnell/Anatoli+**叶小钗（本文）**；镜像 [[Multica-AI-Native-组织-人是最慢的节点]]；强关联 [[阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
+**关联**：**Loop 7 视角闭环** = Addy/若飞/APPSO/陈进/Samuel McDonnell/Anatoli+**叶小钗（本文）**；镜像 [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]；强关联 [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
 
 **备注与限制**：叶小钗批判是个人判断不是实验数据；SDD 6 段式骨架样本量小；3 个月 + 十几次设计推倒是单一个案；SDD vs TDD vs BDD 缺量化对比；任务复杂度 3 分级缺边界判定标准。

@@ -49,7 +49,7 @@ date: 2026-06-29
 
 ## 关联 + 备注
 
-- **关联**：`[[陈春花-从岗位到角色-AI时代组织设计的新逻辑]]` / `[[与AI一起做产品的六条原则]]` / `[[use-ai-well-become-more-valuable]]` / `[[APPSO-Obsidian+Codex-Karpathy同款本地知识库]]` / `[[Nikesh-Arora-模型过剩与记忆护城河]]`
+- **关联**：`[[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]]` / `[[03-productivity/与AI一起做产品的六条原则]]` / `[[03-productivity/use-ai-well-become-more-valuable]]` / `[[03-productivity/APPSO-Obsidian+Codex-Karpathy同款本地知识库]]` / `[[06-ai-tech/Nikesh-Arora-模型过剩与记忆护城河]]`
 - **分类理由**：本文是"组织管理+团队 AI 化+PM 实操"三合一文章；挂 03-productivity 而非 06-ai-tech（核心是生产力方法+团队协作，不是 AI 行业战略）
-- **中英双视角资料**：本文（英文播客翻译：Jiaona Zhang 公司 OS 方法）+ `[[陈春花-从岗位到角色-AI时代组织设计的新逻辑]]`（中文：组织设计哲学）= 组织管理中英双视角完整资料
+- **中英双视角资料**：本文（英文播客翻译：Jiaona Zhang 公司 OS 方法）+ `[[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]]`（中文：组织设计哲学）= 组织管理中英双视角完整资料
 - **透明玻璃自检**：wiki ?K（≤8K）/ digest ?K（≤4K）/ 节点 9（6-10）/ H2 3 wiki / H2 5 digest（≤5）/ 表格 0 wiki / 表格 1 digest（≤2）/ 0 陈词 ⭐⭐⭐

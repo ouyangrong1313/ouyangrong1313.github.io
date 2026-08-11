@@ -1,9 +1,22 @@
 ---
 title: 用 Karpathy 思路搭一套本地知识库：Obsidian + Codex 完整搭建指南
 category: 03-productivity
-tags: [#主题/第二大脑, #主题/知识管理, #主题/个人生产力, #主题/AI时代个人定位, #主题/APPSO, #节点/3层结构, #节点/规则层AGENTS, #节点/AI持续整理, #节点/采访式SOP, #节点/RednoteStar, #节点/Claudian插件, #场景/Obsidian, #场景/Codex]
+tags:
+  - 主题/第二大脑
+  - 主题/知识管理
+  - 主题/个人生产力
+  - 主题/AI时代个人定位
+  - 主题/APPSO
+  - 节点/3层结构
+  - 节点/规则层AGENTS
+  - 节点/AI持续整理
+  - 节点/采访式SOP
+  - 节点/RednoteStar
+  - 节点/Claudian插件
+  - 场景/Obsidian
+  - 场景/Codex
 nodes: [3层结构素材笔记规则, 规则层AGENTS.md, AI持续整理与自动复盘, 知识库不是收藏夹, 采访式SOP先问两件事, Prompt入职手册, RednoteStar收藏夹AI化, Claudian插件与飞书CLI]
-links: [[karpathy-knowledge-system]], [[claude-obsidian-second-brain]], [[obsidian-claude-code-os]], [[2026-06-22-undefinedKi-AI-Second-Brain-10-Step-Guide]], [[2026-06-22-若飞-用ClaudeCode搭建AI学习系统]], [[2026年了-你的文件管理还停留在新建文件夹吗]]
+links: [[03-productivity/karpathy-knowledge-system]], [[02-ai-coding/claude-obsidian-second-brain]], [[03-productivity/obsidian-claude-code-os]], [[02-ai-coding/undefinedKi-AI-Second-Brain-10-Step-Guide]], [[02-ai-coding/若飞-用ClaudeCode搭建AI学习系统]], [[03-productivity/2026年了-你的文件管理还停留在新建文件夹吗]]
 date: 2026-06-29
 source: 微信公众号「APPSO」2026-06-29 编辑团队原创（实操指南）
 ---
@@ -22,7 +35,7 @@ source: 微信公众号「APPSO」2026-06-29 编辑团队原创（实操指南�
 ### 分类提炼
 
 - 场景：个人知识库 / 第二大脑 / 本地 AI 协作工作流
-- 标签：`#主题/第二大脑` `#主题/知识管理` `#主题/个人生产力` `#主题/AI时代个人定位` `#主题/APPSO`
+- 标签： #主题/第二大脑 #主题/知识管理 #主题/个人生产力 #主题/AI时代个人定位 #主题/APPSO
 - 类型：实操指南（提供完整 Prompt + SOP + 工具栈）
 
 ## 知识节点（8 个独立概念）
@@ -48,12 +61,12 @@ source: 微信公众号「APPSO」2026-06-29 编辑团队原创（实操指南�
 - **Seetong 团队可借鉴**：4G IPC 体验文档化（素材层）+ 反馈/工单自动归类（笔记层）+ 排班/SOP 规则文件（规则层）
 
 ### 同级（横向 / 并列）
-- [[karpathy-knowledge-system]] - Karpathy 原始思路（原理 + 主线）
-- [[claude-obsidian-second-brain]] - 7200 Star 项目实践（工程实现视角）
-- [[obsidian-claude-code-os]] - Obsidian + Claude Code 工作流
-- [[2026-06-22-undefinedKi-AI-Second-Brain-10-Step-Guide]] - Ki 的 10 步指南（同主线"第二大脑"）
-- [[2026-06-22-若飞-用ClaudeCode搭建AI学习系统]] - 若飞的 AI 学习系统
-- [[2026年了-你的文件管理还停留在新建文件夹吗]] - 文件管理完全指南
+- [[03-productivity/karpathy-knowledge-system]] - Karpathy 原始思路（原理 + 主线）
+- [[02-ai-coding/claude-obsidian-second-brain]] - 7200 Star 项目实践（工程实现视角）
+- [[03-productivity/obsidian-claude-code-os]] - Obsidian + Claude Code 工作流
+- [[02-ai-coding/undefinedKi-AI-Second-Brain-10-Step-Guide]] - Ki 的 10 步指南（同主线"第二大脑"）
+- [[02-ai-coding/若飞-用ClaudeCode搭建AI学习系统]] - 若飞的 AI 学习系统
+- [[03-productivity/2026年了-你的文件管理还停留在新建文件夹吗]] - 文件管理完全指南
 
 ### 正文要点（5 条）
 
@@ -75,8 +88,8 @@ source: 微信公众号「APPSO」2026-06-29 编辑团队原创（实操指南�
 ### 备注与限制
 
 - 本文是 APPSO 原创实操指南（不是编译），提供完整 Prompt + SOP + 工具栈
-- 与 [[karpathy-knowledge-system]] 区别：本文是产品化模板（完整 Prompt + 安装步骤 + 自动复盘脚本设计），karpathy-knowledge-system 是原理/思路
-- 与 [[claude-obsidian-second-brain]] 区别：后者是 7200 Star 开源项目（工程实现视角），本文是媒体视角（产品化方法论）
+- 与 [[03-productivity/karpathy-knowledge-system]] 区别：本文是产品化模板（完整 Prompt + 安装步骤 + 自动复盘脚本设计），karpathy-knowledge-system 是原理/思路
+- 与 [[02-ai-coding/claude-obsidian-second-brain]] 区别：后者是 7200 Star 开源项目（工程实现视角），本文是媒体视角（产品化方法论）
 - **不适用**：纯云端聊天记录当知识库用（换模型 = 记忆清零）、"先建文件夹再问做什么"（结构错配风险）
 - **未展开**：Claudian 插件具体配置细节 / 飞书 CLI 具体接入步骤（APPSO 认为简单到不需要展开）
 
@@ -85,4 +98,4 @@ source: 微信公众号「APPSO」2026-06-29 编辑团队原创（实操指南�
 - 原文链接：https://mp.weixin.qq.com/s/oE0BONuRy3yPzk25zUpkFA
 - Karpathy LLM Wiki gist：https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
 - APPSO 公众号历史文章：见历次推送
-- 同主线：[[karpathy-knowledge-system]] [[claude-obsidian-second-brain]] [[obsidian-claude-code-os]] [[2026-06-22-undefinedKi-AI-Second-Brain-10-Step-Guide]]
+- 同主线：[[03-productivity/karpathy-knowledge-system]] [[02-ai-coding/claude-obsidian-second-brain]] [[03-productivity/obsidian-claude-code-os]] [[02-ai-coding/undefinedKi-AI-Second-Brain-10-Step-Guide]]

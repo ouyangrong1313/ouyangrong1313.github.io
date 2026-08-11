@@ -1,9 +1,16 @@
 ---
 title: Graph Engineering：从 0 到 1 小白完整教程
 category: 01-ai-agents
-tags: [#主题/AI-Agent, #主题/Graph-Engineering, #主题/Loop-Engineering, #主题/Multi-Agent, #主题/Agent-Topology, #场景/X-Article, #来源/AdrianPunk115]
+tags:
+  - 主题/AI-Agent
+  - 主题/Graph-Engineering
+  - 主题/Loop-Engineering
+  - 主题/Multi-Agent
+  - 主题/Agent-Topology
+  - 场景/X-Article
+  - 来源/AdrianPunk115
 nodes: [Graph是Loop上层结构, Graph准入阈值, 节点存在性检验, 共享状态契约, 路由代码化, 独立审阅节点, 写权限收口, 小Graph串联]
-links: [[图工程-Graph-Engineering-来了-LangChain说不是新东西]], [[Loop-Engineering-验证才是瓶颈]], [[WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[从零设计生产级-Multi-Agent-Harness]], [[万字长文拆解Agent-架构设计-四-多-Agent-协作]], [[0xCodez-Agent-Harness-14-Steps]]
+links: [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]], [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]], [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]], [[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]], [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]]
 date: 2026-07-27
 source: X Article / Adrian Punk（@AdrianPunk115）
 ---
@@ -14,8 +21,8 @@ source: X Article / Adrian Punk（@AdrianPunk115）
 - 来源：X Article / Adrian Punk（@AdrianPunk115）
 - 发布时间：2026-07-26 06:41:42 UTC
 - 获取时间：2026-07-27 Asia/Shanghai
-- raw：../../raw/2026-07-26-AdrianPunk115-Graph-Engineering-从0到1小白完整教程.md
-- digest：../../raw/2026-07-26-AdrianPunk115-Graph-Engineering-从0到1小白完整教程-digest.md
+- raw：../../raw/AdrianPunk115-Graph-Engineering-从0到1小白完整教程.md
+- digest：../../raw/AdrianPunk115-Graph-Engineering-从0到1小白完整教程-digest.md
 
 ## 核心结论（一句话）
 
@@ -24,7 +31,7 @@ source: X Article / Adrian Punk（@AdrianPunk115）
 ## 分类提炼
 
 - 场景：多 Agent 编排 / 复杂任务拆分 / AI 工作流入门
-- 标签：#主题/AI-Agent #主题/Graph-Engineering #主题/Loop-Engineering #主题/Multi-Agent #主题/Agent-Topology #场景/X-Article
+- 标签： #主题/AI-Agent #主题/Graph-Engineering #主题/Loop-Engineering #主题/Multi-Agent #主题/Agent-Topology #场景/X-Article
 - 类型：大众解释 / 入门教程 / 可复用模板
 
 ## 知识节点（8 个独立概念）
@@ -42,20 +49,20 @@ source: X Article / Adrian Punk（@AdrianPunk115）
 
 ### 上游（基于 / 来自）
 
-- [[Loop-Engineering-验证才是瓶颈]]：本文把 Loop 放进 Graph，验证节点仍决定最终质量上限。
-- [[0xCodez-Agent-Harness-14-Steps]]：本文的“Graph = 多 Loop 协作”对应 Harness / Loop / Memory 组合主线。
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]：本文的节点、状态、路由、审阅可以嵌入 WorkBuddy 的 Harness / Context / Loop 一体化框架。
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]：本文把 Loop 放进 Graph，验证节点仍决定最终质量上限。
+- [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]]：本文的“Graph = 多 Loop 协作”对应 Harness / Loop / Memory 组合主线。
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：本文的节点、状态、路由、审阅可以嵌入 WorkBuddy 的 Harness / Context / Loop 一体化框架。
 
 ### 下游（应用于 / 验证于）
 
-- [[从零设计生产级-Multi-Agent-Harness]]：把本文入门级 Graph 思路扩展到工具治理、预算、记忆、评估和审计。
-- [[万字长文拆解Agent-架构设计-四-多-Agent-协作]]：补充子 Agent 的上下文隔离、权限继承和最终消息回传机制。
-- [[阿里云开发者-淘宝主播Agent的Harness工程实战]]：验证“读可并行、写要收口”的生产约束。
+- [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]：把本文入门级 Graph 思路扩展到工具治理、预算、记忆、评估和审计。
+- [[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]]：补充子 Agent 的上下文隔离、权限继承和最终消息回传机制。
+- [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]]：验证“读可并行、写要收口”的生产约束。
 
 ### 同级（横向 / 并列）
 
-- [[图工程-Graph-Engineering-来了-LangChain说不是新东西]]：那篇偏 LangGraph / 依赖边 / 图 vs Harness 选型；本文偏入门解释和模板。
-- [[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：同样强调多专家、多节点和质量门禁。
+- [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]]：那篇偏 LangGraph / 依赖边 / 图 vs Harness 选型；本文偏入门解释和模板。
+- [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：同样强调多专家、多节点和质量门禁。
 - Graph Engineering / LangGraph / 拓扑决策专题：同一主题入口。
 
 ## 正文要点（6 条）
@@ -89,11 +96,11 @@ source: X Article / Adrian Punk（@AdrianPunk115）
 ## 相关链接
 
 - 原文：Graph Engineering：从 0 到 1 小白完整教程
-- [[图工程-Graph-Engineering-来了-LangChain说不是新东西]]
-- [[Loop-Engineering-验证才是瓶颈]]
-- [[WorkBuddy-Harness工程复盘-从模型到可用Agent]]
-- [[从零设计生产级-Multi-Agent-Harness]]
-- [[万字长文拆解Agent-架构设计-四-多-Agent-协作]]
+- [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]]
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]
+- [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]
+- [[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]]
 
 ## 备注与限制
 

@@ -7,7 +7,7 @@
 ## 分类提炼
 
 - 场景：Codex CLI、oh-my-codex、团队级 AI Coding 配置治理
-- 标签：#主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践 #场景/技术博客
+- 标签： #主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践 #场景/技术博客
 - 类型：配置清单 / 实施指南 / 方法论落地
 
 ## 要点列表
@@ -118,11 +118,11 @@
 
 ## 标签
 
-#主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践 #场景/技术博客
+ #主题/AI-Coding #主题/AI-Agent #主题/效率 #手法/工程实践 #场景/技术博客
 
 ## 相关链接
 
-- [[从Prompt-Context到Harness-工程的三次进化与终局之战]]
-- [[oh-my-codex]]
-- [[prompt-engineering]]
-- [[Codex才是最适合普通人的顶级牛马-Agent]]
+- [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]]
+- [[02-ai-coding/oh-my-codex]]
+- [[02-ai-coding/prompt-engineering]]
+- [[02-ai-coding/Codex才是最适合普通人的顶级牛马-Agent]]

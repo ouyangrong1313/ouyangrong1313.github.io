@@ -46,4 +46,4 @@
 - **理论参考**：ReAct / Claude Code "Think Like an Agent" / Codex / OpenCode Session Compaction + McGregor X-Y / Deming 质量 / Thaler Nudge / Wittgenstein 语言哲学
 - **未独立验证**：工具设计半衰期未给具体可量化指标；信任状态机 shadow → active 转换阈值未明
 - **本文配套**：raw（80097 字节）+ wiki 编译页（≤8K）+ wiki digest（本文件，≤4K）
-- **标签**：#主题/Agent架构 #主题/Harness工程 #主题/上下文管理 #主题/数据完整性 #主题/Action-Space #主题/企业级Agent #主题/Agent-OS #场景/Seetong借鉴 #作者/储旭 #公众号/阿里妹
+- **标签**： #主题/Agent架构 #主题/Harness工程 #主题/上下文管理 #主题/数据完整性 #主题/Action-Space #主题/企业级Agent #主题/Agent-OS #场景/Seetong借鉴 #作者/储旭 #公众号/阿里妹
