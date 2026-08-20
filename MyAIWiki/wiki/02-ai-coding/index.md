@@ -1,5 +1,9 @@
 # AI Coding
 
+## 上下文工程与多 Agent 信息流（2026-08-18 新增）
+
+- [[02-ai-coding/腾讯云开发者-Agent的命门是上下文-关键不在少给而在给对]] - 腾讯云开发者黄照坤复盘 CodeGraph、RTK 与 Devflow：上下文优化的关键不是压缩最多内容，而是让图谱替代无效搜索、让摘要可回退、以 Artifact 保存证据、用短 Handoff 交接、由状态机负责确定性路由；**8 节点**覆盖图谱替代、局部压缩、路径反增、上下文存活、短交接、按需回源、阶段路由和信息密度。文中成本与实验数据均为作者自述，未独立复现。
+
 ## 早期迁入页
 
 - [[02-ai-coding/claude-code-large-codebase-best-practices]] - Claude Code 大型代码库最佳实践。
@@ -35,6 +39,7 @@ AI 辅助编程的实战经验、提示词模板、工作流总结。
 - [[02-ai-coding/多Agent使用边界与并行判定]] - 定义什么时候该单 agent，什么时候值得并行 ⭐
 
 ### 实战案例
+- [[被Harness圈捧成圣的PiAgent-接上DeepSeek-V4-Flash-如虎添翼]] - Pi 的薄 Harness / 原语优先路线：将上下文纪律、模型路由与扩展治理作为端到端成本优化问题；公众号转述的跑分保留证据边界。
 - [[02-ai-coding/Karpathy-autoresearch-从上下文工程到自主研究循环]] - 微信公众号「AgenticHub」2026-07-27 二手解读 + Karpathy 官方 `karpathy/autoresearch` 一手核验：**核心命题**“自主研究循环的关键不是无限运行，而是不可变评分器 + 单文件搜索空间 + 固定 5 分钟预算 + `val_bpb` + Git keep/reset + TSV 账本”；**8 节点**（autoresearch / 固定评分器 / 单文件搜索空间 / 五分钟预算 / val_bpb / 棘轮提交 / 实验账本 / 多Agent扩展边界）；已纠正“9 页 PDF”“4 个 Bug”“官方 Agent DAG”等二手误述；与 [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]] 强关联。
 - [[02-ai-coding/AndrejKarpathy-AI写代码-只需要问自己这一个问题]] - 微信公众号「winkrun」2026-07-15 推送：把 Karpathy 的 AI Coding 判断框架压成一句“思考到底发生在哪一步？”；**核心命题**“判断未完成的任务由人握住，成功标准清晰的任务才交给 AI”+ 后半段用 rvaniaaa 的 GitHub 技能蒸馏系统把“人做判断，AI 做执行”工程化；**8 节点**（思考发生点 / 判断执行分界 / 双资深一致 / 工作流档位切换 / Scout-Filter-Reader / Workflow-Extractor / Skill-Score / Reviewer-Publisher）；**与 [[02-ai-coding/AI-Coding的顿悟时刻]] [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]] [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]] [[01-ai-agents/Skill-Self-Evolution]] 强关联**——连接“AI Coding 边界判断”和“Skill 自进化流水线”两条主线；**分类理由**：前半是 AI Coding 任务分界，后半是 Skill 资产化 pipeline，放 `02-ai-coding` 比 `01-ai-agents` 更贴切；**透明玻璃自检**：wiki 6.8K(≤8K)/ digest 3.3K(≤4K)/ 节点 8(6-10)/ H2 5 wiki / H2 5 digest(≤5)。
 - [[02-ai-coding/AndrejKarpathy-AI写代码-只需要问自己这一个问题-digest]] - 8 节点速查表 + 5 关键金句 + 3 反直觉点 + 5 个对 Seetong / MyAIWiki 可借鉴动作 + 关联与备注
@@ -58,6 +63,8 @@ AI 辅助编程的实战经验、提示词模板、工作流总结。
 - [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]] - 用 Prompt / Context / Harness 三层框架理解 AI 工程演进 ⭐
 - [[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]] - 用Agent评测思路管理AI Coding：31万行代码重构实践 ⭐
 - [[02-ai-coding/吴恩达AI提示词课]] - 吴恩达 AI Prompting 课程精华：三层搜索模型、Sycophancy 对抗 ⭐
+- [[02-ai-coding/winkrun-吴恩达-AI工程四项核心技能]] - 微信公众号「winkrun」2026-08-16 转述吴恩达 / DeepLearning.AI：**核心命题**“AI 让实现更便宜，但不会替团队完成评估、工程取舍、委派治理和产品判断；开发者能力从单纯写实现扩展为构建可信系统并参与定义正确规格”；**8 节点**（AI工程技能 / 评估错误分析闭环 / 工程取舍 / Agent心智模型 / 上下文管理 / 验证器 / 规格定义 / 构建节奏）；与 [[02-ai-coding/软件工程的功底是智能时代生死攸关的要素]] [[02-ai-coding/AndrejKarpathy-AI写代码-只需要问自己这一个问题]] [[02-ai-coding/AI-Coding的顿悟时刻]] 强关联。**证据边界**：调研规模与方法为二手转述，未独立核验。
+- [[02-ai-coding/winkrun-吴恩达-AI工程四项核心技能-digest]] - 四项能力速查 + 7 个分析角度、21 个钩子 + 证据边界。
 - [[02-ai-coding/软件工程的功底是智能时代生死攸关的要素]] - AI 时代软件工程基本功的系统性提醒：复杂性、技术债、理解债与工程治理
 - [[02-ai-coding/Claude-Code首席设计师Meaghan-Choi工作流]] - loonggg 2026-06-09 编译自 Anthropic Claude Code 首席设计师 Meaghan Choi 演示:worktree 并行 + AI 自决给理由 + 全链路自动化 + 定时巡逻产品质量 + Opus+1M+auto+loop,"能自动化的全自动化,人只在判断环节介入"
 - [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]] - BorisNCat 2026-06-09 编译自 Boris Cherny + Cat Wu 一周年回顾:Agent 自主验证 + Routine 异步化 + Auto Mode 反直觉安全(Sonnet 4.6 分类器)+ 两次认知跃迁 + 一半工作在手机上 + Context 极简主义 + 2026/3/31 源码泄露风波(51.2 万行 / KAIROS / Undercover Mode)+ 一年 9 个功能里程碑 ⭐⭐⭐

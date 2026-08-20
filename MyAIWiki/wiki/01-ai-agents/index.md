@@ -1,5 +1,10 @@
 # AI Agents Wiki
 
+## 新增（2026-08-18）
+
+- [[01-ai-agents/叶小钗-DeepSeek-Harness-实测]] - DeepSeek Harness 的服务依赖、Capability Seam、Inbox 消息时机、Session 重建与工具策略拆解；Codex/V4 结果仅保留为单任务作者观察，非通用评测。
+- [[01-ai-agents/腾讯程序员-Agent的上限可能不在模型而在团队知识]] - 腾讯安全中心团队的知识供给实践：把团队知识从“存得多”的静态仓库，改为“流程自动生产、人机共读、按场景主动注入、注入即记账、有效期保鲜”的 Agent 质量系统；8 节点覆盖知识四层、准入双门禁、三层分级、退场复活与消费反馈。原文效果数据均保留团队自述边界。
+
 ## 早期迁入页
 
 - [[01-ai-agents/2026-llm-engineer-roadmap]] - LLM 应用工程师的能力路线图。
@@ -47,6 +52,10 @@
 
 - [[01-ai-agents/phodal-Better-Harness-任务级证据评估]] - **核心命题**“Better Harness 以一次具体任务为评估单位，分离采集会话、项目与 Agent 配置证据，在任务理解、可控执行、改动验证、可靠交付、经验沉淀五维中输出可追溯 Finding；修复后的后续可比较任务才可证明工作流改善”；**8 节点**（任务级证据 / 证据边界 / 三类证据 / Agent-Work-Loop / 可追溯Finding / 前馈反馈 / 评估校准 / 纵向复验）；与 [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] [[01-ai-agents/Harness工程AgentLoop]] [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]] [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] [[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]] 强关联。
 - [Better Harness - Digest](../../raw/phodal-Better-Harness-开源-digest.md) - 5 个核心观点 + 三层架构与三类证据速查 + 7 个分析角度、21 个钩子 + 可执行最小闭环 + 证据边界。
+- [[01-ai-agents/phodal-Harness-Inspector-Agent交付可观察可检查可追溯]] - **核心命题**“Skill 自动沉淀先要把 Intent（Story/Issue/Spec）、Process（Session）和 Output（Commit）连成保留证据边界的交付图；Workbench 看关系、Trace 看结构、Replay 看顺序，只有被产出与验证支持的稳定路径才是 Skill 候选”；**8 节点**（交付证据链 / 意图过程产出 / 证据图 / Workbench / Trace / Replay / 证据边界 / 稳定工作路径）；与 [[01-ai-agents/phodal-Better-Harness-任务级证据评估]] [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] [[02-ai-coding/phodal-项目记住-Coding-Agent-5步法]] 强关联。
+- [Harness Inspector - Digest](../../raw/phodal-Harness-Inspector-Agent交付可观察可检查可追溯-digest.md) - 5 个核心观点 + 7 个分析角度、21 个钩子 + 三视图边界。
+- [[01-ai-agents/腾讯程序员-DeepSeek-Harness-可逆插件运行时]] - **核心命题**“DeepSeek Harness 将模型、工具、会话、loop 和 UI 放入以 Cordis 为中心的插件生命周期；`ctx.effect()` 让副作用携带逆操作并按 LIFO 级联清理，Scope 复用、Code Mode 隔离与工具遮蔽共同把 Agent 可塑性下放到运行时”；**8 节点**（一切皆插件 / 可逆副作用 / Fiber生命周期 / effect撤销栈 / 系统边界 / Scope继承 / Code-Mode隔离 / 工具遮蔽）；与 [[01-ai-agents/Harness工程AgentLoop]] [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] [[01-ai-agents/2026-07-29-人月聊IT-通用AI-Agent平台-Harness技术底座]] 强关联。**证据边界**：为公众号二手源码解读，未独立复核源码、生态统计或 Codex 对比。
+- [DeepSeek Harness 可逆插件运行时 - Digest](../../raw/腾讯程序员-DeepSeek-Harness-可逆插件运行时-digest.md) - 5 个核心观点 + 7 个分析角度、21 个钩子 + 证据边界。
 
 ## Agent 运维 / 漂移防御专题（2026-07-30 新增）
 
