@@ -1,6 +1,16 @@
 # AI 知识库索引
 
 ## 最近更新
+
+- [英伟达 ChatGPT Work：把运营与行业情报工作流复制到全球团队](./03-productivity/AI组织进化论-英伟达-ChatGPT-Work-全球复用.md) — 2026-08-20：AI组织进化论整理 OpenAI NVIDIA 客户案例；将客户运营和行业信息筛选做成可共享、可本地定制、由一线人员维护的工作流，才可能从个人省时扩展为组织能力。所有时间、节省与周期数据均未独立核验。
+- [英伟达 ChatGPT Work - Digest](./03-productivity/AI组织进化论-英伟达-ChatGPT-Work-全球复用-digest.md) — 6 节点速读 + 证据边界。
+
+- [把 AI 变成工作系统的 6 个步骤：从零散提问到可更新的 Skill](./03-productivity/Capihom-SiliconValleyGirl-AI工作系统6步.md) — 2026-08-20：Capihom 对 Silicon Valley Girl 视频的二手整理；将 AI 工作流收敛为真实上下文、高频 Skill、人工审查反馈、最小权限和人类决策五项约束。文中使用率、工时、成本和案例均未独立核验。
+- [AI 工作系统 6 步 - Digest](./03-productivity/Capihom-SiliconValleyGirl-AI工作系统6步-digest.md) — 6 节点速读 + 证据边界。
+
+- [杰夫·迪恩离开谷歌后谈 Discovery Loop：让 AI 进入科学发现闭环](./06-ai-tech/值得关注的-杰夫迪恩-离开谷歌与Discovery-Loop.md) — 2026-08-20：公众号「值得关注的」对杰夫·迪恩访谈的二手整理；可复用判断是把数据、设计、实验、评估和算力调度做成有反馈、可验证、受成本约束的研究闭环，而不把递归自我改进简化成模型神话。MoE、Evolved Transformer、团队规模和研究计划均未独立核验。
+- [杰夫·迪恩 Discovery Loop - Digest](./06-ai-tech/值得关注的-杰夫迪恩-离开谷歌与Discovery-Loop-digest.md) — 6 节点速读 + 证据边界。
+
 - [Tiago Forte谈写作与知识管理：真正的积累，是让过去的思考持续为你工作](./05-content-creation/AlphaWriter-Tiago-Forte-写作与知识管理.md) — 2026-08-10：把“积累”定义为材料在未来仍可理解、按复用信号持续提炼，并进入文章、项目和决策；核心方法是未来自己笔记、渐进式总结、思想群岛、中间成果包与长期问题。
 - [Tiago Forte 写作与知识管理 - Digest](./05-content-creation/AlphaWriter-Tiago-Forte-写作与知识管理-digest.md) — 8 节点速查、3 个反直觉点和 5 个最小实践动作。
 - [奈飞在AI时代的新人才观：系统思维比专业技能更值钱](./03-productivity/行走的帆-奈飞AI时代新人才观-系统思维.md) — 2026-08-10：AI扩散跨职能执行后，组织需要以共同脚手架接住速度；专业深度仍是质量基础，系统思维、高人才密度、风险容忍与责任担当决定高自主是否可持续。
@@ -464,6 +474,8 @@
 - [谷歌开源 agent-skills](./02-ai-coding/谷歌开源agent-skills.md)
 
 ### AI Tech
+- [杰夫·迪恩离开谷歌后谈 Discovery Loop：让 AI 进入科学发现闭环](./06-ai-tech/值得关注的-杰夫迪恩-离开谷歌与Discovery-Loop.md) - 二手访谈整理：把数据、设计、实验、评估和算力调度连成受成本约束的研究闭环；与 Harness 自我改进和 Karpathy autoresearch 形成“研究运营 / 工程闭环”互补。性能数字和创业计划未独立核验。
+- [杰夫·迪恩 Discovery Loop - Digest](./06-ai-tech/值得关注的-杰夫迪恩-离开谷歌与Discovery-Loop-digest.md) - 6 节点速读 + 证据边界。
 - [AI 分身时代,你的"在场"正在被重新定价](./06-ai-tech/章文龙-AI分身时代-在场重新定价.md) - 微信公众号 腾讯研究院 章文龙 2026-06-23 17:30 推送:**AI 分身与历代代理的本质区别是"AI 自称是你且对外被识别为你"**--倒逼回答新问题"哪些事,我必须亲自做?";**8 节点**(AI分身/在场重新定价/分身税/三层不平等/注意力反向贬值/关系可疑化/意义稀释/分身披露机制);**5 个对 Seetong 借鉴动作**(主人必须亲自做清单/可分身清单/分身披露机制/每日手动验证环节/AI 协作在场率指标);**与 [[05-content-creation/透明玻璃-写作的最高境界]] [[03-productivity/与AI一起做产品的六条原则]] [[01-ai-agents/清华沈阳-自进化AI新物种]] 同主线**--补完 06-ai-tech 偏技术(Harness/Transformer/凯文凯利)的"AI 时代个人定位"维度;**透明玻璃自检**:wiki 7.8K(≤8K)/ digest 2.9K(≤4K)/ 节点 8(6-10)/ H2 5/ 表格 0 digest 表格 1/ 0 陈词 ⭐⭐⭐
 - [[06-ai-tech/凯文凯利-真正的好生意都在卖看不见的东西]] - 凯文·凯利:真正的好生意,都在卖看不见的东西 ⭐
 - [[06-ai-tech/deep-learning-fundamentals]] - 深度学习基础 ⭐
@@ -479,6 +491,12 @@
 - [[06-ai-tech/章文龙-AI分身时代-在场重新定价-digest]] - 速读 digest
 
 ### Productivity
+
+- [英伟达 ChatGPT Work：把运营与行业情报工作流复制到全球团队](./03-productivity/AI组织进化论-英伟达-ChatGPT-Work-全球复用.md) - NVIDIA 的 GTM 运营与行业情报案例：重复运营自动化、信息转情报、共享骨架、本地定制和一线维护共同构成跨地区复用的条件。时间、节省与周期均为二手转述，未独立核验。
+- [英伟达 ChatGPT Work - Digest](./03-productivity/AI组织进化论-英伟达-ChatGPT-Work-全球复用-digest.md) - 6 节点速读 + 证据边界。
+
+- [把 AI 变成工作系统的 6 个步骤：从零散提问到可更新的 Skill](./03-productivity/Capihom-SiliconValleyGirl-AI工作系统6步.md) - 个人与小团队的 AI 工作流闭环：真实上下文 → 高频 Skill → 人工审查反馈 → 最小权限 → 人类决策；与 AI 原生工作法和 Skill 自我演化互补。数据与案例均为二手转述，未独立核验。
+- [AI 工作系统 6 步 - Digest](./03-productivity/Capihom-SiliconValleyGirl-AI工作系统6步-digest.md) - 6 节点速读 + 证据边界。
 
 - [当智能体真正开始干活，企业管理也该变革了](./03-productivity/当智能体真正开始干活-企业管理也该变革了.md) - 企业智能体、产业智能体、结果导向绩效与最小权限治理。
 - [当智能体真正开始干活，企业管理也该变革了 - Digest](./03-productivity/当智能体真正开始干活-企业管理也该变革了-digest.md) - 8 节点、关键判断、Seetong 动作和证据边界。

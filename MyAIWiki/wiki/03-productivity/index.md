@@ -1,5 +1,15 @@
 # Productivity Wiki
 
+## 英伟达 AI 工作流：运营自动化与全球复用（2026-08-20 新增）
+
+- [[03-productivity/AI组织进化论-英伟达-ChatGPT-Work-全球复用]] - AI组织进化论整理 OpenAI NVIDIA 客户案例：GTM 用定期工作流替代客户与报名数据整理，解决方案架构师把外部更新与内部优先级交叉为可行动情报；关键不在单次省时，而在共享骨架、本地定制和一线维护。**证据边界**：12 周、每周 16 小时、原型周期和全球扩散均为二手转述，未独立核验。
+- [[03-productivity/AI组织进化论-英伟达-ChatGPT-Work-全球复用-digest]] - 6 节点速读 + 证据边界。
+
+## 把 AI 变成工作系统：Skill、上下文与人工闸门（2026-08-20 新增）
+
+- [[03-productivity/Capihom-SiliconValleyGirl-AI工作系统6步]] - Capihom 对 Silicon Valley Girl 视频的整理：AI 的收益来自“真实资料接入 → 高频任务 Skill 化 → 人工审查反馈回写”的闭环，而非换更多工具；连接越深越需最小权限，人保留发送与战略决策。**证据边界**：使用率、成本、工时和案例均为二手转述，未独立核验。
+- [[03-productivity/Capihom-SiliconValleyGirl-AI工作系统6步-digest]] - 6 节点速读 + 证据边界。
+
 ## AI 时代产品组织与一线判断（2026-08-04 新增）
 
 - [[03-productivity/Capihom-Whatnot-CPO-产品经理是否按人头配齐]] - 微信公众号「晚点再听LaterCast」Capihom 2026-08-03 编译 Lenny's Podcast 访谈 Whatnot CPO Tom Verrilli：**核心命题**“AI 压低查系统、读工单、拉数据和做原型的等待成本后，PM 的稀缺价值不是默认协调，而是贴近客户、商业与技术，做出可验证取舍”；8 节点（按需配置PM / Know-then-go / IC不离场 / 等待时间压缩 / 数据底座上移 / 行动者空地 / 地面真相 / 少数用户保护）；与 [[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]] [[02-ai-coding/Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]] [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]] 形成产品组织与 AI 工作方式对照。**证据边界**：Whatnot 单一案例；人数、GMV、招聘和工具数据未独立核验。

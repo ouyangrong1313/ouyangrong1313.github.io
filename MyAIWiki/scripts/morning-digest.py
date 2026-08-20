@@ -182,17 +182,21 @@ def summarize_article(path: Path, rel_path: str, base_label: str):
             title = line[2:].strip()
             break
         if line.startswith("title:"):
-            title = line.split(":", 1)[1].strip()
+            title = line.split(":", 1)[1].strip().strip('"').strip("'")
             break
 
     joined = text.lower()
     core = extract_section(text, "## 核心观点")
+    conclusion = extract_section(text, "## 核心结论（一句话）")
+    key_points = extract_section(text, "## 正文要点")
     summary = extract_section(text, "## 内容摘要")
 
     bullets = []
     core_lines = [l.strip("- *\t") for l in core.splitlines() if l.strip()]
+    conclusion_lines = [line.lstrip("> ").strip() for line in conclusion.splitlines() if line.strip()]
+    key_point_lines = [l.strip("- *\t") for l in key_points.splitlines() if l.strip()]
     summary_lines = [l.strip("- *\t") for l in summary.splitlines() if l.strip()]
-    for line in core_lines[:3] + summary_lines[:3]:
+    for line in conclusion_lines[:1] + core_lines[:3] + key_point_lines[:3] + summary_lines[:3]:
         clean = re.sub(r"\s+", " ", line).strip()
         if 16 <= len(clean) <= 140 and clean not in bullets:
             bullets.append(clean)
@@ -230,6 +234,13 @@ def summarize_article(path: Path, rel_path: str, base_label: str):
         work_help.append("适合把需求、埋点、反馈、复盘串成持续更新的产品知识链，服务 Seetong 实际研发。")
         think_more.append("能不能把“需求—埋点—反馈—复盘”沉淀成固定分析框架，而不是每次临场拼装？")
 
+    if any(k in joined for k in ["科研", "实验", "研究闭环", "算力调度", "递归自我改进"]):
+        judgment = "真正可验证的进步不是宣称模型会自我进化，而是让实验、评估和资源选择都进入有成本边界的反馈循环。"
+        action = "为一个探索性任务写出固定评估指标、预算上限和保留或回退条件。"
+    elif any(k in joined for k in ["skill", "工作流", "workflow", "高频任务", "上下文"]):
+        judgment = "价值不在多接一个工具，而在把高频任务、稳定上下文、人工审查和规则回写连成可迭代闭环。"
+        action = "挑一个高频任务，补齐输入、完成标准、人工闸门和一次失败后的回写规则。"
+
     if not work_help:
         work_help.append("先别把它当“读过一篇文章”，而是判断它能否转成你每天会复用的方法。")
     if not think_more:
@@ -246,6 +257,46 @@ def summarize_article(path: Path, rel_path: str, base_label: str):
         "judgment": judgment,
         "action": action,
     }
+
+
+def is_briefing_candidate(path: Path) -> bool:
+    """排除索引、速读页和维护页，只保留能支持判断的主页面。"""
+    return path.name not in ("index.md", "master-index.md", "log.md") and not path.name.endswith("-digest.md")
+
+
+def get_briefing_items(limit: int = 2) -> List[Dict]:
+    """优先挑选最近更新的 wiki 主页面，raw 仅用于填补没有 wiki 的内容。"""
+    cutoff = datetime.now() - timedelta(days=2)
+    candidates = []
+
+    for root, label in ((Path(WIKI_DIR), "wiki"), (Path(RAW_PATH), "raw")):
+        if not root.exists():
+            continue
+        for path in root.rglob("*.md"):
+            if not is_briefing_candidate(path):
+                continue
+            try:
+                mtime = datetime.fromtimestamp(path.stat().st_mtime)
+                if mtime >= cutoff:
+                    candidates.append((mtime, label, path, str(path.relative_to(root))))
+            except OSError:
+                continue
+
+    candidates.sort(key=lambda item: item[0], reverse=True)
+    items = []
+    seen = set()
+    for _, label, path, rel_path in candidates:
+        key = path.stem.lower()
+        if key in seen:
+            continue
+        info = summarize_article(path, rel_path, label)
+        if not info or not info["bullets"]:
+            continue
+        seen.add(key)
+        items.append(info)
+        if len(items) >= limit:
+            break
+    return items
 
 
 
@@ -356,6 +407,16 @@ def get_editor_view(info_list, openclaw_changes):
             "theme": "今天新增内容的重心，已经从“AI 能做什么”往“AI 系统该怎么分工、怎么运行、怎么收口”迁移。",
             "priority": "优先级判断：值得把新内容直接反哺到 OpenClaw / Skill / 多 agent 方法论，而不是只做知识摘录。",
         }
+    if info_list and any(k in joined for k in ["skill", "工作流", "workflow", "高频任务", "上下文"]):
+        return {
+            "theme": "今天最有价值的共同点，是把 AI 从单次回答推进为带上下文、反馈和人工闸门的工作系统。",
+            "priority": "优先级判断：先补一个能反复运行的任务闭环，不要继续扩充工具清单。",
+        }
+    if info_list and any(k in joined for k in ["科研", "实验", "研究闭环", "算力调度", "递归自我改进"]):
+        return {
+            "theme": "今天的新增内容强调：可靠的自动化来自可评估的闭环，而不是更强的自治叙事。",
+            "priority": "优先级判断：先定义指标、预算与回退条件，再扩大自动化范围。",
+        }
     if any(k in joined for k in ["知识库", "wiki", "第二大脑", "ingest", "schema"]):
         return {
             "theme": "今天新增内容的共同主题，是把知识从“收集”推进到“系统化维护”。",
@@ -424,7 +485,8 @@ def get_workflow_priority(info_list, has_new_files: bool, openclaw_changes: Dict
     if any(k in joined for k in ["multi-agent", "subagent", "worker", "router", "ai agent"]):
         return "如果今天要只推进一件事，优先把“多 agent 分工原则”补成一页内部方法：何时拆、怎么拆、谁收口。"
     if openclaw_changes.get("skills"):
-        return "如果今天要只推进一件事，优先挑一个最近常改的 skill，补齐触发条件、边界和失败案例。"
+        skill_name = openclaw_changes["skills"][0]
+        return f"如果今天只推进一件事，为 `{skill_name}` 补齐触发条件、失败案例和验证标准。"
     if any(k in joined for k in ["知识库", "wiki", "第二大脑"]):
         return "如果今天要只推进一件事，优先补齐一页能连接 MyAIWiki、OpenClaw、Skill、Memory 的工作分层说明。"
     if has_new_files:
@@ -763,7 +825,7 @@ def get_node_fusion_section() -> List[str]:
     return lines
 
 
-def generate_markdown():
+def generate_legacy_markdown():
     today = datetime.now().strftime("%Y-%m-%d")
 
     lines = []
@@ -942,6 +1004,55 @@ def generate_markdown():
 
     return "\n".join(lines)
 
+
+
+def generate_markdown():
+    """生成短简报：只保留判断、证据、行动和风险。"""
+    today = datetime.now().strftime("%Y-%m-%d")
+    items = get_briefing_items()
+    openclaw_changes = get_openclaw_changes()
+    progress, _, _, _ = summarize_openclaw_progress(openclaw_changes)
+    has_knowledge_updates = bool(items)
+    editor = get_editor_view(items, openclaw_changes)
+    _, risk = get_opportunity_and_risk(items, has_knowledge_updates, openclaw_changes)
+    action = get_workflow_priority(items, has_knowledge_updates, openclaw_changes)
+
+    lines = [
+        "# 📚 AI Wiki 晨间简报",
+        f"日期：{today}",
+        "",
+        "## 今日判断",
+        f"- {editor['theme']}",
+        "",
+    ]
+
+    if items:
+        lines.extend(["## 值得吸收"])
+        for item in items:
+            lines.append(f"- **{item['title']}**：{item['bullets'][0]}")
+            lines.append(f"  洞见：{item['judgment']}")
+        lines.append("")
+    else:
+        topic = pick_fallback_topic()
+        lines.extend([
+            "## 值得复盘",
+            f"- **{topic['title']}**：{topic['thinking'][0]}",
+            "",
+        ])
+
+    if progress:
+        lines.extend(["## 系统观察", f"- {progress[0]}", ""])
+
+    lines.extend([
+        "## 今天行动",
+        f"- {action}",
+        "",
+        "## 风险边界",
+        f"- {risk}",
+        "",
+        "*本消息由 Seetong小助手 自动生成，欧阳荣 监督发布。*",
+    ])
+    return "\n".join(lines)
 
 
 def main():
