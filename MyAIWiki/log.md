@@ -2,6 +2,14 @@
 
 时间序变更记录。格式：`## [日期] 操作 | 标题`
 
+- 2026-08-21: 新增《5 个反直觉的创新原则，成就了无数经典爆款》；来源：微信公众号「HBR-China」；作者戴维·申塔尔、麦特·阿尔特；发布时间 2026-08-21 08:00 CST；原文：https://mp.weixin.qq.com/s/CoirONYLroJLsGH5TzNsiw。新增 `raw/HBR-China-5个反直觉创新原则.md` 与拆解、`wiki/03-productivity/HBR-China-5个反直觉创新原则.md` 与速读版，并更新分类索引和总索引。核心命题：创新要用便利、用户再利用、约束、低摩擦试用与实验发现新需求，同时区分数据描述现状和验证未来假设的角色。证据边界：所有案例、销量、估值及历史归因均为二手转述，存在幸存者偏差，不能代替实际用户、成本、安全和合规验证。
+
+- 2026-08-21: 新增《都 Agent 时代了，我还是想分享给你这 12 个我最常用的 Prompt》；来源：微信公众号「数字生命卡兹克」；作者卡兹克；发布时间 2026-08-21 08:08 CST；原文：https://mp.weixin.qq.com/s/NAdhdFrUq9-BKelqzqpwBQ。新增 `raw/数字生命卡兹克-12个常用Prompt.md` 与拆解、`wiki/03-productivity/数字生命卡兹克-12个常用Prompt.md` 与速读版，并更新分类索引和总索引。核心命题：Prompt 的持久价值是把澄清、证据、假设、分歧与最小验证写成可重复的对话协议，不替代人的目标与判断。证据边界：个人经验总结，无对照实验；研究、职业、心理及高风险专业决策需以一手材料、现实反馈和专业支持核验。
+
+- 2026-08-21: 新增《企业知识库：本体论到底解决什么问题？》；来源：微信公众号「架构师（JiaGouX）」；作者若飞；发布时间 2026-08-20 21:47 CST；原文：https://mp.weixin.qq.com/s/h-Mdt6GGN1uieb6dJnZ0wQ。新增 `raw/架构师-若飞-企业知识库本体论解决什么问题.md` 与拆解、`wiki/07-rag-systems/架构师-若飞-企业知识库本体论解决什么问题.md` 与速读版，并更新分类索引和总索引。核心命题：本体用于将证据、事实、语义控制和动作授权分层，令身份、关系、有效期、冲突和撤回可共同解释；候选关系不得直接进入业务动作。证据边界：工程观点与案例未提供可复现数据，LLM Wiki、GraphRAG、Palantir、OWL 和 SHACL 的细节需回到官方文档核验。
+
+- 2026-08-21: 新增《读懂《金刚经》，就看懂了贝佐斯的思考方式》；来源：微信公众号「笔记侠」，作者老贾，发布时间 2026-08-20 21:30 CST，原文：https://mp.weixin.qq.com/s/LAdKzI60N61YhJN8whQoMQ。新增 `raw/笔记侠-老贾-金刚经与贝佐斯思考方式.md` 与拆解、`wiki/03-productivity/笔记侠-老贾-金刚经与贝佐斯思考方式.md` 与速读版，并更新分类索引与总索引。核心命题：长期主义要被转译成 Day 1、经营因果指标、飞轮、客户原声、叙述体备忘录和数据优先等组织机制，而不是依赖管理者个人定力。证据边界：文章以《金刚经》类比亚马逊实践，属于解释性框架；股东信、股价、会议制度和 AWS 起源均为二手转述，未逐项独立核验。
+
 - 2026-08-20: 新增《英伟达 ChatGPT Work：把运营与行业情报工作流复制到全球团队》；来源：微信公众号「AI组织进化论」对 OpenAI NVIDIA 客户案例的二手整理；原文：https://mp.weixin.qq.com/s/2q72atboegdmWIyCMl4xdA；原始案例：https://openai.com/index/nvidia/chatgpt-work/；发布时间 2026-08-20。新增 `raw/AI组织进化论-英伟达-ChatGPT-Work-全球复用.md` 与 digest、`wiki/03-productivity/AI组织进化论-英伟达-ChatGPT-Work-全球复用.md` 与速读版，并更新分类索引和总索引。核心命题：个人 AI 效率要通过共享骨架、本地定制和一线维护转为组织工作流能力。证据边界：12 周、每周 16 小时、信息筛选量、原型周期与全球复用范围均为二手转述，未独立核验。
 
 - 2026-08-20: 新增《把 AI 变成工作系统的 6 个步骤：从零散提问到可更新的 Skill》；来源：微信公众号「Capihom」对 Silicon Valley Girl 视频的二手整理；原文：https://mp.weixin.qq.com/s/YjAcINxD3-AOE8ltGIgKBg；一手视频：https://www.youtube.com/watch?v=Y854KRfONAU；发布时间 2026-08-19。新增 `raw/Capihom-SiliconValleyGirl-AI工作系统6步.md` 与 digest、`wiki/03-productivity/Capihom-SiliconValleyGirl-AI工作系统6步.md` 与速读版，并更新分类索引和总索引。核心命题：AI 工作系统要以真实上下文、高频 Skill、人工审查反馈、最小权限和人类决策组成闭环。证据边界：使用率、成本、工时、团队规模和案例均为二手转述，未独立核验。
@@ -71,6 +79,36 @@
 - 2026-07-01: 新增《BDD+ADR+PRD：让 Agent 遵守规范的闭环方法》;原始作者:Michal Cichra(Safe Intelligence,微软/Red Hat 十年老兵);来源:AI Engineer 大会演讲《BDD, ADR, PRD, WTF: Capturing Decisions for Humans and AI Alike》;转载:微信公众号 2026-06-10 推送;原文链接:https://mp.weixin.qq.com/s/QT71-f3OZ067XhDwrbrAtQ;获取时间:2026-07-01;raw/inbox(原文 2.4K)→raw(原文 + digest 2.0K 共 6.8K)→wiki/01-ai-agents(编译页 4.0K + digest 2.0K) 已写入,挂到 01-ai-agents/index.md 核心概念末尾⭐⭐⭐ + master-index.md(最近更新顶部⭐⭐⭐);**核心命题**"当 AI Agent 越来越像团队成员,'为什么'必须从模型记忆里搬进 linter/CI/文档契约——只有'可被静态检查的规范'才能跨 20-50 次 context compaction 存活";**5 只猴子隐喻**(Stephenson 1967 原始猴子被替换光后规矩依然被执行但没人能解释为什么,AI 写代码迭代 5 轮后同样状态);**4 件套** ①PRD 三件事(为什么存在/解决什么问题/用户怎么走)②ADR + Linter 强校验(50+ 条 ADR + 每条配一条 ESLint 规则)③BDD + Cucumber 双轨(Gherkin 句法让测试代码本身成为产品规范)④闭环执行 Git Hook→CI→Linter→Agent 自修→重提;**9 节点**(ADR架构决策记录/PRD三件事/BDD-Cucumber双轨/Linter强制/闭环执行/Context-Compaction/知识资产化/Spec-Driven/Agent-Governance);**4 关键数字**(50+ 条 ADR/单 session 20-50 次 context compaction/ADR 来源 Michael Nygard 2011《Release It!》/BDD 来源 Dan North 2008+Cucumber);**5 关键金句**("用 linter 强制执行 ADR 违规时自动指向文档"/"不是发现问题而是让问题不可能发生"/"比读 AI 代码更难的是读 AI 测试——BDD 解决了这个问题"/"5 只猴子被替换光后规矩依然被执行但没人能解释为什么"/"单个 session 经历 20-50 次上下文压缩也没关系,重要的东西总会被保留");**3 反直觉点**(ADR 不进 linter 等于没写/PRD 越短被读概率越高/模型越来越强 ≠ 知识越来越稳);**4 个对 Seetong 借鉴动作**(新建 docs/adr/ 目录固定 4 字段 Context/Decision/Consequences/Date + 配 linter 规则/新建 docs/prd-mini.md 只写 3 段给 AI 助手当入职文档/Seetong iOS 挑 3 条 ADR 配 clang-tidy 违规直接报"ADR-XYZ violated"/BDD 暂缓先跑通最小闭环);**与 [[AI-团队协作-Loop-SDD-digest]] [[0xCodez-Agent-Harness-14-Steps]] [[agent-skills-systematic-survey]] 强关联**(叶小钗 SDD 6 段式 Spec 骨架 + 本文 ADR/PRD/BDD 同源异流:组织级协作契约 + 工程级 Linter 强校验;Linter/Loop 是 Harness Hooks/Loop 节点在规范治理维度的具体落地);**补完 01-ai-agents 现有"Harness 工程 + Loop 验证 + 端到端架构 + 自进化"主线缺位的"Agent 团队规范治理 / 文档契约化"维度**;**分类理由**:本文是"AI Agent 工程治理"方法论(4 件套 + 闭环),不是 AI 行业整体战略也不是商业化路径;放 01-ai-agents 比 02-ai-coding 更贴切(核心是 Agent 治理而非 AI Coding 工具方法论);**透明玻璃自检**:wiki 4.0K(≤8K)/ digest 2.0K(≤4K)/ 节点 9(6-10)/ H2 4 wiki / H2 5 digest(≤5)/ 表格 1 wiki / 表格 1 digest(≤2)/ 0 陈词 ⭐⭐⭐
 
 ---
+
+## 2026-08-22
+### ingest | LangChain CEO：Agent 越复杂，越需要自建 Harness？恰恰不是
+- 来源：微信公众号「DataFun」整理 Harrison Chase（LangChain CEO）公开演讲；发布时间 2026-08-22；https://mp.weixin.qq.com/s/KHVwdqr8aWR9gcH_ZzqQPQ
+- 原文：raw/LangChainCEO-Agent越复杂-越需要自建Harness-恰恰不是.md
+- 拆解：raw/LangChainCEO-Agent越复杂-越需要自建Harness-恰恰不是-digest.md
+- wiki：wiki/01-ai-agents/LangChainCEO-Agent越复杂-越需要自建Harness-恰恰不是.md
+- wiki 速读：wiki/01-ai-agents/LangChainCEO-Agent越复杂-越需要自建Harness-恰恰不是-digest.md
+- 标签： #主题/AI-Agent #主题/Harness工程 #主题/可观测性 #场景/公众号长文 #节点/任务分布 #节点/Context诊断
+- 核心命题：Harness 是否定制取决于任务偏离模型熟悉分布的程度；Agent 失败先检查 Context，再用 Trace、Benchmark 和反馈闭环优化 Model、Context 与 Harness。
+- 证据边界：产品、客户与 Codex 分析 Trace 案例均来自二手演讲整理，未独立复现。
+### ingest | 写作，会让一个人重新获得生活的力量
+- 来源：微信公众号「AlphaWriter」；作者陆甲第；发布时间 2026-07-29；https://mp.weixin.qq.com/s/pGsf3MIsVlu13_SqevYJOQ
+- 原文：raw/写作-会让一个人重新获得生活的力量.md
+- 拆解：raw/写作-会让一个人重新获得生活的力量-digest.md
+- wiki：wiki/05-content-creation/写作-会让一个人重新获得生活的力量.md
+- wiki 速读：wiki/05-content-creation/写作-会让一个人重新获得生活的力量-digest.md
+- 标签： #主题/内容创作 #主题/写作方法论 #场景/公众号长文 #节点/经验内化 #节点/具体场景
+- 核心命题：写作将混乱经历转为可判断、可复用的经验，并以完成感恢复行动力；具体场景、单一问题、初稿分离和稳定节奏是可执行的练习框架。
+- 证据边界：斯蒂芬·金经历为文章二手转述；写作方法论不替代心理或医疗支持。
+### ingest | 曾鸣：AI组织正在“远离”公司
+- 来源：微信公众号「华夏基石e洞察」转载「复旦商业知识」；作者曾鸣；https://mp.weixin.qq.com/s/4LYiE4B4-Bb7pBl5QsIW6g
+- 原文：raw/曾鸣-AI组织正在-远离-公司.md
+- 拆解：raw/曾鸣-AI组织正在-远离-公司-digest.md
+- wiki：wiki/06-ai-tech/曾鸣-AI组织正在-远离-公司.md
+- wiki 速读：wiki/06-ai-tech/曾鸣-AI组织正在-远离-公司-digest.md
+- 标签： #主题/AI科技 #主题/组织转型 #场景/公众号长文 #节点/认知压缩 #节点/认知网络
+- 核心命题：公司是认知压缩结构；AI 降低认知传递成本后，组织要从稳定执行转向人、智能体与反馈共同生成判断和学习。
+- 证据边界：层级数、管理者占比与企业组织调整均为文章二手转述，未独立核验。
+
 
 ## 2026-08-14
 ### ingest | 被Harness圈捧成圣的 Pi Agent，接上 DeepSeek-V4-Flash，如虎添翼

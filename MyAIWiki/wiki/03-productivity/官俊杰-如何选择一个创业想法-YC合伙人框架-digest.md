@@ -1,8 +1,13 @@
 ---
 title: 官俊杰-如何选择一个创业想法-YC合伙人框架-digest
 category: 03-productivity
-tags: [#digest, #创业方法论, #YC, #AI-时代产品设计]
+tags:
+  - digest
+  - 创业方法论
+  - YC
+  - AI-时代产品设计
 date: 2026-08-14
+nodes: []
 ---
 
 # 官俊杰-如何选择一个创业想法（YC 框架）速读

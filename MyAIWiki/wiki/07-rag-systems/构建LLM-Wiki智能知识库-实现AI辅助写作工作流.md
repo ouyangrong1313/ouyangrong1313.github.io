@@ -378,4 +378,4 @@
 - [[02-ai-coding/claude-obsidian-second-brain]]
 - [[03-productivity/obsidian-claude-code-os]]
 - [[03-productivity/karpathy-knowledge-system]]
-- [[writing-plans]]
+- writing-plans

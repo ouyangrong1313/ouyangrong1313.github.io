@@ -8,6 +8,7 @@ tags:
   - 来源/HBR-IdeaCast
 date: 2026-07-15
 source: 微信公众号「行走的帆」/ 作者 行走的帆 / 一手来源 HBR IdeaCast Josh Tarengel / 原文 https://mp.weixin.qq.com/s/TW1UQNic5_B3cDiEnSCVqQ
+nodes: []
 ---
 
 # 用 AI 解决真正的业务问题 - Digest

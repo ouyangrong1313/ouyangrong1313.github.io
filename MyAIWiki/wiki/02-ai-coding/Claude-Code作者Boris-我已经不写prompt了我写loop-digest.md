@@ -64,7 +64,7 @@
   - [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]]（上午 Feisky 版）：侧重判断 + 取舍
   - **本篇（Boris 实战版）**：侧重 API 三件套 + 避坑指南
 
-- **"写 loop 不写 prompt" 是 2026 年最值得记住的范式转变**——跟 [[Claude-Code团队只招聘两类人]] 是同一团队在两个层面的呼应
+- **"写 loop 不写 prompt" 是 2026 年最值得记住的范式转变**——跟 Claude-Code团队只招聘两类人 是同一团队在两个层面的呼应
 
 - **token 预算是真实坑**——`"use 10k tokens"` 必须成习惯
 

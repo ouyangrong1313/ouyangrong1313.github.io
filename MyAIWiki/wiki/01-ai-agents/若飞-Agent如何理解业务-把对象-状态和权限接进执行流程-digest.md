@@ -14,6 +14,7 @@ type: digest
 date: 2026-07-27
 source: 微信公众号「架构师（JiaGouX）」2026-07-26 推送 / 若飞
 原始链接: https://mp.weixin.qq.com/s/LYF3_RaXhe50DNb_ZW0KZg
+nodes: []
 ---
 
 # 一文讲清 Agent 如何理解业务：把对象、状态和权限接进执行流程（速读摘要）

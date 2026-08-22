@@ -207,11 +207,11 @@ Harness 是围绕 LLM 的整套软件基础设施，典型包括：
 5. **随着模型进化，Harness 会变薄，但不会消失。**
 
 ## 相关链接
-- [[AI Agent]]
+- AI Agent
 - [[02-ai-coding/index]]
-- [[Context Engineering]]
+- Context Engineering
 - [[02-ai-coding/prompt-engineering]]
-- [[Claude Code]]
-- [[OpenAI Agents SDK]]
-- [[LangGraph]]
-- [[Multi-Agent Systems]]
+- Claude Code
+- OpenAI Agents SDK
+- LangGraph
+- Multi-Agent Systems

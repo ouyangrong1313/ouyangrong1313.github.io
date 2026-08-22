@@ -333,9 +333,9 @@ OpenClaw 不是某个单一模型的产品壳，而是一个能承接不同模�
 - [[06-ai-tech/Agent Harness 解析：智能体架构深度拆解]]
 - [[06-ai-tech/Agent Harness 与 OpenClaw：从工具到系统的中文解读]]
 - [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]]
-- [[AI Agent]]
+- AI Agent
 - [[02-ai-coding/index]]
-- [[OpenClaw]]
-- [[Heuristic Learning]]
-- [[第二大脑]]
-- [[Knowledge Engineering]]
+- OpenClaw
+- Heuristic Learning
+- 第二大脑
+- Knowledge Engineering

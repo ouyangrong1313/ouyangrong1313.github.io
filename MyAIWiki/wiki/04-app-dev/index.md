@@ -35,13 +35,13 @@
 
 ### iOS 开发
 - [[04-app-dev/ios/index|iOS 导航]]
-- [[ios/项目规范|Seetong-iOS 开发规范]] ⭐
+- Seetong-iOS 开发规范 ⭐
 - [[04-app-dev/ios/qmui组件库|QMUI 组件使用]]
 - [[04-app-dev/ios/踩坑记录|踩坑记录]]
 
 ### Android 开发
 - [[04-app-dev/android/index|Android 导航]]
-- [[android/项目规范|Seetong-Android 开发规范]]
+- Seetong-Android 开发规范
 
 ### 架构
 - [[04-app-dev/architecture/index|架构导航]]

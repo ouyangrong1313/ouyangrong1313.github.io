@@ -1,7 +1,16 @@
 ---
 title: Stripe创始人：AI 时代创业还需要小步快跑吗
 category: 03-productivity
-tags: [AI时代创业, 精益创业, 判断力, Stripe, YC, Capihom, 8节点, 立项双问, Seetong借鉴]
+tags:
+  - AI时代创业
+  - 精益创业
+  - 判断力
+  - Stripe
+  - YC
+  - Capihom
+  - 8节点
+  - 立项双问
+  - Seetong借鉴
 nodes: [L1缓存类比, 写作效用函数, 退学去污名, 巨头不等于清场, 真实痛苦救执行, 私测不等于发布, 起点选择变窄, 如果成功了呢]
 links: ["[[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]]", "[[03-productivity/LaterCast-YC设计负责人-AI重写设计师工作流]]", "[[03-productivity/Code-in-Place-AI-时代为什么更该学编程-Capihom-EO]]", "[[03-productivity/笔记侠-十布-这-是以后的工作方式]]", "[[06-ai-tech/OpenAI-AI原生组织-4条工作原则]]", "[[03-productivity/行走的帆-奈飞AI时代新人才观-系统思维]]"]
 date: 2026-08-13

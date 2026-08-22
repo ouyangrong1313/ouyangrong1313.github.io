@@ -9,6 +9,7 @@ tags:
   - 场景/方法论
 date: 2026-06-15
 source: 微信公众号 / ColaAI
+nodes: []
 ---
 
 # agent-skills 设计哲学 — Digest

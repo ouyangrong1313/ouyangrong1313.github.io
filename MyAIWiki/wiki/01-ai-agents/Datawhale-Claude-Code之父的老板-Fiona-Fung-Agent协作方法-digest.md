@@ -10,6 +10,7 @@ tags:
 date: 2026-07-06
 source: 微信公众号 / Datawhale（编译 Lenny's Podcast 访谈 Fiona Fung）
 source_url: https://mp.weixin.qq.com/s/c9Vkx_2l2PRSY__GjUlHuQ
+nodes: []
 ---
 
 # Digest：Claude Code 之父的老板，坦白 Agent 协作方法

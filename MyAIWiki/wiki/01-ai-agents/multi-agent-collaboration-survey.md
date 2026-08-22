@@ -7,6 +7,8 @@ tags:
   - AI
   - AIAgent
   - MultiAgent
+category: 01-ai-agents
+nodes: []
 ---
 
 # 多智能体协作调查：Agent 到底该怎么分工

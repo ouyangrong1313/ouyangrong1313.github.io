@@ -3,6 +3,9 @@ title: Agent 模式框架 (Digest)
 category: 01-ai-agents
 date: 2026-07-17
 source: 微信公众号「ThinkingAgent」/ Knock
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # Agent 模式框架 (Digest)

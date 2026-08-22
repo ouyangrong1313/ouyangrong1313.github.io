@@ -14,6 +14,7 @@ type: digest
 date: 2026-07-12
 source: 微信公众号「Founder Park」2026-07-12 推送 / Anne（WorkBuddy 团队策略产品经理）
 原始链接: https://mp.weixin.qq.com/s/GkhemHUAhKWV-3Uxaa1Mqg
+nodes: []
 ---
 
 # WorkBuddy Harness 工程复盘：从模型到可用 Agent（速读摘要）

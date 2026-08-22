@@ -1,7 +1,14 @@
 ---
 title: 官俊杰-如何选择一个创业想法-YC合伙人框架
 category: 03-productivity
-tags: [#创业方法论, #YC, #AI-时代产品设计, #idea-selection, #burn-the-boats, #verticalize, #Seetong-V8-4-x]
+tags:
+  - 创业方法论
+  - YC
+  - AI-时代产品设计
+  - idea-selection
+  - burn-the-boats
+  - verticalize
+  - Seetong-V8-4-x
 nodes: [别过度思考原则, 烧船心态-Burn-the-other-boats, 沉入客户的判定标准-能替客户经营业务, 模型能力边缘, verticalize-走向垂直化, 最有野心的版本, 失败也是好入口, 雾里走路的失败模式]
 links: [[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]], [[03-productivity/与AI一起做产品的六条原则]], [[03-productivity/Capihom-Stripe创始人-Patrick-Collison-AI时代是否还需小步快跑-YC]]
 date: 2026-08-14
@@ -70,5 +77,5 @@ source: 微信公众号「官俊杰」2026-06-16（改写自 YC 视频《How To 
 
 - 原文：[如何选择一个创业想法？YC 合伙人给了一个实用框架](https://mp.weixin.qq.com/s/v6W43P-TSqd7pv2PVSrVxw)
 - 一手视频：[How To Pick A Startup Idea - YC](https://www.youtube.com/watch?v=R56RJFZBasQ&t=29s)
-- Digest: [[官俊杰-如何选择一个创业想法-YC合伙人框架-digest]]
+- Digest: [[03-productivity/官俊杰-如何选择一个创业想法-YC合伙人框架-digest]]
 - Raw: [2026-08-官俊杰-如何选择一个创业想法-YC合伙人框架.md](../../raw/2026-08-官俊杰-如何选择一个创业想法-YC合伙人框架.md)

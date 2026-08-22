@@ -2,6 +2,8 @@
 
 ## 核心概念
 
+- [[07-rag-systems/架构师-若飞-企业知识库本体论解决什么问题]] - 企业知识库的本体不是更复杂的图，而是分离证据、事实、语义控制与动作授权的共同语义合同；重点是稳定身份、关系谓词、事实生命周期、未知与冲突，以及反例验收。
+- [[07-rag-systems/架构师-若飞-企业知识库本体论解决什么问题-digest]] - 四层速查、五个最小动作与证据边界。
 - [[07-rag-systems/rag-vs-finetuning]] - RAG 与微调的区别
 - [[07-rag-systems/rag-fundamentals]] - RAG 基础 ⭐
 - [[07-rag-systems/AI知识库技术演进拆解-从RAG到NotebookLM再到LLM-Wiki]] - 从低配 RAG、产品化 RAG 到 LLM Wiki 的技术演进全景

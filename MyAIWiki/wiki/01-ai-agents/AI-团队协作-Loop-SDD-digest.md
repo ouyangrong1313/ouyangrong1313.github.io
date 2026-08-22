@@ -3,6 +3,9 @@ title: AI 团队协作案例：Loop + SDD（Digest）
 category: 01-ai-agents
 date: 2026-06-22
 source: 微信公众号 叶小钗
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # AI 团队协作案例：Loop + SDD（Digest）

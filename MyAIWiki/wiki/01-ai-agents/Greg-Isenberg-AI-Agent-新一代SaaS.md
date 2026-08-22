@@ -112,4 +112,4 @@ source: 微信公众号「Capihom」2026-07-08 推送 / Greg Isenberg Startup Id
 - **不是入门文章**：假设读者已了解 Agent / SaaS / Eval 基础
 - **过度倾向"卖工作"**：本文极端主张 Agent 必须接住工作，忽略一些 Agent 工具型产品（Cursor/Codex 这种"卖工具但用户用来跑工作"的中间形态）
 - **workflow teardown 内容策略**：仅适合"老板每天能感到损失"的行业，复杂 B2B SaaS 不适用
-- **建议补条目**：[[greg-isenberg]] 作者本人；[[startup-ideas-podcast]] 播客；[[late-checkout]] Greg 的孵化器公司
+- **建议补条目**：greg-isenberg 作者本人；startup-ideas-podcast 播客；late-checkout Greg 的孵化器公司

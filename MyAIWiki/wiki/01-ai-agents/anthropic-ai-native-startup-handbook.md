@@ -7,6 +7,8 @@ date: 2026-05-15
 tags:
   - 主题/AIAgent
   - 场景/创业指南
+category: 01-ai-agents
+nodes: []
 ---
 
 # AI Native 创业手册

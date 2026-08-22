@@ -4,6 +4,13 @@ source: https://mp.weixin.qq.com/s/7t3pCljov14VbIDXcsYuBw
 author: 开源日记
 publish: 2026-06-13
 captured: 2026-06-14
+category: 02-ai-coding
+tags:
+  - 主题/AI-Coding
+  - 主题/产品经理
+  - 主题/Skill
+nodes: []
+date: 2026-08-22
 ---
 
 # PM Skills Marketplace - Digest

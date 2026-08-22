@@ -11,6 +11,7 @@ tags:
   - outcome-based
 rating: ⭐⭐
 source: "[[06-ai-tech/麦肯锡-AI提效只是第一波红利]]"
+nodes: []
 ---
 
 # 麦肯锡《The real AI advantage》- Digest

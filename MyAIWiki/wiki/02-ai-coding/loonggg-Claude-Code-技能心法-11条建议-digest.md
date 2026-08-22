@@ -12,6 +12,7 @@ type: digest
 date: 2026-07-04
 source: 微信公众号 / loonggg 2026-07-04(中文解读编译自 Anthropic Claude Code 团队分享)
 原始链接: https://mp.weixin.qq.com/s/2FeY2RbptAoj-49LBW2WWA
+nodes: []
 ---
 
 # Claude Code 团队的技能(Skills)心法大曝光(速读摘要)

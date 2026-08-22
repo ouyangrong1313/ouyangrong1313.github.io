@@ -3,6 +3,9 @@ title: AI 第二大脑 Claude+Obsidian 10 步完整实操指南 - Digest
 category: 02-ai-coding
 date: 2026-06-22
 source: X 推文 / @undefinedKi
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # AI 第二大脑 Claude+Obsidian 10 步完整实操指南 - Digest
@@ -24,7 +27,7 @@ source: X 推文 / @undefinedKi
 | # | 阶段 | 核心动作 |
 |---|---|---|
 | 1 | 装 Claude Desktop | 必须 Pro 付费，启用 Code Tab |
-| 2 | 装 Obsidian 建 vault | 文件夹即第二大脑；用 `[[链接]]` 体会 wikilink |
+| 2 | 装 Obsidian 建 vault | 文件夹即第二大脑；用 `链接` 体会 wikilink |
 | 3 | 装 Local REST API 插件 | 复制 API Key |
 | 4 | `claude mcp add-json obsidian-vault` | 把 key 写进环境变量 |
 | 5 | 让 Claude 面试你写 CLAUDE.md | 一次性建好"我是谁" |
@@ -54,7 +57,7 @@ source: X 推文 / @undefinedKi
 
 - **上游**：[[03-productivity/karpathy-knowledge-system]] / [[02-ai-coding/claude-obsidian-second-brain]]（5/12 旧版）/ [[03-productivity/obsidian-claude-code-os]] / [[01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain]] / [[01-ai-agents/garry-tan-ai-second-brain]] / [[07-rag-systems/构建LLM-Wiki智能知识库-实现AI辅助写作工作流]]
 - **下游**：MyAIWiki 本库 + 三个开源 ready-made 仓库（claude-obsidian / obsidian-second-brain / second-brain-starter）+ Claude Desktop Schedule
-- **同级**：[[02-ai-coding/Claude-Code-主动式Agent-Routines]] / [[02-ai-coding/Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解]] / [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]]
+- **同级**：[[02-ai-coding/Claude-Code-主动式Agent-Routines]] / [[02-ai-coding/Addy-Osmani-Loop-Engineering]] / Loop-Engineering-详解 / [[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]]
 
 ## 备注与限制
 

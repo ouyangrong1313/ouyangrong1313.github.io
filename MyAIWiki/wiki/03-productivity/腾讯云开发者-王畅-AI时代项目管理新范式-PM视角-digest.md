@@ -4,6 +4,9 @@ category: 03-productivity
 type: wiki-digest
 source: 03-productivity/腾讯云开发者-王畅-AI时代项目管理新范式-PM视角.md
 date: 2026-08-19
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # 一句话总结

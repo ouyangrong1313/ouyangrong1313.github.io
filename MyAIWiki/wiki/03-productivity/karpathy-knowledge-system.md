@@ -27,7 +27,7 @@ Karpathy 的核心理念：**不要让 AI 每次帮你从零检索答案，而�
 | 本质 | 冰箱里的生食材 | 做好的菜 |
 | 谁写的 | 作者原文，你搬运 | LLM 重新组织 |
 | 格式 | 混乱无结构 | 统一格式+摘要+索引 |
-| 关联 | 文件孤立 | [[链接]] 形成知识网络 |
+| 关联 | 文件孤立 | 链接 形成知识网络 |
 | 能否提问 | 不能 | 能，直接问 LLM |
 | 谁维护 | 你（往里丢就行） | LLM（编译、更新） |
 
@@ -78,7 +78,7 @@ Ingest（摄入）→ Query（查询）→ Lint（体检）
 当问问题时：
 1. 先读 `wiki/index.md` 定位相关页面
 2. 精读相关的 sources / entities / concepts 页面
-3. 综合回答，引用来源用双链格式 `[[页面路径]]`
+3. 综合回答，引用来源用双链格式 `页面路径`
 4. 如果回答产生了有价值的新总结，询问是否存入 `wiki/concepts/`
 
 ### Lint（健康检查）
@@ -112,9 +112,9 @@ title: 页面标题
 type: source-summary / concept / entity
 created: YYYY-MM-DD
 sources:
-- "[[clippings/原始文件名]]"
+- "原始文件名"
 related:
-- "[[wiki/相关页面]]"
+- "相关页面"
 origin: agent-compiled
 ---
 ```
@@ -182,9 +182,9 @@ title: 页面标题
 type: source-summary / concept / entity
 created: YYYY-MM-DD
 sources:
-- "[[clippings/原始文件名]]"
+- "原始文件名"
 related:
-- "[[wiki/相关页面]]"
+- "相关页面"
 origin: agent-compiled
 ---
 
@@ -209,7 +209,7 @@ origin: agent-compiled
 当我问问题时：
 1. 先读 wiki/index.md 定位相关页面
 2. 精读相关的 sources / entities / concepts 页面
-3. 综合回答，引用来源用双链格式 [[页面路径]]
+3. 综合回答，引用来源用双链格式 页面路径
 4. 如果回答产生了有价值的新总结，询问是否存入 wiki/concepts/
 
 ## Lint（健康检查）
@@ -230,7 +230,7 @@ index.md 按以下主题分组维护，新页面归入对应分类：
 ## 【分类二，例如：读书笔记】
 ## 【分类三，例如：人物与组织】
 
-每条记录格式：- [[页面路径]] — 一句话摘要
+每条记录格式：- 页面路径 — 一句话摘要
 
 ---
 

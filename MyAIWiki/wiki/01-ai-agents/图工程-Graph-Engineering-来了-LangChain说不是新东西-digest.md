@@ -14,6 +14,7 @@ type: digest
 date: 2026-07-27
 source: 微信公众号「AI工程化」2026-07-23 推送 / winkrun
 原始链接: https://mp.weixin.qq.com/s/_uUffN2JEgASnLQNfDWSDw
+nodes: []
 ---
 
 # 图工程（Graph Engineering）来了？LangChain说不是新东西（速读摘要）

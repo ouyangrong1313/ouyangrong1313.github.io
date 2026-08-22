@@ -58,7 +58,7 @@ links: [[03-productivity/karpathy-knowledge-system]], [[02-ai-coding/claude-obsi
 | # | 阶段 | 核心动作 |
 |---|---|---|
 | 1 | 装 Claude Desktop | 必须 Pro 付费，启用 Code Tab |
-| 2 | 装 Obsidian 建 vault | 文件夹即第二大脑；用 `[[链接]]` 体会 wikilink |
+| 2 | 装 Obsidian 建 vault | 文件夹即第二大脑；用 `链接` 体会 wikilink |
 | 3 | 装 Local REST API 插件 | 复制 API Key（不包含 "Bearer" 前缀） |
 | 4 | `claude mcp add-json obsidian-vault` | 把 key 写进环境变量（端口 27124） |
 | 5 | 让 Claude 面试你写 CLAUDE.md | 一次性建好"我是谁"，不再重复解释 |

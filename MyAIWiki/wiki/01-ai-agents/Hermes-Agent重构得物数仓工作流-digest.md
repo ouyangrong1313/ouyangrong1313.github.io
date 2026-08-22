@@ -12,6 +12,7 @@ type: digest
 date: 2026-06-18
 source: 微信公众号 / 得物技术(小诘、博温) 2026-06-17
 原始链接: https://mp.weixin.qq.com/s/hGma3I1jMF5KsDZQK_6X4Q
+nodes: []
 ---
 
 # 从埋点需求到规则资产:Hermes Agent 重构得物数仓工作流(速读摘要)
@@ -46,6 +47,6 @@ source: 微信公众号 / 得物技术(小诘、博温) 2026-06-17
 
 ## 关联 + 备注
 
-**关联**:阿里淘系 [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] | 得物同主线 [[01-ai-agents/Skill-Self-Evolution]] / [[用 LLM Agent 重构告警排查流程]] | Skill [[01-ai-agents/agent-skills-systematic-survey]] | Loop [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] | 评测 [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]
+**关联**:阿里淘系 [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] | 得物同主线 [[01-ai-agents/Skill-Self-Evolution]] / 用 LLM Agent 重构告警排查流程 | Skill [[01-ai-agents/agent-skills-systematic-survey]] | Loop [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] | 评测 [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]
 
 **备注**:作者小诘、博温 | Hermes = 文中特指平台 | 量化指标未披露 | 平台技术栈未明示 | 规则包版本管理未展开

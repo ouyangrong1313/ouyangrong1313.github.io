@@ -8,6 +8,8 @@ tags:
   - 手法/对比冲突
   - 手法/权威背书
   - 场景/技术博客
+category: 02-ai-coding
+nodes: []
 ---
 
 # 用Agent评测思路管理AI Coding——31万行代码AI重构实践
@@ -83,4 +85,4 @@ Human-in-the-loop 模式：人界定范围和风险，AI 做脏活
 
 - [[02-ai-coding/vibe-coding|Vibe Coding：用 AI 写代码的正确姿势]]
 - [[02-ai-coding/oh-my-codex|oh-my-codex：让 Codex CLI 拥有专家团队]]
-- [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-却在-Harness|Claude Code 架构深度解读]]
+- Claude Code 架构深度解读

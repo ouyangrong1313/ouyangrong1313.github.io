@@ -14,6 +14,7 @@ type: digest
 date: 2026-07-27
 source: 微信公众号「架构师带你玩转AI」2026-07-22 推送 / AllenTang
 原始链接: https://mp.weixin.qq.com/s/CFTp_TVA8DQLFuvirkrFvQ
+nodes: []
 ---
 
 # 万字长文拆解Agent 架构设计（四）：多 Agent 协作（速读摘要）

@@ -75,7 +75,7 @@ source: 微信公众号「深思 SenseAI」编译自 Zach Lloyd @zachlloydtweets
 - **深思圈主编立场**:不站 Lloyd 也不站 Bakaus,主张"看任务"分工,补完 Lloyd 备忘录的盲点(对"做什么"出奇安静)
 - **本仓库已有强相关主线**:[[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] / [[01-ai-agents/清华沈阳-自进化AI新物种]] / [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] / [[03-productivity/与AI一起做产品的六条原则]] / [[02-ai-coding/AI-Coding的顿悟时刻]] / [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]
 - **本仓库缺位补完**:02-ai-coding 现有主线偏"怎么做"的工具/方法论(Harness/Loop/Skills),**缺位"工厂化思维 + COGS 视角 + 递归自我改进"** 的反思性内容,本文是这一维度的代表
-- **Bakaus 原文**:[[03-productivity/与AI一起做产品的六条原则]] 暂未直接引用,后续可加 [[Paul-Bakaus-人留最后20%]] 同月对比笔记
+- **Bakaus 原文**:[[03-productivity/与AI一起做产品的六条原则]] 暂未直接引用,后续可加 Paul-Bakaus-人留最后20% 同月对比笔记
 
 ---
 

@@ -26,7 +26,7 @@ YC 总裁 Garry Tan 用 54 万行 Rails 代码构建 Garry's List + 10.5 万 Sta
 ## 我的理解
 
 - **这文章和 [[02-ai-coding/Claude-Code负责人谈AI原生工程组织]] 互为镜像**：那篇是组织侧瓶颈迁移，这篇是工程师侧范式迁移。**合起来看**：AI-native 团队不只是"组织要变"，连"写代码这件事本身"都要变
-- **"Skill pack" 是范式的真正可操作单元**：之前 [[从Prompt-Context到Harness]] 提出 Harness 是 L2→L3 内部平台，本文说 skill pack 是 agent 工程时代的基本要素。**两者结合**：内部平台 = harness + skill pack 库 + resolver + 评估机制
+- **"Skill pack" 是范式的真正可操作单元**：之前 从Prompt-Context到Harness 提出 Harness 是 L2→L3 内部平台，本文说 skill pack 是 agent 工程时代的基本要素。**两者结合**：内部平台 = harness + skill pack 库 + resolver + 评估机制
 - **"测试 Markdown" 这一步是当前最缺的实践**：大多数团队有"测试代码"但没"测试 Markdown"。没有 LLM 评估 + 集成测试的 skill pack 不可靠。这就是 [[02-ai-coding/任务类型到验证模板]] 应该补的新类型："知识/Markdown/Skill 验证"
 - **"审计委员会"陷阱在 Seetong 这种存量代码项目里也常见**：看看我们有多少 sanitizers / validators / 重试逻辑是在不信任模型
 - **"Tokenmaxxing" 不是花钱本身，是花钱的复利**：不是"用得多就赢"，是"今天用得多 = 提前 2-3 年 = 复利差距"

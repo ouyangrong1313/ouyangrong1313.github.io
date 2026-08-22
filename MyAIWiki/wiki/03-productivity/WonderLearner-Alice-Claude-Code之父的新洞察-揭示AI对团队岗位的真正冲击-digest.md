@@ -8,6 +8,7 @@ tags:
   - 主题/判断力价值
 date: 2026-07-02
 source: 微信公众号「WonderLearner」/ 作者 Alice / 一手来源 Boris Cherny X
+nodes: []
 ---
 
 # Claude Code 之父的新洞察 - Digest

@@ -24,6 +24,7 @@ related:
   - "[[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]"
   - "[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]"
   - "[[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]"
+nodes: []
 ---
 
 # 生产级 Agent 全景:架构、Harness 工程、组织与人才

@@ -8,6 +8,7 @@ tags:
   - 作者/lencx
 date: 2026-07-15
 source: 微信公众号「lencx」/ 作者 lencx（Mark Text 等开源工具作者）/ 原文 https://mp.weixin.qq.com/s/wINKSDQCroWBvf29h567zA
+nodes: []
 ---
 
 # 架构腐朽与 Loop Engineering - Digest

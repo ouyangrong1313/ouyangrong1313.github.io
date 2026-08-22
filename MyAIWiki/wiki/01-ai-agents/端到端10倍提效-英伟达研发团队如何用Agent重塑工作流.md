@@ -89,4 +89,4 @@ source_original: https://openai.com/index/nvidia/
 
 - 微信原文：https://mp.weixin.qq.com/s/qKOScQgH8cDQSWuYDsoAUA
 - OpenAI 原始案例：https://openai.com/index/nvidia/
-- 原文与拆解：[[端到端10倍提效-英伟达研发团队如何用Agent重塑工作流-digest]]
+- 原文与拆解：端到端10倍提效-英伟达研发团队如何用Agent重塑工作流-digest

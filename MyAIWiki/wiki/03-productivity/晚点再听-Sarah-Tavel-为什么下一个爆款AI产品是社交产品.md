@@ -1,7 +1,17 @@
 ---
 title: Sarah Tavel：为什么下一个爆款 AI 产品会是社交产品
 category: 03-productivity
-tags: [#主题/AI时代创业, #主题/AI时代产品设计, #主题/网络效应, #主题/AI社交, #主题/决策记录, #主题/Capihom编译, #手法/8节点, #场景/Seetong借鉴, #作者/Sarah-Tavel, #公司/Benchmark]
+tags:
+  - 主题/AI时代创业
+  - 主题/AI时代产品设计
+  - 主题/网络效应
+  - 主题/AI社交
+  - 主题/决策记录
+  - 主题/Capihom编译
+  - 手法/8节点
+  - 场景/Seetong借鉴
+  - 作者/Sarah-Tavel
+  - 公司/Benchmark
 nodes: [造引擎者先赢 → 产品直觉者后赢, 高手配置门槛, 重复造轮子的浪费, 可验证可信来源四件套, 社交功能附着在使用上, 白热化中心看加速, 窄切入口 + 关系密度, AI 帮你判断的边界]
 links: [[03-productivity/Capihom-Stripe创始人-Patrick-Collison-AI时代是否还需小步快跑-YC]], [[03-productivity/Capihom-Whatnot-CPO-产品经理是否按人头配齐]], [[03-productivity/Code-in-Place-AI-时代为什么更该学编程-Capihom-EO]], [[03-productivity/Capihom-Tom-Yeh-AI时代慢学习与学习能力]], [[03-productivity/与AI一起做产品的六条原则]], [[03-productivity/官俊杰-如何选择一个创业想法-YC合伙人框架]], [[03-productivity/笔记侠-十布-这-是以后的工作方式]], [[03-productivity/快刀青衣-OpenAI高管教练四层能力]], [[06-ai-tech/OpenAI-AI原生组织-4条工作原则]], [[06-ai-tech/深思圈-思考外包能动性]]
 date: 2026-08-19

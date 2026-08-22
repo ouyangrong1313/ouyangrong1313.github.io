@@ -9,6 +9,7 @@ tags:
   - 主题/组织变革
 date: 2026-07-07
 source: 微信公众号「晚点再听LaterCast」2026-07-07 推送（Augmented U 节目《Building the AI-Native Enterprise》/ Masha Sharma / Groupon VP）
+nodes: []
 ---
 
 # AI-Native 企业（Augmented U · Masha Sharma / Groupon VP）— Digest

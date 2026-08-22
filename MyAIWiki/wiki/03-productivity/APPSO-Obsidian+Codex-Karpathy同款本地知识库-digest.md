@@ -2,6 +2,9 @@
 title: 用 Karpathy 思路搭一套本地知识库 - Digest
 category: 03-productivity
 date: 2026-06-29
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # Karpathy 同款本地知识库 - Digest

@@ -4,6 +4,9 @@ category: 03-productivity
 type: wiki-digest
 source: 03-productivity/晚点再听-Sarah-Tavel-为什么下一个爆款AI产品是社交产品.md
 date: 2026-08-19
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # 一句话总结

@@ -108,4 +108,4 @@ source: 微信公众号「Datawhale干货」2026-07-08 推送 / 翁荔 Lilian We
 - **翁荔个人观点 vs 行业共识**：harness 内部化预测、3 类划分是翁荔本人观点，非行业共识
 - **不是入门文章**：本文假设读者已了解 LLM/Agent/RL 基础，适合 Harness 实战已上路的人
 - **4 段 RSI 路径翁荔判断近期不会 model-driven**：学界/业界对这条预测有分歧，需持续跟踪
-- **建议补条目**：[[thinking-machines-lab]] 翁荔现公司（暂未建）
+- **建议补条目**：thinking-machines-lab 翁荔现公司（暂未建）

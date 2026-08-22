@@ -9,6 +9,7 @@ tags:
   - Skill设计
 rating: ⭐⭐
 source: "[[02-ai-coding/Agent自维护体系-完整实战]]"
+nodes: []
 ---
 
 # Soyoger Agent 自维护体系 - Digest

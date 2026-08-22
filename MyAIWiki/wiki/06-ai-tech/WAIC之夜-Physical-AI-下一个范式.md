@@ -23,6 +23,7 @@ related:
   - "[[06-ai-tech/麦肯锡-AI提效只是第一波红利]]"
   - "[[06-ai-tech/OpenAI-AI原生组织-4条工作原则]]"
   - "[[06-ai-tech/傅盛-李飞飞-机器人世界模型与人的自主性]]"
+nodes: []
 ---
 
 # WAIC 2026 圆桌：Physical AI 是 Agentic AI 之后的下一个范式吗？

@@ -2,7 +2,7 @@
 
 > 来源：Anthropic 工程师 Thariq Shihipar & Sid Bidasaria 2026-06-03 长文（132万 浏览 · 6,210 喜欢 · 1.4万 引用）
 > 原文：https://x.com/trq212/status/2061907337154367865
-> 关联：[[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] · [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]] · [[claude-code-dynamic-workflows-digest|速读摘要]]
+> 关联：[[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]] · [[02-ai-coding/从Prompt-Context到Harness-工程的三次进化与终局之战]] · 速读摘要
 
 ---
 

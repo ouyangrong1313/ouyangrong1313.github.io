@@ -22,6 +22,7 @@ related:
   - "[[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]]"
   - "[[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]"
   - "[[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]"
+nodes: []
 ---
 
 # Soyoger：Agent 自维护体系完整实战（5 动作 6 零件）

@@ -40,4 +40,4 @@
 ## 资源
 
 - GitHub: https://github.com/kyegomez/OpenMythos
-- 原文: [[2026-05-07-openmythos]] (微信公众号整理)
+- 原文: 2026-05-07-openmythos (微信公众号整理)

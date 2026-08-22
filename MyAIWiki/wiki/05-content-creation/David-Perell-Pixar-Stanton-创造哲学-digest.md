@@ -2,6 +2,9 @@
 title: David Perell 采访 Andrew Stanton - Digest
 category: 05-content-creation
 date: 2026-06-29
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # 皮克斯创作哲学 - Digest

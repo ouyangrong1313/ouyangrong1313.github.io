@@ -4,6 +4,9 @@ category: 01-ai-agents
 type: digest
 date: 2026-07-03
 source: 微信公众号「晚点再听LaterCast」编译自 AI Engineer 大会 Justin Schroeder 演讲
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # 未来属于垂直领域 Agent - Digest

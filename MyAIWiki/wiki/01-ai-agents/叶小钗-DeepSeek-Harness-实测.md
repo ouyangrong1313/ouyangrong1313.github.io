@@ -1,7 +1,16 @@
 ---
 title: "DeepSeek Harness 实测：从插件运行时到消息调度"
 category: 01-ai-agents
-tags: [主题/AI-Agent, 主题/Harness, 主题/插件运行时, 主题/Agent-Loop, 主题/工具治理, 节点/服务依赖, 节点/消息调度, 节点/会话重建, 场景/公众号长文]
+tags:
+  - 主题/AI-Agent
+  - 主题/Harness
+  - 主题/插件运行时
+  - 主题/Agent-Loop
+  - 主题/工具治理
+  - 节点/服务依赖
+  - 节点/消息调度
+  - 节点/会话重建
+  - 场景/公众号长文
 nodes: [插件树, 服务依赖, 能力接缝, Step-Turn, 消息调度, 会话重建, 单调守卫, 可复现评测]
 links: ["[[01-ai-agents/腾讯程序员-DeepSeek-Harness-可逆插件运行时]]", "[[01-ai-agents/Harness工程AgentLoop]]", "[[01-ai-agents/2026-07-29-人月聊IT-通用AI-Agent平台-Harness技术底座]]", "[[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]"]
 date: 2026-08-18

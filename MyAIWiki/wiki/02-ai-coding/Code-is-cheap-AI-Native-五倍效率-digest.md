@@ -4,6 +4,9 @@ category: 02-ai-coding
 type: digest
 date: 2026-07-03
 source: 微信公众号「无岳」2026-07-03 推送(阿里妹导读)
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # Code is cheap - Digest

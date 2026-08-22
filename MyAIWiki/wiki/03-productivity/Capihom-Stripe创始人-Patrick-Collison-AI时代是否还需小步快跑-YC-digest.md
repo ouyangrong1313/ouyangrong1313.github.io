@@ -3,6 +3,9 @@ title: Stripe创始人 AI 时代是否还需小步快跑 - Digest
 category: 03-productivity
 date: 2026-08-13
 source: 微信公众号「Capihom（晚点再听LaterCast）」编译 Patrick Collison YC 对谈
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # Stripe创始人：AI 时代创业还需要小步快跑吗 — Digest

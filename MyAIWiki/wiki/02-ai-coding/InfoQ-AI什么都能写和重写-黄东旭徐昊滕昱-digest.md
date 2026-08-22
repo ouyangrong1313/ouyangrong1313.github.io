@@ -4,6 +4,9 @@ category: 02-ai-coding
 date: 2026-06-26
 type: Wiki 速读摘要
 source: 微信公众号「InfoQ Pro」2026-06-26 深度访谈
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # AI 什么都能写和重写 - Digest

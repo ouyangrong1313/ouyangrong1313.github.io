@@ -390,10 +390,10 @@ OpenClaw 真正有潜力的地方，恰恰在后者。
 
 ## 相关链接
 - [[06-ai-tech/Agent Harness 解析：智能体架构深度拆解]]
-- [[AI Agent]]
+- AI Agent
 - [[02-ai-coding/index]]
-- [[OpenClaw]]
-- [[Claude Code]]
-- [[Context Engineering]]
-- [[Heuristic Learning]]
-- [[第二大脑]]
+- OpenClaw
+- Claude Code
+- Context Engineering
+- Heuristic Learning
+- 第二大脑

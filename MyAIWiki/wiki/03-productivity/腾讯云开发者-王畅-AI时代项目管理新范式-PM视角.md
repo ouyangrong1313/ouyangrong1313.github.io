@@ -1,7 +1,20 @@
 ---
 title: AI 时代项目管理新范式：PM 视角下的组织效率 debug
 category: 03-productivity
-tags: [#主题/AI时代组织, #主题/项目管理, #主题/PM视角, #主题/组织摩擦, #主题/PM-Skill, #主题/AI原生工作法, #手法/8节点, #手法/5关键金句, #手法/3反直觉, #场景/Seetong借鉴, #公众号/腾讯云开发者, #作者/王畅, #公司/腾讯健康]
+tags:
+  - 主题/AI时代组织
+  - 主题/项目管理
+  - 主题/PM视角
+  - 主题/组织摩擦
+  - 主题/PM-Skill
+  - 主题/AI原生工作法
+  - 手法/8节点
+  - 手法/5关键金句
+  - 手法/3反直觉
+  - 场景/Seetong借鉴
+  - 公众号/腾讯云开发者
+  - 作者/王畅
+  - 公司/腾讯健康
 nodes: [个体提效 ≠ 组织提效, 组织效率公式, PM 工作视角迁移, 数据可见：流程与责任机制建模, 数据可信：状态推断自动化, 异常定位：AI 持续巡检, 瓶颈挖掘：系统级优化, PM-Skills 三件套落地]
 links: [[03-productivity/笔记侠-十布-这-是以后的工作方式]], [[03-productivity/快刀青衣-WAIC观察笔记-那些活人感的笨功夫是AI时代最重要的护城河]], [[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]], [[03-productivity/AI组织进化论-Codex负责人-AI原生工作法]], [[01-ai-agents/ThinkingAgent-Knock-Agent模式框架]], [[01-ai-agents/WorkBuddy进化史-一款AI产品背后-是一套新的团队工作方式]]
 date: 2026-08-19

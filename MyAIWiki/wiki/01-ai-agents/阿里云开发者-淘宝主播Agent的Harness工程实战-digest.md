@@ -13,6 +13,7 @@ type: digest
 date: 2026-06-18
 source: 微信公众号 / 阿里云开发者(阿里妹系列) 2026-06-17
 原始链接: https://mp.weixin.qq.com/s/Mv5U5kr_viixmB0JJronPA
+nodes: []
 ---
 
 # 淘宝主播 Agent 的 Harness 工程实战(速读摘要)

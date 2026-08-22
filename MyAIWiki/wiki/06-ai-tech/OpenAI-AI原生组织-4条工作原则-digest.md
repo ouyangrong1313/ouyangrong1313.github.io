@@ -8,6 +8,7 @@ tags:
   - 作者/AI组织进化论
 date: 2026-07-15
 source: 微信公众号「AI组织进化论」2026-07 / 综合 OpenAI Operating Principles / 原文 https://mp.weixin.qq.com/s/nDPqVJkzdGkwnSv_QSgtgw
+nodes: []
 ---
 
 # OpenAI AI 原生组织 4 条工作原则 - Digest

@@ -13,7 +13,7 @@ tags:
   - 手法/免费锚定
   - 手法/案例驱动
 nodes: [CLAUDE.md, 内存快捷方式, 并行会话, 提示模式, Boris-Cherny, 提示词工程化, 免费vs付费]
-links: [[articles/2026-06-06-precis0x-Boris-Claude-Code-28min-Video|原文]] · [[articles/2026-06-06-precis0x-Boris-Claude-Code-28min-Video-digest|拆解]] · [[02-ai-coding/every-agentic-engineering-hack-2026-06|Matt Van Horn 的 22 个 Hacks]] · [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] · [[02-ai-coding/claude-code-dynamic-workflows]]
+links: 原文 · 拆解 · [[02-ai-coding/every-agentic-engineering-hack-2026-06|Matt Van Horn 的 22 个 Hacks]] · [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] · [[02-ai-coding/claude-code-dynamic-workflows]]
 date: 2026-06-06
 source: X / @precisox（推荐）/ Boris Cherny（视频作者）
 stats: 88万 浏览 / 69 转推 / 1,360 引用 / 8,335 喜欢 / 1.5万 书签（2026-06-07 抓取）
@@ -93,8 +93,8 @@ stats: 88万 浏览 / 69 转推 / 1,360 引用 / 8,335 喜欢 / 1.5万 书签（
 
 ## 关联阅读
 
-- [[articles/2026-06-06-precis0x-Boris-Claude-Code-28min-Video|原文存档]] — 推文完整正文
-- [[articles/2026-06-06-precis0x-Boris-Claude-Code-28min-Video-digest|拆解文档]] — 5 角度 + 钩子库
+- 原文存档 — 推文完整正文
+- 拆解文档 — 5 角度 + 钩子库
 - [[02-ai-coding/every-agentic-engineering-hack-2026-06|Matt Van Horn 的 22 个 Hacks]] — 一线工程化展开
 - [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] — 团队视角工作原则
 - [[02-ai-coding/claude-code-dynamic-workflows|Claude Code 动态工作流]] — Anthropic 官方 dynamic workflow

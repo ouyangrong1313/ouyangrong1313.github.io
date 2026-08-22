@@ -12,6 +12,7 @@ type: digest
 date: 2026-06-18
 source: 微信公众号 / 大淘宝技术(官亭) 2026-06-17 14:20
 原始链接: https://mp.weixin.qq.com/s/8wJhwC4YuaOX-8GXMaFU5g
+nodes: []
 ---
 
 # 面向 Skills 编程——淘宝企业购端到端研发提效实践(速读摘要)

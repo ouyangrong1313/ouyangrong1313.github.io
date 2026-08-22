@@ -86,6 +86,6 @@ source: 微信公众号「晚点再听LaterCast」Capihom 2026-08-03 编译 Lenn
 
 ## 相关链接
 
-- [[2026-08-03-Capihom-Whatnot-CPO-产品经理是否按人头配齐-digest]]
+- 2026-08-03-Capihom-Whatnot-CPO-产品经理是否按人头配齐-digest
 - [[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]]
 - [[02-ai-coding/Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]]

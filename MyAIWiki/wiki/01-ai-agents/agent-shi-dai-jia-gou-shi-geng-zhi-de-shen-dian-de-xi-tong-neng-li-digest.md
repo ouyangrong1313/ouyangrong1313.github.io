@@ -176,6 +176,6 @@ Agent 时代，框架半衰期极短，但**系统能力不会**。本文提出�
 
 - [[01-ai-agents/agent-principles-architecture-engineering]]
 - [[01-ai-agents/记忆是-agent-基建]]
-- [[Harness 正在成为新后端]]
+- Harness 正在成为新后端
 - [[01-ai-agents/Skills驱动推理新范式]]
 - [[01-ai-agents/OpenClaw的正确打开方式]]

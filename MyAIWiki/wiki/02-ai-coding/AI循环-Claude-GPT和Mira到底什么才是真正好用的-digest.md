@@ -13,6 +13,7 @@ type: digest
 date: 2026-07-05
 source: X（Twitter） / 淘沙者（TheSandPicker）@Etudecn 2026-07-03
 原始链接: https://x.com/Etudecn/status/2073072648922481000
+nodes: []
 ---
 
 # AI循环：Claude、GPT和Mira，到底什么才是真正好用的(速读摘要)

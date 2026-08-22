@@ -8,6 +8,7 @@ tags:
   - 作者/HBR-China
 date: 2026-07-15
 source: 微信公众号「HBR-China」/ 作者 薛纯 / 一手来源 2026 第四届全国大学生行研大赛 / 原文 https://mp.weixin.qq.com/s/c989z1XUAxZfZtplXxEzg
+nodes: []
 ---
 
 # AI 时代行研：独特洞察从哪里来？- Digest

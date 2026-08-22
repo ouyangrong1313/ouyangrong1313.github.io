@@ -1,7 +1,15 @@
 ---
 title: "Harness Inspector：让 Agent 交付过程可观察、可检查、可追溯"
 category: 01-ai-agents
-tags: [主题/AI-Agent, 主题/Harness, 主题/AI-Coding, 节点/交付证据链, 节点/可追溯交付, 节点/Skill-Discovery, 场景/开源项目, 场景/公众号长文]
+tags:
+  - 主题/AI-Agent
+  - 主题/Harness
+  - 主题/AI-Coding
+  - 节点/交付证据链
+  - 节点/可追溯交付
+  - 节点/Skill-Discovery
+  - 场景/开源项目
+  - 场景/公众号长文
 nodes: [交付证据链, 意图过程产出, Workbench, Trace, Replay, 证据边界, Skill-Discovery, 稳定工作路径]
 links: ["[[01-ai-agents/phodal-Better-Harness-任务级证据评估]]", "[[01-ai-agents/Loop-Engineering-验证才是瓶颈]]", "[[02-ai-coding/phodal-项目记住-Coding-Agent-5步法]]"]
 date: 2026-08-17

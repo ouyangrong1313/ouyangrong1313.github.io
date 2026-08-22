@@ -8,6 +8,8 @@ tags:
   - MultiAgent
   - Workflow
   - OpenClaw
+category: 01-ai-agents
+nodes: []
 ---
 
 # 多 Agent 分工原则：什么时候单 Agent，什么时候并行，什么时候路由

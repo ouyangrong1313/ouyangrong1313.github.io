@@ -27,6 +27,7 @@ related:
   - "[[02-ai-coding/Addy-Osmani-Loop-Engineering]]"
   - "[[01-ai-agents/Loop-Engineering-验证才是瓶颈]]"
   - "[[01-ai-agents/清华沈阳-自进化AI新物种]]"
+nodes: []
 ---
 
 # 麦肯锡：AI 提效只是第一波红利

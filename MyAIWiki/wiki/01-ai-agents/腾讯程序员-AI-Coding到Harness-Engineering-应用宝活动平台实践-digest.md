@@ -14,6 +14,7 @@ type: digest
 date: 2026-07-05
 source: 微信公众号 / 腾讯程序员 2026-07-05(腾讯应用宝活动平台团队 / zimingxing、kinglongli、yifhao)
 原始链接: https://mp.weixin.qq.com/s/UE-RZH9hnbBd06CVapFGrA
+nodes: []
 ---
 
 # 从 AI Coding 到 Harness Engineering 应用宝活动平台端到端实践(速读摘要)

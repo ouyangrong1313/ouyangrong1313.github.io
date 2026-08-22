@@ -1,6 +1,13 @@
 ---
 name: perplexity-agent-skills-design
 description: Perplexity Agent Skills 设计规范
+title: Perplexity Agent Skills 设计规范
+category: 01-ai-agents
+tags:
+  - 主题/AI
+  - 主题/Skill设计
+nodes: []
+date: 2026-08-22
 ---
 
 # Perplexity Agent Skills 设计规范

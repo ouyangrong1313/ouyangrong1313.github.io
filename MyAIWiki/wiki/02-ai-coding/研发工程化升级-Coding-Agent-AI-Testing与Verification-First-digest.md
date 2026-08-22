@@ -10,6 +10,7 @@ tags:
   - 作者/Knock
 date: 2026-07-16
 source: 微信公众号「ThinkingAgent」/ 作者 Knock / 原文 https://mp.weixin.qq.com/s/N3mJOygkf4uOaho7V6q58Q
+nodes: []
 ---
 
 # 研发工程化升级：Coding Agent、AI Testing、Verification First与研发效能 - Digest

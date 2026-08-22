@@ -4,6 +4,9 @@ category: 02-ai-coding
 date: 2026-06-26
 type: Wiki 速读摘要
 source: 微信公众号「字节跳动」转载自稀土掘金技术社区(2026-06-23 火山引擎 Force 原动力大会演讲)
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # 字节跳动洪定坤:AI Coding 的实践与探索 - Digest

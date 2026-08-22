@@ -5,6 +5,9 @@ date: 2026-06-17
 source: 微信公众号 InfoQ 2026-06-17 编译
 source_url: https://mp.weixin.qq.com/s/JiX1X9EQy8Cimm_Yg0pyTg
 main_entry: [[02-ai-coding/InfoQ-Adam-Bender-软件生态学-10倍时刻]]
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # 软件生态学与 10 倍代码时刻 — Digest

@@ -1,7 +1,16 @@
 ---
 title: "DeepSeek Harness 拆解：一套能拼装的 Agent 架构"
 category: 01-ai-agents
-tags: [主题/AI-Agent, 主题/Harness, 主题/插件运行时, 主题/运行时架构, 节点/可逆副作用, 节点/Fiber生命周期, 节点/Scope继承, 节点/Code-Mode, 场景/公众号长文]
+tags:
+  - 主题/AI-Agent
+  - 主题/Harness
+  - 主题/插件运行时
+  - 主题/运行时架构
+  - 节点/可逆副作用
+  - 节点/Fiber生命周期
+  - 节点/Scope继承
+  - 节点/Code-Mode
+  - 场景/公众号长文
 nodes: [一切皆插件, 可逆副作用, Fiber生命周期, effect撤销栈, 系统边界, Scope继承, Code-Mode隔离, 工具遮蔽]
 links: ["[[01-ai-agents/Harness工程AgentLoop]]", "[[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]", "[[01-ai-agents/2026-07-29-人月聊IT-通用AI-Agent平台-Harness技术底座]]", "[[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]"]
 date: 2026-08-17

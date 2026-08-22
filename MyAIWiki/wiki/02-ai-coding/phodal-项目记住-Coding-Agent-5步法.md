@@ -50,12 +50,12 @@ source: 微信公众号 / Phodal（原文链接 https://mp.weixin.qq.com/s/1FrHN
 
 - **上游：** [[01-ai-agents/phodal-Better-Harness-任务级证据评估]]（同作者 7/28，对偶必读）[[01-ai-agents/lencx-Agent开发指南-技术太多-该怎么学]] [[01-ai-agents/Skill-Self-Evolution]] [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]
 - **下游：** [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]] [[02-ai-coding/Agent自维护体系-完整实战]] [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]
-- **同级：** [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] [[02-ai-coding/AI-Coding的顿悟时刻]] [[Task-类型到验证模板]]
+- **同级：** [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]] [[02-ai-coding/AI-Coding的顿悟时刻]] Task-类型到验证模板
 
 ## 6 个对 Seetong 团队可借鉴动作
 
 1. **AGENTS.md 体检：** 6 个 Seetong 主仓库（iOS/Android/Harmony/SDK-Net/SDK-PlayCtrl/Seetong-AI 助手）按"安装/测试/不修改/导航/边界"5 项打勾，缺项优先补。
-2. **文档任务路由化：** `wiki/{分类}/index.md` 升级为"读取条件小句"而非链接列表——"改 iOS 端业务前，先读 [[Seetong-iOS-架构地图]]"。
+2. **文档任务路由化：** `wiki/{分类}/index.md` 升级为"读取条件小句"而非链接列表——"改 iOS 端业务前，先读 Seetong-iOS-架构地图"。
 3. **Skill 探索门槛硬约束：** Seetong AI 助手新增 Skill 走 6 条门槛，**任一条不满足则不沉淀 Skill**，直接在 SKILL.md 注明"未达沉淀门槛，临时使用"。
 4. **内部 CLI 优先 MCP：** 神策/TAPD/Git/友盟运维脚本按 Agent CLI 六条升级（`--json` / `--dry-run` / 退出码 / 超时），让 Seetong AI 助手直接调用。
 5. **Loop Discovery 月度复盘：** 每月 1 次回顾——哪个 Skill 帮了 ≥ 2 次任务 / 哪个应下架 / 哪个 Hook 拦截了真实风险，按 5 类沉淀位置决策调整。

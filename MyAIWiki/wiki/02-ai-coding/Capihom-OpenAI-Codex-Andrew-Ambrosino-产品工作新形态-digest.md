@@ -9,6 +9,7 @@ tags:
   - 场景/速读
 date: 2026-06-30
 source: 微信公众号 Capihom 2026-06-30 编译
+nodes: []
 ---
 
 # Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态 - Digest

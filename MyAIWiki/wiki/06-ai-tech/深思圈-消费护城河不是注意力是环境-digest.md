@@ -2,6 +2,9 @@
 title: 下一个消费护城河不是注意力，是环境 - Digest
 category: 06-ai-tech
 date: 2026-06-29
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # 消费护城河不是注意力是环境 - Digest

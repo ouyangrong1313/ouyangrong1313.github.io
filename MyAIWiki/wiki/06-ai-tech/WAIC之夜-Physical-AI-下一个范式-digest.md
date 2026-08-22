@@ -9,6 +9,7 @@ tags:
   - 世界模型
 rating: ⭐⭐
 source: "[[06-ai-tech/WAIC之夜-Physical-AI-下一个范式]]"
+nodes: []
 ---
 
 # WAIC 2026 Physical AI 圆桌 - Digest

@@ -11,6 +11,7 @@ tags:
   - 判断执行分界
 rating: ⭐⭐
 source: "[[02-ai-coding/AndrejKarpathy-AI写代码-只需要问自己这一个问题]]"
+nodes: []
 ---
 
 # Andrej Karpathy：AI写代码，只需要问自己这一个问题 - Digest

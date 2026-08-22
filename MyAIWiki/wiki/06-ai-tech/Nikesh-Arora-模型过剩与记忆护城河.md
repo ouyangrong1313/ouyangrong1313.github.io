@@ -23,6 +23,7 @@ related:
   - "[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]"
   - "[[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]]"
   - "[[02-ai-coding/Addy-Osmani-Loop-Engineering]]"
+nodes: []
 ---
 
 # Nikesh Arora：模型过剩与记忆护城河

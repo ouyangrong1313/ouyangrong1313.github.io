@@ -5,6 +5,9 @@ date: 2026-06-22
 source: 微信公众号 / 架构师 JiaGouX —若飞
 source_url: https://mp.weixin.qq.com/s/YScRbcLfQYJWY7QLHXWp9A
 main_entry: [[02-ai-coding/若飞-用ClaudeCode搭建AI学习系统]]
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # 若飞：用 Claude Code 搭建自己的 AI 学习系统 — Digest

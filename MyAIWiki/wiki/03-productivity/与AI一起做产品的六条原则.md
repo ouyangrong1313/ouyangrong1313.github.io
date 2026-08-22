@@ -77,7 +77,7 @@ source: 微信公众号 / AGENT橘(团队实践总结);原文链接 https://mp.w
 - [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]] - PM 核心技能,本文是"决策原则"维度
 - [[02-ai-coding/problem-first把方案翻转回问题]] - 同 PM 主线,本文补"AI 时代判断力"维度
 - [[index]] - 03-productivity 首篇破冰
-- 关联:[[memory/2026-06-10]] 中 MMP / Harmony 0 commit 开放问题
+- 关联:2026-06-10 中 MMP / Harmony 0 commit 开放问题
 
 ## 正文要点(6 条)
 

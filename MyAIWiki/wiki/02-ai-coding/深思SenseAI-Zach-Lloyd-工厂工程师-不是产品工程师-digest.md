@@ -4,6 +4,9 @@ category: 02-ai-coding
 date: 2026-06-26
 type: Wiki 速读摘要
 source: 微信公众号「深思 SenseAI」编译自 Zach Lloyd @zachlloydtweets 公开的 Warp 内部备忘录
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # 工厂工程师,不是产品工程师 - Digest
@@ -51,7 +54,7 @@ source: 微信公众号「深思 SenseAI」编译自 Zach Lloyd @zachlloydtweets
 
 **关联**:**上游** AI Coding 三阶段范式迁移 + Warp 6 万星仓库 + Paul Bakaus 反向观点;**下游** [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] 字节 vs Warp 对照 + [[01-ai-agents/清华沈阳-自进化AI新物种]] 递归自我改进 + [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] Harness 视角 + [[03-productivity/与AI一起做产品的六条原则]] 6 原则做"为什么"的人;**同级** [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] 阿里淘系
 
-**备注**:深思圈编译,Lloyd 备忘录原话推文公开可信度较高;原始发布日期未公开(可推断 2026-05/06);Warp Oz 6 万星仓库具体 GitHub 链接未给出;Bakaus 原文暂未直接引用,后续可加 [[Paul-Bakaus-人留最后20%]] 同月对比笔记;**本仓库缺位补完**:02-ai-coding 现有主线偏"怎么做"(Harness/Loop/Skills),**缺位"工厂化思维 + COGS 视角 + 递归自我改进"反思性内容**,本文补完
+**备注**:深思圈编译,Lloyd 备忘录原话推文公开可信度较高;原始发布日期未公开(可推断 2026-05/06);Warp Oz 6 万星仓库具体 GitHub 链接未给出;Bakaus 原文暂未直接引用,后续可加 Paul-Bakaus-人留最后20% 同月对比笔记;**本仓库缺位补完**:02-ai-coding 现有主线偏"怎么做"(Harness/Loop/Skills),**缺位"工厂化思维 + COGS 视角 + 递归自我改进"反思性内容**,本文补完
 
 ---
 

@@ -101,7 +101,7 @@ Garry **已经拥有 350+ 个 skill pack**，覆盖大多数个人和工作任�
    - **合起来看**：AI-native 团队不只是"组织要变"，连"写代码这件事本身"都要变
 
 2. **"Skill pack" 是范式的真正可操作单元**：
-   - 之前 [[从Prompt-Context到Harness]] 提出 Harness 是 L2→L3 内部平台
+   - 之前 从Prompt-Context到Harness 提出 Harness 是 L2→L3 内部平台
    - 本文说 skill pack 是 agent 工程时代的"栈/堆/寄存器"
    - **两者结合**：内部平台 = harness + skill pack 库 + resolver + 评估机制
 

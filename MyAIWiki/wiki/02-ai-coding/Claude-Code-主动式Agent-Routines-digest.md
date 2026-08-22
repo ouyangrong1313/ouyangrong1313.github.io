@@ -5,6 +5,9 @@ date: 2026-06-17
 source: 微信公众号 Capihom 2026-06-17 编译
 source_url: https://mp.weixin.qq.com/s/kvtDAdTe2H4hTUXc3FEaVg
 main_entry: [[02-ai-coding/Claude-Code-主动式Agent-Routines]]
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # Claude Code 主动式 Agent Routines — Digest

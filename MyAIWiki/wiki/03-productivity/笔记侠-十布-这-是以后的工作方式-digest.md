@@ -3,6 +3,9 @@ title: 这，是以后的工作方式！(Digest)
 category: 03-productivity
 date: 2026-07-17
 source: 微信公众号「笔记侠」/ 十布（影刀创始人兼 CEO）
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # 这，是以后的工作方式！(Digest)

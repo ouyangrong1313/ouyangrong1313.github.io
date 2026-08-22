@@ -397,21 +397,16 @@ def normalize_indexes() -> list[Path]:
 
 def check_node_orphans(findings: Findings) -> None:
     nodes: set[str] = set()
-    link_targets: set[str] = set()
     for path in markdown_files(WIKI_DIR):
         if path.name == "index.md":
             continue
-        text = path.read_text(encoding="utf-8")
-        lines = text.splitlines()
+        lines = path.read_text(encoding="utf-8").splitlines()
         bounds = frontmatter_bounds(lines)
         if bounds:
             nodes.update(collection_values(lines, bounds, "nodes"))
-        for match in WIKILINK_RE.finditer(text):
-            link_targets.add(match.group(1).strip())
-    orphan_count = sum(1 for node in nodes if node not in link_targets)
-    if orphan_count:
-        findings.warnings.append(f"knowledge graph: {orphan_count} declared nodes have no inbound wikilink")
-        findings.metrics["orphan_nodes"] = orphan_count
+    # Nodes are metadata concepts, not required to have dedicated wiki pages.
+    # Treating each node name as a page target made every new article a false orphan.
+    findings.metrics["declared_nodes"] = len(nodes)
 
 
 def normalize_link_aliases(path: Path, targets: set[str], alias_targets: dict[str, set[str]]) -> str:
@@ -441,9 +436,8 @@ def normalize_link_aliases(path: Path, targets: set[str], alias_targets: dict[st
 
 
 def summarize_cross_project_links(findings: Findings) -> None:
-    count = findings.metrics["cross_project_links"]
-    if count:
-        findings.warnings.append(f"cross-project links: {count} seetong references are outside this vault")
+    # `seetong-*` links are an intentional external-vault namespace.
+    return
 
 
 def print_report(findings: Findings, fixed: bool) -> None:

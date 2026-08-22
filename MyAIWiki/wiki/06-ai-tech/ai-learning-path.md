@@ -94,7 +94,7 @@
 ## 相关链接
 
 - [[01-ai-agents/index]]
-- [[rag-systems/index]]
+- index
 
 ## 标签
 

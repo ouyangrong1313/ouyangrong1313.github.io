@@ -8,6 +8,7 @@ tags:
   - 主题/Deloitte
 date: 2026-07-02
 source: 微信公众号「ThinkingAgent」/ 作者 Knock
+nodes: []
 ---
 
 # AI Native 组织 5 级成熟度模型 - Digest

@@ -5,6 +5,9 @@ date: 2026-06-17
 source: 微信公众号 腾讯程序员 2026-06-17
 source_url: https://mp.weixin.qq.com/s/PUbGqheJhFMmb6hGj1ZtOw
 main_entry: [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # 腾讯 TEG Agent Skill 测评方案 — Digest

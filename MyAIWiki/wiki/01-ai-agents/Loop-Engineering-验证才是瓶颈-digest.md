@@ -13,6 +13,7 @@ date: 2026-06-18
 source: 微信公众号 / 深思 SenseAI(翻译/编译) 2026-06-17
 原始作者: Samuel McDonnell(@samueljmcd)
 原始链接: https://mp.weixin.qq.com/s/xo6oA8gnihPG2ERGV9l4Sw
+nodes: []
 ---
 
 # Loop Engineering 的另一半:验证才是瓶颈(速读摘要)

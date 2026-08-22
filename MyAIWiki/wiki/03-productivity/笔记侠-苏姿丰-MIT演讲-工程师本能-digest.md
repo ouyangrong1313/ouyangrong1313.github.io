@@ -3,6 +3,9 @@ title: 苏姿丰 MIT 演讲 - Digest
 category: 03-productivity
 date: 2026-07-09
 source: 微信公众号「笔记侠(Notesman)」2026-07 / 贾宁 责编 / 苏姿丰 2026-05 MIT 毕业典礼演讲
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # 苏姿丰 MIT 演讲 - Digest

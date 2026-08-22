@@ -46,7 +46,7 @@ source: 微信公众号 / 得物技术(小诘、博温) 2026-06-17
 
 ### 同级(横向 / 并列)
 - 阿里淘系 Harness:[[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]](主播=实时交互高风险)/ [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]
-- 得物同主线:[[01-ai-agents/Skill-Self-Evolution]] / [[用 LLM Agent 重构告警排查流程]] / [[Claude Code Harness 工程:数仓侧落地方案]]
+- 得物同主线:[[01-ai-agents/Skill-Self-Evolution]] / 用 LLM Agent 重构告警排查流程 / Claude Code Harness 工程:数仓侧落地方案
 - Skill 主线:[[01-ai-agents/agent-skills-systematic-survey]] / [[02-ai-coding/谷歌开源agent-skills]] / [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] / [[02-ai-coding/PM-Skills-Marketplace-产品经理必备skill]]
 - Loop 主题:[[01-ai-agents/Loop-Engineering-验证才是瓶颈]](本文"3 道门"硬证据 vs 那篇 Loop 验证闸门)
 - 评测主线:[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]] "测评是 Demo→生产必须跨过的门槛"同主线

@@ -131,4 +131,4 @@ source: 微信公众号 / 新智元（对话清华教授沈阳 / ZeeLin 智灵�
 - 原文：https://mp.weixin.qq.com/s/NjIxB2OpMvTNaQyKrpBJeA
 - ZeeLin 全产品矩阵：https://www.zeelin.cn/
 - Knover AI 科学家：https://www.knover.cn/
-- 速读 digest：[[2026-06-15-清华沈阳-自进化AI新物种-digest]]
+- 速读 digest：2026-06-15-清华沈阳-自进化AI新物种-digest

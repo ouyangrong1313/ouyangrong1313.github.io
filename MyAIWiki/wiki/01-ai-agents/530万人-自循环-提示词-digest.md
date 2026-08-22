@@ -3,6 +3,9 @@ title: 530 万人读的这篇：自循环提示词（Digest）
 category: 01-ai-agents
 date: 2026-06-22
 source: 微信公众号 深思圈（编译自 Anatoli Kopadze 530 万浏览爆款）
+tags:
+  - 主题/未分类
+nodes: []
 ---
 
 # 530 万人读的这篇：自循环提示词（Digest）

@@ -304,9 +304,9 @@
 ## 相关链接
 - [[06-ai-tech/Agent Harness 解析：智能体架构深度拆解]]
 - [[06-ai-tech/Agent Harness 与 OpenClaw：从工具到系统的中文解读]]
-- [[AI Agent]]
+- AI Agent
 - [[02-ai-coding/index]]
-- [[Knowledge Engineering]]
-- [[第二大脑]]
-- [[Heuristic Learning]]
-- [[OpenClaw]]
+- Knowledge Engineering
+- 第二大脑
+- Heuristic Learning
+- OpenClaw

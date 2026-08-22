@@ -78,5 +78,5 @@ source: "微信公众号「浮之静」/ lencx，2026-07-28"
 
 - 文中列举的收购、实验性 API、性能数据和路线图不构成稳定产品承诺，落地前应验证发布日期、当前兼容性和原始公告。
 - “Agent-readable surface”是本文归纳的工程方向，不等同于某个单一标准；MCP、WebMCP、CLI contract 与 Agent Skills 仍在并行演进。
-- [[2026-07-lencx-Agent开发指南-技术太多-该怎么学-digest]]：7 个分析角度和 21 个写作钩子。
+- 2026-07-lencx-Agent开发指南-技术太多-该怎么学-digest：7 个分析角度和 21 个写作钩子。
 - [[01-ai-agents/harness-engineering]]、[[01-ai-agents/Loop-Engineering-验证才是瓶颈]]、[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]、[[01-ai-agents/Skill-Self-Evolution]]：可按 Harness、验证、Memory、Skill 四条主线继续查询。
