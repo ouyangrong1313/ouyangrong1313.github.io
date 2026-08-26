@@ -1,5 +1,17 @@
 # AI Coding
 
+## AI 原生开发的确认链路（2026-08-26 新增）
+
+> 宝玉以 BaoCut 的远程转录功能复盘指出：AI 不会消除可行性、设计、原型、实现和测试，而是把执行交给 Agent。人应把有限注意力转给方向取舍、原型体验、用户验收和风险判断；确认可合并，但不可省略。
+
+- [[02-ai-coding/宝玉AI-我的AI原生开发流程-真实案例复盘]] - **核心命题**“流程不变，角色变了”：可行性确认 -> 文档记忆 -> 高精度原型 -> Agent 自验证 -> 人类黑盒验收。**8 节点**（执行主体迁移 / 可行性确认 / 文档即记忆 / 高精度原型 / Agent自验证 / 用户黑盒测试 / 确认不可省略 / 两侧优先）；与 [[02-ai-coding/Notion-spec-driven-AI-workflow]]、[[02-ai-coding/大淘宝技术-永霸-AI-Coding-环境与验证驱动]]、[[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] 强关联。该结论来自单个 App 功能复盘，Code Review 取舍须按风险调整。
+
+## AI Coding：从 Spec 管道到环境与验证闭环（2026-08-25 新增）
+
+> 大淘宝技术永霸提出，模型代码生成越强，研发瓶颈越会转移到编码之外的内部环境与验证反馈。真正值得长期投资的不是更细的提示词和固定生码管道，而是让 Agent 可调用构建、测试、发布、日志和监控的环境能力，并让 Spec 明确约束与假设而非锁死实现路径。
+
+- [[02-ai-coding/大淘宝技术-永霸-AI-Coding-环境与验证驱动]] - **核心命题**“模型能力 × 环境能力”：代码生成提速不能自动缩短交付周期；企业应以可验证反馈改造内部研发系统，让 Agent 在分层验证下自主循环。**8 节点**（编码外瓶颈 / 可验证反馈 / 电力轴传动 / 单元驱动 / 环境能力 / 乘法红利 / 约束与假设 / 分层验证）；与 [[02-ai-coding/Notion-spec-driven-AI-workflow]] [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]] [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] 强关联。数据与历史类比未独立核验。
+
 ## 上下文工程与多 Agent 信息流（2026-08-18 新增）
 
 - [[02-ai-coding/腾讯云开发者-Agent的命门是上下文-关键不在少给而在给对]] - 腾讯云开发者黄照坤复盘 CodeGraph、RTK 与 Devflow：上下文优化的关键不是压缩最多内容，而是让图谱替代无效搜索、让摘要可回退、以 Artifact 保存证据、用短 Handoff 交接、由状态机负责确定性路由；**8 节点**覆盖图谱替代、局部压缩、路径反增、上下文存活、短交接、按需回源、阶段路由和信息密度。文中成本与实验数据均为作者自述，未独立复现。
@@ -39,6 +51,10 @@ AI 辅助编程的实战经验、提示词模板、工作流总结。
 - [[02-ai-coding/多Agent使用边界与并行判定]] - 定义什么时候该单 agent，什么时候值得并行 ⭐
 
 ### 实战案例
+- [[02-ai-coding/瑟瑟发抖-WorkBuddy培训结束后-老板开始用AICoding亲自做产品了]] - 叶小钗以字幕工具失败案例提出 AI 项目的五阶段门槛：个人工具 -> 流程节点 -> 团队协同 -> 数字员工 -> 组织基建；创造权下沉时，评价权与责任也必须同步重构。
+- [[02-ai-coding/瑟瑟发抖-WorkBuddy培训结束后-老板开始用AICoding亲自做产品了-digest]] - 五阶段升级证据与四项拆分验证速读。
+- [[02-ai-coding/AICoding之后-如何让Agent进入企业研发全链路-得物推荐的Harness实践]] - 得物推荐将 Agent 接入 PDCA 研发飞轮：TPRD/Contract 定边界，沙箱/UTD/Mock 提供验证环境，三层知识供给上下文，Highway/ATV 将已验证经验代码化；效果数据为团队阶段性口径。
+- [[02-ai-coding/AICoding之后-如何让Agent进入企业研发全链路-得物推荐的Harness实践-digest]] - PDCA、三层知识与 Highway/ATV 速读表。
 - [[02-ai-coding/被Harness圈捧成圣的PiAgent-接上DeepSeek-V4-Flash-如虎添翼]] - Pi 的薄 Harness / 原语优先路线：将上下文纪律、模型路由与扩展治理作为端到端成本优化问题；公众号转述的跑分保留证据边界。
 - [[02-ai-coding/Karpathy-autoresearch-从上下文工程到自主研究循环]] - 微信公众号「AgenticHub」2026-07-27 二手解读 + Karpathy 官方 `karpathy/autoresearch` 一手核验：**核心命题**“自主研究循环的关键不是无限运行，而是不可变评分器 + 单文件搜索空间 + 固定 5 分钟预算 + `val_bpb` + Git keep/reset + TSV 账本”；**8 节点**（autoresearch / 固定评分器 / 单文件搜索空间 / 五分钟预算 / val_bpb / 棘轮提交 / 实验账本 / 多Agent扩展边界）；已纠正“9 页 PDF”“4 个 Bug”“官方 Agent DAG”等二手误述；与 [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]] 强关联。
 - [[02-ai-coding/AndrejKarpathy-AI写代码-只需要问自己这一个问题]] - 微信公众号「winkrun」2026-07-15 推送：把 Karpathy 的 AI Coding 判断框架压成一句“思考到底发生在哪一步？”；**核心命题**“判断未完成的任务由人握住，成功标准清晰的任务才交给 AI”+ 后半段用 rvaniaaa 的 GitHub 技能蒸馏系统把“人做判断，AI 做执行”工程化；**8 节点**（思考发生点 / 判断执行分界 / 双资深一致 / 工作流档位切换 / Scout-Filter-Reader / Workflow-Extractor / Skill-Score / Reviewer-Publisher）；**与 [[02-ai-coding/AI-Coding的顿悟时刻]] [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]] [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]] [[01-ai-agents/Skill-Self-Evolution]] 强关联**——连接“AI Coding 边界判断”和“Skill 自进化流水线”两条主线；**分类理由**：前半是 AI Coding 任务分界，后半是 Skill 资产化 pipeline，放 `02-ai-coding` 比 `01-ai-agents` 更贴切；**透明玻璃自检**：wiki 6.8K(≤8K)/ digest 3.3K(≤4K)/ 节点 8(6-10)/ H2 5 wiki / H2 5 digest(≤5)。

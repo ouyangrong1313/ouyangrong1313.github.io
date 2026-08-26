@@ -1,5 +1,19 @@
 # AI Agents Wiki
 
+## Agent 评测平台运行闭环（2026-08-25 新增）
+
+> **微信公众号「叶小钗」叶小钗，2026-08-25**：Agent 评测应从 PRD 的任务边界和发布门禁开始，落入版本化数据集、分层评分器和完整 Run 快照；失败不止出现在报告中，还要进入问题中心、重测和持续回归。
+
+- [[01-ai-agents/叶小钗-Agent评测-维度方法与落地实践]] - **核心命题**“评测不是上线前的一次打分，而是从 PRD 写清任务边界与门禁，将用例和评分器版本化，复用生产 Run 证据，再由问题中心和持续回归把失败接回优化”；**8 节点**（评测前置 / 任务分型 / 多维评测 / 数据集分层 / 评分器编排 / 运行快照 / 问题中心 / 持续回归）；与 [[01-ai-agents/Agent评测漫谈-由浅入深讲解Agent评测]]、[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]、[[03-productivity/Z-Finance-Anthropic-Dianne-Penn-评测就是新的PRD]] 强关联。
+- [[raw/叶小钗-Agent评测-维度方法与落地实践-digest]] - 七个分析角度、21 个钩子、最小闭环与证据边界。
+
+## 产物中心 Harness 与人机协作（2026-08-24 新增）
+
+> Phodal 将 Agent Loop 的工作现场从单一对话扩展到可持续演化的产物：用户选区、批注和直接编辑也是任务状态；Harness 负责把意图、版本、操作、回执与验证证据连成闭环，各领域运行时仍保留自己的结构和验证方式。
+
+- [[01-ai-agents/phodal-面向人机交互设计Harness-产物中心Agent-Loop]] - **核心命题**“当人直接操作产物时，对话不再拥有完整工作现场；Harness 应以产物的语义对象、版本绑定、操作回执和验证证据组织协作，而非试图统一所有领域模型”；**8 节点**（产物中心 / 对话盲区 / 语义选区 / 版本绑定 / 领域运行时 / 协作协议 / 操作回执 / 验证证据）；与 [[01-ai-agents/phodal-Better-Harness-任务级证据评估]]、[[01-ai-agents/phodal-Harness-Inspector-Agent交付可观察可检查可追溯]]、[[01-ai-agents/Harness工程AgentLoop]]、[[01-ai-agents/Loop-Engineering-验证才是瓶颈]] 构成“证据评估 - 交付审查 - 产物协作 - 验证闭环”链条。
+- [[01-ai-agents/phodal-面向人机交互设计Harness-产物中心Agent-Loop-digest]] - 产物中心速查表 + 三个反直觉点 + 证据边界。
+
 ## 新增（2026-08-18）
 
 - [[01-ai-agents/叶小钗-DeepSeek-Harness-实测]] - DeepSeek Harness 的服务依赖、Capability Seam、Inbox 消息时机、Session 重建与工具策略拆解；Codex/V4 结果仅保留为单任务作者观察，非通用评测。
