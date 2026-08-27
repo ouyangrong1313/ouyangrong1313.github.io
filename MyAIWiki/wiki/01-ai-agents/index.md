@@ -353,3 +353,13 @@
 - [[01-ai-agents/智联网-移动互联网下一站]]
 - [[01-ai-agents/陈春花-AI时代管理者重建判断权-digest]]
 - [[01-ai-agents/陈春花-AI时代管理者重建判断权]]
+
+### Lilian Weng：从 Agent 架构到 Harness/RSI（2026-08-26）
+
+- [[LilianWeng-那个把Agent讲清楚的人-又开始定义Harness]] - DataFun 对 Lilian Weng 路线的二手整理：Harness 将工具、状态、工作流和评测纳入运行系统；近期自我改进的工程前提是独立验收与不可修改的安全边界。
+- [[LilianWeng-那个把Agent讲清楚的人-又开始定义Harness-digest]] - Agent、Harness、RSI 的六节点速读与证据边界。
+
+### Agent 自进化飞轮：评测、记忆、落地、控制（2026-08-26）
+
+- [[一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制]] - 腾讯技术工程的完整工程闭环：可信评测产生信号，受治理记忆筛选经验，候选 Skill/Prompt/流程经回归和灰度发布，人保留安全与评测控制面。
+- [[一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制-digest]] - 四齿飞轮、三集隔离、候选发布与控制边界速读。

@@ -193,6 +193,69 @@
 
 ---
 
+## 2026-08-27
+### ingest | AI时代，人类将分成两种：消费者和创造者｜彭凯平对话未来学家Peter Diamandis
+- 来源：https://mp.weixin.qq.com/s/jnLqDrI_fyJTGikqal9NLQ
+- 原文：raw/AI时代-人类将分成两种-消费者和创造者｜彭凯平对话未来学家PeterDiamandis.md
+- 拆解：raw/AI时代-人类将分成两种-消费者和创造者｜彭凯平对话未来学家PeterDiamandis-digest.md
+- wiki：wiki/03-productivity/AI时代-人类将分成两种-消费者和创造者｜彭凯平对话未来学家PeterDiamandis.md
+- wiki 速读：wiki/03-productivity/AI时代-人类将分成两种-消费者和创造者｜彭凯平对话未来学家PeterDiamandis-digest.md
+- 标签： #主题/效率 #主题/创造力 #主题/AI时代个人发展 #主题/未来思维 #场景/公众号长文
+- 核心命题：AI 可以放大实现能力却不能替人选择使命、定义问题或承担价值判断；个人应把被节省的注意力转为创造、学习、关系和可验证的长期目标。
+- 关联：[[03-productivity/与AI一起做产品的六条原则]]、[[03-productivity/HBR-China-AI时代高潜力人才三种能力]]、[[06-ai-tech/章文龙-AI分身时代-在场重新定价]]。
+- 证据边界：科学、社会、政治和长寿预测均为访谈观点或转述，未独立核验；消费者/创造者是价值框架，不是事实分类。
+### ingest | 一文搞懂个人AI记忆系统构建全流程
+- 来源：https://mp.weixin.qq.com/s/2Kz2JQK1r606S3quiCFUYg
+- 原文：raw/一文搞懂个人AI记忆系统构建全流程.md
+- 拆解：raw/一文搞懂个人AI记忆系统构建全流程-digest.md
+- wiki：wiki/07-rag-systems/一文搞懂个人AI记忆系统构建全流程.md
+- wiki 速读：wiki/07-rag-systems/一文搞懂个人AI记忆系统构建全流程-digest.md
+- 标签： #主题/RAG #主题/个人AI记忆 #主题/知识工程 #主题/Memory #主题/跨工具协作 #场景/公众号长文
+- 核心命题：个人 AI 记忆应是用户自有、可版本化的文件资产；通过五层分级、元数据、双层索引、按需召回和确认式写入，使不同 AI 工具共享同一事实来源。
+- 关联：[[07-rag-systems/如何构建一个更好的知识库]]、[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]、[[01-ai-agents/llm-agent-unified-memory-framework]]。
+- 证据边界：本文是个人实践整理，未给出召回质量、跨工具兼容性或维护成本的对照实验；目录与元数据设计需按隐私和使用场景调整。
+### ingest | Anthropic 发布 AI-Native 软件开发流程：时代变了，该换套模式了
+- 来源：https://mp.weixin.qq.com/s/YeAL7XBmltR4n3rUnz3Pag
+- 原文：raw/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了.md
+- 拆解：raw/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了-digest.md
+- wiki：wiki/02-ai-coding/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了.md
+- wiki 速读：wiki/02-ai-coding/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了-digest.md
+- 标签： #主题/AI-Coding #主题/AI-Native研发 #主题/SDLC #主题/Spec驱动 #主题/验证驱动 #主题/Harness #场景/公众号长文
+- 核心命题：以版本化的 Intent、Spec、Plan、代码/测试、PR 和事故记录作为阶段交接契约与触发器；人审查目标、风险与门禁，Agent 在受控范围内实施、验证和回流证据。
+- 关联：[[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]、[[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]]、[[02-ai-coding/宝玉AI-我的AI原生开发流程-真实案例复盘]]、[[02-ai-coding/研发工程化升级-Coding-Agent-AI-Testing与Verification-First]]。
+- 证据边界：本文是 Founder Park 的二手编译；Anthropic 手册日期、内部实践、市场数据与示例均未独立核验，工具示例不构成必选技术栈。
+### ingest | 程序员的新岗位是监工！Codex负责人：我不想再同时盯10个Agent了，未来让系统接手分工，人只在关键时刻拍板
+- 来源：https://mp.weixin.qq.com/s/jsAMm52Nj0hROpNCytLTzw
+- 原文：raw/程序员的新岗位是监工-Codex负责人-我不想再同时盯10个Agent了-未来让系统接手分工-人只在关键时刻拍板.md
+- 拆解：raw/程序员的新岗位是监工-Codex负责人-我不想再同时盯10个Agent了-未来让系统接手分工-人只在关键时刻拍板-digest.md
+- wiki：wiki/02-ai-coding/程序员的新岗位是监工-Codex负责人-我不想再同时盯10个Agent了-未来让系统接手分工-人只在关键时刻拍板.md
+- wiki 速读：wiki/02-ai-coding/程序员的新岗位是监工-Codex负责人-我不想再同时盯10个Agent了-未来让系统接手分工-人只在关键时刻拍板-digest.md
+- 标签： #主题/AI-Coding #主题/多-Agent #主题/Codex #主题/Harness #主题/注意力管理 #场景/公众号长文
+- 核心命题：多 Agent 的目标是系统消化任务分工、上下文和通知调度，让人只处理目标、边界、方案取舍和高风险审批，而非成为消息分拣员。
+- 关联：[[02-ai-coding/Codex配置下一步改造-从规则层走向线程工具目标与共享记忆]]、[[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]]、[[02-ai-coding/OpenAI最新报告解读-Codex正在进入知识工作的主战场]]。
+- 证据边界：本文是对 Matthew Berman 访谈 Tibo 的二手中文整理；受访者场景、产品路线和技术融合描述均未独立核验，不代表正式产品承诺。
+### ingest | 一篇讲透Agent自进化飞轮怎么搭：评测→记忆→落地→控制
+- 来源：https://mp.weixin.qq.com/s/5VDN-T9K8Wr-DaQ15-I6CA
+- 原文：raw/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制.md
+- 拆解：raw/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制-digest.md
+- wiki：wiki/01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制.md
+- wiki 速读：wiki/01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制-digest.md
+- 标签： #主题/AI-Agent #主题/自进化 #主题/评测 #主题/记忆系统 #主题/Harness #场景/公众号长文
+- 核心命题：自进化要将评测信号、记忆治理、候选变更发布和人类控制面接成闭环；评测器、安全边界、预算和生产权限必须留在可编辑范围之外。
+- 关联：[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]、[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]、[[01-ai-agents/Skill-Self-Evolution]]、[[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]。
+- 证据边界：原文对 Anthropic、斯坦福课程、EvoAgentX 和收益数据均为二手整理，未独立复现；未将其参数、比率或路线视为通用承诺。
+### ingest | Lilian Weng：那个把 Agent 讲清楚的人，又开始定义 Harness
+- 来源：https://mp.weixin.qq.com/s/CWcQtzDu-lbme41eQm-oZg
+- 原文：raw/LilianWeng-那个把Agent讲清楚的人-又开始定义Harness.md
+- 拆解：raw/LilianWeng-那个把Agent讲清楚的人-又开始定义Harness-digest.md
+- wiki：wiki/01-ai-agents/LilianWeng-那个把Agent讲清楚的人-又开始定义Harness.md
+- wiki 速读：wiki/01-ai-agents/LilianWeng-那个把Agent讲清楚的人-又开始定义Harness-digest.md
+- 标签： #主题/AI-Agent #主题/Harness #主题/RSI #主题/AI-Coding #场景/公众号长文
+- 核心命题：Harness 将模型外的工具、上下文、状态、工作流和评测组成可恢复的运行系统；近期 RSI 应以独立评测约束对该系统的渐进优化，而非假定模型可直接安全地自改权重。
+- 关联：[[Lilian-Weng-Harness-Engineering-自我改进]]、[[LangChainCEO-Agent越复杂-越需要自建Harness-恰恰不是]]、[[从Prompt到Harness-企业级Agent工程的完整演进之路]]、[[Loop-Engineering-验证才是瓶颈]]。
+- 证据边界：OpenAI RSI 指标、内部使用数据和人事时间线均来自 DataFun 二手整理，未独立核验；原文未证明 Lilian Weng 回归与 RSI 项目之间存在因果关系。
+
+
 ## 2026-08-22
 ### ingest | LangChain CEO：Agent 越复杂，越需要自建 Harness？恰恰不是
 - 来源：微信公众号「DataFun」整理 Harrison Chase（LangChain CEO）公开演讲；发布时间 2026-08-22；https://mp.weixin.qq.com/s/KHVwdqr8aWR9gcH_ZzqQPQ

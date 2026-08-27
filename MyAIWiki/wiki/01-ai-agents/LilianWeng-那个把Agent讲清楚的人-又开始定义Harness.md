@@ -1,0 +1,74 @@
+---
+title: Lilian Weng：那个把 Agent 讲清楚的人，又开始定义 Harness
+category: 01-ai-agents
+tags:
+  - 主题/AI-Agent
+  - 主题/Harness
+  - 主题/RSI
+  - 主题/AI-Coding
+  - 场景/公众号长文
+nodes: [Agent架构地图, Harness运行系统, 优化对象迁移, 外部评测闭环, 可编辑边界, 研究品味]
+links: [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]], [[01-ai-agents/LangChainCEO-Agent越复杂-越需要自建Harness-恰恰不是]], [[01-ai-agents/储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]], [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]
+date: 2026-08-26
+source: 微信公众号「DataFun」
+---
+
+# Lilian Weng：那个把 Agent 讲清楚的人，又开始定义 Harness
+
+- 原文链接：https://mp.weixin.qq.com/s/CWcQtzDu-lbme41eQm-oZg
+- 来源：DataFun 对 Lilian Weng 文章与 OpenAI 公开资料的整理
+- 获取时间：2026-08-27
+
+## 核心结论（一句话）
+
+> 从 Agent 到 Harness，优化目标从“让模型给出更好回答”转向“让系统在真实环境中可恢复、可评测地完成和改进任务”；安全边界与评测必须留在自我修改循环之外。
+
+## 分类提炼
+
+- 场景：Coding Agent、研究 Agent、长任务运行时
+- 类型：技术脉络与 Harness/RSI 二手解读
+- 标签： #主题/AI-Agent #主题/Harness #主题/RSI #主题/AI-Coding #场景/公众号长文
+
+## 知识节点
+
+- **Agent架构地图**：规划、记忆和工具调用将模型扩展为能与环境交互的行动系统。
+- **Harness运行系统**：工具、上下文、状态、工作流和评测共同决定长任务的实际表现。
+- **优化对象迁移**：改进可从 Prompt 升级到结构化上下文、工作流和 Harness 代码。
+- **外部评测闭环**：轨迹分析、策略修改和独立验收组成可审计的自我改进回路。
+- **可编辑边界**：权限、验收器和安全层需与被优化的系统隔离，避免篡改目标函数。
+- **研究品味**：可量化反馈适合自动优化；问题选择与弱评测下的判断仍需要人承担。
+
+## 关联图谱
+
+### 上游（基于 / 来自）
+
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]：提供 Harness 定义、五段优化路径和 reward hacking 风险的原典表述。
+- [[01-ai-agents/储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]]：补充 Prompt、Context、Harness 到 Agent OS 的工程演进。
+
+### 下游（应用于 / 验证于）
+
+- [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]：将“外部评测闭环”落到工程任务的验证闸门。
+- [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：用产品运行时解释模型能力如何转为稳定交付。
+
+### 同级（横向 / 并列）
+
+- [[01-ai-agents/LangChainCEO-Agent越复杂-越需要自建Harness-恰恰不是]]：以任务是否偏离模型熟悉分布来决定 Harness 定制深度。
+
+## 正文要点
+
+1. 2023 年的 Agent 框架回答“模型如何规划、记忆、使用工具”；Harness 继续回答“系统怎样跨步骤保存状态、从失败中恢复并验证结果”。
+2. Coding Agent 的有效循环不是一次生成代码，而是观察仓库、修改、运行测试、读取失败并重新行动；该循环的可靠性主要来自 Harness 设计。
+3. RSI 的近期工程形态是让系统优化运行机制，而非直接训练或改写模型权重。前提是每次变更都能由外部、稳定的评测保留或淘汰。
+4. 允许 Agent 修改工作流不等于允许它修改所有东西。测试、权限和安全规则若可被同一优化器改写，分数提升不再代表能力提升。
+5. 本文提醒不要把“AI 参与 AI 研发”外推为完全自治：弱评测、模糊目标和研究品味仍是当前闭环的主要限制。
+
+## 备注
+
+- 文中的 OpenAI RSI 指标、内部使用量和 Lilian Weng 的人事时间线来自 DataFun 二手整理，未在本次归档中逐项复核。
+- 本文用于串联 Agent、Harness 与 RSI 的概念边界；Harness 的具体设计应回到原典及实际任务的测试证据。
+
+## 相关链接
+
+- [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]
+- [[01-ai-agents/LangChainCEO-Agent越复杂-越需要自建Harness-恰恰不是]]
+- [[01-ai-agents/储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]]

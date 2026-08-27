@@ -1,6 +1,18 @@
 # AI 知识库索引
 
 ## 最近更新
+- [AI时代的人类分野：消费者、创造者与主动目标](./03-productivity/AI时代-人类将分成两种-消费者和创造者｜彭凯平对话未来学家PeterDiamandis.md) — 2026-08-27：AI 可以放大实现能力，但人仍需定义目标、选择问题、承担判断，并将便利转为创造和长期行动。
+- [AI时代的人类分野：消费者、创造者与主动目标 - 速读](./03-productivity/AI时代-人类将分成两种-消费者和创造者｜彭凯平对话未来学家PeterDiamandis-digest.md) — 创造性放大、主动目标、韧性与伦理边界速读。
+- [个人AI记忆系统：五层资产、两级目录与受控读写](./07-rag-systems/一文搞懂个人AI记忆系统构建全流程.md) — 2026-08-27：将身份、原则、偏好、上下文和知识沉淀为用户自有资产，通过索引、按需召回与确认式写入服务多个 AI 工具。
+- [个人AI记忆系统：五层资产、两级目录与受控读写 - 速读](./07-rag-systems/一文搞懂个人AI记忆系统构建全流程-digest.md) — 五层记忆、两级目录、双层索引与确认式写入速读。
+- [Anthropic AI-Native SDLC：用版本化产物重构软件开发流程](./02-ai-coding/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了.md) — 2026-08-27：用意图、规格、计划、变更、PR 和事故记录串联研发阶段，让人审查关键判断，Agent 在受控范围内实施和验证。
+- [Anthropic AI-Native SDLC：用版本化产物重构软件开发流程 - 速读](./02-ai-coding/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了-digest.md) — 提交产物、策略分层、受保护验证与人类门禁速读。
+- [程序员的新岗位是监工：Codex负责人谈多Agent调度与关键审批](./02-ai-coding/程序员的新岗位是监工-Codex负责人-我不想再同时盯10个Agent了-未来让系统接手分工-人只在关键时刻拍板.md) — 2026-08-27：系统应调度分工、上下文和低价值通知；人只介入目标偏离、方案取舍和高风险动作。
+- [程序员的新岗位是监工：Codex负责人谈多Agent调度与关键审批 - 速读](./02-ai-coding/程序员的新岗位是监工-Codex负责人-我不想再同时盯10个Agent了-未来让系统接手分工-人只在关键时刻拍板-digest.md) — 注意力调度、任务三态、风险审批与主调度层速读。
+- [一篇讲透Agent自进化飞轮怎么搭：评测→记忆→落地→控制](./01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制.md) — 2026-08-27：评测信号、受治理记忆、候选变更与人类控制面必须闭合；评分器、安全边界、预算和生产权限不可由同一优化器修改。
+- [一篇讲透Agent自进化飞轮怎么搭：评测→记忆→落地→控制 - 速读](./01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制-digest.md) — 四齿飞轮、三集隔离、候选发布与控制边界速读。
+- [Lilian Weng：那个把 Agent 讲清楚的人，又开始定义 Harness](./01-ai-agents/LilianWeng-那个把Agent讲清楚的人-又开始定义Harness.md) — 2026-08-27：Harness 将工具、状态、工作流和评测接成运行系统；自动改进必须由外部评测和不可修改的安全边界约束。
+- [Lilian Weng：那个把 Agent 讲清楚的人，又开始定义 Harness - 速读](./01-ai-agents/LilianWeng-那个把Agent讲清楚的人-又开始定义Harness-digest.md) — Agent、Harness、RSI 的六节点速读与证据边界。
 - [WorkBuddy 培训后老板亲自 AI Coding：从个人工具到组织基建的五阶段](./02-ai-coding/瑟瑟发抖-WorkBuddy培训结束后-老板开始用AICoding亲自做产品了.md) — 2026-08-26：项目先验证技术、形态、边界和价值，再逐级进入流程、协同、数字员工与组织基建；AI 创造权下沉时，评价权、责任和接管机制也要重构。
 - [WorkBuddy 培训后老板亲自 AI Coding - Digest](./02-ai-coding/瑟瑟发抖-WorkBuddy培训结束后-老板开始用AICoding亲自做产品了-digest.md) — 五阶段门槛与最小证据速读。
 - [OpenClaw创始人："乐趣就是速度"丨Y Combinator](./06-ai-tech/Capihom-OpenClaw创始人-乐趣就是速度-YC.md) — 2026-08-26：微信公众号「晚点再听LaterCast」Capihom 编译 Peter Steinberger 在 YC Startup School 演讲 "Fun Is Velocity"：八个月 1.8 万 issue + 11.1 万 PR + 470 万周下载背后，是"成功如何把清晰产品慢慢推向失焦"的复盘——好玩就是速度、做出来能复制、名字与判断不能；8 节点（灵感来自被惹恼 / 用户情绪判断需求 / 一夜爆红所有需求涌来 / 名字与判断不可复制 / 纠正追不上恐慌 / 9500 配置项是成功债务 / 热度不等于采用 / 停止使用自己产品是最危险信号）+ 6 借鉴动作 + 6 关联（Nikesh Arora 模型过剩 / 麦肯锡组织怎么赢 / 深思圈环境护城河 / 凯文凯利看不见的东西 / 与AI做产品六条原则 / 同 Capihom 编译主线 Patrick Collison）。文中 OpenClaw 指 Peter 主导的开源编程 Agent 项目，与 AI 助手同名但不同物。
