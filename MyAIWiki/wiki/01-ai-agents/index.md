@@ -1,5 +1,12 @@
 # AI Agents Wiki
 
+## Warp：双 Skill 将反馈转成可审查的 Agent 改进（2026-09-01 新增）
+
+> **微信公众号「Datawhale」2026-08-31；Warp CEO 在 Anthropic Claude Blog 的客户案例**：让 base skill 执行具体任务，improver skill 周期性读取带理由的人类反馈、提出最小 Skill PR；人工 review 与验证决定该经验是否成为下一轮默认行为。
+
+- [[01-ai-agents/Datawhale-Warp-CEO-Claude自我改进Agent]] - **核心命题**“自我改进的持久化单位应是受版本控制的最小 Skill 变更，而非消失在会话中的反馈或可自由漂移的 Memory”；**8 节点**（反馈蒸发 / 双Skill闭环 / 最小变更PR / 程序性知识 / 解释型反馈 / 渐进披露 / 验证门禁 / 共享改进器）；与 [[01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制]]、[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]、[[01-ai-agents/Skill-Self-Evolution]]、[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]] 强关联。
+- [[raw/Datawhale-Warp-CEO-Claude自我改进Agent-digest]] - 5 个核心观点、7 个分析角度、21 个开头钩子、最小实践与证据边界。
+
 ## Moxt：AI Native Team 的可信 Context 与责任 Workflow（2026-08-28 新增）
 
 > **微信公众号「Founder Park」；Moxt 团队供稿，2026-08-27**：Agent 进入团队核心工作，依赖的不只是能力，而是可共享且有信任结构的 Context、按长期责任划分的团队角色、显式的人机交接 Workflow 与以真实后续任务验证的改进闭环。

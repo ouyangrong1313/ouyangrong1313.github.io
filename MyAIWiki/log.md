@@ -2,6 +2,23 @@
 
 时间序变更记录。格式：`## [日期] 操作 | 标题`
 
+## 2026-09-01
+### ingest | AI 放大个体生产力后，团队该把协作重心放在哪里
+
+- 来源：微信公众号「哈佛商业评论」；作者 J.P. 埃格斯、萨拉·瑞安、阿莎·迪内什；发布时间 2026-09-01 08:00；原文：https://mp.weixin.qq.com/s/84g_qZ4tWjbIdauHFYdCsw。
+- 写入：`raw/HBR-China-AI放大个体生产力-团队协作发力点.md`、`raw/HBR-China-AI放大个体生产力-团队协作发力点-digest.md`、`wiki/03-productivity/HBR-China-AI放大个体生产力-团队协作发力点.md`；更新 `wiki/03-productivity/index.md` 与 `wiki/master-index.md`。
+- 核心命题：AI 降低原型和执行成本后，团队应把协作重心从分工交付上移到问题定义、方案校准、多元视角与价值判断；原型应用于低成本学习而非提前锁定答案。
+- 关联：[[03-productivity/Capihom-Whatnot-CPO-产品经理是否按人头配齐]]、[[03-productivity/HBR-China-5个反直觉创新原则]]、[[03-productivity/AI时代行研独特洞察从哪里来]]、[[02-ai-coding/宝玉AI-我的AI原生开发流程-真实案例复盘]]。
+- 证据边界：文章基于一次学生挑战赛；样本、时限与场景限制外推。文中提到的 AI 团队效果研究未列出来源、方法或统计信息，未独立核验。
+
+### ingest | Warp CEO 的 Claude 实战：用双 Skill 把人类反馈编译为 Agent 改进
+
+- 来源：微信公众号「Datawhale」；案例主体 Warp CEO；发布时间 2026-08-31 22:30；原文：https://mp.weixin.qq.com/s/vIJ5uP5dcUd87Smi2BuP-w；原始案例：https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude。
+- 写入：`raw/Datawhale-Warp-CEO-Claude自我改进Agent.md`、`raw/Datawhale-Warp-CEO-Claude自我改进Agent-digest.md`、`wiki/01-ai-agents/Datawhale-Warp-CEO-Claude自我改进Agent.md`；更新 `wiki/01-ai-agents/index.md` 与 `wiki/master-index.md`。
+- 核心命题：用 base skill 执行任务，用定期运行的 improver skill 将带理由的人类反馈汇集为最小、可审查、可回滚的 Skill PR；验证与人工审批决定经验是否成为默认行为。
+- 关联：[[01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制]]、[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]、[[01-ai-agents/Skill-Self-Evolution]]、[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]。
+- 证据边界：Warp 的初始正确率、用户规模、融资、适用范围与效果均为 Datawhale / Anthropic 客户案例转述，未独立复核；不可将其外推为通用效益或安全证明。
+
 ## 2026-08-31
 ### ingest | AI 如何塑造生产力？AI4X 68 页综述
 
