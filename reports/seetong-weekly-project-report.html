@@ -1,52 +1,16 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Seetong APP 团队项目周报 V4</title><style>body{margin:0;background:#f4f7fb;color:#172033;font:15px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}main{max-width:1080px;margin:auto;padding:32px 18px}header{background:#fff;border-top:5px solid #12715b;padding:28px;border-radius:8px;box-shadow:0 2px 10px #18243a12}h1{margin:0;font-size:26px}.period{color:#607084;margin:8px 0 0}section{background:#fff;margin-top:18px;padding:24px;border-radius:8px;box-shadow:0 2px 10px #18243a0d}h2{font-size:19px;margin-top:0}li{margin:8px 0}pre{white-space:pre-wrap;word-break:break-word;background:#f6f8fa;padding:18px;border-radius:6px;overflow:auto;font:13px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace}</style></head><body><main><header><h1>Seetong APP 团队项目周报 V4</h1><p class="period">本周概览</p></header><section><h2>TL;DR</h2><ul><li>本周重点覆盖开放迭代：V8.4.0.x(kmp迭代)、V8.4.1.x(2026年9月迭代)；分别有 26、19 个需求。</li><li>三端代码仓库本周共 77 次提交：Android 52 次、iOS 21 次、Harmony 4 次。重心集中在 KMP 回放与报警消息收敛、跨地域 Relay 调度、预览清晰度与系统适配。</li><li>本周线上 APP Bug 查询未发现新增记录；最新一条仍为 8 月 7 日创建的 iOS「3AR 录像设置缺失」。</li></ul></section><section><h2>完整报告</h2><pre># Seetong APP 团队项目周报 V4
-
-**统计周期：2026-08-15 至 2026-08-21｜数据获取时间：2026-08-21 18:00**
-
-## 本周概览
-
-- 本周重点覆盖开放迭代：`V8.4.0.x(kmp迭代)`、`V8.4.1.x(2026年9月迭代)`；分别有 26、19 个需求。
-- 三端代码仓库本周共 77 次提交：Android 52 次、iOS 21 次、Harmony 4 次。重心集中在 KMP 回放与报警消息收敛、跨地域 Relay 调度、预览清晰度与系统适配。
-- 本周线上 APP Bug 查询未发现新增记录；最新一条仍为 8 月 7 日创建的 iOS「3AR 录像设置缺失」。
-
-## 本周项目进展
-
-| 主线 | 本周进展与状态 | 责任归属 |
-|---|---|---|
-| 回放与报警消息跨端收敛 | iOS、Android、Harmony 均有回放与报警相关提交：覆盖云／卡回放黑屏与状态恢复、横竖屏和折叠屏适配、时间轴与空态、报警筛选及缓存刷新。`V8.4.0.x(kmp迭代)` 的站内信多语言与 UI 验收项于本周更新为已解决。 | 位冬、欧阳荣、谭伟、陈宝旺、唐胜 |
-| 异地设备 Relay 调度 | Android 子项已解决；iOS 与 SDK 子项仍为规划。Android 本周已有设备跨集群 Relay 调度代码落地，需推进 iOS／SDK 联调与跨区域验证。 | 张威、唐胜、欧阳荣 |
-| NVR 登录 IP 透传 | Android 与 SDK 子项已解决；iOS 子项仍为规划。本周 Android 提交已覆盖 NVR 日志展示用户登录 IP。 | 张威、唐胜、欧阳荣 |
-| 双指放大自动切超清 | iOS、Android 子项均已解决；两端本周均有对应实现提交，可进入真机回归与体验验收。 | 欧阳荣、唐胜 |
-| 海外设备外置卡热插拔提醒 | Android 子项处于开发中，iOS 子项仍规划；需求父项标注“方案待定”，需先收敛提醒策略与端侧行为。 | 唐胜、欧阳荣 |
-| Android 16／17 适配与分享扩容 | 两项均推进中：Android 16／17 适配已有本周提交；NVR 分享扩容已补齐多语言等实现，但 TAPD 父项仍为规划。 | 唐胜、许源 |
-
-Harmony 本周有回放折叠屏返回竖屏回弹、时间轴缩放适配等代码推进；本轮重点迭代中暂未见独立 Harmony 子项，后续需补齐 TAPD 端侧拆分与验收状态。
-
-## 线上 APP Bug
-
-- 查询口径：`testphase=线上反馈`、`module=App`、按 `created desc` 排序。
-- 本周新增：0 条；高优先级新增：0 条。
-- 最新未关闭记录：8 月 7 日 iOS「苹果 APP 没有 3AR 录像设置」，当前处理人为许源、欧阳荣；7 月 29 日 Harmony「历史录像覆盖后仍显示不可播放进度条」，当前处理人为陈宝旺。
-- 判断：本周未出现新增线上 APP Bug 聚集，但存量问题覆盖 iOS 录像设置与 Harmony 回放展示，需在相关回放／版本回归中闭环验证。
-
-## 下周重点计划
-
-| 优先级 | 计划 | 责任归属 |
-|---|---|---|
-| P0 | 推进跨集群 Relay 调度的 iOS、SDK 联调，并完成跨地域设备连通与推流验证。 | 张威、欧阳荣、唐胜 |
-| P0 | 完成外置卡热插拔提醒方案定稿，推进 Android 开发与 iOS 排期。 | 唐胜、欧阳荣 |
-| P1 | 完成 Android 16／17 系统适配回归；对双指放大自动切超清做机型覆盖验收。 | 唐胜、欧阳荣 |
-| P1 | 继续收敛 KMP 回放、报警消息的边界状态与多语言验收，重点验证黑屏、横竖屏、筛选和缓存刷新。 | 位冬、陈宝旺、谭伟、欧阳荣 |
-| P1 | 跟进 NVR 分享扩容及登录 IP 透传的跨端验收。 | 许源、张威、唐胜、欧阳荣 |
-
-## 风险与建议
-
-- **迭代状态与代码进度不一致**：Relay 调度、NVR 登录 IP、分享扩容等主线已有部分端侧提交，但父需求或 iOS／SDK 子项仍为规划。建议例会按“方案、端侧实现、联调、验收”四个节点更新，避免以代码提交替代交付结论。
-- **回放回归面较广**：本周三端持续修复回放状态、旋转和异常恢复，说明该主线仍处于集中收敛期。建议建立 iOS／Android／Harmony 共用回归矩阵，覆盖云／卡回放、横竖屏、折叠屏、无录像及设备状态变化。
-- **线上存量问题需版本闭环**：本周无新增线上 Bug，但 3AR 录像设置与 Harmony 历史录像展示仍未关闭。建议明确修复版本、验证人和回归结果后再关闭。
-
-## 结论
-
-本周 APP 三端研发主线明确：KMP 回放与报警消息继续收敛，Android 在跨集群 Relay、NVR 登录 IP、系统适配和预览体验上推进较快，iOS 需优先补齐 Relay 调度、NVR 登录 IP 与外置卡提醒的实现及联调。线上未新增 APP Bug 是积极信号，但回放与录像相关存量问题仍应作为下周回归重点。
-
-***本消息由 Seetong小助手 自动生成，欧阳荣 监督发布。***
-</pre></section></main></body></html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Seetong APP 团队项目周报 V4</title><style>body{margin:0;background:#f3f6f9;color:#182235;font:15px/1.75 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}main{max-width:1080px;margin:auto;padding:34px 18px 56px}header{background:#173d52;color:#fff;padding:30px;border-radius:8px;border-left:6px solid #56c596}h1{margin:0;font-size:28px}.period{color:#d5e5ea;margin:8px 0 0}section{background:#fff;margin-top:18px;padding:26px;border-radius:8px;box-shadow:0 2px 12px #18243a10}h2{font-size:21px;color:#173d52;border-bottom:1px solid #e5eaee;padding-bottom:10px}h3{font-size:17px;color:#286b69;margin-top:28px}li{margin:8px 0}p{margin:12px 0}a{color:#087f75}code{background:#eef4f4;color:#075f59;padding:2px 5px;border-radius:3px}pre{white-space:pre-wrap;word-break:break-word;background:#10252f;color:#eaf3f4;padding:16px;border-radius:6px;overflow:auto}blockquote{margin:16px 0;padding:10px 16px;border-left:4px solid #56c596;background:#f0faf6;color:#38585a}.table-wrap{overflow:auto;border:1px solid #e2e9ed;border-radius:6px;margin:16px 0}table{border-collapse:collapse;width:100%;min-width:680px}th{background:#eaf4f2;color:#174a4a;text-align:left}th,td{padding:10px 12px;border-bottom:1px solid #e7edf0;vertical-align:top}tr:last-child td{border-bottom:0}@media(max-width:600px){main{padding:18px 12px}header,section{padding:20px}h1{font-size:23px}}</style></head><body><main><header><h1>Seetong APP 团队项目周报 V4</h1><p class="period">本周概览</p></header><section><h2>TL;DR</h2><ul><li>本周重点覆盖开放迭代：V8.4.0.x(kmp迭代)、V8.4.1.x(2026年9月迭代)；分别有 26、19 个需求。</li><li>三端代码仓库本周共 77 次提交：Android 52 次、iOS 21 次、Harmony 4 次。重心集中在 KMP 回放与报警消息收敛、跨地域 Relay 调度、预览清晰度与系统适配。</li><li>本周线上 APP Bug 查询未发现新增记录；最新一条仍为 8 月 7 日创建的 iOS「3AR 录像设置缺失」。</li></ul></section><section class="markdown-preview"><h2>完整报告</h2><h1>Seetong APP 团队项目周报 V4</h1>
+<p><strong>统计周期：2026-08-15 至 2026-08-21｜数据获取时间：2026-08-21 18:00</strong></p>
+<h2>本周概览</h2>
+<ul><li>本周重点覆盖开放迭代：<code>V8.4.0.x(kmp迭代)</code>、<code>V8.4.1.x(2026年9月迭代)</code>；分别有 26、19 个需求。</li><li>三端代码仓库本周共 77 次提交：Android 52 次、iOS 21 次、Harmony 4 次。重心集中在 KMP 回放与报警消息收敛、跨地域 Relay 调度、预览清晰度与系统适配。</li><li>本周线上 APP Bug 查询未发现新增记录；最新一条仍为 8 月 7 日创建的 iOS「3AR 录像设置缺失」。</li></ul>
+<h2>本周项目进展</h2>
+<div class="table-wrap"><table><thead><tr><th>主线</th><th>本周进展与状态</th><th>责任归属</th></tr></thead><tbody><tr><td>回放与报警消息跨端收敛</td><td>iOS、Android、Harmony 均有回放与报警相关提交：覆盖云／卡回放黑屏与状态恢复、横竖屏和折叠屏适配、时间轴与空态、报警筛选及缓存刷新。<code>V8.4.0.x(kmp迭代)</code> 的站内信多语言与 UI 验收项于本周更新为已解决。</td><td>位冬、欧阳荣、谭伟、陈宝旺、唐胜</td></tr><tr><td>异地设备 Relay 调度</td><td>Android 子项已解决；iOS 与 SDK 子项仍为规划。Android 本周已有设备跨集群 Relay 调度代码落地，需推进 iOS／SDK 联调与跨区域验证。</td><td>张威、唐胜、欧阳荣</td></tr><tr><td>NVR 登录 IP 透传</td><td>Android 与 SDK 子项已解决；iOS 子项仍为规划。本周 Android 提交已覆盖 NVR 日志展示用户登录 IP。</td><td>张威、唐胜、欧阳荣</td></tr><tr><td>双指放大自动切超清</td><td>iOS、Android 子项均已解决；两端本周均有对应实现提交，可进入真机回归与体验验收。</td><td>欧阳荣、唐胜</td></tr><tr><td>海外设备外置卡热插拔提醒</td><td>Android 子项处于开发中，iOS 子项仍规划；需求父项标注“方案待定”，需先收敛提醒策略与端侧行为。</td><td>唐胜、欧阳荣</td></tr><tr><td>Android 16／17 适配与分享扩容</td><td>两项均推进中：Android 16／17 适配已有本周提交；NVR 分享扩容已补齐多语言等实现，但 TAPD 父项仍为规划。</td><td>唐胜、许源</td></tr></tbody></table></div>
+<p>Harmony 本周有回放折叠屏返回竖屏回弹、时间轴缩放适配等代码推进；本轮重点迭代中暂未见独立 Harmony 子项，后续需补齐 TAPD 端侧拆分与验收状态。</p>
+<h2>线上 APP Bug</h2>
+<ul><li>查询口径：<code>testphase=线上反馈</code>、<code>module=App</code>、按 <code>created desc</code> 排序。</li><li>本周新增：0 条；高优先级新增：0 条。</li><li>最新未关闭记录：8 月 7 日 iOS「苹果 APP 没有 3AR 录像设置」，当前处理人为许源、欧阳荣；7 月 29 日 Harmony「历史录像覆盖后仍显示不可播放进度条」，当前处理人为陈宝旺。</li><li>判断：本周未出现新增线上 APP Bug 聚集，但存量问题覆盖 iOS 录像设置与 Harmony 回放展示，需在相关回放／版本回归中闭环验证。</li></ul>
+<h2>下周重点计划</h2>
+<div class="table-wrap"><table><thead><tr><th>优先级</th><th>计划</th><th>责任归属</th></tr></thead><tbody><tr><td>P0</td><td>推进跨集群 Relay 调度的 iOS、SDK 联调，并完成跨地域设备连通与推流验证。</td><td>张威、欧阳荣、唐胜</td></tr><tr><td>P0</td><td>完成外置卡热插拔提醒方案定稿，推进 Android 开发与 iOS 排期。</td><td>唐胜、欧阳荣</td></tr><tr><td>P1</td><td>完成 Android 16／17 系统适配回归；对双指放大自动切超清做机型覆盖验收。</td><td>唐胜、欧阳荣</td></tr><tr><td>P1</td><td>继续收敛 KMP 回放、报警消息的边界状态与多语言验收，重点验证黑屏、横竖屏、筛选和缓存刷新。</td><td>位冬、陈宝旺、谭伟、欧阳荣</td></tr><tr><td>P1</td><td>跟进 NVR 分享扩容及登录 IP 透传的跨端验收。</td><td>许源、张威、唐胜、欧阳荣</td></tr></tbody></table></div>
+<h2>风险与建议</h2>
+<ul><li><strong>迭代状态与代码进度不一致</strong>：Relay 调度、NVR 登录 IP、分享扩容等主线已有部分端侧提交，但父需求或 iOS／SDK 子项仍为规划。建议例会按“方案、端侧实现、联调、验收”四个节点更新，避免以代码提交替代交付结论。</li><li><strong>回放回归面较广</strong>：本周三端持续修复回放状态、旋转和异常恢复，说明该主线仍处于集中收敛期。建议建立 iOS／Android／Harmony 共用回归矩阵，覆盖云／卡回放、横竖屏、折叠屏、无录像及设备状态变化。</li><li><strong>线上存量问题需版本闭环</strong>：本周无新增线上 Bug，但 3AR 录像设置与 Harmony 历史录像展示仍未关闭。建议明确修复版本、验证人和回归结果后再关闭。</li></ul>
+<h2>结论</h2>
+<p>本周 APP 三端研发主线明确：KMP 回放与报警消息继续收敛，Android 在跨集群 Relay、NVR 登录 IP、系统适配和预览体验上推进较快，iOS 需优先补齐 Relay 调度、NVR 登录 IP 与外置卡提醒的实现及联调。线上未新增 APP Bug 是积极信号，但回放与录像相关存量问题仍应作为下周回归重点。</p>
+<p><em><strong>本消息由 Seetong小助手 自动生成，欧阳荣 监督发布。</strong></em></p></section></main></body></html>
