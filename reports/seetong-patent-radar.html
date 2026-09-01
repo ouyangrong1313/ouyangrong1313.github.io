@@ -1,283 +1,97 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>v1.3 增量补丁（4 大主修 + V8.3.13.X 完整故事）</title><style>body{margin:0;background:#f4f7fb;color:#172033;font:15px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}main{max-width:1080px;margin:auto;padding:32px 18px}header{background:#fff;border-top:5px solid #12715b;padding:28px;border-radius:8px;box-shadow:0 2px 10px #18243a12}h1{margin:0;font-size:26px}.period{color:#607084;margin:8px 0 0}section{background:#fff;margin-top:18px;padding:24px;border-radius:8px;box-shadow:0 2px 10px #18243a0d}h2{font-size:19px;margin-top:0}li{margin:8px 0}pre{white-space:pre-wrap;word-break:break-word;background:#f6f8fa;padding:18px;border-radius:6px;overflow:auto;font:13px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace}</style></head><body><main><header><h1>v1.3 增量补丁（4 大主修 + V8.3.13.X 完整故事）</h1><p class="period">| ID | 标题 | Owner | 日期 | 状态 |</p></header><section><h2>TL;DR</h2><ul><li>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</li><li>⚠️ 是 dev 计划 key（免费有配额限制），不是生产 key</li><li>每次 search 返回 3 个 result，约 1.5 秒响应时间</li></ul></section><section><h2>完整报告</h2><pre>---
-title: Seetong 专利雷达 第 3 期 (2026-09) v1.3 增量补丁
-date: 2026-06-30 14:05 Asia/Shanghai
-status: v1.3（Tavily 实测 + TAPD 主项目 + V8.3.13.X 完整 stories + 团队分工）
-期数: 第 3 期 v1.3 patch
-上一版: v1.2 (2026-09.md, 10593 字节)
-下一期: 第 4 期 (2026-10)
-tags: [#主题/报告, #主题/专利雷达, #主题/Tavily, #主题/TAPD主项目, #主题/V8.3.13.X, #主题/团队分工, #主题/灰度发布, #主题/v1.3增强]
----
-
-# v1.3 增量补丁（4 大主修 + V8.3.13.X 完整故事）
-
-## 1. Tavily API Key 实测 ✅
-
-**主人提供的 key 完全可用**：
-- `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`
-- ⚠️ 是 **dev 计划 key**（免费有配额限制），不是生产 key
-- 每次 search 返回 3 个 result，约 1.5 秒响应时间
-- ✅ **OpenClaw 可直接通过 `webSearch.apiKey` 字段接入**（不是 shell 环境变量！）
-
-**下期专利雷达接入方式**：
-```bash
-# 1. 编辑 ~/.openclaw/openclaw.json
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>v1.3 增量补丁（4 大主修 + V8.3.13.X 完整故事）</title><style>body{margin:0;background:#f3f6f9;color:#182235;font:15px/1.75 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}main{max-width:1080px;margin:auto;padding:34px 18px 56px}header{background:#173d52;color:#fff;padding:30px;border-radius:8px;border-left:6px solid #56c596}h1{margin:0;font-size:28px}.period{color:#d5e5ea;margin:8px 0 0}section{background:#fff;margin-top:18px;padding:26px;border-radius:8px;box-shadow:0 2px 12px #18243a10}h2{font-size:21px;color:#173d52;border-bottom:1px solid #e5eaee;padding-bottom:10px}h3{font-size:17px;color:#286b69;margin-top:28px}li{margin:8px 0}p{margin:12px 0}a{color:#087f75}code{background:#eef4f4;color:#075f59;padding:2px 5px;border-radius:3px}pre{white-space:pre-wrap;word-break:break-word;background:#10252f;color:#eaf3f4;padding:16px;border-radius:6px;overflow:auto}blockquote{margin:16px 0;padding:10px 16px;border-left:4px solid #56c596;background:#f0faf6;color:#38585a}.table-wrap{overflow:auto;border:1px solid #e2e9ed;border-radius:6px;margin:16px 0}table{border-collapse:collapse;width:100%;min-width:680px}th{background:#eaf4f2;color:#174a4a;text-align:left}th,td{padding:10px 12px;border-bottom:1px solid #e7edf0;vertical-align:top}tr:last-child td{border-bottom:0}@media(max-width:600px){main{padding:18px 12px}header,section{padding:20px}h1{font-size:23px}}</style></head><body><main><header><h1>v1.3 增量补丁（4 大主修 + V8.3.13.X 完整故事）</h1><p class="period">| ID | 标题 | Owner | 日期 | 状态 |</p></header><section><h2>TL;DR</h2><ul><li>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</li><li>⚠️ 是 dev 计划 key（免费有配额限制），不是生产 key</li><li>每次 search 返回 3 个 result，约 1.5 秒响应时间</li></ul></section><section class="markdown-preview"><h2>完整报告</h2><p>--- title: Seetong 专利雷达 第 3 期 (2026-09) v1.3 增量补丁 date: 2026-06-30 14:05 Asia/Shanghai status: v1.3（Tavily 实测 + TAPD 主项目 + V8.3.13.X 完整 stories + 团队分工） 期数: 第 3 期 v1.3 patch 上一版: v1.2 (2026-09.md, 10593 字节) 下一期: 第 4 期 (2026-10) tags: [#主题/报告, #主题/专利雷达, #主题/Tavily, #主题/TAPD主项目, #主题/V8.3.13.X, #主题/团队分工, #主题/灰度发布, #主题/v1.3增强] ---</p>
+<h1>v1.3 增量补丁（4 大主修 + V8.3.13.X 完整故事）</h1>
+<h2>1. Tavily API Key 实测 ✅</h2>
+<p><strong>主人提供的 key 完全可用</strong>：</p>
+<ul><li><code>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</code></li><li>⚠️ 是 <strong>dev 计划 key</strong>（免费有配额限制），不是生产 key</li><li>每次 search 返回 3 个 result，约 1.5 秒响应时间</li><li>✅ <strong>OpenClaw 可直接通过 <code>webSearch.apiKey</code> 字段接入</strong>（不是 shell 环境变量！）</li></ul>
+<p><strong>下期专利雷达接入方式</strong>：</p>
+<pre><code># 1. 编辑 ~/.openclaw/openclaw.json
 # 找 webSearch.apiKey，改为主人的 dev key
 # 2. openclaw restart 让配置生效
-# 3. 主会话工具列表应出现 tavily_search / tavily_extract
-```
-
-**下期专利雷达建议**：每条 Seetong 新功能过 Tavily 搜竞品专利（海康/大华/萤石/TP-LINK），查重 + 找差异点。
-
-## 2. TAPD 主项目 ID 确认 ✅
-
-**`64169190` = Seetong App 主项目**（客户端 App 项目 Seetong App）
-- **每月迭代看板 URL**：`https://www.tapd.cn/tapd_fe/64169190/iteration/card/{iteration_id}`
-- 主人给的当前看板 URL：`https://www.tapd.cn/tapd_fe/64169190/iteration/card/1164169190001000359?q=ed7480d4e24b9549e256e95d60e47ea8`
-
-### 完整迭代列表（31 个迭代）
-
-| ID | 名称 | 状态 | 创建人 | 时间 |
-|---|---|---|---|---|
-| **1164169190001000359** | **V8.3.13.X(2026年7月迭代)** | **open** | 许源 | 5/6 - 7/6（**当前进行中**）|
-| 1164169190001000358 | V8.3.12.x(2026年6月初迭代) | open | 许源 | 5/6 - 6/9 |
-| 1164169190001000357 | APP跨平台Q2 | open | 陈宝旺 | 4/15 - 6/30 |
-| 1164169190001000339 | V8.3.10.x(2026年4月迭代) | done | 许源 | 3/16 - 4/21 |
-| 1164169190001000337 | V8.3.11.x(2026年5月迭代) | done | 许源 | 3/16 - 5/12 |
-| 1164169190001000319 | V8.3.9.x(2026年3月迭代) | done | 许源 | 1/22 - 3/27 |
-| 1164169190001000316 | APP跨平台（Q1）-基建 | open | 陈宝旺 | 1/13 - 3/31 |
-| 1164169190001000307 | V8.3.8.x(26年1月迭代) | done | 黄松佳 | 12/29 - 2/5 |
-| 1164169190001000293 | APP 跨平台项目 | open | 陈宝旺 | 11/20 - 1/18 |
-| ... | （再向前 21 个迭代历史 done） | | | |
-
-## 3. ⚠️ V8.3.13.X(2026年7月迭代) 关键时间表
-
-**今天 6/30 是灰度发布日！** —— 5 天后（7/5）全量发布
-
-| 节点 | 时间 | 状态 |
-|---|---|---|
-| 需求评审完成 | 2026-05-08 | ✅ |
-| 概要设计完成 | 2026-06-02 | ✅ |
-| UI 验收 | 2026-06-15 | ✅ |
-| 功能验收 | 2026-06-17 | ✅ |
-| 第一轮提测 | 2026-06-18 | ✅ |
-| 回归版本提测 | 2026-06-25 | ✅ |
-| **灰度发布** | **2026-06-30** | **🟡 今天** |
-| **全量发布** | **2026-07-05** | **🔜 5 天后** |
-
-## 4. V8.3.13.X 完整 39 条 stories（30 天）
-
-### 4.1 🔴 P0 级别（行业首创 / 重大架构演进）
-
-#### NVR-NVR 异地组网（**6 条**！V8.3.13.X 核心功能）
-| ID | 标题 | Owner | 日期 | 状态 |
-|---|---|---|---|---|
-| 1164169190001007170 | 功能设计-支持NVR与NVR之间进行异地组网 | 位冬 | 5/11 | resolved |
-| 1164169190001007168 | Android-支持NVR与NVR之间进行异地组网 | 许源 | 5/11 | resolved |
-| 1164169190001007169 | iOS-支持NVR与NVR之间进行异地组网 | 位冬 | 5/11 | resolved |
-| 1164169190001007408 | iOS 支持NVR与NVR之间进行异地组网接口调试 | 位冬 | 5/29 | resolved |
-| 1164169190001007409 | Android 支持NVR与NVR之间进行异地组网接口调试 | 许源 | 5/29 | resolved |
-| 1164169190001007546 | NVR异地通道需要在设备列表展示 | 许源+位冬 | 6/15 | resolved |
-| 1164169190001007547 | iOS-NVR异地通道需要在设备列表展示 | 位冬 | 6/15 | resolved |
-| 1164169190001007548 | Android-NVR异地通道需要在设备列表展示 | 许源 | 6/15 | resolved |
-
-**实际上 NVR-NVR 异地组网有 8 条 stories！**（去掉重复 7546/7547/7548 聚合 + 调试 7408/7409 + 设计 7170/7168/7169）
-- **专利雷达点**：
-  1. NVR 异地组网协议设计（端云协同）
-  2. 多 NVR 通道调度算法
-  3. NVR 异地通道展示的 UI/UX
-
-#### AI 语义搜索本地录像（**5 条**）
-| ID | 标题 | Owner | 日期 | 状态 |
-|---|---|---|---|---|
-| 1164169190001007167 | 功能设计-AI语义搜索本地录像 | **陈宝旺** | 5/11 | resolved |
-| 1164169190001007165 | Android-AI语义搜索本地录像 | 唐胜 | 5/11 | resolved |
-| 1164169190001007166 | iOS-AI语义搜索本地录像 | 位冬 | 5/11 | resolved |
-| 1164169190001007308 | Android-AI语义搜索本地录像调试 | 唐胜 | 5/28 | resolved |
-| 1164169190001007309 | iOS-AI语义搜索本地录像调试 | 位冬 | 5/28 | resolved |
-
-**关键发现**：**陈宝旺** 设计了 AI 语义搜索功能（云端/边端 AI 模型架构），唐胜+位冬负责客户端集成。
-- **专利雷达点**：
-  1. 录像片段语义向量化方法（边端 LLM 推理）
-  2. 多模态检索（语音/文字/图像）跨模态对齐
-  3. 端云协同检索（云端索引 + 边端过滤）
-
-### 4.2 🟡 P1 级别（重要新功能）
-
-#### 无忧套餐流量降本方案（3 条）
-- 1164169190001007551 → SDK（许源+唐胜+欧阳荣，6/15）
-- 1164169190001007553 → iOS（唐胜，6/15）
-- 1164169190001007554 → Android（欧阳荣，6/15）
-
-#### 王炸二代新灯板类型（双白光）（3 条）
-- 1164169190001007612 → APP（许源，6/24）
-- 1164169190001007614 → Android（许源，6/24）
-- 1164169190001007615 → iOS（欧阳荣，6/24）
-
-#### 三方登录接口增加国家编码（3 条）
-- 1164169190001007616 → SDK（许源，6/24）
-- 1164169190001007617 → Android（许源，6/24）
-- 1164169190001007618 → iOS（欧阳荣，6/24）
-
-#### 5MP 截图支持星闪夜旗舰（3 条）
-- 1164169190001007621 → APP（张威，6/25）
-- 1164169190001007632 → iOS（位冬，6/26）
-- 1164169190001007633 → SDK/Android（张威，6/26）
-
-#### 设备设置新增3AR模式（3 条）
-- 1164169190001007422 → Android（唐胜，6/1）
-- 1164169190001007423 → iOS（欧阳荣，6/1）
-- 1164169190001007424 → 设计（唐胜，6/1）
-
-### 4.3 🟢 P2 级别（功能优化）
-
-#### 国际化（4 条）
-- 1164169190001007438 → iOS-设备报警自定义提示音新增西班牙语（欧阳荣，6/2）
-- 1164169190001007530 → 【App】使用反馈国际化（许源，6/11）
-- 1164169190001007531 → iOS-国际版本与非简体中文（欧阳荣，6/11）
-- 1164169190001007532 → Android-国际版本与非简体中文（许源，6/11）
-
-#### SDK 信令优化（5 条）
-- 1164169190001007427 → 增加用空网关查询设备在线状态机制（张威，6/1）
-- 1164169190001007451 → 云组播连接复用优化（张威，6/2）
-- 1164169190001007455 → 上层减少HTTP和Netty发唤醒频率（唐胜+欧阳荣+张威，6/3）
-- 1164169190001007461 → relay停用导致连接被拒SDK立即调度新的relay（张威，6/4）
-- 1164169190001007557 → SDK信令前期发唤醒频率太低，提高发唤醒频率（张威，6/15）
-
-#### 录像/SDK 优化（3 条）
-- 1164169190001007428 → SDK-支持IPC回放缩略图（张威，6/1）
-- 1164169190001007598 → 【SDK】优化录像下载概率失败（张威，6/22）
-- 1164169190001007301-7304 → &quot;录像下载完成但视频不完整需要有提示&quot;（4 条全部 **rejected**，5/28）
-
-#### 友盟闪退优化（1 条）
-- 1164169190001007479 → 友盟闪退优化（位冬，6/9）
-
-#### 托管流程优化（3 条）
-- 1164169190001007174 → Android-托管流程优化（许源，5/11）
-- 1164169190001007175 → iOS-个人中心新增售后服务入口（欧阳荣，5/11）
-- 1164169190001007176 → 功能设计-托管流程优化（欧阳荣，5/11）
-
-### 4.4 还在 planning 的需求（4 条）
-- 1164169190001007434 → 安卓模拟器支持美团日志（张威+许源，6/1）
-- 1164169190001007480 → 埋点agw和relay断开原因（张威，6/9）
-- 1164169190001007620 → 登录密码失败及注册失败提示优化（无 owner，6/25）
-- 1164169190001007636/7637 → 刻度尺适配（6/29，唐胜）
-
-## 5. V8.3.13.X 团队分工（6 人高频）
-
-| Owner | 故事数 | 主要职责 |
-|---|---|---|
-| **张威** | 13 | SDK 核心（信令/relay/录像）+ 5MP 截图 + 友盟 + 录像下载 |
-| **欧阳荣（主人）** | 8 | iOS + 国际化 + 流量降本 + 售后 + 托管 |
-| **位冬** | 8 | iOS + NVR-NVR 异地组网 + 5MP 截图 |
-| **许源** | 8 | Android + 流量降本 SDK + NVR-NVR + 国际化 |
-| **唐胜** | 7 | Android/iOS + 流量降本 + 3AR + AI 搜索 |
-| **陈宝旺** | 1 | 跨平台 + AI 搜索功能设计 |
-
-**关键洞察**：V8.3.13.X 是 **SDK 重量级迭代**（张威主导）+ **NVR-NVR 跨地域组网**（位冬+许源）+ **AI 语义搜索**（陈宝旺设计，唐胜+位冬集成）三大主线。
-
-## 6. 主人（欧阳荣）V8.3.13.X 工作全景
-
-主人直接负责 **8 条 stories**：
-1. iOS 三方登录接口增加国家编码（6/24）
-2. iOS 支持王炸二代新灯板类型（双白光）（6/24）
-3. iOS-国际版本与非简体中文支持问题反馈（6/11）
-4. iOS -设备设置新增3AR模式（6/1）
-5. iOS-个人中心新增售后服务入口（5/11）
-6. 功能设计-托管流程优化（5/11）
-7. 无忧套餐流量降本方案（第一版）- Android（6/15）
-8. iOS-设备报警自定义提示音新增西班牙语（6/2）
-
-主人是 **iOS 主程 + 跨端协调（流量降本 SDK + 国际化 + 托管）** 角色！
-
-## 7. v1.2 → v1.3 关键洞察升级
-
-### v1.2 误判 1：TAPD 主项目是 411/41639373/31295836
-- v1.3 真相：**64169190 = Seetong App 主项目**，3 个 ID 是子项目
-
-### v1.2 误判 2：Tavily key 主人没配
-- v1.3 真相：**主人已配 `tvly-dev-29AlZ3...`**，但主会话工具列表看不到（需 openclaw restart）
-
-### v1.2 误判 3：30 天 0 条 stories
-- v1.3 真相：**V8.3.13.X 单迭代就有 39 条**（不含 APP跨平台Q2），30 天主项目 stories = **45 条**
-
-### v1.2 误判 4：陈宝旺是跨平台架构师
-- v1.3 真相：**陈宝旺 = Seetong KMP 跨平台架构师 + AI 搜索功能设计者**，跨平台项目（Q1 基建/Q2/总项目）创建人
-
-## 8. 神策 30 天趋势查询 ⚠️ 部分失败
-
-- ❌ `query_event_count` 30 天 group_by=date 全部超时（神策平台性能问题）
-- ❌ 7 天不带 group_by 也 timeout（&quot;Not connected&quot; / &quot;Connection closed&quot;）
-- ⚠️ 不是工具问题，是神策 SaaS 平台对 30 天 + group_by 的复杂查询性能差
-- **下期建议**：用 `query_sql` 自定义 SQL（性能更好）或分 3 段查 7 天 + 拼接
-
-## 9. v1.3 数据缺口（剩余）
-
-| 数据源 | v1.3 状态 | 下期动作 |
-|---|---|---|
-| Tavily 实测 | ✅ 完成 | openclaw restart 后主会话工具出现 |
-| TAPD 主项目 ID | ✅ 64169190 | 已确认 |
-| V8.3.13.X 完整 stories | ✅ 39 条 | 已确认 |
-| 团队分工 | ✅ 6 人 | 已沉淀到 MEMORY.md 候选 |
-| 5 大创新点（含 NVR-NVR）| ✅ | 增量到 v1.3 报告 |
-| 神策 30 天 group_by=date | ❌ 超时 | 下期用 query_sql 替代 |
-| 海康/大华 25+ 产品线 | ✅ v1.2 完成 | - |
-| 萤石/TP-LINK | ✅ v1.2 完成 | - |
-| 投资者页面降级方案 | ✅ v1.2 完成（hkexnews + cninfo）| 下期试抓 |
-
-## 10. 创新点申请建议 v1.3（升级到 10+1 条）
-
-### 新增 🔴 P0（基于 V8.3.13.X）
-
-#### 建议 9：NVR 异地组网协议与多通道调度方法（行业首创）
-- **对标**：海康 iVMS / 大华 DSS 都不支持 NVR-NVR 异地组网（仅支持 NVR-IPC 单层级）
-- **方案**：V8.3.13.X 已实现，提交完整协议设计专利
-- **专利点**：
-  1. 多 NVR 跨地域 P2P 穿透 + 中继切换算法
-  2. 多 NVR 通道聚合调度（按设备负载 + 网络质量）
-  3. NVR 异地通道权限管理（设备列表展示策略）
-- **业务价值**：连锁店 / 多分支监控场景的护城河
-
-#### 建议 10：边端协同 AI 语义搜索录像方法
-- **对标**：海康 iSearch / 大华 DSS 智能搜索都是云端，**Seetong 是边端 AI 推理**
-- **方案**：V8.3.13.X AI 语义搜索功能，陈宝旺设计
-- **专利点**：
-  1. 录像片段边端语义向量化（轻量 LLM 在 4G IPC 推理）
-  2. 多模态跨模态对齐（语音 → 文字 → 图像联合检索）
-  3. 端云协同索引（云端全量索引 + 边端本地缓存）
-- **业务价值**：低功耗 4G IPC + AI 搜索的市场突破点
-
-### 维护原有 8 条（v1.2）
-- 🔴 4G IPC 国密 SM 加密
-- 🔴 Harmony 告警页 KMP 化
-- 🟡 边端联动智能体
-- 🟡 多目/双目联动 AI 相机
-- 🟡 电瓶车识别 + 梯控联动
-- 🟢 NVR 多品牌设备融合
-- 🟢 跨平台录像时间轴映射
-
----
-
-## 11. v1.3 沉淀
-
-### 已沉淀
-- ✅ `knowledge/seetong-patent-radar/2026-09-v1.3-patch.md`（本文件）
-- ✅ `knowledge/seetong-team-stable-facts.md`（v1.3 团队分工 6 人）
-- ⏳ `MEMORY.md` 待更新（团队稳定事实 + TAPD 主项目 ID）
-
-### 反面案例 v1.3 追加
-
-1. **v1.3 反面案例 11**：把 iteration_id 写成 1164169190001000**400**（实际是 1164169190001000**359**），4 次重试都是手抖。**应对**：用 iteration_name 字段查避免手抖。
-
-2. **v1.3 反面案例 12**：神策 30 天 group_by=date 全部超时，但以为是工具问题。**真相**：神策 SaaS 对 30 天聚合性能差，**不是工具问题**。
-
----
-
-## 下一期
-
-**第 4 期 (2026-10)** — 2026-10-01 22:00 自动跑
-
-**前置条件**：
-1. 主人执行 `openclaw restart` 检查 `tavily_search` 工具是否出现
-2. 神策 30 天趋势改用 `query_sql` 自定义 SQL（性能更好）
-3. 试抓海康 H 股公告（hkexnews.hk）+ 大华 A 股公告（cninfo）
-4. 重试 CPS 中安网 / 小米 / 华为</pre></section></main></body></html>
+# 3. 主会话工具列表应出现 tavily_search / tavily_extract</code></pre>
+<p><strong>下期专利雷达建议</strong>：每条 Seetong 新功能过 Tavily 搜竞品专利（海康/大华/萤石/TP-LINK），查重 + 找差异点。</p>
+<h2>2. TAPD 主项目 ID 确认 ✅</h2>
+<p><strong><code>64169190</code> = Seetong App 主项目</strong>（客户端 App 项目 Seetong App）</p>
+<ul><li><strong>每月迭代看板 URL</strong>：<code>https://www.tapd.cn/tapd_fe/64169190/iteration/card/{iteration_id}</code></li><li>主人给的当前看板 URL：<code>https://www.tapd.cn/tapd_fe/64169190/iteration/card/1164169190001000359?q=ed7480d4e24b9549e256e95d60e47ea8</code></li></ul>
+<h3>完整迭代列表（31 个迭代）</h3>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>名称</th><th>状态</th><th>创建人</th><th>时间</th></tr></thead><tbody><tr><td><strong>1164169190001000359</strong></td><td><strong>V8.3.13.X(2026年7月迭代)</strong></td><td><strong>open</strong></td><td>许源</td><td>5/6 - 7/6（<strong>当前进行中</strong>）</td></tr><tr><td>1164169190001000358</td><td>V8.3.12.x(2026年6月初迭代)</td><td>open</td><td>许源</td><td>5/6 - 6/9</td></tr><tr><td>1164169190001000357</td><td>APP跨平台Q2</td><td>open</td><td>陈宝旺</td><td>4/15 - 6/30</td></tr><tr><td>1164169190001000339</td><td>V8.3.10.x(2026年4月迭代)</td><td>done</td><td>许源</td><td>3/16 - 4/21</td></tr><tr><td>1164169190001000337</td><td>V8.3.11.x(2026年5月迭代)</td><td>done</td><td>许源</td><td>3/16 - 5/12</td></tr><tr><td>1164169190001000319</td><td>V8.3.9.x(2026年3月迭代)</td><td>done</td><td>许源</td><td>1/22 - 3/27</td></tr><tr><td>1164169190001000316</td><td>APP跨平台（Q1）-基建</td><td>open</td><td>陈宝旺</td><td>1/13 - 3/31</td></tr><tr><td>1164169190001000307</td><td>V8.3.8.x(26年1月迭代)</td><td>done</td><td>黄松佳</td><td>12/29 - 2/5</td></tr><tr><td>1164169190001000293</td><td>APP 跨平台项目</td><td>open</td><td>陈宝旺</td><td>11/20 - 1/18</td></tr><tr><td>...</td><td>（再向前 21 个迭代历史 done）</td><td></td><td></td><td></td></tr></tbody></table></div>
+<h2>3. ⚠️ V8.3.13.X(2026年7月迭代) 关键时间表</h2>
+<p><strong>今天 6/30 是灰度发布日！</strong> —— 5 天后（7/5）全量发布</p>
+<div class="table-wrap"><table><thead><tr><th>节点</th><th>时间</th><th>状态</th></tr></thead><tbody><tr><td>需求评审完成</td><td>2026-05-08</td><td>✅</td></tr><tr><td>概要设计完成</td><td>2026-06-02</td><td>✅</td></tr><tr><td>UI 验收</td><td>2026-06-15</td><td>✅</td></tr><tr><td>功能验收</td><td>2026-06-17</td><td>✅</td></tr><tr><td>第一轮提测</td><td>2026-06-18</td><td>✅</td></tr><tr><td>回归版本提测</td><td>2026-06-25</td><td>✅</td></tr><tr><td><strong>灰度发布</strong></td><td><strong>2026-06-30</strong></td><td><strong>🟡 今天</strong></td></tr><tr><td><strong>全量发布</strong></td><td><strong>2026-07-05</strong></td><td><strong>🔜 5 天后</strong></td></tr></tbody></table></div>
+<h2>4. V8.3.13.X 完整 39 条 stories（30 天）</h2>
+<h3>4.1 🔴 P0 级别（行业首创 / 重大架构演进）</h3>
+<p>#### NVR-NVR 异地组网（<strong>6 条</strong>！V8.3.13.X 核心功能）</p>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>标题</th><th>Owner</th><th>日期</th><th>状态</th></tr></thead><tbody><tr><td>1164169190001007170</td><td>功能设计-支持NVR与NVR之间进行异地组网</td><td>位冬</td><td>5/11</td><td>resolved</td></tr><tr><td>1164169190001007168</td><td>Android-支持NVR与NVR之间进行异地组网</td><td>许源</td><td>5/11</td><td>resolved</td></tr><tr><td>1164169190001007169</td><td>iOS-支持NVR与NVR之间进行异地组网</td><td>位冬</td><td>5/11</td><td>resolved</td></tr><tr><td>1164169190001007408</td><td>iOS 支持NVR与NVR之间进行异地组网接口调试</td><td>位冬</td><td>5/29</td><td>resolved</td></tr><tr><td>1164169190001007409</td><td>Android 支持NVR与NVR之间进行异地组网接口调试</td><td>许源</td><td>5/29</td><td>resolved</td></tr><tr><td>1164169190001007546</td><td>NVR异地通道需要在设备列表展示</td><td>许源+位冬</td><td>6/15</td><td>resolved</td></tr><tr><td>1164169190001007547</td><td>iOS-NVR异地通道需要在设备列表展示</td><td>位冬</td><td>6/15</td><td>resolved</td></tr><tr><td>1164169190001007548</td><td>Android-NVR异地通道需要在设备列表展示</td><td>许源</td><td>6/15</td><td>resolved</td></tr></tbody></table></div>
+<p><strong>实际上 NVR-NVR 异地组网有 8 条 stories！</strong>（去掉重复 7546/7547/7548 聚合 + 调试 7408/7409 + 设计 7170/7168/7169）</p>
+<ul><li><strong>专利雷达点</strong>：</li></ul>
+<p>1. NVR 异地组网协议设计（端云协同） 2. 多 NVR 通道调度算法 3. NVR 异地通道展示的 UI/UX</p>
+<p>#### AI 语义搜索本地录像（<strong>5 条</strong>）</p>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>标题</th><th>Owner</th><th>日期</th><th>状态</th></tr></thead><tbody><tr><td>1164169190001007167</td><td>功能设计-AI语义搜索本地录像</td><td><strong>陈宝旺</strong></td><td>5/11</td><td>resolved</td></tr><tr><td>1164169190001007165</td><td>Android-AI语义搜索本地录像</td><td>唐胜</td><td>5/11</td><td>resolved</td></tr><tr><td>1164169190001007166</td><td>iOS-AI语义搜索本地录像</td><td>位冬</td><td>5/11</td><td>resolved</td></tr><tr><td>1164169190001007308</td><td>Android-AI语义搜索本地录像调试</td><td>唐胜</td><td>5/28</td><td>resolved</td></tr><tr><td>1164169190001007309</td><td>iOS-AI语义搜索本地录像调试</td><td>位冬</td><td>5/28</td><td>resolved</td></tr></tbody></table></div>
+<p><strong>关键发现</strong>：<strong>陈宝旺</strong> 设计了 AI 语义搜索功能（云端/边端 AI 模型架构），唐胜+位冬负责客户端集成。</p>
+<ul><li><strong>专利雷达点</strong>：</li></ul>
+<p>1. 录像片段语义向量化方法（边端 LLM 推理） 2. 多模态检索（语音/文字/图像）跨模态对齐 3. 端云协同检索（云端索引 + 边端过滤）</p>
+<h3>4.2 🟡 P1 级别（重要新功能）</h3>
+<p>#### 无忧套餐流量降本方案（3 条）</p>
+<ul><li>1164169190001007551 → SDK（许源+唐胜+欧阳荣，6/15）</li><li>1164169190001007553 → iOS（唐胜，6/15）</li><li>1164169190001007554 → Android（欧阳荣，6/15）</li></ul>
+<p>#### 王炸二代新灯板类型（双白光）（3 条）</p>
+<ul><li>1164169190001007612 → APP（许源，6/24）</li><li>1164169190001007614 → Android（许源，6/24）</li><li>1164169190001007615 → iOS（欧阳荣，6/24）</li></ul>
+<p>#### 三方登录接口增加国家编码（3 条）</p>
+<ul><li>1164169190001007616 → SDK（许源，6/24）</li><li>1164169190001007617 → Android（许源，6/24）</li><li>1164169190001007618 → iOS（欧阳荣，6/24）</li></ul>
+<p>#### 5MP 截图支持星闪夜旗舰（3 条）</p>
+<ul><li>1164169190001007621 → APP（张威，6/25）</li><li>1164169190001007632 → iOS（位冬，6/26）</li><li>1164169190001007633 → SDK/Android（张威，6/26）</li></ul>
+<p>#### 设备设置新增3AR模式（3 条）</p>
+<ul><li>1164169190001007422 → Android（唐胜，6/1）</li><li>1164169190001007423 → iOS（欧阳荣，6/1）</li><li>1164169190001007424 → 设计（唐胜，6/1）</li></ul>
+<h3>4.3 🟢 P2 级别（功能优化）</h3>
+<p>#### 国际化（4 条）</p>
+<ul><li>1164169190001007438 → iOS-设备报警自定义提示音新增西班牙语（欧阳荣，6/2）</li><li>1164169190001007530 → 【App】使用反馈国际化（许源，6/11）</li><li>1164169190001007531 → iOS-国际版本与非简体中文（欧阳荣，6/11）</li><li>1164169190001007532 → Android-国际版本与非简体中文（许源，6/11）</li></ul>
+<p>#### SDK 信令优化（5 条）</p>
+<ul><li>1164169190001007427 → 增加用空网关查询设备在线状态机制（张威，6/1）</li><li>1164169190001007451 → 云组播连接复用优化（张威，6/2）</li><li>1164169190001007455 → 上层减少HTTP和Netty发唤醒频率（唐胜+欧阳荣+张威，6/3）</li><li>1164169190001007461 → relay停用导致连接被拒SDK立即调度新的relay（张威，6/4）</li><li>1164169190001007557 → SDK信令前期发唤醒频率太低，提高发唤醒频率（张威，6/15）</li></ul>
+<p>#### 录像/SDK 优化（3 条）</p>
+<ul><li>1164169190001007428 → SDK-支持IPC回放缩略图（张威，6/1）</li><li>1164169190001007598 → 【SDK】优化录像下载概率失败（张威，6/22）</li><li>1164169190001007301-7304 → &quot;录像下载完成但视频不完整需要有提示&quot;（4 条全部 <strong>rejected</strong>，5/28）</li></ul>
+<p>#### 友盟闪退优化（1 条）</p>
+<ul><li>1164169190001007479 → 友盟闪退优化（位冬，6/9）</li></ul>
+<p>#### 托管流程优化（3 条）</p>
+<ul><li>1164169190001007174 → Android-托管流程优化（许源，5/11）</li><li>1164169190001007175 → iOS-个人中心新增售后服务入口（欧阳荣，5/11）</li><li>1164169190001007176 → 功能设计-托管流程优化（欧阳荣，5/11）</li></ul>
+<h3>4.4 还在 planning 的需求（4 条）</h3>
+<ul><li>1164169190001007434 → 安卓模拟器支持美团日志（张威+许源，6/1）</li><li>1164169190001007480 → 埋点agw和relay断开原因（张威，6/9）</li><li>1164169190001007620 → 登录密码失败及注册失败提示优化（无 owner，6/25）</li><li>1164169190001007636/7637 → 刻度尺适配（6/29，唐胜）</li></ul>
+<h2>5. V8.3.13.X 团队分工（6 人高频）</h2>
+<div class="table-wrap"><table><thead><tr><th>Owner</th><th>故事数</th><th>主要职责</th></tr></thead><tbody><tr><td><strong>张威</strong></td><td>13</td><td>SDK 核心（信令/relay/录像）+ 5MP 截图 + 友盟 + 录像下载</td></tr><tr><td><strong>欧阳荣（主人）</strong></td><td>8</td><td>iOS + 国际化 + 流量降本 + 售后 + 托管</td></tr><tr><td><strong>位冬</strong></td><td>8</td><td>iOS + NVR-NVR 异地组网 + 5MP 截图</td></tr><tr><td><strong>许源</strong></td><td>8</td><td>Android + 流量降本 SDK + NVR-NVR + 国际化</td></tr><tr><td><strong>唐胜</strong></td><td>7</td><td>Android/iOS + 流量降本 + 3AR + AI 搜索</td></tr><tr><td><strong>陈宝旺</strong></td><td>1</td><td>跨平台 + AI 搜索功能设计</td></tr></tbody></table></div>
+<p><strong>关键洞察</strong>：V8.3.13.X 是 <strong>SDK 重量级迭代</strong>（张威主导）+ <strong>NVR-NVR 跨地域组网</strong>（位冬+许源）+ <strong>AI 语义搜索</strong>（陈宝旺设计，唐胜+位冬集成）三大主线。</p>
+<h2>6. 主人（欧阳荣）V8.3.13.X 工作全景</h2>
+<p>主人直接负责 <strong>8 条 stories</strong>： 1. iOS 三方登录接口增加国家编码（6/24） 2. iOS 支持王炸二代新灯板类型（双白光）（6/24） 3. iOS-国际版本与非简体中文支持问题反馈（6/11） 4. iOS -设备设置新增3AR模式（6/1） 5. iOS-个人中心新增售后服务入口（5/11） 6. 功能设计-托管流程优化（5/11） 7. 无忧套餐流量降本方案（第一版）- Android（6/15） 8. iOS-设备报警自定义提示音新增西班牙语（6/2）</p>
+<p>主人是 <strong>iOS 主程 + 跨端协调（流量降本 SDK + 国际化 + 托管）</strong> 角色！</p>
+<h2>7. v1.2 → v1.3 关键洞察升级</h2>
+<h3>v1.2 误判 1：TAPD 主项目是 411/41639373/31295836</h3>
+<ul><li>v1.3 真相：<strong>64169190 = Seetong App 主项目</strong>，3 个 ID 是子项目</li></ul>
+<h3>v1.2 误判 2：Tavily key 主人没配</h3>
+<ul><li>v1.3 真相：<strong>主人已配 <code>tvly-dev-29AlZ3...</code></strong>，但主会话工具列表看不到（需 openclaw restart）</li></ul>
+<h3>v1.2 误判 3：30 天 0 条 stories</h3>
+<ul><li>v1.3 真相：<strong>V8.3.13.X 单迭代就有 39 条</strong>（不含 APP跨平台Q2），30 天主项目 stories = <strong>45 条</strong></li></ul>
+<h3>v1.2 误判 4：陈宝旺是跨平台架构师</h3>
+<ul><li>v1.3 真相：<strong>陈宝旺 = Seetong KMP 跨平台架构师 + AI 搜索功能设计者</strong>，跨平台项目（Q1 基建/Q2/总项目）创建人</li></ul>
+<h2>8. 神策 30 天趋势查询 ⚠️ 部分失败</h2>
+<ul><li>❌ <code>query_event_count</code> 30 天 group_by=date 全部超时（神策平台性能问题）</li><li>❌ 7 天不带 group_by 也 timeout（&quot;Not connected&quot; / &quot;Connection closed&quot;）</li><li>⚠️ 不是工具问题，是神策 SaaS 平台对 30 天 + group_by 的复杂查询性能差</li><li><strong>下期建议</strong>：用 <code>query_sql</code> 自定义 SQL（性能更好）或分 3 段查 7 天 + 拼接</li></ul>
+<h2>9. v1.3 数据缺口（剩余）</h2>
+<div class="table-wrap"><table><thead><tr><th>数据源</th><th>v1.3 状态</th><th>下期动作</th></tr></thead><tbody><tr><td>Tavily 实测</td><td>✅ 完成</td><td>openclaw restart 后主会话工具出现</td></tr><tr><td>TAPD 主项目 ID</td><td>✅ 64169190</td><td>已确认</td></tr><tr><td>V8.3.13.X 完整 stories</td><td>✅ 39 条</td><td>已确认</td></tr><tr><td>团队分工</td><td>✅ 6 人</td><td>已沉淀到 MEMORY.md 候选</td></tr><tr><td>5 大创新点（含 NVR-NVR）</td><td>✅</td><td>增量到 v1.3 报告</td></tr><tr><td>神策 30 天 group_by=date</td><td>❌ 超时</td><td>下期用 query_sql 替代</td></tr><tr><td>海康/大华 25+ 产品线</td><td>✅ v1.2 完成</td><td>-</td></tr><tr><td>萤石/TP-LINK</td><td>✅ v1.2 完成</td><td>-</td></tr><tr><td>投资者页面降级方案</td><td>✅ v1.2 完成（hkexnews + cninfo）</td><td>下期试抓</td></tr></tbody></table></div>
+<h2>10. 创新点申请建议 v1.3（升级到 10+1 条）</h2>
+<h3>新增 🔴 P0（基于 V8.3.13.X）</h3>
+<p>#### 建议 9：NVR 异地组网协议与多通道调度方法（行业首创）</p>
+<ul><li><strong>对标</strong>：海康 iVMS / 大华 DSS 都不支持 NVR-NVR 异地组网（仅支持 NVR-IPC 单层级）</li><li><strong>方案</strong>：V8.3.13.X 已实现，提交完整协议设计专利</li><li><strong>专利点</strong>：</li></ul>
+<p>1. 多 NVR 跨地域 P2P 穿透 + 中继切换算法 2. 多 NVR 通道聚合调度（按设备负载 + 网络质量） 3. NVR 异地通道权限管理（设备列表展示策略）</p>
+<ul><li><strong>业务价值</strong>：连锁店 / 多分支监控场景的护城河</li></ul>
+<p>#### 建议 10：边端协同 AI 语义搜索录像方法</p>
+<ul><li><strong>对标</strong>：海康 iSearch / 大华 DSS 智能搜索都是云端，<strong>Seetong 是边端 AI 推理</strong></li><li><strong>方案</strong>：V8.3.13.X AI 语义搜索功能，陈宝旺设计</li><li><strong>专利点</strong>：</li></ul>
+<p>1. 录像片段边端语义向量化（轻量 LLM 在 4G IPC 推理） 2. 多模态跨模态对齐（语音 → 文字 → 图像联合检索） 3. 端云协同索引（云端全量索引 + 边端本地缓存）</p>
+<ul><li><strong>业务价值</strong>：低功耗 4G IPC + AI 搜索的市场突破点</li></ul>
+<h3>维护原有 8 条（v1.2）</h3>
+<ul><li>🔴 4G IPC 国密 SM 加密</li><li>🔴 Harmony 告警页 KMP 化</li><li>🟡 边端联动智能体</li><li>🟡 多目/双目联动 AI 相机</li><li>🟡 电瓶车识别 + 梯控联动</li><li>🟢 NVR 多品牌设备融合</li><li>🟢 跨平台录像时间轴映射</li></ul>
+<p>---</p>
+<h2>11. v1.3 沉淀</h2>
+<h3>已沉淀</h3>
+<ul><li>✅ <code>knowledge/seetong-patent-radar/2026-09-v1.3-patch.md</code>（本文件）</li><li>✅ <code>knowledge/seetong-team-stable-facts.md</code>（v1.3 团队分工 6 人）</li><li>⏳ <code>MEMORY.md</code> 待更新（团队稳定事实 + TAPD 主项目 ID）</li></ul>
+<h3>反面案例 v1.3 追加</h3>
+<p>1. <strong>v1.3 反面案例 11</strong>：把 iteration_id 写成 1164169190001000<strong>400</strong>（实际是 1164169190001000<strong>359</strong>），4 次重试都是手抖。<strong>应对</strong>：用 iteration_name 字段查避免手抖。</p>
+<p>2. <strong>v1.3 反面案例 12</strong>：神策 30 天 group_by=date 全部超时，但以为是工具问题。<strong>真相</strong>：神策 SaaS 对 30 天聚合性能差，<strong>不是工具问题</strong>。</p>
+<p>---</p>
+<h2>下一期</h2>
+<p><strong>第 4 期 (2026-10)</strong> — 2026-10-01 22:00 自动跑</p>
+<p><strong>前置条件</strong>： 1. 主人执行 <code>openclaw restart</code> 检查 <code>tavily_search</code> 工具是否出现 2. 神策 30 天趋势改用 <code>query_sql</code> 自定义 SQL（性能更好） 3. 试抓海康 H 股公告（hkexnews.hk）+ 大华 A 股公告（cninfo） 4. 重试 CPS 中安网 / 小米 / 华为</p></section></main></body></html>
