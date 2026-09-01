@@ -24,6 +24,7 @@ init() {
 }
 
 backup() {
+  shopt -s dotglob nullglob
   mv _site/* "$_backup_dir"
   mv .git "$_backup_dir"
 
