@@ -1,45 +1,16 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>🎯 Seetong 问题雷达 09:00 第148期</title><style>body{margin:0;background:#f4f7fb;color:#172033;font:15px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}main{max-width:1080px;margin:auto;padding:32px 18px}header{background:#fff;border-top:5px solid #12715b;padding:28px;border-radius:8px;box-shadow:0 2px 10px #18243a12}h1{margin:0;font-size:26px}.period{color:#607084;margin:8px 0 0}section{background:#fff;margin-top:18px;padding:24px;border-radius:8px;box-shadow:0 2px 10px #18243a0d}h2{font-size:19px;margin-top:0}li{margin:8px 0}pre{white-space:pre-wrap;word-break:break-word;background:#f6f8fa;padding:18px;border-radius:6px;overflow:auto;font:13px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace}</style></head><body><main><header><h1>🎯 Seetong 问题雷达 09:00 第148期</h1><p class="period">报告期：最新</p></header><section><h2>TL;DR</h2><ul><li>今日无新增严重问题：未发现未重复且严重度达到60分的功能性反馈聚类。</li><li>-102/-101/-1002及“检查手机网络”约82条，跨地区、机型与语言，但均未描述明确业务步骤，按🟣普遍网络问题排除。</li><li>远程看画面、设备离线、回放卡顿、告警抓拍、TF卡与云台等功能反馈均为单点，未达到入雷达阈值。</li></ul></section><section><h2>完整报告</h2><pre># 🎯 Seetong 问题雷达 09:00 第148期
-
-&gt; 第148期＝上期第147期＋1；起点为2026-06-24 H08第1期。
-
-**时间窗口**：2026-09-01 01:00～09:00
-**扫描反馈**：100条（接口返回已触及上限；可见记录均在窗口内，最近一条为08:49）
-**进雷达**：0条／排除约100条（🟢约11、🟡约3、🟣约82、🟤0）
-
----
-
-## TL;DR
-- **今日无新增严重问题**：未发现未重复且严重度达到60分的功能性反馈聚类。
-- `-102/-101/-1002`及“检查手机网络”约82条，跨地区、机型与语言，但均未描述明确业务步骤，按🟣普遍网络问题排除。
-- 远程看画面、设备离线、回放卡顿、告警抓拍、TF卡与云台等功能反馈均为单点，未达到入雷达阈值。
-- 详见落盘：`knowledge/seetong-radar/2026-09-01-H09.md`。
-
-## 评分与去重
-- **远程查看／设备离线**：`手机看不到监控画面`、`设备离线怎么解除`各1条，评分50／100＝反馈量10／30＋共性0／30＋关键度40／40；样本不足，未入雷达。且与第146、147期同一链路相邻，继续按24小时规则观察。
-- **录像／播放卡顿**：`最近看回放的时候总是卡着`、`看监控反应特别慢`各1条，评分50／100＝10＋10＋30；平台、设备与复现条件不足，未入雷达。
-- **抓拍不到／告警时间不符／TF卡未初始化／云台异常**：均为单点反馈，最高40／100，未达阈值。
-
-## 核心数据源与失败模式
-- **反馈平台正常**：成功返回100条；8小时窗口不为空。返回触及接口上限，因此“100条”不能代表窗口总量。
-- **心愿单查询正常**：返回0条；本期无与产品建议匹配的新增候选。
-- **神策与Logan未调用**：本期无新的、未去重入雷达问题，按筛选流程不对单点或重复候选消耗核心数据源；这不是数据源失效。
-- 试查事件趋势时，`MonitorWatchStep`与`SiotDevConnectResult`请求超时；其结果不参与本期结论。未出现明确崩溃、闪退、卡死、ANR或黑屏反馈，未查友盟；无已知BUG单号，未查TAPD；Stage 3无需代码定位。
-
-## 本期扫描全量
-| # | 关键词 | 反馈数 | 分类 | 处置 |
-|---|---|---:|---|---|
-| 1 | `-102/-101/-1002`、检查网络 | 约82 | 🟣普遍网络 | 排除 |
-| 2 | 远程查看／设备离线 | 约2 | 🔁重复／单点 | 观察 |
-| 3 | 回放卡顿／预览慢 | 约2 | 🟡单点功能 | 观察 |
-| 4 | 抓拍、告警、TF卡、云台、镜头遮蔽、硬盘 | 约8 | 🟡单点功能 | 观察 |
-| 5 | 绑定、解绑、宽带切换及无效文本 | 约6 | 🟢操作／配置 | 排除 |
-
-## 待补证
-- 反馈接口触及100条上限，无法得出窗口全量精确计数。
-- 若远程查看或回放问题增至3条，优先查神策事件分布与代表性Logan。
-- 神策趋势查询超时；仅在形成入雷达候选后按两次上限重试。
-
-下一期＝第149期＝2026-09-01-H17（今天17:00）
-
-**_本消息由 Seetong小助手 自动生成，欧阳荣 监督发布。_**
-</pre></section></main></body></html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>🎯 Seetong 问题雷达 09:00 第148期</title><style>body{margin:0;background:#f3f6f9;color:#182235;font:15px/1.75 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}main{max-width:1080px;margin:auto;padding:34px 18px 56px}header{background:#173d52;color:#fff;padding:30px;border-radius:8px;border-left:6px solid #56c596}h1{margin:0;font-size:28px}.period{color:#d5e5ea;margin:8px 0 0}section{background:#fff;margin-top:18px;padding:26px;border-radius:8px;box-shadow:0 2px 12px #18243a10}h2{font-size:21px;color:#173d52;border-bottom:1px solid #e5eaee;padding-bottom:10px}h3{font-size:17px;color:#286b69;margin-top:28px}li{margin:8px 0}p{margin:12px 0}a{color:#087f75}code{background:#eef4f4;color:#075f59;padding:2px 5px;border-radius:3px}pre{white-space:pre-wrap;word-break:break-word;background:#10252f;color:#eaf3f4;padding:16px;border-radius:6px;overflow:auto}blockquote{margin:16px 0;padding:10px 16px;border-left:4px solid #56c596;background:#f0faf6;color:#38585a}.table-wrap{overflow:auto;border:1px solid #e2e9ed;border-radius:6px;margin:16px 0}table{border-collapse:collapse;width:100%;min-width:680px}th{background:#eaf4f2;color:#174a4a;text-align:left}th,td{padding:10px 12px;border-bottom:1px solid #e7edf0;vertical-align:top}tr:last-child td{border-bottom:0}@media(max-width:600px){main{padding:18px 12px}header,section{padding:20px}h1{font-size:23px}}</style></head><body><main><header><h1>🎯 Seetong 问题雷达 09:00 第148期</h1><p class="period">报告期：最新</p></header><section><h2>TL;DR</h2><ul><li>今日无新增严重问题：未发现未重复且严重度达到60分的功能性反馈聚类。</li><li>-102/-101/-1002及“检查手机网络”约82条，跨地区、机型与语言，但均未描述明确业务步骤，按🟣普遍网络问题排除。</li><li>远程看画面、设备离线、回放卡顿、告警抓拍、TF卡与云台等功能反馈均为单点，未达到入雷达阈值。</li></ul></section><section class="markdown-preview"><h2>完整报告</h2><h1>🎯 Seetong 问题雷达 09:00 第148期</h1>
+<blockquote>第148期＝上期第147期＋1；起点为2026-06-24 H08第1期。</blockquote>
+<p><strong>时间窗口</strong>：2026-09-01 01:00～09:00 <strong>扫描反馈</strong>：100条（接口返回已触及上限；可见记录均在窗口内，最近一条为08:49） <strong>进雷达</strong>：0条／排除约100条（🟢约11、🟡约3、🟣约82、🟤0）</p>
+<p>---</p>
+<h2>TL;DR</h2>
+<ul><li><strong>今日无新增严重问题</strong>：未发现未重复且严重度达到60分的功能性反馈聚类。</li><li><code>-102/-101/-1002</code>及“检查手机网络”约82条，跨地区、机型与语言，但均未描述明确业务步骤，按🟣普遍网络问题排除。</li><li>远程看画面、设备离线、回放卡顿、告警抓拍、TF卡与云台等功能反馈均为单点，未达到入雷达阈值。</li><li>详见落盘：<code>knowledge/seetong-radar/2026-09-01-H09.md</code>。</li></ul>
+<h2>评分与去重</h2>
+<ul><li><strong>远程查看／设备离线</strong>：<code>手机看不到监控画面</code>、<code>设备离线怎么解除</code>各1条，评分50／100＝反馈量10／30＋共性0／30＋关键度40／40；样本不足，未入雷达。且与第146、147期同一链路相邻，继续按24小时规则观察。</li><li><strong>录像／播放卡顿</strong>：<code>最近看回放的时候总是卡着</code>、<code>看监控反应特别慢</code>各1条，评分50／100＝10＋10＋30；平台、设备与复现条件不足，未入雷达。</li><li><strong>抓拍不到／告警时间不符／TF卡未初始化／云台异常</strong>：均为单点反馈，最高40／100，未达阈值。</li></ul>
+<h2>核心数据源与失败模式</h2>
+<ul><li><strong>反馈平台正常</strong>：成功返回100条；8小时窗口不为空。返回触及接口上限，因此“100条”不能代表窗口总量。</li><li><strong>心愿单查询正常</strong>：返回0条；本期无与产品建议匹配的新增候选。</li><li><strong>神策与Logan未调用</strong>：本期无新的、未去重入雷达问题，按筛选流程不对单点或重复候选消耗核心数据源；这不是数据源失效。</li><li>试查事件趋势时，<code>MonitorWatchStep</code>与<code>SiotDevConnectResult</code>请求超时；其结果不参与本期结论。未出现明确崩溃、闪退、卡死、ANR或黑屏反馈，未查友盟；无已知BUG单号，未查TAPD；Stage 3无需代码定位。</li></ul>
+<h2>本期扫描全量</h2>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>关键词</th><th>反馈数</th><th>分类</th><th>处置</th></tr></thead><tbody><tr><td>1</td><td><code>-102/-101/-1002</code>、检查网络</td><td>约82</td><td>🟣普遍网络</td><td>排除</td></tr><tr><td>2</td><td>远程查看／设备离线</td><td>约2</td><td>🔁重复／单点</td><td>观察</td></tr><tr><td>3</td><td>回放卡顿／预览慢</td><td>约2</td><td>🟡单点功能</td><td>观察</td></tr><tr><td>4</td><td>抓拍、告警、TF卡、云台、镜头遮蔽、硬盘</td><td>约8</td><td>🟡单点功能</td><td>观察</td></tr><tr><td>5</td><td>绑定、解绑、宽带切换及无效文本</td><td>约6</td><td>🟢操作／配置</td><td>排除</td></tr></tbody></table></div>
+<h2>待补证</h2>
+<ul><li>反馈接口触及100条上限，无法得出窗口全量精确计数。</li><li>若远程查看或回放问题增至3条，优先查神策事件分布与代表性Logan。</li><li>神策趋势查询超时；仅在形成入雷达候选后按两次上限重试。</li></ul>
+<p>下一期＝第149期＝2026-09-01-H17（今天17:00）</p>
+<p><strong>_本消息由 Seetong小助手 自动生成，欧阳荣 监督发布。_</strong></p></section></main></body></html>
