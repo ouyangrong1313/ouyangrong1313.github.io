@@ -1,83 +1,25 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Seetong 团队日报｜2026-09-01（周二）</title><style>body{margin:0;background:#f4f7fb;color:#172033;font:15px/1.7 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}main{max-width:1080px;margin:auto;padding:32px 18px}header{background:#fff;border-top:5px solid #12715b;padding:28px;border-radius:8px;box-shadow:0 2px 10px #18243a12}h1{margin:0;font-size:26px}.period{color:#607084;margin:8px 0 0}section{background:#fff;margin-top:18px;padding:24px;border-radius:8px;box-shadow:0 2px 10px #18243a0d}h2{font-size:19px;margin-top:0}li{margin:8px 0}pre{white-space:pre-wrap;word-break:break-word;background:#f6f8fa;padding:18px;border-radius:6px;overflow:auto;font:13px/1.65 ui-monospace,SFMono-Regular,Menlo,monospace}</style></head><body><main><header><h1>Seetong 团队日报｜2026-09-01（周二）</h1><p class="period">统计窗口：2026-08-31 00:00:00～2026-08-31 23:59:59（上一个工作日，精确单日）</p></header><section><h2>TL;DR</h2><ul><li>Git 精确单日二次过滤：21 条提交，55 个文件，新增 653 行／删除 114 行，7 名贡献者。</li><li>分布：iOS 4、Android 6、HarmonyOS 5、KMP 6、App-AI 0。</li><li>三条主线：跨端分享入口收敛；海外内置卡运营商优选；NVR 异地组网预览／回放杂音修复。</li></ul></section><section><h2>完整报告</h2><pre># Seetong 团队日报｜2026-09-01（周二）
-
-&gt; ⚠️ 8 月 31 日 21 条提交集中于跨平台分享、海外内置卡运营商优选与 NVR 回放稳定性。当天“分享太复杂”与晚间回放卡顿均为单条相邻反馈，尚不能证明与改动的因果关系。
-
-**统计窗口**：2026-08-31 00:00:00～2026-08-31 23:59:59（上一个工作日，精确单日）
-
-## 一、总体产出
-
-- Git 精确单日二次过滤：21 条提交，55 个文件，新增 653 行／删除 114 行，7 名贡献者。
-- 分布：iOS 4、Android 6、HarmonyOS 5、KMP 6、App-AI 0。
-- 三条主线：跨端分享入口收敛；海外内置卡运营商优选；NVR 异地组网预览／回放杂音修复。
-- App-AI 当日 0 提交，Git 未提示 checkout 落后；仅作单日观察，不评价项目状态。
-
-## 二、新功能开发（feat）
-
-| 需求 | 交付与负责人 | 交叉信号 |
-|---|---|---|
-| 1008143 | iOS、Android、KMP 统一跳转跨平台分享页；欧阳荣、许源 | TAPD 主项目已解决。`DeviceShare` 当日 14,642 UV／33,213 次，前 7 日均值 14,311 UV／31,800 次，弱上升但不足以评价功能效果。 |
-| 1008088 | iOS、Android 海外内置卡运营商优选；欧阳荣、唐胜 | TAPD 已解决，设计含运营商评分、QoS、掉线、带宽与 MOC 反馈；无专属“网络优化”埋点，效果待观察。 |
-| 无编号 | iOS 8.4.0.6／KMP 1.0.2.2 版本更新；位冬 | 需在发布记录补关联版本与验收。 |
-
-- 反馈信号：Android `FB-247316` 于 20:05 反馈“分享太复杂”。这是统一分享入口的单条体验样本，可用作回归锚点，未形成聚类；心愿单返回 0 条。
-
-## 三、Bug 修复（fix）
-
-| 项目 | BUG 号与修复 | 交叉结论 |
-|---|---|---|
-| HarmonyOS | 1014432：NVR 异地组网固件最新版本预览／回放概率性杂音；张威 | 按仓库来源先查 Harmony，命中 `1131295836001014432`，状态已解决、严重度一般，原始描述来自线上反馈。近 7 天未见“杂音”聚类。 |
-| KMP | 无编号：修复 NVR 离线通道进入卡回放被拦截、无法加载录像；陈宝旺 | 无法关联 TAPD，需补编号。17:00 后出现 Harmony 回放卡顿 `FB-247368` 单条，只作相邻信号。 |
-
-- `NvrDeviceVideoPlayback` 当日 3 UV／371 次，近 7 日波动大，不适合稳定性结论；全量 `DeviceVideoPlayback` 约 517 万 UV／1,867 万次，不能与杂音修复建立因果。
-- 友盟：Android 异常率约 0.04%～0.08%，iOS 约 0.30%～0.46%；HarmonyOS 因免费版权限返回 403。数据不覆盖“杂音”问题。
-
-## 四、异常信号 ⚠️
-
-- **周日工程活动**：21 条提交均在周日。应在下个工作日确认独立回归与发布验收，不能把合并直接等同交付闭环。
-- **跨端追溯不完整**：1008143 仅 iOS 提交显式带号，Android／KMP 对应改动需补链；KMP 回放修复无 BUG 号。
-- **回放邻近信号**：BUG 1014432 已解决，但晚间有“回放总是卡着”单条；未达到聚类阈值，不扩展为线上回归结论。
-- **反馈窗口上限**：17:00 雷达触及 100 条上限，其中约 86 条 `-102/-101` 为跨地区通用网络提示，已排除为本次证据。
-- **未触发项**：无 revert、巨型提交、同单号 3 次以上反复修改或紧急修复关键词；MR／测试数据未采集，不能判断评审覆盖。
-
-## 五、深度复盘
-
-| 角度 | 事实与建议 | 证据边界 |
-|---|---|---|
-| 代码质量 | 未见巨型提交或 revert；无编号 KMP 修复削弱追溯。补 TAPD、复现与回归结果。 | 缺 diff 级测试与 MR。 |
-| 团队提效 | 分享在三端并行落地。指定 1008143 跨端验收 owner，按设备列表、设置、预览、个人中心、H5 桥接验收。 | 单日提交数不替代协作质量。 |
-| 项目管理 | 两项已解决需求与一项已解决线上 BUG 同日合入。无编号改动需映射发布单并明确回滚路径。 | 未采集发布状态。 |
-| 开发流程 | Git、TAPD、神策均已交叉；网络优化缺专属漏斗。补“进入→查询→发起→结果码”埋点及 TAPD 回归记录。 | 无 MR 与验收附件。 |
-| 问题原因 | 杂音 BUG 有线上反馈来源；卡顿不等于杂音，不能判修复无效。 | 下次按固件、机型、回放结果拆分核验。 |
-
-## 六、MyAIWiki 控制措施诊断
-
-### P1｜跨端分享与无编号修复的验证闭环
-
-- **事实**：跨端分享三侧均有提交；KMP 回放修复无 BUG 号。1008143、1008088、1014432 已命中 TAPD，未采集 MR、测试与发布验收。
-- **推断**：可确认部分代码关联，不能确认所有入口已独立回归；置信度：中。
-- **依据**：MyAIWiki：`wiki/01-ai-agents/Loop-Engineering-验证才是瓶颈.md`，以可观测、可量化验证闸门约束交付。
-- **措施**：为 1008143 建跨端入口验收表；为 KMP 修复补编号、复现、回归与版本。负责人：需求 owner 与各端开发负责人。完成条件：TAPD 附三端验收，KMP 修复可由编号反查。
-- **复核**：下一工作日检查新增回放／分享反馈、验收附件与发布记录。
-
-### P2｜网络优化的观测闸门
-
-- **事实**：1008088 要求沉淀运营商、掉线、QoS、带宽与 MOC 数据；当前无专属神策事件。
-- **推断**：无法用提交或通用事件评价策略效果；置信度：高。
-- **依据**：MyAIWiki：`wiki/01-ai-agents/0xCodez-Agent-Harness-14-Steps.md`，把可重复流程固化为可验证记录。
-- **措施**：接入“页面进入、1134 查询、1131／1133 发起、最终结果、拒绝原因”漏斗。负责人：1008088 需求 owner。完成条件：可按版本／地区查询漏斗，TAPD 有字段字典与验收截图。
-- **复核**：首个灰度版本后看事件覆盖率、失败码与用户反馈。
-
-## 七、明日建议＋需关注
-
-- [ ] 为 1008143 补 Android／KMP 提交链与跨端入口验收清单。
-- [ ] 为 KMP 卡回放拦截修复创建或关联 BUG，补复现、回归和目标版本。
-- [ ] 对 1014432 按固件版本、预览／回放、不同 NVR 样本回归，重点验证“杂音”。
-- [ ] 补 1008088 网络优化专属埋点，先建立漏斗再评估策略效果。
-- [ ] 继续观察 `FB-247368` 回放卡顿与 `FB-247316` 分享体验，当前均为信号级样本。
-
----
-
-**已知限制／待补证**：Git 已按日期二次过滤；反馈平台正常但 17:00 触及 100 条上限；神策只提供相邻信号；HarmonyOS 友盟受权限限制；MR、自动化测试、发布验收未采集。
-
-*本消息由 Seetong小助手 自动生成，欧阳荣 监督发布。*
-</pre></section></main></body></html>
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Seetong 团队日报｜2026-09-01（周二）</title><style>body{margin:0;background:#f3f6f9;color:#182235;font:15px/1.75 -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}main{max-width:1080px;margin:auto;padding:34px 18px 56px}header{background:#173d52;color:#fff;padding:30px;border-radius:8px;border-left:6px solid #56c596}h1{margin:0;font-size:28px}.period{color:#d5e5ea;margin:8px 0 0}section{background:#fff;margin-top:18px;padding:26px;border-radius:8px;box-shadow:0 2px 12px #18243a10}h2{font-size:21px;color:#173d52;border-bottom:1px solid #e5eaee;padding-bottom:10px}h3{font-size:17px;color:#286b69;margin-top:28px}li{margin:8px 0}p{margin:12px 0}a{color:#087f75}code{background:#eef4f4;color:#075f59;padding:2px 5px;border-radius:3px}pre{white-space:pre-wrap;word-break:break-word;background:#10252f;color:#eaf3f4;padding:16px;border-radius:6px;overflow:auto}blockquote{margin:16px 0;padding:10px 16px;border-left:4px solid #56c596;background:#f0faf6;color:#38585a}.table-wrap{overflow:auto;border:1px solid #e2e9ed;border-radius:6px;margin:16px 0}table{border-collapse:collapse;width:100%;min-width:680px}th{background:#eaf4f2;color:#174a4a;text-align:left}th,td{padding:10px 12px;border-bottom:1px solid #e7edf0;vertical-align:top}tr:last-child td{border-bottom:0}@media(max-width:600px){main{padding:18px 12px}header,section{padding:20px}h1{font-size:23px}}</style></head><body><main><header><h1>Seetong 团队日报｜2026-09-01（周二）</h1><p class="period">统计窗口：2026-08-31 00:00:00～2026-08-31 23:59:59（上一个工作日，精确单日）</p></header><section><h2>TL;DR</h2><ul><li>Git 精确单日二次过滤：21 条提交，55 个文件，新增 653 行／删除 114 行，7 名贡献者。</li><li>分布：iOS 4、Android 6、HarmonyOS 5、KMP 6、App-AI 0。</li><li>三条主线：跨端分享入口收敛；海外内置卡运营商优选；NVR 异地组网预览／回放杂音修复。</li></ul></section><section class="markdown-preview"><h2>完整报告</h2><h1>Seetong 团队日报｜2026-09-01（周二）</h1>
+<blockquote>⚠️ 8 月 31 日 21 条提交集中于跨平台分享、海外内置卡运营商优选与 NVR 回放稳定性。当天“分享太复杂”与晚间回放卡顿均为单条相邻反馈，尚不能证明与改动的因果关系。</blockquote>
+<p><strong>统计窗口</strong>：2026-08-31 00:00:00～2026-08-31 23:59:59（上一个工作日，精确单日）</p>
+<h2>一、总体产出</h2>
+<ul><li>Git 精确单日二次过滤：21 条提交，55 个文件，新增 653 行／删除 114 行，7 名贡献者。</li><li>分布：iOS 4、Android 6、HarmonyOS 5、KMP 6、App-AI 0。</li><li>三条主线：跨端分享入口收敛；海外内置卡运营商优选；NVR 异地组网预览／回放杂音修复。</li><li>App-AI 当日 0 提交，Git 未提示 checkout 落后；仅作单日观察，不评价项目状态。</li></ul>
+<h2>二、新功能开发（feat）</h2>
+<div class="table-wrap"><table><thead><tr><th>需求</th><th>交付与负责人</th><th>交叉信号</th></tr></thead><tbody><tr><td>1008143</td><td>iOS、Android、KMP 统一跳转跨平台分享页；欧阳荣、许源</td><td>TAPD 主项目已解决。<code>DeviceShare</code> 当日 14,642 UV／33,213 次，前 7 日均值 14,311 UV／31,800 次，弱上升但不足以评价功能效果。</td></tr><tr><td>1008088</td><td>iOS、Android 海外内置卡运营商优选；欧阳荣、唐胜</td><td>TAPD 已解决，设计含运营商评分、QoS、掉线、带宽与 MOC 反馈；无专属“网络优化”埋点，效果待观察。</td></tr><tr><td>无编号</td><td>iOS 8.4.0.6／KMP 1.0.2.2 版本更新；位冬</td><td>需在发布记录补关联版本与验收。</td></tr></tbody></table></div>
+<ul><li>反馈信号：Android <code>FB-247316</code> 于 20:05 反馈“分享太复杂”。这是统一分享入口的单条体验样本，可用作回归锚点，未形成聚类；心愿单返回 0 条。</li></ul>
+<h2>三、Bug 修复（fix）</h2>
+<div class="table-wrap"><table><thead><tr><th>项目</th><th>BUG 号与修复</th><th>交叉结论</th></tr></thead><tbody><tr><td>HarmonyOS</td><td>1014432：NVR 异地组网固件最新版本预览／回放概率性杂音；张威</td><td>按仓库来源先查 Harmony，命中 <code>1131295836001014432</code>，状态已解决、严重度一般，原始描述来自线上反馈。近 7 天未见“杂音”聚类。</td></tr><tr><td>KMP</td><td>无编号：修复 NVR 离线通道进入卡回放被拦截、无法加载录像；陈宝旺</td><td>无法关联 TAPD，需补编号。17:00 后出现 Harmony 回放卡顿 <code>FB-247368</code> 单条，只作相邻信号。</td></tr></tbody></table></div>
+<ul><li><code>NvrDeviceVideoPlayback</code> 当日 3 UV／371 次，近 7 日波动大，不适合稳定性结论；全量 <code>DeviceVideoPlayback</code> 约 517 万 UV／1,867 万次，不能与杂音修复建立因果。</li><li>友盟：Android 异常率约 0.04%～0.08%，iOS 约 0.30%～0.46%；HarmonyOS 因免费版权限返回 403。数据不覆盖“杂音”问题。</li></ul>
+<h2>四、异常信号 ⚠️</h2>
+<ul><li><strong>周日工程活动</strong>：21 条提交均在周日。应在下个工作日确认独立回归与发布验收，不能把合并直接等同交付闭环。</li><li><strong>跨端追溯不完整</strong>：1008143 仅 iOS 提交显式带号，Android／KMP 对应改动需补链；KMP 回放修复无 BUG 号。</li><li><strong>回放邻近信号</strong>：BUG 1014432 已解决，但晚间有“回放总是卡着”单条；未达到聚类阈值，不扩展为线上回归结论。</li><li><strong>反馈窗口上限</strong>：17:00 雷达触及 100 条上限，其中约 86 条 <code>-102/-101</code> 为跨地区通用网络提示，已排除为本次证据。</li><li><strong>未触发项</strong>：无 revert、巨型提交、同单号 3 次以上反复修改或紧急修复关键词；MR／测试数据未采集，不能判断评审覆盖。</li></ul>
+<h2>五、深度复盘</h2>
+<div class="table-wrap"><table><thead><tr><th>角度</th><th>事实与建议</th><th>证据边界</th></tr></thead><tbody><tr><td>代码质量</td><td>未见巨型提交或 revert；无编号 KMP 修复削弱追溯。补 TAPD、复现与回归结果。</td><td>缺 diff 级测试与 MR。</td></tr><tr><td>团队提效</td><td>分享在三端并行落地。指定 1008143 跨端验收 owner，按设备列表、设置、预览、个人中心、H5 桥接验收。</td><td>单日提交数不替代协作质量。</td></tr><tr><td>项目管理</td><td>两项已解决需求与一项已解决线上 BUG 同日合入。无编号改动需映射发布单并明确回滚路径。</td><td>未采集发布状态。</td></tr><tr><td>开发流程</td><td>Git、TAPD、神策均已交叉；网络优化缺专属漏斗。补“进入→查询→发起→结果码”埋点及 TAPD 回归记录。</td><td>无 MR 与验收附件。</td></tr><tr><td>问题原因</td><td>杂音 BUG 有线上反馈来源；卡顿不等于杂音，不能判修复无效。</td><td>下次按固件、机型、回放结果拆分核验。</td></tr></tbody></table></div>
+<h2>六、MyAIWiki 控制措施诊断</h2>
+<h3>P1｜跨端分享与无编号修复的验证闭环</h3>
+<ul><li><strong>事实</strong>：跨端分享三侧均有提交；KMP 回放修复无 BUG 号。1008143、1008088、1014432 已命中 TAPD，未采集 MR、测试与发布验收。</li><li><strong>推断</strong>：可确认部分代码关联，不能确认所有入口已独立回归；置信度：中。</li><li><strong>依据</strong>：MyAIWiki：<code>wiki/01-ai-agents/Loop-Engineering-验证才是瓶颈.md</code>，以可观测、可量化验证闸门约束交付。</li><li><strong>措施</strong>：为 1008143 建跨端入口验收表；为 KMP 修复补编号、复现、回归与版本。负责人：需求 owner 与各端开发负责人。完成条件：TAPD 附三端验收，KMP 修复可由编号反查。</li><li><strong>复核</strong>：下一工作日检查新增回放／分享反馈、验收附件与发布记录。</li></ul>
+<h3>P2｜网络优化的观测闸门</h3>
+<ul><li><strong>事实</strong>：1008088 要求沉淀运营商、掉线、QoS、带宽与 MOC 数据；当前无专属神策事件。</li><li><strong>推断</strong>：无法用提交或通用事件评价策略效果；置信度：高。</li><li><strong>依据</strong>：MyAIWiki：<code>wiki/01-ai-agents/0xCodez-Agent-Harness-14-Steps.md</code>，把可重复流程固化为可验证记录。</li><li><strong>措施</strong>：接入“页面进入、1134 查询、1131／1133 发起、最终结果、拒绝原因”漏斗。负责人：1008088 需求 owner。完成条件：可按版本／地区查询漏斗，TAPD 有字段字典与验收截图。</li><li><strong>复核</strong>：首个灰度版本后看事件覆盖率、失败码与用户反馈。</li></ul>
+<h2>七、明日建议＋需关注</h2>
+<ul><li>[ ] 为 1008143 补 Android／KMP 提交链与跨端入口验收清单。</li><li>[ ] 为 KMP 卡回放拦截修复创建或关联 BUG，补复现、回归和目标版本。</li><li>[ ] 对 1014432 按固件版本、预览／回放、不同 NVR 样本回归，重点验证“杂音”。</li><li>[ ] 补 1008088 网络优化专属埋点，先建立漏斗再评估策略效果。</li><li>[ ] 继续观察 <code>FB-247368</code> 回放卡顿与 <code>FB-247316</code> 分享体验，当前均为信号级样本。</li></ul>
+<p>---</p>
+<p><strong>已知限制／待补证</strong>：Git 已按日期二次过滤；反馈平台正常但 17:00 触及 100 条上限；神策只提供相邻信号；HarmonyOS 友盟受权限限制；MR、自动化测试、发布验收未采集。</p>
+<p><em>本消息由 Seetong小助手 自动生成，欧阳荣 监督发布。</em></p></section></main></body></html>
