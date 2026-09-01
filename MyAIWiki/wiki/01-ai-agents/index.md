@@ -1,5 +1,12 @@
 # AI Agents Wiki
 
+## Moxt：AI Native Team 的可信 Context 与责任 Workflow（2026-08-28 新增）
+
+> **微信公众号「Founder Park」；Moxt 团队供稿，2026-08-27**：Agent 进入团队核心工作，依赖的不只是能力，而是可共享且有信任结构的 Context、按长期责任划分的团队角色、显式的人机交接 Workflow 与以真实后续任务验证的改进闭环。
+
+- [[01-ai-agents/Moxt-半年复盘-人和Agent组成团队到底需要什么]] - **核心命题**“AI Native Team 是把可信 Context、责任单元、显式编排、异步审阅、任务回写和改进闭环嵌入团队日常运行”；与 [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]、[[01-ai-agents/腾讯程序员-Agent的上限可能不在模型而在团队知识]]、[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]、[[01-ai-agents/Loop-Engineering-验证才是瓶颈]] 强关联。
+- [[raw/Moxt-半年复盘-人和Agent组成团队到底需要什么-digest]] - 5 个核心观点、7 个分析角度、21 个开头钩子和落地检查清单。
+
 ## Agent 评测平台运行闭环（2026-08-25 新增）
 
 > **微信公众号「叶小钗」叶小钗，2026-08-25**：Agent 评测应从 PRD 的任务边界和发布门禁开始，落入版本化数据集、分层评分器和完整 Run 快照；失败不止出现在报告中，还要进入问题中心、重测和持续回归。

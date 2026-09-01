@@ -1,5 +1,11 @@
 # AI Coding
 
+## Spec Coding 保姆级教程（2026-08-27 新增）
+
+> 爱汇在智谱 AI 开放文档发布的 Spec-Kit 保姆级教程：把"规格"从静态文档升级为可执行指令（六步流水线 constitution → specify → clarify → plan → tasks → implement），让 Claude Code / Copilot / Gemini 等通用 AI 助手从"打字员"变成按图施工的"靠谱工程师"，终结 Vibe Coding 的反复拉扯。
+
+- [[02-ai-coding/Spec-Coding保姆级教程-爱汇]] - **核心命题**"代码为规格服务，而非规格为代码服务"：**6步流水线**+**10 节点**（Spec-Kit / SDD / Vibe-Coding / 六步流水线 / /constitution / /specify / /clarify / /plan / /tasks / /implement）；**5 关键金句**（"Vibe Coding 已死 Spec Coding 当立"/"代码为规格服务"/"规格不再是写完就扔的静态文档"/"/constitution 是被低估的杠杆"/"从打字员变工程师伙伴"）；**3 反直觉点**（Spec-Kit 不是新 AI 工具而是 harness / /clarify 比 /specify 更影响产出 / 小项目不该用中大型才受益）；**5 个对 Seetong 借鉴动作**（**iOS 端沉淀 `constitution.md`** 把 QMUI 强制用法 + ST 类前缀 + ViewController 命名约定 + ARC/MRC 边界一次性写入让 Claude Code 改 Seetong 代码自动遵守 / **Android 端试点 `specify init .`** 挑非核心功能如告警规则 UI 跑完整流水线验证老项目渐进集成可行性 / **Bug 模板升级** 把 `/tasks` 思想套到 issue 模板强制按"复现→根因→验证→影响"4 段拆 / **三端 + 2 SDK 共享宪法** iOS/Android/SDK + C/C++ 共用一份宪法把约定变可复用资产 / **不盲从** Spec-Kit 是工具级方案非范式定论同时段还有 OpenSpec/Superpowers/BMAD 应按团队规模选用）。**与 [[02-ai-coding/AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]]（Spec-Kit vs OpenSpec vs Superpowers 三种 SDD 工具横评）+ [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]（Spec-Kit vs BMAD 企业落地对比）+ [[02-ai-coding/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了]]（Anthropic AI-Native SDLC 提交产物版本化同主线）+ [[02-ai-coding/大淘宝技术-AI-Coding-环境与验证驱动]]（Spec 定"做什么"+ 环境/验证定"做得对不对"互补视角）+ [[02-ai-coding/AI-Coding的顿悟时刻]]（AI Coding 顿悟系列中的工具实战篇）+ [[02-ai-coding/AICoding之后-如何让Agent进入企业研发全链路-得物推荐的Harness实践]]（Harness 把 SDD 接入 PDCA 的方法论上游）强关联**——补完 02-ai-coding 现有"AI Coding 工作流 + 工具横评 + 范式表达 + 环境验证驱动 + Harness 实践"主线偏"工具级保姆教程 + 六步流水线实操 + Seetong 落地"缺位的"Spec-Kit 单工具深度 + 项目级宪法沉淀 + 老项目渐进集成"维度；**分类理由**：放 02-ai-coding 而非 01-ai-agents——本文是"AI Coding 工具实战教程 + 项目级工作流" 主轴是 AI 编程工具实操而非 Agent 自主决策平台 也不放 06-ai-tech（不是宏观行业分析）；与 [[02-ai-coding/AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]] + [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] 同"SDD 工具实践"主线形成"横评 + 单一工具保姆教程 + 企业落地"完整视角；**透明玻璃自检**：wiki 7,451B（≤8K 字节）/ digest 3,979B（≤4K 字节）/ 节点 10（6-10）/ H2 5 wiki + H2 5 digest（≤5）/ 表格 1 wiki + 表格 1 digest（≤2）/ 0 陈词 ⭐⭐。
+
 ## AI 原生开发的确认链路（2026-08-26 新增）
 
 > 宝玉以 BaoCut 的远程转录功能复盘指出：AI 不会消除可行性、设计、原型、实现和测试，而是把执行交给 Agent。人应把有限注意力转给方向取舍、原型体验、用户验收和风险判断；确认可合并，但不可省略。

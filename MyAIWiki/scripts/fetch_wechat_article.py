@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Fetch WeChat article content with Playwright first, then fall back to direct HTML parsing.
+Fetch WeChat article content with browser fallbacks before direct HTML parsing.
 
 Usage:
   python3 scripts/fetch_wechat_article.py <url>
@@ -13,8 +13,11 @@ import argparse
 import json
 import os
 import re
+import shutil
+import socket
 import subprocess
 import sys
+import tempfile
 from datetime import datetime
 from html import unescape
 from pathlib import Path
@@ -26,6 +29,11 @@ MOBILE_USER_AGENT = (
     "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) "
     "AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 "
     "Mobile/15E148 Safari/604.1"
+)
+CHROME_CANDIDATES = (
+    Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"),
+    Path("/Applications/Google Chrome.app/Contents/MacOS/Google Chrome for Testing"),
+    Path("/Applications/Chromium.app/Contents/MacOS/Chromium"),
 )
 
 
@@ -93,6 +101,137 @@ def fetch_article_via_playwright(url: str) -> dict:
     data = json.loads(result.stdout)
     if not data.get("title") and not data.get("content_text"):
         raise RuntimeError("Fetched page did not return title/content.")
+    return data
+
+
+def find_chrome_binary() -> str:
+    configured = os.environ.get("MYAIWIKI_CHROME_PATH")
+    candidates = [Path(configured)] if configured else []
+    candidates.extend(CHROME_CANDIDATES)
+    candidates.extend(
+        Path("/Volumes").glob(
+            "*/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+        )
+    )
+    for candidate in candidates:
+        if candidate.is_file() and os.access(candidate, os.X_OK):
+            return str(candidate)
+    for name in ("google-chrome", "chromium", "chromium-browser"):
+        if path := shutil.which(name):
+            return path
+    raise FileNotFoundError(
+        "Chrome/Chromium was not found. Set MYAIWIKI_CHROME_PATH to an executable."
+    )
+
+
+def reserve_local_port() -> int:
+    with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as server:
+        server.bind(("127.0.0.1", 0))
+        return int(server.getsockname()[1])
+
+
+def build_cdp_node_script(port: int, url: str) -> str:
+    escaped_url = json.dumps(url)
+    return f"""
+const targetUrl = {escaped_url};
+const endpoint = 'http://127.0.0.1:{port}/json/list';
+
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function evaluatePage() {{
+  let pages = [];
+  for (let attempt = 0; attempt < 30; attempt += 1) {{
+    try {{
+      pages = await (await fetch(endpoint)).json();
+      const page = pages.find((item) => item.type === 'page' && item.url.startsWith(targetUrl));
+      if (page && page.webSocketDebuggerUrl) {{
+        await sleep(2500);
+        return await new Promise((resolve, reject) => {{
+          const ws = new WebSocket(page.webSocketDebuggerUrl);
+          const timer = setTimeout(() => reject(new Error('Timed out evaluating Chrome page.')), 15000);
+          ws.onopen = () => ws.send(JSON.stringify({{
+            id: 1,
+            method: 'Runtime.evaluate',
+            params: {{
+              expression: `JSON.stringify({{
+                title: document.querySelector('#activity-name')?.innerText?.trim() || document.title || '',
+                author: document.querySelector('#js_name')?.textContent?.trim() || '',
+                publish_time: document.querySelector('#publish_time')?.textContent?.trim() || '',
+                url: location.href,
+                body_text: document.body?.innerText || '',
+                content_text: document.querySelector('#js_content')?.innerText || ''
+              }})`,
+              returnByValue: true
+            }}
+          }}));
+          ws.onmessage = (event) => {{
+            clearTimeout(timer);
+            const response = JSON.parse(event.data);
+            ws.close();
+            if (response.error || response.result?.exceptionDetails) {{
+              reject(new Error('Chrome page evaluation failed.'));
+              return;
+            }}
+            resolve(JSON.parse(response.result.result.value));
+          }};
+          ws.onerror = () => {{
+            clearTimeout(timer);
+            reject(new Error('Could not connect to Chrome DevTools.'));
+          }};
+        }});
+      }}
+    }} catch {{}}
+    await sleep(250);
+  }}
+  throw new Error('Chrome DevTools did not expose the requested page.');
+}}
+
+evaluatePage().then((data) => console.log(JSON.stringify(data))).catch((error) => {{
+  console.error(error.stack || String(error));
+  process.exit(1);
+}});
+"""
+
+
+def fetch_article_via_isolated_chrome(url: str) -> dict:
+    chrome = find_chrome_binary()
+    port = reserve_local_port()
+    with tempfile.TemporaryDirectory(prefix="myaiwiki-wechat-") as profile:
+        process = subprocess.Popen(
+            [
+                chrome,
+                "--headless=new",
+                f"--remote-debugging-port={port}",
+                f"--user-data-dir={profile}",
+                "--no-first-run",
+                "--no-default-browser-check",
+                url,
+            ],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+        try:
+            result = subprocess.run(
+                ["node", "-e", build_cdp_node_script(port, url)],
+                check=True,
+                capture_output=True,
+                text=True,
+                timeout=30,
+                env=os.environ.copy(),
+            )
+        finally:
+            process.terminate()
+            try:
+                process.wait(timeout=5)
+            except subprocess.TimeoutExpired:
+                process.kill()
+
+    data = json.loads(result.stdout)
+    rendered_text = data.get("content_text") or data.get("body_text") or ""
+    blocked = "环境异常" in rendered_text or "当前环境异常" in rendered_text
+    if not data.get("title") or not rendered_text or blocked:
+        raise RuntimeError("Isolated Chrome did not return an accessible article page.")
+    data["fetch_mode"] = "isolated-chrome-cdp"
     return data
 
 
@@ -167,17 +306,32 @@ def fetch_article_via_html(url: str) -> dict:
 
 
 def fetch_article(url: str) -> dict:
+    errors = []
     try:
         return fetch_article_via_playwright(url)
     except (FileNotFoundError, subprocess.CalledProcessError, RuntimeError) as exc:
+        errors.append(f"playwright: {exc}")
+    try:
+        return fetch_article_via_isolated_chrome(url)
+    except (
+        FileNotFoundError,
+        subprocess.CalledProcessError,
+        subprocess.TimeoutExpired,
+        RuntimeError,
+    ) as exc:
+        errors.append(f"isolated-chrome-cdp: {exc}")
+    try:
         data = fetch_article_via_html(url)
-        data["playwright_error"] = str(exc)
-        return data
+    except (subprocess.CalledProcessError, RuntimeError) as exc:
+        errors.append(f"html-fallback: {exc}")
+        raise RuntimeError("WeChat article fetch failed: " + " | ".join(errors)) from exc
+    data["fetch_errors"] = errors
+    return data
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(
-        description="Fetch WeChat article title/author/time/content via Playwright, with an HTML fallback."
+        description="Fetch WeChat article via Playwright, isolated Chrome CDP, then direct HTML."
     )
     parser.add_argument("url", help="WeChat article URL")
     parser.add_argument(

@@ -37,8 +37,9 @@ fetch → raw → digest → wiki → index+log
 
 ### Step 1：fetch（抓取原文）
 
-- 微信公众号 / 知乎 / 一般博客 → Playwright CDP 抓（curl 会被反爬）
-- X 推文 → Playwright CDP 抓（X 是 SPA + 反爬严格）
+- 微信公众号先运行 `python3 scripts/fetch_wechat_article.py <url> --pretty`：按 Playwright → **临时隔离 Chrome + DevTools** → `curl` 的顺序回退。隔离 Chrome 必须使用临时 `--user-data-dir`，不得复用个人浏览器 Profile 或读取微信本地聊天数据。
+- 出现“环境异常”、标题为空或正文为空即判定抓取失败；只可请求用户提供正文或可访问镜像，不能从搜索摘要补写原文。
+- 知乎 / 一般博客可优先使用 Playwright 或页面 HTML；X 推文优先使用 Playwright。
 - 已经保存过的 raw 文件 → 跳过
 
 **输出**：`raw/{slug}.md`（完整原文 + 元信息 + 标签行）
