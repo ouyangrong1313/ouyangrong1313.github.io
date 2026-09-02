@@ -7,153 +7,148 @@ layout: null
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light">
-<title>Seetong 线上版本质量日内快报 2026-09-02</title>
+<title>Seetong 线上版本质量日内快报（2026-09-02 19:09）</title>
 <style>
   :root{
-    --green:#07C160;--green-dark:#059669;--green-darker:#047857;--green-light:#E8F5EE;--green-lighter:#F0FDF4;--green-glow:rgba(7,193,96,.18);
-    --ink:#1F2937;--ink-soft:#374151;--muted:#6B7280;--muted-light:#9CA3AF;--line:#E5E7EB;--line-light:#F3F4F6;--canvas:#F9FAFB;--card:#FFFFFF;
-    --amber:#F59E0B;--amber-light:#FFFBEB;--red:#EF4444;--red-light:#FEF2F2;--blue:#3B82F6;--blue-light:#EFF6FF;
-    --shadow-sm:0 1px 2px rgba(16,24,40,.04);--shadow-md:0 2px 8px rgba(16,24,40,.06);--shadow-lg:0 8px 24px rgba(16,24,40,.08);
-    --r-sm:8px;--r-md:12px;--r-lg:16px;--r-xl:20px;
+    --green:#00845A;--green-dark:#006B49;--green-lighter:#EAF4EF;
+    --ink:#17212B;--ink-soft:#34414D;--muted:#667482;--muted-light:#94A0AA;
+    --line:#CBD3D9;--line-light:#E6EAED;--canvas:#F4F6F7;--paper:#FFFFFF;
+    --amber:#A56600;--amber-light:#FFF4D8;--red:#C62D3A;--red-light:#FCECEE;--blue:#1769AA;--blue-light:#EAF2F8;
   }
   *{box-sizing:border-box}
   html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-size-adjust:100%;-webkit-text-size-adjust:100%}
-  body{margin:0;background:var(--canvas);color:var(--ink);font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;letter-spacing:.1px;overflow-x:hidden}
-  .shell{max-width:1180px;margin:0 auto;padding:24px 20px 56px}
-  .masthead{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r-xl);padding:28px 32px 24px;box-shadow:var(--shadow-md);overflow:hidden}
-  .masthead::before{content:'';position:absolute;left:0;top:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--green),var(--green-dark));border-radius:4px 0 0 4px}
-  .masthead::after{content:'';position:absolute;top:-60px;right:-40px;width:220px;height:220px;background:radial-gradient(circle,var(--green-glow) 0%,transparent 70%);pointer-events:none}
-  .masthead-inner{position:relative;z-index:1;display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
+  body{margin:0;background:var(--canvas);color:var(--ink);font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;letter-spacing:0;overflow-x:hidden}
+  .shell{max-width:1240px;margin:0 auto;padding:32px 24px 64px}
+  .masthead{position:relative;border-top:4px solid var(--ink);border-bottom:1px solid var(--line);padding:24px 0 22px}
+  .masthead-inner{display:flex;justify-content:space-between;align-items:flex-start;gap:24px}
   .masthead-left{flex:1;min-width:0}
-  .eyebrow{display:inline-flex;align-items:center;gap:7px;color:var(--green-dark);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:var(--green-lighter);padding:5px 12px;border-radius:20px;border:1px solid var(--green-light)}
-  .eyebrow .dot{width:6px;height:6px;background:var(--green);border-radius:50%;box-shadow:0 0 6px var(--green);animation:pulse 2s infinite}
-  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
-  .masthead h1{margin:14px 0 6px;font-size:28px;line-height:1.25;letter-spacing:-.3px;font-weight:800;color:var(--ink)}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;color:var(--green-dark);font-size:11px;font-weight:800;letter-spacing:0;text-transform:uppercase;padding:0}
+  .eyebrow .dot{width:7px;height:7px;background:var(--green);display:inline-block}
+  .masthead h1{margin:12px 0 4px;font-size:30px;line-height:1.2;letter-spacing:0;font-weight:800;color:var(--ink)}
   .masthead .subtitle{margin:0;color:var(--muted);font-size:13.5px}
   .brand-logo{flex-shrink:0;display:flex;align-items:center;justify-content:center;padding:4px}
-  .brand-logo img{display:block;width:auto;height:64px;max-width:160px;object-fit:contain}
-  .verdict{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;margin-top:20px;padding:16px 20px;border-radius:var(--r-md);border:1px solid transparent}
-  .verdict.danger{background:var(--red-light);border-color:#FECACA}
-  .verdict.warning{background:var(--amber-light);border-color:#FDE68A}
-  .verdict.success{background:var(--green-lighter);border-color:var(--green-light)}
+  .brand-logo img{display:block;width:auto;height:56px;max-width:150px;object-fit:contain}
+  .verdict{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;margin-top:22px;padding:14px 0 14px 16px;border-left:4px solid var(--ink);border-bottom:1px solid var(--line)}
+  .verdict.danger{border-left-color:var(--red)}
+  .verdict.warning{border-left-color:var(--amber)}
+  .verdict.success{border-left-color:var(--green)}
   .verdict-label{display:flex;align-items:center;gap:10px;font-size:18px;font-weight:800;white-space:nowrap}
   .verdict.danger .verdict-label{color:var(--red)}
-  .verdict.warning .verdict-label{color:#B45309}
+  .verdict.warning .verdict-label{color:var(--amber)}
   .verdict.success .verdict-label{color:var(--green-dark)}
-  .verdict-icon{width:30px;height:30px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+  .verdict-icon{width:28px;height:28px;display:flex;align-items:center;justify-content:center;border:1px solid currentColor;font-size:16px;flex-shrink:0}
   .verdict p{margin:0;font-size:13.5px;color:var(--ink-soft);line-height:1.65}
   .verdict p strong{font-weight:700}
   .verdict.danger p strong{color:var(--red)}
-  .verdict.warning p strong{color:#B45309}
-  .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:16px 0}
-  .kpi-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:16px 18px;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;min-width:0}
-  .kpi-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
-  .kpi-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
-  .kpi-card.green::before{background:linear-gradient(90deg,var(--green),#34D399)}
-  .kpi-card.amber::before{background:linear-gradient(90deg,var(--amber),#FBBF24)}
-  .kpi-card.red::before{background:linear-gradient(90deg,var(--red),#F87171)}
-  .kpi-card.blue::before{background:linear-gradient(90deg,var(--blue),#60A5FA)}
+  .verdict.warning p strong{color:var(--amber)}
+  .kpi-row{display:grid;grid-template-columns:repeat(4,1fr);margin:28px 0 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .kpi-card{padding:16px 18px 18px;min-width:0;border-left:1px solid var(--line)}
+  .kpi-card:first-child{border-left:0}
   .kpi-label{font-size:12px;color:var(--muted);font-weight:600;margin-bottom:6px;display:flex;align-items:center;gap:6px}
-  .kpi-value{font-size:26px;font-weight:800;line-height:1.1;letter-spacing:-.5px;font-variant-numeric:tabular-nums;color:var(--ink);word-break:break-all}
+  .kpi-value{font-size:26px;font-weight:800;line-height:1.1;letter-spacing:0;font-variant-numeric:tabular-nums;color:var(--ink);word-break:break-all}
   .kpi-card.green .kpi-value{color:var(--green-dark)}
-  .kpi-card.amber .kpi-value{color:#B45309}
+  .kpi-card.amber .kpi-value{color:var(--amber)}
   .kpi-card.red .kpi-value{color:var(--red)}
   .kpi-card.blue .kpi-value{color:var(--blue)}
   .kpi-sub{font-size:11px;color:var(--muted);margin-top:5px}
-  .kpi-trend{display:inline-flex;align-items:center;gap:2px;font-size:11px;font-weight:700;padding:2px 6px;border-radius:4px;margin-left:4px}
-  .kpi-trend.bad{background:var(--red-light);color:var(--red)}
-  .kpi-trend.good{background:var(--green-lighter);color:var(--green-dark)}
-  .tablist{display:flex;gap:4px;margin:20px 0 16px;background:var(--card);padding:5px;border-radius:var(--r-md);border:1px solid var(--line);box-shadow:var(--shadow-sm);overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .tab{flex:1;min-width:0;white-space:nowrap;border:0;background:transparent;padding:10px 16px;min-height:44px;color:var(--muted);font:inherit;font-weight:600;font-size:13.5px;cursor:pointer;border-radius:var(--r-sm);transition:all .2s;-webkit-tap-highlight-color:transparent}
-  .tab:hover{color:var(--ink);background:var(--line-light)}
-  .tab:active{transform:scale(.97)}
-  .tab[aria-selected="true"]{color:var(--green-dark);background:var(--green-lighter);font-weight:700;box-shadow:0 1px 3px rgba(7,193,96,.15)}
+  .kpi-trend{font-size:11px;font-weight:800;margin-left:4px}
+  .kpi-trend.bad{color:var(--red)}
+  .kpi-trend.good{color:var(--green-dark)}
+  .tablist{display:flex;margin:24px 0 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--line);overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .tab{position:relative;flex:1;min-width:136px;white-space:nowrap;border:0;background:transparent;padding:13px 16px 12px;min-height:44px;color:var(--muted);font:inherit;font-weight:700;font-size:13px;cursor:pointer;-webkit-tap-highlight-color:transparent;text-align:left}
+  .tab:hover{color:var(--ink);background:var(--paper)}
+  .tab:focus-visible{outline:2px solid var(--blue);outline-offset:-3px}
+  .tab[aria-selected="true"]{color:var(--green-dark)}
+  .tab[aria-selected="true"]::after{content:'';position:absolute;left:16px;right:16px;bottom:0;height:3px;background:var(--green)}
   .panel[hidden]{display:none}
-  .section{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:22px 24px;margin:14px 0;box-shadow:var(--shadow-sm)}
-  .section h2{font-size:17px;margin:0 0 4px;display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink)}
-  .section h2 .h2-icon{width:24px;height:24px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0}
-  .section h3{font-size:14.5px;margin:22px 0 10px;color:var(--ink);font-weight:700;padding-bottom:8px;border-bottom:1px solid var(--line-light)}
-  .section-intro{margin:0 0 16px;color:var(--muted);font-size:13px;line-height:1.6}
-  .facts{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:12px;margin-bottom:14px}
-  .facts article{background:var(--card);border:1px solid var(--line);border-radius:var(--r-md);padding:14px 16px;box-shadow:var(--shadow-sm);min-width:0}
-  .facts span{display:block;color:var(--muted);font-size:11px;font-weight:700;margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px}
+  .section{padding:28px 0 4px;margin:0;border-bottom:1px solid var(--line)}
+  .section h2{font-size:18px;margin:0 0 6px;display:flex;align-items:baseline;gap:12px;font-weight:800;color:var(--ink)}
+  .section-index{color:var(--green-dark);font-size:11px;font-weight:800;font-variant-numeric:tabular-nums}
+  .section h3{font-size:13px;margin:26px 0 10px;color:var(--ink);font-weight:800;padding-bottom:8px;border-bottom:1px solid var(--line-light)}
+  .section-intro{max-width:900px;margin:0 0 18px;color:var(--muted);font-size:13px;line-height:1.65}
+  .facts{display:grid;grid-template-columns:1fr 1.3fr 1fr;margin:0;border-bottom:1px solid var(--line)}
+  .facts article{padding:14px 16px 16px 0;border-right:1px solid var(--line);min-width:0}
+  .facts article+article{padding-left:16px}
+  .facts article:last-child{border-right:0}
+  .facts span{display:block;color:var(--muted);font-size:11px;font-weight:800;margin-bottom:5px;text-transform:uppercase;letter-spacing:0}
   .facts strong{display:block;font-size:13px;line-height:1.6;font-weight:600;color:var(--ink-soft);word-break:break-word}
-  .risk-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:16px;align-items:start}
-  .risk-col h3,.action-col h3{font-size:14px;margin:0 0 12px;padding:0 0 10px;border-bottom:2px solid var(--line-light);display:flex;align-items:center;gap:8px;font-weight:700;color:var(--ink)}
+  .risk-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:32px;align-items:start}
+  .risk-col h3,.action-col h3{font-size:13px;margin:0 0 12px;padding:0 0 10px;border-bottom:2px solid var(--line-light);font-weight:800;color:var(--ink)}
   .risk-col h3{color:var(--red)}
   .action-col h3{color:var(--green-dark)}
   .risk-list{list-style:none;margin:0;padding:0}
-  .risk-list li{position:relative;padding:11px 0 11px 26px;border-bottom:1px solid var(--line-light);font-size:13.5px;line-height:1.65;color:var(--ink-soft)}
+  .risk-list li{position:relative;padding:11px 0 11px 16px;border-bottom:1px solid var(--line-light);font-size:13.5px;line-height:1.65;color:var(--ink-soft)}
   .risk-list li:last-child{border-bottom:0}
-  .risk-list li::before{content:'!';position:absolute;left:0;top:13px;width:18px;height:18px;background:var(--red);color:#fff;border-radius:50%;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .risk-list li::before{content:'';position:absolute;left:0;top:16px;width:6px;height:6px;background:var(--red)}
   .action-list{margin:0;padding:0;list-style:none;counter-reset:action}
-  .action-list li{counter-increment:action;position:relative;padding:11px 0 11px 32px;font-size:13.5px;line-height:1.65;color:var(--ink-soft);border-bottom:1px solid var(--line-light)}
+  .action-list li{counter-increment:action;position:relative;padding:11px 0 11px 26px;font-size:13.5px;line-height:1.65;color:var(--ink-soft);border-bottom:1px solid var(--line-light)}
   .action-list li:last-child{border-bottom:0}
-  .action-list li::before{content:counter(action);position:absolute;left:0;top:13px;width:22px;height:22px;background:linear-gradient(135deg,var(--green),var(--green-dark));color:#fff;border-radius:7px;font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center}
-  .platform-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-  .platform-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:18px 20px;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;min-width:0}
-  .platform-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
+  .action-list li::before{content:counter(action, decimal-leading-zero);position:absolute;left:0;top:12px;color:var(--green-dark);font-size:11px;font-weight:800}
+  .platform-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .platform-card{padding:18px 20px 20px 0;min-width:0;border-right:1px solid var(--line)}
+  .platform-card+.platform-card{padding-left:20px}
+  .platform-card:last-child{border-right:0}
   .platform-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:10px}
-  .platform-name{font-size:16px;font-weight:800;display:flex;align-items:center;gap:10px;color:var(--ink);min-width:0}
-  .platform-icon{width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-  .platform-icon.android svg{width:26px;height:26px}
-  .platform-icon.ios svg{width:24px;height:24px}
-  .platform-icon.harmony svg{width:26px;height:26px}
-  .platform-badge{font-size:10px;padding:3px 9px;border-radius:12px;font-weight:700;letter-spacing:.3px;white-space:nowrap;flex-shrink:0}
+  .platform-name{font-size:15px;font-weight:800;display:flex;align-items:center;gap:9px;color:var(--ink);min-width:0}
+  .platform-icon{width:25px;height:25px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .platform-icon.android svg{width:22px;height:22px}
+  .platform-icon.ios svg{width:20px;height:20px}
+  .platform-icon.harmony svg{width:22px;height:22px}
+  .platform-badge{font-size:10px;padding:2px 6px;border:1px solid currentColor;font-weight:800;letter-spacing:0;white-space:nowrap;flex-shrink:0}
   .platform-badge.online{background:var(--green-lighter);color:var(--green-dark)}
-  .platform-badge.warn{background:var(--amber-light);color:#B45309}
+  .platform-badge.warn{background:var(--amber-light);color:var(--amber)}
   .platform-badge.danger{background:var(--red-light);color:var(--red)}
   .platform-caption{color:var(--muted);font-size:11px;margin-bottom:8px}
-  .platform-card > strong{display:block;font-size:26px;font-weight:800;color:var(--ink);letter-spacing:-.5px;font-variant-numeric:tabular-nums;margin-bottom:14px;word-break:break-all}
+  .platform-card > strong{display:block;font-size:25px;font-weight:800;color:var(--ink);letter-spacing:0;font-variant-numeric:tabular-nums;margin-bottom:14px;word-break:break-all}
   .platform-card dl{display:grid;grid-template-columns:1fr 1fr;gap:8px 12px;margin:0;padding-top:12px;border-top:1px solid var(--line-light)}
   .platform-card dl div{min-width:0}
   dt{color:var(--muted);font-size:11px;font-weight:600}
   dd{margin:2px 0 0;font-weight:700;font-size:13px;font-variant-numeric:tabular-nums;color:var(--ink-soft);word-break:break-all}
-  .chart-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-  .chart-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:18px 20px;box-shadow:var(--shadow-sm);transition:transform .2s;min-width:0}
-  .chart-card:hover{transform:translateY(-1px)}
+  .chart-grid{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line)}
+  .chart-card{padding:18px 20px 20px 0;border-right:1px solid var(--line);border-bottom:1px solid var(--line);min-width:0}
+  .chart-card:nth-child(even){padding-left:20px;border-right:0}
   .chart-card header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;gap:10px}
-  .chart-card h3{margin:0;font-size:14px;font-weight:700;color:var(--ink);padding:0;border:0;min-width:0}
-  .metric-hint{font-size:11px;padding:3px 9px;border-radius:6px;font-weight:700;flex-shrink:0;white-space:nowrap}
+  .chart-card h3{margin:0;font-size:14px;font-weight:800;color:var(--ink);padding:0;border:0;min-width:0}
+  .metric-hint{font-size:11px;padding:2px 6px;border:1px solid currentColor;font-weight:800;flex-shrink:0;white-space:nowrap}
   .metric-hint.higher{background:var(--green-lighter);color:var(--green-dark)}
-  .metric-hint.lower{background:var(--amber-light);color:#B45309}
+  .metric-hint.lower{background:var(--amber-light);color:var(--amber)}
   .chart-row{margin:10px 0}
   .chart-label{font-size:12px;font-weight:700;margin-bottom:6px;color:var(--ink-soft)}
   .chart-bars{display:grid;grid-template-columns:58px minmax(70px,1fr) 58px;gap:6px 10px;align-items:center}
   .series-label{font-size:11px;color:var(--muted);white-space:nowrap;font-weight:600}
-  .chart-track{height:10px;background:var(--line-light);overflow:hidden;border-radius:5px;position:relative;min-width:0}
-  .chart-bar{display:block;width:var(--value);height:100%;border-radius:inherit;transform-origin:left;animation:grow .8s cubic-bezier(.4,0,.2,1) both}
-  .chart-bar.current{background:linear-gradient(90deg,var(--green),#34D399)}
-  .chart-bar.previous{background:linear-gradient(90deg,var(--amber),#FBBF24)}
-  .chart-bar.baseline{background:linear-gradient(90deg,#CBD5E1,#E2E8F0)}
+  .chart-track{height:9px;background:var(--line-light);overflow:hidden;position:relative;min-width:0}
+  .chart-bar{display:block;width:var(--value);height:100%;transform-origin:left;animation:grow .55s ease-out both}
+  .chart-bar.current{background:var(--green)}
+  .chart-bar.previous{background:var(--amber)}
+  .chart-bar.baseline{background:#AAB4BD}
   .chart-bars b{font-size:12px;text-align:right;font-variant-numeric:tabular-nums;font-weight:700;color:var(--ink-soft)}
   @keyframes grow{from{transform:scaleX(.03);opacity:.3}to{transform:scaleX(1);opacity:1}}
   .chart-card footer{display:flex;gap:16px;margin-top:14px;padding-top:12px;border-top:1px solid var(--line-light);color:var(--muted);font-size:11px;flex-wrap:wrap}
   .legend{display:flex;align-items:center;gap:5px}
-  .legend::before{content:'';display:inline-block;width:10px;height:10px;border-radius:3px}
-  .current-dot::before{background:linear-gradient(90deg,var(--green),#34D399)}
-  .previous-dot::before{background:linear-gradient(90deg,var(--amber),#FBBF24)}
-  .baseline-dot::before{background:linear-gradient(90deg,#CBD5E1,#E2E8F0)}
-  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:var(--r-md);margin:14px 0 20px;box-shadow:var(--shadow-sm)}
+  .legend::before{content:'';display:inline-block;width:8px;height:8px}
+  .current-dot::before{background:var(--green)}
+  .previous-dot::before{background:var(--amber)}
+  .baseline-dot::before{background:#AAB4BD}
+  .table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:14px 0 24px}
   table{border-collapse:collapse;width:100%;min-width:700px}
-  caption{caption-side:top;padding:13px 16px;background:var(--green-lighter);color:var(--green-darker);font-size:13.5px;font-weight:700;text-align:left;border-bottom:1px solid var(--green-light)}
+  caption{caption-side:top;padding:12px 0;color:var(--green-dark);font-size:13px;font-weight:800;text-align:left;border-bottom:1px solid var(--line)}
   th,td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line-light)}
-  th{background:var(--line-light);color:var(--ink-soft);font-size:12px;font-weight:700;white-space:nowrap;letter-spacing:.2px}
+  th{background:#EEF1F3;color:var(--ink-soft);font-size:12px;font-weight:800;white-space:nowrap;letter-spacing:0}
   td{font-variant-numeric:tabular-nums;font-size:13px;color:var(--ink-soft)}
   tr:last-child td{border-bottom:0}
-  tr:hover td{background:var(--green-lighter)}
-  .readable-table th[scope="row"]{background:var(--card);color:var(--ink);font-weight:700}
+  tr:hover td{background:#F3F7F5}
+  .readable-table th[scope="row"]{background:var(--paper);color:var(--ink);font-weight:800}
   .comparison-cell{display:grid;grid-template-columns:1fr auto;gap:2px 8px;align-items:baseline;min-width:130px}
   .comparison-cell strong{font-size:14px;font-weight:800;color:var(--ink)}
   .comparison-cell span{grid-column:1;color:var(--muted);font-size:11px}
-  .comparison-cell em{grid-column:2;grid-row:1 / span 2;font-size:11px;font-style:normal;font-weight:700;padding:2px 7px;border-radius:5px;white-space:nowrap}
-  .comparison-cell em.better{background:var(--green-lighter);color:var(--green-dark)}
-  .comparison-cell em.worse{background:var(--red-light);color:var(--red)}
-  .comparison-cell em.neutral{background:var(--line-light);color:var(--muted)}
-  .direction{display:inline-block;padding:3px 9px;border-radius:6px;font-size:11px;font-weight:700;white-space:nowrap}
-  .direction.higher{background:var(--green-lighter);color:var(--green-dark)}
-  .direction.lower{background:var(--amber-light);color:#B45309}
-  details{border:1px solid var(--line);border-radius:var(--r-md);padding:0 18px;margin-top:18px;background:var(--card)}
+  .comparison-cell em{grid-column:2;grid-row:1 / span 2;font-size:11px;font-style:normal;font-weight:800;padding:2px 0;white-space:nowrap}
+  .comparison-cell em.better{color:var(--green-dark)}
+  .comparison-cell em.worse{color:var(--red)}
+  .comparison-cell em.neutral{color:var(--muted)}
+  .direction{display:inline-block;padding:2px 0;font-size:11px;font-weight:800;white-space:nowrap}
+  .direction.higher{color:var(--green-dark)}
+  .direction.lower{color:var(--amber)}
+  details{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:0;margin-top:24px;background:var(--paper)}
   summary{padding:14px 0;font-weight:700;cursor:pointer;color:var(--ink-soft);font-size:13.5px;-webkit-tap-highlight-color:transparent;min-height:44px;display:flex;align-items:center}
   .markdown-preview{padding:4px 0 18px}
   .markdown-preview h2{font-size:16px;margin:18px 0 8px;color:var(--ink)}
@@ -161,68 +156,73 @@ layout: null
   .markdown-preview p{margin:8px 0;font-size:13.5px;color:var(--ink-soft)}
   .markdown-preview ul{padding-left:20px}
   .markdown-preview li{margin:6px 0;font-size:13.5px;color:var(--ink-soft)}
-  .markdown-preview blockquote{margin:12px 0;padding:10px 14px;border-left:3px solid var(--green);background:var(--green-lighter);color:var(--muted);border-radius:0 8px 8px 0;font-size:13px}
+  .markdown-preview blockquote{margin:12px 0;padding:10px 14px;border-left:3px solid var(--green);background:var(--green-lighter);color:var(--muted);font-size:13px}
   .empty{color:var(--muted)}
-  code{background:var(--line-light);border-radius:4px;padding:1px 6px;color:var(--green-darker);font-size:12.5px;font-family:'SF Mono','Fira Code',Consolas,monospace}
+  code{background:var(--line-light);padding:1px 5px;color:var(--green-dark);font-size:12.5px;font-family:'SF Mono','Fira Code',Consolas,monospace}
   .footer{margin:28px 0 0;color:var(--muted-light);font-size:12px;text-align:center;padding:18px;border-top:1px solid var(--line-light)}
-  @media(prefers-reduced-motion:reduce){.chart-bar,.eyebrow .dot{animation:none}}
+  @media(prefers-reduced-motion:reduce){.chart-bar{animation:none}}
   @media(max-width:900px){
     .kpi-row{grid-template-columns:repeat(2,1fr)}
     .platform-grid{grid-template-columns:1fr}
+    .platform-card,.platform-card+.platform-card{padding:18px 0 20px;border-right:0;border-bottom:1px solid var(--line)}
+    .platform-card:last-child{border-bottom:0}
     .chart-grid{grid-template-columns:1fr}
+    .chart-card,.chart-card:nth-child(even){padding:18px 0 20px;border-right:0}
     .risk-grid{grid-template-columns:1fr}
     .facts{grid-template-columns:1fr}
-    .masthead-inner{flex-direction:row;align-items:center}
+    .facts article,.facts article+article{padding:14px 0 16px;border-right:0;border-bottom:1px solid var(--line)}
+    .facts article:last-child{border-bottom:0}
+    .masthead-inner{align-items:center}
     .brand-logo img{height:52px;max-width:130px}
   }
   @media(max-width:640px){
-    .shell{padding:12px 12px 32px}
-    .masthead{padding:20px 16px 18px;border-radius:16px}
+    .shell{padding:18px 14px 40px}
+    .masthead{padding:18px 0}
     .masthead-inner{gap:12px;align-items:flex-start}
     .masthead h1{font-size:21px;margin:10px 0 5px}
     .masthead .subtitle{font-size:12.5px;line-height:1.55}
-    .eyebrow{font-size:10px;padding:4px 10px}
+    .eyebrow{font-size:10px}
     .brand-logo{padding:2px}
     .brand-logo img{height:44px;max-width:110px}
-    .verdict{grid-template-columns:1fr;gap:8px;padding:14px 16px}
+    .verdict{grid-template-columns:1fr;gap:8px;padding:12px 0 12px 12px}
     .verdict-label{font-size:16px;white-space:normal}
     .verdict p{font-size:13px}
-    .kpi-row{grid-template-columns:1fr 1fr;gap:10px}
-    .kpi-card{padding:14px}
+    .kpi-row{grid-template-columns:1fr 1fr;margin:20px 0}
+    .kpi-card{padding:14px 10px;border-bottom:1px solid var(--line)}
+    .kpi-card:nth-child(odd){border-left:0}
+    .kpi-card:nth-last-child(-n+2){border-bottom:0}
     .kpi-value{font-size:21px}
     .kpi-label{font-size:11px}
     .kpi-sub{font-size:10.5px}
-    .section{padding:16px 16px;border-radius:14px}
+    .section{padding:22px 0 2px}
     .section h2{font-size:15.5px}
     .section h3{font-size:13.5px;margin:18px 0 8px}
     .section-intro{font-size:12.5px}
-    .tablist{padding:4px;gap:2px;margin:16px 0 12px}
-    .tab{padding:8px 10px;font-size:12.5px;min-height:40px}
-    .facts article{padding:12px 14px}
+    .tablist{margin:20px 0 0}
+    .tab{padding:10px 12px;font-size:12.5px;min-height:40px}
+    .tab[aria-selected="true"]::after{left:12px;right:12px}
     .facts strong{font-size:12.5px}
-    .risk-list li,.action-list li{font-size:13px;padding:10px 0 10px 26px}
-    .action-list li{padding-left:30px}
-    .platform-card{padding:16px}
+    .risk-list li,.action-list li{font-size:13px;padding-top:10px;padding-bottom:10px}
     .platform-card > strong{font-size:22px}
     .platform-card dl{grid-template-columns:1fr 1fr;gap:6px 10px}
     dd{font-size:12.5px}
-    .chart-card{padding:16px}
     .chart-bars{grid-template-columns:52px minmax(60px,1fr) 52px;gap:5px 8px}
     .series-label{font-size:10.5px}
     .chart-bars b{font-size:11px}
     .chart-card footer{gap:12px;font-size:10.5px}
     table{min-width:640px;font-size:12px}
     th,td{padding:9px 10px;font-size:12px}
-    caption{font-size:12.5px;padding:11px 12px}
+    caption{font-size:12.5px;padding:11px 0}
     .comparison-cell{min-width:110px}
     .comparison-cell strong{font-size:13px}
     .comparison-cell span{font-size:10px}
-    details{padding:0 14px}
     summary{font-size:13px;min-height:40px}
     .footer{font-size:11px;padding:14px}
   }
   @media(max-width:380px){
     .kpi-row{grid-template-columns:1fr}
+    .kpi-card,.kpi-card:nth-child(odd),.kpi-card:nth-last-child(-n+2){border-left:0;border-bottom:1px solid var(--line)}
+    .kpi-card:last-child{border-bottom:0}
     .masthead-inner{flex-direction:column}
     .brand-logo{align-self:flex-end}
     .brand-logo img{height:40px;max-width:100px}
@@ -237,37 +237,37 @@ layout: null
     <div class="masthead-inner">
       <div class="masthead-left">
         <span class="eyebrow"><span class="dot"></span>Seetong · Release Decision</span>
-        <h1>Seetong 线上版本质量日内快报 2026-09-02</h1>
-        <p class="subtitle">统计窗口：2026-09-02 00:00 至 17:06（Asia/Shanghai）。日内快照，数据未完整，不替代次日完整日报。</p>
+        <h1>Seetong 线上版本质量日内快报（2026-09-02 19:09）</h1>
+        <p class="subtitle">统计窗口：2026-09-02 00:00 至 19:09 日内快照，数据未完整，不替代次日完整日报。 评估版本：Android 8.3.14.2（迭代 8.3.14）/ iOS 8.3.1403（对应 8.3.14.3）。 发版结论：🟡 继续观察——日内快照，数据未完整，不据此作正式放量或拦截结论。</p>
       </div>
       <div class="brand-logo"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARAAAAF0CAMAAADcsZZrAAACSVBMVEUAAAA4hj0qokEwoT0tnzounzovoDounzounzounzounzounzouoDounzouoDotnzounzotnjk7xUwvoz4unzotoDounzotnzounzounzounzovozswpjwxqT0xqz4wpz0unzounzotnzounzounzounzouoDouoDovpTwuojsunzkunzounzounjoyoj8unzounzounzouoDounzotnzounzouoDktoDotnzouoDovpD8uoDouoDounzounzounjkvnj4unzounzounzouoTovnzkypUUunzouoTsunzounzktnzouojounzotnzounzovoj8unzovojstoDouokEtnzouoDowpjwunzounzktnjounzktnzkvpDwvozsunjkvojsunzouoDounzounjktnzotnzotnjovozsvojsvojsvozsunzovojsuojsuoTozsEAzsUA0tUIyr0Ayrj8vojs0skM1sU41sU41sU41sU41sk41sk41sU41sk41sk41sU40sU40sE41sU41sU41sU42tU84vVM4vFM3uFE2tlA3uVE4u1I1s081sk41sk41sU40sU41sU41sU41s081sU41sk41sU41sk41sU41sU42slA2sE81sU41sU41sU41sU81sk40r041sU02tlA2tVA1sk41sE81sU40sU41sk41s081sk45wFQ2sk41sk41sU41sU41sk42tlA1sk41sk41sU45vlM1sk45v1Q1sU47xVc1s081sU41tE82tVA2sE00sk4/1F2z15Q7AAAAwnRSTlMABAYaLj9RZXyPlqmrvMCZjFAEFzxbo9Lq+v///////3kmSH+mz+78///+/Pj8CW1p3vXjhnNeRYOtEpK6oFQoD1dO8tRLDYnEyzjH/edhNBW3+rULwtf+2nCwQiv89zHxgLKcIB12I/Tg5eqU2syw///////I/0d3mLfP2NXGspNtMlKt7P/////////9245X/fr///y8QuijTDoqhtJlYV0fJPvy3y7vnPKf9v+AwcqKgtdypzb/usBo/uN9+a25P40JPFwAADmlSURBVHgB7JUD0vRAGAbXVpzBE62Gn23j/gf6bRup7diZrheVFStW/C9Uv/VK+U1Uf+VtJYmKWr3RbLU7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" alt="Seetong"></div>
     </div>
     <div class="verdict warning">
-      <div class="verdict-label"><span class="verdict-icon">⚠️</span>继续观察</div>
-      <p>🟡 继续观察——日内快照，数据未完整，不据此作正式放量或拦截结论。iOS 8.3.1403 的日内崩溃率仍处于高位，且回放有效首帧采集覆盖率异常。</p>
+      <div class="verdict-label"><span class="verdict-icon">?</span>继续观察</div>
+      <p>统计窗口：2026-09-02 00:00 至 19:09 日内快照，数据未完整，不替代次日完整日报。 评估版本：Android 8.3.14.2（迭代 8.3.14）/ iOS 8.3.1403（对应 8.3.14.3）。 🟡 继续观察——日内快照，数据未完整，不据此作正式放量或拦截结论。</p>
     </div>
   </header>
 
   <div class="kpi-row">
     <div class="kpi-card green">
       <div class="kpi-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M6 10c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#07C160" stroke-width="1.8" stroke-linecap="round"/><circle cx="9" cy="9.5" r="1" fill="#07C160"/><circle cx="15" cy="9.5" r="1" fill="#07C160"/><path d="M7 10h10v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6z" fill="#07C160"/><path d="M5 12v4M19 12v4" stroke="#07C160" stroke-width="1.8" stroke-linecap="round"/><path d="M9.5 6L8 4M14.5 6L16 4" stroke="#07C160" stroke-width="1.8" stroke-linecap="round"/></svg> Android 日活</div>
-      <div class="kpi-value">7,753,509</div>
+      <div class="kpi-value">8,439,536</div>
       <div class="kpi-sub">友盟 U-App · 平台规模</div>
     </div>
     <div class="kpi-card blue">
       <div class="kpi-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M16.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.7c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.8 1.3-2.9-.1 0-2.5-1-2.7-3.7zM14.3 5.8c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.9-1 2.9 1.1.1 2.2-.6 2.8-1.4z" fill="#1F2937"/></svg> iOS 日活</div>
-      <div class="kpi-value">1,741,104</div>
+      <div class="kpi-value">1,907,060</div>
       <div class="kpi-sub">友盟 U-App · 平台规模</div>
     </div>
     <div class="kpi-card red">
       <div class="kpi-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3L22 20H2L12 3z" fill="#EF4444"/><path d="M12 10v5" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="17.5" r="1.2" fill="white"/></svg> iOS 崩溃率</div>
-      <div class="kpi-value">0.412%<span class="kpi-trend bad">13.7x</span></div>
+      <div class="kpi-value">0.392%<span class="kpi-trend bad">13.1x</span></div>
       <div class="kpi-sub">基线 0.03% · 🔴 拦截</div>
     </div>
     <div class="kpi-card green">
       <div class="kpi-label"><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="4" y="12" width="4" height="8" rx="1" fill="#F59E0B"/><rect x="10" y="8" width="4" height="12" rx="1" fill="#F59E0B"/><rect x="16" y="5" width="4" height="15" rx="1" fill="#F59E0B"/></svg> 预览3秒出图</div>
-      <div class="kpi-value">84.729%<span class="kpi-trend good">-0.21pp</span></div>
-      <div class="kpi-sub">全版本 84.937% · 🟢 正常</div>
+      <div class="kpi-value">85.320%<span class="kpi-trend good">+0.54pp</span></div>
+      <div class="kpi-sub">全版本 84.780% · 🟢 正常</div>
     </div>
   </div>
 
@@ -278,59 +278,73 @@ layout: null
   </nav>
 
   <section class="panel" id="overview" role="tabpanel" aria-labelledby="overview-tab">
-    <div class="facts"><article><span>统计窗口</span><strong>2026-09-02 00:00 至 17:06（Asia/Shanghai）。日内快照，数据未完整，不替代次日完整日报。</strong></article><article><span>评估范围</span><strong>Android 最新 8.4.0.6（迭代 8.4.0，同时观察到提测串 8.4.0.5）；iOS 最新 8.3.1403（迭代 8.3.14）。Harmony 暂未接入 活跃数据，不参与版本判定和覆盖率。</strong></article><article><span>数据可信度</span><strong>数据源状态未单独说明</strong></article></div>
+    <div class="facts"><article><span>统计窗口</span><strong>2026-09-02 00:00 至 19:09 日内快照，数据未完整，不替代次日完整日报。 评估版本：Android 8.3.14.2（迭代 8.3.14）/ iOS 8.3.1403（对应 8.3.14.3）。 发版结论：🟡 继续观察——日内快照，数据未完整，不据此作正式放量或拦截结论。</strong></article><article><span>评估范围</span><strong>统计窗口：2026-09-02 00:00 至 19:09 日内快照，数据未完整，不替代次日完整日报。 Android 8.3.14.2（迭代 8.3.14）/ iOS 8.3.1403（对应 8.3.14.3）。 发版结论：🟡 继续观察——日内快照，数据未完整，不据此作正式放量或拦截结论。</strong></article><article><span>数据可信度</span><strong>数据源状态未单独说明</strong></article></div>
     <article class="section">
-      <h2><span class="h2-icon">⚠️</span>本期需要关注</h2>
+      <h2><span class="section-index">01</span>本期需要关注</h2>
       <p class="section-intro">先处理影响是否扩量的信号，再进入定位与复核。</p>
       <div class="risk-grid">
         <div class="risk-col">
-          <h3>🔴 风险信号</h3>
-          <ul class="risk-list"><li>本期未识别到需要升级处理的风险。</li></ul>
+          <h3>风险信号</h3>
+          <ul class="risk-list"><li>预览 3 秒内出图未出现相对同架构基线 2pp 以上的日内劣化；回放的 iOS P2P 首帧采集覆盖率异常，日内时延结论仅供参考。</li></ul>
         </div>
         <div class="action-col">
-          <h3>✅ 建议动作</h3>
-          <ol class="action-list"><li>继续观察下一完整统计窗口。</li></ol>
+          <h3>建议动作</h3>
+          <ol class="action-list"><li>预览最新版本 3 秒内出图 85.32%，全版本 84.78%；回放最新版本 3 秒内出图 97.90%，全版本 97.87%。</li><li>回放 iOS 老架构有效首帧采集覆盖率仅 33.40%，该分层时延仅作参考。</li></ol>
         </div>
       </div>
     </article>
     <article class="section">
-      <h2><span class="h2-icon">📱</span>平台活跃、版本覆盖与稳定性</h2>
+      <h2><span class="section-index">02</span>平台活跃、版本覆盖与稳定性</h2>
       <p class="section-intro">友盟 U-App 展示三端活跃规模。神策版本口径总活跃＝Android/iOS 全部版本的活跃去重；最新版本日活＝其中匹配到最新版本号的子集；覆盖率＝最新版本日活／神策版本口径总活跃。神策／友盟差异仅用于核对口径，不参与发版结论。</p>
-      <div class="platform-grid"><article class="platform-card"><div class="platform-head"><div class="platform-name"><span class="platform-icon android"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 10c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#07C160" stroke-width="1.8" stroke-linecap="round"/><circle cx="9" cy="9.5" r="1" fill="#07C160"/><circle cx="15" cy="9.5" r="1" fill="#07C160"/><path d="M7 10h10v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6z" fill="#07C160"/><path d="M5 12v4M19 12v4" stroke="#07C160" stroke-width="1.8" stroke-linecap="round"/><path d="M9.5 6L8 4M14.5 6L16 4" stroke="#07C160" stroke-width="1.8" stroke-linecap="round"/></svg></span>Android</div><span class="platform-badge online">正常</span></div><div class="platform-caption">友盟 U-App 日活（平台规模）</div><strong>7,753,509</strong><dl><div><dt>神策总活跃</dt><dd>7,353,425</dd></div><div><dt>最新版日活</dt><dd>47,749</dd></div><div><dt>最新覆盖率</dt><dd>0.649%</dd></div><div><dt>崩溃率</dt><dd>0.056% <span style="color:var(--muted);font-weight:400">/ 0.056%</span></dd></div><div><dt>影响用户</dt><dd>0.070%</dd></div><div><dt>跨源差异</dt><dd>-400,084／-5.16%</dd></div></dl></article><article class="platform-card"><div class="platform-head"><div class="platform-name"><span class="platform-icon ios"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M16.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.7c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.8 1.3-2.9-.1 0-2.5-1-2.7-3.7zM14.3 5.8c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.9-1 2.9 1.1.1 2.2-.6 2.8-1.4z" fill="#1F2937"/></svg></span>iOS</div><span class="platform-badge online">正常</span></div><div class="platform-caption">友盟 U-App 日活（平台规模）</div><strong>1,741,104</strong><dl><div><dt>神策总活跃</dt><dd>1,637,152</dd></div><div><dt>最新版日活</dt><dd>1,456,172</dd></div><div><dt>最新覆盖率</dt><dd>88.945%</dd></div><div><dt>崩溃率</dt><dd>0.412% <span style="color:var(--muted);font-weight:400">/ 0.371%</span></dd></div><div><dt>影响用户</dt><dd>0.589%</dd></div><div><dt>跨源差异</dt><dd>-103,952／-5.97%</dd></div></dl></article><article class="platform-card"><div class="platform-head"><div class="platform-name"><span class="platform-icon harmony"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#0A59F7" stroke-width="1.8" fill="none"/><g fill="#0A59F7"><ellipse cx="12" cy="6.2" rx="1.2" ry="2.6"/><ellipse cx="12" cy="17.8" rx="1.2" ry="2.6"/><ellipse cx="6.2" cy="12" rx="2.6" ry="1.2"/><ellipse cx="17.8" cy="12" rx="2.6" ry="1.2"/><ellipse cx="7.9" cy="7.9" rx="1" ry="2.1" transform="rotate(-45 7.9 7.9)"/><ellipse cx="16.1" cy="7.9" rx="1" ry="2.1" transform="rotate(45 16.1 7.9)"/><ellipse cx="7.9" cy="16.1" rx="1" ry="2.1" transform="rotate(45 7.9 16.1)"/><ellipse cx="16.1" cy="16.1" rx="1" ry="2.1" transform="rotate(-45 16.1 16.1)"/></g><circle cx="12" cy="12" r="1.2" fill="#0A59F7"/></svg></span>Harmony</div><span class="platform-badge online">正常</span></div><div class="platform-caption">友盟 U-App 日活（平台规模）</div><strong>601,084</strong><dl><div><dt>神策总活跃</dt><dd>暂未接入</dd></div><div><dt>最新版日活</dt><dd>—</dd></div><div><dt>最新覆盖率</dt><dd>—</dd></div><div><dt>崩溃率</dt><dd>暂未纳入</dd></div><div><dt>影响用户</dt><dd>暂未纳入</dd></div><div><dt>跨源差异</dt><dd>无法对照</dd></div></dl></article></div>
+      <div class="platform-grid"><article class="platform-card"><div class="platform-head"><div class="platform-name"><span class="platform-icon android"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M6 10c0-3.3 2.7-6 6-6s6 2.7 6 6" stroke="#07C160" stroke-width="1.8" stroke-linecap="round"/><circle cx="9" cy="9.5" r="1" fill="#07C160"/><circle cx="15" cy="9.5" r="1" fill="#07C160"/><path d="M7 10h10v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6z" fill="#07C160"/><path d="M5 12v4M19 12v4" stroke="#07C160" stroke-width="1.8" stroke-linecap="round"/><path d="M9.5 6L8 4M14.5 6L16 4" stroke="#07C160" stroke-width="1.8" stroke-linecap="round"/></svg></span>Android</div><span class="platform-badge online">正常</span></div><div class="platform-caption">友盟 U-App 日活（平台规模）</div><strong>8,439,536</strong><dl><div><dt>神策总活跃</dt><dd>7,830,639（已返回前 50 个版本）</dd></div><div><dt>最新版日活</dt><dd>6,693,159</dd></div><div><dt>最新覆盖率</dt><dd>85.47%</dd></div><div><dt>崩溃率</dt><dd>0.035% <span style="color:var(--muted);font-weight:400">/ 0.056%</span></dd></div><div><dt>影响用户</dt><dd>0.044%</dd></div><div><dt>跨源差异</dt><dd>-1,746,377／-20.69%</dd></div></dl></article><article class="platform-card"><div class="platform-head"><div class="platform-name"><span class="platform-icon ios"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M16.5 12.5c0-2.5 2-3.7 2.1-3.8-1.1-1.7-2.9-1.9-3.5-1.9-1.5-.2-2.9.9-3.7.9-.8 0-1.9-.9-3.2-.8-1.6 0-3.1 1-4 2.4-1.7 3-.4 7.4 1.2 9.8.8 1.2 1.8 2.5 3.1 2.5 1.2-.1 1.7-.8 3.2-.8s1.9.8 3.2.7c1.3 0 2.2-1.2 3-2.4.9-1.4 1.3-2.8 1.3-2.9-.1 0-2.5-1-2.7-3.7zM14.3 5.8c.7-.8 1.1-1.9 1-3-1 0-2.1.7-2.8 1.5-.6.7-1.2 1.9-1 2.9 1.1.1 2.2-.6 2.8-1.4z" fill="#1F2937"/></svg></span>iOS</div><span class="platform-badge online">正常</span></div><div class="platform-caption">友盟 U-App 日活（平台规模）</div><strong>1,907,060</strong><dl><div><dt>神策总活跃</dt><dd>1,727,883（已返回前 50 个版本）</dd></div><div><dt>最新版日活</dt><dd>1,590,404</dd></div><div><dt>最新覆盖率</dt><dd>92.04%</dd></div><div><dt>崩溃率</dt><dd>0.392% <span style="color:var(--muted);font-weight:400">/ 0.369%</span></dd></div><div><dt>影响用户</dt><dd>0.602%</dd></div><div><dt>跨源差异</dt><dd>-179,177／-9.40%</dd></div></dl></article><article class="platform-card"><div class="platform-head"><div class="platform-name"><span class="platform-icon harmony"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#0A59F7" stroke-width="1.8" fill="none"/><g fill="#0A59F7"><ellipse cx="12" cy="6.2" rx="1.2" ry="2.6"/><ellipse cx="12" cy="17.8" rx="1.2" ry="2.6"/><ellipse cx="6.2" cy="12" rx="2.6" ry="1.2"/><ellipse cx="17.8" cy="12" rx="2.6" ry="1.2"/><ellipse cx="7.9" cy="7.9" rx="1" ry="2.1" transform="rotate(-45 7.9 7.9)"/><ellipse cx="16.1" cy="7.9" rx="1" ry="2.1" transform="rotate(45 16.1 7.9)"/><ellipse cx="7.9" cy="16.1" rx="1" ry="2.1" transform="rotate(45 7.9 16.1)"/><ellipse cx="16.1" cy="16.1" rx="1" ry="2.1" transform="rotate(-45 16.1 16.1)"/></g><circle cx="12" cy="12" r="1.2" fill="#0A59F7"/></svg></span>Harmony</div><span class="platform-badge online">正常</span></div><div class="platform-caption">友盟 U-App 日活（平台规模）</div><strong>651,589</strong><dl><div><dt>神策总活跃</dt><dd>暂未接入 活跃数据</dd></div><div><dt>最新版日活</dt><dd>—</dd></div><div><dt>最新覆盖率</dt><dd>—</dd></div><div><dt>崩溃率</dt><dd>暂未纳入</dd></div><div><dt>影响用户</dt><dd>暂未纳入</dd></div><div><dt>跨源差异</dt><dd>无法对照</dd></div></dl></article></div>
     </article>
   </section>
 
   <section class="panel" id="experience" role="tabpanel" aria-labelledby="experience-tab" hidden>
     <article class="section">
-      <h2><span class="h2-icon">📈</span>体验表现对比</h2>
+      <h2><span class="section-index">03</span>体验表现对比</h2>
       <p class="section-intro">覆盖 1／3／6／10 秒首帧、超时、失败与采集缺失。绿色为最新版本，琥珀色为上一迭代，灰色为所有版本；成功率越高越好，失败与缺失越低越好。</p>
-      <div class="chart-grid"><article class="chart-card"><header><h3>1 秒内有效首帧成功</h3><span class="metric-hint higher">越高越好</span></header><div class="chart-row"><div class="chart-label">预览</div><div class="chart-bars"><span class="series-label">最新版本</span><div class="chart-track current"><i class="chart-bar current" style="--value:65.054%"></i></div><b>65.054%</b><span class="series-label">所有版本</span><div class="chart-track baseline"><i class="chart-bar baseline" style="--value:63.097%"></i></div><b>63.097%</b></div></div><div class="chart-row"><div class="chart-label">回放</div><div class="chart-bars"><span class="series-label">最新版本</span><div class="chart-track current"><i class="chart-bar current" style="--value:63.946999999999996%"></i></div><b>63.947%</b><span class="series-label">所有版本</span><div class="chart-track baseline"><i class="chart-bar baseline" style="--value:59.354%"></i></div><b>59.354%</b></div></div><footer><span class="legend current-dot">最新版本</span><span class="legend previous-dot">上一迭代</span><span class="legend baseline-dot">所有版本</span></footer></article><article class="chart-card"><header><h3>3 秒内有效首帧成功</h3><span class="metric-hint higher">越高越好</span></header><div class="chart-row"><div class="chart-label">预览</div><div class="chart-bars"><span class="series-label">最新版本</span><div class="chart-track current"><i class="chart-bar current" style="--value:84.729%"></i></div><b>84.729%</b><span class="series-label">所有版本</span><div class="chart-track baseline"><i class="chart-bar baseline" style="--value:84.937%"></i></div><b>84.937%</b></div></div><div class="chart-row"><div class="chart-label">回放</div><div class="chart-bars"><span class="series-label">最新版本</span><div class="chart-track current"><i class="chart-bar current" style="--value:97.425%"></i></div><b>97.425%</b><span class="series-label">所有版本</span><div class="chart-track baseline"><i class="chart-bar baseline" style="--value:97.905%"></i></div><b>97.905%</b></div></div><footer><span class="legend current-dot">最新版本</span><span class="legend previous-dot">上一迭代</span><span class="legend baseline-dot">所有版本</span></footer></article><article class="chart-card"><header><h3>6 秒内有效首帧成功</h3><span class="metric-hint higher">越高越好</span></header><div class="chart-row"><div class="chart-label">预览</div><div class="chart-bars"><span class="series-label">最新版本</span><div class="chart-track current"><i class="chart-bar current" style="--value:93.061%"></i></div><b>93.061%</b><span class="series-label">所有版本</span><div class="chart-track baseline"><i class="chart-bar baseline" style="--value:93%"></i></div><b>93%</b></div></div><div class="chart-row"><div class="chart-label">回放</div><div class="chart-bars"><span class="series-label">最新版本</span><div class="chart-track current"><i class="chart-bar current" style="--value:99.244%"></i></div><b>99.244%</b><span class="series-label">所有版本</span><div class="chart-track baseline"><i class="chart-bar baseline" style="--value:99.611%"></i></div><b>99.611%</b></div></div><footer><span class="legend current-dot">最新版本</span><span class="legend previous-dot">上一迭代</span><span class="legend baseline-dot">所有版本</span></footer></article><article class="chart-card"><header><h3>10 秒内有效首帧成功</h3><span class="metric-hint higher">越高越好</span></header><div class="chart-row"><div class="chart-label">预览</div><div class="chart-bars"><span class="series-label">最新版本</span><div class="chart-track current"><i class="chart-bar current" style="--value:95.7%"></i></div><b>95.700%</b><span class="series-label">所有版本</span><div class="chart-track baseline"><i class="chart-bar baseline" style="--value:95.314%"></i></div><b>95.314%</b></div></div><div class="chart-row"><div class="chart-label">回放</div><div class="chart-bars"><span class="series-label">最新版本</span><div class="chart-track current"><i class="chart-bar current" style="--value:99.598%"></i></div><b>99.598%</b><span class="series-label">所有版本</span><div class="chart-track baseline"><i class="chart-bar baseline" style="--value:99.962%"></i></div><b>99.962%</b></div></div><footer><span class="legend current-dot">最新版本</span><span class="legend previous-dot">上一迭代</span><span class="legend baseline-dot">所有版本</span></footer></article><article class="chart-card"><header><h3>10 秒以上成功</h3><span class="metric-hint lower">越低越好</span></header><div class="chart-row"><div class="chart-label">预览</div><div class="chart-bars"><span class="series-label">最新版本</span><div class="chart-track current"><i class="chart-bar current" style="--value:1.515%"></i></div><b>1.515%</b><span class="series-label">所有版本</span><div class="chart-track baseline"><i class="chart-bar baseline" style="--value:1.955%"></i></div><b>1.955%</b></div></div><div class="chart-row"><div class="chart-label">回放</div><div class="chart-bars"><span class="series-label">最新版本</span><div class="chart-track current"><i class="chart-bar current" style="--value:0.402%"></i></div><b>0.402%</b><span class="series-label">所有版本</span><div class="chart-track baseline"><i class="chart-bar baseline" style="--value:0.038%"></i></div><b>0.038%</b></div></div><footer><span class="legend current-dot">最新版本</span><span class="legend previous-dot">上一迭代</span><span class="legend baseline-dot">所有版本</span></footer></article><article class="chart-card"><header><h3>明确未出图成功</h3><span class="metric-hint lower">越低越好</span></header><div class="chart-row"><div class="chart-label">预览</div><div class="chart-bars"><span class="series-label">最新版本</span><div class="chart-track current"><i class="chart-bar current" style="--value:2.784%"></i></div><b>2.784%</b><span class="series-label">所有版本</span><div class="chart-track baseline"><i class="chart-bar baseline" style="--value:2.723%"></i></div><b>2.723%</b></div></div><div class="chart-row"><div class="chart-label">回放</div><div class="chart-bars"><span class="series-label">最新版本</span><div class="chart-track current"><i class="chart-bar current" style="--value:2.736%"></i></div><b>2.736%</b><span class="series-label">所有版本</span><div class="chart-track baseline"><i class="chart-bar baseline" style="--value:3.622%"></i></div><b>3.622%</b></div></div><footer><span class="legend current-dot">最新版本</span><span class="legend previous-dot">上一迭代</span><span class="legend baseline-dot">所有版本</span></footer></article><article class="chart-card"><header><h3>成功但无有效首帧时间</h3><span class="metric-hint lower">越低越好</span></header><div class="chart-row"><div class="chart-label">预览</div><div class="chart-bars"><span class="series-label">最新版本</span><div class="chart-track current"><i class="chart-bar current" style="--value:0.002%"></i></div><b>0.002%</b><span class="series-label">所有版本</span><div class="chart-track baseline"><i class="chart-bar baseline" style="--value:0.007%"></i></div><b>0.007%</b></div></div><div class="chart-row"><div class="chart-label">回放</div><div class="chart-bars"><span class="series-label">最新版本</span><div class="chart-track current"><i class="chart-bar current" style="--value:55.39%"></i></div><b>55.390%</b><span class="series-label">所有版本</span><div class="chart-track baseline"><i class="chart-bar baseline" style="--value:13.335%"></i></div><b>13.335%</b></div></div><footer><span class="legend current-dot">最新版本</span><span class="legend previous-dot">上一迭代</span><span class="legend baseline-dot">所有版本</span></footer></article><article class="chart-card"><header><h3><strong>10 秒内未出图成功</strong></h3><span class="metric-hint lower">越低越好</span></header><div class="chart-row"><div class="chart-label">预览</div><div class="chart-bars"><span class="series-label">最新版本</span><div class="chart-track current"><i class="chart-bar current" style="--value:4.299%"></i></div><b>4.299%</b><span class="series-label">所有版本</span><div class="chart-track baseline"><i class="chart-bar baseline" style="--value:4.678%"></i></div><b>4.678%</b></div></div><div class="chart-row"><div class="chart-label">回放</div><div class="chart-bars"><span class="series-label">最新版本</span><div class="chart-track current"><i class="chart-bar current" style="--value:3.138%"></i></div><b>3.138%</b><span class="series-label">所有版本</span><div class="chart-track baseline"><i class="chart-bar baseline" style="--value:3.66%"></i></div><b>3.660%</b></div></div><footer><span class="legend current-dot">最新版本</span><span class="legend previous-dot">上一迭代</span><span class="legend baseline-dot">所有版本</span></footer></article></div>
+      <div class="chart-grid"></div>
     </article>
   </section>
 
   <section class="panel" id="data" role="tabpanel" aria-labelledby="data-tab" hidden>
     <article class="section">
-      <h2><span class="h2-icon">📋</span>数据明细</h2>
+      <h2><span class="section-index">04</span>数据明细</h2>
       <p class="section-intro">友盟 U-App 日活用于三端活跃规模。神策版本口径总活跃与最新版本日活是两个不同层级：前者覆盖 Android/iOS 全版本的活跃去重用户，后者是最新版本匹配用户；覆盖率以二者相除计算。体验指标以最新版本与全版本基准的差值呈现，绿色代表更优，红色代表需要关注。</p>
       <h3>平台活跃、覆盖与稳定性</h3>
-      <div class="table-wrap readable-table"><table><caption>平台活跃、覆盖与稳定性</caption><thead><tr><th>平台</th><th>友盟 U-App 日活</th><th>神策版本口径总活跃</th><th>神策／友盟差异</th><th>最新覆盖率</th><th>最新版本日活</th><th>崩溃率</th><th>影响用户占比</th></tr></thead><tbody><tr><th scope="row">Android</th><td>7,753,509</td><td>7,353,425</td><td>-400,084／-5.16%</td><td>0.649%</td><td>47,749</td><td><div class="comparison-cell"><strong>0.056%</strong><span>全版本 0.056%</span><em class="better">+0pp</em></div></td><td><div class="comparison-cell"><strong>0.070%</strong><span>全版本 0.061%</span><em class="worse">+0.009pp</em></div></td></tr><tr><th scope="row">iOS</th><td>1,741,104</td><td>1,637,152</td><td>-103,952／-5.97%</td><td>88.945%</td><td>1,456,172</td><td><div class="comparison-cell"><strong>0.412%</strong><span>全版本 0.371%</span><em class="worse">+0.041pp</em></div></td><td><div class="comparison-cell"><strong>0.589%</strong><span>全版本 0.559%</span><em class="worse">+0.030pp</em></div></td></tr><tr><th scope="row">Harmony</th><td>601,084</td><td>暂未接入</td><td>无法对照</td><td>—</td><td>—</td><td><div class="comparison-cell"><strong>—</strong><span>全版本 —</span><em class="neutral">无基准</em></div></td><td><div class="comparison-cell"><strong>—</strong><span>全版本 —</span><em class="neutral">无基准</em></div></td></tr></tbody></table></div>
+      <div class="table-wrap readable-table"><table><caption>平台活跃、覆盖与稳定性</caption><thead><tr><th>平台</th><th>友盟 U-App 日活</th><th>神策版本口径总活跃</th><th>神策／友盟差异</th><th>最新覆盖率</th><th>最新版本日活</th><th>崩溃率</th><th>影响用户占比</th></tr></thead><tbody><tr><th scope="row">Android</th><td>8,439,536</td><td>7,830,639（已返回前 50 个版本）</td><td>-1,746,377／-20.69%</td><td>85.47%</td><td>6,693,159</td><td><div class="comparison-cell"><strong>0.035%</strong><span>全版本 0.056%</span><em class="better">-0.021pp</em></div></td><td><div class="comparison-cell"><strong>0.044%</strong><span>全版本 0.063%</span><em class="better">-0.019pp</em></div></td></tr><tr><th scope="row">iOS</th><td>1,907,060</td><td>1,727,883（已返回前 50 个版本）</td><td>-179,177／-9.40%</td><td>92.04%</td><td>1,590,404</td><td><div class="comparison-cell"><strong>0.392%</strong><span>全版本 0.369%</span><em class="worse">+0.023pp</em></div></td><td><div class="comparison-cell"><strong>0.602%</strong><span>全版本 0.562%</span><em class="worse">+0.040pp</em></div></td></tr><tr><th scope="row">Harmony</th><td>651,589</td><td>暂未接入 活跃数据</td><td>无法对照</td><td>—</td><td>—</td><td><div class="comparison-cell"><strong>—</strong><span>全版本 —</span><em class="neutral">无基准</em></div></td><td><div class="comparison-cell"><strong>—</strong><span>全版本 —</span><em class="neutral">无基准</em></div></td></tr></tbody></table></div>
       <h3>体验指标对比</h3>
-      <p class="section-intro">本期回放时间指标已完成口径换算；首帧缺失另见“成功但无有效首帧时间”。</p><div class="table-wrap readable-table"><table><caption>体验指标：最新版本、上一迭代与全版本</caption><thead><tr><th>指标</th><th>判断方向</th><th>预览</th><th>回放</th></tr></thead><tbody><tr><th scope="row">1 秒内有效首帧成功</th><td><span class="direction higher">越高越好</span></td><td><div class="comparison-cell"><strong>65.054%</strong><span>全版本 63.097%</span><em class="better">+1.957pp</em></div></td><td><div class="comparison-cell"><strong>63.947%</strong><span>全版本 59.354%</span><em class="better">+4.593pp</em></div></td></tr><tr><th scope="row">3 秒内有效首帧成功</th><td><span class="direction higher">越高越好</span></td><td><div class="comparison-cell"><strong>84.729%</strong><span>全版本 84.937%</span><em class="worse">-0.208pp</em></div></td><td><div class="comparison-cell"><strong>97.425%</strong><span>全版本 97.905%</span><em class="worse">-0.480pp</em></div></td></tr><tr><th scope="row">6 秒内有效首帧成功</th><td><span class="direction higher">越高越好</span></td><td><div class="comparison-cell"><strong>93.061%</strong><span>全版本 93%</span><em class="better">+0.061pp</em></div></td><td><div class="comparison-cell"><strong>99.244%</strong><span>全版本 99.611%</span><em class="worse">-0.367pp</em></div></td></tr><tr><th scope="row">10 秒内有效首帧成功</th><td><span class="direction higher">越高越好</span></td><td><div class="comparison-cell"><strong>95.700%</strong><span>全版本 95.314%</span><em class="better">+0.386pp</em></div></td><td><div class="comparison-cell"><strong>99.598%</strong><span>全版本 99.962%</span><em class="worse">-0.364pp</em></div></td></tr><tr><th scope="row">10 秒以上成功</th><td><span class="direction lower">越低越好</span></td><td><div class="comparison-cell"><strong>1.515%</strong><span>全版本 1.955%</span><em class="better">-0.440pp</em></div></td><td><div class="comparison-cell"><strong>0.402%</strong><span>全版本 0.038%</span><em class="worse">+0.364pp</em></div></td></tr><tr><th scope="row">明确未出图成功</th><td><span class="direction lower">越低越好</span></td><td><div class="comparison-cell"><strong>2.784%</strong><span>全版本 2.723%</span><em class="worse">+0.061pp</em></div></td><td><div class="comparison-cell"><strong>2.736%</strong><span>全版本 3.622%</span><em class="better">-0.886pp</em></div></td></tr><tr><th scope="row">成功但无有效首帧时间</th><td><span class="direction lower">越低越好</span></td><td><div class="comparison-cell"><strong>0.002%</strong><span>全版本 0.007%</span><em class="better">-0.005pp</em></div></td><td><div class="comparison-cell"><strong>55.390%</strong><span>全版本 13.335%</span><em class="worse">+42.055pp</em></div></td></tr><tr><th scope="row"><strong>10 秒内未出图成功</strong></th><td><span class="direction lower">越低越好</span></td><td><div class="comparison-cell"><strong>4.299%</strong><span>全版本 4.678%</span><em class="better">-0.379pp</em></div></td><td><div class="comparison-cell"><strong>3.138%</strong><span>全版本 3.660%</span><em class="better">-0.522pp</em></div></td></tr><tr><th scope="row">样本量 PV／UV</th><td colspan="3">预览：6,280,887／1,323,654；33,875,162／7,684,862；回放：1,830,697／658,949；11,868,048／3,942,099</td></tr></tbody></table></div>
-      <details><summary>📄 预览原始 Markdown 报告</summary><div class="markdown-preview"><h2>Seetong 线上版本质量日内快报 2026-09-02</h2><p><strong>统计窗口</strong>：2026-09-02 00:00 至 17:06（Asia/Shanghai）。<strong>日内快照，数据未完整，不替代次日完整日报。</strong></p><p><strong>评估版本</strong>：Android 最新 <code>8.4.0.6</code>（迭代 <code>8.4.0</code>，同时观察到提测串 <code>8.4.0.5</code>）；iOS 最新 <code>8.3.1403</code>（迭代 <code>8.3.14</code>）。Harmony 暂未接入 <code>$AppStart</code>，不参与版本判定和覆盖率。</p><p><strong>发版结论</strong>：🟡 继续观察——日内快照，数据未完整，不据此作正式放量或拦截结论。iOS <code>8.3.1403</code> 的日内崩溃率仍处于高位，且回放有效首帧采集覆盖率异常。</p><h3>一、版本、活跃与稳定性快照</h3><blockquote>友盟 U-App 日活与神策 <code>$AppStart</code> 均为截至执行时刻的日内累计值。友盟 APM 取 00:00 至 17:00 已返回小时点的算术均值，17:00 点为进行中小时，不使用未来零值。</blockquote><div class="table-wrap"><table><thead><tr><th>平台</th><th>友盟 U-App 日活（截至当前）</th><th>神策 $AppStart 活跃（截至当前）</th><th>神策／友盟差异</th><th>最新版本日活／覆盖率（截至当前）</th><th>最新／全版本崩溃率</th><th>最新／全版本影响用户占比</th><th>日内观察信号</th></tr></thead><tbody><tr><td>Android</td><td>7,753,509</td><td>7,353,425</td><td>-400,084／-5.16%</td><td>47,749／0.649%</td><td>0.056%／0.056%</td><td>0.070%／0.061%</td><td>最新迭代仍为小流量，崩溃率约为 0.03% 基线的 1.9 倍。</td></tr><tr><td>iOS</td><td>1,741,104</td><td>1,637,152</td><td>-103,952／-5.97%</td><td>1,456,172／88.945%</td><td>0.412%／0.371%</td><td>0.589%／0.559%</td><td>最新迭代崩溃率约为基线 13.7 倍，需在完整日数据中继续核验。</td></tr><tr><td>Harmony</td><td>601,084</td><td>暂未接入</td><td>无法对照</td><td>—</td><td>暂未纳入</td><td>暂未纳入</td><td>仅展示日内活跃。</td></tr></tbody></table></div><p>版本判定说明：Android 的最高有效迭代为 <code>8.4.0</code>，iOS 的最高有效迭代为 <code>8.3.14</code>。Android <code>8.3.14.2</code> 仍为主覆盖版本，但不替代最新迭代判定。</p><h3>二、预览与回放日内出图快照</h3><blockquote>预览时间指标分母为版本组总 PV；回放时间指标分母为 <code>is_success=1</code> 且首帧时间有效的成功样本。最新迭代组包含 Android <code>8.4.0.x</code> 与 iOS <code>8.3.14xx</code>；全版本组不做版本过滤。所有时间比较均将 <code>first_frame_time</code> 转为数值。</blockquote><div class="table-wrap"><table><thead><tr><th>指标</th><th>预览：最新迭代／全版本</th><th>回放：最新迭代／全版本</th></tr></thead><tbody><tr><td>1 秒内有效首帧成功</td><td>65.054%／63.097%</td><td>63.947%／59.354%</td></tr><tr><td>3 秒内有效首帧成功</td><td>84.729%／84.937%</td><td>97.425%／97.905%</td></tr><tr><td>6 秒内有效首帧成功</td><td>93.061%／93.000%</td><td>99.244%／99.611%</td></tr><tr><td>10 秒内有效首帧成功</td><td>95.700%／95.314%</td><td>99.598%／99.962%</td></tr><tr><td>10 秒以上成功</td><td>1.515%／1.955%</td><td>0.402%／0.038%</td></tr><tr><td>明确未出图成功</td><td>2.784%／2.723%</td><td>2.736%／3.622%</td></tr><tr><td>成功但无有效首帧时间</td><td>0.002%／0.007%</td><td>55.390%／13.335%</td></tr><tr><td><strong>10 秒内未出图成功</strong></td><td><strong>4.299%／4.678%</strong></td><td><strong>3.138%／3.660%</strong></td></tr><tr><td>样本量 PV／UV</td><td>6,280,887／1,323,654；33,875,162／7,684,862</td><td>1,830,697／658,949；11,868,048／3,942,099</td></tr></tbody></table></div><p>预览分层观察：Android P2P／TRTC 的 3 秒内成功率为 <code>85.679%</code>／<code>94.323%</code>，iOS P2P／TRTC 为 <code>83.304%</code>／<code>93.665%</code>。Android／iOS P2P 的 10 秒内未出图成功占比分别为 <code>5.096%</code>／<code>4.485%</code>，均高于对应 P2P 基线；这只是日内信号，留待完整日报确认。</p><p>回放首帧数据质量：最新迭代有效首帧采集覆盖率仅 <code>44.598%</code>，其中 iOS P2P 为 <code>33.660%</code>。该覆盖率显著低于 <code>99.5%</code> 阈值，回放时延仅供观察，不能据此判断真实体验是否劣化；旧回放基线亦尚未按有效首帧分母重算，故不做跨日基线判定。</p><h3>三、口径校验与后续观察</h3><ul><li>预览最新迭代分桶守恒：<code>6,010,763 + 95,164 + 174,848 + 112 = 6,280,887</code>，差值为 <code>0</code>。独立复核在查询时点得到 <code>6,013,589／6,283,856</code>，与分桶查询存在日内持续入库造成的时间差，未作为口径偏差处理。</li><li>回放最新迭代分桶守恒：有效首帧 <code>794,118</code>、无有效首帧成功 <code>986,490</code>、明确失败 <code>50,089</code>，合计 <code>1,830,697</code>，差值为 <code>0</code>。预览与回放均满足 <code>UV ≤ PV</code>，与 <code>$AppStart</code> 活跃量级相符。</li><li>数据源状态：友盟 U-App、友盟 APM、神策 <code>$AppStart</code>、<code>MonitorFrameResult</code> 与 <code>DeviceVideoPlayback</code> 均可用。Android／iOS 跨源日内活跃差异均低于 <code>20%</code>；Harmony 无神策版本口径，已明确排除。</li><li>后续观察：次日完整日报应复核 iOS <code>8.3.1403</code> 全天崩溃率、Android／iOS P2P 预览 10 秒内未出图成功率，以及 iOS 回放 <code>first_frame_time</code> 的采集与上报完整性。</li></ul><p><em>本快报为日内快照，数据未完整，不替代次日完整日报。</em></p></div></details>
+      <div class="table-wrap readable-table"><table><caption>体验指标：最新版本、上一迭代与全版本</caption><thead><tr><th>指标</th><th>判断方向</th><th>预览</th><th>回放</th></tr></thead><tbody><tr><th scope="row">3 秒内出图</th><td><span class="direction higher">越高越好</span></td><td><div class="comparison-cell"><strong>85.320%</strong><span>全版本 84.780%</span><em class="better">+0.540pp</em></div></td><td><div class="comparison-cell"><strong>97.900%</strong><span>全版本 97.870%</span><em class="better">+0.030pp</em></div></td></tr><tr><th scope="row">样本量（PV／UV）</th><td colspan="3">预览：34,489,575／7,939,642；回放：12,299,271／3,925,319</td></tr></tbody></table></div>
+      <details><summary>预览原始 Markdown 报告</summary><div class="markdown-preview"><h2>Seetong 线上版本质量日内快报（2026-09-02 19:09）</h2><p><strong>统计窗口</strong>：2026-09-02 00:00 至 19:09 日内快照，数据未完整，不替代次日完整日报。 <strong>评估版本</strong>：Android <code>8.3.14.2</code>（迭代 8.3.14）/ iOS <code>8.3.1403</code>（对应 8.3.14.3）。 <strong>发版结论</strong>：🟡 继续观察——日内快照，数据未完整，不据此作正式放量或拦截结论。</p><h3>TL;DR</h3><ul><li>当前日内数据覆盖至 19:09；Android 最新版本崩溃率 0.035%，iOS 最新版本崩溃率 0.392%，后者已高于完整日报的拦截阈值，但日内数据不可用于正式判定。</li><li>预览最新版本 3 秒内出图 85.32%，全版本 84.78%；回放最新版本 3 秒内出图 97.90%，全版本 97.87%。</li><li>回放 iOS 老架构有效首帧采集覆盖率仅 33.40%，该分层时延仅作参考。</li></ul><h3>一、各端活跃用户与版本覆盖</h3><blockquote>友盟 U-App 日活用于平台规模；神策 <code>$AppStart</code> 用于版本判定及覆盖率。神策／友盟差异仅用于核对，不参与结论。</blockquote><div class="table-wrap"><table><thead><tr><th>平台</th><th>友盟 U-App 日活</th><th>神策 $AppStart 活跃</th><th>神策／友盟差异</th><th>最新版本日活／覆盖率</th><th>最新／全版本崩溃率</th><th>最新／全版本影响用户占比</th></tr></thead><tbody><tr><td>Android</td><td>8,439,536</td><td>7,830,639（已返回前 50 个版本）</td><td>-1,746,377／-20.69%</td><td>6,693,159／85.47%</td><td>0.035%／0.056%</td><td>0.044%／0.063%</td></tr><tr><td>iOS</td><td>1,907,060</td><td>1,727,883（已返回前 50 个版本）</td><td>-179,177／-9.40%</td><td>1,590,404／92.04%</td><td>0.392%／0.369%</td><td>0.602%／0.562%</td></tr><tr><td>Harmony</td><td>651,589</td><td>暂未接入 <code>$AppStart</code></td><td>无法对照</td><td>—</td><td>暂未纳入</td><td>暂未纳入</td></tr></tbody></table></div><h3>二、崩溃与稳定性</h3><blockquote>友盟实时日内小时点等权均值，窗口至 19:00；完整日报基线为 0.03%。</blockquote><div class="table-wrap"><table><thead><tr><th>平台</th><th>最新版本</th><th>最新版本崩溃率</th><th>基线倍数</th><th>全版本崩溃率</th><th>最新版本影响用户占比</th><th>全版本影响用户占比</th></tr></thead><tbody><tr><td>Android</td><td>8.3.14.2</td><td>0.035%</td><td>1.15x</td><td>0.056%</td><td>0.044%</td><td>0.063%</td></tr><tr><td>iOS</td><td>8.3.1403</td><td>0.392%</td><td>13.07x</td><td>0.369%</td><td>0.602%</td><td>0.562%</td></tr></tbody></table></div><h3>三、预览与回放关键指标</h3><div class="table-wrap"><table><thead><tr><th>指标</th><th>预览（最新／全版本）</th><th>回放（最新／全版本）</th></tr></thead><tbody><tr><td>3 秒内出图</td><td>85.32%／84.78%</td><td>97.90%／97.87%</td></tr><tr><td>样本量（PV／UV）</td><td>34,489,575／7,939,642</td><td>12,299,271／3,925,319</td></tr></tbody></table></div><h4>预览出图（MonitorFrameResult）</h4><div class="table-wrap"><table><thead><tr><th>出图耗时</th><th>最新版本</th><th>全版本</th></tr></thead><tbody><tr><td>1 秒内出图成功</td><td>75.49%</td><td>74.06%</td></tr><tr><td>3 秒内出图成功（累计）</td><td>85.32%</td><td>84.78%</td></tr><tr><td>6 秒内出图成功（累计）</td><td>90.45%</td><td>89.88%</td></tr><tr><td>10 秒以上出图成功</td><td>1.95%</td><td>1.97%</td></tr><tr><td>10 秒内未出图成功占比</td><td>3.36%</td><td>3.63%</td></tr></tbody></table></div><div class="table-wrap"><table><thead><tr><th>$lib</th><th>架构</th><th>最新版本 PV</th><th>3 秒内出图成功</th><th>vs 基线</th></tr></thead><tbody><tr><td>Android</td><td>P2P（0）</td><td>23,037,411</td><td>84.03%</td><td>-0.09pp</td></tr><tr><td>Android</td><td>TRTC（6）</td><td>4,071,933</td><td>94.23%</td><td>+0.79pp</td></tr><tr><td>iOS</td><td>P2P（0）</td><td>6,431,361</td><td>83.09%</td><td>-1.03pp</td></tr><tr><td>iOS</td><td>TRTC（6）</td><td>948,870</td><td>93.66%</td><td>+0.22pp</td></tr></tbody></table></div><h4>录像回放（DeviceVideoPlayback）</h4><blockquote>时间指标分母为 <code>is_success=1</code> 且有效首帧时间的成功样本；有效首帧采集覆盖率不足 99.5% 的分层仅作速度参考。</blockquote><div class="table-wrap"><table><thead><tr><th>$lib</th><th>架构</th><th>最新版本总 PV／有效首帧成功 PV</th><th>3 秒内出图</th><th>有效首帧采集覆盖率</th></tr></thead><tbody><tr><td>Android</td><td>P2P（0）</td><td>8,321,755／7,633,184</td><td>97.80%</td><td>95.13%</td></tr><tr><td>Android</td><td>TRTC（6）</td><td>1,817,446／1,646,814</td><td>98.66%</td><td>94.70%</td></tr><tr><td>iOS</td><td>P2P（0）</td><td>1,791,363／583,690</td><td>96.79%</td><td>33.40%</td></tr><tr><td>iOS</td><td>TRTC（6）</td><td>368,462／323,694</td><td>98.39%</td><td>91.11%</td></tr></tbody></table></div><h3>四、结论</h3><ul><li>发版结论固定为“🟡 继续观察——日内快照，数据未完整，不据此作正式放量或拦截结论”。</li><li>iOS 最新版本日内崩溃率 0.392%，为完整日报基线的 13.07 倍；待次日完整窗口复核后再按正式阈值决定是否拦截。</li><li>预览 3 秒内出图未出现相对同架构基线 2pp 以上的日内劣化；回放的 iOS P2P 首帧采集覆盖率异常，日内时延结论仅供参考。</li></ul><h3>数据源状态</h3><div class="table-wrap"><table><thead><tr><th>数据源</th><th>状态</th><th>说明</th></tr></thead><tbody><tr><td>友盟 U-App 日活</td><td>可用</td><td>当日累计日活。</td></tr><tr><td>友盟 APM</td><td>可用</td><td>取实时小时点至 19:00，非完整日。</td></tr><tr><td>神策版本分布</td><td>可用</td><td><code>$AppStart</code> 查询返回前 50 个版本，活跃总量为已返回版本之和。</td></tr><tr><td>神策预览</td><td>可用</td><td>统计日期为当日，数据持续写入。</td></tr><tr><td>神策回放</td><td>可用</td><td>首帧字段可用，部分分层采集覆盖率低。</td></tr></tbody></table></div><h3>SQL 执行记录与校验</h3><ul><li><code>$AppStart</code> 按 <code>$lib</code>、<code>$app_version</code> 聚合，最新版本判定为 Android 8.3.14.2、iOS 8.3.1403。</li><li>预览及回放均以 <code>CAST(first_frame_time AS DOUBLE)</code> 计算；预览分桶包含失败及无有效首帧兜底，汇总守恒通过。</li><li>预览与回放的独立复核均以相同窗口、独立累计条件执行；汇总 3 秒内指标与分层加权结果一致，偏差 0.00pp。</li><li>日内快照的事件 PV 与 <code>$AppStart</code> 活跃量级匹配；回放 P2P iOS 的首帧采集覆盖率 33.40%，已在结论中降级处理。</li></ul><p><em>本报告为日内快照，数据未完整，不替代次日完整日报。</em></p></div></details>
     </article>
   </section>
 
-  <p class="footer">由 OpenClaw 质量日报渲染器生成 · 2026年9月2日 17:59 · 数据以同名 Markdown 原始报告为准</p>
+  <p class="footer">由 OpenClaw 质量日报渲染器生成 · 2026年9月2日 19:12 · 数据以同名 Markdown 原始报告为准</p>
 </main>
 <script>
 (function(){
   try{
     var tabs=document.querySelectorAll('[role="tab"]');
     var panels=document.querySelectorAll('.panel');
-    tabs.forEach(function(tab){
+    function activate(tab){
+      tabs.forEach(function(t){t.setAttribute('aria-selected',String(t===tab));});
+      panels.forEach(function(p){p.hidden=p.id!==tab.getAttribute('aria-controls');});
+      tab.focus();
+    }
+    tabs.forEach(function(tab, index){
       tab.addEventListener('click',function(){
-        tabs.forEach(function(t){t.setAttribute('aria-selected',String(t===tab));});
-        panels.forEach(function(p){p.hidden=p.id!==tab.getAttribute('aria-controls');});
+        activate(tab);
+      });
+      tab.addEventListener('keydown',function(event){
+        var nextIndex;
+        if(event.key==='ArrowRight'){nextIndex=(index+1)%tabs.length;}
+        else if(event.key==='ArrowLeft'){nextIndex=(index-1+tabs.length)%tabs.length;}
+        else if(event.key==='Home'){nextIndex=0;}
+        else if(event.key==='End'){nextIndex=tabs.length-1;}
+        else{return;}
+        event.preventDefault();
+        activate(tabs[nextIndex]);
       });
     });
   }catch(e){console.error(e);}
