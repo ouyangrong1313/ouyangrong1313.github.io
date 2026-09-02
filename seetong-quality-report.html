@@ -94,8 +94,9 @@ layout: null
   .platform-card{background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);padding:18px 20px;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s;min-width:0}
   .platform-card:hover{transform:translateY(-2px);box-shadow:var(--shadow-md)}
   .platform-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;gap:10px}
-  .platform-name{font-size:16px;font-weight:800;display:flex;align-items:center;gap:10px;color:var(--ink);min-width:0}
-  .platform-icon{width:32px;height:32px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .platform-name{font-size:16px;font-weight:800;display:inline-flex;align-items:center;gap:10px;color:var(--ink);min-width:0;line-height:1}
+  .platform-icon{width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;line-height:0}
+  .platform-icon svg{display:block}
   .platform-icon.android svg{width:26px;height:26px}
   .platform-icon.ios svg{width:24px;height:24px}
   .platform-icon.harmony svg{width:26px;height:26px}
@@ -320,7 +321,7 @@ layout: null
     </article>
   </section>
 
-  <p class="footer">由 OpenClaw 质量日报渲染器生成 · 2026年9月2日 19:16 · 数据以同名 Markdown 原始报告为准</p>
+  <p class="footer">由 OpenClaw 质量日报渲染器生成 · 2026年9月2日 19:24 · 数据以同名 Markdown 原始报告为准</p>
 </main>
 <script>
 (function(){
