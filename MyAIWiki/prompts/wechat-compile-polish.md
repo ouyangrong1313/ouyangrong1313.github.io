@@ -34,11 +34,13 @@ python3 /Users/topsee/ouyangrong1313/MyAIWiki/scripts/build_wechat_polish_prompt
 
 ### 对 wiki
 
-- 保留 `# 标题`
+- 必须以 YAML frontmatter 开头，包含 `title`、`category`、`tags`、`nodes`、`links`、`date`、`source` 与 `status: published`
+- `nodes` 保留 5-10 个可独立检索的节点；`links` 至少一个且只能指向已有页面
 - 必须遵循以下结构：
   - `## 核心结论（一句话）`
   - `## 分类提炼`
-  - `## 要点列表`
+  - `## 知识节点`
+  - `## 关联图谱`（含“上游 / 下游 / 同级”三个子段）
   - `## 标签`
   - `## 相关链接`
 - `核心结论` 要体现文章最值得长期保留的一句话
@@ -59,4 +61,6 @@ python3 /Users/topsee/ouyangrong1313/MyAIWiki/scripts/build_wechat_polish_prompt
 
 ```bash
 python3 /Users/topsee/ouyangrong1313/MyAIWiki/scripts/apply_wechat_polish_output.py --slug <slug> --category 02-ai-coding --input /path/to/model-output.md
+
+# 如需发布索引与日志，追加 --publish
 ```

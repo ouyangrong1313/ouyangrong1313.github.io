@@ -14,6 +14,9 @@ import re
 import sys
 from pathlib import Path
 
+from compile_wechat_to_wiki import publish_article, validate_published_wiki
+from wiki_ingest_state import IngestStateStore
+
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 ROOT = SCRIPT_DIR.parent
@@ -54,10 +57,12 @@ def main() -> int:
         default=str(ROOT),
         help="Root directory of the target MyAIWiki, default: current repo root",
     )
+    parser.add_argument("--publish", action="store_true", help="Publish indexes and log after contract validation.")
     args = parser.parse_args()
 
     text = read_input(args.input)
     digest_markdown, wiki_markdown = extract_markdown_blocks(text)
+    validate_published_wiki(wiki_markdown)
 
     root = Path(args.output_root).expanduser().resolve()
     digest_path = root / "raw" / f"{args.slug}-digest.md"
@@ -68,8 +73,16 @@ def main() -> int:
     digest_path.write_text(digest_markdown, encoding="utf-8")
     wiki_path.write_text(wiki_markdown, encoding="utf-8")
 
+    store = IngestStateStore(root)
+    record = store.find_by_artifact(str(wiki_path.relative_to(root)))
+    if record and record["status"] == "drafted":
+        store.transition(record["id"], "polished")
+
     print(f"digest -> {digest_path}")
     print(f"wiki -> {wiki_path}")
+    if args.publish:
+        for name, status in publish_article(root, args.category, args.slug).items():
+            print(f"publish_{name}: {status}")
     return 0
 
 

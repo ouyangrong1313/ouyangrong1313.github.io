@@ -295,6 +295,19 @@ def check_file(path: Path, targets: set[str], stem_counts: Counter, title_counts
             if missing:
                 findings.warnings.append(f"{path_label}: missing frontmatter fields: {', '.join(missing)}")
                 findings.metrics["frontmatter_missing"] += 1
+            status_line = next((line for line in lines[1 : bounds[1]] if line.startswith("status:")), "")
+            status = status_line.split(":", 1)[1].strip().strip("'\"") if status_line else ""
+            if status == "draft":
+                findings.warnings.append(f"{path_label}: draft page is not publishable")
+                findings.metrics["draft_pages"] += 1
+            if status == "published":
+                if "## 关联图谱" not in text:
+                    findings.errors.append(f"{path_label}: published page missing 关联图谱")
+                    findings.metrics["published_graph_missing"] += 1
+                links = collection_values(lines, bounds, "links")
+                if not links:
+                    findings.errors.append(f"{path_label}: published page has no links")
+                    findings.metrics["published_links_missing"] += 1
             category_line = next((line for line in lines[1 : bounds[1]] if line.startswith("category:")), "")
             category = category_line.split(":", 1)[1].strip().strip("'\"") if category_line else ""
             if category and category != relative_parts[0]:
@@ -349,6 +362,30 @@ def check_index_coverage(findings: Findings) -> None:
             if page.name != "index.md" and page.stem not in index_text:
                 findings.warnings.append(f"{display(page)}: no matching entry in {display(index)}")
                 findings.metrics["unindexed_pages"] += 1
+
+
+def check_raw_sources(findings: Findings, scope: str | None = None) -> None:
+    for path in markdown_files(WIKI_DIR):
+        if path.name == "index.md":
+            continue
+        if scope and path.stem != scope:
+            continue
+        parts = path.relative_to(WIKI_DIR).parts
+        if not parts or parts[0] not in CANONICAL_CATEGORIES:
+            continue
+        lines = path.read_text(encoding="utf-8").splitlines()
+        bounds = frontmatter_bounds(lines)
+        if not bounds or not any(line.strip() == "status: published" for line in lines[1 : bounds[1]]):
+            continue
+        raw_path = ROOT / "raw" / f"{path.stem}.md"
+        if not raw_path.exists():
+            findings.warnings.append(f"{display(path)}: missing raw source {display(raw_path)}")
+            findings.metrics["missing_raw_sources"] += 1
+            continue
+        raw_text = raw_path.read_text(encoding="utf-8")
+        if "## 正文" not in raw_text or "**正文 SHA-256：**" not in raw_text:
+            findings.warnings.append(f"{display(raw_path)}: missing raw body metadata")
+            findings.metrics["raw_metadata_missing"] += 1
 
     for directory in sorted(path for path in WIKI_DIR.rglob("*") if path.is_dir()):
         if len(directory.relative_to(WIKI_DIR).parts) < 2:
@@ -448,7 +485,7 @@ def print_report(findings: Findings, fixed: bool) -> None:
         print(f"Files normalized: {len(findings.changed_files)}")
     print(f"Errors: {len(findings.errors)}")
     print(f"Warnings: {len(findings.warnings)}")
-    for name in ("invalid_inline_tags", "category_mismatch", "legacy_links", "frontmatter_missing", "alias_links", "unresolved_links", "missing_indexes", "missing_directory_indexes", "unindexed_pages", "orphan_nodes", "cross_project_links"):
+    for name in ("invalid_inline_tags", "category_mismatch", "legacy_links", "frontmatter_missing", "alias_links", "unresolved_links", "missing_indexes", "missing_directory_indexes", "unindexed_pages", "orphan_nodes", "cross_project_links", "draft_pages", "published_graph_missing", "published_links_missing", "missing_raw_sources", "raw_metadata_missing"):
         if findings.metrics[name]:
             print(f"{name}: {findings.metrics[name]}")
     if findings.unresolved_targets:
@@ -470,6 +507,7 @@ def main() -> int:
     parser.add_argument("--fix-link-aliases", action="store_true", help="Rewrite only uniquely matched wiki-link aliases.")
     parser.add_argument("--fix-indexes", action="store_true", help="Append unindexed pages to each category's pending-summary section.")
     parser.add_argument("--strict", action="store_true", help="Return nonzero for warnings as well as errors.")
+    parser.add_argument("--scope", help="Check one page slug in addition to global index consistency.")
     args = parser.parse_args()
 
     changed_files: list[Path] = []
@@ -493,10 +531,14 @@ def main() -> int:
     if args.fix_indexes:
         changed_files.extend(normalize_indexes())
     check_legacy_directories(findings)
-    for path in markdown_files(ROOT):
+    paths_to_check = markdown_files(ROOT)
+    if args.scope:
+        paths_to_check = [path for path in paths_to_check if path.stem == args.scope or path.name in {"index.md", "master-index.md", "log.md"}]
+    for path in paths_to_check:
         check_file(path, targets, stem_counts, title_counts, alias_targets, findings)
     check_index_coverage(findings)
     check_node_orphans(findings)
+    check_raw_sources(findings, args.scope)
     summarize_cross_project_links(findings)
     print_report(findings, args.fix)
     return 1 if findings.errors or (args.strict and findings.warnings) else 0

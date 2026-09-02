@@ -10,6 +10,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 import sys
@@ -47,6 +48,10 @@ def build_raw_markdown(article: dict) -> str:
     publish_time = article.get("publish_time", "").strip() or "未知时间"
     url = article.get("url", "").strip()
     content = article.get("content_text", "").strip() or article.get("body_text", "").strip()
+    if not content or "环境异常" in content:
+        raise ValueError("Fetched article has no usable body text.")
+    fetch_mode = article.get("fetch_mode", "unknown").strip() or "unknown"
+    content_sha256 = hashlib.sha256(content.encode("utf-8")).hexdigest()
 
     lines = [
         f"# {title}",
@@ -55,6 +60,8 @@ def build_raw_markdown(article: dict) -> str:
         f"**作者：** {author}",
         f"**日期：** {publish_time}",
         f"**链接：** {url}",
+        f"**抓取方式：** {fetch_mode}",
+        f"**正文 SHA-256：** {content_sha256}",
         "",
         "---",
         "",

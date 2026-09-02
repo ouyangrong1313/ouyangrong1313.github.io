@@ -2,6 +2,39 @@
 
 时间序变更记录。格式：`## [日期] 操作 | 标题`
 
+## 2026-09-02
+### ingest | 库克的苹果：运营、生态加厚与继任领导
+
+- 来源：微信公众号「笔记侠」；作者老贾；责编贾宁；发布时间 2026-09-01 21:30；原文：https://mp.weixin.qq.com/s/kAEJGpc6dr_UfDj_jWXdTw。
+- 写入：`raw/笔记侠-库克-苹果运营生态与继任.md`、`raw/笔记侠-库克-苹果运营生态与继任-digest.md`、`wiki/03-productivity/笔记侠-库克-苹果运营生态与继任.md`；更新 `wiki/03-productivity/index.md` 与 `wiki/master-index.md`。
+- 核心命题：库克将库存、产能、供应链、服务、配件、自研芯片和跨设备体验接为长期系统；这一体系解释了增长，也留下 AI 交付、空间计算、供应链集中和继任后的新增长问题。
+- 关联：[[03-productivity/笔记侠-老贾-禅与摩托车维修艺术与乔布斯产品哲学]]、[[03-productivity/陈春花-AI时代管理者影响力]]、[[03-productivity/HBR-China-5个反直觉创新原则]]、[[06-ai-tech/章文龙-AI分身时代-在场重新定价]]。
+- 证据边界：CEO 交接、财务、库存、销量、服务收入、设备数、市场份额和产品延期均为二手转述；不构成苹果官方预测、投资或组织设计建议。
+
+### ingest | DeepSeek 的 AGI 愿景：研究主线、成本创新与组织涌现
+
+- 来源：微信公众号「混沌学园」转载「混沌创新院」；作者创新院；李善友案例课整理；发布时间 2026-09-01 18:00；原文：https://mp.weixin.qq.com/s/wfF6zmKI3tEUykPPxa-iiw。
+- 写入：`raw/混沌学园-DeepSeek-AGI愿景与研究组织.md`、`raw/混沌学园-DeepSeek-AGI愿景与研究组织-digest.md`、`wiki/06-ai-tech/混沌学园-DeepSeek-AGI愿景与研究组织.md`；更新 `wiki/06-ai-tech/index.md` 与 `wiki/master-index.md`。
+- 核心命题：用 AGI 概率筛掉不属主线的商业机会与技术热点，将基础模型、token 成本、研究方向、工程/研究分工和开源生态维持在同一长期约束下。
+- 关联：[[06-ai-tech/机器之心-AI如何塑造生产力-AI4X-68页综述]]、[[01-ai-agents/清华沈阳-自进化AI新物种]]、[[01-ai-agents/Skill-Self-Evolution]]、[[06-ai-tech/纳德拉-反向信息悖论与企业AI主权]]。
+- 证据边界：模型版本、价格、用户、组织、技术路线及 AGI 推演均为文章二手转述或价值表达，未独立核验；不构成官方路线图、投资或组织设计建议。
+
+### ingest | AI 时代个人对冲：智力商品化、信任与退出权
+
+- 来源：虎嗅APP转载微信公众号「不懂经」；作者不懂经也叔的 Rust；发布时间 2026-09-01 17:24；原文：https://mp.weixin.qq.com/s/ItMmnhQjnpPUpQPDxm2rMw。
+- 写入：`raw/虎嗅-不懂经-AI时代个人对冲-智力商品化.md`、`raw/虎嗅-不懂经-AI时代个人对冲-智力商品化-digest.md`、`wiki/03-productivity/虎嗅-不懂经-AI时代个人对冲-智力商品化.md`；更新 `wiki/03-productivity/index.md` 与 `wiki/master-index.md`。
+- 核心命题：不要以更多同质数字技能伪装分散风险；识别单一模型、平台、雇主与技能的共同风险，积累现场责任、长期信任、直接渠道和退出权，同时积极调用 AI 争取上行。
+- 关联：[[06-ai-tech/经纬创投-李飞飞-当答案变得廉价]]、[[06-ai-tech/章文龙-AI分身时代-在场重新定价]]、[[03-productivity/AI时代-人类将分成两种-消费者和创造者｜彭凯平对话未来学家PeterDiamandis]]、[[03-productivity/快刀青衣-WAIC观察笔记-那些活人感的笨功夫是AI时代最重要的护城河]]。
+- 证据边界：马斯克预测、模型价格、能力评分、历史与就业主张均为文章二手转述，未独立核验；不构成金融、法律或职业建议。
+
+### ingest | 腾讯学堂：AI 原生思维——像训练大模型一样训练自己
+
+- 来源：微信公众号「宝玉AI」；腾讯学堂整理；作者宝玉；发布时间 2026-09-01 11:00；原文：https://mp.weixin.qq.com/s/H9hDWQNkVacPuWnL4tRJCA。
+- 写入：`raw/宝玉AI-AI原生思维-像训练大模型一样训练自己.md`、`raw/宝玉AI-AI原生思维-像训练大模型一样训练自己-digest.md`、`wiki/03-productivity/宝玉AI-AI原生思维-像训练大模型一样训练自己.md`；更新 `wiki/03-productivity/index.md` 与 `wiki/master-index.md`。
+- 核心命题：AI 产品要同时穿过能力、成本、价值三条边界，并用原型、Agent 自验证和人工验收构成反馈闭环；人的核心职责转向定义、取舍、品味和高风险签收，个人成长亦依赖“实践 -> 反馈 -> 更新”的循环。
+- 关联：[[02-ai-coding/宝玉AI-我的AI原生开发流程-真实案例复盘]]、[[03-productivity/与AI一起做产品的六条原则]]、[[03-productivity/Z-Finance-Anthropic-Dianne-Penn-评测就是新的PRD]]、[[03-productivity/Code-in-Place-AI-时代为什么更该学编程-Capihom-EO]]。
+- 证据边界：案例、调用次数、处理时长和产品观察均是演讲者个人经验或二手描述，未独立复现；高风险场景不应据此省略安全、隐私、性能或专业审查。
+
 ## 2026-09-01
 ### ingest | AI 放大个体生产力后，团队该把协作重心放在哪里
 

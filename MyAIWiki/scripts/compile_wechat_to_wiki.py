@@ -21,6 +21,7 @@ from datetime import date
 from pathlib import Path
 
 from build_wechat_raw import build_raw_markdown, fetch_article, slugify
+from wiki_ingest_state import IngestStateStore
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -54,6 +55,7 @@ class Paths:
     category_index: Path
     master_index: Path
     log: Path
+    state: Path
 
 
 def normalize_paragraphs(text: str) -> list[str]:
@@ -174,7 +176,23 @@ def build_wiki_markdown(article: dict, tags: str, category: str) -> str:
     core_points = derive_core_points(paragraphs, count=7)
     one_line = core_points[0]
 
+    tag_values = [tag.lstrip("#") for tag in tags.split()]
+    nodes = [summarize_line(point, 24) for point in core_points[:5]]
+    while len(nodes) < 5:
+        nodes.append(f"待提炼节点{len(nodes) + 1}")
     lines = [
+        "---",
+        f"title: {title}",
+        f"category: {category}",
+        "tags:",
+        *[f"  - {tag}" for tag in tag_values],
+        f"nodes: [{', '.join(nodes)}]",
+        "links: []",
+        f"date: {date.today()}",
+        f"source: 微信公众号 / {article.get('author', '').strip() or '未知作者'}",
+        "status: draft",
+        "---",
+        "",
         f"# {title}",
         "",
         "## 核心结论（一句话）",
@@ -187,7 +205,7 @@ def build_wiki_markdown(article: dict, tags: str, category: str) -> str:
         f"- 标签： {tags}",
         "- 类型：自动编译草稿 / 待人工复核",
         "",
-        "## 要点列表",
+        "## 知识节点",
         "",
     ]
 
@@ -196,6 +214,17 @@ def build_wiki_markdown(article: dict, tags: str, category: str) -> str:
 
     lines.extend(
         [
+            "",
+            "## 关联图谱",
+            "",
+            "### 上游（基于 / 来自）",
+            "- 待发布：补充已验证的已有页面链接。",
+            "",
+            "### 下游（应用于 / 验证于）",
+            "- 待发布：补充应用或验证关系。",
+            "",
+            "### 同级（横向 / 并列）",
+            "- 待发布：补充同主题的已有页面链接。",
             "",
             "## 标签",
             "",
@@ -211,7 +240,7 @@ def build_wiki_markdown(article: dict, tags: str, category: str) -> str:
     return "\n".join(lines).rstrip() + "\n"
 
 
-def resolve_paths(root: Path, category: str, slug: str) -> Paths:
+def resolve_paths(root: Path, category: str, slug: str, state: Path) -> Paths:
     return Paths(
         root=root,
         raw=root / "raw" / f"{slug}.md",
@@ -220,6 +249,7 @@ def resolve_paths(root: Path, category: str, slug: str) -> Paths:
         category_index=root / "wiki" / category / "index.md",
         master_index=root / "wiki" / "master-index.md",
         log=root / "log.md",
+        state=state,
     )
 
 
@@ -229,6 +259,67 @@ def write_if_needed(path: Path, content: str, force: bool) -> str:
         return "skipped"
     path.write_text(content, encoding="utf-8")
     return "written"
+
+
+def validate_published_wiki(markdown: str, root: Path | None = None) -> None:
+    if not markdown.startswith("---\n"):
+        raise ValueError("Published wiki must start with YAML frontmatter.")
+    end = markdown.find("\n---", 3)
+    if end < 0:
+        raise ValueError("Published wiki frontmatter is not closed.")
+    frontmatter = markdown[3:end]
+    for field in ("title", "category", "tags", "nodes", "links", "date", "source"):
+        if not re.search(rf"^{field}:", frontmatter, flags=re.MULTILINE):
+            raise ValueError(f"Published wiki missing frontmatter field: {field}")
+    if not re.search(r"^status:\s*published\s*$", frontmatter, flags=re.MULTILINE):
+        raise ValueError("Published wiki must declare status: published.")
+    links = re.search(r"^links:\s*(.+)$", frontmatter, flags=re.MULTILINE)
+    if not links or "[[" not in links.group(1):
+        raise ValueError("Published wiki requires at least one wiki link.")
+    if root:
+        targets = {
+            path.relative_to(root / "wiki").with_suffix("").as_posix()
+            for path in (root / "wiki").rglob("*.md")
+        }
+        for target in re.findall(r"\[\[([^\]|#]+)", links.group(1)):
+            normalized = target.strip()
+            if normalized not in targets and not any(Path(candidate).name == normalized for candidate in targets):
+                raise ValueError(f"Published wiki links to a missing page: {normalized}")
+    nodes = re.search(r"^nodes:\s*\[(.*)\]$", frontmatter, flags=re.MULTILINE)
+    if not nodes or len([item for item in nodes.group(1).split(",") if item.strip()]) < 5:
+        raise ValueError("Published wiki requires at least five nodes.")
+    for heading in ("## 关联图谱", "### 上游（基于 / 来自）", "### 下游（应用于 / 验证于）", "### 同级（横向 / 并列）"):
+        if heading not in markdown:
+            raise ValueError(f"Published wiki missing graph heading: {heading}")
+
+
+def publish_article(root: Path, category: str, slug: str) -> dict[str, str]:
+    wiki_path = root / "wiki" / category / f"{slug}.md"
+    raw_path = root / "raw" / f"{slug}.md"
+    if not raw_path.exists():
+        raise ValueError(f"Cannot publish without raw source: {raw_path}")
+    markdown = wiki_path.read_text(encoding="utf-8")
+    validate_published_wiki(markdown, root)
+    title_match = re.search(r"^title:\s*(.+)$", markdown, flags=re.MULTILINE)
+    title = title_match.group(1).strip().strip("'\"") if title_match else slug
+    store = IngestStateStore(root)
+    record = store.find_by_artifact(str(wiki_path.relative_to(root)))
+    if not record:
+        raise ValueError("Cannot publish without an ingest state record.")
+    if record["status"] == "drafted":
+        store.transition(record["id"], "polished")
+    if store.read(record["id"])["status"] == "polished":
+        store.transition(record["id"], "validated")
+    paths = resolve_paths(root, category, slug, store.path_for(record["id"]))
+    today = str(date.today())
+    statuses = {
+        "category_index": update_category_index(paths.category_index, slug, title, summarize_line(title, 40)),
+        "master_index": update_master_index(paths.master_index, category, slug, title, today),
+        "log": update_log(paths.log, title, slug, category, record["url"], "#场景/公众号长文", today),
+    }
+    store.transition(record["id"], "published")
+    statuses["state"] = "published"
+    return statuses
 
 
 def insert_after_heading(text: str, heading: str, block: str) -> str:
@@ -328,22 +419,35 @@ def compile_article(
     tags: str | None,
     force: bool,
 ) -> tuple[Paths, dict[str, str]]:
-    article = fetch_article(url)
-    title = article.get("title", "").strip() or "wechat-article"
-    article_slug = slug or slugify(title)
-    article_tags = tags or CATEGORY_TAGS.get(category, "#场景/公众号长文")
-    today = str(date.today())
-
-    paths = resolve_paths(root, category, article_slug)
-    statuses = {
-        "raw": write_if_needed(paths.raw, build_raw_markdown(article), force),
-        "digest": write_if_needed(paths.digest, build_digest_markdown(article, article_tags), force),
-        "wiki": write_if_needed(paths.wiki, build_wiki_markdown(article, article_tags, category), force),
-        "category_index": update_category_index(paths.category_index, article_slug, title, summarize_line(title, 40)),
-        "master_index": update_master_index(paths.master_index, category, article_slug, title, today),
-        "log": update_log(paths.log, title, article_slug, category, url, article_tags, today),
-    }
-    return paths, statuses
+    store = IngestStateStore(root)
+    record = store.start(url)
+    if record["status"] == "published" and not force:
+        raise ValueError("Article is already published; use --force only for a deliberate rebuild.")
+    if record["status"] == "published":
+        record = store.transition(record["id"], "fetched")
+    try:
+        article = fetch_article(url)
+        title = article.get("title", "").strip() or "wechat-article"
+        article_slug = slug or slugify(title)
+        article_tags = tags or CATEGORY_TAGS.get(category, "#场景/公众号长文")
+        paths = resolve_paths(root, category, article_slug, store.path_for(record["id"]))
+        raw_markdown = build_raw_markdown(article)
+        content = article.get("content_text", "").strip() or article.get("body_text", "").strip()
+        content_hash = __import__("hashlib").sha256(content.encode("utf-8")).hexdigest()
+        statuses = {
+            "raw": write_if_needed(paths.raw, raw_markdown, force),
+            "digest": write_if_needed(paths.digest, build_digest_markdown(article, article_tags), force),
+            "wiki": write_if_needed(paths.wiki, build_wiki_markdown(article, article_tags, category), force),
+            "category_index": "pending_publish",
+            "master_index": "pending_publish",
+            "log": "pending_publish",
+        }
+        store.transition(record["id"], "drafted", artifacts={"raw": str(paths.raw.relative_to(root)), "digest": str(paths.digest.relative_to(root)), "wiki": str(paths.wiki.relative_to(root))}, content_sha256=content_hash)
+        statuses["state"] = "drafted"
+        return paths, statuses
+    except Exception as error:
+        store.transition(record["id"], "failed", error=str(error))
+        raise
 
 
 def main() -> int:
@@ -380,7 +484,7 @@ def main() -> int:
         force=args.force,
     )
 
-    for name in ("raw", "digest", "wiki", "category_index", "master_index", "log"):
+    for name in ("raw", "digest", "wiki", "category_index", "master_index", "log", "state"):
         print(f"{name}: {statuses[name]} -> {getattr(paths, name)}")
     return 0
 

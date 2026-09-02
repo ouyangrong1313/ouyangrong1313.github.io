@@ -20,7 +20,7 @@ from pathlib import Path
 
 from apply_wechat_polish_output import extract_markdown_blocks, read_input
 from build_wechat_polish_prompt import build_prompt
-from compile_wechat_to_wiki import compile_article
+from compile_wechat_to_wiki import compile_article, publish_article, validate_published_wiki
 
 
 def apply_polish_output(
@@ -32,6 +32,7 @@ def apply_polish_output(
 ) -> tuple[Path, Path]:
     text = read_input(input_path)
     digest_markdown, wiki_markdown = extract_markdown_blocks(text)
+    validate_published_wiki(wiki_markdown)
 
     digest_path = output_root / "raw" / f"{slug}-digest.md"
     wiki_path = output_root / "wiki" / category / f"{slug}.md"
@@ -112,6 +113,9 @@ def main() -> int:
         )
         print(f"apply_polish_digest: written -> {digest_path}")
         print(f"apply_polish_wiki: written -> {wiki_path}")
+        publish_statuses = publish_article(output_root, args.category, paths.raw.stem)
+        for name, status in publish_statuses.items():
+            print(f"publish_{name}: {status}")
 
     return 0
 
