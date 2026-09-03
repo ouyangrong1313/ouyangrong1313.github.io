@@ -1,1 +1,5 @@
 /.wiki-state/ingests/
+
+# Python runtime bytecode caches
+__pycache__/
+*.py[cod]
