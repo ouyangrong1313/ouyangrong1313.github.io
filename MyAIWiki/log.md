@@ -285,6 +285,58 @@
 
 ---
 
+## 2026-09-03
+### ingest | 罗辑思维：开放与封闭、设计锁入与技术护城河
+- 来源：https://mp.weixin.qq.com/s/WdzQDE5O6rImKkj73gwyrg
+- 原文：raw/罗辑思维-开放与封闭-设计锁入护城河.md
+- 拆解：raw/罗辑思维-开放与封闭-设计锁入护城河-digest.md
+- wiki：wiki/06-ai-tech/罗辑思维-开放与封闭-设计锁入护城河.md
+- 标签： #场景/公众号长文
+- 说明：自动编译草稿，建议人工复核 digest 与 wiki 提炼质量
+### ingest | Dan Koe：数字文艺复兴与多维能力
+- 来源：https://mp.weixin.qq.com/s/NP2T5jkwa3_cO2paGPlJUQ
+- 原文：raw/AlphaWriter-Dan-Koe-数字文艺复兴与多维能力.md
+- 拆解：raw/AlphaWriter-Dan-Koe-数字文艺复兴与多维能力-digest.md
+- wiki：wiki/03-productivity/AlphaWriter-Dan-Koe-数字文艺复兴与多维能力.md
+- 标签： #场景/公众号长文
+- 说明：自动编译草稿，建议人工复核 digest 与 wiki 提炼质量
+### ingest | 得物技术：Delivery Harness 与可控 AI 交付
+- 来源：https://mp.weixin.qq.com/s/Jcx_3OABcYwzzxWKFgivOA
+- 原文：raw/得物技术-Delivery-Harness-可控AI交付.md
+- 拆解：raw/得物技术-Delivery-Harness-可控AI交付-digest.md
+- wiki：wiki/02-ai-coding/得物技术-Delivery-Harness-可控AI交付.md
+- 标签： #场景/公众号长文
+- 说明：自动编译草稿，建议人工复核 digest 与 wiki 提炼质量
+### ingest | 腾讯研究院对话兰小欢：AI 的责任、权力与验证
+- 来源：https://mp.weixin.qq.com/s/G98RwuXWSM2F-pGqc3COnw
+- 原文：raw/腾讯研究院-兰小欢-AI责任权力与验证.md
+- 拆解：raw/腾讯研究院-兰小欢-AI责任权力与验证-digest.md
+- wiki：wiki/06-ai-tech/腾讯研究院-兰小欢-AI责任权力与验证.md
+- 标签： #场景/公众号长文
+- 说明：自动编译草稿，建议人工复核 digest 与 wiki 提炼质量
+### ingest | 大淘宝技术：AI 驱动研发体系与 Price360-KB 项目 Harness
+- 来源：https://mp.weixin.qq.com/s/OSYCiNajJw6c5-hGFSAfYw
+- 原文：raw/大淘宝技术-AI驱动研发体系-Price360-KB项目Harness.md
+- 拆解：raw/大淘宝技术-AI驱动研发体系-Price360-KB项目Harness-digest.md
+- wiki：wiki/02-ai-coding/大淘宝技术-AI驱动研发体系-Price360-KB项目Harness.md
+- 标签： #场景/公众号长文
+- 说明：自动编译草稿，建议人工复核 digest 与 wiki 提炼质量
+### ingest | 后工作时代：职业阶梯、在场价值与个人头寸
+- 来源：https://mp.weixin.qq.com/s/ZSGtyU1IQjSlSAhkausETg
+- 原文：raw/经纬创投-后工作时代-职业阶梯与个人头寸.md
+- 拆解：raw/经纬创投-后工作时代-职业阶梯与个人头寸-digest.md
+- wiki：wiki/03-productivity/经纬创投-后工作时代-职业阶梯与个人头寸.md
+- 标签： #场景/公众号长文
+- 说明：自动编译草稿，建议人工复核 digest 与 wiki 提炼质量
+### ingest | 麦肯锡：Agent 也需要绩效管理、责任归属与退出机制
+- 来源：https://mp.weixin.qq.com/s/Mk23TRE8nsHfmkESuFaxBQ
+- 原文：raw/AI组织进化论-Agent绩效管理与人机工作系统.md
+- 拆解：raw/AI组织进化论-Agent绩效管理与人机工作系统-digest.md
+- wiki：wiki/01-ai-agents/AI组织进化论-Agent绩效管理与人机工作系统.md
+- 标签： #场景/公众号长文
+- 说明：自动编译草稿，建议人工复核 digest 与 wiki 提炼质量
+
+
 ## 2026-08-27
 ### ingest | AI时代，人类将分成两种：消费者和创造者｜彭凯平对话未来学家Peter Diamandis
 - 来源：https://mp.weixin.qq.com/s/jnLqDrI_fyJTGikqal9NLQ
