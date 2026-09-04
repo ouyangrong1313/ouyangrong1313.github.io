@@ -285,6 +285,30 @@
 
 ---
 
+## 2026-09-04
+### ingest | 只会写代码的 AI 编程工具，可能真的要被淘汰了
+- 来源：https://mp.weixin.qq.com/s/qSx3Zmqyr64mVOmnAJm9Kw
+- 原文：raw/Leeka讲RPA-TRAEWork-产品到代码全流程.md
+- 拆解：raw/Leeka讲RPA-TRAEWork-产品到代码全流程-digest.md
+- wiki：wiki/02-ai-coding/Leeka讲RPA-TRAEWork-产品到代码全流程.md
+- 标签： #主题/AI-Coding #主题/产品开发 #主题/TRAE #主题/Vibe-Coding #场景/公众号长文
+- 说明：已按全文人工提炼并通过发布门禁；TRAE Work 的功能、市场研究与商业效果为工具体验与推广口径，未独立验证。
+### ingest | 每个人都变快了，为什么公司还是没有变快？
+- 来源：https://mp.weixin.qq.com/s/isrt180GpISYLlsso55K6g
+- 原文：raw/混沌学园-AI提效不等于组织提效.md
+- 拆解：raw/混沌学园-AI提效不等于组织提效-digest.md
+- wiki：wiki/03-productivity/混沌学园-AI提效不等于组织提效.md
+- 标签： #主题/AI原生组织 #主题/组织效能 #主题/人机协同 #主题/工作流 #场景/公众号长文
+- 说明：已按全文人工提炼并通过发布门禁；课程预告中的研究数据、案例和组织调整均保留为来源转述。
+### ingest | Lex Fridman 对话 DHH：Omarchy，才是真正属于 Agent 时代的操作系统
+- 来源：https://mp.weixin.qq.com/s/8WuV1IZdPFpu3L5MFDtpCw
+- 原文：raw/FounderPark-LexFridman-DHH-Omarchy-Agent原生操作系统.md
+- 拆解：raw/FounderPark-LexFridman-DHH-Omarchy-Agent原生操作系统-digest.md
+- wiki：wiki/02-ai-coding/FounderPark-LexFridman-DHH-Omarchy-Agent原生操作系统.md
+- 标签： #主题/AI-Coding #主题/AI-Agent #主题/操作系统 #主题/Harness #场景/公众号长文
+- 说明：已按全文人工提炼并通过发布门禁；有关产品前景、模型能力和效率的陈述保留为受访者观点。
+
+
 ## 2026-09-03
 ### ingest | 罗辑思维：开放与封闭、设计锁入与技术护城河
 - 来源：https://mp.weixin.qq.com/s/WdzQDE5O6rImKkj73gwyrg

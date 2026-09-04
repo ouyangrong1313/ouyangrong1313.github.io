@@ -1,6 +1,9 @@
 # AI 知识库索引
 
 ## 最近更新
+- [只会写代码的 AI 编程工具，可能真的要被淘汰了](./02-ai-coding/Leeka讲RPA-TRAEWork-产品到代码全流程.md) — 2026-09-04
+- [每个人都变快了，为什么公司还是没有变快？](./03-productivity/混沌学园-AI提效不等于组织提效.md) — 2026-09-04
+- [Lex Fridman 对话 DHH：Omarchy，才是真正属于 Agent 时代的操作系统](./02-ai-coding/FounderPark-LexFridman-DHH-Omarchy-Agent原生操作系统.md) — 2026-09-04
 - [罗辑思维：开放与封闭、设计锁入与技术护城河](./06-ai-tech/罗辑思维-开放与封闭-设计锁入护城河.md) — 2026-09-03
 - [Dan Koe：数字文艺复兴与多维能力](./03-productivity/AlphaWriter-Dan-Koe-数字文艺复兴与多维能力.md) — 2026-09-03
 - [得物技术：Delivery Harness 与可控 AI 交付](./02-ai-coding/得物技术-Delivery-Harness-可控AI交付.md) — 2026-09-03

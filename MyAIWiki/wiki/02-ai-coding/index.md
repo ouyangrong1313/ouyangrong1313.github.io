@@ -67,6 +67,8 @@ AI 辅助编程的实战经验、提示词模板、工作流总结。
 - [[Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了-digest]] - 提交产物、策略分层、受保护验证与人类门禁速读。
 
 ### 实战案例
+- [[Leeka讲RPA-TRAEWork-产品到代码全流程]] - 以 TRAE Work 的产品、设计、代码三模式为例，说明 AI 工具应串联假设、原型、实现和 GTM；真正的工作流价值仍取决于跨阶段一致性、验证证据与明确 Owner。
+- [[FounderPark-LexFridman-DHH-Omarchy-Agent原生操作系统]] - DHH 以 Omarchy 提出“可塑计算机”：Agent 将自然语言意图落实为可修改的系统接口，人则聚焦目标、品味、风险与验证。
 - [[得物技术-Delivery-Harness-可控AI交付]] - 用 Version Contract 锁定事实、Execution Boundary 限制改动、Evidence Gate 控制状态、Repair Loop 吸收真实反馈；多运行时交付以业务不变量和可追溯证据阻止局部正确扩散。
 - [[大淘宝技术-AI驱动研发体系-Price360-KB项目Harness]] - 以项目 Harness 将稳定业务上下文、代码、迭代协议与验证证据组织为 Agent 可执行工作空间；Git 管稳定资产，权威系统提供动态事实，完成以可复核证据判定。
 - [[02-ai-coding/瑟瑟发抖-WorkBuddy培训结束后-老板开始用AICoding亲自做产品了]] - 叶小钗以字幕工具失败案例提出 AI 项目的五阶段门槛：个人工具 -> 流程节点 -> 团队协同 -> 数字员工 -> 组织基建；创造权下沉时，评价权与责任也必须同步重构。
