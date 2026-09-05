@@ -1,0 +1,293 @@
+/**
+ * 童年跳房子大挑战 - 结算页样式
+ * pages/result/result.wxss
+ */
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #87CEEB 0%, #B0E0E6 30%, #FFF8DC 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60rpx 40rpx;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 顶部星星装饰 */
+.header-decor {
+  position: absolute;
+  top: 40rpx;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 60rpx;
+}
+
+.star {
+  font-size: 40rpx;
+  animation: float 2s ease-in-out infinite;
+}
+
+.star-1 { animation-delay: 0s; }
+.star-2 { animation-delay: 0.3s; }
+.star-3 { animation-delay: 0.6s; }
+
+/* 结果卡片 */
+.result-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 40rpx;
+  padding: 50rpx 60rpx;
+  width: 100%;
+  max-width: 500rpx;
+  margin-top: 80rpx;
+  border: 6rpx solid #FF6B6B;
+  box-shadow: 0 15rpx 50rpx rgba(255, 107, 107, 0.3);
+  position: relative;
+  z-index: 10;
+}
+
+/* 新纪录 */
+.new-record {
+  position: absolute;
+  top: -30rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #FFE66D 0%, #FFD93D 100%);
+  padding: 15rpx 40rpx;
+  border-radius: 30rpx;
+  border: 4rpx solid #FF6B6B;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.new-record text {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #FF6B6B;
+}
+
+/* 结果标题 */
+.result-title {
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+.result-title text {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #5D4E37;
+}
+
+/* 分数区域 */
+.score-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30rpx;
+}
+
+.score-label {
+  font-size: 26rpx;
+  color: #888;
+  margin-bottom: 15rpx;
+}
+
+.score-circle {
+  width: 200rpx;
+  height: 200rpx;
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 8rpx solid #fff;
+  box-shadow: 0 10rpx 30rpx rgba(255, 107, 107, 0.4);
+}
+
+.score-value {
+  font-size: 72rpx;
+  font-weight: bold;
+  color: #FFE66D;
+  text-shadow: 2rpx 2rpx 0rpx rgba(0, 0, 0, 0.2);
+}
+
+.score-unit {
+  font-size: 28rpx;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* PK结果 */
+.pk-section {
+  margin-bottom: 30rpx;
+  text-align: center;
+}
+
+.pk-result {
+  padding: 15rpx 30rpx;
+  border-radius: 30rpx;
+  display: inline-block;
+  margin-bottom: 15rpx;
+}
+
+.pk-result text {
+  font-size: 32rpx;
+  font-weight: bold;
+}
+
+.pk-result.win {
+  background: linear-gradient(135deg, #4ECDC4 0%, #7EDDD6 100%);
+  color: white;
+}
+
+.pk-result.lose {
+  background: linear-gradient(135deg, #DDA0DD 0%, #EE82EE 100%);
+  color: white;
+}
+
+.pk-result.draw {
+  background: linear-gradient(135deg, #FFE66D 0%, #FFD93D 100%);
+  color: #5D4E37;
+}
+
+.pk-info {
+  font-size: 24rpx;
+  color: #888;
+}
+
+/* 历史最高 */
+.high-score-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15rpx;
+  padding-top: 20rpx;
+  border-top: 2rpx dashed #FFE4E1;
+}
+
+.high-score-label {
+  font-size: 24rpx;
+  color: #888;
+}
+
+.high-score-value {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #4ECDC4;
+}
+
+/* 按钮区域 */
+.btn-section {
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25rpx;
+  width: 100%;
+  max-width: 400rpx;
+  z-index: 10;
+}
+
+.btn-share,
+.btn-again,
+.btn-home {
+  width: 100%;
+  height: 90rpx;
+  border-radius: 50rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: white;
+  border: none;
+  box-shadow: 0 8rpx 20rpx rgba(0, 0, 0, 0.2);
+}
+
+.btn-share {
+  background: linear-gradient(135deg, #4ECDC4 0%, #7EDDD6 100%);
+  border: 4rpx solid #fff;
+}
+
+.btn-again {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+  border: 4rpx solid #fff;
+}
+
+.btn-home {
+  background: linear-gradient(135deg, #DDA0DD 0%, #EE82EE 100%);
+  border: 4rpx solid #fff;
+}
+
+.btn-icon {
+  margin-right: 10rpx;
+}
+
+/* 分享文案预览 */
+.share-preview {
+  margin-top: 50rpx;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 25rpx 35rpx;
+  border-radius: 20rpx;
+  max-width: 500rpx;
+  width: 100%;
+  z-index: 10;
+}
+
+.preview-label {
+  font-size: 22rpx;
+  color: #888;
+  display: block;
+  margin-bottom: 10rpx;
+}
+
+.preview-text {
+  font-size: 26rpx;
+  color: #5D4E37;
+  line-height: 1.6;
+}
+
+/* 底部彩带装饰 */
+.footer-decor {
+  position: absolute;
+  bottom: 50rpx;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  padding: 0 80rpx;
+}
+
+.confetti {
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  animation: fall 3s linear infinite;
+}
+
+.confetti-1 {
+  background: #FF6B6B;
+  animation-delay: 0s;
+}
+
+.confetti-2 {
+  background: #4ECDC4;
+  animation-delay: 1s;
+}
+
+.confetti-3 {
+  background: #FFE66D;
+  animation-delay: 2s;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-200rpx) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}

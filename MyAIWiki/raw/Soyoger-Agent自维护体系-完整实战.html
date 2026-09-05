@@ -1,0 +1,309 @@
+<h1 id="ai-写代码我们爽了半年上线维护却越来越累agent-自维护体系完整实战">AI 写代码我们爽了半年，上线维护却越来越累：Agent 自维护体系完整实战</h1>
+
+<blockquote>
+  <p><strong>清洗说明</strong>：从微信公众号「Soyoger」2026-07-20 推送抓取，已去掉微信号、二维码、运营推广等噪声；正文按”开篇痛点 → 三处断裂诊断 → 四层进化 → 三笔账 → 5 动作 + 6 零件 → 三套 Skill → 6 层验证 → 真实数据 + 4 教训”结构完整保留；代码示例（sls trace / curl POST / 6 层 validate_fix 伪代码）完整保留；公众号文末互动话题”你们现在有在跑自动化维护循环吗？”已剔除。</p>
+</blockquote>
+
+<h2 id="1-开篇痛点一个工程师的三个-logstore">1. 开篇痛点（一个工程师的三个 Logstore）</h2>
+
+<p>AI 推高了研发速度，却把维护成本默默转移给了值班工程师。</p>
+
+<p>上个季度，我们团队有个工程师每天早上做的第一件事，是打开三个日志控制台，在 agent_log、mcp_client_log、mcp_server_log 三个 Logstore 之间来回切，手动拼出每个 ERROR 的完整链路。</p>
+
+<p>平均一个排查下来：40 分钟。一周还有 1000 多条 ERROR 等着。</p>
+
+<p>那一刻我突然意识到：我们用 AI 把写代码的速度翻了一倍，但上线之后的维护循环，还是全靠人在推。</p>
+
+<p>AI 写代码很快，但发现问题 → 定位根因 → 修复 → 验证 → 发布，这条链路的每一步，我们都还是人工在中间接棒。这不是 AI 不够聪明，是我们根本没有把维护链路当成一个需要工程化设计的系统。</p>
+
+<p>这篇文章，复盘我们从「人工维护循环」改造成「Agent 自维护体系」的完整过程：</p>
+
+<ul>
+  <li>维护循环为什么会卡死（三个断裂点诊断）</li>
+  <li>五个动作、六个零件的工程化架构</li>
+  <li>诊断/修复/发布三套 Skill 的核心设计</li>
+  <li>上线一个月后的真实数据</li>
+  <li>全程不讲概念，只讲能直接复用的方案</li>
+</ul>
+
+<h2 id="2-你的维护循环卡在哪三处">2. 你的维护循环，卡在哪三处</h2>
+
+<p>我们花了两周复盘，维护循环卡死，绝大多数情况不是 AI 不够用，而是卡在三个极其具体的地方。</p>
+
+<h3 id="第一处看不见错误散落没人聚合">第一处：看不见——错误散落，没人聚合</h3>
+
+<p>我们系统一周能产出 1000+ ERROR，散在三个日志库里。值班工程师打开控制台，一眼只能看到”热门”的几条，真正高频但低曝光的错误，往往三四天才被人发现。</p>
+
+<p>有一次某类错误从每天 50 条飙到 350 条，整整晚了 24 小时才有人注意到。</p>
+
+<p>自查方法很简单：如果你们的线上 ERROR 量突然翻 5 倍，团队多久能发现？超过 1 小时的，都算”看不见”。</p>
+
+<h3 id="第二处记不住经验锁死在对话里关窗就失忆">第二处：记不住——经验锁死在对话里，关窗就失忆</h3>
+
+<p>这个坑我们踩得最痛。</p>
+
+<p>有一次排查连接池超时花了整整一天——根因是某个方法设了 2 秒的激进超时值，修完写在 AI 对话里，第二次出同类问题照样从头来。</p>
+
+<p>AI 在对话窗口里推理得头头是道，但关掉窗口它就失忆了。没有任何东西把这次排查经验持久化下来，下次换个人值班，又是重新走一遍。</p>
+
+<p>自查：同一类问题出现第二次时，你们修得比第一次快吗？快不了，就是”记不住”。</p>
+
+<h3 id="第三处没闭环修复者给自己打分">第三处：没闭环——修复者给自己打分</h3>
+
+<p>这是最隐蔽的一个坑。</p>
+
+<p>有次 Agent 汇报”已修复”，点开代码一看——它把 logger.error 改成了 logger.warning。错误还在，只是不喊了。</p>
+
+<p>掩盖故障和合理降级，只有独立验证才能区分，不能让修复者自证。</p>
+
+<p>这三处断裂点，刚好对应三个本质缺失：看不见 = 缺自动发现；记不住 = 缺持久化；没闭环 = 缺独立验证。把这三个补上，维护循环才能真正自转起来。</p>
+
+<h2 id="3-loop-engineering维护循环工程化的四层进化">3. Loop Engineering：维护循环工程化的四层进化</h2>
+
+<p>在说怎么做之前，有必要说清楚，这套东西在 AI 工程化里处于哪个位置。</p>
+
+<p>我理解 AI 工程化走了四层楼：</p>
+
+<ul>
+  <li><strong>第一层 Prompt（2022）</strong>：告诉 AI”帮我查一下这个错误”，它能做一次，下次换个问题你还得再说一遍。</li>
+  <li><strong>第二层 Context（2025）</strong>：把日志、代码库、文档喂给它，分析更准了，但还是你问一句它答一句。</li>
+  <li><strong>第三层 Harness（2026 初）</strong>：给它 Shell、MCP 工具、Git 权限，它能自己查日志、改代码、跑测试——但每次都要你按启动键。</li>
+  <li><strong>第四层 Loop（2026.06）</strong>：把巡检规则、修复手册、验证标准全部写死，Agent 每天自己扫、自己修、自己验，你只在关键节点点一个”批准”。</li>
+</ul>
+
+<p>我们现在做的，就是第四层。</p>
+
+<p>有个认知很重要：跳级必翻车。2023 年 AutoGPT 火了一阵，就是直接从第一层跳到第四层，没有趁手工具、没有验证器、没有记忆，最后循环空转烧钱，没有落地。Loop 不是买一个产品就有的，是在前三层地基上垒出来的。</p>
+
+<h3 id="先算这三笔账再决定建不建">先算这三笔账，再决定建不建</h3>
+
+<p>建这套东西不是零成本，别头脑一热就冲。</p>
+
+<ul>
+  <li><strong>建设账</strong>：参考我们的经验，1 名有线上排障经验的高级工程师牵头，SRE 半个人配合，约 4 周工期。其中<strong>工具链建设（打通日志、追踪、发布）占总工作量 30%</strong>——这笔投入最容易被低估，我们前两周没有认真投入，后面一直在还债。</li>
+  <li><strong>运行账</strong>：大头是 Token 消耗。初期我们每次全量诊断烧 200K+ Token，一周就穿预算。后来改成分级策略：<strong>小模型先初筛（约 5K Token）→ 只有高优问题才调大模型深度诊断</strong>。同时加了两道熔断线：单次任务 Token 上限 + 月度总预算，超线自动停，不给循环烧穿钱的机会。</li>
+  <li><strong>收益账</strong>：拿值班人天算最直观。以前一轮排查 2-3 人天，还只能覆盖 Top3-5 类错误；现在 Agent 48 分钟跑完全量扫描，人只花 1 分钟点审批。按每周两轮算，<strong>一个月省 20 个人天以上</strong>。</li>
+</ul>
+
+<p>反例也说一下：一次性的架构评审（不重复）、目标模糊的用户体验优化（没有客观判据）——这两类条件缺失，就老老实实用 Harness 人工带着跑，别硬建 Loop。</p>
+
+<h2 id="4-五个动作六个零件loop-架构全景">4. 五个动作、六个零件：Loop 架构全景</h2>
+
+<p>Loop 转一圈，本质上是五个动作：</p>
+
+<p><strong>发现（找出该做的事） → 交付（隔离交给 Agent 执行） → 验证（换一个独立 Agent 说”不”） → 持久化（状态写到对话外） → 调度（到点自动触发下一圈）</strong></p>
+
+<p>少任何一个都不行。少”验证”，等于在批量生产假修复；少”调度”，整个循环就退化成一次性操作，你又变回那个每天手动按启动键的人。</p>
+
+<p>五个动作落到六个具体零件上：</p>
+
+<p>实施顺序不能乱：<strong>Connectors → Automations → Skills → Worktrees → Sub Agents → State</strong>。每一层依赖前一层，跳层必踩坑。</p>
+
+<h3 id="connectors先让-agent-看见线上世界">Connectors：先让 Agent 看见线上世界</h3>
+
+<p>这是整套体系最容易被低估的一步。</p>
+
+<p>Agent 默认只能看见本地文件系统，等于蒙着眼干活。没有 Connectors，后面所有零件都是空中楼阁。</p>
+
+<p>我们用 MCP 打通了六层数据接口：</p>
+
+<ul>
+  <li>数据访问（SLS 日志查询，7 个子命令）</li>
+  <li>模型追踪（Langfuse：调用链/Span/Token/耗时）</li>
+  <li>发布（三条 Pipeline 流水线）</li>
+  <li>通知（IM 机器人）</li>
+  <li>验证（Playwright 自动化）</li>
+  <li>基础设施（告警规则/采集配置，全部 YAML 声明式进 Git）</li>
+</ul>
+
+<p>核心能力是<strong>跨库串链路</strong>。以前值班工程师排查一个 ToolException 报错，要在三个控制台之间切换 30 分钟拼出完整链路；封装 trace 子命令后，<strong>一条指令串起全貌</strong>：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>$ sls trace --request-id=xxxxxxxx
+[prod] 08:12:03 DiagAgent 收到诊断请求 request_id=xxxxxxxx...
+[mcp_exec] 08:12:05 tool=listReportedOperationalEvents duration=8230ms status=failed
+[chain] 08:12:05 Java stackTrace: RemoteServiceImpl:XXX ExceptionGroup
+[prod] 08:12:05 ToolException → 未捕获，诊断中断
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>一眼看清：API 入口 → Agent 路由 → MCP 工具超时 → 远端 Java 抛错 → 我方缺 fallback。再配合 git log 交叉验证，能顺手判断这是新问题还是老毛病突然恶化。</p>
+
+<p><strong>验收标准只有一个</strong>：一条命令能查日志、串 trace、触发预发部署，中间不需要人切任何控制台。达不到这个标准，Connectors 就没建完，后续 Skill 写了也是残废。</p>
+
+<h2 id="5-skills把老师傅的经验写成不会遗忘的手册">5. Skills：把老师傅的经验写成不会遗忘的手册</h2>
+
+<p>很多人把 SKILL.md 当作”更长的 Prompt”，这是根本性误解。</p>
+
+<p>SKILL.md 是一份严格的操作手册，不是一段描述。每个阶段规定用什么工具、查什么数据、输出什么格式、哪些步骤不许跳过。规则不写死，Agent 一定偷懒——跳过趋势分析、不做交叉验证、看一条日志就下结论。带过实习生的人都懂这个道理。</p>
+
+<p>我们把整条链路固化成三个 Skill：</p>
+
+<h3 id="51-诊断-skill8-个-phase一步不许跳">5.1 诊断 Skill：8 个 Phase，一步不许跳</h3>
+
+<p>Phase 2 的 git log 交叉验证是精华——判断标准写死在 Skill 里，Agent 不能自由发挥：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre>git log --oneline --since="&lt;错误首次出现时间&gt;" -- &lt;相关目录&gt;
+- 首次出现 &lt;7 天，且有对应代码变更 → 新问题（优先排查最近提交）
+- 首次出现 &gt;14 天 → 长期问题（检查是否被其他修复掩盖）
+- 错误曲线突然突变 → 突发恶化（对比前后版本变更）
+- 消失后复现 → 回归（排查上次修复是否不彻底）
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Phase 6 的证据链格式，是把”Agent 拍脑袋”堵死的核心机制：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>[事实①] SLS 日志显示 tool=listReportedOperationalEvents 返回 ExceptionGroup
+   ↳ 证据来源：SLS error-lookup 结果第 3 条，request_id=xxxxxxxx...
+[事实②] Error message 包含 Java stackTrace: RemoteServiceImpl:855
+   ↳ 证据来源：traceback 中 ToolException 消息体
+[推理①] 远端 Java 服务在处理该 instanceId 时抛出内部异常
+   ↳ 依据：事实①② —— ExceptionGroup 嵌套了 Java stackTrace
+[结论] 根因是远端 Java 服务 Bug（一级责任），我方缺少 fallback（二级责任）
+   ↳ 分类：外部系统异常
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>每个结论必须标注证据来源，没有证据链的结论，一律打回重做。</p>
+
+<p><strong>根因分类六选一</strong>，每类对应明确的修复方向：</p>
+
+<p>最后一类要单独说：<strong>数据问题不让 Agent 修，直接转给人</strong>。知道什么不该自动化，和知道什么该自动化一样重要。</p>
+
+<h3 id="52-修复-skill先查知识库再动手">5.2 修复 Skill：先查知识库，再动手</h3>
+
+<p>诊断报告就是接口，修复 Skill 自动读取结构化报告接管后续，人不需要在中间传话：</p>
+
+<ul>
+  <li>Step 1 解析诊断报告（提取根因分类 + file:line + traceback）</li>
+  <li>Step 2 grep 知识库（命中 → 直接复用历史方案，跳到 Step 4）</li>
+  <li>Step 3 生成修复补丁（按根因分类选择修复模式）</li>
+  <li>Step 4 运行测试（先跑受影响模块，再跑全量 334 个 case）</li>
+  <li>Step 5 提交代码（创建 feature 分支 + push，<strong>禁止直推 master</strong>）</li>
+  <li>Step 6 触发部署验证（→ 进入发布 Skill）</li>
+</ul>
+
+<p>Step 2 是整套体系的复利飞轮。知识库现在积累了 30+ 条修复方案（YAML 格式）。连接池超时这类问题，第一次修复花 48 分钟，有知识库之后 <strong>15 分钟搞定</strong>。随着知识库积累，命中率越来越高，修复越来越快。</p>
+
+<p>修复原则写死三条：最小化改动、保持向后兼容、外部系统问题一律 try-except 包裹。</p>
+
+<p>测试不过就调整重跑，最多 3 轮，超过自动升级人工。这条限制很关键——成功率 95% 的事情连乘 N 次就归零，别让 Agent 在错误方向上无限重试，那只是在烧 Token。</p>
+
+<h3 id="53-发布-skill11-步到预发生产只留一个人工卡点">5.3 发布 Skill：11 步到预发，生产只留一个人工卡点</h3>
+
+<p>修复完成，11 个步骤一条命令触发：</p>
+
+<ul>
+  <li><strong>Step ⚠0 安全校验</strong>：仓库 + App ID + 仓库地址三重匹配，任一不符立即停止。防的是 Agent 把补丁提到别人家仓库——这种事真的会发生，不信你试试。</li>
+  <li><strong>Step 1-3</strong>：自动提交 feature 分支 → 创建 Code Review → 触发预发流水线。<strong>禁止直推 master/develop，MR 目标必须是 develop 分支</strong>。</li>
+  <li><strong>Step ⚠4 集成测试</strong>（最容易踩坑的地方）：必须指定 skill_names 聚焦测试范围，否则系统加载全量工具集，测试就失去焦点了。</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="rouge-code"><pre># 正确：聚焦测试受影响的 Skill
+curl -X POST "$BASE_URL/api/v1/chat" -d '{"skill_names": ["diagnose_cloud"], "query": "验证连接池超时修复"}'
+
+# 错误：不指定 skill_names，全量加载，测试漫无目的
+curl -X POST "$BASE_URL/api/v1/chat" -d '{"query": "验证连接池超时修复"}'
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<ul>
+  <li><strong>Step 5-8</strong>：Langfuse Trace 验证（0 ERROR + 正确模型 + Token 在上限内）→ 调用诊断 Skill 扫描预发环境（部署后不能有新增 ERROR 类型）→ 线上对比（Trace 对比预发 vs 线上，行为偏差则阻塞发布）→ 产出测试报告。</li>
+  <li><strong>Step 9-10</strong>：推送审批卡片到 IM 群（含业务价值描述 + MR 链接 + Trace 链接）→ 等待人工点”批准发布”。</li>
+</ul>
+
+<p>从发现问题到这里，<strong>人工介入次数：0 次</strong>。<strong>人唯一要做的事，是看完审批卡片，点一下”批准”</strong>。</p>
+
+<h2 id="6-sub-agents独立裁判堵死假修复">6. Sub Agents：独立裁判，堵死假修复</h2>
+
+<p>回到那个把 logger.error 改成 logger.warning 的案例。</p>
+
+<p>如果验证也由同一个 Agent 完成，它大概率会汇报”验证通过”。这不是模型能力问题，是<strong>设计问题——修复者永远不应该给自己打分</strong>。</p>
+
+<p>Sub Agents 的职责是做独立裁判：修复 Agent 提交补丁后，由一个全新启动的验证 Agent 来判断修复是否真实有效。我们配了 6 层验证：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="c1"># 验证 Agent 的六层检查（伪代码示意）
+</span><span class="k">def</span> <span class="nf">validate_fix</span><span class="p">(</span><span class="n">fix_report</span><span class="p">,</span> <span class="n">env</span><span class="o">=</span><span class="sh">"</span><span class="s">staging</span><span class="sh">"</span><span class="p">):</span>
+    <span class="n">checks</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="nf">check_unit_tests_pass</span><span class="p">(</span><span class="n">fix_report</span><span class="p">),</span>                  <span class="c1"># 单元测试全绿
+</span>        <span class="nf">check_no_new_errors</span><span class="p">(</span><span class="n">env</span><span class="p">),</span>                            <span class="c1"># 预发无新增 ERROR 类型
+</span>        <span class="nf">check_trace_normal</span><span class="p">(</span><span class="n">env</span><span class="p">),</span>                             <span class="c1"># Langfuse Trace 0 ERROR
+</span>        <span class="nf">check_log_level_not_downgraded</span><span class="p">(</span><span class="n">fix_report</span><span class="p">),</span>         <span class="c1"># 拦截日志降级假修复
+</span>        <span class="nf">check_backward_compatible</span><span class="p">(</span><span class="n">fix_report</span><span class="p">),</span>               <span class="c1"># 保持向后兼容性
+</span>        <span class="nf">compare_behavior</span><span class="p">(</span><span class="n">env</span><span class="p">,</span> <span class="sh">"</span><span class="s">production</span><span class="sh">"</span><span class="p">)</span>                  <span class="c1"># 预发 vs 线上行为一致
+</span>    <span class="p">]</span>
+    <span class="n">failed</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">checks</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">c</span><span class="p">.</span><span class="n">passed</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">failed</span><span class="p">:</span>
+        <span class="c1"># 验证不通过，打回修复 Agent 重做
+</span>        <span class="k">return</span> <span class="nc">ValidationResult</span><span class="p">(</span><span class="n">passed</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">failures</span><span class="o">=</span><span class="n">failed</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nc">ValidationResult</span><span class="p">(</span><span class="n">passed</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>这段逻辑做了一件事：<strong>把验证权从修复者手中移走，交给独立的裁判</strong>。假修复（如日志降级）能被第四层 check_log_level_not_downgraded 直接拦截。</p>
+
+<p>没有独立验证，自动化修复等于在批量生产假绿灯。</p>
+
+<h2 id="7-运行一个多月真实数据">7. 运行一个多月：真实数据</h2>
+
+<p>三个数字背后是同一条每天在跑的链路：一句指令，Agent 从 3 个日志库挖出 Bug → 诊断根因 → 生成补丁 → 跑完 334 条测试 → 提交 CR → 预发部署 → 集成验证 → 推送审批卡片。人只需要点一下”批准发布”。</p>
+
+<h2 id="8-四个教训这些坑我们踩了你不用再踩">8. 四个教训：这些坑我们踩了，你不用再踩</h2>
+
+<ul>
+  <li><strong>教训一：Connectors 建设工期要翻倍估算</strong>。我们前两周没有认真打工具链地基，用”先跑起来再说”的心态直接写 Skill，结果后面花了一倍时间补工具。记住：工具链建设占总工作量 30%，别低估。</li>
+  <li><strong>教训二：告警规则宁缺勿滥，5 条以内起步</strong>。刚开始为了”全覆盖”配了 15 条告警规则，IM 群消息刷屏，没人看，等于绕一圈回到”看不见”。<strong>收缩到 5 条高信噪比规则，严重故障才自动打语音电话</strong>，效果反而好很多。</li>
+  <li><strong>教训三：Token 消耗一定要分级控制</strong>。初期全量诊断烧 200K+ Token，一周就穿月度预算。分级策略（小模型初筛 5K + 大模型深度诊断按需调用）+ 预算熔断，<strong>运行成本降了 80%</strong>。</li>
+  <li><strong>教训四：不是所有问题都该自动化修复</strong>。<strong>数据类问题、安全类问题、涉及核心业务逻辑的修改，一律不让 Agent 自动修，转人工工单处理</strong>。知道边界，才能放心开放自动化权限。</li>
+</ul>
+
+<h2 id="9-结尾">9. 结尾</h2>
+
+<p>AI 写代码只是开始，维护循环才是真正的战场。</p>
+
+<p>2026 年很多团队已经用 AI 把研发速度拉满，但维护成本却在默默爬升——因为写代码的速度快了，上线之后出问题的频率也高了，维护循环还是靠人推。</p>
+
+<p>我的判断是：<strong>下一个工程化能力的分水岭，不在写代码的速度，而在维护循环能不能自己转</strong>。做到这件事的团队，会把那些还在手动拼日志的团队越甩越远。</p>
+
+<hr />
+
+<p><strong>备注</strong>：</p>
+<ul>
+  <li>公众号文末互动话题”你们现在有在跑自动化维护循环吗？卡在哪个断裂点？评论区聊聊”已剔除</li>
+  <li>“如果这篇对你有用，顺手转给正在被值班日志折磨的同事”已剔除</li>
+  <li>文中 4 处二级参考文献（GitHub Trending、AI 创业公司等汇总日链接）原文未列具体地址，已在清洗标注中剔除</li>
+  <li>代码示例（sls trace / curl POST / validate_fix 伪代码）完整保留；Agent 输出格式 <code class="language-plaintext highlighter-rouge">[事实①] [证据来源] [推理①] [结论]</code> 完整保留</li>
+  <li>6 层验证的具体检查项命名（check_log_level_not_downgraded 等）保留原文以备追溯</li>
+</ul>

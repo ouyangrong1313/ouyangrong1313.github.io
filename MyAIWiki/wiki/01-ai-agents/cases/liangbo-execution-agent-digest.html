@@ -1,0 +1,112 @@
+<h1 id="东方屹腾执行型-agent-从零到稳定交付---digest">东方屹腾：执行型 Agent 从零到稳定交付 - Digest</h1>
+
+<ul>
+  <li>原文链接：https://adpsagent.com/zh/cases/liangbo-execution-agent/</li>
+  <li>来源：ADPS 企业 Agent 系统蓝皮书 · 案例报告 01</li>
+  <li>发布日期：2026-07-13</li>
+  <li>获取时间：2026-07-17</li>
+</ul>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<p><strong>这篇案例把“执行型 Agent 为什么不能只靠 MCP + prompt”讲透了：真正决定能否稳定交付的，是 Orchestrator、任务 DAG、HITL、机械状态平面，以及叙事 / 机械 / 调度三权分立的会话状态设计。</strong></p>
+
+<h2 id="8-个知识节点速查">8 个知识节点速查</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>节点</th>
+      <th>一句话</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>执行型Agent分野</strong></td>
+      <td>执行型场景交付的是业务状态变化，不是内容文本</td>
+    </tr>
+    <tr>
+      <td><strong>控制叙事二元论</strong></td>
+      <td>控制信号要机械稳定，叙事上下文负责理解与推理</td>
+    </tr>
+    <tr>
+      <td><strong>Orchestrator意图网关</strong></td>
+      <td>所有能力统一挂载到编排器上，再由意图网关做路由</td>
+    </tr>
+    <tr>
+      <td><strong>ReAct到规划执行</strong></td>
+      <td>ReAct 负责灵活探索，规划执行负责严格顺序依赖</td>
+    </tr>
+    <tr>
+      <td><strong>HITL阻塞续作</strong></td>
+      <td>状态机到位后，人工审批与恢复续作自然长出来</td>
+    </tr>
+    <tr>
+      <td><strong>机械状态平面</strong></td>
+      <td>API 参数不再让模型猜，而是进入独立状态平面</td>
+    </tr>
+    <tr>
+      <td><strong>会话统一状态平面</strong></td>
+      <td>叙事 / 机械 / 调度三平面分别管理进展、参数和顺序</td>
+    </tr>
+    <tr>
+      <td><strong>锚账集与分层记忆</strong></td>
+      <td>锚保目标，账记里程碑，集做裁剪；L1/L2/L3 做跨步骤经验召回</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="5-个关键转折">5 个关键转折</h2>
+
+<ol>
+  <li><strong>先划清执行型 vs 内容型</strong>：不是所有 Agent 都该用同一套方法</li>
+  <li><strong>先锁定真痛点</strong>：从“薪资组快速搭建”而不是“AI 分析报表”起步</li>
+  <li><strong>先把不确定收敛成控制信号</strong>：控制 / 叙事二元论出现</li>
+  <li><strong>被 ReAct 漏步问题逼出 DAG 和状态机</strong>：规划执行与 HITL 接上主干</li>
+  <li><strong>被参数绑定问题逼出机械状态平面</strong>：系统第一次真正稳定</li>
+</ol>
+
+<h2 id="3-个迁移前提">3 个迁移前提</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>前提</th>
+      <th>不满足时会怎样</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>步骤之间有严格依赖</td>
+      <td>ReAct 足够，不一定要上任务图和状态机</td>
+    </tr>
+    <tr>
+      <td>参数错一位会直接失败或脏写</td>
+      <td>不需要机械状态平面，文本上下文可能就够</td>
+    </tr>
+    <tr>
+      <td>工具体系是封闭企业环境</td>
+      <td>状态键字典和参数坐标很难在启动时钉死</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="与已有文章的关联">与已有文章的关联</h2>
+
+<ul>
+  <li>[[01-ai-agents/未来属于垂直领域Agent]]：为什么企业 Agent 要更小、更专、更可控</li>
+  <li>[[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]]：任务拆解、数据契约、HITL checkpoint 的配套方法</li>
+  <li>[[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]]：高风险生产场景里的审批门、幂等性和状态治理</li>
+  <li>[[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]]：状态文件、DAG 和脚本化执行的对照案例</li>
+  <li>[[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：从产品视角补齐 Harness / Context / Skill 的解释层</li>
+  <li>[[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]：从理论原典补齐“模型重要性 = Harness 重要性”</li>
+</ul>
+
+<h2 id="4-个提醒">4 个提醒</h2>
+
+<ol>
+  <li><strong>不要让模型复制随机 id。</strong></li>
+  <li><strong>不要在严格事务流里只靠 prompt 管顺序。</strong></li>
+  <li><strong>不要把审批门后补成外挂逻辑。</strong></li>
+  <li><strong>不要把内容型任务的架构直接照搬到执行型场景。</strong></li>
+</ol>

@@ -1,0 +1,104 @@
+<h1 id="workbuddy-harness-工程复盘从模型到可用-agent速读摘要">WorkBuddy Harness 工程复盘：从模型到可用 Agent（速读摘要）</h1>
+
+<blockquote>
+  <p><strong>一句话</strong>：这篇文章把 Agent 产品从“模型 + prompt”拆回成完整工程系统：<strong>Function Call / MCP / Skill / Plugin 负责能力分层，Context / Memory 负责信息调度，Harness / Loop 负责执行控制与持续运行，业务验证缺口决定自治上限。</strong></p>
+</blockquote>
+
+<h2 id="速查表">速查表</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>维度</th>
+      <th>核心命题</th>
+      <th>关键结构</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>模型抽象</td>
+      <td>模型先看成无状态函数，状态和实时信息都在模型外维护</td>
+      <td>预训练 / 后训练 / 偏好优化</td>
+    </tr>
+    <tr>
+      <td>能力分层</td>
+      <td>Tool / MCP / Skill / Plugin 不是一回事</td>
+      <td>动作协议 / 外部接入 / 任务流程 / 能力打包</td>
+    </tr>
+    <tr>
+      <td>上下文工程</td>
+      <td>Context 不是堆 token，而是信息调度</td>
+      <td>Write / Select / Retrieve / Compress / Isolate</td>
+    </tr>
+    <tr>
+      <td>长期记忆</td>
+      <td>不是越记越好，而是决定谁有资格影响未来</td>
+      <td>5 类长期记忆 + 作用域分层</td>
+    </tr>
+    <tr>
+      <td>Harness</td>
+      <td>Harness = 驾驭 + 约束 + 整合</td>
+      <td>5 层 Harness 控制系统</td>
+    </tr>
+    <tr>
+      <td>Loop</td>
+      <td>Goal 不等于 Loop</td>
+      <td>8 个组件 + Trigger / Eval / Stop Condition</td>
+    </tr>
+    <tr>
+      <td>边界</td>
+      <td>业务正确性缺口仍然存在</td>
+      <td>4 个验证问题 + 自治度分级</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="10-节点速查">10 节点速查</h2>
+
+<ol>
+  <li><strong>无状态模型</strong> = 状态、记忆、实时信息都要在模型外维护</li>
+  <li><strong>工具调用协议</strong> = 模型提请求，Agent 真执行；权限和审计都在模型外</li>
+  <li><strong>MCP 三原语</strong> = Resources / Tools / Prompts</li>
+  <li><strong>SkillPlugin 分层</strong> = Tool 管动作，Skill 管流程，Plugin 管分发</li>
+  <li><strong>上下文五动作</strong> = Write / Select / Retrieve / Compress / Isolate</li>
+  <li><strong>长期记忆准入</strong> = 稳定事实 / 知识背景 / 行为信号 / 表达偏好 / 会话延续</li>
+  <li><strong>Harness 三能力</strong> = Steer / Constrain / Integrate</li>
+  <li><strong>五层 Harness</strong> = 运行环境 / 引导 / 反馈 / 编排 / 迭代</li>
+  <li><strong>Loop 组件</strong> = Trigger / Workspace / Skills / Tools / Sub-agents / Memory / Sensors / Stop Conditions</li>
+  <li><strong>业务验证缺口</strong> = 实现、测试和 PRD 可能共享同一个误解</li>
+</ol>
+
+<h2 id="5-个关键结构">5 个关键结构</h2>
+
+<ul>
+  <li><strong>5 个 Context 动作</strong>：Write / Select / Retrieve / Compress / Isolate</li>
+  <li><strong>3 个 MCP 原语</strong>：Resources / Tools / Prompts</li>
+  <li><strong>5 类长期记忆</strong>：稳定事实 / 知识背景 / 行为信号 / 表达偏好 / 会话延续</li>
+  <li><strong>5 层 Harness</strong>：运行环境 / 引导 / 反馈 / 编排 / 迭代</li>
+  <li><strong>8 个 Loop 组件</strong>：Trigger / Worktree / Skills / Tools / Sub-agents / Memory / Sensors / Stop Conditions</li>
+</ul>
+
+<h2 id="3-个反直觉点">3 个反直觉点</h2>
+
+<ul>
+  <li><strong>System Prompt 只能引导，不能强制</strong>：真正的权限校验、Sandbox、Approval Gate 都必须在模型外执行</li>
+  <li><strong>Procedural Memory 不应该直接进长期记忆</strong>：做事方法一旦以长期记忆注入，会把一次偶然有效的流程误升级成长期规则</li>
+  <li><strong>Goal 不等于 Loop</strong>：保存长期目标只是状态组件；真正的 Loop 还需要触发器、验证器、执行环境和停止条件</li>
+</ul>
+
+<h2 id="6-个对-seetong-团队可借鉴动作">6 个对 Seetong 团队可借鉴动作</h2>
+
+<ol>
+  <li><strong>统一词汇表</strong>：Tool / MCP / Skill / Plugin 的边界写成一页规则</li>
+  <li><strong>Context 五动作检查表</strong>：每个新 Skill 都过一遍 Write / Select / Retrieve / Compress / Isolate</li>
+  <li><strong>Memory 与 Skill 硬切分</strong>：用户事实进 Memory，稳定做法进 Skill</li>
+  <li><strong>Harness 先补反馈层</strong>：lint / build / test / review / E2E / rollback / audit 先补齐</li>
+  <li><strong>Loop 必须绑验证器</strong>：没有 eval 和 stop condition 的定时任务，不算可用 Loop</li>
+  <li><strong>先挑高 Harnessability 模块试点</strong>：优先做结构清晰、验证信号足、回滚成本低的模块</li>
+</ol>
+
+<h2 id="关联--备注">关联 + 备注</h2>
+
+<p><strong>关联</strong>：[[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] / [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] / [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] / [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[01-ai-agents/HarnessEngineering企业级实战]] / [[01-ai-agents/AI-团队协作-Loop-SDD]] / [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]</p>
+
+<p><strong>备注</strong>：这篇文章最强的是“解释层”和“结构层”，不是给出可直接复制的代码实现；业务正确性验证缺口被指出了，但没有给出成熟通解。</p>

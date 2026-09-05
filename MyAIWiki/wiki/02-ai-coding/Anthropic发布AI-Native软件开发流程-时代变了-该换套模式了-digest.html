@@ -1,0 +1,20 @@
+<h1 id="anthropic-ai-native-sdlc用版本化产物重构软件开发流程---速读">Anthropic AI-Native SDLC：用版本化产物重构软件开发流程 - 速读</h1>
+
+<blockquote>
+  <p>AI-Native SDLC 的单位不是一次代码生成，而是可审查、可版本化、可触发下一阶段的产物；人的责任从逐次确认编辑，转为审批意图、规格、计划、风险与发布。</p>
+</blockquote>
+
+<ul>
+  <li><strong>代码两侧瓶颈</strong>：实现提速后，规划、测试、审查和部署决定系统速度。</li>
+  <li><strong>提交产物</strong>：<code class="language-plaintext highlighter-rouge">intent.md → spec.md → plan.md → 代码/测试 → PR → 事故记录</code> 同时充当输入、交接和审计链。</li>
+  <li><strong>产物触发器</strong>：已审核产物启动下一门禁，线上异常又回流为新 intent。</li>
+  <li><strong>策略分层</strong>：Skill 管可变知识，Hook/CI 管不可违反的限制。</li>
+  <li><strong>受保护验证</strong>：让 Agent 自测，但不允许它通过修改测试来“证明”修复。</li>
+  <li><strong>人类门禁</strong>：人保留目标、风险、策略冲突和高影响发布决定。</li>
+</ul>
+
+<p>最小试点：选择一个高频流程，将阶段输出固化为一个版本化模板；先手工验证它能被下一阶段消费，再加入自动触发、Eval 和更长的自主会话。</p>
+
+<p>相关：[[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]、[[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]]、[[02-ai-coding/宝玉AI-我的AI原生开发流程-真实案例复盘]]。</p>
+
+<p>证据边界：为 Founder Park 的二手编译，Anthropic 的日期、流程与示例未独立核验。</p>

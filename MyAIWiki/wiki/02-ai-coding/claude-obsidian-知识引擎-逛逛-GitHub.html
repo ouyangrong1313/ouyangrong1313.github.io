@@ -1,0 +1,211 @@
+<h1 id="claude-obsidian-知识引擎7200-star-项目实践">claude-obsidian 知识引擎（7200 Star 项目实践）</h1>
+
+<h2 id="核心结论">核心结论</h2>
+
+<p><code class="language-plaintext highlighter-rouge">claude-obsidian</code> 是对 Karpathy LLM Wiki 思想最完整的工程实现：把任何来源（网页/PDF/代码/聊天/视频笔记）丢进 <code class="language-plaintext highlighter-rouge">.raw/</code> 目录，Claude 自动读完、建实体页、概念页、来源页、双向交叉引用，<strong>矛盾检测 + 会话记忆 + 8 类健康检查</strong>全部内建。本地纯 Markdown 自托管，零订阅、零云端、零数据库。</p>
+
+<p>作者原话：<strong>“compounding knowledge，知识复利”</strong> —— 每一份资料丢进去都被整合进现有网络，越用越值钱，越问越聪明。</p>
+
+<h2 id="分类提炼">分类提炼</h2>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><strong>场景</strong>：AI Coding 工作流</td>
+          <td>个人知识管理</td>
+          <td>开源工具实战</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li><strong>标签</strong>： #主题/AI知识库 #主题/Obsidian #主题/ClaudeCode #主题/第二大脑</li>
+  <li><strong>类型</strong>：实操指南 + 开源项目介绍</li>
+  <li><strong>来源</strong>：微信公众号「逛逛 GitHub」2026-06-23</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td><strong>关联</strong>：[[02-ai-coding/claude-obsidian-second-brain]]</td>
+          <td>[[03-productivity/obsidian-claude-code-os]]</td>
+          <td>[[01-ai-agents/hermes-obsidian-llm-wiki-knowledge-base]]</td>
+          <td>[[01-ai-agents/deep-analysis-llm-wiki-obsidian-wiki-gbrain]]</td>
+          <td>[[07-rag-systems/如何使用AI打造智能高效省Token的AI知识库-LLM-Wiki-Skill设计详解]]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<h2 id="要点列表">要点列表</h2>
+
+<h3 id="项目定位">项目定位</h3>
+
+<ul>
+  <li>不是「AI 笔记插件」，是<strong>「知识引擎」</strong></li>
+  <li>心智模型：compounding knowledge（知识复利）</li>
+  <li>7200+ Star，GitHub: <code class="language-plaintext highlighter-rouge">AgriciDaniel/claude-obsidian</code></li>
+  <li>底子就是 Karpathy 2026 年 4 月的 LLM Wiki gist</li>
+</ul>
+
+<h3 id="6-大核心能力">6 大核心能力</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>能力</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>自动整理笔记</strong></td>
+      <td>自动建实体页（人物/机构/项目）、概念页（理论/模式/方法）、来源页（原始材料）+ 双向交叉引用</td>
+    </tr>
+    <tr>
+      <td><strong>矛盾检测</strong></td>
+      <td>笔记里互相冲突的论点自动发现，标出来并附上来源</td>
+    </tr>
+    <tr>
+      <td><strong>会话记忆</strong></td>
+      <td>每次会话结束自动更新 <code class="language-plaintext highlighter-rouge">hot.md</code>，下次开局不用从头交代背景</td>
+    </tr>
+    <tr>
+      <td><strong>8 类健康检查</strong></td>
+      <td>孤儿笔记、死链、过期声明、缺失引用全列出，wiki 自己保持健康</td>
+    </tr>
+    <tr>
+      <td><strong>可视化画布</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">/canvas</code> 命令，符合 Obsidian JSON Canvas 1.0 规范</td>
+    </tr>
+    <tr>
+      <td><strong>数据完全自主</strong></td>
+      <td>全是本地 plain Markdown，无数据库、无云端、无订阅费</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="两种安装方式">两种安装方式</h3>
+
+<p><strong>方式 1：git clone 仓库（推荐）</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre>git clone https://github.com/AgriciDaniel/claude-obsidian
+<span class="nb">cd </span>claude-obsidian
+bash bin/setup-vault.sh
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>然后用 Obsidian 打开这个文件夹，开 Claude Code 进同一目录，输入 <code class="language-plaintext highlighter-rouge">/wiki</code>，AI 一步步带你跑起来。setup-vault.sh 自动配好 graph view 颜色、过滤规则、CSS snippet。</p>
+
+<p><strong>方式 2：作为 Claude Code plugin 安装</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>claude plugin marketplace add AgriciDaniel/claude-obsidian
+claude plugin <span class="nb">install </span>claude-obsidian@agricidaniel-claude-obsidian
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>安装完会自动创建 <code class="language-plaintext highlighter-rouge">claude-obsidian</code> 文件夹，Obsidian 打开、信任仓库、启用插件即可。</p>
+
+<h3 id="4-个预装插件">4 个预装插件</h3>
+
+<ul>
+  <li><strong>Calenda</strong>：右侧月历视图，每天显示字数和未完成任务，回看笔记产出节奏</li>
+  <li><strong>Thino</strong>：类 flomo 的快速备忘录，速记可批量 ingest 进 wiki</li>
+  <li><strong>Excalidraw</strong>：内嵌手绘画布，画流程图、白板、图片标注</li>
+  <li><strong>Banners</strong>：笔记顶部加 header 图，类 Notion cover</li>
+</ul>
+
+<h3 id="5-个日常核心动作">5 个日常核心动作</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>动作</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>丢</strong></td>
+      <td>把资料丢 <code class="language-plaintext highlighter-rouge">.raw/</code>，说”吸收一下这些知识”</td>
+    </tr>
+    <tr>
+      <td><strong>问</strong></td>
+      <td>直接问”你对 X 怎么看？”，按 hot.md → index.md → 具体页面 顺序读</td>
+    </tr>
+    <tr>
+      <td><strong>lint</strong></td>
+      <td>一句 “lint 一下”，8 类问题自动列出</td>
+    </tr>
+    <tr>
+      <td><strong>画</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">/canvas</code> 命令打开画布，做思维地图</td>
+    </tr>
+    <tr>
+      <td><strong>复用</strong></td>
+      <td>在任何 Claude Code 项目的 <code class="language-plaintext highlighter-rouge">CLAUDE.md</code> 加引导，跨项目共享 vault</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="与同类方案的对比">与同类方案的对比</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>维度</th>
+      <th>claude-obsidian（本文）</th>
+      <th>claude-obsidian-second-brain（X / Defileo）</th>
+      <th>obsidian-claude-code-os（X / 梓哲）</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>来源</td>
+      <td>微信公众号逛逛 GitHub</td>
+      <td>X 推文</td>
+      <td>X 推文</td>
+    </tr>
+    <tr>
+      <td>视角</td>
+      <td>开源项目实操介绍</td>
+      <td>个人 daily setup</td>
+      <td>三层大脑架构</td>
+    </tr>
+    <tr>
+      <td>安装</td>
+      <td>git clone 或 plugin</td>
+      <td>自定义 setup</td>
+      <td>自定义 setup</td>
+    </tr>
+    <tr>
+      <td>亮点</td>
+      <td>8 类健康检查、矛盾检测、可视化 canvas</td>
+      <td>“每天开机 Claude 已知道一切”</td>
+      <td>底层/中层/顶层职责分层</td>
+    </tr>
+    <tr>
+      <td>Star</td>
+      <td>7200+</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="关键链接">关键链接</h2>
+
+<ul>
+  <li><a href="https://github.com/AgriciDaniel/claude-obsidian">GitHub: AgriciDaniel/claude-obsidian</a></li>
+  <li><a href="https://agricidaniel.com/blog/claude-obsidian-ai-second-brain">作者博客深度文</a></li>
+  <li><a href="https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f">Karpathy 原始 LLM Wiki gist</a></li>
+  <li><a href="https://mp.weixin.qq.com/s/kV7eDR0SxbhiYViT90GDiA">微信公众号原文</a></li>
+</ul>
+
+<hr />
+
+<p>标签： #主题/AI知识库 #主题/Obsidian #主题/ClaudeCode #主题/第二大脑 #主题/开源项目 #手法/产品种草 #手法/权威背书 #手法/工具安利 #场景/公众号长文 #场景/开源项目</p>
