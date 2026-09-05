@@ -1,0 +1,83 @@
+---
+title: 从 Harness 杀到 Ontology：Graph Engineering 开始重构 Agent 系统
+category: 01-ai-agents
+tags:
+  - 主题/AI-Agent
+  - 主题/Graph-Engineering
+  - 主题/Harness工程
+  - 主题/运行时状态
+  - 主题/Agent-OS
+  - 主题/本体工程
+  - 场景/公众号长文
+nodes: [系统智能, 任务组织, 动态任务图, 运行时状态, 提议验证提交, 故障恢复, 能力路由, 图生Agent-OS]
+links: [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]], [[01-ai-agents/储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]], [[01-ai-agents/2026-07-29-人月聊IT-通用AI-Agent平台-Harness技术底座]]
+date: 2026-09-05
+source: 微信公众号「DataFunTalk」
+---
+
+# 从 Harness 杀到 Ontology：Graph Engineering 开始重构 Agent 系统
+
+- 原文链接：https://mp.weixin.qq.com/s/qLlAUiVI1MFZ4PWiupXQwg
+- 作者：DataFunTalk
+- 发布：2026-09-04 13:00
+- 获取时间：2026-09-05
+- 清理：已去除非正文推广与互动文本。
+
+## 核心结论（一句话）
+
+> Graph Engineering 的增量不在于把 Agent 流程画成图，而在于让任务、能力、运行时状态、证据、权限和恢复成为带类型与版本的一等系统对象，由控制面而非单个 Agent 上下文负责治理。
+
+## 分类提炼
+
+- 场景：长程 Agent、多 Agent 编排、企业工作流、Agent Runtime
+- 类型：研究综述解读与系统架构方法论
+- 标签： #主题/AI-Agent #主题/Graph-Engineering #主题/Harness工程 #主题/运行时状态 #主题/Agent-OS #主题/本体工程 #场景/公众号长文
+
+## 知识节点
+
+- **系统智能**：复杂任务的可靠性来自组件组织能力，而非单 Agent 能力持续堆叠。
+- **任务组织**：依赖、并发、验证与动态重规划应以运行时可操作的任务图表示。
+- **动态任务图**：模型可提出或修改结构，但调度与约束仍由系统运行时执行。
+- **运行时状态**：进度、共享事实、资源变化与外部副作用需要一致、可追溯的记录。
+- **提议验证提交**：Agent 输出先作为候选变化，验证后才进入权威共享状态。
+- **故障恢复**：恢复必须区分可撤销状态、可重放计算和只能补偿的外部副作用。
+- **能力路由**：调度依据应是技能、权限、成本、资源和可靠性等属性，而非静态角色名。
+- **图生Agent-OS**：任务、Agent、能力与状态被统一为类型化、版本化图，形成控制面基础。
+
+## 关联图谱
+
+### 上游（基于 / 来自）
+
+- [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]]：该页通过真实数据依赖定义节点和边，本文将讨论推进到图级状态、事务和恢复。
+- [[01-ai-agents/储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]]：Prompt、Context、Harness、Agent OS 的演进，为本文控制面和状态治理提供系统分层。
+
+### 下游（应用于 / 验证于）
+
+- [[01-ai-agents/2026-07-29-人月聊IT-通用AI-Agent平台-Harness技术底座]]：平台的会话快照、异步任务、多 Agent 隔离与全链路追踪，可承接运行时状态与能力路由。
+
+### 同级（横向 / 并列）
+
+- [[01-ai-agents/叶小钗-Agent-Loop-vs-Graph-Engineering]]：该页关注图的准入与复杂度成本；本文补充在图已成立后如何治理状态、权限和恢复。
+- [[01-ai-agents/2026-08-04-深思SenseAI-Graph-Engineering-AI工作流从聊天窗口搬进有向图之后]]：该页以职责分离和人工关卡解释图工作流，本文侧重运行时与控制面。
+
+## 正文要点
+
+1. Agent 能力演进从模型本身走向 Harness、Loop，再走向多个组件的系统组织。复杂任务不应继续压入单一 Loop，否则会遭遇上下文争用、串行化、状态污染和不可恢复的局部失败。
+2. Task Organization 将计划外化为动态任务图。节点和边不仅描述顺序，也用于表达数据依赖、并行条件、验证约束与重规划空间；模型负责生成或调整结构，运行时负责调度和控制。
+3. Runtime State 超出 Memory：需要记录任务进度、共享事实、资源变化、外部副作用、证据、来源和版本。共享状态应遵循提议、验证、提交，避免把未经验证的模型输出当成权威事实。
+4. 故障定位要求保留 Actor、Transition、Dependency 和验证证据；恢复要求明确检查点、语义有效边界、重放、回滚和不可逆动作的补偿机制。
+5. Agent Coordination 应将能力、工具访问、底层模型、权限、成本、资源和可靠性显式化。团队拓扑可链式、路由式、并行聚合或动态重构，但通信数量需要受信息价值和错误传播风险约束。
+6. Graph-Native Agent OS 是将 Task、Agent、Capability 与 Runtime State 统一为图对象的方向。其价值在于让调度、权限、可观测性、状态存储和恢复成为共享基础设施，而不是在每个 Agent 框架中重复实现。
+7. Ontology Engineering 提供任务完成、证据充分、状态有效和权限合法的共享语义；系统自演化则必须由来源、版本、验证、回放和回滚约束，不能让模型自行修改权威规则。
+
+## 备注
+
+- 本文是对 Feng 等人综述的二手解读。列举的论文、系统和机制未逐项独立复现。
+- Graph-Native Agent OS 和 Ontology Engineering 仍属研究和架构方向，不应被当作统一行业标准或可直接采购的成品方案。
+
+## 相关链接
+
+- [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]]
+- [[01-ai-agents/储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]]
+- [[01-ai-agents/2026-07-29-人月聊IT-通用AI-Agent平台-Harness技术底座]]
+- [[01-ai-agents/叶小钗-Agent-Loop-vs-Graph-Engineering]]

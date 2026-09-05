@@ -1,5 +1,14 @@
 # AI Agents Wiki
 
+- [[01-ai-agents/AI启蒙小伙伴-Grok-Bot产品最佳实践]] - Grok Bot 工作坊：以 Chief of Staff、PM、分析、设计和工程 Bot 组织研究到交付；注意力清单、例程、引用、账号边界和人工审批共同决定可用性。
+
+## Graph Engineering：从任务图走向运行时控制面（2026-09-05 新增）
+
+> **微信公众号「DataFunTalk」2026-09-04，解读 Feng 等人综述**：Graph Engineering 的重点不是增加 Agent 数量，而是将任务、能力、运行时状态、证据、权限与恢复做成显式、动态、可演化的系统图；Graph-Native Agent OS 因而更像面向 Agent 的控制面。文中研究与系统主张均为二手转述，未独立复现。
+
+- [[01-ai-agents/DataFunTalk-Graph-Engineering-从Harness到Ontology]] - **核心命题**“复杂 Agent 的可靠性来自任务组织、能力路由、状态事务与故障恢复等系统能力，而非继续堆叠单 Agent 上下文或工具”；**8 节点**（系统智能 / 任务组织 / 动态任务图 / 运行时状态 / 提议验证提交 / 故障恢复 / 能力路由 / 图生Agent-OS）；与 [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]]、[[01-ai-agents/储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]]、[[01-ai-agents/2026-07-29-人月聊IT-通用AI-Agent平台-Harness技术底座]] 强关联。
+- [拆解](../../raw/DataFunTalk-Graph-Engineering-从Harness到Ontology-digest.md) - 5 个核心观点、7 个分析角度、21 个开头钩子、最小实践与证据边界；已删除原文广告与引流内容。
+
 ## Warp：双 Skill 将反馈转成可审查的 Agent 改进（2026-09-01 新增）
 
 > **微信公众号「Datawhale」2026-08-31；Warp CEO 在 Anthropic Claude Blog 的客户案例**：让 base skill 执行具体任务，improver skill 周期性读取带理由的人类反馈、提出最小 Skill PR；人工 review 与验证决定该经验是否成为下一轮默认行为。

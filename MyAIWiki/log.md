@@ -2,6 +2,42 @@
 
 时间序变更记录。格式：`## [日期] 操作 | 标题`
 
+## 2026-09-05
+### ingest | Grok Bot 产品最佳实践：用一支 Bot 团队完成研究、PRD、设计与交付
+
+- 来源：https://mp.weixin.qq.com/s/E72_5lA1OfZrvL_oc_ei8g；写入 raw、digest、`wiki/01-ai-agents/AI启蒙小伙伴-Grok-Bot产品最佳实践.md` 并更新索引。
+### ingest | 为什么超级个体不需要超级团队？
+
+- 来源：微信公众号「互联网AI早读课」转载「腾讯研究院」；作者王焕超；发布时间 2026-09-05 08:03；原文：https://mp.weixin.qq.com/s/-WW22cuIow-eIpPwGvC9YQ。
+- 写入：`raw/互联网AI早读课-为什么超级个体不需要超级团队.md`、`raw/互联网AI早读课-为什么超级个体不需要超级团队-digest.md`、`wiki/03-productivity/互联网AI早读课-为什么超级个体不需要超级团队.md`；更新 `wiki/03-productivity/index.md` 与 `wiki/master-index.md`。
+- 核心命题：AI 可补足执行能力，却不会自动消除协调损失；组织应区分判断 owner、执行编队、验证与制衡，而非将强个体简单相加。
+- 证据边界：本文为观点文章，理论、历史、影视案例和 AI 推论未逐项独立核验；不应用于否定必须多方制衡和高可靠协作的场景。
+
+### ingest | 层层剥开“真需求”：梁宁给管理者的五堂清醒课
+
+- 来源：微信公众号「华夏基石e洞察」转载「总裁读书会」；作者李莹；发布时间 2026-09-05 09:09；原文：https://mp.weixin.qq.com/s/pkhBnItyGIiA7hpSIoMrfw。
+- 写入：`raw/华夏基石e洞察-梁宁-真需求五堂清醒课.md`、`raw/华夏基石e洞察-梁宁-真需求五堂清醒课-digest.md`、`wiki/03-productivity/华夏基石e洞察-梁宁-真需求五堂清醒课.md`；更新 `wiki/03-productivity/index.md` 与 `wiki/master-index.md`。
+- 核心命题：真需求需要真实付费和持续行为验证；企业以价值、共识、模式组织交换关系，并以失败反馈校正主观假设。
+- 关联：[[03-productivity/领教工坊-不要想象客户要成为客户]]、[[03-productivity/HBR-China-5个反直觉创新原则]]、[[03-productivity/笔记侠-老贾-禅与摩托车维修艺术与乔布斯产品哲学]]、[[03-productivity/HBR-China-AI放大个体生产力-团队协作发力点]]。
+- 证据边界：本文是公众号对梁宁《真需求》的二手解读；案例、人物、数据和引语未逐项独立核验，框架不替代具体市场、成本、合规和竞争研究。
+
+### ingest | 从 Harness 杀到 Ontology：Graph Engineering 开始重构 Agent 系统
+
+- 来源：微信公众号「DataFunTalk」；作者 DataFunTalk；发布时间 2026-09-04 13:00；原文：https://mp.weixin.qq.com/s/qLlAUiVI1MFZ4PWiupXQwg。
+- 写入：`raw/DataFunTalk-Graph-Engineering-从Harness到Ontology.md`、`raw/DataFunTalk-Graph-Engineering-从Harness到Ontology-digest.md`、`wiki/01-ai-agents/DataFunTalk-Graph-Engineering-从Harness到Ontology.md`；更新 `wiki/01-ai-agents/index.md` 与 `wiki/master-index.md`。
+- 广告处理：删除三段重复的 DACon 会议推广、扫码引流、往期推荐和互动文案；不保留广告中声称的会期、分论坛、案例数量或活动信息。
+- 核心命题：将任务、能力、运行时状态、证据、权限和恢复表示为显式图对象，才能为多 Agent 系统提供调度、事务、故障定位、恢复与可观测性等控制面能力。
+- 关联：[[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]]、[[01-ai-agents/储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]]、[[01-ai-agents/2026-07-29-人月聊IT-通用AI-Agent平台-Harness技术底座]]、[[01-ai-agents/叶小钗-Agent-Loop-vs-Graph-Engineering]]。
+- 证据边界：本文为公众号对 Feng 等人综述的二手解读；论文、系统与机制未逐项独立复现，Graph-Native Agent OS 和 Ontology Engineering 不是现成统一标准。
+
+### ingest | 不要“想象客户”，要去“成为客户”
+
+- 来源：微信公众号「领教工坊」；作者吉姆·柯林斯等，文中署名吉姆·柯林斯、比尔·拉齐尔；发布时间 2026-09-04；原文：https://mp.weixin.qq.com/s/beDqqiSGYuYREvpamwU50g。
+- 写入：`raw/领教工坊-不要想象客户要成为客户.md`、`raw/领教工坊-不要想象客户要成为客户-digest.md`、`wiki/03-productivity/领教工坊-不要想象客户要成为客户.md`；更新 `wiki/03-productivity/index.md` 与 `wiki/master-index.md`。
+- 核心命题：不要将抽象用户想象当作需求证据；以自身痛点或具体客户任务形成假设，通过现场观察、一线反馈和研发响应发现并验证真实问题。
+- 关联：[[03-productivity/HBR-China-5个反直觉创新原则]]、[[03-productivity/HBR-China-AI放大个体生产力-团队协作发力点]]、[[03-productivity/笔记侠-老贾-禅与摩托车维修艺术与乔布斯产品哲学]]、[[03-productivity/笔记侠-老贾-金刚经与贝佐斯思考方式]]。
+- 证据边界：本文为《卓越基因》节选；案例、历史、企业机制和引语均为公众号转述，未独立核验。自用体验与单客户案例不能直接外推为市场规模或普遍结论。
+
 ## 2026-09-02
 ### ingest | 库克的苹果：运营、生态加厚与继任领导
 
