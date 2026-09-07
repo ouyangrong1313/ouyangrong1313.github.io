@@ -1,5 +1,26 @@
 # AI Agents Wiki
 
+## Agent 循环：人负责选山、回写经验与发现价值（2026-09-07 新增）
+
+> **微信公众号「晚点再听LaterCast」Capihom，整理 Lenny's Podcast 对话 a16z 合伙人 Anish Acharya，2026-09-06**：Agent 循环可在明确目标下执行、验证、审批并持续优化；人仍负责选择目标、跳出局部最优、设定风险和价值尺度、将人工教练介入沉淀为可复用经验。案例、数字与引语均为二手转述，未独立核验。
+
+- [[01-ai-agents/LaterCast-a16z-Anish-Acharya-Agent循环与人类判断]] - **核心命题**“循环擅长爬已选的山，人负责选山、判定平台期、调整约束与目标、把人工介入回写为下一轮系统能力”；**9 节点**（两层AI采用 / 可审查循环 / 局部最优平台 / 目标换山 / 教练式回写 / 价值驱动品鉴 / 消费价值 / 发现式护城河 / 项目化试用）；与 [[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]、[[01-ai-agents/源泉TheFountainhead-从GUI到AI-Native-产品接目标界面换职责]]、[[01-ai-agents/Datawhale-Warp-CEO-Claude自我改进Agent]]、[[03-productivity/宝玉AI-AI原生思维-像训练大模型一样训练自己]] 强关联。
+- [拆解](../../raw/LaterCast-a16z-Anish-Acharya-Agent循环与人类判断-digest.md) - 5 个核心观点、7 个分析角度、21 个开头钩子、最小实践与证据边界。
+
+## TiDB：用数据库可靠性做厚 Agent 控制面（2026-09-07 新增）
+
+> **微信公众号「InfoQ」Tina 对话 TiDB 唐刘，2026-09-06**：将变化快的 Agent Loop 置于可替换层，把 Workspace、权限、状态、副作用、证据、隔离与 Failover 置于稳定 Control Plane；多 Agent 默认依赖隔离状态和清晰 I/O，少用高频通信。架构与规模均为受访方自述，未独立复现。
+
+- [[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]] - **核心命题**“生产 Agent 的可靠性不靠加厚单一 Loop，而靠独立的 Control Plane 治理持久 Workspace、权限、验证、错误传播和可信恢复”；**9 节点**（薄Agent-Loop / 厚Control-Plane / 持久Workspace / 外部不变量 / 声明式目标 / 版本化并行探索 / 通信即复杂度 / Fail-Fast / 可信恢复）；与 [[01-ai-agents/DataFunTalk-Graph-Engineering-从Harness到Ontology]]、[[01-ai-agents/lencx-Agent开发指南-技术太多-该怎么学]]、[[01-ai-agents/2026-07-29-人月聊IT-通用AI-Agent平台-Harness技术底座]]、[[01-ai-agents/源泉TheFountainhead-从GUI到AI-Native-产品接目标界面换职责]] 强关联。
+- [拆解](../../raw/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness-digest.md) - 5 个核心观点、7 个分析角度、21 个开头钩子、最小实践与证据边界。
+
+## AI Native 产品：从操作面板转向控制面（2026-09-07 新增）
+
+> **微信公众号「源泉TheFountainhead」巫師Sorcerer，2026-08-31**：AI Native 的关键不是聊天入口，而是将目标、意图校准、计划、授权、行动回执、结果追踪和人工接管做成可见的任务回路；GUI 随之从操作面板转为控制面。案例为作者叙述，未独立核验。
+
+- [[01-ai-agents/源泉TheFountainhead-从GUI到AI-Native-产品接目标界面换职责]] - **核心命题**“动作型 AI 产品应在受约束的目标契约下理解、规划、行动并以外部证据验收；界面负责状态、审查、授权、编辑与接管”；**9 节点**（目标契约 / 意图校准 / 持续协作 / 三层结果 / 角色能力权限 / 状态记忆分离 / 恢复与接管 / 自治分级 / 控制面）；与 [[01-ai-agents/若飞-Agent如何理解业务-把对象-状态和权限接进执行流程]]、[[01-ai-agents/lencx-Agent开发指南-技术太多-该怎么学]]、[[01-ai-agents/phodal-面向人机交互设计Harness-产物中心Agent-Loop]]、[[06-ai-tech/腾讯研究院-兰小欢-AI责任权力与验证]] 强关联。
+- [拆解](../../raw/源泉TheFountainhead-从GUI到AI-Native-产品接目标界面换职责-digest.md) - 5 个核心观点、7 个分析角度、21 个开头钩子、最小实践与证据边界。
+
 - [[01-ai-agents/AI启蒙小伙伴-Grok-Bot产品最佳实践]] - Grok Bot 工作坊：以 Chief of Staff、PM、分析、设计和工程 Bot 组织研究到交付；注意力清单、例程、引用、账号边界和人工审批共同决定可用性。
 
 ## Graph Engineering：从任务图走向运行时控制面（2026-09-05 新增）

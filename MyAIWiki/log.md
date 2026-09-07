@@ -2,6 +2,63 @@
 
 时间序变更记录。格式：`## [日期] 操作 | 标题`
 
+## 2026-09-07
+### ingest | a16z 合伙人：当 AI 能让业务自己跑起来，人该做什么？
+
+- 来源：微信公众号「晚点再听LaterCast」；作者 Capihom；原始内容 Lenny's Podcast 对话 Anish Acharya；发布时间 2026-09-06 22:42；原文：https://mp.weixin.qq.com/s/JUpQ7nrMqS5oFJzRK2K99g。
+- 写入：`raw/LaterCast-a16z-Anish-Acharya-Agent循环与人类判断.md`、`raw/LaterCast-a16z-Anish-Acharya-Agent循环与人类判断-digest.md`、`wiki/01-ai-agents/LaterCast-a16z-Anish-Acharya-Agent循环与人类判断.md`；更新 `wiki/01-ai-agents/index.md` 与 `wiki/master-index.md`。
+- 核心命题：循环可连续执行、验证和优化既定目标；人负责选择目标、发现局部最优、设定风险/价值尺度，并将人工教练介入回写为可复用经验。模型选择应结合任务价值、成本、风险与实际项目体验。
+- 关联：[[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]、[[01-ai-agents/源泉TheFountainhead-从GUI到AI-Native-产品接目标界面换职责]]、[[01-ai-agents/Datawhale-Warp-CEO-Claude自我改进Agent]]、[[03-productivity/宝玉AI-AI原生思维-像训练大模型一样训练自己]]。
+- 证据边界：公司、培训、效率、模型、产品、护城河与个人项目案例均来自播客/公众号二手转述，未独立核验；不将局部最优、模型选型或自动化权限视为脱离真实数据、用户研究、合规和风险分析的实施结论。
+
+### ingest | 陶哲轩：效率留白与 AI 学习
+
+- 来源：微信公众号「蓝橡树」；作者 Claire克莱因；发布时间 2026-09-07 07:30；原文：https://mp.weixin.qq.com/s/LaZgL8y8YzoEh8RIzeRDfg。
+- 写入：`raw/蓝橡树-陶哲轩-效率留白与AI学习.md`、`raw/蓝橡树-陶哲轩-效率留白与AI学习-digest.md`、`wiki/03-productivity/蓝橡树-陶哲轩-效率留白与AI学习.md`；更新 `wiki/03-productivity/index.md` 与 `wiki/master-index.md`。
+- 核心命题：AI 可提升任务表现，不能替理解、内化、检索、解释、迁移和自主选择；通过先独立尝试、后辅助反馈、再关闭辅助迁移检查，保留生产性困难和探索留白，同时消除伤害性障碍。
+- 关联：[[03-productivity/Capihom-Tom-Yeh-AI时代慢学习与学习能力]]、[[03-productivity/BillionWrites-特斯拉自学方法-战略性无聊-项目化-视觉化]]、[[03-productivity/宝玉AI-AI原生思维-像训练大模型一样训练自己]]、[[06-ai-tech/经纬创投-李飞飞-当答案变得廉价]]。
+- 证据边界：陶哲轩故事、智商、引语、学习科学结论与 PNAS 实验数字均为文章转述，未独立核验；不将留白、困难或 AI 辅助作为脱离学习目标、反馈质量与风险等级的通用处方。
+
+### ingest | 为什么我们仍然需要认真写下自己的想法？
+
+- 来源：微信公众号「AlphaWriter」；作者陆甲第；发布时间 2026-09-06 20:37；原文：https://mp.weixin.qq.com/s/De41kOyf8OLqHieuG5QeUQ。
+- 写入：`raw/AlphaWriter-为什么仍要认真写下自己的想法.md`、`raw/AlphaWriter-为什么仍要认真写下自己的想法-digest.md`、`wiki/05-content-creation/AlphaWriter-为什么仍要认真写下自己的想法.md`；更新 `wiki/05-content-creation/index.md` 与 `wiki/master-index.md`。
+- 核心命题：未寄出的信让表达先于行动；以具体化追问、抄写接续、个人连接和修订留存，让情绪、经历、阅读反应和不成熟想法逐步形成可继续的个人声音。
+- 关联：[[05-content-creation/写作-会让一个人重新获得生活的力量]]、[[05-content-creation/AlphaWriter-Tiago-Forte-写作与知识管理]]、[[05-content-creation/透明玻璃-写作的最高境界]]、[[05-content-creation/David-Perell-Pixar-Stanton-创造哲学]]。
+- 证据边界：《写信人》、Virginia Evans、林肯未寄信与罗琳演讲均为文章转述，未独立核验；书写不替代心理治疗、冲突沟通、法律建议或紧急支持。
+
+### ingest | AI 时代，为什么要研究维特根斯坦？
+
+- 来源：微信公众号「系统思考」；作者艾璞；发布时间 2026-09-06 13:15；原文：https://mp.weixin.qq.com/s/nSWokcGXP_LOC5_nH4Tkpg。
+- 写入：`raw/系统思考-维特根斯坦-AI语言边界.md`、`raw/系统思考-维特根斯坦-AI语言边界-digest.md`、`wiki/06-ai-tech/系统思考-维特根斯坦-AI语言边界.md`；更新 `wiki/06-ai-tech/index.md` 与 `wiki/master-index.md`。
+- 核心命题：语言边界和“意义即用法”可用于审计 AI 系统的概念、表示、用法与共享规则；图谱、多模态与形式化工具能扩展表示，但新概念仍需要共同体实践、外部证据和责任边界建立。
+- 关联：[[07-rag-systems/架构师-若飞-企业知识库本体论解决什么问题]]、[[06-ai-tech/Capihom-李飞飞-空间智能与世界模型]]、[[06-ai-tech/经纬创投-李飞飞-当答案变得廉价]]、[[07-rag-systems/知识库分层编排-从RAG到Agent-native-KCL]]。
+- 证据边界：文章为哲学评论；其对 LLM、语言系统、知识图谱与多模态的推论不构成模型机制或能力上限证明。维特根斯坦引文、译法与章节归属应回到可靠版本核对。
+
+### ingest | 马斯克 Cybercab：事件营销与传播符号
+
+- 来源：微信公众号「笔记侠」；发布时间 2026-09-06 12:02；原文：https://mp.weixin.qq.com/s/UEbNPE3THHgJeniElMT3oA。
+- 写入：`raw/笔记侠-马斯克Cybercab-事件营销与传播符号.md`、`raw/笔记侠-马斯克Cybercab-事件营销与传播符号-digest.md`、`wiki/05-content-creation/笔记侠-马斯克Cybercab-事件营销与传播符号.md`；更新 `wiki/05-content-creation/index.md` 与 `wiki/master-index.md`。
+- 核心命题：以可复述视觉符号、真实场景、体验者素材、创始人叙事和媒体议题放大小范围产品上线；同时将传播声量与安全、运营、监管、量产和商业价值的事实验证分开。
+- 关联：[[05-content-creation/透明玻璃-写作的最高境界]]、[[05-content-creation/ogilvy-10-writing-rules-with-claude-skill]]、[[03-productivity/笔记侠-老贾-禅与摩托车维修艺术与乔布斯产品哲学]]。
+- 证据边界：车辆登记数、运营范围、股价、特斯拉发布动作与活动安排均为公众号二手转述，未独立核验；不构成自动驾驶安全、商业模式或监管结论。
+
+### ingest | “薄 Agent Loop，厚 Control Plane”：TiDB 用数据库思维重做 Harness
+
+- 来源：微信公众号「InfoQ」；作者 Tina；受访者 TiDB 唐刘；发布时间 2026-09-06 12:30；原文：https://mp.weixin.qq.com/s/XwdD9d6jFbRFwMWhr5a7JA。
+- 写入：`raw/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness.md`、`raw/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness-digest.md`、`wiki/01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness.md`；更新 `wiki/01-ai-agents/index.md` 与 `wiki/master-index.md`。
+- 核心命题：Agent Loop、模型和工具协议可替换，持久 Workspace、权限、副作用、验证、错误传播控制和 Failover 应由稳定 Control Plane 统一治理；多 Agent 优先以隔离状态和清晰 I/O 协作。
+- 关联：[[01-ai-agents/DataFunTalk-Graph-Engineering-从Harness到Ontology]]、[[01-ai-agents/lencx-Agent开发指南-技术太多-该怎么学]]、[[01-ai-agents/2026-07-29-人月聊IT-通用AI-Agent平台-Harness技术底座]]、[[01-ai-agents/源泉TheFountainhead-从GUI到AI-Native-产品接目标界面换职责]]。
+- 证据边界：TiDB Cloud Filesystem 的 Workspace 数量、架构、Agent Core 迁移和多 Agent 实践均为受访方自述，未独立复现或审计；数据库类比不能替代具体业务的安全、合规、性能和可用性验证。
+
+### ingest | 从 GUI 到 AI Native：产品接目标，界面换职责
+
+- 来源：微信公众号「源泉TheFountainhead」；作者巫師Sorcerer；发布时间 2026-08-31 16:55（页面标注：美国）；原文：https://mp.weixin.qq.com/s/AK9xEPyCqySXyXeeemPSwA。
+- 写入：`raw/源泉TheFountainhead-从GUI到AI-Native-产品接目标界面换职责.md`、`raw/源泉TheFountainhead-从GUI到AI-Native-产品接目标界面换职责-digest.md`、`wiki/01-ai-agents/源泉TheFountainhead-从GUI到AI-Native-产品接目标界面换职责.md`；更新 `wiki/01-ai-agents/index.md` 与 `wiki/master-index.md`。
+- 核心命题：AI Native 的变化不是聊天输入，而是产品在约束下承接目标理解、规划、授权执行、外部证据验收与持续追踪；GUI 因而承担状态、审查、授权、编辑、结果追踪和人工接管的控制面职责。
+- 关联：[[01-ai-agents/若飞-Agent如何理解业务-把对象-状态和权限接进执行流程]]、[[01-ai-agents/lencx-Agent开发指南-技术太多-该怎么学]]、[[01-ai-agents/phodal-面向人机交互设计Harness-产物中心Agent-Loop]]、[[06-ai-tech/腾讯研究院-兰小欢-AI责任权力与验证]]。
+- 证据边界：支付、销售 Agent 和自动化消息序列案例均为作者叙述，未提供可复现实验、样本、对照或独立审计；自治分级不能替代具体场景的安全、合规、风控与人工审核。
+
 ## 2026-09-05
 ### ingest | Grok Bot 产品最佳实践：用一支 Bot 团队完成研究、PRD、设计与交付
 
