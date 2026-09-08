@@ -11,15 +11,22 @@ tags:
   - 场景/公众号长文
 nodes: [代码两侧瓶颈, 提交产物, 产物触发器, 意图规格计划, 策略分层, 受保护验证, CI-Eval, 人类门禁]
 links: [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]], [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]], [[02-ai-coding/宝玉AI-我的AI原生开发流程-真实案例复盘]], [[02-ai-coding/研发工程化升级-Coding-Agent-AI-Testing与Verification-First]], [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]]
-date: 2026-08-26
-source: 微信公众号「Founder Park」对 Anthropic 手册的编译
+date: 2026-09-08
+source: Anthropic 官方博客 / Louis Claxton（中文参考：Founder Park）
+source_official: https://claude.com/blog/the-ai-native-sdlc-playbook
+source_published: 2026-08-21
+source_updated: 2026-08-26
+status: published
 ---
 
 # Anthropic AI-Native SDLC：用版本化产物重构软件开发流程
 
-- 原文链接：https://mp.weixin.qq.com/s/YeAL7XBmltR4n3rUnz3Pag
-- 来源：Founder Park；文中称编译 Anthropic《The AI-Native SDLC Playbook》
-- 获取时间：2026-08-27
+- 原文链接：https://claude.com/blog/the-ai-native-sdlc-playbook
+- 来源：Anthropic 官方博客；作者 Louis Claxton / Anthropic Applied AI team
+- 发布时间：2026-08-21；更新时间：2026-08-26
+- 中文参考译文：https://mp.weixin.qq.com/s/YeAL7XBmltR4n3rUnz3Pag
+- 中文译文文件：`raw/Anthropic-AI-Native-SDLC-playbook-中文译文.md`
+- 获取时间：2026-09-08 Asia/Shanghai
 
 ## 核心结论（一句话）
 
@@ -28,8 +35,8 @@ source: 微信公众号「Founder Park」对 Anthropic 手册的编译
 ## 分类提炼
 
 - 场景：AI-Native 软件研发、SDLC 重构、Agentic Coding 治理
-- 类型：流程手册 / 研发治理 / Anthropic 实践二手解读
-- 标签： #主题/AI-Coding #主题/AI-Native研发 #主题/SDLC #主题/Spec驱动 #主题/验证驱动 #主题/Harness #场景/公众号长文
+- 类型：官方流程手册 / 研发治理 / AI-Native SDLC
+- 标签： #主题/AI-Coding #主题/AI-Native研发 #主题/SDLC #主题/Spec驱动 #主题/验证驱动 #主题/Harness #场景/官方博客 #场景/公众号长文
 
 ## 知识节点
 
@@ -69,7 +76,7 @@ source: 微信公众号「Founder Park」对 Anthropic 手册的编译
 
 ## 备注
 
-- 原文所称 Anthropic Playbook 的发布日期、内部实践和示例没有在本次归档中逐项对照一手材料。
+- 官方页面已核对标题、发布日期、更新日期和 6 阶段 playbook；raw 文件追加了官方 HTML 正文提取及 SHA-256。
 - 版本化产物和分层治理可跨工具迁移；文中的 Claude Code、`.claude`、GitHub Actions 仅代表一种实现，不是架构前提。
 - AI-Native 不表示取消人类审查，而是将人的注意力移到更高杠杆、更难自动验证的判断上。
 
@@ -79,3 +86,6 @@ source: 微信公众号「Founder Park」对 Anthropic 手册的编译
 - [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]]
 - [[02-ai-coding/宝玉AI-我的AI原生开发流程-真实案例复盘]]
 - [[02-ai-coding/研发工程化升级-Coding-Agent-AI-Testing与Verification-First]]
+- 官方原文：https://claude.com/blog/the-ai-native-sdlc-playbook
+- 中文参考译文：https://mp.weixin.qq.com/s/YeAL7XBmltR4n3rUnz3Pag
+- 中文译文文件：`raw/Anthropic-AI-Native-SDLC-playbook-中文译文.md`

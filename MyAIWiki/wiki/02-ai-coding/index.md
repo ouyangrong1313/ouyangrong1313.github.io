@@ -63,10 +63,12 @@ AI 辅助编程的实战经验、提示词模板、工作流总结。
 
 ### Anthropic AI-Native SDLC：版本化产物驱动的研发闭环（2026-08-21）
 
-- [[Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了]] - Founder Park 编译 Anthropic 手册：以 `intent → spec → plan → 代码/测试 → PR → 事故记录` 形成版本化交接与自动触发，把人类注意力移到意图、风险、验证和发布门禁。
+- [[Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了]] - Anthropic 官方 Playbook：以 `intent → spec → plan → 代码/测试 → PR → 事故记录` 形成版本化交接与自动触发，把人类注意力移到意图、风险、验证和发布门禁。
 - [[Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了-digest]] - 提交产物、策略分层、受保护验证与人类门禁速读。
 
 ### 实战案例
+- [[VibeCoding的真正门槛-把意图变成可验证的工程任务]] - 已发布：把意图转成目标、边界、验收齐全的工程任务。
+- [[VibeCoding的真正门槛-把意图变成可验证的工程任务-digest]] - 目标、边界、验收与 Agent 闭环速读。
 - [[Leeka讲RPA-TRAEWork-产品到代码全流程]] - 以 TRAE Work 的产品、设计、代码三模式为例，说明 AI 工具应串联假设、原型、实现和 GTM；真正的工作流价值仍取决于跨阶段一致性、验证证据与明确 Owner。
 - [[FounderPark-LexFridman-DHH-Omarchy-Agent原生操作系统]] - DHH 以 Omarchy 提出“可塑计算机”：Agent 将自然语言意图落实为可修改的系统接口，人则聚焦目标、品味、风险与验证。
 - [[得物技术-Delivery-Harness-可控AI交付]] - 用 Version Contract 锁定事实、Execution Boundary 限制改动、Evidence Gate 控制状态、Repair Loop 吸收真实反馈；多运行时交付以业务不变量和可追溯证据阻止局部正确扩散。

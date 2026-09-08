@@ -1,9 +1,9 @@
 # Anthropic 发布 AI-Native 软件开发流程：时代变了，该换套模式了 - 拆解
 
-- 来源：https://mp.weixin.qq.com/s/YeAL7XBmltR4n3rUnz3Pag
-- 来源账号与作者：Founder Park
-- 发布：2026-08-26
-- 文中一手材料：Anthropic《The AI-Native SDLC Playbook》，Louis Claxton，原文称发布于 2026-08-21
+- 官方来源：https://claude.com/blog/the-ai-native-sdlc-playbook
+- 作者：Louis Claxton / Anthropic Applied AI team
+- 发布：2026-08-21；更新：2026-08-26
+- 中文参考译文：https://mp.weixin.qq.com/s/YeAL7XBmltR4n3rUnz3Pag
 
 ## 一句话
 
@@ -45,6 +45,6 @@ AI-Native SDLC 不只是让 Agent 写得更快，而是以 `intent.md → spec.m
 
 ## 证据边界
 
-本文为 Founder Park 的中文编译，Anthropic 手册的流程、示例、发布日期及市场数据均未在本次归档中独立复核；其中 `.claude`、Claude Code 与 GitHub 示例应视为参考实现，而非任何团队必须采用的工具链。
+官方页面已核对标题、发布日期、更新日期与正文；其中 `.claude`、Claude Code 与 GitHub 示例应视为参考实现，而非任何团队必须采用的工具链。中文段落为参考译文，不替代官方英文原文。
 
-标签： #主题/AI-Coding #主题/AI-Native研发 #主题/SDLC #主题/Spec驱动 #主题/验证驱动 #场景/公众号长文
+标签： #主题/AI-Coding #主题/AI-Native研发 #主题/SDLC #主题/Spec驱动 #主题/验证驱动 #场景/官方博客 #场景/公众号长文

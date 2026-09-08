@@ -378,6 +378,16 @@
 
 ---
 
+## 2026-09-08
+### ingest | Vibe Coding 的真正门槛：把意图变成可验证的工程任务
+- 来源：https://mp.weixin.qq.com/s/sMgTBDBIqHBGbtsIpAGoGw
+- 原文：raw/VibeCoding的真正门槛-把意图变成可验证的工程任务.md
+- 拆解：raw/VibeCoding的真正门槛-把意图变成可验证的工程任务-digest.md
+- wiki：wiki/02-ai-coding/VibeCoding的真正门槛-把意图变成可验证的工程任务.md
+- 标签： #主题/AI-Coding #主题/Vibe-Coding #主题/验证驱动 #场景/公众号长文
+- 说明：已完成 raw、digest、wiki 精修并发布；wiki 含 8 个知识节点、上游/下游/同级关联图谱，原文正文 SHA-256 已归档。
+
+
 ## 2026-09-04
 ### ingest | 只会写代码的 AI 编程工具，可能真的要被淘汰了
 - 来源：https://mp.weixin.qq.com/s/qSx3Zmqyr64mVOmnAJm9Kw
@@ -476,12 +486,14 @@
 - 关联：[[07-rag-systems/如何构建一个更好的知识库]]、[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]、[[01-ai-agents/llm-agent-unified-memory-framework]]。
 - 证据边界：本文是个人实践整理，未给出召回质量、跨工具兼容性或维护成本的对照实验；目录与元数据设计需按隐私和使用场景调整。
 ### ingest | Anthropic 发布 AI-Native 软件开发流程：时代变了，该换套模式了
-- 来源：https://mp.weixin.qq.com/s/YeAL7XBmltR4n3rUnz3Pag
+- 来源：https://claude.com/blog/the-ai-native-sdlc-playbook
 - 原文：raw/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了.md
 - 拆解：raw/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了-digest.md
 - wiki：wiki/02-ai-coding/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了.md
 - wiki 速读：wiki/02-ai-coding/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了-digest.md
-- 标签： #主题/AI-Coding #主题/AI-Native研发 #主题/SDLC #主题/Spec驱动 #主题/验证驱动 #主题/Harness #场景/公众号长文
+- 标签： #主题/AI-Coding #主题/AI-Native研发 #主题/SDLC #主题/Spec驱动 #主题/验证驱动 #主题/Harness #场景/官方博客 #场景/公众号长文
+- 更新：2026-09-08 以 Anthropic 官方原文为一手来源校正元数据；raw 追加官方英文正文提取（SHA-256: 6b536dde3750db3483543e997e0a41106df73c20349a66160d45abc8d418a4f0）。
+- 中文阅读：新增 `raw/Anthropic-AI-Native-SDLC-playbook-中文译文.md`，按官方六阶段结构整理中文译文。
 - 核心命题：以版本化的 Intent、Spec、Plan、代码/测试、PR 和事故记录作为阶段交接契约与触发器；人审查目标、风险与门禁，Agent 在受控范围内实施、验证和回流证据。
 - 关联：[[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]、[[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]]、[[02-ai-coding/宝玉AI-我的AI原生开发流程-真实案例复盘]]、[[02-ai-coding/研发工程化升级-Coding-Agent-AI-Testing与Verification-First]]。
 - 证据边界：本文是 Founder Park 的二手编译；Anthropic 手册日期、内部实践、市场数据与示例均未独立核验，工具示例不构成必选技术栈。

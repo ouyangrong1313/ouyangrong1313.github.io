@@ -8,13 +8,18 @@ tags:
   - 主题/验证驱动
 nodes: [提交产物, 产物触发器, 策略分层, 受保护验证, 人类门禁]
 links: [[02-ai-coding/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了]], [[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]], [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]]
-date: 2026-08-26
-source: 微信公众号「Founder Park」对 Anthropic 手册的编译
+date: 2026-09-08
+source: Anthropic 官方博客 / Louis Claxton；中文参考：Founder Park
+status: published
 ---
 
 # Anthropic AI-Native SDLC：用版本化产物重构软件开发流程 - 速读
 
 > AI-Native SDLC 的单位不是一次代码生成，而是可审查、可版本化、可触发下一阶段的产物；人的责任从逐次确认编辑，转为审批意图、规格、计划、风险与发布。
+
+- **官方原文：** https://claude.com/blog/the-ai-native-sdlc-playbook
+- **中文参考译文：** https://mp.weixin.qq.com/s/YeAL7XBmltR4n3rUnz3Pag
+- **中文译文文件：** `raw/Anthropic-AI-Native-SDLC-playbook-中文译文.md`
 
 - **代码两侧瓶颈**：实现提速后，规划、测试、审查和部署决定系统速度。
 - **提交产物**：`intent.md → spec.md → plan.md → 代码/测试 → PR → 事故记录` 同时充当输入、交接和审计链。
@@ -27,4 +32,4 @@ source: 微信公众号「Founder Park」对 Anthropic 手册的编译
 
 相关：[[02-ai-coding/AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]、[[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]]、[[02-ai-coding/宝玉AI-我的AI原生开发流程-真实案例复盘]]。
 
-证据边界：为 Founder Park 的二手编译，Anthropic 的日期、流程与示例未独立核验。
+证据边界：官方页面已核对标题、发布日期、更新日期与正文；中文内容为 Founder Park 参考译文。
