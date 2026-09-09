@@ -1,0 +1,86 @@
+---
+title: YC 研讨会：为什么 Harness 比模型更重要
+category: 01-ai-agents
+tags:
+  - 主题/AI-Agent
+  - 主题/Harness工程
+  - 主题/Agent运行时
+  - 主题/多Agent协作
+  - 主题/自进化Agent
+  - 场景/播客
+nodes: [Harness, Agent-Loop, Context-Engineering, Memory, Tool-Calling, Persistent-State, Multi-Agent-Protocol, Self-Evolving-Harness, External-Evaluation]
+links: [[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]], [[01-ai-agents/DataFunTalk-Graph-Engineering-从Harness到Ontology]], [[06-ai-tech/Agent Harness 与 OpenClaw：从工具到系统的中文解读]], [[01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制]]
+date: 2026-09-08
+source: 小宇宙《AI智识录》/ YC Paper Club 二次解读
+---
+
+# YC 研讨会：为什么 Harness 比模型更重要
+
+- 原始音频：https://www.xiaoyuzhoufm.com/episode/6aa00063f03e74ee6b0723e3
+- 原视频（节目提供）：https://www.youtube.com/watch?v=n9xKblqyQ28
+- 原始转写：[完整音频自动转写](../../raw/YC研讨会-为什么Harness比模型更重要.md)
+- 获取时间：2026-09-08；音频时长：35:48
+
+## 核心结论（一句话）
+
+> 模型决定潜在能力上限，Harness 决定能力能否在真实环境中持续执行、调用工具、保存状态、恢复失败并通过外部证据验收；因此 Agent 的工程竞争重点正在从“换更强模型”转向“构建更可靠的运行系统”。
+
+## 分类提炼
+
+- 场景：生产级 Agent、研究自动化、本地推理、企业多 Agent 平台
+- 类型：AI 生成播客的技术二次解读
+- 标签： #主题/AI-Agent #主题/Harness工程 #主题/Agent运行时 #主题/多Agent协作 #主题/自进化Agent #场景/播客
+
+## 知识节点
+
+- **Harness**：包围基础模型的运行时系统，负责上下文、工具、状态、循环、权限、预算、恢复和验收。
+- **Agent-Loop**：模型在“计划—行动—观察—修正”之间反复推进的执行循环，不能只看最终回答。
+- **Context-Engineering**：按任务装配、压缩和回收上下文；全量注入会造成注意力稀释和成本上升。
+- **三层状态缓存**：模型权重、活跃上下文/运行时变量、外部持久化存储分别承担低延迟推理、当前任务处理和长期记忆/技能沉淀。
+- **Tool-Calling**：通过结构化接口把模型输出接入文件、代码、搜索、API 和其他 Agent；工具协议决定可控性。
+- **Persistent-State**：把会话、轨迹、中间产物和记忆从临时 Sandbox 中移出，使任务可暂停、恢复和更换执行容器。
+- **Multi-Agent-Protocol**：多 Agent 之间使用强类型事件、明确 I/O 和共享状态交接，避免自由自然语言群聊。
+- **Self-Evolving-Harness**：Harness 根据任务结果修改提示、调度逻辑或候选技能；必须由外部评测、版本化和安全边界约束。
+- **External-Evaluation**：用测试、断言、回放、成本和人工审批验证“完成”，不接受模型自报成功。
+
+## 关联图谱
+
+### 上游（基于 / 来自）
+
+- [[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]：从 Control Plane 角度补充持久 Workspace、权限、副作用、Failover 与外部不变量。
+- [[01-ai-agents/DataFunTalk-Graph-Engineering-从Harness到Ontology]]：将任务、能力、状态、证据和恢复组织为显式系统图。
+
+### 下游（应用于 / 验证于）
+
+- [[01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制]]：把自进化拆成评测、记忆、候选变更、发布控制四个隔离环节。
+- [[02-ai-coding/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了]]：将意图、规格、计划、变更、验证和事故记录变成 AI-Native 工作流产物。
+
+### 同级（横向 / 并列）
+
+- [[06-ai-tech/Agent Harness 与 OpenClaw：从工具到系统的中文解读]]：从 OpenClaw 映射工具、记忆、状态和验证等 Harness 组件。
+- [[01-ai-agents/LilianWeng-那个把Agent讲清楚的人-又开始定义Harness]]：从工具、状态、工作流和评测的组合解释 Harness 边界。
+
+## 正文要点
+
+1. **反驳模型中心论。** 节目把基础模型比作无状态的顺序处理器，认为上下文管理、工具路由、记忆、状态机、沙箱和恢复机制才是它连接真实世界的部分。模型变强会抬高上限，但不会自动提供持久进程、权限隔离、网络断点恢复和外部数据治理。
+2. **性能可能主要来自 Harness。** 节目用 ARC-AGI 固定权重成绩提升、研究 Agent 自动跑实验和本地推理成本下降来说明外部运行环境的影响。它们适合作为“系统设计能改变结果”的案例，不适合作为已核验的通用能力或成本结论。
+3. **Harness 有一条演化路线。** 从固定系统提示和工具列表，逐步加入 few-shot、CoT、工具调用、记忆、技能、代码执行、反思、自我修正和递归多 Agent；最新方向是让系统能根据评测结果改写提示或调度代码。
+4. **研究自动化依赖持久执行环境。** 节目描述的 PrimeAgent 类架构以根会话负责目标和调度，子 Agent 在隔离持久进程中执行代码、实验和写作；任务中断时计算容器可以替换，但状态和产物仍保留。
+5. **三层上下文减少浪费。** 常驻模型能力、当前轮活跃上下文和外部文件/数据库/技能库不应混成一个巨大 Prompt。运行时可在 L2 中处理海量数据，只把高信号结果回填给模型，再把成功经验沉淀到 L3。
+6. **端侧与云端应分工。** 节目提出用云端强模型“编译”特定任务的提示、工具协议和执行规范，再由本地模型重复执行，从而兼顾隐私、延迟和成本；收益依赖硬件、模型、任务和编译质量，不能直接套用节目数字。
+7. **企业多 Agent 首先要治理状态。** QM 案例的关键转向是把 Agent 的大脑/轨迹/产物从易失计算容器中分离出来，把容器当作可调度、可释放的计算资源，而不是永久住所。
+8. **三类反模式应默认禁止。** 自由群聊会烧 Token 却没有产出；全公司文档一股脑注入会造成注意力和权限风险；相信模型自报成功会把残缺代码和错误数据传给下一步。生产系统应使用结构化事件、渐进上下文、最小权限、确定性检查和人工门禁。
+9. **工程投入建议。** 节目建议选稳定且性价比高的主力模型，把主要工程精力投入结构化工具协议、代码沙箱、长周期序列化、可恢复调度和闭环评测，而不是每周追逐榜单。
+
+## 备注与证据边界
+
+- 本页基于小宇宙完整 35:48 音频的 Whisper tiny 自动转写，并参考节目 shownotes；原始音频页面明确标注“主播声明：本音频为 AI 生成”。
+- 原视频的官方字幕/逐字稿未取得；转写对英文专名、机构名和数字存在同音误识别，页面中的 YC、Prime Intellect、Stanford、QM、ARC-AGI 成绩和降本数字均是节目/转写中的待核验说法。
+- 本页保留的是可复用的系统设计命题，不将二手 AI 解读中的案例宣传视为独立实验结果。
+
+## 相关链接
+
+- [[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]
+- [[01-ai-agents/DataFunTalk-Graph-Engineering-从Harness到Ontology]]
+- [[06-ai-tech/Agent Harness 与 OpenClaw：从工具到系统的中文解读]]
+- [[01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制]]

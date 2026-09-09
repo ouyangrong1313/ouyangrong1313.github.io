@@ -1,5 +1,12 @@
 # AI Agents Wiki
 
+## YC Harness 研讨会（2026-09-08 新增）
+
+> 小宇宙《AI智识录》对 YC Paper Club 的 AI 生成二次解读：模型提供潜在能力，Harness 负责上下文、工具、持久状态、恢复、权限和外部验收。完整音频已取得并自动转写；原视频逐字稿未取得，案例与数字待核验。
+
+- [[01-ai-agents/YC研讨会-为什么Harness比模型更重要]] - **核心命题**“模型决定上限，Harness 决定能力能否持续工作”；**9 节点**（Harness / Agent-Loop / Context-Engineering / 三层状态缓存 / Tool-Calling / Persistent-State / Multi-Agent-Protocol / Self-Evolving-Harness / External-Evaluation）；与 [[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]、[[01-ai-agents/DataFunTalk-Graph-Engineering-从Harness到Ontology]]、[[06-ai-tech/Agent Harness 与 OpenClaw：从工具到系统的中文解读]] 强关联。
+- [[01-ai-agents/YC研讨会-为什么Harness比模型更重要-digest]] - Harness、持久状态、多 Agent 反模式与证据边界速读。
+
 ## Agent 循环：人负责选山、回写经验与发现价值（2026-09-07 新增）
 
 > **微信公众号「晚点再听LaterCast」Capihom，整理 Lenny's Podcast 对话 a16z 合伙人 Anish Acharya，2026-09-06**：Agent 循环可在明确目标下执行、验证、审批并持续优化；人仍负责选择目标、跳出局部最优、设定风险和价值尺度、将人工教练介入沉淀为可复用经验。案例、数字与引语均为二手转述，未独立核验。

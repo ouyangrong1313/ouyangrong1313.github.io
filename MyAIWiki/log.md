@@ -2,6 +2,17 @@
 
 时间序变更记录。格式：`## [日期] 操作 | 标题`
 
+## 2026-09-08
+### ingest | YC 研讨会：为什么 Harness 比模型更重要
+
+- 来源：小宇宙《AI智识录》；原始页面：https://www.xiaoyuzhoufm.com/episode/6aa00063f03e74ee6b0723e3；原视频（节目提供）：https://www.youtube.com/watch?v=n9xKblqyQ28&t=535s。
+- 获取：下载公开 M4A（35:48，34,646,964 bytes，音频 SHA-256 `40abf5bc11ef56fed2957b43e36c311d42a6c7f12937455d852aa07664653b62`），用本地 Whisper tiny 完整转写；带时间戳转写底稿 SHA-256 `d3596356ff7203ed428eabcb6be385ba7d8251b63c6b8e2fe3cd039491c21929`。
+- 写入：`raw/YC研讨会-为什么Harness比模型更重要.md`、`raw/YC研讨会-为什么Harness比模型更重要-digest.md`、`wiki/01-ai-agents/YC研讨会-为什么Harness比模型更重要.md`、`wiki/01-ai-agents/YC研讨会-为什么Harness比模型更重要-digest.md`；更新 `wiki/01-ai-agents/index.md` 与 `wiki/master-index.md`。
+- 核心命题：模型决定潜在上限，Harness 通过上下文、工具、状态、恢复、权限、预算和外部评测把能力变成可持续执行；多 Agent 应以结构化事件和共享状态协作，避免无界闲聊。
+- 证据边界：页面明确声明音频为 AI 生成；原视频逐字稿未取得，Whisper tiny 对专名、机构名和数字存在误识别。ARC-AGI、800 倍降本、YC QM 等均为节目二次转述/待核验说法，不作为独立事实。
+- 关联：[[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]、[[01-ai-agents/DataFunTalk-Graph-Engineering-从Harness到Ontology]]、[[06-ai-tech/Agent Harness 与 OpenClaw：从工具到系统的中文解读]]、[[01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制]]。
+- 状态：published；结构检查：frontmatter、9 个节点、上游/下游/同级关联、raw 完整自动转写与质量说明均已写入。
+
 ## 2026-09-07
 ### ingest | a16z 合伙人：当 AI 能让业务自己跑起来，人该做什么？
 
