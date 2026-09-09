@@ -2,6 +2,27 @@
 
 时间序变更记录。格式：`## [日期] 操作 | 标题`
 
+## 2026-09-09
+### ingest | 深思圈：让不会用 App 的人自己办业务，Navana 语音 AI 案例
+
+- 来源：微信公众号「深思圈」/ 深思 SenseAI；原文：https://mp.weixin.qq.com/s/N208p7iWGQnxICBO6G6Ilg。
+- 获取：使用 `scripts/fetch_wechat_article.py` 抓取完整 HTML 正文；Playwright 与隔离 Chrome 失败后使用 HTML fallback，正文 6,605 字且未出现“环境异常”；正文 SHA-256 `9dcd5af4f7c787da93e8ac6f1e0bc94121e5d695c702815d904f8397f00f71a3`。
+- 写入：`raw/深思圈-Navana-让不会用App的人自己办业务.md`、`raw/深思圈-Navana-让不会用App的人自己办业务-digest.md`、`wiki/01-ai-agents/深思圈-Navana-让不会用App的人自己办业务.md`、`wiki/01-ai-agents/深思圈-Navana-让不会用App的人自己办业务-digest.md`；更新 `wiki/01-ai-agents/index.md` 与 `wiki/master-index.md`。
+- 核心命题：语音 AI 的价值不在单次识别，而在用户能否借助语音、图示、固定流程和首次教学独立完成真实业务；客户与企业员工的语音场景应分别设计。
+- Seetong 借鉴：预览/回放任务完成率、设备领域词表、有限语音 + 确定性动作、部分结果与恢复、首次使用支持、真实闭环指标。
+- 证据边界：融资、下载、交易、用户比例、员工数量和业务部署来自文章引用的公开材料，未独立审计；Seetong 动作为迁移推导。
+- 状态：published；结构检查：完整 frontmatter、9 个节点、上游/下游/同级关联、正文哈希和证据边界均已写入。
+
+### ingest | 字节跳动质量保障团队：让 QA 真正用起来：测试用例生成 Agent 落地
+
+- 来源：微信公众号「字节跳动技术团队」；合作团队 TikTok Eng-Testing × 复旦大学软件工程实验室 CodeWisdom；原文：https://mp.weixin.qq.com/s/oTvXpShEeJT02lHWEtiNGw。
+- 获取：使用 `scripts/fetch_wechat_article.py` 抓取完整 HTML 正文；Playwright 与隔离 Chrome 失败后使用 HTML fallback，正文非空且未出现“环境异常”；正文 SHA-256 `146ccf71ab8bfa8cc51b6af9a3a0d8e2763c94402a77ae5c8a8ed26663550170`。
+- 写入：`raw/字节跳动质量保障团队-测试用例生成Agent落地-我们做对了什么.md`、`raw/字节跳动质量保障团队-测试用例生成Agent落地-我们做对了什么-digest.md`、`wiki/01-ai-agents/字节跳动质量保障团队-测试用例生成Agent落地-我们做对了什么.md`、`wiki/01-ai-agents/字节跳动质量保障团队-测试用例生成Agent落地-我们做对了什么-digest.md`；更新 `wiki/01-ai-agents/index.md` 与 `wiki/master-index.md`。
+- 核心命题：测试 Agent 不替代 QA，而是将测试意图转译为可运行回归资产；可靠性来自确定性逻辑、可校验的细粒度任务、干净上下文、允许集合和稳定断言。
+- 原文指标：85.4% 生成用例进入 CI/CD；新增用例平均约 25% 来自 Agent、个别团队 50%+；月活 30.7%；平均每两周节省约 30 人天；论文被 ISSTA 2026 接收（均按原文口径，未独立审计）。
+- 关联：[[01-ai-agents/Agent评测漫谈-由浅入深讲解Agent评测]]、[[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]、[[02-ai-coding/研发工程化升级-Coding-Agent-AI-Testing与Verification-First]]、[[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]]。
+- 状态：published；结构检查：完整 frontmatter、9 个节点、上游/下游/同级关联、正文哈希和证据边界均已写入。
+
 ## 2026-09-08
 ### ingest | YC 研讨会：为什么 Harness 比模型更重要
 
