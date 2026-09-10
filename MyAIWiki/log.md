@@ -410,6 +410,16 @@
 
 ---
 
+## 2026-09-10
+### ingest | 《Agent 评测白皮书》系列01：Agent 评测全览
+- 来源：https://mp.weixin.qq.com/s/hBSIPQnsBeWwX9UZLjWYFA
+- 原文：raw/Agent评测白皮书-系列01-Agent评测全览.md
+- 拆解：raw/Agent评测白皮书-系列01-Agent评测全览-digest.md
+- wiki：wiki/01-ai-agents/Agent评测白皮书-系列01-Agent评测全览.md
+- 标签： #场景/公众号长文
+- 说明：已完成精修并发布；wiki 含 9 个知识节点、四模块/双 Loop 关联图谱，原文 SHA-256 已记录于 raw 归档。
+
+
 ## 2026-09-08
 ### ingest | Vibe Coding 的真正门槛：把意图变成可验证的工程任务
 - 来源：https://mp.weixin.qq.com/s/sMgTBDBIqHBGbtsIpAGoGw
