@@ -1,0 +1,172 @@
+<h1 id="从-ai-coding-到-harness-engineering-应用宝活动平台端到端实践原文摘要">从 AI Coding 到 Harness Engineering 应用宝活动平台端到端实践(原文摘要)</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+<p><strong>对话式 AI Coding 在 4 个痛点(上下文膨胀 / 业务知识缺 / 缺自动化闭环 / 单窗口无法并行)面前失效——Harness 化的本质不是给 AI 加规则,而是把”一个对话窗口”升级为”一套工程系统”:知识库(底座)+ 状态文件驱动 + 12 个专家 Agent + DAG 并行编排 + 15 个流程脚本 + DevOps 多平台集成。</strong></p>
+
+<h2 id="5-条核心观点">5 条核心观点</h2>
+
+<ol>
+  <li>
+    <p><strong>对话式 AI Coding 的 4 个死穴</strong>:① 单窗口上下文随项目迭代快速膨胀,出现有损压缩遗忘与不按规则生成;② 缺乏完整业务知识,每次需求都要人先捋清楚多服务多业务的串联;③ 缺乏工程上的自动化闭环,只能加速 coding 环节,需求拆解/部署/验证/测试仍靠人;④ 单窗口无法并行,多独立任务要么串行要么开多窗口人来回切换。<strong>任务越完整、越规模化、越可抽象成稳定流程,Harness 工程价值越高</strong>。</p>
+  </li>
+  <li>
+    <p><strong>整体架构 = 知识库工程 ✖️ 端到端开发工程</strong>:知识库工程负责沉淀散落在代码/文档/可观测系统中的工程知识,提供给上层消费;端到端开发工程以”状态文件”为驱动,实现需求拆解→澄清→任务拆解→并行开发→单测→CR→部署→请求构造→接口验证→提交的全流程 AI 执行。<strong>当前规模</strong>:800+ 结构化文档 / 90+ 微服务 / 12 专家 Agent / 30+ 业务 Skill / 10+ 流程脚本。</p>
+  </li>
+  <li>
+    <p><strong>状态文件驱动 = 端到端流程脱离对话窗口</strong>:两类结构化 JSON——<code class="language-plaintext highlighter-rouge">product-state.json</code>(多 Story 并行,记录 breakdown / forking / joining)+ <code class="language-plaintext highlighter-rouge">e2e-state.json</code>(单 Story 端到端,记录 Phase 0~7 / 产出 / 接口验证结果)。配套 3 个 hook(Stop / SessionStart / SessionEnd)防止主调度器偷懒式提前停止。<strong>解决 3 件事</strong>:上下文有损压缩 / 流程中断无法恢复 / 推进缺乏可观测。</p>
+  </li>
+  <li>
+    <p><strong>专家 Agent 体系 + DAG 并行 + Fork-Join</strong>:12 个专家 Agent 5 项设计原则(单一职责 / 上下文隔离 / 工具最小权限 / 确定性输入输出 / 模型可插拔)。两层并行——第一层 task-planner 按接口/模块拆任务构建 DAG 拓扑,同层任务并发配独立 git worktree;第二层多 Story 场景 Fork-Join(Phase R 产品拆解 → Fork 段 4 阶段并行 → Join 段 4 阶段串行收口)。<strong>冲突治理 4 类</strong>(Merge Conflict / Shared file / Proto 协议 / DB&amp;配置变更)策略各异,核心思路”能事前隔离就事前隔离,必须共享就串行收口”。</p>
+  </li>
+  <li>
+    <p><strong>AI 负责认知,脚本负责执行 + 核心工程原则 7 条</strong>:15 个脚本把确定性操作(状态文件 JSON 解析 / git worktree 操作 / 编译发布 / 知识库初始化)从 AI 手里收回。<strong>7 条核心原则</strong>:① AI 负责认知,脚本负责执行;② 长链路必须状态化;③ 知识库必须结构化;④ Agent 必须职责隔离;⑤ 执行步骤必须脚本化;⑥ Workflow 比 Prompt 更重要;⑦ 未来比拼的不是”用了多少 AI”,而是能否把 AI 当作一个工程系统来设计。<strong>3 个具体取舍</strong>:弃用主子 Agent 模式 / 弃用 Shell 脚本(改 Go 强类型) / 严格禁用项目级 Memory(防止上下文串扰)。</p>
+  </li>
+</ol>
+
+<h2 id="关键参数数字">关键参数/数字</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>项</th>
+      <th>数字/范围</th>
+      <th>用途</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>知识库覆盖</td>
+      <td>90+ 微服务 / 800+ 结构化文档 / 4 业务域</td>
+      <td>应用宝游戏研发后台</td>
+    </tr>
+    <tr>
+      <td>端到端流程规模</td>
+      <td>12 专家 Agent / 30+ 业务 Skill / 10+ 流程脚本</td>
+      <td>重构后沉淀</td>
+    </tr>
+    <tr>
+      <td>自动生成文档类别</td>
+      <td>8 类(overview/interfaces/architecture/dependencies/storage/config/pitfalls/log.md)</td>
+      <td>每服务一套</td>
+    </tr>
+    <tr>
+      <td>知识库目录结构</td>
+      <td>3 层(总览层/域层/服务层)+ 2 类(自动/手工)</td>
+      <td>LLM Wiki/Obsidian-Wiki 借鉴</td>
+    </tr>
+    <tr>
+      <td>知识加载层次</td>
+      <td>3 层渐进(关键词匹配 / grep meta.yaml / 按查询模式按需加载)</td>
+      <td>替代 RAG</td>
+    </tr>
+    <tr>
+      <td>知识查询模式</td>
+      <td>4 种(PRD 拆解 / 技术方案 / 接口搜索 / 知识库问答)</td>
+      <td>按场景选</td>
+    </tr>
+    <tr>
+      <td>状态文件</td>
+      <td>2 类(product-state.json / e2e-state.json)</td>
+      <td>流程持久化</td>
+    </tr>
+    <tr>
+      <td>Hook 事件</td>
+      <td>3 个(Stop / SessionStart / SessionEnd)</td>
+      <td>强制流程推进</td>
+    </tr>
+    <tr>
+      <td>专家 Agent 设计原则</td>
+      <td>5 项(单一职责/上下文隔离/工具最小权限/确定性输入输出/模型可插拔)</td>
+      <td>Agent 体系</td>
+    </tr>
+    <tr>
+      <td>专家 Agent 个数</td>
+      <td>12 个</td>
+      <td>沉淀</td>
+    </tr>
+    <tr>
+      <td>并行层级</td>
+      <td>2 层(Worktree 隔离 / Fork-Join)</td>
+      <td>从串行到并行</td>
+    </tr>
+    <tr>
+      <td>冲突类型</td>
+      <td>4 类(Merge/Shared file/Proto/DB&amp;配置)</td>
+      <td>治理策略</td>
+    </tr>
+    <tr>
+      <td>流程脚本</td>
+      <td>~15 个(e2e-dev.py / worktree.sh / build-and-publish.sh / kb-init.sh 等)</td>
+      <td>确定性操作脚本化</td>
+    </tr>
+    <tr>
+      <td>文档新鲜度检测</td>
+      <td>git_hash 增量模式 + log.md 不可覆盖</td>
+      <td>知识保鲜</td>
+    </tr>
+    <tr>
+      <td>核心工程原则</td>
+      <td>7 条</td>
+      <td>向上抽象</td>
+    </tr>
+    <tr>
+      <td>TDD 落地策略</td>
+      <td>不在代码层,在接口测试用例层</td>
+      <td>务实取舍</td>
+    </tr>
+    <tr>
+      <td>Vibe Coding 边界</td>
+      <td>看板类(结果导向+容错高)适合黑盒化,核心在线业务系统仍需人守架构</td>
+      <td>场景区分</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="核心金句">核心金句</h2>
+
+<ol>
+  <li><strong>“任务越是完整、越是规模化、越是可抽象成稳定流程,其仅仅采用对话式 AI coding 来完成的弊端就越明显,采用 Harness 工程实践的价值也就越高。”</strong>(全文核心论点)</li>
+  <li><strong>“AI 负责认知,脚本负责执行。”</strong>(反复强调的工程核心思想)</li>
+  <li><strong>“过期知识比没有知识更危险。”</strong>(曾因知识库未更新,AI 调了老接口,排查很久才发现)</li>
+  <li><strong>“Workflow 比 Prompt 更重要——流程编排的确定性,胜过反复打磨 prompt。”</strong>(与 Leeka / Addy Loop 主线呼应)</li>
+  <li><strong>“未来比拼的不是’用了多少 AI’,而是能否把 AI 当作一个工程系统来设计。”</strong>(终局认知)</li>
+  <li><strong>“从’逐行审查’到’忘记代码’,变化的从来不是代码的价值,而是人在系统中的位置。”</strong>(5.3.3 收尾)</li>
+</ol>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游(基于 / 来自)</h3>
+<ul>
+  <li><strong>Harness Engineering 概念</strong>:Claude Code / OpenClaw / Hermes / Addy Osmani 把”模型是概率的,真正让 Agent 可用可控的是外面那层骨架”带火</li>
+  <li><strong>LLM Wiki / Obsidian-Wiki / GBrain</strong>:知识库结构化方法论来源</li>
+  <li><strong>强类型语言状态机思想</strong>:Go 重构 Shell 脚本驱动的流程</li>
+  <li><strong>多 Agent 并行思想</strong>:task-planner + DAG 拓扑分层</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游(应用于 / 验证于)</h3>
+<ul>
+  <li><strong>应用宝活动平台重构</strong>:上半年完成完整重构,4 业务域(活动/福利/商城/增长)</li>
+  <li><strong>With 平台活动集成看板</strong>:100% AI Vibe Coding 生成,无任何 CR——验证”代码黑盒化”的边界</li>
+  <li><strong>Claude Workflow 模式</strong>:团队正在探索”脚本串联流程,必要时脚本 call AI”</li>
+</ul>
+
+<h3 id="同级横向--并列">同级(横向 / 并列)</h3>
+<ul>
+  <li>Harness 主线:[[Harness工程AgentLoop]] / [[HarnessEngineering企业级实战]] / [[阿里云开发者-淘宝主播Agent的Harness工程实战]] / [[0xCodez-Agent-Harness-14-Steps]] / [[harness-engineering]]</li>
+  <li>端到端流程:[[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] / [[Hermes-Agent重构得物数仓工作流]] / [[Leeka-Task-Decomposition-Agentic-Workflow]]</li>
+  <li>Loop 验证:[[Loop-Engineering-验证才是瓶颈]] / [[Addy-Osmani-Loop-Engineering]]</li>
+  <li>AI Coding 范式:[[Code-is-cheap-AI-Native-五倍效率]] / [[字节跳动洪定坤-AI-Coding的实践与探索]]</li>
+</ul>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li>当前阶段团队自评”仅处于’能跑’的刚起步状态”,缺自进化能力 / 评估体系 / 工具解耦</li>
+  <li>整套体系重度依赖 codebuddy cli 工具,工程与工具未解耦</li>
+  <li>仅覆盖 Go 后台业务,前端 / 客户端 / 嵌入式系统未涉及</li>
+  <li>弃用项目级 Memory 与 Claude / OpenClaw 等工具的默认行为有冲突,需人工确认</li>
+  <li>知识库增量模式依赖 git diff,需保证 git 工作流稳定(避免 force push / squash)</li>
+  <li>7 条核心工程原则是”沉淀式”,非实证,需团队具体场景验证优先级</li>
+  <li>“5.3.1 TDD 在 AI 时代”和”5.3.3 代码还重要吗”是开放性思考,非 Harness 工程具体实施</li>
+  <li>文章附带文末推广”Mac 应用宝”,与正文 Harness 工程无关</li>
+</ul>

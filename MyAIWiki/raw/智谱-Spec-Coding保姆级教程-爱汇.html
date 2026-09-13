@@ -1,0 +1,284 @@
+<h1 id="spec-coding-保姆级教程原文存档">Spec Coding 保姆级教程（原文存档）</h1>
+
+<blockquote>
+  <p>巧用 Spec-Kit，把AI训练成靠谱工程师！</p>
+
+  <p>本文作者：爱汇<br />
+原文链接：https://mp.weixin.qq.com/s/CRH4WWtrA_3APBBFD1zMiQ</p>
+</blockquote>
+
+<h2 id="文档元数据">文档元数据</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>字段</th>
+      <th>值</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>原标题</td>
+      <td>Spec Coding 保姆级教程</td>
+    </tr>
+    <tr>
+      <td>副标题</td>
+      <td>巧用 Spec-Kit，把AI训练成靠谱工程师！</td>
+    </tr>
+    <tr>
+      <td>作者</td>
+      <td>爱汇</td>
+    </tr>
+    <tr>
+      <td>首发平台</td>
+      <td>微信公众号（mp.weixin.qq.com）</td>
+    </tr>
+    <tr>
+      <td>重发布平台</td>
+      <td>智谱AI开放文档（docs.bigmodel.cn）</td>
+    </tr>
+    <tr>
+      <td>GitHub 项目</td>
+      <td>github.com/github/spec-kit（34k+ Star）</td>
+    </tr>
+    <tr>
+      <td>抓取方式</td>
+      <td>Mintlify 自动生成的 <code class="language-plaintext highlighter-rouge">spec-kit.md</code> 端点（HTTP 200, 12.8KB, 0.7s）</td>
+    </tr>
+    <tr>
+      <td>抓取时间</td>
+      <td>2026-08-27</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="原文正文">原文正文</h2>
+
+<p>（来自 Mintlify markdown 源端点 <code class="language-plaintext highlighter-rouge">/cn/coding-plan/best-practice/spec-kit.md</code>，完整保留）</p>
+
+<h3 id="前言您是不是也被vibe-coding逼疯过">前言：您是不是也被”Vibe Coding”逼疯过？</h3>
+
+<p>“我叫小张，一个天天跟 AI 结对编程的程序员。就在上周，我差点被AI逼疯了。”</p>
+
+<blockquote>
+  <p>AI：”没问题，看我的！”(一顿操作猛如虎，生成一堆代码)
+您：”不对不对，这里应该用JWT认证，不是Session啊喂！”
+AI：”好的，已修改。”(又是一顿操作)
+您：”等一下！密码加密我要用Argon2，不是您默认的MD5！说过多少次了！”
+AI：”…”</p>
+</blockquote>
+
+<p>这种靠感觉、靠默契、反复试错，在跟 AI 的不断拉扯中勉强推进的开发模式，就是现在最火的词—— <strong>“Vibe Coding”（感觉式编程）</strong>。</p>
+
+<p>在小项目里跑跑还行，但项目变复杂、团队一扩大，弊端就全暴露了：</p>
+<ul>
+  <li><strong>需求理解全靠猜</strong>：AI 常常”会错意”，做出来的东西跟想的完全是两码事</li>
+  <li><strong>技术选型像开盲盒</strong>：AI 可能随手就选不熟的技术栈，后续维护火葬场</li>
+  <li><strong>代码质量堪忧</strong>：生成的代码能跑，但结构乱七八糟，别说交接，自己看都费劲</li>
+  <li><strong>协作基本为零</strong>：除了您和AI，没人知道这功能是怎么”感觉”出来的</li>
+</ul>
+
+<h3 id="一spec-kit-是啥从代码为王到规范为王">一、Spec-Kit 是啥？从”代码为王”到”规范为王”</h3>
+
+<p><strong>Spec-Kit 不是新的 AI 编程工具，它是一套工作流和方法论。</strong></p>
+
+<p>通过命令行工具和模板，把”虎”的 AI 助手（Claude Code / Copilot / Gemini）调教成”靠谱工程师”。</p>
+
+<p>核心理念：<strong>规格驱动开发（Spec-Driven Development, SDD）</strong></p>
+
+<ul>
+  <li>传统开发：<code class="language-plaintext highlighter-rouge">规格</code>（爱看不看的文档）→ <code class="language-plaintext highlighter-rouge">代码</code>（一顿瞎写）→ <code class="language-plaintext highlighter-rouge">代码成为唯一真理</code></li>
+  <li>Spec-Kit 开发：<code class="language-plaintext highlighter-rouge">规格</code>（可被执行的指令）→ <code class="language-plaintext highlighter-rouge">计划</code>（AI自动生成）→ <code class="language-plaintext highlighter-rouge">任务</code>（AI自动拆解）→ <code class="language-plaintext highlighter-rouge">代码</code>（AI按图施工）→ <code class="language-plaintext highlighter-rouge">规格成为唯一真理</code></li>
+</ul>
+
+<blockquote>
+  <p><strong>一句话：代码为规格服务，而不是规格为代码服务。</strong></p>
+</blockquote>
+
+<p>类比：Vibe Coding 像没图纸凭感觉盖茅草屋；Spec Coding 像先有图纸再按图盖摩天大楼。</p>
+
+<h3 id="二spec-kit-的六步流水线">二、Spec-Kit 的”六步流水线”</h3>
+
+<p>以开发 Todo List 为例走完整流程。</p>
+
+<h4 id="第一步准备工作安装与初始化">第一步：准备工作（安装与初始化）</h4>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="c"># 推荐用 uv（Python 包管理工具）</span>
+uv tool <span class="nb">install </span>specify-cli <span class="nt">--from</span> git+https://github.com/github/spec-kit.git
+
+<span class="c"># 创建项目并初始化</span>
+specify init my-todo-app
+<span class="nb">cd </span>my-todo-app
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>初始化时选 AI 助手（本文用 Claude Code + GLM4.6）和脚本类型（sh）。完成后项目会多出 <code class="language-plaintext highlighter-rouge">.claude/</code> 和 <code class="language-plaintext highlighter-rouge">.specify/</code> 目录。</p>
+
+<h4 id="第二步立规矩constitution-给项目立宪法">第二步：立规矩（<code class="language-plaintext highlighter-rouge">/constitution</code>）—— 给项目立”宪法”</h4>
+
+<p>可选但<strong>强烈推荐</strong>。项目开始前定好基本原则和约束。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>/speckit.constitution 这是一个基于React的待办事项应用，要注重简洁和用户体验。
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>AI 会生成 <code class="language-plaintext highlighter-rouge">constitution.md</code>，包含：</p>
+<ul>
+  <li>技术栈偏好（优先 React Hooks，不用 Class Components）</li>
+  <li>代码风格（Airbnb JavaScript Style Guide）</li>
+  <li>测试要求（核心功能必须有单元测试）</li>
+  <li>用户体验原则（响应时间 &lt;100ms）</li>
+</ul>
+
+<p>这份”宪法”是天条，后面所有开发工作都得按这个来。</p>
+
+<h4 id="第三步提需求specify-您只要说要什么">第三步：提需求（<code class="language-plaintext highlighter-rouge">/specify</code>）—— 您只要说”要什么”</h4>
+
+<p>只谈功能，别谈技术。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>/speckit.specify 我要做一个待办事项应用。
+核心功能：
+- 用户可以添加新的待办事项。
+- 用户可以标记待办事项为"已完成"。
+- 用户可以删除待办事项。
+- 完成任务时，要有一个好玩儿的庆祝动画。
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>Spec-Kit 会：</p>
+<ol>
+  <li>在 <code class="language-plaintext highlighter-rouge">specs/</code> 下创建新版本（如 <code class="language-plaintext highlighter-rouge">001-todo-app-core-features</code>）</li>
+  <li>生成详细 <code class="language-plaintext highlighter-rouge">spec.md</code>（用户故事、验收标准、边界条件）</li>
+  <li>自动建新 Git 分支（如 <code class="language-plaintext highlighter-rouge">feat/001-todo-app-core-features</code>）</li>
+</ol>
+
+<h4 id="第四步清疑点clarify-消除模棱两可">第四步：清疑点（<code class="language-plaintext highlighter-rouge">/clarify</code>）—— 消除模棱两可</h4>
+
+<p>可选。需求模糊时（如”好玩儿的动画”）让 AI 主动追问。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>/speckit.clarify
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>AI 可能会反问：</p>
+<ul>
+  <li>Q1：庆祝动画是放烟花还是撒花？</li>
+  <li>Q2：待办事项有字数限制吗？</li>
+  <li>Q3：要不要支持任务优先级？</li>
+</ul>
+
+<p>回答后 AI 自动更新 <code class="language-plaintext highlighter-rouge">spec.md</code>。</p>
+
+<h4 id="第五步出方案plan-ai-变身架构师">第五步：出方案（<code class="language-plaintext highlighter-rouge">/plan</code>）—— AI 变身架构师</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>/speckit.plan
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>AI 根据”宪法”和”需求”生成完整技术方案文档：</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">plan.md</code>：技术栈决策（React 18 + Zustand + Framer Motion）</li>
+  <li><code class="language-plaintext highlighter-rouge">data-model.md</code>：数据结构定义（如 Todo 长啥样）</li>
+  <li><code class="language-plaintext highlighter-rouge">contracts/</code>：API / 组件接口定义</li>
+  <li><code class="language-plaintext highlighter-rouge">research.md</code>：为啥这么选型，做了哪些调研</li>
+</ul>
+
+<h4 id="第六步拆任务tasks-把大象装进冰箱">第六步：拆任务（<code class="language-plaintext highlighter-rouge">/tasks</code>）—— 把大象装进冰箱</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>/speckit.tasks
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>AI 把 <code class="language-plaintext highlighter-rouge">plan.md</code> 拆成详细 <code class="language-plaintext highlighter-rouge">tasks.md</code>：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="rouge-code"><pre>Phase 1: 项目设置 (3 个任务)
+- [ ] T001: 初始化 React + Vite 项目。
+- [ ] T002: 安装 Zustand 和 Framer Motion 依赖。
+- [ ] T003: 配置 ESLint 和 Prettier。
+
+## Phase 2: 核心组件开发 (4 个任务)
+- [ ] T004: 开发 TodoItem 组件。
+- [ ] T005: 开发 AddTodoForm 组件。
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>可选 <code class="language-plaintext highlighter-rouge">YOLO</code> 模式一口气干完，或每个任务后人工检查。</p>
+
+<h4 id="第七步写代码implement-ai-终于施工">第七步：写代码（<code class="language-plaintext highlighter-rouge">/implement</code>）—— AI 终于”施工”</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>/speckit.implement
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>AI 严格按 <code class="language-plaintext highlighter-rouge">tasks.md</code> 列表完成编码、写测试，每搞定一个就 <code class="language-plaintext highlighter-rouge">[x]</code> 打勾。稍等一会儿就得到一个结构清晰、文档齐全、完全符合所有规范的 Todo App。</p>
+
+<h3 id="三spec-kit-的核心价值">三、Spec-Kit 的核心价值</h3>
+
+<ol>
+  <li><strong>高质量、可预测的输出</strong>：前置规范管住 AI 自由发挥，产出更符合预期</li>
+  <li><strong>自动化文档生成</strong>：需求/方案/任务全记录，形成跟代码同步的”活文档”，不怕过期</li>
+  <li><strong>团队协作效率飙升</strong>：标准化流程降低沟通成本，维护简单</li>
+  <li><strong>沉淀团队最佳实践</strong>：架构约定/代码规范写进 <code class="language-plaintext highlighter-rouge">/constitution</code>，让经验变可复用资产</li>
+  <li><strong>真正的”AI 工程师”</strong>：从”打字员”变”工程师伙伴”</li>
+</ol>
+
+<h3 id="四常见问题-faq">四、常见问题 FAQ</h3>
+
+<p><strong>Q1：会不会很复杂反而增加工作量？</strong>
+上手需一点点学习成本。中大型项目长期看绝对提升效率；小 demo 直接用 AI 助手就行。</p>
+
+<p><strong>Q2：能在老项目里用吗？</strong>
+可以！项目根目录运行 <code class="language-plaintext highlighter-rouge">specify init .</code>，不动现有代码，先从小功能试点。</p>
+
+<p><strong>Q3：需求变了咋办？</strong>
+回到第三步 <code class="language-plaintext highlighter-rouge">/specify</code> 描述新需求，Spec-Kit 创建新版本和分支，再走 <code class="language-plaintext highlighter-rouge">/plan</code>、<code class="language-plaintext highlighter-rouge">/tasks</code>、<code class="language-plaintext highlighter-rouge">/implement</code>。历史版本都保留，迭代过程清清楚楚。</p>
+
+<p><strong>Q4：支持哪些 AI 工具？</strong>
+几乎所有主流：GitHub Copilot、Claude Code、Gemini、Cursor、通义千问、Roo Code 等。初始化时随便选。</p>
+
+<h3 id="结语">结语</h3>
+
+<blockquote>
+  <p><strong>Vibe Coding 已死，Spec Coding 当立！</strong></p>
+</blockquote>
+
+<p>Spec-Kit 把软件工程”先想清楚再动手”的古老智慧，跟 AI 的强大生产力完美结合。</p>
+
+<p>GitHub 地址：https://github.com/github/spec-kit</p>
+
+<h2 id="关键事实清单编译参考用">关键事实清单（编译参考用）</h2>
+
+<ul>
+  <li><strong>GitHub 项目</strong>：github.com/github/spec-kit（34k+ Star）</li>
+  <li><strong>命令行工具</strong>：<code class="language-plaintext highlighter-rouge">specify-cli</code>，通过 <code class="language-plaintext highlighter-rouge">uv tool install</code> 安装</li>
+  <li><strong>六步流程</strong>：constitution → specify → clarify（可选）→ plan → tasks → implement</li>
+  <li><strong>支持 AI 助手</strong>：Claude Code、GitHub Copilot、Gemini、Cursor、通义千问、Roo Code 等</li>
+  <li><strong>生成产物目录</strong>：
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">.claude/</code> + <code class="language-plaintext highlighter-rouge">.specify/</code>（初始化产生）</li>
+      <li><code class="language-plaintext highlighter-rouge">constitution.md</code>（项目宪法）</li>
+      <li><code class="language-plaintext highlighter-rouge">specs/{NNN}-{slug}/spec.md</code>（需求规格）</li>
+      <li><code class="language-plaintext highlighter-rouge">plan.md</code> + <code class="language-plaintext highlighter-rouge">data-model.md</code> + <code class="language-plaintext highlighter-rouge">contracts/</code> + <code class="language-plaintext highlighter-rouge">research.md</code>（技术方案）</li>
+      <li><code class="language-plaintext highlighter-rouge">tasks.md</code>（任务清单）</li>
+    </ul>
+  </li>
+  <li><strong>核心哲学</strong>：SDD = Spec-Driven Development，规格成为唯一真理</li>
+  <li><strong>与 Vibe Coding 对比</strong>：Vibe = 感觉式反复试错；Spec = 规格驱动可预测</li>
+</ul>

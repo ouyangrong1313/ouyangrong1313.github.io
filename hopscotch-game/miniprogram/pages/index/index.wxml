@@ -1,0 +1,80 @@
+<!--
+  童年跳房子大挑战 - 首页
+  pages/index/index.wxml
+-->
+<view class="container">
+  <!-- 顶部装饰云朵 -->
+  <view class="clouds">
+    <view class="cloud cloud-1"></view>
+    <view class="cloud cloud-2"></view>
+    <view class="cloud cloud-3"></view>
+  </view>
+
+  <!-- 主标题区域 -->
+  <view class="title-section">
+    <view class="game-title">
+      <text class="title-main">童年跳房子</text>
+      <text class="title-sub">大挑战</text>
+    </view>
+    <view class="hopscotch-icon">
+      <view class="house-grid">
+        <view class="grid-item">1</view>
+        <view class="grid-item">2</view>
+        <view class="grid-item">3</view>
+        <view class="grid-item">4</view>
+        <view class="grid-item">5</view>
+        <view class="grid-item">6</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 最高分展示 -->
+  <view class="high-score-section">
+    <view class="score-badge">
+      <text class="score-label">最高分</text>
+      <text class="score-value">{{highestScore}}</text>
+    </view>
+  </view>
+
+  <!-- PK模式提示 -->
+  <view class="pk-notice" wx:if="{{showPKNotice}}">
+    <text>好友向你发起挑战！TA得了 {{pkScore}} 分</text>
+  </view>
+
+  <!-- 按钮区域 -->
+  <view class="btn-section">
+    <button class="btn-start animate-pulse" bindtap="startGame">
+      <text class="btn-icon">▶</text>
+      <text>开始闯关</text>
+    </button>
+
+    <button class="btn-pk" bindtap="startPK">
+      <text class="btn-icon">👥</text>
+      <text>好友PK</text>
+    </button>
+
+    <button class="btn-rules" bindtap="showRules">
+      <text class="btn-icon">📖</text>
+      <text>游戏规则</text>
+    </button>
+
+    <button class="btn-rank" bindtap="viewPK">
+      <text class="btn-icon">🏆</text>
+      <text>PK记录</text>
+    </button>
+  </view>
+
+  <!-- 底部装饰 -->
+  <view class="ground-section">
+    <view class="retro-ground">
+      <view class="ground-line"></view>
+      <view class="ground-line"></view>
+      <view class="ground-line"></view>
+    </view>
+  </view>
+
+  <!-- 分享提示 -->
+  <view class="share-hint">
+    <text>分享给好友，一起PK吧！</text>
+  </view>
+</view>

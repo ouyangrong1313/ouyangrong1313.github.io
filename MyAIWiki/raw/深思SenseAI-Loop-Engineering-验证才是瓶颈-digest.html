@@ -1,0 +1,111 @@
+<h1 id="my-thoughts-on-loop-engineering原文摘要">My Thoughts on Loop Engineering(原文摘要)</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+<p>Loop 工程的真正瓶颈不是生成器(编排),而是验证器(闸门)——<strong>一个 loop = 生成器 + 验证器,瓶颈从来在验证器这一侧</strong>;今天真正出活的是带评估闸门的封闭循环,而不是烧 token 的开放循环。</p>
+
+<h2 id="8-条核心观点">8 条核心观点</h2>
+
+<ol>
+  <li><strong>Loop = 生成器 + 验证器</strong>:被当成”循环工程”在卖的那个技能是真的,只是它瞄错了系统的一半——设计编排现在简单,工具基本替你做了;还难、还得手动、还真正决定结果的是评估闸门。</li>
+  <li><strong>开放循环 vs 封闭循环</strong>:开放循环给大片探索空间,真正新颖的产出来自这里,但烧 token + 评判标准一松就变废料机;封闭循环钉死步骤/评估/停止条件,能在正常预算下跑完。<strong>今天真正能出结果的是封闭循环</strong>——评估闸门挡住”自信的错误答案”传下一轮。</li>
+  <li><strong>“那个框,才是产品”</strong>:大部分讲循环画”发现-规划-执行-验证”图,但没人对”验证”框说具体的。<strong>其余的都是管道,验证框才是产品</strong>。</li>
+  <li><strong>内循环成熟,外循环半残</strong>:内循环(任务内:改完→写测试→跑→修边界→全绿)大多数 agent 都会做;外循环(跨会话:失败教训写进 SKILL.md/AGENTS.md,下次读到从一开始做对)只搭了一半——把对的教训、用对的颗粒度、写到对的地方比听起来难得多,大量价值正摊在这块桌子上没人捡。</li>
+  <li><strong>“先仪表化闸门再去扩大循环”</strong>:你没法改进一个你没在测量的循环。<strong>先把闸门仪表化,再去扩大循环</strong>——否则只是在更快地生成错误答案。</li>
+  <li><strong>Bun 75 万行 Zig → Rust 案例</strong>:Jarred Sumner 用 Claude Code 动态工作流移植,11 天合并,99.8% 现有测试通过;但 Anthropic 自家说”还没上生产”——Samuel 说这是整个发布里最诚实的一句话。<strong>绿色 ≠ 正确</strong>。</li>
+  <li><strong>“产出的质量被验证器的质量封顶”</strong>:99.8% 通过已有测试 = 跑分结果(只说明复现了旧测试早就描述过的行为);生产 = 那些还没人写过测试的行为。这条鸿沟是整个行业反复栽进去的。</li>
+  <li><strong>“别再设计提示词,去设计验证者”</strong>:agent 时代的管理 = 设计约束(验证闸门),和管人是同一件事。深思圈补刀:写作/策略/设计/品味这些”验证者无法降维成自动闸门”的领域,你以为在搭循环,其实只是把”自己看一眼”换了个名字;外循环的”持久化教训”判断哪条对也是验证问题。</li>
+</ol>
+
+<h2 id="关键数字参数">关键数字/参数</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>项</th>
+      <th>数字/范围</th>
+      <th>用途</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Loop 组成</td>
+      <td>1 个生成器 + 1 个验证器</td>
+      <td>形式化定义</td>
+    </tr>
+    <tr>
+      <td>Bun 移植规模</td>
+      <td>~75 万行 Rust 代码</td>
+      <td>旗舰案例</td>
+    </tr>
+    <tr>
+      <td>Bun 移植耗时</td>
+      <td>Anthropic: 11 天合并 / Sumner 自述: 6 天</td>
+      <td>效率指标</td>
+    </tr>
+    <tr>
+      <td>Bun 测试通过率</td>
+      <td>99.8%</td>
+      <td>跑分结果</td>
+    </tr>
+    <tr>
+      <td>内循环检查数</td>
+      <td>≥ 1(写测试+跑测试+修边界)</td>
+      <td>弱/强 agent 区别</td>
+    </tr>
+    <tr>
+      <td>经验值</td>
+      <td>矛盾不在,内循环已成熟,外循环还半残</td>
+      <td>价值分布判断</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="核心金句">核心金句</h2>
+
+<ol>
+  <li><strong>“一个 loop = 生成器 + 验证器,而瓶颈从来在验证器这一侧。”</strong>(全文核心命题)</li>
+  <li><strong>“那个框,才是产品。其余的都是管道。”</strong>(验证 vs 编排)</li>
+  <li><strong>“一个跑成绿色的循环,不是一个正确的循环。它只是一个满足了你给它的那个验证器的循环。产出的质量,被那个验证器的质量封顶——一分都高不上去。”</strong>(绿色 ≠ 正确)</li>
+  <li><strong>“你没法改进一个你没在测量的循环。先把闸门仪表化,再去扩大循环——否则你只是在更快地生成错误答案。”</strong>(测量前置)</li>
+  <li><strong>“别再设计提示词,去设计验证者。别再盯着提示词——真正该被精心设计的,是那道验证闸门。”</strong>(agent 时代的管理本质)</li>
+  <li><strong>“在你给 AI 套上循环之前,先老实问自己一句——这件事,我有没有一个真能信的验证器?没有的话,自动化的不是产出,是更快的错。”</strong>(深思圈补刀)</li>
+</ol>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游(基于 / 来自)</h3>
+<ul>
+  <li><strong>Boris Cherny 六月大会讲话</strong>:Claude Code 负责人 Boris Cherny 自己已不写提示词,”另一个 Claude”在写,管理几百到上千 agent</li>
+  <li><strong>Addy Osmani Loop Engineering 5+1 积木</strong>:工具链已基本覆盖编排</li>
+  <li><strong>Claude Code 动态工作流</strong>:让 Claude 现写 Harness 的 Loop 实现</li>
+  <li><strong>Claude Code 首席设计师 Meaghan Choi 工作流</strong>:worktree 并行 + 自动巡逻</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游(应用于 / 验证于)</h3>
+<ul>
+  <li><strong>Bun 75 万行 Zig → Rust 移植案例</strong>:Jarred Sumner 11 天 / 99.8% 测试通过 / 仍未上生产</li>
+  <li><strong>Anthropic 公告附注”未上生产”</strong>:最诚实的一句话</li>
+</ul>
+
+<h3 id="同级横向--并列">同级(横向 / 并列)</h3>
+<ul>
+  <li>既有 Loop 主线:[[Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解-把反馈循环放进工程现场]] / [[APPSO-Codex-Claude-Code-Loop-Engineering]]</li>
+  <li>既有 Harness 主线:[[Harness工程AgentLoop]] / [[HarnessEngineering企业级实战]] / [[0xCodez-Agent-Harness-14-Steps]] / [[harness-engineering]]</li>
+  <li>阿里妹同源:[[阿里云开发者-淘宝主播Agent的Harness工程实战]] Harness = 骨架 / Loop = 循环 / 闸门 = 验证</li>
+  <li>评测主线:[[腾讯-AI-Agent-Skill-测评方案落地]] “测评是 Agent 从 Demo 可用走向生产可靠必须跨过的门槛”</li>
+  <li>治理薄壳:[[陈进-读完Agent-Loop工程手册-我有8个还没想明白的问题]]</li>
+  <li>Claude Code 一手:[[Claude-Code一周年回顾-Boris-Cat]] / [[Claude-Code首席设计师Meaghan-Choi工作流]]</li>
+  <li>自进化:[[Skill-Self-Evolution]] 外循环的”持久化教训”是 Skill 自进化的核心</li>
+</ul>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li>原文为英文,本文为深思 SenseAI 翻译/编译 + 补刀,核心内容 90% 来自 Samuel McDonnell</li>
+  <li>深思圈”补刀”价值极高(写作/策略/设计/品味领域验证者无法降维 + 错的教训持久化会毒化)</li>
+  <li>文章清洗后字节数 2773,本身就短,信息密度高</li>
+  <li>“外循环还半残”是经验判断,未给具体”还差多少”度量</li>
+  <li>“99.8% 通过”是跑分结果,Anthropic 未给”生产测试覆盖率”对比数据</li>
+  <li>Bun 移植的”独立反驳层 agent”实际起多大作用,未给拆解数据</li>
+  <li>“内循环成熟”未给跨模型对比(如 Sonnet vs Opus vs GPT-5)</li>
+</ul>

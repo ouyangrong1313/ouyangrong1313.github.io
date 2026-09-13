@@ -1,0 +1,144 @@
+<h1 id="原文摘要">原文摘要</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<p>Anthropic 拿 2025-10 到 2026-04 期间 40 万场 Claude Code 真实会话（含 23.5 万用户）分析发现：AI 正在降低编程门槛，但没有降低专业门槛——专家每次提示能让 Claude 触发 12 个动作输出 3200 词，新手只能触发 5 个动作输出 600 词，<strong>专业知识没贬值，反而获得了杠杆</strong>。</p>
+
+<h2 id="8-条核心观点">8 条核心观点</h2>
+
+<ol>
+  <li><strong>核心命题</strong>：AI 降低编程门槛 ≠ 降低专业门槛；不会写代码没关系，但你必须能精准表达任务、知道让 AI 验证什么、能发现纠正 AI 错误。</li>
+  <li><strong>9 类工作模式分布</strong>：修 Bug 26% + 构建新东西 25% + 运行软件 17% + 文档演示 10% + 理解系统 7% + 规划变更 7% + 编排 Agent 3% + 数据分析 3% + 测试 2%——Claude Code 已是”完整任务链”工具。</li>
+  <li><strong>代码结构</strong>：48% 会话主要改已有代码 + 17% 探索代码 + 14% 从零创建 + 21% 完全不碰代码——Agentic Coding 改的是”工作流”不是”写几行代码”。</li>
+  <li><strong>70/20 决策分工</strong>：人做 70% 规划决策（做什么/什么方法/什么算完成），Claude 做 80% 执行决策（改哪些文件/写什么代码/跑什么命令）。</li>
+  <li><strong>核心金句</strong>：”People decide what to build, and the agent decides how to build it.”</li>
+  <li><strong>专家 3 信号</strong>（按任务而非按职位）：①精准表达任务 ②知道该让 AI 验证什么 ③能发现并纠正 AI 错误。</li>
+  <li><strong>杠杆数据</strong>：新手 1 次提示 = 5 动作 + 600 词；专家 1 次提示 = 12 动作 + 3200 词——专家不是自己干得多，是让 AI 干得多。</li>
+  <li><strong>任务结构变化</strong>：2025-10 → 2026-04 智能体应用正从”修 Bug 工具”演化为”端到端工作工具”。</li>
+</ol>
+
+<h2 id="关键参数--数据卡">关键参数 / 数据卡</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>指标</th>
+      <th>数值</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>分析会话数</td>
+      <td>40 万场</td>
+    </tr>
+    <tr>
+      <td>覆盖用户数</td>
+      <td>23.5 万</td>
+    </tr>
+    <tr>
+      <td>数据窗口</td>
+      <td>2025-10 ~ 2026-04</td>
+    </tr>
+    <tr>
+      <td>修复问题占比</td>
+      <td>26%</td>
+    </tr>
+    <tr>
+      <td>构建新东西占比</td>
+      <td>25%</td>
+    </tr>
+    <tr>
+      <td>改已有代码占比</td>
+      <td>48%</td>
+    </tr>
+    <tr>
+      <td>从零创建占比</td>
+      <td>14%</td>
+    </tr>
+    <tr>
+      <td>完全不碰代码</td>
+      <td>21%</td>
+    </tr>
+    <tr>
+      <td>规划决策（人）</td>
+      <td>70%</td>
+    </tr>
+    <tr>
+      <td>执行决策（AI）</td>
+      <td>80%</td>
+    </tr>
+    <tr>
+      <td>新手 1 次提示</td>
+      <td>5 动作 / 600 词</td>
+    </tr>
+    <tr>
+      <td>专家 1 次提示</td>
+      <td>12 动作 / 3200 词</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="决策树你是哪类人">决策树：你是哪类人</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre>AI 时代你是哪类人？
+├── 能不能精准表达任务？
+│   ├── 不能 → 你的"问题描述"就是你的瓶颈
+│   └── 能 ↓
+├── 知道该让 AI 验证什么？
+│   ├── 不知道 → 你做的是"AI 代笔"不是"AI 协作"
+│   └── 知道 ↓
+├── 能不能发现纠正 AI 错误？
+│   ├── 不能 → 你被 AI 卖了还在帮 AI 数钱
+│   └── 能 → **你是专家**（不论职位/资历/年龄）
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="核心金句-5-条">核心金句 5 条</h2>
+
+<ul>
+  <li>“<strong>AI 正在降低编程门槛，但没有降低专业门槛</strong>。”</li>
+  <li>“<strong>People decide what to build, and the agent decides how to build it.</strong>”</li>
+  <li>“<strong>专家不是自己干得更多，而是能让 Claude 干得更多。</strong>”</li>
+  <li>“AI 时代的’专家’不是头衔，而是你是否真正理解手上的问题。”</li>
+  <li>“AI 不是让专业知识不值钱，而是让专业知识拥有了新的杠杆。”</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游--平行组织agent-落地">上游 / 平行（组织/Agent 落地）</h3>
+
+<ul>
+  <li>[[清华沈阳-自进化AI新物种]] — 不可解释但可验证 = 专家才能建”验证器”的具体形态</li>
+  <li>[[章文龙-AI分身时代-在场重新定价]] — “懂业务的人更值钱” = “在场”在企业端的价值回归</li>
+  <li>[[Nikesh-Arora-模型过剩与记忆护城河]] — 模型过剩 vs 专家杠杆，互为正反</li>
+  <li>[[Harness不是目的，知识才是护城河]] — 知识=护城河的具体形态</li>
+  <li>[[Multica-AI-Native-组织-人是最慢的节点]] — “人是最慢节点”vs”专家是最值钱节点”</li>
+</ul>
+
+<h3 id="下游seetong-团队可落地">下游（Seetong 团队可落地）</h3>
+
+<ul>
+  <li>[[AI-PM核心技能-观测评估与反馈闭环]] — 观测评估=专家”知道验证什么”的能力</li>
+  <li>[[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] — Agent 端到端 4 层架构 = “完整任务链”工程化</li>
+  <li>[[0xCodez-Agent-Harness-14-Steps]] — Harness 14 步 = 70/20 决策分工的工程骨架</li>
+  <li>[[Addy-Osmani-Loop-Engineering]] — Loop 闭环需要”专家信号”作为输入</li>
+</ul>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li>原文 4359 字符，”5. 任务结构变化”部分未完全抓取（公众号 SSR 加载限制）</li>
+  <li>报告 PDF 原文未获取，本文数据来自”AI组织进化论”的中文编译</li>
+  <li>“专家 3 信号”为 5 级（novice → expert）的简化版，原文应有更细分级</li>
+  <li>杠杆数据 5/12 动作、600/3200 词——是平均数不是中位数，未给分布</li>
+  <li>报告数据窗口含 2025-10 早期 Claude Code 模型（opus 4 / sonnet 4）阶段，与 2026-06 现状有代差</li>
+</ul>

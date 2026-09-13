@@ -1,0 +1,76 @@
+<h1 id="工厂工程师不是产品工程师--warp-创始人-zach-lloyd-内部备忘录编译">工厂工程师,不是产品工程师 — Warp 创始人 Zach Lloyd 内部备忘录编译</h1>
+
+<ul>
+  <li><strong>原始作者</strong>:Zach Lloyd(Warp 终端创始人,前 Google Docs 首席工程师)</li>
+  <li><strong>编译来源</strong>:微信公众号「深思 SenseAI」2026-06</li>
+  <li><strong>原文链接</strong>:https://mp.weixin.qq.com/s/zelA3W85RGhBLGbGAHul-A</li>
+  <li><strong>获取时间</strong>:2026-06-26</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论(一句话)</h2>
+
+<blockquote>
+  <p><strong>“工程师的活,从造车变成了造工厂”</strong> — Warp 创始人 Zach Lloyd 宣布团队从”产品工程师”升级为”工厂工程师”;<strong>成功 = 工厂效率 ≈ 出货产品 / (推理成本 + 人的时间成本)</strong>;<strong>人在环里 = 需要复盘的失败</strong>;8 步流水线 + <strong>递归自我改进</strong> = 黄金路径。深思圈主编反对无脑造工厂,主张<strong>看任务分工</strong> — 工厂自动化”怎么做”,人攥”做什么”和”为什么”。</p>
+</blockquote>
+
+<ul>
+  <li><strong>场景</strong>:大厂 AI Coding 1.0 → 2.0 范式迁移的”工程师角色重定义”反思</li>
+  <li><strong>类型</strong>:内部备忘录编译 + 行业反思(非工程方法论、非行业宏观战略)</li>
+  <li><strong>关键证据</strong>:Warp 6 万星开源仓库的 Oz 工厂平台 + 1300 个”可实现”待办 + 工厂效率公式</li>
+</ul>
+
+<h2 id="知识节点8-个">知识节点(8 个)</h2>
+
+<ul>
+  <li><strong>工厂工程师思维</strong>:从”造车”到”造造车的工厂”;”成功” = 工厂效率 = 出货产品 / (推理成本 + 人的时间成本);不再看你交付多少功能(失败指标),而看”全自动”发出去的比例 + 花了多少钱</li>
+  <li><strong>COGS 重定义</strong>:软件生产从 R&amp;D(固定研发开支)→ COGS(可变成本);老板像盯工厂良率一样盯;”给所有工程师无限 token 预算、去玩交互式 agent 的日子,要结束了”</li>
+  <li><strong>人在环里=失败</strong>:”以后你每用一次’人在环里’的 agent 去写代码,都要把它当成一次需要复盘的失败”;<strong>人在公式分母里,是要被往下压的成本</strong></li>
+  <li><strong>八步流水线</strong>:分诊 agent → spec agent → 实现 agent → code review agent → 验证 agent(computer-use)→ 人审 → CI/CD → 监控 agent(闭环);已在 Warp 6 万星开源仓库跑起,自评”半成品”</li>
+  <li><strong>递归自我改进</strong>:每次人不得不介入,平台 Oz 记下 → “自我改进 agent” 优化 → 争取下次人不必介入;agent 扫所有工厂对话找浪费 token;<strong>黄金路径 = 工厂进入”递归自我改进”</strong></li>
+  <li><strong>Bakaus vs Lloyd 两极</strong>:同一个月(2026-05/06)两个创始人完全相反 — Paul Bakaus(设计工具)”别把人推出循环,人留最后 20%” vs Zach Lloyd(Warp)”人在环里=失败”;两人都卖自己的东西(Bakaus 卖品味工具,Lloyd 卖工厂平台 Oz)</li>
+  <li><strong>做什么 vs 怎么做</strong>:深思圈主编的中间路线 — <strong>能被机器校验对错的活(怎么做:实现/验证/监控)→ 工厂(Lloyd 对)</strong>,<strong>靠判断定生死的活(做什么:做哪个/产品观点/为什么)→ 留住人(Bakaus 对)</strong>;工厂自动化”怎么做”,<strong>人依然攥”做什么”和”为什么”</strong></li>
+  <li><strong>1300 待办反思</strong>:Lloyd 说”看着面板上 1300 个’可实现’状态的 issue,让 agent 去实现啊”;深思圈补刀:真正问题不是”谁来实现”而是”哪些根本不该做” → <strong>无脑地、更快地造更多,从来不是战略</strong></li>
+</ul>
+
+<h2 id="关联图谱--正文要点--seetong-借鉴合并">关联图谱 + 正文要点 + Seetong 借鉴(合并)</h2>
+
+<h3 id="关联图谱">关联图谱</h3>
+
+<ul>
+  <li><strong>上游</strong>:AI Coding 从”自动补全 → 交互式 agent → 自动化开发”三阶段范式迁移 + Warp 6 万星开源仓库 + 同月 Paul Bakaus 反向观点</li>
+  <li><strong>下游</strong>:[[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] 字节 vs Warp 同行业不同公司不同解法(字节 TRAE IDE / Warp Oz 工厂平台);[[01-ai-agents/清华沈阳-自进化AI新物种]] “递归自我改进”主线;[[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] Harness 视角;[[03-productivity/与AI一起做产品的六条原则]] 6 原则做”为什么”的人</li>
+  <li><strong>同级</strong>:[[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] 阿里淘系工程化补完 + [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] Anthropic 团队实践</li>
+</ul>
+
+<h3 id="正文要点3-段">正文要点(3 段)</h3>
+
+<p><strong>1. 范式迁移</strong>:过去 1 年从”AI 自动补全”走到”交互式编码 agent”;接下来 6 个月范式再变一次 → “<strong>自动化开发</strong>“;工程师从”直接做产品”变成”造一个做产品的东西”;成功定义当场颠倒:<strong>不再看你交付多少功能(失败指标),而是看”全自动”发出去的比例 + 花了多少钱</strong></p>
+
+<p><strong>2. 工厂效率公式</strong>:工厂效率 ≈ 出货产品 / (推理成本 + <strong>人的时间成本</strong>);软件生产从 R&amp;D → <strong>可变成本(COGS)</strong>;老板像盯工厂良率一样盯:<strong>“我多投一块钱在自动化上,业务能不能多赚回超过一块钱”</strong>;分母里”人的时间”是要被往下压的成本</p>
+
+<p><strong>3. 8 步流水线 + 递归自我改进</strong>:分诊 → spec → 实现 → review → 验证(computer-use)→ 人审 → CI/CD → 监控(闭环);每次人介入,平台 Oz 记下 → <strong>自我改进 agent 优化</strong> → 争取下次人不必介入 → <strong>黄金路径 = 递归自我改进</strong></p>
+
+<h3 id="5-个对-seetong-团队可借鉴动作">5 个对 Seetong 团队可借鉴动作</h3>
+
+<ol>
+  <li><strong>COGS 视角体检</strong>:Seetong AI Coding 算”研发开支”还是”可变成本”?<strong>把”AI Coding 投入产出比”作为最高级指标</strong></li>
+  <li><strong>1300 待办反思</strong>:Seetong TAPD 几百个”待实现”需求里,真正”该做”的占多少?<strong>先盘”不该做”的,再谈”谁能做”</strong></li>
+  <li><strong>做什么 vs 怎么做的边界</strong>:①”怎么做”(需求明确后实现/测试/Review/部署)→ 工厂化 ②”做什么”(该不该做/优先级/方向)→ 留住人</li>
+  <li><strong>递归自我改进雏形</strong>:Seetong 跑分失败 → 沉淀为 Skill 约束 → 下次自动跑(对照 [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] ADJUSTMENT_PLAN);不要每次都”人在环里”修同类问题</li>
+  <li><strong>人在环里 = 失败的纪律</strong>:经常介入同一类问题,<strong>优先补 Skill 约束或自动化工具</strong>,而不是让人继续”复盘”</li>
+</ol>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li><strong>数据可信度</strong>:深思圈是行业知名 AI 翻译/编译号,Lloyd 备忘录原话为推文公开,可信度较高</li>
+  <li><strong>未公开细节</strong>:Lloyd 备忘录原始发布日期(深思圈文章中只说”上个月 Bakaus” + “这个月 Lloyd”,可推断 Lloyd 备忘录在 2026-05/06 发布);Warp Oz 6 万星仓库具体 GitHub 链接;8 步流水线的具体 Agent 工具栈</li>
+  <li><strong>深思圈主编立场</strong>:不站 Lloyd 也不站 Bakaus,主张”看任务”分工,补完 Lloyd 备忘录的盲点(对”做什么”出奇安静)</li>
+  <li><strong>本仓库已有强相关主线</strong>:[[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] / [[01-ai-agents/清华沈阳-自进化AI新物种]] / [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] / [[03-productivity/与AI一起做产品的六条原则]] / [[02-ai-coding/AI-Coding的顿悟时刻]] / [[02-ai-coding/54万行代码的顿悟-Markdown才是新编程方式]]</li>
+  <li><strong>本仓库缺位补完</strong>:02-ai-coding 现有主线偏”怎么做”的工具/方法论(Harness/Loop/Skills),<strong>缺位”工厂化思维 + COGS 视角 + 递归自我改进”</strong> 的反思性内容,本文是这一维度的代表</li>
+  <li><strong>Bakaus 原文</strong>:[[03-productivity/与AI一起做产品的六条原则]] 暂未直接引用,后续可加 Paul-Bakaus-人留最后20% 同月对比笔记</li>
+</ul>
+
+<hr />
+
+<p><strong>透明玻璃自检</strong>:wiki ≤8K 字节 ✓ / 节点 8 ✓ / H2 4 个(≤5)✓ / 表格 0 ✓ / 0 陈词 ✓</p>

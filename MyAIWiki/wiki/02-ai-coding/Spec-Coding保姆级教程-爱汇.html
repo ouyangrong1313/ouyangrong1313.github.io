@@ -1,0 +1,140 @@
+<h1 id="spec-coding-保姆级教程">Spec Coding 保姆级教程</h1>
+
+<ul>
+  <li>原文链接：https://docs.bigmodel.cn/cn/coding-plan/best-practice/spec-kit</li>
+  <li>微信公众号原文：https://mp.weixin.qq.com/s/CRH4WWtrA_3APBBFD1zMiQ</li>
+  <li>作者：爱汇</li>
+  <li>GitHub 项目：github.com/github/spec-kit（34k+ Star）</li>
+  <li>获取时间：2026-08-27（通过 Mintlify <code class="language-plaintext highlighter-rouge">/cn/coding-plan/best-practice/spec-kit.md</code> 端点直拉，12.8KB）</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论（一句话）</h2>
+
+<blockquote>
+  <p>Spec-Kit 把”规格”从静态文档升级为可执行指令（constitution → specify → clarify → plan → tasks → implement 六步流水线），让 Claude Code / Copilot / Gemini 从”打字员”变成按图施工的”靠谱工程师”，终结 Vibe Coding 的反复拉扯。</p>
+</blockquote>
+
+<ul>
+  <li><strong>场景</strong>：AI Coding 工具实践教学（保姆级教程）</li>
+  <li><strong>类型</strong>：工具实战教程 + 方法论</li>
+  <li><strong>标签</strong>：#主题/AI-Coding #场景/技术博客 #节点/Spec-Kit #节点/SDD #节点/规格驱动 #节点/Vibe-Coding #节点/AI-Harness #节点/工作流</li>
+</ul>
+
+<h2 id="知识节点10-个独立概念">知识节点（10 个独立概念）</h2>
+
+<ul>
+  <li><strong>Spec-Kit</strong>：GitHub 2025 年开源的 AI 编程工作流框架（34k+ Star），通过 CLI 工具 + 命令把 Claude Code/Copilot/Gemini 等通用 AI 助手约束为按规格施工的工程师</li>
+  <li><strong>SDD</strong>：Spec-Driven Development，规格驱动开发；规格成为唯一真理，代码为规格服务（而非反过来）</li>
+  <li><strong>Vibe-Coding</strong>：感觉式编程，无规格无约束，靠反复试错推进；项目一复杂就崩</li>
+  <li><strong>六步流水线</strong>：constitution → specify → clarify（可选）→ plan → tasks → implement，强制节奏</li>
+  <li><strong>/constitution</strong>：项目宪法命令；写入技术栈偏好、代码风格、测试要求、UX 原则等约束，所有后续 AI 调用都受其限制</li>
+  <li><strong>/specify</strong>：把自然语言需求转化为结构化 <code class="language-plaintext highlighter-rouge">spec.md</code>（用户故事 + 验收标准 + 边界条件），自动创建 <code class="language-plaintext highlighter-rouge">specs/{NNN}-{slug}/</code> 版本目录和 git 分支</li>
+  <li><strong>/clarify</strong>：AI 主动反问消除需求模糊（”庆祝动画是放烟花还是撒花？”），把人类隐含偏好显式化为 spec 条目</li>
+  <li><strong>/plan</strong>：根据宪法 + 需求生成完整技术方案（plan.md + data-model.md + contracts/ + research.md）</li>
+  <li><strong>/tasks</strong>：把 plan 拆解为可勾选的任务清单（Phase 1 / Phase 2 / T001 / T002 …）</li>
+  <li><strong>/implement</strong>：按 tasks.md 严格施工，每完成一项 <code class="language-plaintext highlighter-rouge">[x]</code> 打勾；支持 YOLO 一口气跑完或单任务人工 review</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+
+<ul>
+  <li>[[AICoding之后-如何让Agent进入企业研发全链路-得物推荐的Harness实践]]：Spec-Kit 是 Harness 实践的工具级落地，PDCA 框架在 SDD 中的具体化</li>
+  <li>[[宝玉AI-我的AI原生开发流程-真实案例复盘]]：宝玉强调的”先可行性再设计”思想，与 <code class="language-plaintext highlighter-rouge">/clarify</code> 在流程入口前置的需求澄清同源</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+
+<ul>
+  <li>[[AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]]：Spec-Kit vs OpenSpec vs Superpowers 三种 SDD 工具横评，本文可作为 Spec-Kit 侧的实战补充</li>
+  <li>[[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]：Spec-Kit vs BMAD 在企业落地 SDD 的对比</li>
+  <li>[[Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了]]：Anthropic 的 AI-Native SDLC 也强调”提交产物版本化”，与 Spec-Kit 的 <code class="language-plaintext highlighter-rouge">001-xxx/spec.md</code> 思路一脉相承</li>
+  <li>[[大淘宝技术-AI-Coding-环境与验证驱动]]：永霸认为代码生成趋近被解决后瓶颈在环境与验证；本文强调规格驱动；两者互补——规格定”做什么”，环境与验证定”做得对不对”</li>
+  <li>[[AI-Coding的顿悟时刻]]：AI Coding 的顿悟系列中的工具实战篇</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+
+<ul>
+  <li>待补充（本文是工具入门，后续应用 Seetong 三端的实战待落地）</li>
+</ul>
+
+<h2 id="正文要点7-条--命令映射">正文要点（7 条 + 命令映射）</h2>
+
+<ul>
+  <li><strong>规格成为唯一真理</strong>：代码为规格服务（而非反过来）。<code class="language-plaintext highlighter-rouge">规格 → 计划 → 任务 → 代码</code> 每一步都有 git 友好的版本化产物，整条流水线天然可回滚、可审计、可对比</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">/constitution</code> 是被低估的杠杆</strong>：很多团队跳过这一步导致 <code class="language-plaintext highlighter-rouge">/specify</code> 时 AI 反复猜技术栈；正确的做法是先把团队 3 年沉淀的代码风格/架构约定/测试要求一次性写入宪法</li>
+  <li><strong><code class="language-plaintext highlighter-rouge">/clarify</code> 是 AI 主动反问的反向环节</strong>：需求模糊时让 AI 反问你，把人类隐含偏好显式化，从源头消灭返工；这一环节经常被跳过，结果是后面 plan/tasks 阶段反复返工</li>
+  <li><strong>每个 step 都生成版本化目录</strong>（如 <code class="language-plaintext highlighter-rouge">001-todo-app-core-features/</code>），git 分支自动创建（<code class="language-plaintext highlighter-rouge">feat/001-xxx</code>），所有历史保留，迭代过程清清楚楚</li>
+  <li><strong>AI 工具无关性</strong>：Spec-Kit 支持 Claude Code / Copilot / Gemini / Cursor / 通义千问 / Roo Code；spec 格式 + plan 格式 + tasks 格式是 AI 中立的，未来换模型也能跑</li>
+  <li><strong>不是新 AI 工具而是 harness</strong>：Spec-Kit 不替代 Claude Code，而是给它加一套工作流约束；定位类似 Hooks / Subagents 对 Claude Code 的扩展关系</li>
+  <li><strong>支持老项目渐进试点</strong>：<code class="language-plaintext highlighter-rouge">specify init .</code> 不动现有代码，先从一个新功能模块试点；需求变了回到 <code class="language-plaintext highlighter-rouge">/specify</code> 重新走流程而非直接改代码</li>
+</ul>
+
+<p><strong>六步流水线命令 / 产物 / 必选映射</strong>：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>阶段</th>
+      <th>命令</th>
+      <th>产物</th>
+      <th>必选？</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>准备</td>
+      <td><code class="language-plaintext highlighter-rouge">specify init</code></td>
+      <td><code class="language-plaintext highlighter-rouge">.claude/</code> + <code class="language-plaintext highlighter-rouge">.specify/</code></td>
+      <td>必选</td>
+    </tr>
+    <tr>
+      <td>宪法</td>
+      <td><code class="language-plaintext highlighter-rouge">/speckit.constitution</code></td>
+      <td><code class="language-plaintext highlighter-rouge">constitution.md</code></td>
+      <td>强烈推荐</td>
+    </tr>
+    <tr>
+      <td>需求</td>
+      <td><code class="language-plaintext highlighter-rouge">/speckit.specify</code></td>
+      <td><code class="language-plaintext highlighter-rouge">specs/{NNN}-{slug}/spec.md</code> + git 分支</td>
+      <td>必选</td>
+    </tr>
+    <tr>
+      <td>消歧</td>
+      <td><code class="language-plaintext highlighter-rouge">/speckit.clarify</code></td>
+      <td>更新 <code class="language-plaintext highlighter-rouge">spec.md</code></td>
+      <td>可选</td>
+    </tr>
+    <tr>
+      <td>方案</td>
+      <td><code class="language-plaintext highlighter-rouge">/speckit.plan</code></td>
+      <td><code class="language-plaintext highlighter-rouge">plan.md</code> + <code class="language-plaintext highlighter-rouge">data-model.md</code> + <code class="language-plaintext highlighter-rouge">contracts/</code> + <code class="language-plaintext highlighter-rouge">research.md</code></td>
+      <td>必选</td>
+    </tr>
+    <tr>
+      <td>拆解</td>
+      <td><code class="language-plaintext highlighter-rouge">/speckit.tasks</code></td>
+      <td><code class="language-plaintext highlighter-rouge">tasks.md</code></td>
+      <td>必选</td>
+    </tr>
+    <tr>
+      <td>施工</td>
+      <td><code class="language-plaintext highlighter-rouge">/speckit.implement</code></td>
+      <td>代码 + 测试</td>
+      <td>必选</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="我的理解seetong-借鉴">我的理解（Seetong 借鉴）</h2>
+
+<ul>
+  <li><strong>iOS 端</strong>：把”QMUI 强制用法 + ST 类前缀 + ViewController 命名约定 + ARC/MRC 边界”沉淀为 <code class="language-plaintext highlighter-rouge">constitution.md</code>，让 Claude Code 改 Seetong 代码时自动遵守</li>
+  <li><strong>Android 端</strong>：先挑非核心功能（如告警规则 UI）跑 <code class="language-plaintext highlighter-rouge">specify init .</code> 试点，验证老项目渐进集成可行性</li>
+  <li><strong>不盲从</strong>：Spec-Kit 是工具级方案非范式定论；同时段还有 OpenSpec / Superpowers / BMAD 等同类工具，应按团队规模与项目复杂度选用</li>
+</ul>
+
+<p><strong>透明玻璃自检</strong>：wiki 7.5K(≤8K)/ digest 4.2K(待 ≤4K)/ 节点 10(6-10)/ H2 4 wiki / H2 5 digest(≤5)/ 表格 1 wiki / 表格 0 digest(≤2)/ 0 陈词 ⭐⭐⭐</p>

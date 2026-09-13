@@ -1,0 +1,248 @@
+/**
+ * 童年跳房子大挑战 - 好友PK页样式
+ * pages/pk/pk.wxss
+ */
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #87CEEB 0%, #B0E0E6 30%, #FFF8DC 100%);
+  padding: 30rpx;
+}
+
+/* 头部 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.btn-back {
+  background: rgba(255, 255, 255, 0.8);
+  border: 3rpx solid #FF6B6B;
+  border-radius: 30rpx;
+  padding: 15rpx 30rpx;
+  font-size: 26rpx;
+  color: #FF6B6B;
+  font-weight: bold;
+}
+
+.page-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #5D4E37;
+}
+
+.btn-clear {
+  background: rgba(255, 107, 107, 0.1);
+  border: 3rpx solid #FF6B6B;
+  border-radius: 30rpx;
+  padding: 15rpx 30rpx;
+  font-size: 24rpx;
+  color: #FF6B6B;
+}
+
+.placeholder {
+  width: 120rpx;
+}
+
+/* 我的最高分卡片 */
+.my-score-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 30rpx;
+  padding: 40rpx;
+  margin-top: 20rpx;
+  border: 4rpx solid #4ECDC4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10rpx 40rpx rgba(78, 205, 196, 0.2);
+}
+
+.my-score-content {
+  display: flex;
+  align-items: baseline;
+  gap: 10rpx;
+}
+
+.my-score-label {
+  font-size: 26rpx;
+  color: #888;
+}
+
+.my-score-value {
+  font-size: 56rpx;
+  font-weight: bold;
+  color: #FF6B6B;
+}
+
+.my-score-unit {
+  font-size: 28rpx;
+  color: #FF6B6B;
+}
+
+.btn-share-pk {
+  background: linear-gradient(135deg, #4ECDC4 0%, #7EDDD6 100%);
+  color: white;
+  border: none;
+  border-radius: 30rpx;
+  padding: 20rpx 30rpx;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+
+/* 空状态 */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100rpx;
+}
+
+.empty-icon {
+  font-size: 100rpx;
+  margin-bottom: 30rpx;
+}
+
+.empty-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #5D4E37;
+  margin-bottom: 15rpx;
+}
+
+.empty-desc {
+  font-size: 26rpx;
+  color: #888;
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 50rpx;
+}
+
+.btn-start-pk {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+  color: white;
+  border: none;
+  border-radius: 50rpx;
+  padding: 25rpx 60rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  box-shadow: 0 8rpx 25rpx rgba(255, 107, 107, 0.4);
+}
+
+/* 记录列表 */
+.records-section {
+  margin-top: 40rpx;
+}
+
+.section-title {
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #5D4E37;
+  margin-bottom: 25rpx;
+  display: block;
+}
+
+.records-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20rpx;
+}
+
+.record-item {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25rpx;
+  padding: 30rpx;
+  display: flex;
+  align-items: center;
+  gap: 25rpx;
+  border: 4rpx solid #FFE4E1;
+}
+
+/* 结果标识 */
+.record-result {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.record-result text {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: white;
+}
+
+.record-result.win {
+  background: linear-gradient(135deg, #4ECDC4 0%, #7EDDD6 100%);
+}
+
+.record-result.lose {
+  background: linear-gradient(135deg, #DDA0DD 0%, #EE82EE 100%);
+}
+
+.record-result.draw {
+  background: linear-gradient(135deg, #FFE66D 0%, #FFD93D 100%);
+}
+
+.record-result.draw text {
+  color: #5D4E37;
+}
+
+/* 分数对比 */
+.record-scores {
+  display: flex;
+  align-items: center;
+  gap: 20rpx;
+  flex: 1;
+}
+
+.score-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score-num {
+  font-size: 36rpx;
+  font-weight: bold;
+}
+
+.score-label {
+  font-size: 20rpx;
+  color: #888;
+}
+
+.score-side.opponent .score-num {
+  color: #DDA0DD;
+}
+
+.score-side.mine .score-num {
+  color: #4ECDC4;
+}
+
+.vs {
+  font-size: 24rpx;
+  font-weight: bold;
+  color: #888;
+}
+
+/* 日期 */
+.record-date {
+  font-size: 20rpx;
+  color: #888;
+}
+
+/* 底部提示 */
+.bottom-tip {
+  margin-top: 40rpx;
+  text-align: center;
+}
+
+.bottom-tip text {
+  font-size: 24rpx;
+  color: rgba(93, 78, 55, 0.6);
+}
