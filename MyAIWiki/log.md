@@ -410,6 +410,73 @@
 
 ---
 
+## 2026-09-14
+### ingest | 面试官：讲一讲多 Agent 协作如何保持一致性
+- 来源：https://mp.weixin.qq.com/s/XnSQdFpG-MdbctvLtHiMMA
+- 原文：raw/架构师-多Agent协作一致性-任务状态与证据.md
+- 拆解：raw/架构师-多Agent协作一致性-任务状态与证据-digest.md
+- wiki：wiki/01-ai-agents/架构师-多Agent协作一致性-任务状态与证据.md
+- wiki 速读：wiki/01-ai-agents/架构师-多Agent协作一致性-任务状态与证据-digest.md
+- 标签： #主题/AI-Agent #主题/多Agent #主题/一致性 #主题/Harness #主题/分布式系统 #场景/工程方法论
+- 说明：已发布；文章围绕任务、事实、状态、交接、幂等、租约和验收证据展开，外部研究数字保留实验口径。
+### ingest | Anthropic 的设计主管谈通用人工智能极简主义产品设计 | Joel Lewenstein
+- 来源：https://mp.weixin.qq.com/s/KZqYjQx-S1kANrkjkkYraA
+- 原文：raw/晚点再听-Joel-Lewenstein-Anthropic-AGI极简主义产品设计.md
+- 拆解：raw/晚点再听-Joel-Lewenstein-Anthropic-AGI极简主义产品设计-digest.md
+- wiki：wiki/03-productivity/晚点再听-Joel-Lewenstein-Anthropic-AGI极简主义产品设计.md
+- wiki 速读：wiki/03-productivity/晚点再听-Joel-Lewenstein-Anthropic-AGI极简主义产品设计-digest.md
+- 标签： #主题/AI产品设计 #主题/设计师工作流 #主题/原型验证 #主题/人机协作 #场景/播客整理
+- 说明：已发布；正文为晚点再听LaterCast对 South Park Commons 对谈的中文整理，原始访谈链接已保留，观点和案例未独立核验。
+### ingest | 俞敏洪：新东方内部致力于教育和AI结合的研发人员已超过400位
+- 来源：https://mp.weixin.qq.com/s/K2tZG9YmwFgElTqAYKRZwQ
+- 原文：raw/多知-俞敏洪-AI教育与人文关怀.md
+- 拆解：raw/多知-俞敏洪-AI教育与人文关怀-digest.md
+- wiki：wiki/06-ai-tech/多知-俞敏洪-AI教育与人文关怀.md
+- wiki 速读：wiki/06-ai-tech/多知-俞敏洪-AI教育与人文关怀-digest.md
+- 标签： #主题/AI教育 #主题/教育哲学 #主题/AI边界 #主题/人文关怀 #场景/论坛演讲整理
+- 说明：已发布；正文为多知对 2026 崇礼论坛演讲的编辑整理，数字和观点均为文章转述，未独立核验。
+### ingest | 北大分享：AI 让你成为你自己
+- 来源：https://mp.weixin.qq.com/s/1ZQJD4CXX7c05vh263gPZQ
+- 原文：raw/十字路口Crossing-邦比快跑-AI让你成为你自己.md
+- 拆解：raw/十字路口Crossing-邦比快跑-AI让你成为你自己-digest.md
+- wiki：wiki/03-productivity/十字路口Crossing-邦比快跑-AI让你成为你自己.md
+- wiki 速读：wiki/03-productivity/十字路口Crossing-邦比快跑-AI让你成为你自己-digest.md
+- 标签： #主题/AI原生 #主题/个人作品 #主题/知识资产 #主题/创造者 #场景/演讲整理
+- 说明：已发布；正文与演讲内容为公众号整理，网站规模、知识库规模和自动化细节均为演讲者自述，未独立审计。
+### ingest | GitHub三榜第一背后，一个“专升本”工程师的十年
+- 来源：https://mp.weixin.qq.com/s/o82CF-NiDaUg7ebmIiN7Hw
+- 原文：raw/量子位-Archify-涂少坤-专升本工程师十年.md
+- 拆解：raw/量子位-Archify-涂少坤-专升本工程师十年-digest.md
+- wiki：wiki/01-ai-agents/量子位-Archify-涂少坤-专升本工程师十年.md
+- wiki 速读：wiki/01-ai-agents/量子位-Archify-涂少坤-专升本工程师十年-digest.md
+- 标签： #主题/AI-Agent #主题/开源 #主题/独立开发者 #主题/作品证明能力 #场景/人物访谈
+- 说明：已发布；正文在首次编译时出现抓取波动，已重新抓取并确认正文完整，SHA-256 已记录；榜单数据和人物经历为量子位采访转述。
+### ingest | 王阳明：心中有山贼，才是你焦虑内耗的元凶
+- 来源：https://mp.weixin.qq.com/s/em27EXGhOQfi0xIwYCKaRw
+- 原文：raw/王阳明-心中有山贼-焦虑内耗.md
+- 拆解：raw/王阳明-心中有山贼-焦虑内耗-digest.md
+- wiki：wiki/03-productivity/王阳明-心中有山贼-焦虑内耗.md
+- wiki 速读：wiki/03-productivity/王阳明-心中有山贼-焦虑内耗-digest.md
+- 标签： #主题/效率 #主题/心理韧性 #主题/知行合一 #主题/行动主义 #场景/公众号长文
+- 说明：已发布；隔离 Chrome CDP 抓取完整正文；页面未提供稳定作者和绝对日期，正文为王阳明故事的现代化解读并引用度阴山作品。
+### ingest | AI 工程师凭什么能「塑造」一个产品？
+- 来源：https://mp.weixin.qq.com/s/mXhjvhUw_Do8nDWKQbRu3A
+- 原文：raw/非著名程序员-AI工程师塑造产品-能力图谱.md
+- 拆解：raw/非著名程序员-AI工程师塑造产品-能力图谱-digest.md
+- wiki：wiki/02-ai-coding/非著名程序员-AI工程师塑造产品-能力图谱.md
+- wiki 速读：wiki/02-ai-coding/非著名程序员-AI工程师塑造产品-能力图谱-digest.md
+- 标签： #主题/AI-Coding #主题/AI-Native #主题/Shaping-the-Build #主题/产品工程 #场景/公众号长文
+- 说明：已发布；隔离 Chrome CDP 抓取完整正文，原文 SHA-256 已记录；本文为对吴恩达文章的二次解读，原始链接未提供。
+### ingest | 驳斥“程序员一定会被这个时代淘汰，因为程序员除了写代码啥也不会，而他唯一会的东西现在已经被 AI 100% 取代了”
+- 来源：https://mp.weixin.qq.com/s/BTJcpDFa1tRRiWBJZ-XO9Q
+- 原文：raw/宝玉AI-程序员不会被AI淘汰-软件工程师职业重新定义.md
+- 拆解：raw/宝玉AI-程序员不会被AI淘汰-软件工程师职业重新定义-digest.md
+- wiki：wiki/02-ai-coding/宝玉AI-程序员不会被AI淘汰-软件工程师职业重新定义.md
+- wiki 速读：wiki/02-ai-coding/宝玉AI-程序员不会被AI淘汰-软件工程师职业重新定义-digest.md
+- 标签： #主题/AI-Coding #主题/AI-Native #主题/软件工程 #主题/职业迁移 #场景/公众号长文
+- 说明：已发布；隔离 Chrome CDP 抓取完整正文，原文 SHA-256 已记录；主 wiki 含 8 个知识节点、上游/下游/同级关联图谱。
+
+
 ## 2026-09-10
 ### ingest | 《Agent 评测白皮书》系列01：Agent 评测全览
 - 来源：https://mp.weixin.qq.com/s/hBSIPQnsBeWwX9UZLjWYFA

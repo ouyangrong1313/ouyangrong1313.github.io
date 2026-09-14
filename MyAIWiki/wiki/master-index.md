@@ -1,6 +1,22 @@
 # AI 知识库索引
 
 ## 最近更新
+- [面试官：讲一讲多 Agent 协作如何保持一致性](./01-ai-agents/架构师-多Agent协作一致性-任务状态与证据.md) — 2026-09-14
+- [多 Agent 协作一致性 - 速读](./01-ai-agents/架构师-多Agent协作一致性-任务状态与证据-digest.md) — 一致性三件事、可执行交接状态、权威事实、结果契约和局部重试速读。
+- [Anthropic 的设计主管谈通用人工智能极简主义产品设计 | Joel Lewenstein](./03-productivity/晚点再听-Joel-Lewenstein-Anthropic-AGI极简主义产品设计.md) — 2026-09-14
+- [Joel Lewenstein：AI 产品设计与人类取舍 - 速读](./03-productivity/晚点再听-Joel-Lewenstein-Anthropic-AGI极简主义产品设计-digest.md) — 模型驱动规划、原型到使用、代码事实依据、Artifacts 双界面和取舍速读。
+- [俞敏洪：新东方内部致力于教育和AI结合的研发人员已超过400位](./06-ai-tech/多知-俞敏洪-AI教育与人文关怀.md) — 2026-09-14
+- [俞敏洪谈 AI 教育与人文关怀 - 速读](./06-ai-tech/多知-俞敏洪-AI教育与人文关怀-digest.md) — AI 教育突破点、过程重于结果、教师陪伴和 AI 边界速读。
+- [北大分享：AI 让你成为你自己](./03-productivity/十字路口Crossing-邦比快跑-AI让你成为你自己.md) — 2026-09-14
+- [AI 让你成为你自己 - 速读](./03-productivity/十字路口Crossing-邦比快跑-AI让你成为你自己-digest.md) — AI 个人创作、知识库复利、作品与资产、产业链地图和品味判断速读。
+- [GitHub三榜第一背后，一个“专升本”工程师的十年](./01-ai-agents/量子位-Archify-涂少坤-专升本工程师十年.md) — 2026-09-14
+- [Archify 与专升本工程师成长路径 - 速读](./01-ai-agents/量子位-Archify-涂少坤-专升本工程师十年-digest.md) — Archify 产品价值、作品证明能力和独立开发壁垒速读。
+- [王阳明：心中有山贼，才是你焦虑内耗的元凶](./03-productivity/王阳明-心中有山贼-焦虑内耗.md) — 2026-09-14
+- [王阳明与焦虑内耗 - 速读](./03-productivity/王阳明-心中有山贼-焦虑内耗-digest.md) — 等待方式、不等不靠不弃、知行合一、当下可做和直面内耗速读。
+- [AI 工程师凭什么能「塑造」一个产品？](./02-ai-coding/非著名程序员-AI工程师塑造产品-能力图谱.md) — 2026-09-14
+- [AI 工程师塑造产品 - 速读](./02-ai-coding/非著名程序员-AI工程师塑造产品-能力图谱-digest.md) — Shaping the Build、构建循环、产品决策、用户理解和高主动性速读。
+- [驳斥“程序员一定会被这个时代淘汰，因为程序员除了写代码啥也不会，而他唯一会的东西现在已经被 AI 100% 取代了”](./02-ai-coding/宝玉AI-程序员不会被AI淘汰-软件工程师职业重新定义.md) — 2026-09-14
+- [软件工程师职业重新定义 - 速读](./02-ai-coding/宝玉AI-程序员不会被AI淘汰-软件工程师职业重新定义-digest.md) — 软件工程责任、原型与产品、AI 工程门槛、能力迁移和人类验收速读。
 - [《Agent 评测白皮书》系列01：Agent 评测全览](./01-ai-agents/Agent评测白皮书-系列01-Agent评测全览.md) — 2026-09-10
 - [深思圈：让不会用 App 的人自己办业务，Navana 语音 AI 案例](./01-ai-agents/深思圈-Navana-让不会用App的人自己办业务.md) — 2026-09-09：Navana 与 Ujjivan 案例说明语音 AI 的价值在于真实任务完成，而非单次识别；语音、图示、固定流程、首次教学、领域词表和业务数据共同决定可用性。融资、下载、交易和用户数据均为文章转述，未独立审计。
 - [Navana 语音 AI 让不会用 App 的人自己办业务 - 速读](./01-ai-agents/深思圈-Navana-让不会用App的人自己办业务-digest.md) — 任务完成率、多模态引导、有限对话、真实业务验证、首次教学和 Seetong 迁移动作。
@@ -493,6 +509,10 @@
 
 ### AI Coding
 
+- [AI 工程师凭什么能「塑造」一个产品？](./02-ai-coding/非著名程序员-AI工程师塑造产品-能力图谱.md) - Shaping the Build、构建循环、产品决策、用户理解、沟通带队和高主动性。
+- [AI 工程师塑造产品 - Digest](./02-ai-coding/非著名程序员-AI工程师塑造产品-能力图谱-digest.md) - 六节点速读与证据边界。
+- [驳斥“程序员一定会被这个时代淘汰，因为程序员除了写代码啥也不会，而他唯一会的东西现在已经被 AI 100% 取代了”](./02-ai-coding/宝玉AI-程序员不会被AI淘汰-软件工程师职业重新定义.md) - AI 替代编码环节但不替代软件工程；工程师价值上移到问题定义、系统判断、验证标准和结果责任。
+- [软件工程师职业重新定义 - Digest](./02-ai-coding/宝玉AI-程序员不会被AI淘汰-软件工程师职业重新定义-digest.md) - 软件工程责任、原型与产品、AI 工程门槛、能力迁移和人类验收速读。
 - [Garry Tan：个人 AGI 藏在自己的经验代码库里](./02-ai-coding/51CTO-Garry-Tan-个人AGI与经验代码库.md) - 51CTO 对 Garry Tan 演讲的整理：模型可租用，经验代码库才是可积累资产；Skill 承载输入、步骤、禁区与验收，治理重点是相关上下文检索、确定性边界、经验归属、失效和审计。
 - [Garry Tan 个人 AGI 与经验代码库 - Digest](./02-ai-coding/51CTO-Garry-Tan-个人AGI与经验代码库-digest.md) - 8 节点速查 + 5 个落地动作 + 证据边界。
 
@@ -503,6 +523,11 @@
 - [OpenAI Codex 负责人:产品工作的新形态是什么(Capihom 编译 Lenny 播客)](./02-ai-coding/Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态.md) - 微信公众号 Capihom 2026-06-30 编译自 Lenny's Podcast 嘉宾 Andrew Ambrosino(OpenAI Codex app product lead):**实现已经变便宜了,最贵的是品味**——Codex 周活 500 万 / OpenAI 内部 100% 员工用 / 产品流程从 90 份文档倒过来成 90 个原型;**8 节点**(产品流程倒过来/品味-调度能力/选对表达媒介/baby-version-代码库/PM-不能取消/Codex-home-base/别和流程绑定-要和结果绑定/Codex周活500万);**核心金句**("实现已经变便宜了,最贵的是品味"/"我听过很多公司说要取消产品角色,这在我看来是个很糟糕的想法"/"专业工具继续存在,AI 补一层接口"/"别执着于现在的流程,要执着于你独特能交付的结果");**6 个对 Seetong 借鉴动作**(Seetong AI Coding 现状体检 90 文档 vs 90 原型 / taste=Seetong 调度能力 欧阳荣+黄松佳从看代码升级为看 90 个实现哪个抓住问题 / Seetong baby version 试点 内部轻量产品代码库快速试 sidebar/pane/chat 交互 / Seetong App 升级=home base 不重做摄像头 SDK 让 AI 理解任务+调用工具+补接口 / 保存好想法等模型跳一下 主人每月"AI 进步观察"笔记 / PM 角色不被简化 黄松佳区域防守而非"所有人叫 builder");**与 [[02-ai-coding/OpenAI最新报告解读-Codex正在进入知识工作的主战场]] [[02-ai-coding/Claude-Code-主动式Agent-Routines]] [[03-productivity/与AI一起做产品的六条原则]] [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]] [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] [[02-ai-coding/深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]] 强关联**——同 Capihom 编译主线补完 + AI 时代产品工作形态;**分类理由**:本文是 Codex 团队产品工作方法论(同 Capihom 编译 Codex 主题),与"OpenAI最新报告解读-Codex正在进入知识工作主战场"同源;放 02-ai-coding 比 03-productivity 更贴切(与 Capihom 已有的两条 Codex 主题在同分类),且补完 02-ai-coding 偏"怎么做"(Harness/Loop/Skills)的工具方法论之外"产品工作形态"维度;**透明玻璃自检**:wiki 3.7K(≤8K)/ digest 2.1K(≤4K)/ 节点 8(6-10)/ H2 5(≤5)/ 表格 0(≤2)/ 0 陈词 ⭐⭐⭐
 
 ### AI Agents
+
+- [面试官：讲一讲多 Agent 协作如何保持一致性](./01-ai-agents/架构师-多Agent协作一致性-任务状态与证据.md) - 以任务、事实、状态为一致性边界，补齐交接、结果契约、幂等、租约和验收证据。
+- [多 Agent 协作一致性 - Digest](./01-ai-agents/架构师-多Agent协作一致性-任务状态与证据-digest.md) - 一致性三件事、可执行交接状态、权威事实和局部重试速读。
+- [GitHub三榜第一背后，一个“专升本”工程师的十年](./01-ai-agents/量子位-Archify-涂少坤-专升本工程师十年.md) - Archify 将模糊想法转成可视化图表；作品、用户反馈和开源实践成为学历之外的能力证明。
+- [Archify 与专升本工程师成长路径 - Digest](./01-ai-agents/量子位-Archify-涂少坤-专升本工程师十年-digest.md) - Archify 产品价值、作品证明能力和独立开发壁垒速读。
 - [LangChain CEO：Agent 越复杂，越需要自建 Harness？恰恰不是](./01-ai-agents/LangChainCEO-Agent越复杂-越需要自建Harness-恰恰不是.md) - Model-Context-Harness 三层框架：通用 Harness 优先，业务偏移再定制；失败先回放 Context，并用 Trace、Benchmark 与反馈闭环改进系统。
 - [LangChain CEO：Agent 越复杂，越需要自建 Harness？恰恰不是 - 速读](./01-ai-agents/LangChainCEO-Agent越复杂-越需要自建Harness-恰恰不是-digest.md) - 定制决策表 + Context 诊断与受控自主提醒。
 
@@ -618,6 +643,9 @@
 - [谷歌开源 agent-skills](./02-ai-coding/谷歌开源agent-skills.md)
 
 ### AI Tech
+
+- [俞敏洪：新东方内部致力于教育和AI结合的研发人员已超过400位](./06-ai-tech/多知-俞敏洪-AI教育与人文关怀.md) - 教育 AI 的突破点从解题提效转向学习动力、人格塑造、陪伴和人与人的连接。
+- [俞敏洪谈 AI 教育与人文关怀 - Digest](./06-ai-tech/多知-俞敏洪-AI教育与人文关怀-digest.md) - AI 教育突破点、过程重于结果、教师陪伴和 AI 边界速读。
 - [曾鸣：AI组织正在“远离”公司](./06-ai-tech/曾鸣-AI组织正在-远离-公司.md) - 传统公司以层级完成认知压缩，AI 使认知更直接流动；重点不是简单去层级，而是重建问题定义、判断权、责任与组织学习闭环。
 - [曾鸣：AI组织正在“远离”公司 - 速读](./06-ai-tech/曾鸣-AI组织正在-远离-公司-digest.md) - 旧组织与 AI 原生组织速查表 + 三条治理提醒。
 - [杰夫·迪恩离开谷歌后谈 Discovery Loop：让 AI 进入科学发现闭环](./06-ai-tech/值得关注的-杰夫迪恩-离开谷歌与Discovery-Loop.md) - 二手访谈整理：把数据、设计、实验、评估和算力调度连成受成本约束的研究闭环；与 Harness 自我改进和 Karpathy autoresearch 形成“研究运营 / 工程闭环”互补。性能数字和创业计划未独立核验。
@@ -638,6 +666,12 @@
 
 ### Productivity
 
+- [Anthropic 的设计主管谈通用人工智能极简主义产品设计 | Joel Lewenstein](./03-productivity/晚点再听-Joel-Lewenstein-Anthropic-AGI极简主义产品设计.md) - 模型驱动规划、原型验证、代码事实依据、Artifacts 双界面与人类取舍。
+- [Joel Lewenstein：AI 产品设计与人类取舍 - Digest](./03-productivity/晚点再听-Joel-Lewenstein-Anthropic-AGI极简主义产品设计-digest.md) - 模型驱动规划、原型到使用和取舍速读。
+- [北大分享：AI 让你成为你自己](./03-productivity/十字路口Crossing-邦比快跑-AI让你成为你自己.md) - AI 将电脑工作释放给个人；产能可外包，品味、规则和维护决定作品能否成为资产。
+- [AI 让你成为你自己 - Digest](./03-productivity/十字路口Crossing-邦比快跑-AI让你成为你自己-digest.md) - AI 个人创作、知识库复利、作品与资产和品味判断速读。
+- [王阳明：心中有山贼，才是你焦虑内耗的元凶](./03-productivity/王阳明-心中有山贼-焦虑内耗.md) - 龙场悟道、不等不靠不弃、知行合一与焦虑内耗的行动解法。
+- [王阳明与焦虑内耗 - Digest](./03-productivity/王阳明-心中有山贼-焦虑内耗-digest.md) - 等待方式、当下可做与直面内耗速读。
 - [英伟达 ChatGPT Work：把运营与行业情报工作流复制到全球团队](./03-productivity/AI组织进化论-英伟达-ChatGPT-Work-全球复用.md) - NVIDIA 的 GTM 运营与行业情报案例：重复运营自动化、信息转情报、共享骨架、本地定制和一线维护共同构成跨地区复用的条件。时间、节省与周期均为二手转述，未独立核验。
 - [英伟达 ChatGPT Work - Digest](./03-productivity/AI组织进化论-英伟达-ChatGPT-Work-全球复用-digest.md) - 6 节点速读 + 证据边界。
 
