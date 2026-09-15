@@ -2,6 +2,15 @@
 
 时间序变更记录。格式：`## [日期] 操作 | 标题`
 
+## 2026-09-15
+### ingest | 胡言Ray语：YC 研讨会：为什么 Harness 比模型更重要
+
+- 来源：https://mp.weixin.qq.com/s/zBhUrCqFTGL9OSDPGmLOgg；作者：微信公众号「胡言Ray语」；原视频：https://www.youtube.com/watch?v=n9xKblqyQ28。
+- 原文：raw/胡言Ray语-YC研讨会-Harness比模型更重要.md
+- 拆解：raw/胡言Ray语-YC研讨会-Harness比模型更重要-digest.md
+- wiki：wiki/01-ai-agents/胡言Ray语-YC研讨会-Harness比模型更重要.md
+- 说明：与 2026-09-08 的同标题小宇宙 AI 生成音频条目为不同来源，已使用独立 slug；本条目已发布，案例与数字保留文章转述边界。
+
 ## 2026-09-09
 ### ingest | 深思圈：让不会用 App 的人自己办业务，Navana 语音 AI 案例
 
@@ -409,6 +418,16 @@
 - 2026-07-01: 新增《BDD+ADR+PRD：让 Agent 遵守规范的闭环方法》;原始作者:Michal Cichra(Safe Intelligence,微软/Red Hat 十年老兵);来源:AI Engineer 大会演讲《BDD, ADR, PRD, WTF: Capturing Decisions for Humans and AI Alike》;转载:微信公众号 2026-06-10 推送;原文链接:https://mp.weixin.qq.com/s/QT71-f3OZ067XhDwrbrAtQ;获取时间:2026-07-01;raw/inbox(原文 2.4K)→raw(原文 + digest 2.0K 共 6.8K)→wiki/01-ai-agents(编译页 4.0K + digest 2.0K) 已写入,挂到 01-ai-agents/index.md 核心概念末尾⭐⭐⭐ + master-index.md(最近更新顶部⭐⭐⭐);**核心命题**"当 AI Agent 越来越像团队成员,'为什么'必须从模型记忆里搬进 linter/CI/文档契约——只有'可被静态检查的规范'才能跨 20-50 次 context compaction 存活";**5 只猴子隐喻**(Stephenson 1967 原始猴子被替换光后规矩依然被执行但没人能解释为什么,AI 写代码迭代 5 轮后同样状态);**4 件套** ①PRD 三件事(为什么存在/解决什么问题/用户怎么走)②ADR + Linter 强校验(50+ 条 ADR + 每条配一条 ESLint 规则)③BDD + Cucumber 双轨(Gherkin 句法让测试代码本身成为产品规范)④闭环执行 Git Hook→CI→Linter→Agent 自修→重提;**9 节点**(ADR架构决策记录/PRD三件事/BDD-Cucumber双轨/Linter强制/闭环执行/Context-Compaction/知识资产化/Spec-Driven/Agent-Governance);**4 关键数字**(50+ 条 ADR/单 session 20-50 次 context compaction/ADR 来源 Michael Nygard 2011《Release It!》/BDD 来源 Dan North 2008+Cucumber);**5 关键金句**("用 linter 强制执行 ADR 违规时自动指向文档"/"不是发现问题而是让问题不可能发生"/"比读 AI 代码更难的是读 AI 测试——BDD 解决了这个问题"/"5 只猴子被替换光后规矩依然被执行但没人能解释为什么"/"单个 session 经历 20-50 次上下文压缩也没关系,重要的东西总会被保留");**3 反直觉点**(ADR 不进 linter 等于没写/PRD 越短被读概率越高/模型越来越强 ≠ 知识越来越稳);**4 个对 Seetong 借鉴动作**(新建 docs/adr/ 目录固定 4 字段 Context/Decision/Consequences/Date + 配 linter 规则/新建 docs/prd-mini.md 只写 3 段给 AI 助手当入职文档/Seetong iOS 挑 3 条 ADR 配 clang-tidy 违规直接报"ADR-XYZ violated"/BDD 暂缓先跑通最小闭环);**与 [[AI-团队协作-Loop-SDD-digest]] [[0xCodez-Agent-Harness-14-Steps]] [[agent-skills-systematic-survey]] 强关联**(叶小钗 SDD 6 段式 Spec 骨架 + 本文 ADR/PRD/BDD 同源异流:组织级协作契约 + 工程级 Linter 强校验;Linter/Loop 是 Harness Hooks/Loop 节点在规范治理维度的具体落地);**补完 01-ai-agents 现有"Harness 工程 + Loop 验证 + 端到端架构 + 自进化"主线缺位的"Agent 团队规范治理 / 文档契约化"维度**;**分类理由**:本文是"AI Agent 工程治理"方法论(4 件套 + 闭环),不是 AI 行业整体战略也不是商业化路径;放 01-ai-agents 比 02-ai-coding 更贴切(核心是 Agent 治理而非 AI Coding 工具方法论);**透明玻璃自检**:wiki 4.0K(≤8K)/ digest 2.0K(≤4K)/ 节点 9(6-10)/ H2 4 wiki / H2 5 digest(≤5)/ 表格 1 wiki / 表格 1 digest(≤2)/ 0 陈词 ⭐⭐⭐
 
 ---
+
+## 2026-09-15
+### ingest | Stripe CEO 对谈 Replit 创始人：历史上创业的最佳时机
+- 来源：https://mp.weixin.qq.com/s/LINBu41ry4VjxQfC4O9dBw
+- 原文：raw/StripeCEO对谈Replit创始人-历史上创业的最佳时机.md
+- 拆解：raw/StripeCEO对谈Replit创始人-历史上创业的最佳时机-digest.md
+- wiki：wiki/03-productivity/StripeCEO对谈Replit创始人-历史上创业的最佳时机.md
+- 标签： #主题/AI时代创业 #主题/效率 #主题/垂直软件 #场景/公众号长文
+- 说明：已完成人工提炼并发布；原文、digest、wiki 均已写入并通过发布校验
+
 
 ## 2026-09-14
 ### ingest | 面试官：讲一讲多 Agent 协作如何保持一致性

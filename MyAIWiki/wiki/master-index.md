@@ -1,6 +1,8 @@
 # AI 知识库索引
 
 ## 最近更新
+- [YC 研讨会：为什么 Harness 比模型更重要](./01-ai-agents/胡言Ray语-YC研讨会-Harness比模型更重要.md) — 2026-09-15
+- [Stripe CEO 对谈 Replit 创始人：历史上创业的最佳时机](./03-productivity/StripeCEO对谈Replit创始人-历史上创业的最佳时机.md) — 2026-09-15
 - [面试官：讲一讲多 Agent 协作如何保持一致性](./01-ai-agents/架构师-多Agent协作一致性-任务状态与证据.md) — 2026-09-14
 - [多 Agent 协作一致性 - 速读](./01-ai-agents/架构师-多Agent协作一致性-任务状态与证据-digest.md) — 一致性三件事、可执行交接状态、权威事实、结果契约和局部重试速读。
 - [Anthropic 的设计主管谈通用人工智能极简主义产品设计 | Joel Lewenstein](./03-productivity/晚点再听-Joel-Lewenstein-Anthropic-AGI极简主义产品设计.md) — 2026-09-14
