@@ -1,0 +1,171 @@
+<h1 id="实战从零开始构建一个coding-agentviolin---digest">实战从零开始构建一个Coding Agent：Violin - Digest</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<p>coding agent 没有神秘魔法，核心是「问模型 → 执行工具 → 把结果写回上下文 → 再问模型」的 Agent Loop；模型适配、工具注册、会话持久化、上下文压缩、技能加载、插件扩展和客户端协议，都是围绕这个循环补齐可用性、可扩展性与安全边界。</p>
+
+<h2 id="核心观点">核心观点</h2>
+
+<ol>
+  <li><strong>理解 Coding Agent 的入口</strong>：客服、数据分析和工作流 Agent 都可以看成 coding agent 核心循环在不同场景中的变形。</li>
+  <li><strong>三层架构降低耦合</strong>：模型适配层把 Provider 差异拍平，agent-core 只管运行时，product 层负责会话、压缩和产品化；EventBus、工具注册表和插件系统横向扩展能力。</li>
+  <li><strong>Agent Loop 是最小内核</strong>：模型没有工具调用就结束，有工具调用就执行并把结果追加回消息；<code class="language-plaintext highlighter-rouge">max_turns</code> 是防止无限循环的安全阀。</li>
+  <li><strong>适配层隔离供应商变化</strong>：OpenAI 与 Anthropic 在请求体、tool call 结构和 SSE 事件格式上都不同，统一接口让上层只处理规范化消息。</li>
+  <li><strong>工具系统让模型能够行动</strong>：工具描述使用 JSON Schema，注册表负责定义下发、名称查找和执行分派。</li>
+  <li><strong>记忆不等于把历史全塞进上下文</strong>：Session 用 JSONL + 树结构持久化，compaction 在预算超限时摘要旧消息并保留近期消息。</li>
+  <li><strong>资源和插件是系统能力层</strong>：AGENTS.md / CLAUDE.md 提供项目规则，SKILL.md 提供可选技能，Lua hook 可以拦截工具、修改上下文和控制生命周期。</li>
+  <li><strong>跨语言客户端需要稳定协议</strong>：Violin 用 Zig 服务端 + Python TUI，通过 TCP + JSON Lines 传输握手、聊天请求和流式事件。</li>
+</ol>
+
+<h2 id="关键架构">关键架构</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>层/组件</th>
+      <th>解决的问题</th>
+      <th>文中实现</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Agent Loop</td>
+      <td>模型和工具如何反复协作</td>
+      <td>while 循环、<code class="language-plaintext highlighter-rouge">max_turns</code>、重试</td>
+    </tr>
+    <tr>
+      <td>Model Adapter</td>
+      <td>不同 Provider API 如何统一</td>
+      <td><code class="language-plaintext highlighter-rouge">Model.complete()</code>、函数指针表、SSE</td>
+    </tr>
+    <tr>
+      <td>Tool Registry</td>
+      <td>模型能调用哪些动作</td>
+      <td>Tool + JSON Schema + HashMap</td>
+    </tr>
+    <tr>
+      <td>Product</td>
+      <td>会话、上下文和内存如何产品化</td>
+      <td><code class="language-plaintext highlighter-rouge">agent.zig</code>、Session、compaction</td>
+    </tr>
+    <tr>
+      <td>Resources</td>
+      <td>规则和技能如何注入</td>
+      <td>AGENTS.md、CLAUDE.md、SKILL.md</td>
+    </tr>
+    <tr>
+      <td>EventBus / Lua</td>
+      <td>如何扩展、拦截和观察运行</td>
+      <td>agent/session/compaction hooks</td>
+    </tr>
+    <tr>
+      <td>TCP / JSON Lines</td>
+      <td>客户端如何与引擎解耦</td>
+      <td>Zig daemon + Python TUI</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="7-个分析角度">7 个分析角度</h2>
+
+<h3 id="1-agent-loop-是最小可解释内核">1. Agent Loop 是最小可解释内核</h3>
+
+<p>Agent 的复杂能力最终收敛为模型调用、工具执行和结果回写三个动作。</p>
+
+<ul>
+  <li><strong>钩子 1</strong>：把 UI 拆掉之后，coding agent 还剩下什么？</li>
+  <li><strong>钩子 2</strong>：一个 while 循环为什么能撑起复杂 Agent？</li>
+  <li><strong>钩子 3</strong>：Agent 的关键不是会不会回答，而是能不能继续行动。</li>
+</ul>
+
+<h3 id="2-工程价值来自循环之外的补齐">2. 工程价值来自循环之外的补齐</h3>
+
+<p>真正难的不是写出第一版 loop，而是处理会话、超长上下文、错误、配置、资源和客户端体验。</p>
+
+<ul>
+  <li><strong>钩子 1</strong>：为什么 Demo 能跑，产品却总在边界条件上崩？</li>
+  <li><strong>钩子 2</strong>：Agent 的大部分工程量，其实不在那段 while 循环里。</li>
+  <li><strong>钩子 3</strong>：把模型接上工具，只完成了 Agent 的起点。</li>
+</ul>
+
+<h3 id="3-provider-适配是变化隔离层">3. Provider 适配是变化隔离层</h3>
+
+<p>模型供应商持续变化时，统一 <code class="language-plaintext highlighter-rouge">Model.complete()</code> 接口可以把请求格式、工具调用和流式协议差异隔离在适配器内部。</p>
+
+<ul>
+  <li><strong>钩子 1</strong>：OpenAI 和 Anthropic 的 tool call 为什么不能直接互换？</li>
+  <li><strong>钩子 2</strong>：模型越多，上层越需要一个被拍平的接口。</li>
+  <li><strong>钩子 3</strong>：多模型不是多写几个 if，而是建立可替换的适配边界。</li>
+</ul>
+
+<h3 id="4-工具定义是模型行动的契约">4. 工具定义是模型行动的契约</h3>
+
+<p>工具不仅是函数，还要有名字、描述、参数 Schema 和执行函数；注册表同时承担可发现性和分派职责。</p>
+
+<ul>
+  <li><strong>钩子 1</strong>：模型不是因为聪明才会调用工具，而是因为看到了工具契约。</li>
+  <li><strong>钩子 2</strong>：没有 JSON Schema，工具调用就没有稳定边界。</li>
+  <li><strong>钩子 3</strong>：工具系统的第一性问题是“模型能看见什么、系统允许做什么”。</li>
+</ul>
+
+<h3 id="5-session-与-compaction-是外部记忆">5. Session 与 compaction 是外部记忆</h3>
+
+<p>持久化会话让 Agent 不再每次失忆，压缩机制让长对话在上下文窗口内继续运行；二者共同管理记忆的时间范围与预算。</p>
+
+<ul>
+  <li><strong>钩子 1</strong>：上下文窗口有限，Agent 的记忆应该如何留下？</li>
+  <li><strong>钩子 2</strong>：把历史全部塞给模型，为什么不等于让它记住？</li>
+  <li><strong>钩子 3</strong>：压缩不是删历史，而是把旧过程重写成可继续工作的摘要。</li>
+</ul>
+
+<h3 id="6-skill-与插件把规则变成运行时能力">6. Skill 与插件把规则变成运行时能力</h3>
+
+<p>规则文件和技能文件通过资源加载注入 system prompt，Lua 插件通过事件 hook 在工具、上下文和生命周期上实现扩展。</p>
+
+<ul>
+  <li><strong>钩子 1</strong>：Agent 如何知道一个项目的规矩，而不靠每次重新解释？</li>
+  <li><strong>钩子 2</strong>：Skill 是提示词文件，还是可复用的能力模块？</li>
+  <li><strong>钩子 3</strong>：插件真正改变的不是界面，而是 Agent 的行动边界。</li>
+</ul>
+
+<h3 id="7-客户端协议决定系统能否演化">7. 客户端协议决定系统能否演化</h3>
+
+<p>TCP + JSON Lines 让引擎与 UI 解耦，握手、请求和事件流形成稳定边界，Python 只是一个客户端实现而不是系统本体。</p>
+
+<ul>
+  <li><strong>钩子 1</strong>：为什么把 Agent 引擎和 UI 拆开，反而更容易扩展？</li>
+  <li><strong>钩子 2</strong>：一个稳定协议能不能让不同语言共享同一个 Agent？</li>
+  <li><strong>钩子 3</strong>：当客户端只是协议消费者，Agent 才真正拥有多种入口。</li>
+</ul>
+
+<h2 id="关键参数与事实">关键参数与事实</h2>
+
+<ul>
+  <li>底层引擎使用 Zig，Python 负责 TUI 客户端。</li>
+  <li><code class="language-plaintext highlighter-rouge">product/agent.zig</code> 约 123 行，负责把 loop、Session 和 compaction 粘合起来。</li>
+  <li>Session 使用 JSONL，消息通过 <code class="language-plaintext highlighter-rouge">parent_id</code> 形成树结构，支持分支和回滚思路。</li>
+  <li>compaction 默认阈值 100K token，保留最近 10 条消息，摘要目标约 500 token。</li>
+  <li>token 预算用字符数除以 4 近似，不引入 tokenizer。</li>
+  <li>事件 Bus 有 <code class="language-plaintext highlighter-rouge">agent</code>、<code class="language-plaintext highlighter-rouge">session</code>、<code class="language-plaintext highlighter-rouge">compaction</code> 三个回调槽。</li>
+  <li>Lua 运行时约 500KB，作为插件语言嵌入 Zig。</li>
+  <li>客户端协议包含 <code class="language-plaintext highlighter-rouge">handshake</code>、<code class="language-plaintext highlighter-rouge">chat</code> 和流式事件；文中列出 8 类事件。</li>
+</ul>
+
+<h2 id="工程边界与未完成项">工程边界与未完成项</h2>
+
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">buildJson</code> 中 tools 参数尚未序列化，模型可能收不到工具定义。</li>
+  <li>Lua 插件没有权限隔离，插件理论上可以执行任意能力。</li>
+  <li>ACP 尚未接入，当前客户端只能使用自定义 TCP + JSON Lines 协议。</li>
+  <li>文中部分架构图、工具清单和实现代码只以图片呈现，未做 OCR 转写。</li>
+</ol>
+
+<h2 id="适合继续追踪的主题">适合继续追踪的主题</h2>
+
+<ul>
+  <li>Agent Loop 与 Graph / Harness 的边界。</li>
+  <li>Skill 注入和项目规则的优先级治理。</li>
+  <li>工具权限隔离、沙盒与插件安全。</li>
+  <li>Session 树结构、compaction 和长期记忆的关系。</li>
+  <li>Agent 引擎协议化后如何接入 IDE、CLI 和远程客户端。</li>
+</ul>

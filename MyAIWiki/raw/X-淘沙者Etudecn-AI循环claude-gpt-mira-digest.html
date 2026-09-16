@@ -1,0 +1,148 @@
+<h1 id="5-条核心观点">5 条核心观点</h1>
+
+<ol>
+  <li><strong>循环（Loop）= AI 自己跑完的递归目标</strong> — 与”提示词单条指令”对立，是顶尖 AI 工程师目前最在意的工作方式。</li>
+  <li><strong>五步骨架 = DISCOVER→PLAN→EXECUTE→VERIFY→ITERATE</strong>，真正决定成败的是验证、状态、停止条件这三步。</li>
+  <li><strong>五个积木 = 自动化 + 技能 + 子代理 + 连接器 + 验证器</strong>，Claude Code / Codex 已全内置。</li>
+  <li><strong>采纳率 &lt; 50% = 循环在亏钱</strong>，单个任务 ~50K-200K token，每轮 context 重新过一遍，越跑越大。</li>
+  <li><strong>Mira 是把循环做到 Telegram 里的 zero-code 方案</strong>（⚠️ advertorial），通过 Composio 串500+ App，Skill 内置触发器 + 动作 + 自运行。</li>
+</ol>
+
+<h1 id="7-个分析角度">7 个分析角度</h1>
+
+<h2 id="角度1从提示词工程师到循环工程师的角色升维">角度1：从”提示词工程师”到”循环工程师”的角色升维</h2>
+
+<ul>
+  <li>AI 不再等你推每一步，而是你退出来活儿还在继续。</li>
+  <li>这是一次”谁来做这件事”的根本转移。</li>
+</ul>
+
+<h2 id="角度2验证verify是循环心脏--为什么打-8-分这种软标准会毁掉循环">角度2：验证（Verify）是循环心脏 — 为什么”打 8 分”这种软标准会毁掉循环</h2>
+
+<ul>
+  <li>硬性测试 / 类型检查 / 构建 / 评分标准 = 唯一把关者</li>
+  <li>没有验证 = AI 给自己改作业，”重复” ≠ “进步”</li>
+</ul>
+
+<h2 id="角度3ralph-wiggum-循环--安静失败的成本黑洞">角度3：Ralph Wiggum 循环 — 安静失败的成本黑洞</h2>
+
+<ul>
+  <li>Geoffrey Huntley 提出的命名：AI 太早觉得做完了，半成品退出，但循环还在跑、还在烧 token</li>
+  <li>重型版本只属于有预算和护栏的团队</li>
+</ul>
+
+<h2 id="角度4搭建顺序比工具更重要--先跑一次再自动化">角度4：搭建顺序比工具更重要 — “先跑一次再自动化”</h2>
+
+<ol>
+  <li>Get ONE manual run reliable first</li>
+  <li>Turn that into a skill</li>
+  <li>Wrap the skill in a loop</li>
+  <li>THEN put it on a schedule</li>
+</ol>
+
+<h2 id="角度5子代理分工--质量的大部分来源">角度5：子代理分工 = 质量的大部分来源</h2>
+
+<ul>
+  <li>写手又快又便宜（不同指令）</li>
+  <li>审稿人又慢又严格（更强模型 / 更高配置）</li>
+  <li>一个模型给自己打分太心软</li>
+</ul>
+
+<h2 id="角度6手搓轻量循环--一段提示词就能跑的版本">角度6：手搓轻量循环 — 一段提示词就能跑的版本</h2>
+
+<ul>
+  <li>给模型三个部分：目标、严格成功标准、自检协议</li>
+  <li>触发器还是你（手动打开聊天）</li>
+  <li>适合 99% 日常任务</li>
+</ul>
+
+<h2 id="角度7mira-的-zero-code-循环--把循环门槛降到-telegramadvertorial-视角">角度7：Mira 的 zero-code 循环 — 把循环门槛降到 Telegram（advertorial 视角）</h2>
+
+<ul>
+  <li>Composio 连接500+ App</li>
+  <li>跨会话 / 群聊长期记忆</li>
+  <li>不绑定单一模型（GPT/Claude/Gemini 按任务切换）</li>
+  <li>ChatGPT 回答，Mira 行动</li>
+</ul>
+
+<h1 id="14-21-个开头钩子">14-21 个开头钩子</h1>
+
+<h2 id="焦虑共鸣类">焦虑共鸣类</h2>
+<ol>
+  <li>AI 用了好几年，但你的用法是全网最慢的那种。</li>
+  <li>你以为自己在用 AI，其实你是 AI 的发动机。</li>
+  <li>顶尖工程师正在悄悄换一种用法，但你没看到。</li>
+  <li>27 万次浏览里，99% 的人听完还是不会用循环。</li>
+  <li>循环每小时都在偷偷扣你的钱，而你什么都没产出。</li>
+</ol>
+
+<h2 id="反差冲突类">反差冲突类</h2>
+<ol>
+  <li>提示词给你一个答案，循环给你一整条流水线。</li>
+  <li>AI 不会自己动 — 这句话在2026年已经过时了。</li>
+  <li>同样的 AI 工具，有人花 6 天翻译完整个代码库，有人一年还在手动搬砖。</li>
+  <li>ChatGPT 回答，Mira 行动 — 6 个字的区别，整条产业链重写。</li>
+  <li>不是循环跑得太慢，是你没设停止条件。</li>
+</ol>
+
+<h2 id="好奇心循环类">好奇心循环类</h2>
+<ol>
+  <li>一个被全球顶尖 AI 工程师藏在嘴边的词，叫”Loop”。</li>
+  <li>五步骨架里藏着三步真正的秘密。</li>
+  <li>一个工程师六天干完一年的活，到底是怎么做到的？</li>
+  <li>为什么”Ralph Wiggum”会成为 AI 工程圈的新黑话？</li>
+  <li>一段提示词，让 ChatGPT 自己改作业直到达标？</li>
+</ol>
+
+<h2 id="权威背书类">权威背书类</h2>
+<ol>
+  <li>Boris / Addy / Geoffrey Huntley 都在说的同一件事。</li>
+  <li>Claude Code 和 Codex 已经把五个积木全内置了。</li>
+  <li>当 Anthropic 把 /loop、/goal 写进官方文档，循环就不再是极客玩具。</li>
+</ol>
+
+<h2 id="落地案例类">落地案例类</h2>
+<ol>
+  <li>每天早 7 点收 Gmail + 日历摘要，这条 Skill 你3分钟就能搭。</li>
+  <li>语音备忘录进去，30 秒后出来一条成品帖子。</li>
+  <li>把群聊200条消息压成5条 bullet，这是你下一个能跑的循环。</li>
+</ol>
+
+<h1 id="关键数据--事实清单">关键数据 / 事实清单</h1>
+
+<ul>
+  <li><strong>互动</strong>：58 回复 / 167 转发 / <strong>27万 查看</strong>（2026-07-05 抓取时）</li>
+  <li><strong>Token 单任务</strong>：~50,000 - 200,000 tokens</li>
+  <li><strong>Mira 接入 App 数</strong>：500+（通过 Composio）</li>
+  <li><strong>编程循环示例</strong>：8 次迭代上限</li>
+  <li><strong>Mira 工作示例 Skill 长度</strong>：120 字</li>
+  <li><strong>采纳率红线</strong>：&lt; 50% = 亏钱</li>
+  <li><strong>Mira 三大场景</strong>：工作、创作者、语音（生活场景作为延伸）</li>
+</ul>
+
+<h1 id="关联链接待办">关联链接（待办）</h1>
+
+<ul>
+  <li>关联到 [[claude-obsidian-second-brain]] — 同属”用 AI 重塑工作流”主题</li>
+  <li>关联到 [[Codex「自我蒸馏」提示词进化版]] — Skill 自蒸馏的近亲</li>
+  <li>关联到 [[oh-my-codex-让CodexCLI拥有专家团队]] — “子代理分工”的早期实践</li>
+  <li>关联到 [[loonggg-Claude-Code-技能心法-11条建议]] — Skill 设计心法</li>
+  <li>关联到 [[深思圈-530万人-自循环-提示词]] — 同主题不同视角</li>
+  <li>关联到 [[深思圈-problem-first把方案翻转回问题]] — “何时不该用循环”的方法论</li>
+  <li>关联到 [[深思SenseAI-Loop-Engineering-验证才是瓶颈]] — 验证 = 循环心脏</li>
+  <li>关联到 [[Claude-Code作者Boris-我已经不写prompt了我写loop]] — 同作者理念</li>
+</ul>
+
+<h1 id="标签">标签</h1>
+
+<p>#主题/AI-Agent #主题/AI-Coding #节点/Agent-Loop #节点/Harness #节点/Skill #节点/子代理 #节点/Composio #节点/Mira #场景/落地案例 #场景/X长文章</p>
+
+<h1 id="透明玻璃自检">透明玻璃自检</h1>
+
+<ul>
+  <li>原文：8798 字（≤ 8K 警告位：略超，8598→8798，差额来自图片描述）</li>
+  <li>digest：~4K</li>
+  <li>5 核心观点 / 7 分析角度 / 21 钩子</li>
+  <li>8 个强关联 + 1 个作者 advertorial 警示</li>
+  <li>⚠️ Mira 部分是软广，需在 wiki 主文标注</li>
+</ul>

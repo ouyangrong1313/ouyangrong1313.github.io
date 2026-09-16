@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>看图猜成语 · 课堂互动</title>
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Ma+Shan+Zheng&display=swap">
+<style>
+/* ========== 全局重置与变量 ========== */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --paper: #F5EFE0;
+  --paper-dark: #E8DDC8;
+  --ink: #1C1C1C;
+  --ink-light: #3D3D3D;
+  --vermilion: #B8282E;
+  --vermilion-dark: #8B1A1F;
+  --gold: #C9A961;
+  --gold-light: #E0C98F;
+  --jade: #3A7D5C;
+  --shadow: rgba(28, 28, 28, 0.15);
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Noto Serif SC', 'Songti SC', 'SimSun', serif;
+  color: var(--ink);
+  background: var(--paper);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
+
+/* 宣纸纹理背景 */
+body {
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(ellipse at 20% 30%, rgba(201, 169, 97, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(184, 40, 46, 0.05) 0%, transparent 50%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(28, 28, 28, 0.012) 2px,
+      rgba(28, 28, 28, 0.012) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 2px,
+      rgba(28, 28, 28, 0.012) 2px,
+      rgba(28, 28, 28, 0.012) 4px
+    );
+}
+
+/* ========== 通用容器 ========== */
+#app {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+.screen.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ========== 开始屏 ========== */
+#start-screen {
+  gap: 30px;
+}
+
+.title-wrap {
+  text-align: center;
+  position: relative;
+}
+
+.main-title {
+  font-family: 'Ma Shan Zheng', 'Noto Serif SC', cursive;
+  font-size: clamp(48px, 12vw, 96px);
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: 0.15em;
+  text-shadow: 2px 2px 0 var(--gold-light);
+  position: relative;
+  display: inline-block;
+}
+
+.main-title::before,
+.main-title::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+.main-title::before { right: calc(100% + 20px); }
+.main-title::after { left: calc(100% + 20px); background: linear-gradient(90deg, var(--gold), transparent); }
+
+.subtitle {
+  font-size: clamp(14px, 3.5vw, 20px);
+  color: var(--ink-light);
+  margin-top: 16px;
+  letter-spacing: 0.3em;
+}
+
+.seal-decoration {
+  width: 80px;
+  height: 80px;
+  border: 3px solid var(--vermilion);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 28px;
+  color: var(--vermilion);
+  transform: rotate(-5deg);
+  margin: 10px auto;
+  opacity: 0.85;
+  box-shadow: inset 0 0 0 2px var(--paper), 0 2px 8px var(--shadow);
+  letter-spacing: 0;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.start-btn {
+  margin-top: 20px;
+  padding: 16px 56px;
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(18px, 4vw, 24px);
+  font-weight: 700;
+  color: var(--paper);
+  background: var(--vermilion);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.3em;
+  box-shadow: 0 4px 16px rgba(184, 40, 46, 0.35);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.start-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(184, 40, 46, 0.45);
+  background: var(--vermilion-dark);
+}
+.start-btn:active { transform: translateY(0); }
+
+.start-btn::before {
+  content: '';
+  position: absolute;
+  top: 3px; left: 3px; right: 3px; bottom: 3px;
+  border: 1px solid rgba(245, 239, 224, 0.4);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.hint-text {
+  font-size: 13px;
+  color: var(--ink-light);
+  opacity: 0.6;
+  margin-top: 10px;
+  letter-spacing: 0.1em;
+}
+
+/* ========== 游戏屏 ========== */
+#game-screen {
+  justify-content: flex-start;
+  padding-top: 20px;
+  gap: 0;
+}
+
+/* 顶部信息栏 */
+.top-bar {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  margin-bottom: 16px;
+}
+
+.progress-info {
+  font-size: clamp(13px, 3vw, 16px);
+  color: var(--ink-light);
+  letter-spacing: 0.1em;
+}
+.progress-info .current {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: clamp(20px, 5vw, 28px);
+  color: var(--vermilion);
+  font-weight: 700;
+}
+
+.score-info {
+  font-size: clamp(13px, 3vw, 16px);
+  color: var(--ink-light);
+  letter-spacing: 0.1em;
+}
+.score-info .score {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: clamp(20px, 5vw, 28px);
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* 进度条 */
+.progress-bar {
+  width: 100%;
+  max-width: 600px;
+  height: 6px;
+  background: var(--paper-dark);
+  border-radius: 3px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  position: relative;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--vermilion), var(--gold));
+  border-radius: 3px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 0%;
+}
+
+/* 卷轴容器 */
+.scroll-container {
+  width: 100%;
+  max-width: 560px;
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+/* 卷轴 */
+.scroll {
+  width: 100%;
+  background: var(--paper);
+  border-radius: 4px;
+  position: relative;
+  padding: 30px 24px;
+  box-shadow:
+    0 2px 12px var(--shadow),
+    inset 0 0 60px rgba(201, 169, 97, 0.08);
+  border: 1px solid rgba(201, 169, 97, 0.3);
+  overflow: hidden;
+}
+
+/* 卷轴上下轴 */
+.scroll::before,
+.scroll::after {
+  content: '';
+  position: absolute;
+  left: -8px;
+  right: -8px;
+  height: 24px;
+  background: linear-gradient(180deg, var(--gold-light), var(--gold), var(--gold-light));
+  border-radius: 4px;
+  box-shadow: 0 2px 6px var(--shadow);
+}
+.scroll::before { top: -12px; }
+.scroll::after { bottom: -12px; }
+
+/* 卷轴内边框 */
+.scroll-inner-border {
+  position: absolute;
+  top: 10px; left: 10px; right: 10px; bottom: 10px;
+  border: 1px solid rgba(201, 169, 97, 0.4);
+  pointer-events: none;
+  border-radius: 2px;
+}
+
+/* 题目区域 */
+.question-area {
+  text-align: center;
+  padding: 20px 10px;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.question-label {
+  font-size: clamp(12px, 2.5vw, 14px);
+  color: var(--ink-light);
+  letter-spacing: 0.4em;
+  opacity: 0.7;
+}
+
+.emoji-display {
+  font-size: clamp(48px, 14vw, 88px);
+  line-height: 1.3;
+  letter-spacing: 0.1em;
+  filter: drop-shadow(0 2px 4px var(--shadow));
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.emoji-display.fade-out {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+/* 答案区域 */
+.answer-area {
+  text-align: center;
+  padding: 16px 10px;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  position: relative;
+}
+
+.answer-text {
+  font-family: 'Ma Shan Zheng', 'Noto Serif SC', cursive;
+  font-size: clamp(36px, 10vw, 64px);
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: 0.2em;
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.answer-char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px) scale(0.5);
+  position: relative;
+}
+
+.answer-char.revealed {
+  animation: brushWrite 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes brushWrite {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.3) rotate(-10deg);
+    filter: blur(4px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.1) rotate(2deg);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0);
+    filter: blur(0);
+  }
+}
+
+/* 毛笔笔触效果 */
+.answer-char.revealed::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--ink), transparent);
+  opacity: 0.3;
+  border-radius: 50%;
+}
+
+.answer-meaning {
+  font-size: clamp(13px, 3vw, 16px);
+  color: var(--ink-light);
+  line-height: 1.8;
+  max-width: 420px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease 0.3s, transform 0.5s ease 0.3s;
+  letter-spacing: 0.05em;
+}
+.answer-meaning.show {
+  opacity: 0.85;
+  transform: translateY(0);
+}
+
+/* 印章 */
+.stamp {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  border: 4px solid var(--vermilion);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: 22px;
+  color: var(--vermilion);
+  background: rgba(184, 40, 46, 0.05);
+  transform: rotate(-12deg) scale(3);
+  opacity: 0;
+  pointer-events: none;
+  top: 50%;
+  right: 8%;
+  margin-top: -36px;
+  box-shadow: inset 0 0 0 2px var(--paper);
+  z-index: 10;
+  line-height: 1.1;
+  text-align: center;
+  font-weight: 900;
+}
+
+.stamp.stamp-down {
+  animation: stampDown 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes stampDown {
+  0% {
+    opacity: 0;
+    transform: rotate(-12deg) scale(3) translateY(-60px);
+  }
+  50% {
+    opacity: 1;
+    transform: rotate(-12deg) scale(0.9) translateY(0);
+  }
+  70% {
+    transform: rotate(-12deg) scale(1.1);
+  }
+  100% {
+    opacity: 0.9;
+    transform: rotate(-12deg) scale(1);
+  }
+}
+
+/* 印章印泥飞溅 */
+.stamp-splash {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 50%;
+  right: 4%;
+  margin-top: -50px;
+  pointer-events: none;
+  opacity: 0;
+}
+.stamp-splash.active {
+  animation: splashFade 0.6s ease forwards;
+}
+@keyframes splashFade {
+  0% { opacity: 0.6; transform: scale(0.5); }
+  100% { opacity: 0; transform: scale(1.5); }
+}
+.stamp-splash span {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--vermilion);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+/* 分隔线 */
+.divider {
+  width: 80%;
+  max-width: 300px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 8px auto;
+  opacity: 0.5;
+}
+
+/* 底部按钮区 */
+.bottom-actions {
+  width: 100%;
+  max-width: 560px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  padding: 24px 10px 20px;
+  margin-top: 20px;
+}
+
+.action-btn {
+  flex: 1;
+  max-width: 240px;
+  padding: 14px 24px;
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(15px, 3.5vw, 18px);
+  font-weight: 700;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.2em;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-reveal {
+  background: var(--vermilion);
+  color: var(--paper);
+  box-shadow: 0 4px 12px rgba(184, 40, 46, 0.3);
+}
+.btn-reveal:hover {
+  background: var(--vermilion-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(184, 40, 46, 0.4);
+}
+.btn-reveal:active { transform: translateY(0); }
+
+.btn-next {
+  background: var(--ink);
+  color: var(--paper);
+  box-shadow: 0 4px 12px rgba(28, 28, 28, 0.25);
+  display: none;
+}
+.btn-next.show { display: block; }
+.btn-next:hover {
+  background: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(28, 28, 28, 0.35);
+}
+.btn-next:active { transform: translateY(0); }
+
+.btn-reveal.hide { display: none; }
+
+.action-btn::before {
+  content: '';
+  position: absolute;
+  top: 2px; left: 2px; right: 2px; bottom: 2px;
+  border: 1px solid rgba(245, 239, 224, 0.25);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+/* ========== 结束屏 ========== */
+#end-screen {
+  gap: 24px;
+}
+
+.end-title {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: clamp(36px, 9vw, 64px);
+  color: var(--ink);
+  letter-spacing: 0.2em;
+}
+
+.end-score-wrap {
+  text-align: center;
+  padding: 30px 40px;
+  background: var(--paper);
+  border: 2px solid var(--gold);
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 4px 20px var(--shadow);
+}
+
+.end-score-wrap::before {
+  content: '';
+  position: absolute;
+  top: 6px; left: 6px; right: 6px; bottom: 6px;
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+.end-score-label {
+  font-size: clamp(14px, 3vw, 18px);
+  color: var(--ink-light);
+  letter-spacing: 0.3em;
+  margin-bottom: 12px;
+}
+
+.end-score {
+  font-family: 'Ma Shan Zheng', cursive;
+  font-size: clamp(56px, 16vw, 96px);
+  color: var(--vermilion);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.end-score-total {
+  font-size: clamp(18px, 4vw, 24px);
+  color: var(--ink-light);
+  margin-top: 8px;
+  letter-spacing: 0.1em;
+}
+
+.end-comment {
+  font-size: clamp(15px, 3.5vw, 18px);
+  color: var(--ink-light);
+  letter-spacing: 0.15em;
+  text-align: center;
+  max-width: 400px;
+  line-height: 1.8;
+}
+
+.restart-btn {
+  margin-top: 10px;
+  padding: 14px 48px;
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(16px, 3.5vw, 20px);
+  font-weight: 700;
+  color: var(--paper);
+  background: var(--vermilion);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.3em;
+  box-shadow: 0 4px 16px rgba(184, 40, 46, 0.35);
+  transition: all 0.3s ease;
+}
+.restart-btn:hover {
+  background: var(--vermilion-dark);
+  transform: translateY(-2px);
+}
+
+/* ========== 粒子/金光效果 ========== */
+.particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--gold);
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 8px var(--gold-light);
+}
+
+/* ========== 卷轴展开动画 ========== */
+.scroll.unrolling {
+  animation: unroll 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes unroll {
+  0% {
+    transform: scaleY(0.02);
+    opacity: 0;
+  }
+  30% {
+    transform: scaleY(0.02);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* 题目切换动画 */
+.scroll.switching {
+  animation: scrollSwitch 0.6s ease;
+}
+
+@keyframes scrollSwitch {
+  0% { transform: scaleY(1); opacity: 1; }
+  40% { transform: scaleY(0.02); opacity: 0.3; }
+  100% { transform: scaleY(1); opacity: 1; }
+}
+
+/* ========== 响应式 ========== */
+@media (max-width: 480px) {
+  .scroll { padding: 24px 16px; }
+  .question-area { min-height: 140px; padding: 12px 6px; }
+  .answer-area { min-height: 100px; padding: 10px 6px; }
+  .stamp { width: 56px; height: 56px; font-size: 16px; right: 4%; }
+  .bottom-actions { padding: 16px 6px 12px; gap: 10px; }
+  .action-btn { padding: 12px 16px; }
+}
+
+@media (max-height: 600px) {
+  .question-area { min-height: 120px; }
+  .answer-area { min-height: 80px; }
+  .emoji-display { font-size: clamp(36px, 10vh, 64px); }
+}
+
+/* 减少动画偏好 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<div id="app">
+  <!-- 粒子层 -->
+  <div class="particles" id="particles"></div>
+
+  <!-- 开始屏 -->
+  <div class="screen active" id="start-screen">
+    <div class="title-wrap">
+      <div class="main-title">看图猜成语</div>
+      <div class="subtitle">课 堂 互 动 · 脑 力 大 挑 战</div>
+    </div>
+    <div class="seal-decoration">趣<br>味</div>
+    <button class="start-btn" id="start-btn">开 始 挑 战</button>
+    <div class="hint-text">共 35 题 · 看图示 · 猜成语</div>
+  </div>
+
+  <!-- 游戏屏 -->
+  <div class="screen" id="game-screen">
+    <div class="top-bar">
+      <div class="progress-info">第 <span class="current" id="current-num">1</span> / <span id="total-num">35</span> 题</div>
+      <div class="score-info">答对 <span class="score" id="score-num">0</span> 题</div>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progress-fill"></div>
+    </div>
+
+    <div class="scroll-container">
+      <div class="scroll" id="scroll">
+        <div class="scroll-inner-border"></div>
+
+        <div class="question-area">
+          <div class="question-label">— 看 图 猜 成 语 —</div>
+          <div class="emoji-display" id="emoji-display"></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="answer-area" id="answer-area">
+          <div class="answer-text" id="answer-text"></div>
+          <div class="answer-meaning" id="answer-meaning"></div>
+          <div class="stamp" id="stamp">答<br>对</div>
+          <div class="stamp-splash" id="stamp-splash"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-actions">
+      <button class="action-btn btn-reveal" id="reveal-btn">揭 晓 答 案</button>
+      <button class="action-btn btn-next" id="next-btn">下 一 题</button>
+    </div>
+  </div>
+
+  <!-- 结束屏 -->
+  <div class="screen" id="end-screen">
+    <div class="end-title">挑 战 完 成</div>
+    <div class="end-score-wrap">
+      <div class="end-score-label">本 轮 答 对</div>
+      <div class="end-score" id="end-score">0</div>
+      <div class="end-score-total">/ 35 题</div>
+    </div>
+    <div class="end-comment" id="end-comment"></div>
+    <button class="restart-btn" id="restart-btn">再 来 一 轮</button>
+  </div>
+</div>
+
+<script>
+// ========== 成语题库 ==========
+const IDIOMS = [
+  { emoji: "🐍✏️🦶", answer: "画蛇添足", meaning: "画蛇时给蛇添上脚。比喻做了多余的事，反而把事情弄糟。" },
+  { emoji: "🌳⏳🐰", answer: "守株待兔", meaning: "守在树桩旁等待兔子撞死。比喻不主动努力，心存侥幸，希望得到意外收获。" },
+  { emoji: "🐑💨🔧🏠", answer: "亡羊补牢", meaning: "羊丢失后才去修补羊圈。比喻出了问题以后想办法补救，可以防止继续受损失。" },
+  { emoji: "🕳️🐸", answer: "井底之蛙", meaning: "井底的青蛙只能看到井口大的天。比喻见识短浅的人。" },
+  { emoji: "🍷🏹🐍", answer: "杯弓蛇影", meaning: "将酒杯中弓的倒影误认为蛇。比喻因疑神疑鬼而引起恐惧。" },
+  { emoji: "🙉🔔", answer: "掩耳盗铃", meaning: "捂住自己的耳朵去偷铃铛。比喻自己欺骗自己，明明掩盖不住的事情偏要设法掩盖。" },
+  { emoji: "🚢✏️⚔️", answer: "刻舟求剑", meaning: "在船上刻记号寻找掉入水中的剑。比喻拘泥固执，不知变通。" },
+  { emoji: "🌱👐⬆️", answer: "揠苗助长", meaning: "把苗拔起以帮助其生长。比喻违反事物发展的客观规律，急于求成，反而坏事。" },
+  { emoji: "🦊👑🐯", answer: "狐假虎威", meaning: "狐狸借着老虎的威风吓唬其他野兽。比喻依仗别人的势力欺压人。" },
+  { emoji: "🐂🎹", answer: "对牛弹琴", meaning: "对着牛弹琴。比喻对不懂道理的人讲道理，或对外行人说内行话，白费口舌。" },
+  { emoji: "🐉✏️👁️", answer: "画龙点睛", meaning: "画龙后点上眼睛龙便飞走。比喻在关键处用精辟的语句点明要旨，使内容更加生动有力。" },
+  { emoji: "👨❤️🐉😱", answer: "叶公好龙", meaning: "叶公口头上爱好龙，真龙来了却害怕。比喻表面上爱好某事物，实际上并不真爱好。" },
+  { emoji: "🎵🎺➕", answer: "滥竽充数", meaning: "不会吹竽的人混在吹竽的队伍里充数。比喻没有真才实学的人混在行家里充数，或以次充好。" },
+  { emoji: "⚔️🛡️❓", answer: "自相矛盾", meaning: "自己的言行前后互相抵触。比喻一个人说话、行动前后抵触，不一致。" },
+  { emoji: "😰🌤️", answer: "杞人忧天", meaning: "杞国人担心天会塌下来。比喻不必要的或缺乏根据的忧虑和担心。" },
+  { emoji: "👴⛰️🚚", answer: "愚公移山", meaning: "愚公决心移走挡路的两座大山。比喻坚持不懈地改造自然和坚定不移地进行斗争。" },
+  { emoji: "🐦🌊🪨", answer: "精卫填海", meaning: "精卫鸟衔来木石决心填平大海。比喻意志坚决，不畏艰难。" },
+  { emoji: "🏃☀️", answer: "夸父逐日", meaning: "夸父拼命追赶太阳。比喻人有大志，也比喻不自量力。" },
+  { emoji: "👩🔧🌌", answer: "女娲补天", meaning: "女娲炼石补天拯救苍生。比喻改造天地的雄伟气魄和大无畏的斗争精神。" },
+  { emoji: "👩🚀🌙", answer: "嫦娥奔月", meaning: "嫦娥飞向月亮。中国古代神话故事，常用来比喻美好的向往与追求。" },
+  { emoji: "🏹☀️☀️☀️", answer: "后羿射日", meaning: "后羿射下九个太阳拯救苍生。比喻为民除害、英勇无畏的精神。" },
+  { emoji: "4️⃣🎵😢", answer: "四面楚歌", meaning: "四面八方都传来楚地的歌声。比喻陷入四面受敌、孤立无援的境地。" },
+  { emoji: "💥🍲⛵", answer: "破釜沉舟", meaning: "打破饭锅，凿沉渡船。比喻下决心不顾一切地干到底。" },
+  { emoji: "🛏️🔥👅", answer: "卧薪尝胆", meaning: "睡在柴草上，经常尝尝苦胆。形容人刻苦自励，发奋图强。" },
+  { emoji: "📄⚔️💬", answer: "纸上谈兵", meaning: "在纸面上谈论用兵打仗。比喻空谈理论，不能解决实际问题。" },
+  { emoji: "👉🦌❓🐴", answer: "指鹿为马", meaning: "指着鹿说是马。比喻故意颠倒黑白，混淆是非。" },
+  { emoji: "💎🏠", answer: "完璧归赵", meaning: "将和氏璧完好地送回赵国。比喻把原物完好地归还本人。" },
+  { emoji: "🧎🌿🙏", answer: "负荆请罪", meaning: "背着荆条向对方请罪。表示向人认错赔罪，请求责罚。" },
+  { emoji: "3️⃣🚪🏠", answer: "三顾茅庐", meaning: "刘备三次拜访诸葛亮的草屋。比喻真心诚意，一再邀请。" },
+  { emoji: "🚢🌿🏹", answer: "草船借箭", meaning: "利用草船从曹操处借得十万支箭。比喻运用智谋，凭借他人的人力或财力来达到自己的目的。" },
+  { emoji: "👀🍒💧", answer: "望梅止渴", meaning: "想到梅子酸就流口水从而解渴。比喻用空想安慰自己。" },
+  { emoji: "🐔⏰💃", answer: "闻鸡起舞", meaning: "听到鸡叫就起床舞剑。比喻有志报国的人及时奋起。" },
+  { emoji: "🔨🧱💡", answer: "凿壁偷光", meaning: "凿穿墙壁借邻居家的灯光读书。形容家贫而读书刻苦。" },
+  { emoji: "📚💇✏️", answer: "悬梁刺股", meaning: "把头发系在房梁上，用锥子刺大腿防止打瞌睡。形容学习非常刻苦。" },
+  { emoji: "✨📚❄️", answer: "囊萤映雪", meaning: "用萤火虫照明读书，利用雪的反光读书。形容家境贫穷，勤学苦读。" }
+];
+
+// ========== 游戏状态 ==========
+let state = {
+  currentIndex: 0,
+  score: 0,
+  revealed: false,
+  order: []
+};
+
+// ========== DOM 引用 ==========
+const $ = id => document.getElementById(id);
+const startScreen = $('start-screen');
+const gameScreen = $('game-screen');
+const endScreen = $('end-screen');
+const scrollEl = $('scroll');
+const emojiDisplay = $('emoji-display');
+const answerText = $('answer-text');
+const answerMeaning = $('answer-meaning');
+const stamp = $('stamp');
+const stampSplash = $('stamp-splash');
+const revealBtn = $('reveal-btn');
+const nextBtn = $('next-btn');
+const currentNum = $('current-num');
+const totalNum = $('total-num');
+const scoreNum = $('score-num');
+const progressFill = $('progress-fill');
+const particles = $('particles');
+
+// ========== 初始化 ==========
+function init() {
+  totalNum.textContent = IDIOMS.length;
+  // 随机打乱题目顺序
+  state.order = [...Array(IDIOMS.length).keys()];
+  shuffleArray(state.order);
+
+  $('start-btn').addEventListener('click', startGame);
+  $('restart-btn').addEventListener('click', restartGame);
+  revealBtn.addEventListener('click', revealAnswer);
+  nextBtn.addEventListener('click', nextQuestion);
+}
+
+function shuffleArray(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+}
+
+// ========== 屏幕切换 ==========
+function showScreen(screen) {
+  [startScreen, gameScreen, endScreen].forEach(s => s.classList.remove('active'));
+  screen.classList.add('active');
+}
+
+// ========== 开始游戏 ==========
+function startGame() {
+  state.currentIndex = 0;
+  state.score = 0;
+  state.revealed = false;
+  shuffleArray(state.order);
+  showScreen(gameScreen);
+  loadQuestion();
+}
+
+// ========== 加载题目 ==========
+function loadQuestion() {
+  const idiom = IDIOMS[state.order[state.currentIndex]];
+  state.revealed = false;
+
+  // 更新进度
+  currentNum.textContent = state.currentIndex + 1;
+  scoreNum.textContent = state.score;
+  progressFill.style.width = ((state.currentIndex) / IDIOMS.length * 100) + '%';
+
+  // 重置答案区
+  answerText.innerHTML = '';
+  answerMeaning.classList.remove('show');
+  answerMeaning.textContent = '';
+  stamp.classList.remove('stamp-down');
+  stampSplash.classList.remove('active');
+  revealBtn.classList.remove('hide');
+  nextBtn.classList.remove('show');
+
+  // 卷轴切换动画
+  scrollEl.classList.remove('switching');
+  void scrollEl.offsetWidth; // 触发重排
+  scrollEl.classList.add('switching');
+
+  // 延迟显示emoji（等卷轴展开）
+  emojiDisplay.classList.add('fade-out');
+  setTimeout(() => {
+    emojiDisplay.textContent = idiom.emoji;
+    emojiDisplay.classList.remove('fade-out');
+  }, 250);
+}
+
+// ========== 揭晓答案 ==========
+function revealAnswer() {
+  if (state.revealed) return;
+  state.revealed = true;
+
+  const idiom = IDIOMS[state.order[state.currentIndex]];
+
+  // 隐藏揭晓按钮，显示下一题按钮
+  revealBtn.classList.add('hide');
+  nextBtn.classList.add('show');
+
+  // 逐字毛笔书写动画
+  answerText.innerHTML = '';
+  const chars = idiom.answer.split('');
+  chars.forEach((char, i) => {
+    const span = document.createElement('span');
+    span.className = 'answer-char';
+    span.textContent = char;
+    answerText.appendChild(span);
+    setTimeout(() => {
+      span.classList.add('revealed');
+    }, i * 200);
+  });
+
+  // 显示释义
+  setTimeout(() => {
+    answerMeaning.textContent = idiom.meaning;
+    answerMeaning.classList.add('show');
+  }, chars.length * 200 + 200);
+
+  // 印章盖下
+  setTimeout(() => {
+    stamp.classList.add('stamp-down');
+    createStampSplash();
+    burstParticles();
+  }, chars.length * 200 + 100);
+
+  // 计分（默认答对，课堂互动由老师/同学判断，这里自动+1作为参与激励）
+  state.score++;
+  scoreNum.textContent = state.score;
+}
+
+// ========== 印章飞溅效果 ==========
+function createStampSplash() {
+  stampSplash.innerHTML = '';
+  for (let i = 0; i < 8; i++) {
+    const dot = document.createElement('span');
+    const angle = (i / 8) * Math.PI * 2;
+    const dist = 20 + Math.random() * 25;
+    dot.style.left = (50 + Math.cos(angle) * dist) + '%';
+    dot.style.top = (50 + Math.sin(angle) * dist) + '%';
+    dot.style.width = (3 + Math.random() * 5) + 'px';
+    dot.style.height = dot.style.width;
+    stampSplash.appendChild(dot);
+  }
+  stampSplash.classList.remove('active');
+  void stampSplash.offsetWidth;
+  stampSplash.classList.add('active');
+}
+
+// ========== 金光粒子爆发 ==========
+function burstParticles() {
+  const rect = answerText.getBoundingClientRect();
+  const cx = rect.left + rect.width / 2;
+  const cy = rect.top + rect.height / 2;
+
+  for (let i = 0; i < 24; i++) {
+    const p = document.createElement('div');
+    p.className = 'particle';
+    const size = 3 + Math.random() * 6;
+    p.style.width = size + 'px';
+    p.style.height = size + 'px';
+    p.style.left = cx + 'px';
+    p.style.top = cy + 'px';
+    p.style.background = Math.random() > 0.5 ? 'var(--gold)' : 'var(--gold-light)';
+    particles.appendChild(p);
+
+    const angle = Math.random() * Math.PI * 2;
+    const dist = 80 + Math.random() * 160;
+    const dx = Math.cos(angle) * dist;
+    const dy = Math.sin(angle) * dist;
+
+    p.animate([
+      { transform: 'translate(0, 0) scale(1)', opacity: 1 },
+      { transform: `translate(${dx * 0.5}px, ${dy * 0.5 - 20}px) scale(1.2)`, opacity: 0.8, offset: 0.4 },
+      { transform: `translate(${dx}px, ${dy + 40}px) scale(0)`, opacity: 0 }
+    ], {
+      duration: 900 + Math.random() * 400,
+      easing: 'cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+      fill: 'forwards'
+    });
+
+    setTimeout(() => p.remove(), 1400);
+  }
+}
+
+// ========== 下一题 ==========
+function nextQuestion() {
+  state.currentIndex++;
+  if (state.currentIndex >= IDIOMS.length) {
+    endGame();
+  } else {
+    loadQuestion();
+  }
+}
+
+// ========== 结束游戏 ==========
+function endGame() {
+  progressFill.style.width = '100%';
+  $('end-score').textContent = state.score;
+
+  let comment = '';
+  const ratio = state.score / IDIOMS.length;
+  if (ratio >= 0.9) comment = '才高八斗，学富五车！成语大师非你莫属！';
+  else if (ratio >= 0.7) comment = '博闻强识，出口成章！继续加油！';
+  else if (ratio >= 0.5) comment = '小有收获，再接再厉，成语世界等你探索！';
+  else comment = '千里之行始于足下，多读多记，下次一定更棒！';
+  $('end-comment').textContent = comment;
+
+  showScreen(endScreen);
+}
+
+// ========== 重新开始 ==========
+function restartGame() {
+  startGame();
+}
+
+// ========== 启动 ==========
+init();
+</script>
+</body>
+</html>

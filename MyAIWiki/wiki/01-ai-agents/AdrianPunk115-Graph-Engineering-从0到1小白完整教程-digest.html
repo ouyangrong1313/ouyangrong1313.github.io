@@ -1,0 +1,96 @@
+<h1 id="graph-engineering从-0-到-1-小白完整教程速读摘要">Graph Engineering：从 0 到 1 小白完整教程（速读摘要）</h1>
+
+<blockquote>
+  <p><strong>一句话</strong>：Graph Engineering = 把“我希望一个 AI 自己搞定”改成“我告诉一群 AI 怎么分工、怎么交接、怎么验证、怎么停止”；Loop 没死，它只是 Graph 里的自环节点。</p>
+</blockquote>
+
+<h2 id="8-节点速查表">8 节点速查表</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>节点</th>
+      <th>一句话定义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Graph是Loop上层结构</td>
+      <td>Loop 是自环，Graph 是多个循环和节点的协作系统</td>
+    </tr>
+    <tr>
+      <td>Graph准入阈值</td>
+      <td>多角色、条件分支、并行、三轮不收敛才值得上 Graph</td>
+    </tr>
+    <tr>
+      <td>节点存在性检验</td>
+      <td>只有模型/工具/角色/验证责任真的不同，节点才应独立</td>
+    </tr>
+    <tr>
+      <td>共享状态契约</td>
+      <td>定义字段、类型和写权限，避免错误沿边污染下游</td>
+    </tr>
+    <tr>
+      <td>路由代码化</td>
+      <td>条件明确的路由用代码，AI 只处理模糊判断</td>
+    </tr>
+    <tr>
+      <td>独立审阅节点</td>
+      <td>审阅要换模型、上下文或证据源，防止同源 AI 互相点头</td>
+    </tr>
+    <tr>
+      <td>写权限收口</td>
+      <td>多 AI 可并行读和提意见，同一时间只让一个执行者改东西</td>
+    </tr>
+    <tr>
+      <td>小Graph串联</td>
+      <td>复杂任务拆成一串小 Graph，而不是做一个超级图</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="graph-准入四问">Graph 准入四问</h2>
+
+<ol>
+  <li>是否需要两个以上明确角色？</li>
+  <li>是否存在条件分支？</li>
+  <li>是否有可以并行推进的独立子任务？</li>
+  <li>单 Loop 是否三轮仍不能稳定收敛？</li>
+</ol>
+
+<p>命中两项以上，上 Graph；只命中一项，先补强 Loop 的验收标准、停止条件和验证器。</p>
+
+<h2 id="4-个最该抄回工程的规则">4 个最该抄回工程的规则</h2>
+
+<ul>
+  <li><strong>节点要为存在辩护</strong>：能合并就合并，别把一个简单任务拆成一堆装饰节点。</li>
+  <li><strong>状态先于执行</strong>：开始跑之前先定义状态结构、读写权限和检查点。</li>
+  <li><strong>路由尽量确定</strong>：能 if/else 的别交给 AI，自由判断越多越难复现。</li>
+  <li><strong>审阅必须独立</strong>：换底座、换上下文、锚定测试/编译/事实来源。</li>
+</ul>
+
+<h2 id="5-个坑">5 个坑</h2>
+
+<ol>
+  <li>为了图而图：一个 Loop 就能做的事被拆成五个节点。</li>
+  <li>状态不定义：节点之间传什么全靠默契。</li>
+  <li>路由全交给 AI：同一输入两次跑出两条路线。</li>
+  <li>审阅和执行同源：AI 对自己的输出过于宽容。</li>
+  <li>没有预算上限：并行节点和重试会快速烧 token。</li>
+</ol>
+
+<h2 id="5-个借鉴动作">5 个借鉴动作</h2>
+
+<ol>
+  <li>在 MyAIWiki 编译流程里，把“raw -&gt; digest -&gt; wiki -&gt; index/log -&gt; 校验”画成固定 Graph。</li>
+  <li>给每个编译节点定义状态字段：来源元数据、核心观点、知识节点、内链、校验结果。</li>
+  <li>把“内链查找”和“反事实审阅”做成独立审阅节点。</li>
+  <li>写入文件仍由单一执行者完成，避免多个 Agent 同时改索引。</li>
+  <li>对每个 Graph 设重试上限和停止条件：抓取失败、内容不足、索引冲突、校验不通过都要明确收口。</li>
+</ol>
+
+<h2 id="关联--备注">关联 + 备注</h2>
+
+<p><strong>关联</strong>：[[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]] / [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] / [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]] / [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]] / [[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]]</p>
+
+<p><strong>备注</strong>：本文是大众解释版，最大价值不是提出新理论，而是把 Graph 的准入、节点、状态、路由、审阅和练习路径讲成新手可执行清单。</p>

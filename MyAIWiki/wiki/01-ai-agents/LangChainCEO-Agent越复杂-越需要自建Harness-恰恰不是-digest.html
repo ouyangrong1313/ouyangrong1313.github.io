@@ -1,0 +1,56 @@
+<h1 id="langchain-ceoagent-越复杂越需要自建-harness恰恰不是---速读">LangChain CEO：Agent 越复杂，越需要自建 Harness？恰恰不是 - 速读</h1>
+
+<blockquote>
+  <p>先问任务离模型熟悉的工作分布有多远，再决定 Harness 要定制到什么程度；出错时先看模型实际收到了什么 Context。</p>
+</blockquote>
+
+<h2 id="决策表">决策表</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>情况</th>
+      <th>优先动作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>任务接近通用能力</td>
+      <td>复用通用 Harness，最小化增量</td>
+    </tr>
+    <tr>
+      <td>垂直规则或流程偏移</td>
+      <td>只定制业务 Context、Gate、Check 与状态</td>
+    </tr>
+    <tr>
+      <td>最终答案异常</td>
+      <td>回放 Context、工具结果、摘要与错误传播</td>
+    </tr>
+    <tr>
+      <td>多种改法可选</td>
+      <td>同任务集比较效果、时延、Token 与成本</td>
+    </tr>
+    <tr>
+      <td>高风险自主执行</td>
+      <td>加权限、审计、人工确认和可回滚边界</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="关键提醒">关键提醒</h2>
+
+<ul>
+  <li>Model、Context、Harness 是独立但耦合的诊断面；换模型不等于解决系统问题。</li>
+  <li>Trace 是定位根因的前提，只记录最终回复无法判断问题发生在哪一步。</li>
+  <li>Harness 不是一次性脚手架，应在真实任务、Benchmark 和反馈中持续迭代。</li>
+</ul>
+
+<h2 id="关联">关联</h2>
+
+<ul>
+  <li>[[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：系统分层实践。</li>
+  <li>[[01-ai-agents/Agent评测漫谈-由浅入深讲解Agent评测]]：Trace 与任务评测基础设施。</li>
+  <li>[[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]]：Harness 六元组工程实现。</li>
+</ul>
+
+<p>证据边界：案例与产品细节来自 DataFun 二手演讲整理，未独立复现。</p>
