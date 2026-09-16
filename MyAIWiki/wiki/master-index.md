@@ -1,6 +1,10 @@
 # AI 知识库索引
 
 ## 最近更新
+- [Jeff Dean：AI创业，要找模型只有1%成功率的问题丨YC](./02-ai-coding/JeffDean-AI创业-要找模型只有1%成功率的问题丨YC.md) — 2026-09-16
+- [Jeff Dean：AI创业，要找模型只有1%成功率的问题丨YC - Digest](./02-ai-coding/JeffDean-AI创业-要找模型只有1%成功率的问题丨YC-digest.md) — 1% 规则、上下文工程、数据搬运、长任务评估与 21 个开头钩子速读。
+- [AI Coding 时代真正重要的是软件工程判断力](./02-ai-coding/AICoding时代真正重要的是软件工程判断力.md) — 2026-09-16
+- [AI Coding 时代真正重要的是软件工程判断力 - 速读](./02-ai-coding/AICoding时代真正重要的是软件工程判断力-digest.md) — 隐藏取舍、幂等重试、产物链、人类门禁与 21 个开头钩子速读。
 - [YC 研讨会：为什么 Harness 比模型更重要](./01-ai-agents/胡言Ray语-YC研讨会-Harness比模型更重要.md) — 2026-09-15
 - [Stripe CEO 对谈 Replit 创始人：历史上创业的最佳时机](./03-productivity/StripeCEO对谈Replit创始人-历史上创业的最佳时机.md) — 2026-09-15
 - [面试官：讲一讲多 Agent 协作如何保持一致性](./01-ai-agents/架构师-多Agent协作一致性-任务状态与证据.md) — 2026-09-14
@@ -511,6 +515,10 @@
 
 ### AI Coding
 
+- [Jeff Dean：AI创业，要找模型只有1%成功率的问题丨YC](./02-ai-coding/JeffDean-AI创业-要找模型只有1%成功率的问题丨YC.md) - 1% 规则、上下文工程、数据搬运、长任务评估与规格品味。
+- [Jeff Dean：AI创业，要找模型只有1%成功率的问题丨YC - Digest](./02-ai-coding/JeffDean-AI创业-要找模型只有1%成功率的问题丨YC-digest.md) - 1% 规则、上下文工程、数据搬运、长任务评估与 21 个开头钩子速读。
+- [AI Coding 时代真正重要的是软件工程判断力](./02-ai-coding/AICoding时代真正重要的是软件工程判断力.md) - 工程判断力、隐藏取舍、幂等重试、AI-Native SDLC 与人类门禁。
+- [AI Coding 时代真正重要的是软件工程判断力 - Digest](./02-ai-coding/AICoding时代真正重要的是软件工程判断力-digest.md) - 隐藏取舍、幂等重试、产物链、人类门禁与 21 个开头钩子速读。
 - [AI 工程师凭什么能「塑造」一个产品？](./02-ai-coding/非著名程序员-AI工程师塑造产品-能力图谱.md) - Shaping the Build、构建循环、产品决策、用户理解、沟通带队和高主动性。
 - [AI 工程师塑造产品 - Digest](./02-ai-coding/非著名程序员-AI工程师塑造产品-能力图谱-digest.md) - 六节点速读与证据边界。
 - [驳斥“程序员一定会被这个时代淘汰，因为程序员除了写代码啥也不会，而他唯一会的东西现在已经被 AI 100% 取代了”](./02-ai-coding/宝玉AI-程序员不会被AI淘汰-软件工程师职业重新定义.md) - AI 替代编码环节但不替代软件工程；工程师价值上移到问题定义、系统判断、验证标准和结果责任。

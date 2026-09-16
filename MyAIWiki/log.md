@@ -419,6 +419,35 @@
 
 ---
 
+## 2026-09-16
+### ingest | Jeff Dean：AI创业，要找模型只有1%成功率的问题丨YC
+- 来源：https://mp.weixin.qq.com/s/oj6MyHo5VuJsSm0yed8iig
+- 原文：raw/JeffDean-AI创业-要找模型只有1%成功率的问题丨YC.md
+- 拆解：raw/JeffDean-AI创业-要找模型只有1%成功率的问题丨YC-digest.md
+- wiki：wiki/02-ai-coding/JeffDean-AI创业-要找模型只有1%成功率的问题丨YC.md
+- 作者：晚点再听LaterCast；发布时间：2026-08-05 20:58；获取时间：2026-09-16；抓取方式：isolated-chrome-cdp；原视频：https://www.youtube.com/watch?v=CxXgV54KzpQ&t=62s
+- 标签： #主题/AI-Coding #主题/AI创业 #主题/上下文工程 #主题/Agent评估 #场景/公众号长文 #节点/1%规则 #节点/数据搬运
+- 核心命题：先用最强通用模型测核心任务，优先找成功率仍接近 0%-1% 的难题，再用独有数据、专业流程和可重复评估建立优势。
+- 节点：1%规则、模型成功率基线、数据搬运成本、上下文工程、Skill性能闭环、分支搜索与评估器、规格与品味、可量化实验循环
+- 关联：[[02-ai-coding/winkrun-吴恩达-AI工程四项核心技能]]、[[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]]、[[01-ai-agents/Agent评测漫谈-由浅入深讲解Agent评测]]、[[02-ai-coding/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了]]、[[01-ai-agents/Loop-Engineering-验证才是瓶颈]]
+- Seetong 借鉴：建立真实任务的模型成功率基线；整理设备、日志、协议和故障上下文；把排障流程沉淀为含测量与回退的 Skill；为长任务增加分支评估和失败回放；季度复盘被模型覆盖的方向。
+- 待补证：TPU 30-80 倍能源效率、20-30 倍延迟、数据搬运约 1000 倍能耗、模拟器约 30 万倍加速、模型成功率阈值及 2027 年预测均为访谈二次转述；1% 规则是启发式，不是成功率定律。
+- 透明玻璃自检：raw 12,303B（含完整正文与 SHA-256）/ digest 3,924B / wiki 6,030B；wiki 8 节点、5 个真实内链、上游/下游/同级图谱齐全；状态 published。
+### ingest | AI Coding 时代真正重要的是软件工程判断力
+- 来源：https://mp.weixin.qq.com/s/Psm4zIMJcbj95-alf2-4VQ
+- 原文：raw/AICoding时代真正重要的是软件工程判断力.md
+- 拆解：raw/AICoding时代真正重要的是软件工程判断力-digest.md
+- wiki：wiki/02-ai-coding/AICoding时代真正重要的是软件工程判断力.md
+- 作者：两克伴；发布时间：2026-08-30 17:41；获取时间：2026-09-16；抓取方式：isolated-chrome-cdp
+- 标签： #主题/AI-Coding #主题/软件工程 #主题/AI-Native-SDLC #场景/公众号长文 #节点/工程判断力 #节点/验证证据
+- 核心命题：Coding Agent 让实现更便宜，却不会替工程师决定系统取舍、失败方式和发布证据；个人要识别隐藏选择，团队要把判断前移并固化为可追溯产物。
+- 节点：工程判断力、隐藏取舍、幂等重试、AI-Native SDLC、committed artifact chain、intent-spec-plan、人类门禁、source-of-truth
+- 关联：[[02-ai-coding/winkrun-吴恩达-AI工程四项核心技能]]、[[02-ai-coding/软件工程的功底是智能时代生死攸关的要素]]、[[02-ai-coding/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了]]、[[02-ai-coding/AndrejKarpathy-AI写代码-只需要问自己这一个问题]]
+- Seetong 借鉴：把需求边界和风险写入 intent/spec/plan；为重试、缓存、认证补幂等与失败路径测试；给高风险改动配置人工门禁；以日志、测试和变更记录保留 Agent 决策证据。
+- 待补证：Andrew Ng 岗位分析“超过 1 万个岗位、数十次访谈”、三篇文章日期及 Anthropic Playbook 阶段均为公众号转述；支付重试为机制示例而非事故统计。
+- 透明玻璃自检：raw 11,718B（含完整正文与 SHA-256）/ digest 3,919B / wiki 5,869B；wiki 8 节点、4 个真实内链、上游/下游/同级图谱齐全；状态 published。
+
+
 ## 2026-09-15
 ### ingest | Stripe CEO 对谈 Replit 创始人：历史上创业的最佳时机
 - 来源：https://mp.weixin.qq.com/s/LINBu41ry4VjxQfC4O9dBw
