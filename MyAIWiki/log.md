@@ -419,6 +419,23 @@
 
 ---
 
+## 2026-09-17
+### ingest | 前沿部署工程 101：把平台卖成结果
+- 来源：https://mp.weixin.qq.com/s/YIlmVVIkZXmqDeokFb_4Bg
+- 原文：raw/前沿部署工程101-把平台卖成结果.md
+- 拆解：raw/前沿部署工程101-把平台卖成结果-digest.md
+- wiki：wiki/01-ai-agents/前沿部署工程101-把平台卖成结果.md
+- 标签： #场景/公众号长文
+- 说明：已发布；保留原文抓取方式与正文 SHA-256，ACV 和组件比例按演讲者口径记录并标注限制
+### ingest | 大淘宝技术：agent 优化之 GEPA——一种提示词自进化的优化方案
+- 来源：https://mp.weixin.qq.com/s/jf5OKEhBDWkP0228tC5o1w
+- 原文：raw/大淘宝技术-agent优化之GEPA-一种提示词自进化的优化方案.md
+- 拆解：raw/大淘宝技术-agent优化之GEPA-一种提示词自进化的优化方案-digest.md
+- wiki：wiki/01-ai-agents/大淘宝技术-agent优化之GEPA-一种提示词自进化的优化方案.md
+- 标签： #场景/公众号长文
+- 说明：已完成 raw / digest / wiki 编译并发布；原文数字与方案设想保留作者口径和证据边界。
+
+
 ## 2026-09-16
 ### ingest | Jeff Dean：AI创业，要找模型只有1%成功率的问题丨YC
 - 来源：https://mp.weixin.qq.com/s/oj6MyHo5VuJsSm0yed8iig
