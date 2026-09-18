@@ -419,6 +419,37 @@
 
 ---
 
+## 2026-09-18
+### ingest | AI时代，架构师必备的8大技能！（4/100）
+- 来源：https://mp.weixin.qq.com/s/EC4HSp-XaKLXGn7EZPus-g
+- 原文：raw/AI时代-架构师必备的8大技能-4-100.md
+- 拆解：raw/AI时代-架构师必备的8大技能-4-100-digest.md
+- wiki：wiki/02-ai-coding/AI时代-架构师必备的8大技能-4-100.md
+- 标签： #场景/公众号长文
+- 说明：已完成 digest 与 wiki 人工编译；八项能力作为作者框架保留方法论边界，状态 published
+### ingest | AI时代，什么样的人更值钱？｜2026 AI人才市场报告发布
+- 来源：https://mp.weixin.qq.com/s/YO03IrAYDU-X_e-A0y-Ngg
+- 原文：raw/AI时代-什么样的人更值钱-｜2026AI人才市场报告发布.md
+- 拆解：raw/AI时代-什么样的人更值钱-｜2026AI人才市场报告发布-digest.md
+- wiki：wiki/03-productivity/AI时代-什么样的人更值钱-｜2026AI人才市场报告发布.md
+- 标签： #场景/公众号长文
+- 说明：已完成 digest 与 wiki 人工编译；报告数字、直播案例与职业建议均保留证据边界，状态 published
+### ingest | 从 ReAct 到 Agent Team：一个医疗系统研发任务里的信息流与责任边界
+- 来源：https://mp.weixin.qq.com/s/JpDAPxDxt8HWdxwuVpOCGg
+- 原文：raw/从ReAct到AgentTeam-一个医疗系统研发任务里的信息流与责任边界.md
+- 拆解：raw/从ReAct到AgentTeam-一个医疗系统研发任务里的信息流与责任边界-digest.md
+- wiki：wiki/01-ai-agents/从ReAct到AgentTeam-一个医疗系统研发任务里的信息流与责任边界.md
+- 标签： #场景/公众号长文
+- 说明：已完成 digest 与 wiki 人工编译；医疗语义、权限边界和外部评测数字均保留证据限制，状态 published
+### ingest | AI驱动组织变革：AI Native转型从哪些方面入手，成功的标志是什么
+- 来源：https://mp.weixin.qq.com/s/iS1dsL8AnKOwtj61oX8cPg
+- 原文：raw/AI驱动组织变革-AINative转型从哪些方面入手-成功的标志是什么.md
+- 拆解：raw/AI驱动组织变革-AINative转型从哪些方面入手-成功的标志是什么-digest.md
+- wiki：wiki/01-ai-agents/AI驱动组织变革-AINative转型从哪些方面入手-成功的标志是什么.md
+- 标签： #场景/公众号长文
+- 说明：已完成 digest 与 wiki 人工编译；原文数字保留来源与证据边界，状态 published
+
+
 ## 2026-09-17
 ### ingest | 前沿部署工程 101：把平台卖成结果
 - 来源：https://mp.weixin.qq.com/s/YIlmVVIkZXmqDeokFb_4Bg

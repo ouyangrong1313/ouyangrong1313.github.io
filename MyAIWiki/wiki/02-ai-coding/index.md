@@ -67,6 +67,7 @@ AI 辅助编程的实战经验、提示词模板、工作流总结。
 - [[Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了-digest]] - 提交产物、策略分层、受保护验证与人类门禁速读。
 
 ### 实战案例
+- [[AI时代-架构师必备的8大技能-4-100]] - AI 编程时代架构师的八项能力框架（2026-09-18）
 - [[JeffDean-AI创业-要找模型只有1%成功率的问题丨YC]] - **核心命题**“先用最强通用模型测核心任务，优先找成功率仍接近 0%-1% 的难题”；**8 节点**（1% 规则 / 模型成功率基线 / 数据搬运成本 / 上下文工程 / Skill 性能闭环 / 分支搜索与评估器 / 规格与品味 / 可量化实验循环）；与 [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]]、[[01-ai-agents/Agent评测漫谈-由浅入深讲解Agent评测]]、[[02-ai-coding/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了]] 强关联；文中硬件和加速数字均为 YC 对话二次转述，未独立复核。
 - [Jeff Dean：AI创业，要找模型只有1%成功率的问题丨YC（digest）](../../raw/JeffDean-AI创业-要找模型只有1%成功率的问题丨YC-digest.md) - 1% 规则、上下文工程、数据搬运、长任务评估与 21 个开头钩子速读。
 - [[AICoding时代真正重要的是软件工程判断力]] - **核心命题**“Coding Agent 让实现更便宜，却不会替工程师承担工程取舍和验证责任”；**8 节点**（工程判断力 / 隐藏取舍 / 幂等重试 / AI-Native SDLC / committed artifact chain / intent-spec-plan / 人类门禁 / source-of-truth）；与 [[02-ai-coding/winkrun-吴恩达-AI工程四项核心技能]]、[[02-ai-coding/软件工程的功底是智能时代生死攸关的要素]]、[[02-ai-coding/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了]] 强关联；文中 Andrew Ng 岗位分析规模、文章日期及 Anthropic 流程均为公众号转述，未独立复核。

@@ -430,6 +430,8 @@
 - [[一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制-digest]] - 四齿飞轮、三集隔离、候选发布与控制边界速读。
 
 ### 实战案例
+- [[从ReAct到AgentTeam-一个医疗系统研发任务里的信息流与责任边界]] - 医疗研发中的 ReAct、Agent Team、信息流与责任边界（2026-09-18）
+- [[AI驱动组织变革-AINative转型从哪些方面入手-成功的标志是什么]] - AI Native 转型的六个维度、六个成功信号与四步路径（2026-09-18）
 - [[前沿部署工程101-把平台卖成结果]] - 宝玉整理 Kevin Bai《Forward Deployed Engineering 101》：FDE 以共享基础组件为底座，把复杂平台交付为客户业务结果；2026-09-17
 - [[大淘宝技术-agent优化之GEPA-一种提示词自进化的优化方案]] - GEPA 将 Prompt 优化做成“推理→评分→反思→Pareto 选择”闭环，补充 Agent 自进化与评测主线。
 - [[胡言Ray语-YC研讨会-Harness比模型更重要]] - **核心命题**“模型提供推理潜力，Harness 负责把潜力变成可持续执行的系统”；**9 节点**（Harness运行时 / 四代范式演进 / L1-L2-L3上下文 / 端云计算分层 / 持久状态与断点续跑 / 多Agent反模式 / 确定性门禁 / Self-Improving-Harness / 外部评测）；与 [[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]、[[01-ai-agents/DataFunTalk-Graph-Engineering-从Harness到Ontology]]、[[01-ai-agents/架构师-多Agent协作一致性-任务状态与证据]] 强关联。本文为公众号整理，案例数字保留待核验边界。
