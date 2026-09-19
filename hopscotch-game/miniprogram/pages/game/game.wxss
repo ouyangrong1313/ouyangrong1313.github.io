@@ -1,0 +1,196 @@
+/**
+ * 童年跳房子大挑战 - 游戏页样式
+ */
+
+.game-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #87CEEB 0%, #B0E0E6 40%, #98D8C8 70%, #F7DC6F 100%);
+  position: relative;
+}
+
+.status-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 30rpx 40rpx;
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 4rpx dashed #FF6B6B;
+  z-index: 100;
+}
+
+.score-box, .time-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(255, 107, 107, 0.1);
+  padding: 15rpx 30rpx;
+  border-radius: 20rpx;
+  min-width: 120rpx;
+}
+
+.combo-box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20rpx;
+  background: linear-gradient(135deg, #FFE66D 0%, #FFD93D 100%);
+  padding: 10rpx 30rpx;
+  border-radius: 30rpx;
+  border: 4rpx solid #FF6B6B;
+  animation: pulse 0.5s ease-in-out infinite;
+}
+
+.combo-box text {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #FF6B6B;
+}
+
+.label {
+  font-size: 22rpx;
+  color: #888;
+}
+
+.value {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: #FF6B6B;
+}
+
+.warning {
+  color: #FF0000;
+  animation: shake 0.3s ease-in-out infinite;
+}
+
+.hint-box {
+  position: fixed;
+  top: 150rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 107, 107, 0.9);
+  padding: 20rpx 50rpx;
+  border-radius: 30rpx;
+  z-index: 101;
+}
+
+.hint-box text {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: white;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 200;
+}
+
+.mask-content {
+  background: white;
+  padding: 60rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  border: 6rpx solid #FF6B6B;
+}
+
+.mask-title {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #FF6B6B;
+  display: block;
+  margin-bottom: 20rpx;
+}
+
+.mask-sub {
+  font-size: 26rpx;
+  color: #888;
+  display: block;
+}
+
+.game-grid {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500rpx;
+  background: rgba(139, 69, 19, 0.3);
+  border-radius: 30rpx;
+  padding: 30rpx;
+  border: 6rpx solid #8B4513;
+}
+
+.grid-row {
+  display: flex;
+  justify-content: center;
+  gap: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.grid-row.single {
+  justify-content: center;
+}
+
+.tile {
+  width: 140rpx;
+  height: 140rpx;
+  background: linear-gradient(135deg, #FFFEF0 0%, #FFF8DC 100%);
+  border: 6rpx solid #5D4E37;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6rpx 0rpx #5D4E37;
+}
+
+.tile text {
+  font-size: 48rpx;
+  font-weight: bold;
+  color: #5D4E37;
+}
+
+.tile-top {
+  width: 200rpx;
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+  border-color: #CC5555;
+  box-shadow: 0 6rpx 0rpx #AA4444;
+}
+
+.tile-top text {
+  color: white;
+}
+
+.tile.current {
+  background: linear-gradient(135deg, #FFE66D 0%, #FFD93D 100%);
+  border-color: #D4A84B;
+  box-shadow: 0 6rpx 0rpx #D4A84B, 0 0 30rpx rgba(255, 230, 109, 0.5);
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.tile.landed {
+  background: linear-gradient(135deg, #90EE90 0%, #98FB98 100%);
+  border-color: #228B22;
+  box-shadow: 0 4rpx 0rpx #228B22;
+  opacity: 0.7;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5rpx); }
+  75% { transform: translateX(5rpx); }
+}
