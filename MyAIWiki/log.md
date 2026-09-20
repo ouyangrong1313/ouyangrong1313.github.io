@@ -419,6 +419,16 @@
 
 ---
 
+## 2026-09-20
+### ingest | 这是一篇把"RSI"讲明白的科普级综述！
+- 来源：https://mp.weixin.qq.com/s/rlfTKyWhALsNONhAwGih1A
+- 原文：raw/这是一篇把-RSI-讲明白的科普级综述.md
+- 拆解：raw/这是一篇把-RSI-讲明白的科普级综述-digest.md
+- wiki：wiki/01-ai-agents/这是一篇把-RSI-讲明白的科普级综述.md
+- 标签： #场景/公众号长文
+- 说明：已发布；保留原文抓取方式与 SHA-256，digest/wiki 页面已人工补齐节点、关联图谱和证据限制
+
+
 ## 2026-09-18
 ### ingest | AI时代，架构师必备的8大技能！（4/100）
 - 来源：https://mp.weixin.qq.com/s/EC4HSp-XaKLXGn7EZPus-g
