@@ -1,5 +1,12 @@
 # AI Coding
 
+## Harness 记忆与验证闭环（2026-09-23 新增）
+
+> 腾讯云开发者焦成杰复盘 AI Coding 实践：知识库只记连接性事实，用两级索引与 hook 保证先读；平台、提交、等待、本地验证四类 skill 连接交付链；多角色独立审查仅用于大改动，失败最多三轮并如实停止。
+
+- [[02-ai-coding/腾讯云开发者-Harness记忆与验证闭环]] - 九节点与 Seetong 最小试点；与 [[02-ai-coding/腾讯云开发者-Agent的命门是上下文-关键不在少给而在给对]] 的上下文路径、[[02-ai-coding/得物技术-Delivery-Harness-可控AI交付]] 的证据门禁互补。
+- [[02-ai-coding/腾讯云开发者-Harness记忆与验证闭环-digest]] - 三个断点、三条反直觉和证据边界速读。
+
 ## Spec Coding 保姆级教程（2026-08-27 新增）
 
 > 爱汇在智谱 AI 开放文档发布的 Spec-Kit 保姆级教程：把"规格"从静态文档升级为可执行指令（六步流水线 constitution → specify → clarify → plan → tasks → implement），让 Claude Code / Copilot / Gemini 等通用 AI 助手从"打字员"变成按图施工的"靠谱工程师"，终结 Vibe Coding 的反复拉扯。
