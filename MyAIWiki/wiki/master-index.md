@@ -1,6 +1,8 @@
 # AI 知识库索引
 
 ## 最近更新
+- [笔记侠：李开复谈“小人物”机会与 AI 原生组织](./03-productivity/笔记侠-李开复-小人物机会与AI原生组织.md) — 2026-09-24：财务结果检验、DRI 责任、小型服务与人的判断；书评转述，数据待核验。
+- [AI 原生组织与“小人物”机会 - 速读](./03-productivity/笔记侠-李开复-小人物机会与AI原生组织-digest.md) — 三类场景与证据边界。
 - [腾讯云开发者：Harness 记忆与验证闭环](./02-ai-coding/腾讯云开发者-Harness记忆与验证闭环.md) — 2026-09-23：两级索引、先读 hook、强弱引用信号、等待终态与有界独立验证。
 - [Harness 记忆与验证闭环 - 速读](./02-ai-coding/腾讯云开发者-Harness记忆与验证闭环-digest.md) — 关键断点、三条反直觉与 Seetong 最小试点。
 - [这是一篇把"RSI"讲明白的科普级综述！](./01-ai-agents/这是一篇把-RSI-讲明白的科普级综述.md) — 2026-09-20
@@ -687,6 +689,8 @@
 
 ### Productivity
 
+- [笔记侠：李开复谈“小人物”机会与 AI 原生组织](./03-productivity/笔记侠-李开复-小人物机会与AI原生组织.md) - 老贾拆解李开复新书：采用率不等于财务回报，CEO 与 DRI 管结果，OPC 先验证具体客户付费；数字和案例未独立核验。
+- [AI 原生组织与“小人物”机会 - Digest](./03-productivity/笔记侠-李开复-小人物机会与AI原生组织-digest.md) - 财务检验、责任归属、细分服务与隐私边界速读。
 - [Anthropic 的设计主管谈通用人工智能极简主义产品设计 | Joel Lewenstein](./03-productivity/晚点再听-Joel-Lewenstein-Anthropic-AGI极简主义产品设计.md) - 模型驱动规划、原型验证、代码事实依据、Artifacts 双界面与人类取舍。
 - [Joel Lewenstein：AI 产品设计与人类取舍 - Digest](./03-productivity/晚点再听-Joel-Lewenstein-Anthropic-AGI极简主义产品设计-digest.md) - 模型驱动规划、原型到使用和取舍速读。
 - [北大分享：AI 让你成为你自己](./03-productivity/十字路口Crossing-邦比快跑-AI让你成为你自己.md) - AI 将电脑工作释放给个人；产能可外包，品味、规则和维护决定作品能否成为资产。
