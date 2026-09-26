@@ -1,0 +1,74 @@
+<h1 id="agent-评测白皮书系列01agent-评测全览">《Agent 评测白皮书》系列01：Agent 评测全览</h1>
+
+<ul>
+  <li>原文链接：https://mp.weixin.qq.com/s/hBSIPQnsBeWwX9UZLjWYFA</li>
+  <li>来源：微信公众号「美团技术团队」</li>
+  <li>发布时间：2026年9月10日 10:24</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论（一句话）</h2>
+
+<p>Agent 评测是一套以观测为地基、以 Case 挖掘与归因为枢纽、由离线门禁和在线反馈共同驱动的持续校准系统；它的长期资产是可回归的评测标准与样本，而不是某一次分数。</p>
+
+<h2 id="分类提炼">分类提炼</h2>
+
+<ul>
+  <li>场景：AI Agent 生产化、冷启动、灰度扩量与自进化</li>
+  <li>标签： #主题/AI-Agent #主题/Agent评测 #主题/评测工程 #主题/质量保障 #场景/公众号长文</li>
+  <li>类型：行业团队实践 / 评测体系总览</li>
+</ul>
+
+<h2 id="知识节点">知识节点</h2>
+
+<ul>
+  <li><strong>评测精密量具</strong>：评测既要稳定判断 Agent 好不好，也要指出哪里好、哪里不好，并随业务变化定期校准。</li>
+  <li><strong>四模块评测体系</strong>：离线评测守住已知，在线评测与监控观察真实世界，Case 挖掘与归因定位分派，观测基建提供全链路证据。</li>
+  <li><strong>Agent 迭代 Loop</strong>：线上 Case 经归因定位到 Prompt、Skill、上下文或模型问题后，进入修复、回测、发布和 AB 验证。</li>
+  <li><strong>评测体系迭代 Loop</strong>：线上 Case 若暴露评测集漏覆盖或 Rubric 判错，就扩充样本或校准标准，让量具贴近真实用户。</li>
+  <li><strong>端到端评测集</strong>：从用户视角判断任务最终是否交付，回答“事情办成了吗”，是业务质量的直接门槛。</li>
+  <li><strong>过程评测集</strong>：按 Skill、知识库、工具调用等中间环节拆解执行质量，回答“哪一步出了问题”，用于责任定位。</li>
+  <li><strong>Case 挖掘与归因</strong>：从反馈、采样、规则和监控汇总 Good/Bad Case，再沿 Trace 找到根因并决定进入哪条演进路径。</li>
+  <li><strong>最小可归因观测</strong>：冷启动至少记录完整模型输入输出、Skill/Tool 调用和关键环境信息，使 Bad Case 能复现、能解释。</li>
+  <li><strong>评测成熟度分阶段</strong>：冷启动先跑通观测、核心评测集和回测门禁，扩量补在线反馈，全量运营再建设自动化与规模化。</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+
+<ul>
+  <li>[[01-ai-agents/Agent评测漫谈-由浅入深讲解Agent评测]]：继承“评测是精密量具”、人人一致/人机一致与评测校准的基本方法论。</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+
+<ul>
+  <li>[[01-ai-agents/叶小钗-Agent评测-维度方法与落地实践]]：将全景框架落成 PRD 前置、版本化数据集、评分器和问题中心。</li>
+  <li>[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]：在 Skill 与工具型 Agent 中实践评分器、用例基线、Trace 和稳定性评估。</li>
+  <li>[[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]]：把离线回测、在线验证和 Verification First 迁移到 AI Coding 工程。</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+
+<ul>
+  <li>[[01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制]]：从自进化飞轮视角补充评测、记忆和控制的持续演进关系。</li>
+  <li>[[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]：从 Control Plane、状态和证据治理角度补充生产 Agent 的可靠性边界。</li>
+</ul>
+
+<h2 id="正文要点">正文要点</h2>
+
+<ol>
+  <li><strong>先统一全景，再按阶段落地。</strong> 完备体系是四模块、三种能力、两条 Loop、一套评测资产，但不应在冷启动阶段一次性建完。</li>
+  <li><strong>固定变量才能让回测可信。</strong> 评测集、标准和执行环境应尽可能固定；大模型随机性用多 Trial 的 Pass Rate 表达，安全与准确性可设一票否决。</li>
+  <li><strong>离线与在线各司其职。</strong> 离线回测负责已知问题的版本门禁，影子模式、AB 和巡检负责真实流量、业务价值与未知问题，监控则观察运行健康。</li>
+  <li><strong>端到端与过程必须配套。</strong> 端到端集判断最终交付，过程集定位链路故障；过早细分会制造负担，应由真实问题驱动拆解。</li>
+  <li><strong>归因决定双环流向。</strong> 同一个 Bad Case 可能推动 Agent 修复、评测集扩充或 Rubric 校准，不能默认“评测判错就等于 Agent 错”。</li>
+  <li><strong>Trace 是最小闭环的底线。</strong> 没有完整执行轨迹，就难以稳定复现和解释问题，也无法把线上信号转化为可回归资产。</li>
+</ol>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+  <li>原文：<a href="https://mp.weixin.qq.com/s/hBSIPQnsBeWwX9UZLjWYFA">https://mp.weixin.qq.com/s/hBSIPQnsBeWwX9UZLjWYFA</a></li>
+  <li>拆解：../../raw/Agent评测白皮书-系列01-Agent评测全览-digest.md</li>
+</ul>

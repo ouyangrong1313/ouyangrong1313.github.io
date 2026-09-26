@@ -1,0 +1,121 @@
+<h1 id="工厂工程师不是产品工程师--digest">工厂工程师,不是产品工程师 — Digest</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<blockquote>
+  <p><strong>“工程师的活,从造车变成了造工厂”</strong> — Warp 创始人 Zach Lloyd 在内部备忘录里宣布团队从”产品工程师”升级为”工厂工程师”;<strong>成功 = 工厂效率 ≈ 出货产品 / (推理成本 + 人的时间成本)</strong>;<strong>人在环里 = 需要复盘的失败</strong>;8 步流水线(分诊→spec→实现→review→验证→CI/CD→上线→监控)+ <strong>递归自我改进</strong>。深思圈主编反对无脑造工厂,主张<strong>看任务分工</strong> — 工厂自动化”怎么做”,人攥”做什么”和”为什么”。</p>
+</blockquote>
+
+<h2 id="三大主张原文核心">三大主张(原文核心)</h2>
+
+<ol>
+  <li><strong>从造车到造工厂</strong>:工程师不再做产品,造一台”做产品的东西”;成功 = 工厂效率 = 出货产品 / (推理成本 + 人的时间成本)</li>
+  <li><strong>软件生产从 R&amp;D 变 COGS</strong>:从固定研发开支 → 可变成本;老板像盯工厂良率一样盯;”给所有工程师无限 token 预算的日子结束了”</li>
+  <li><strong>人在环里 = 失败</strong>:”每用一次人在环里的 agent 写代码,都要当成需要复盘的失败”;递归自我改进 = 黄金路径</li>
+</ol>
+
+<h2 id="8-步流水线--关键公式">8 步流水线 + 关键公式</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>分诊 agent → spec agent → 实现 agent → code review agent → 验证 agent(computer-use)→ 人审 → CI/CD → 监控 agent(闭环)
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>工厂效率 ≈ 出货产品 / (推理成本 + 人的时间成本)
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p><strong>“人”在分母里,是要被往下压的成本。</strong></p>
+
+<h2 id="同月两极对比">同月两极对比</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>创始人</th>
+      <th>立场</th>
+      <th>关键句</th>
+      <th>卖什么</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Paul Bakaus(设计工具创始人)</td>
+      <td>人在环里是重点</td>
+      <td>“别把人推出循环,人留最后 20%”</td>
+      <td>品味工具</td>
+    </tr>
+    <tr>
+      <td>Zach Lloyd(Warp 创始人)</td>
+      <td>人在环里 = 失败</td>
+      <td>“每用一次人在环里的 agent,都要当复盘的失败”</td>
+      <td>工厂平台 Oz</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="深思圈主编立场关键反转">深思圈主编立场(关键反转)</h2>
+
+<p><strong>两个创始人屁股都得扣掉一点(都在卖自己的东西)</strong>。真相是<strong>看任务</strong>:</p>
+
+<ul>
+  <li><strong>能被机器校验对错的活</strong>(怎么做:实现/验证/监控)→ 交给工厂,Lloyd 对</li>
+  <li><strong>靠判断定生死的活</strong>(做什么:做哪个/产品观点/为什么)→ 留住人,Bakaus 对</li>
+  <li>工厂自动化”怎么做”,<strong>人依然攥”做什么”和”为什么”</strong></li>
+</ul>
+
+<h2 id="最反直觉的洞察深思圈主编补刀">最反直觉的洞察(深思圈主编补刀)</h2>
+
+<blockquote>
+  <p><strong>你把”怎么做”自动化得越彻底,整盘棋,就越押在那一件工厂永远没法替你决定的事上 —— 什么,才值得做。</strong></p>
+</blockquote>
+
+<ul>
+  <li>Lloyd 把”成功”定义成”自动出货的比例”,但他自己承认”出货的产品是不完美的价值衡量”</li>
+  <li>1300 个”可实现”待办的真正问题不是”谁来实现” — 是”哪些根本不该做”</li>
+  <li><strong>无脑地、更快地造更多,从来不是战略</strong></li>
+</ul>
+
+<h2 id="关键金句">关键金句</h2>
+
+<ul>
+  <li><strong>“给所有工程师无限 token 预算、去玩交互式 agent 的日子,要结束了”</strong></li>
+  <li><strong>“我们现在是工厂工程师,不再是产品工程师了”</strong></li>
+  <li><strong>“以后你每用一次’人在环里’的 agent 去写代码,都要把它当成一次需要复盘的失败”</strong></li>
+  <li><strong>“短期一定会很痛,我们必须逼自己去经历这种痛,才能搞清楚怎么把它自动化掉。我们不做,别人会做”</strong></li>
+  <li><strong>“工厂效率 ≈ 出货的产品 / (推理成本 + 人的时间成本)”</strong></li>
+  <li><strong>“你把’怎么做’自动化得越彻底,整盘棋,就越押在那一件工厂永远没法替你决定的事上”</strong></li>
+  <li><strong>“无脑地、更快地造更多,从来不是战略”</strong></li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游">上游</h3>
+<ul>
+  <li>AI Coding 从”自动补全 → 交互式 agent → 自动化开发”三阶段范式迁移</li>
+  <li>Warp 终端 6 万星开源仓库(具体仓库名未公开)</li>
+  <li>同月 Paul Bakaus(设计工具创始人)反向观点</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游(应用于 / 验证于)</h3>
+<ul>
+  <li>[[字节跳动洪定坤-AI-Coding的实践与探索]] — 字节 vs Warp 同行业不同公司不同解法对照(字节 TRAE IDE / Warp Oz 工厂平台)</li>
+  <li>[[清华沈阳-自进化AI新物种]] — “递归自我改进”主线</li>
+  <li>[[0xCodez-Agent-Harness-14-Steps]] / [[Harness不是目的-知识才是护城河]] — Harness 视角</li>
+  <li>[[与AI一起做产品的六条原则]] — 6 原则做”为什么”的人</li>
+  <li>[[AI-Coding的顿悟时刻]] / [[54万行代码的顿悟-Markdown才是新编程方式]] — AI Coding 范式</li>
+</ul>
+
+<h3 id="同级">同级</h3>
+<ul>
+  <li>[[面向Skills编程-淘宝企业购端到端研发提效实践]] — 阿里淘系工程化补完</li>
+  <li>[[Claude-Code团队5条工作原则-Fiona-Fung分享]] — Anthropic 团队实践</li>
+</ul>
+
+<h2 id="备注">备注</h2>
+
+<ul>
+  <li><strong>数据可信度</strong>:深思圈是行业知名 AI 翻译/编译号,Lloyd 备忘录原话为推文公开,可信度较高</li>
+  <li><strong>未公开细节</strong>:Lloyd 备忘录原始发布日期 / Warp Oz 6 万星仓库具体 GitHub 链接 / 8 步流水线具体 Agent 工具栈</li>
+  <li><strong>本仓库缺位补完</strong>:02-ai-coding 现有主线偏”怎么做”(Harness/Loop/Skills),<strong>缺位”工厂化思维 + COGS 视角 + 递归自我改进”的反思性内容</strong>,本文补完</li>
+  <li><strong>深思圈主编立场</strong>:不站 Lloyd 不站 Bakaus,主张”看任务”分工,补完 Lloyd 备忘录的盲点(对”做什么”出奇安静)</li>
+</ul>

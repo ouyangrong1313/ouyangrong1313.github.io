@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>AI语音机器人知识大闯关</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+:root{
+  --bg1:#0f2027; --bg2:#203a43; --bg3:#2c5364;
+  --card:#ffffff; --ink:#1f2d3d; --ink2:#5a6b7d;
+  --blue:#3b82f6; --green:#22c55e; --orange:#f59e0b; --purple:#8b5cf6; --red:#ef4444;
+}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
+  background-attachment:fixed;
+  min-height:100vh; color:var(--ink);
+  display:flex; justify-content:center; padding:16px;
+}
+#app{ width:100%; max-width:640px; }
+.screen{ display:none; animation:fadeUp .45s ease both; }
+.screen.active{ display:block; }
+@keyframes fadeUp{ from{opacity:0; transform:translateY(24px);} to{opacity:1; transform:translateY(0);} }
+@keyframes shake{ 0%,100%{transform:translateX(0)} 20%{transform:translateX(-8px)} 40%{transform:translateX(8px)} 60%{transform:translateX(-6px)} 80%{transform:translateX(6px)} }
+@keyframes pop{ 0%{transform:scale(.6); opacity:0} 70%{transform:scale(1.08)} 100%{transform:scale(1); opacity:1} }
+@keyframes floaty{ 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+
+/* ===== 开始页 ===== */
+.hero{
+  background:rgba(255,255,255,.06); backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:24px; padding:44px 28px; text-align:center; color:#fff;
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+.hero .logo{ font-size:64px; animation:floaty 3s ease-in-out infinite; }
+.hero h1{ font-size:28px; margin:16px 0 8px; letter-spacing:1px; }
+.hero .sub{ color:#b8c7d4; font-size:14px; line-height:1.8; }
+.badges{ display:flex; justify-content:center; gap:8px; flex-wrap:wrap; margin:20px 0; }
+.badge{
+  background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.18);
+  padding:6px 14px; border-radius:999px; font-size:13px; color:#e6eef5;
+}
+.btn{
+  display:block; width:100%; padding:16px; border:none; border-radius:16px;
+  font-size:18px; font-weight:700; cursor:pointer; letter-spacing:2px;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.btn:active{ transform:scale(.97); }
+.btn-primary{ background:linear-gradient(135deg,#38bdf8,#6366f1); color:#fff; box-shadow:0 8px 24px rgba(99,102,241,.45); }
+.btn-primary:hover{ box-shadow:0 12px 30px rgba(99,102,241,.6); }
+.btn-ghost{ background:rgba(255,255,255,.12); color:#fff; margin-top:12px; font-size:15px; letter-spacing:1px; }
+.best{ margin-top:16px; font-size:13px; color:#93c5fd; }
+
+/* ===== 关卡过渡页 ===== */
+.stage-card{
+  background:rgba(255,255,255,.06); backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,.12); border-radius:24px;
+  padding:48px 28px; text-align:center; color:#fff;
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+}
+.stage-num{ font-size:14px; letter-spacing:4px; color:#93c5fd; }
+.stage-emoji{ font-size:72px; margin:18px 0; animation:pop .5s ease both; }
+.stage-title{ font-size:26px; font-weight:800; margin-bottom:12px; }
+.stage-desc{ color:#b8c7d4; font-size:14px; line-height:1.9; margin-bottom:8px; }
+.stage-meta{ font-size:13px; color:#7dd3fc; margin:14px 0 26px; }
+
+/* ===== 答题页 ===== */
+.topbar{ display:flex; justify-content:space-between; align-items:center; color:#dbe7f0; font-size:13px; margin-bottom:10px; }
+.score-chip{
+  background:linear-gradient(135deg,#f59e0b,#f97316); color:#fff;
+  padding:5px 14px; border-radius:999px; font-weight:700; font-size:14px;
+  transition:transform .2s;
+}
+.score-chip.bump{ animation:pop .35s ease; }
+.progress{
+  height:10px; background:rgba(255,255,255,.12); border-radius:999px;
+  overflow:hidden; margin-bottom:16px;
+}
+.progress > i{
+  display:block; height:100%; border-radius:999px;
+  background:linear-gradient(90deg,#38bdf8,#818cf8,#c084fc);
+  transition:width .5s cubic-bezier(.65,0,.35,1);
+}
+.qcard{
+  background:var(--card); border-radius:22px; padding:24px 22px;
+  box-shadow:0 16px 48px rgba(0,0,0,.3);
+}
+.qcard.shake{ animation:shake .4s ease; }
+.qtags{ display:flex; gap:8px; align-items:center; margin-bottom:14px; flex-wrap:wrap; }
+.tag{ font-size:12px; font-weight:700; padding:4px 12px; border-radius:999px; color:#fff; }
+.tag-judge{ background:var(--purple); }
+.tag-single{ background:var(--blue); }
+.tag-multi{ background:var(--orange); }
+.tag-score{ background:#eef2f7; color:var(--ink2); }
+.tag-section{ background:#ecfeff; color:#0e7490; }
+.qtext{ font-size:18px; font-weight:700; line-height:1.7; margin-bottom:20px; }
+.qtext code{ background:#f1f5f9; padding:2px 7px; border-radius:6px; font-size:15px; color:#be185d; font-family:Menlo,Consolas,monospace; }
+.opts{ display:flex; flex-direction:column; gap:12px; }
+.opt{
+  display:flex; align-items:flex-start; gap:12px;
+  border:2px solid #e5eaf0; border-radius:14px; padding:14px 16px;
+  cursor:pointer; transition:all .18s ease; background:#fbfcfe;
+  font-size:15px; line-height:1.6; text-align:left;
+}
+.opt:hover{ border-color:#c7d6e8; background:#f4f8fd; }
+.opt .mark{
+  flex:none; width:26px; height:26px; border-radius:50%;
+  border:2px solid #c3cfdd; display:flex; align-items:center; justify-content:center;
+  font-size:13px; font-weight:700; color:#8496ab; transition:all .18s;
+}
+.opt.selected{ border-color:var(--blue); background:#eff6ff; }
+.opt.selected .mark{ background:var(--blue); border-color:var(--blue); color:#fff; }
+.opt.correct{ border-color:var(--green); background:#f0fdf4; animation:pop .3s ease; }
+.opt.correct .mark{ background:var(--green); border-color:var(--green); color:#fff; }
+.opt.wrong{ border-color:var(--red); background:#fef2f2; }
+.opt.wrong .mark{ background:var(--red); border-color:var(--red); color:#fff; }
+.opt.miss{ border-color:var(--green); border-style:dashed; }
+.opt.disabled{ pointer-events:none; }
+.opt .otxt{ flex:1; }
+.opt .otxt code{ background:#eef2f7; padding:1px 6px; border-radius:5px; font-size:13.5px; color:#be185d; font-family:Menlo,Consolas,monospace; }
+.submit-btn{
+  margin-top:16px; width:100%; padding:14px; border:none; border-radius:14px;
+  background:linear-gradient(135deg,#f59e0b,#f97316); color:#fff;
+  font-size:16px; font-weight:700; cursor:pointer; letter-spacing:2px;
+  transition:opacity .2s, transform .15s;
+}
+.submit-btn:disabled{ opacity:.4; cursor:not-allowed; }
+.submit-btn:not(:disabled):active{ transform:scale(.97); }
+
+/* 解析卡 */
+.explain{
+  margin-top:18px; border-radius:16px; padding:18px; display:none;
+  border-left:5px solid var(--green); background:#f0fdf4;
+  animation:fadeUp .4s ease both;
+}
+.explain.show{ display:block; }
+.explain.bad{ border-left-color:var(--red); background:#fef2f2; }
+.explain .verdict{ font-size:16px; font-weight:800; margin-bottom:8px; }
+.explain .verdict.ok{ color:#15803d; }
+.explain .verdict.no{ color:#b91c1c; }
+.explain .gain{ display:inline-block; background:#fff; border:1px solid #d7e3ee; border-radius:999px; padding:2px 10px; font-size:12.5px; color:#b45309; font-weight:700; margin-left:6px; }
+.explain .body{ font-size:14.5px; line-height:1.9; color:#33475c; white-space:pre-line; }
+.next-btn{
+  margin-top:16px; width:100%; padding:15px; border:none; border-radius:14px;
+  background:linear-gradient(135deg,#22c55e,#10b981); color:#fff;
+  font-size:16px; font-weight:700; cursor:pointer; letter-spacing:2px;
+  display:none; transition:transform .15s;
+}
+.next-btn.show{ display:block; animation:pop .3s ease; }
+.next-btn:active{ transform:scale(.97); }
+
+/* ===== 结算页 ===== */
+.result-card{
+  background:rgba(255,255,255,.97); border-radius:24px; padding:36px 26px;
+  box-shadow:0 24px 64px rgba(0,0,0,.4); text-align:center;
+}
+.grade-emoji{ font-size:72px; animation:pop .6s ease both; }
+.final-score{ font-size:64px; font-weight:900; background:linear-gradient(135deg,#f59e0b,#ef4444,#8b5cf6); -webkit-background-clip:text; background-clip:text; color:transparent; line-height:1.2; }
+.final-score small{ font-size:24px; }
+.grade-name{ font-size:20px; font-weight:800; margin:6px 0 2px; }
+.grade-comment{ color:var(--ink2); font-size:14px; line-height:1.9; margin:10px 0 4px; }
+.sec-bars{ margin:22px 0; text-align:left; }
+.sec-row{ display:flex; align-items:center; gap:10px; margin-bottom:10px; font-size:13px; }
+.sec-row .nm{ width:118px; flex:none; color:#3b4b5e; font-weight:600; }
+.sec-row .bar{ flex:1; height:12px; background:#eef2f7; border-radius:999px; overflow:hidden; }
+.sec-row .bar > i{ display:block; height:100%; border-radius:999px; background:linear-gradient(90deg,#34d399,#3b82f6); width:0; transition:width 1s ease .3s; }
+.sec-row .pc{ width:44px; text-align:right; color:#64748b; font-weight:700; }
+.review-toggle{ margin-top:8px; background:#f1f5f9; color:#334155; font-size:14px; letter-spacing:1px; }
+.review{ text-align:left; margin-top:16px; display:none; }
+.review.show{ display:block; animation:fadeUp .4s ease; }
+.review h3{ font-size:15px; margin-bottom:10px; color:#b91c1c; }
+.rv-item{ background:#fef2f2; border:1px solid #fecaca; border-radius:12px; padding:12px 14px; margin-bottom:10px; font-size:13.5px; line-height:1.7; }
+.rv-item .q{ font-weight:700; color:#7f1d1d; margin-bottom:4px; }
+.rv-item .a{ color:#166534; }
+.allright{ background:#f0fdf4; border:1px solid #bbf7d0; color:#166534; border-radius:12px; padding:14px; text-align:center; font-weight:700; }
+#confetti{ position:fixed; inset:0; pointer-events:none; z-index:99; }
+.footer-tip{ text-align:center; color:#7d93a8; font-size:12px; margin-top:18px; }
+</style>
+</head>
+<body>
+<div id="app">
+
+  <!-- 开始页 -->
+  <div class="screen active" id="scr-start">
+    <div class="hero">
+      <div class="logo">🤖</div>
+      <h1>AI语音机器人知识大闯关</h1>
+      <div class="sub">ESP32-S3 · C语言 · 开发环境 · 原理图 · 传感器实战<br>边玩边学，50 道题测测你的真实水平！</div>
+      <div class="badges">
+        <span class="badge">📝 50 题</span>
+        <span class="badge">💯 满分 100</span>
+        <span class="badge">🎯 5 大关卡</span>
+        <span class="badge">💡 题题有讲解</span>
+      </div>
+      <div class="badges">
+        <span class="badge">🔤 C语言基础</span>
+        <span class="badge">🛠️ 环境搭建</span>
+        <span class="badge">🔌 硬件基础</span>
+        <span class="badge">🗺️ 原理图</span>
+        <span class="badge">🤖 传感器实战</span>
+      </div>
+      <button class="btn btn-primary" onclick="startGame()">🚀 开始闯关</button>
+      <div class="best" id="bestScore"></div>
+      <div class="footer-tip">题型：判断 1 分 / 单选 2 分 / 多选 3 分（多选漏选得 1 分，错选不得分）</div>
+    </div>
+  </div>
+
+  <!-- 关卡过渡页 -->
+  <div class="screen" id="scr-stage">
+    <div class="stage-card">
+      <div class="stage-num" id="stNum">STAGE 1 / 5</div>
+      <div class="stage-emoji" id="stEmoji">🔤</div>
+      <div class="stage-title" id="stTitle">C 语言基础</div>
+      <div class="stage-desc" id="stDesc"></div>
+      <div class="stage-meta" id="stMeta"></div>
+      <button class="btn btn-primary" onclick="enterStage()">进入关卡 →</button>
+    </div>
+  </div>
+
+  <!-- 答题页 -->
+  <div class="screen" id="scr-quiz">
+    <div class="topbar">
+      <span id="qPos">第 1 / 50 题</span>
+      <span class="score-chip" id="scoreChip">⭐ 0 分</span>
+    </div>
+    <div class="progress"><i id="pbar" style="width:0%"></i></div>
+    <div class="qcard" id="qcard">
+      <div class="qtags" id="qtags"></div>
+      <div class="qtext" id="qtext"></div>
+      <div class="opts" id="opts"></div>
+      <button class="submit-btn" id="submitBtn" style="display:none" disabled onclick="submitMulti()">✅ 提交答案</button>
+      <div class="explain" id="explain">
+        <div class="verdict" id="verdict"></div>
+        <div class="body" id="explainBody"></div>
+      </div>
+      <button class="next-btn" id="nextBtn" onclick="nextQuestion()">下一题 →</button>
+    </div>
+  </div>
+
+  <!-- 结算页 -->
+  <div class="screen" id="scr-result">
+    <div class="result-card">
+      <div class="grade-emoji" id="gEmoji">🏆</div>
+      <div class="final-score"><span id="scoreNum">0</span><small> / 100</small></div>
+      <div class="grade-name" id="gName"></div>
+      <div class="grade-comment" id="gComment"></div>
+      <div class="sec-bars" id="secBars"></div>
+      <button class="btn btn-primary" onclick="restart()">🔄 再闯一次</button>
+      <button class="btn btn-ghost review-toggle" onclick="toggleReview()">📋 查看错题回顾（<span id="wrongCount">0</span> 题）</button>
+      <div class="review" id="reviewBox"></div>
+    </div>
+  </div>
+
+</div>
+<canvas id="confetti"></canvas>
+
+<script>
+/* ================= 关卡定义 ================= */
+const SECTIONS = [
+  { emoji:"🔤", name:"C 语言基础", desc:"万丈高楼平地起！先考考你的 C 语言基本功——分号、数组、指针、数据类型，这些都是写嵌入式代码的「地基」。", range:[0,11] },
+  { emoji:"🛠️", name:"开发环境搭建", desc:"工欲善其事，必先利其器。数据线还是充电线？路径能不能有中文？这些「装机坑」你都知道吗？", range:[12,19] },
+  { emoji:"🔌", name:"ESP32-S3 硬件基础", desc:"认识你的开发板！240MHz 双核小电脑、45 个 GPIO 引脚，输入输出、上拉下拉，都是上手的必修课。", range:[20,29] },
+  { emoji:"🗺️", name:"原理图识读", desc:"密密麻麻的电路图其实是一张「城市地图」：CH340 翻译官、SY8088 变压器、三极管开关……看懂它们，排障不求人。", range:[30,37] },
+  { emoji:"🤖", name:"传感器与实战", desc:"最终 Boss 关！光敏电阻、DHT11、按键消抖、语音控制流程——全是从真实试卷里走出来的硬核考题。", range:[38,49] }
+];
+
+/* ================= 题库（50 题 / 100 分） ================= */
+/* type: judge(1分) single(2分) multi(3分)  answer: 索引或索引数组 */
+const Q = [
+/* ---------- 第 1 关：C 语言基础（12 题 / 23 分） ---------- */
+{s:0,type:"judge",q:"C 语言程序必须从 main 函数开始执行。",o:["正确","错误"],a:0,
+ e:"main 函数就像演出的「开场哨」——不管后台有多少演员（函数）在准备，哨声一响（程序启动），永远从 main 开始跑。一个程序只能有一个 main，少了它编译器直接报「找不到入口」。"},
+{s:0,type:"judge",q:"C 语言中可以用中文分号「；」作为语句结尾。",o:["正确","错误"],a:1,
+ e:"C 语言只认英文半角分号「;」。中文分号「；」在编译器眼里就是个不认识的乱码符号，直接报错。新手一半的编译错误都是手滑切了中文输入法——写代码前先把输入法切成英文！"},
+{s:0,type:"judge",q:"C 语言是一门面向对象的编程语言。",o:["正确","错误"],a:1,
+ e:"C 语言是面向过程的语言——思路是「第一步干啥、第二步干啥」，像菜谱一样按步骤执行。「面向对象」（把东西打包成对象）是 C++、Java 的思路。不过 C 是很多高级语言的「妈妈」，学好 C 再学谁都快。"},
+{s:0,type:"single",q:"C 语言中，每条语句必须以什么符号结尾？",o:["逗号 ,","句号 。","英文分号 ;","感叹号 !"],a:2,
+ e:"分号就是 C 语言的「句号」，告诉编译器「这句话说完了」。漏了分号，编译器会以为你话没说完，把下一行也拼进来，然后报一串莫名其妙的错。"},
+{s:0,type:"single",q:"想在屏幕上打印文字，使用 printf 函数前必须引入哪个头文件？",o:["stdlib.h","stdio.h","string.h","math.h"],a:1,
+ e:"stdio.h 是「标准输入输出」工具箱（Standard Input / Output）。printf 这把「喇叭」就放在这个工具箱里，不先 #include 把它搬来，编译器根本不知道 printf 是啥。记法：io = input / output。"},
+{s:0,type:"single",q:"int arr[5] = {11, 22, 33, 44, 55}; 那么 arr[0] 的值是？",o:["0","11","55","5"],a:1,
+ e:"C 语言数组下标从 0 开始数！arr[0] 是第一个元素 11，arr[4] 才是最后的 55。新手最常犯的错是写 arr[5]——越界了，读到的是内存里的「垃圾数据」，程序行为全靠运气。"},
+{s:0,type:"single",q:"C 语言中字符串的本质是什么？",o:["一种独立的字符串类型","以 '\\0' 结尾的字符数组","一串数字","一个指针变量"],a:1,
+ e:"C 语言里没有「字符串」这种类型！它其实是字符数组 + 结束暗号 \\0。就像快递传送带上的包裹流，机器看到贴着 \\0 标签的包裹就知道「后面没了，收工」。printf 打印 %s 时就是一路读到 \\0 才停。"},
+{s:0,type:"single",q:"想取得一个变量在内存中的地址，应该用哪个符号？",o:["*","&","#","%"],a:1,
+ e:"& 是「取地址」符，相当于问内存：这个变量住在哪个房间（门牌号）？而 * 正好相反，是「按门牌号上门取东西」（解引用）。scanf(\"%d\", &n) 里的 & 就是告诉 scanf：把用户敲的数放进 n 的房间。"},
+{s:0,type:"single",q:"for (int i = 0; i < 5; i++) 这个循环，循环体会执行几次？",o:["4 次","5 次","6 次","无限次"],a:1,
+ e:"i 从 0 开始每次 +1，条件是「i 小于 5 就继续」。i 依次取 0、1、2、3、4，共 5 次；i 变成 5 时条件不满足，循环结束。口诀：从 0 数到 n-1，正好 n 次——这也正好对上数组下标从 0 开始的规矩。"},
+{s:0,type:"multi",q:"以下哪些是 C 语言的核心特点？（多选）",o:["执行效率高","可以直接操作底层硬件","跨平台性好","只能运行在 Windows 上"],a:[0,1,2],
+ e:"C 语言像一辆「越野车」：跑得快（效率高）、能下工地（直接摸内存和硬件）、哪儿都能去（Windows / Linux / Mac / 单片机通吃）。D 错得离谱——Linux 内核本身就是 C 写的，你手机安卓底层也是 C。"},
+{s:0,type:"single",q:"以下哪个是 C 语言的单行注释符号？",o:["//","#","<!-- -->","**"],a:0,
+ e:"// 后面的内容是「写给人看的悄悄话」，编译器直接无视。# 是预处理指令的开头（如 #include），<!-- --> 是 HTML 的注释（串台了）。多行注释用 /* ... */。写注释是好习惯——三个月后的你会感谢现在写注释的你。"},
+{s:0,type:"multi",q:"以下哪些是 C 语言的基本数据类型？（多选）",o:["int","float","char","string"],a:[0,1,2],
+ e:"int 装整数、float 装小数、char 装单个字符，这三个是 C 的「原装零件」。D 是陷阱——C 语言没有 string 类型（那是 C++ / Java 的）！C 里存字符串得用字符数组 char str[]，这就是嵌入式程序员天天和数组打交道的原因。"},
+
+/* ---------- 第 2 关：开发环境搭建（8 题 / 15 分） ---------- */
+{s:1,type:"judge",q:"用只能充电、不能传数据的 USB 线连接开发板，电脑也能正常烧录程序。",o:["正确","错误"],a:1,
+ e:"这是新手第一大坑！充电线里只有 2 根线（供电 + 地），数据线有 4 根（多了 D+、D- 两根「传话」的线）。插充电线板子能亮（有电），但电脑压根「看不见」它。识别方法：插上后电脑出现新串口设备，才是数据线。"},
+{s:1,type:"judge",q:"ESP-IDF 的工程路径里包含中文或空格，照样能正常编译。",o:["正确","错误"],a:1,
+ e:"ESP-IDF 的构建脚本对路径非常挑剔——中文、空格、特殊符号都会让脚本「迷路」，报一些莫名其妙的错。这是装机两条红线之一：所有路径只用英文、数字、下划线。C:\\esp\\project 很安全，「我的项目」必炸。"},
+{s:1,type:"single",q:"idf.py build 这条命令的作用是？",o:["把固件烧录到开发板","编译工程生成固件","打开串口监视器","清理编译缓存"],a:1,
+ e:"idf.py 是 ESP-IDF 的「总遥控器」：build 编译（把 C 代码翻译成芯片能懂的 .bin 固件）、flash 烧录、monitor 看日志、fullclean 清缓存。记一套组合拳：build（做菜）→ flash（上菜）→ monitor（看客人反应）。"},
+{s:1,type:"single",q:"Windows 设备管理器里串口设备带黄色感叹号，最可能的原因是？",o:["开发板坏了","串口驱动没装","没插电源","代码有 bug"],a:1,
+ e:"黄色感叹号是 Windows 在说「我认识这个硬件，但没有翻译官（驱动）不会跟它说话」。90% 国产开发板用 CH340 芯片，去沁恒官网下驱动装上就好；CP2102 芯片则去 Silicon Labs 官网。装完重新插拔 USB，COM 口就出来了。"},
+{s:1,type:"single",q:"串口监视器里全是乱码，最可能的原因是？",o:["波特率不匹配","开发板坏了","屏幕坏了","供电不足"],a:0,
+ e:"波特率就是「说话速度」。开发板按 115200 的语速说，监视器按 9600 的语速听——就像把 2 倍速视频当正常速度看，全是乱码。ESP-IDF 默认 115200，两边调一致立刻恢复清晰。"},
+{s:1,type:"single",q:"板子反复重启，串口打印 \"Brownout detector was triggered\"，说明什么？",o:["代码死循环了","USB 供电不足","驱动装错了","波特率不对"],a:1,
+ e:"Brownout（欠压检测）是芯片的「低血糖警报」——电压掉到安全线以下，芯片自动重启保命。常见原因是 USB 线太细太长（线阻大、压降大）或 USB 口供电弱。换一根短粗的数据线、插电脑后置 USB 口，药到病除。"},
+{s:1,type:"single",q:"烧录时一直卡在 \"Connecting.....\" 不动，应该怎么做？",o:["换一台电脑","按住 BOOT 键不放，看到开始下载再松手","重启路由器","把代码删掉重写"],a:1,
+ e:"这是板子没进「下载模式」。就像寄快递得先开门——按住 BOOT 键相当于「手动开门」，芯片复位后进入接收程序的状态。带自动下载电路的板子正常不用手按；卡住时手动按 BOOT 就是万能救急法。"},
+{s:1,type:"multi",q:"关于 ESP-IDF 开发环境，以下说法正确的有？（多选）",o:["安装路径不能有中文","纯充电线不能用来烧录","第一次编译特别慢是正常现象","工程路径里有空格也没关系"],a:[0,1,2],
+ e:"A 和 B 是安装教程里的「两条红线」，踩了必报错。C 也对——首次编译要把 ESP-IDF 几百个组件全编一遍，5~10 分钟很正常，之后增量编译只要几秒。口诀：路径纯英文，线要数据线，首编莫着急。"},
+
+/* ---------- 第 3 关：ESP32-S3 硬件基础（10 题 / 21 分） ---------- */
+{s:2,type:"judge",q:"ESP32-S3 是 5V 系统，GPIO 引脚可以直接接 5V。",o:["正确","错误"],a:1,
+ e:"这条记牢能救你的板子一命！ESP32-S3 是 3.3V 系统，GPIO 最高承受 3.3V，接 5V 可能直接烧穿引脚。USB 进来的 5V 是靠板上的 SY8088 降压芯片变成 3.3V 才给芯片用的。铁律：GPIO 只碰 3.3V，不碰 5V。"},
+{s:2,type:"judge",q:"把 GPIO 配置成按键输入时，通常需要启用内部上拉电阻。",o:["正确","错误"],a:0,
+ e:"没有上拉电阻的引脚像「断了线的风筝」，电平飘忽不定，读到什么全看运气。开了上拉，引脚默认稳稳停在 3.3V（高电平）；按键按下接地，变成确定的 0V。口诀：按键输入，永远上拉——上拉不会烧芯片，不拉反而读乱码。"},
+{s:2,type:"single",q:"ESP32-S3 的 CPU 主频是多少？",o:["80MHz","160MHz","240MHz","480MHz"],a:2,
+ e:"ESP32-S3 搭载 Xtensa LX7 双核 240MHz——别嫌慢，这已经比经典 51 单片机（12MHz）快 20 倍，接近 2010 年智能手机的水平。跑语音识别、刷屏、Wi-Fi 联网同时干都够用。"},
+{s:2,type:"single",q:"ESP32-S3 大约有多少个可编程 GPIO 引脚？",o:["20 个","34 个","45 个","64 个"],a:2,
+ e:"45 个 GPIO，每个都能当输入或输出——相当于大脑伸出 45 根「神经」。但不是每根都能随便用：IO6~IO11 连着内部 Flash（别碰），IO34~39 只能输入。用引脚前先查你板子的引脚分配表。"},
+{s:2,type:"single",q:"按键接了上拉电阻，当按键被按下时，GPIO 读到的电平是？",o:["高电平（3.3V）","低电平（0V）","随机电平","1.65V"],a:1,
+ e:"上拉电阻让引脚「默认高」——没按时读 1（高电平）。按键一按，引脚直接连通 GND，引脚读到 0（低电平）。所以代码里「读到 0 = 按下了」，这是反直觉的，新手最容易搞反。"},
+{s:2,type:"single",q:"你写的程序最终存储在 ESP32-S3 的哪里？",o:["SRAM（内存）","Flash（闪存）","寄存器","TF 卡"],a:1,
+ e:"Flash 相当于板子的「硬盘」（16MB），程序烧录后就住在这里，断电也不丢。SRAM（512KB）是「桌面」——程序运行时临时摆数据的地方，一断电就清空。所以掉电重开，程序还在（Flash 里），运行中的变量全没了（SRAM 清空）。"},
+{s:2,type:"single",q:"IO34 ~ IO39 这组引脚有什么特殊限制？",o:["只能当输出","只能当输入","完全不能用","只能接传感器"],a:1,
+ e:"这几个引脚芯片内部没接输出驱动电路——就像只有耳朵没有嘴，只能「听」（输入）不能「说」（输出）。把它们配成输出，代码不报错但引脚纹丝不动，排查半天才发现是硬件限制。接传感器（都是输入）正合适。"},
+{s:2,type:"multi",q:"ESP32-S3 芯片自带哪些无线通信能力？（多选）",o:["Wi-Fi","蓝牙","5G","4G"],a:[0,1],
+ e:"ESP32-S3 自带 Wi-Fi 4（2.4GHz）和蓝牙 BLE 5.0——能连家里路由器，也能连手机 APP，这是它做物联网设备的核心资本。5G / 4G 它可没有，要蜂窝联网得外接 4G 模块（板子原理图第 4 页就预留了这个接口）。"},
+{s:2,type:"multi",q:"GPIO 配置为输出模式后，可以用来做什么？（多选）",o:["点亮 LED","驱动蜂鸣器发声","读取按键状态","控制屏幕背光开关"],a:[0,1,3],
+ e:"输出模式 =「你是电源」，引脚能主动吐 3.3V 或 0V，所以能点灯、响蜂鸣器、开关背光（通过三极管）。C 不行——读按键是「听」，必须用输入模式。一句话：输出是说话，输入是听话，一个引脚同一时刻只能干一样。"},
+{s:2,type:"multi",q:"关于 GPIO 上拉电阻，正确的说法有？（多选）",o:["它会把引脚默认拉到高电平","能防止引脚悬空时电平飘忽","开上拉会烧坏芯片","按键输入场景常用上拉"],a:[0,1,3],
+ e:"上拉电阻就像「弹簧归位」——没人碰时把引脚弹回高电平，电平不再飘忽。C 恰好说反了：上拉很安全，不上拉让引脚悬空才可能读到乱码。ESP32-S3 内部自带可配置上拉（pull_up_en=1），不用外接电阻，一行代码搞定。"},
+
+/* ---------- 第 4 关：原理图识读（8 题 / 15 分） ---------- */
+{s:3,type:"judge",q:"CH340 芯片的作用是 USB 转串口，充当电脑和 ESP32 之间的「翻译官」。",o:["正确","错误"],a:0,
+ e:"电脑只会说「USB 语」，ESP32 只会说「串口 UART 语」，CH340 坐在中间实时互译——你电脑里能看到 COM 口，全是它的功劳。所以「电脑找不到 COM 口」时，第一嫌疑人就是 CH340 驱动没装，第二嫌疑人是充电线。"},
+{s:3,type:"single",q:"原理图中编号以 U 开头的元件（如 U1、U4）通常是什么？",o:["电阻","电容","芯片","二极管"],a:2,
+ e:"原理图元件编号有「姓氏」规矩：R = 电阻（Resistor）、C = 电容（Capacitor）、U = 芯片（IC Unit）、Q = 三极管、D = 二极管、L = 电感。看到 U 开头就知道「这是个办公室（芯片），管一摊子事」。认姓氏是看懂原理图的第一步。"},
+{s:3,type:"single",q:"电容在电路中的作用，最贴切的生活类比是？",o:["水龙头（限流）","蓄水池（存电 + 稳压）","下水道（地线）","避雷针（防静电）"],a:1,
+ e:"电容就是电路的「蓄水池」：芯片突然大量运算（大用水），水池先放水顶上，防止电压「跳水」死机；水面有小波纹（杂波），水池也能抚平。所以芯片电源脚旁边总贴着一颗 100nF 小电容当「应急水杯」，叫去耦电容。"},
+{s:3,type:"single",q:"开发板上的 SY8088 芯片是干什么的？",o:["音频功率放大","USB 转串口","把 USB 的 5V 降压成稳定的 3.3V","存储程序"],a:2,
+ e:"SY8088 是 DC-DC 降压芯片，相当于「小区变压器」——USB 进来的 5V 芯片用不了，得先降到 3.3V 还保证稳定。板上有两颗：U2 供主电源（芯片、屏幕、传感器），U3 单独供音频电路——分开供电，喇叭才不会有「滋滋」电流声。"},
+{s:3,type:"single",q:"OTG 原生 USB 口（USB2）和串口 USB 口（USB1）的本质区别是？",o:["只是外观不同","USB2 直连 ESP32 芯片，USB1 经过 CH340 翻译","USB2 充电更快","没有任何区别"],a:1,
+ e:"USB1（串口口）经过 CH340「翻译」，只能烧录和看日志；USB2（OTG 口）直连 ESP32 的 IO19 / IO20，是「原生高速通道」——能做 JTAG 断点调试、接摄像头和 U 盘。两个口长得一样，但「通向不同的地方」。"},
+{s:3,type:"single",q:"开发板上屏幕背光的亮灭，是靠什么元件控制的？",o:["电阻限流","三极管（Q3）当电子开关","电容充放电","二极管整流"],a:1,
+ e:"三极管是「用小电流控制大电流」的电子开关——背光电流较大，GPIO 直接带不动，所以 IO3 只发「命令」（高 / 低电平），三极管 Q3 收到命令才接通 / 断开背光电流。代码里给 IO3 高电平亮屏、低电平息屏，就是这个道理。"},
+{s:3,type:"single",q:"电脑设备管理器里能看到 COM 口，主要归功于哪个芯片？",o:["SY8088（电源芯片）","CH340（USB 转串口芯片）","ES8311（音频芯片）","NS4150B（功放芯片）"],a:1,
+ e:"COM 口 = CH340 的「工作证」。它把 ESP32 的串口信号翻译成 USB 信号，电脑才能认出「这里有个串口设备」。插上板子设备管理器毫无动静时，按顺序排查：① 换数据线 ② 装 CH340 驱动 ③ 怀疑芯片虚焊。"},
+{s:3,type:"single",q:"用 OpenOCD 调试时报错「找不到 JTAG 设备」，最先应该检查什么？",o:["OTG 原生 USB 口（USB2）有没有插数据线","屏幕排线是否松动","TF 卡是否插好","喇叭接线是否牢固"],a:0,
+ e:"JTAG 调试走的是 OTG 原生 USB 口（直连 IO19 / IO20），不是你平时烧录的串口 USB1！报错 99% 是插错了口或者 USB2 没插线——把数据线换到 OTG 口上，问题解决。这就是原理图第 10 页存在的意义。"},
+
+/* ---------- 第 5 关：传感器与实战（12 题 / 26 分，覆盖试卷全部考点） ---------- */
+{s:4,type:"judge",q:"光敏电阻（LDR）的阻值会随着光照增强而增大。",o:["正确","错误"],a:1,
+ e:"方向记反了！光敏电阻是「见光变软」——光线越亮，阻值越小；越暗，阻值越大。自动路灯就是利用这点：天黑 → 阻值飙升 → 分压变化 → 芯片判断「该开灯了」。"},
+{s:4,type:"judge",q:"DHT11 温湿度传感器使用单总线协议，只靠一根数据线就能双向传输数据。",o:["正确","错误"],a:0,
+ e:"单总线（1-Wire）的最大卖点就是省线——一根线既当「说」又当「听」，MCU 先发启动信号，DHT11 再回传 40 位数据。代价是时序要求严格（微秒级），代码里的延时一点不能错。"},
+{s:4,type:"single",q:"光敏电阻为什么要和一个固定电阻串联后，再接入 ESP32 的引脚？",o:["为了省电","组成分压电路，把阻值变化转换成电压变化给 ADC 读取","防止光敏电阻烧坏","让电路更美观"],a:1,
+ e:"因为 ESP32 的引脚只会量电压，不会量电阻！就像体重秤只能称重量，想量身高得借助别的工具。两个电阻串联分压：光照变 → 光敏阻值变 → 中间点电压变 → ADC 读到电压数字 → 算出亮度。「分压电路」是模拟传感器接入芯片的标准套路。"},
+{s:4,type:"single",q:"ADC 配置为 12 位分辨率时，输出的数值范围是多少？",o:["0 ~ 255","0 ~ 1023","0 ~ 4095","0 ~ 65535"],a:2,
+ e:"12 位 = 2 的 12 次方 = 4096 个格子（0 到 4095）。位数越高「刻度越细」：8 位只有 256 格（粗），16 位有 65536 格（细）。实际换算：电压值 = 读数 ÷ 4095 × 3.3V。比如读到 2048，大约是 1.65V。"},
+{s:4,type:"single",q:"程序中消除按钮机械抖动，最常用的软件方法是？",o:["提高电源电压","检测到电平变化后，延时一小段时间再次确认电平","换更贵的按钮","把 CPU 主频调高"],a:1,
+ e:"按钮按下瞬间，内部金属触点会像皮球落地一样「弹跳」几毫秒，产生一串毛刺。软件消抖就是「让子弹飞一会儿」：检测到变化 → 延时 10~20ms → 再读一次，还是按下状态才算数。就像按门铃：碰一下响半声不算，按住不放才是「真按」。"},
+{s:4,type:"single",q:"语音模块识别到指令后，到显示屏刷新数据，程序内部的标准流程是？",o:["语音模块直接驱动屏幕显示","识别 → 发送识别码 → MCU 解析指令 → 调用传感器采集 → 更新显示缓冲 → 刷屏","随机显示内容","先把数据全部存到 TF 卡"],a:1,
+ e:"这是一条标准「快递流水线」：① 语音模块听到指令 → 打包出识别码发给 MCU；② MCU 拆包验货（解析指令）；③ 确认是「查温湿度」→ 去 DHT11 取货（采集数据）；④ 打包进显示缓冲区；⑤ 刷屏上「货架」。每个环节各司其职，这就是嵌入式系统的模块化思想。"},
+{s:4,type:"single",q:"在主循环里不加任何延时、疯狂刷新显示屏上的光敏数据，会导致什么后果？",o:["显示更流畅","CPU 被严重占用，可能触发看门狗复位，屏幕反而闪烁卡顿","完全没影响","更加省电"],a:1,
+ e:"屏幕和人都需要「喘息」。全速刷屏 = 让 CPU 一刻不停搬砖，看门狗（专治程序卡死的保安）发现任务「失联」就强制重启；刷太快人眼也跟不上，只剩闪烁。正确姿势：循环里加 vTaskDelay 让 CPU 睡一会儿，或者「数据变了才局部刷新」。while(1) 里必须有延时，这是铁律。"},
+{s:4,type:"single",q:"DHT11 的数据引脚接一个上拉电阻，主要目的是？",o:["给传感器分压","总线空闲时把信号线稳定在高电平，防止悬空受干扰","限制电流防止烧芯片","把信号电压提升到 5V"],a:1,
+ e:"单总线上 MCU 和 DHT11 轮流「说话」，都没说话时总线处于「释放」状态——没有上拉电阻，这根线就悬空了，像收音机没调准频道全是杂音，外界干扰会让数据乱跳。上拉电阻把空闲电平「锚定」在高电平，通信才稳定。一般选 10kΩ，模块上通常已集成。"},
+{s:4,type:"multi",q:"在 ESP-IDF 中配置一个 GPIO（如 IO42）作为按钮输入，需要设置哪些核心参数？（多选）",o:["引脚模式设为输入模式","启用内置上拉电阻稳定电平","设置中断触发类型（如下降沿触发）","设置输出驱动电流大小"],a:[0,1,2],
+ e:"按钮输入三件套：① mode 输入模式（你是听众）② pull_up_en 上拉（默认高电平，按下变低）③ 中断类型（下降沿 NEGEDGE = 按下瞬间触发）。D 是陷阱——驱动电流是输出模式的事，输入模式根本不「输出」，谈不上驱动电流。"},
+{s:4,type:"multi",q:"流水灯程序编译烧录都成功了，但 LED 完全没有流水效果，可能的原因有？（多选）",o:["硬件接线问题（杜邦线松动、引脚接反、没共地）","代码里的 GPIO 编号和实际接线对不上","缺少 vTaskDelay 延时，切换太快肉眼无法识别","电脑配置太低"],a:[0,1,2],
+ e:"程序跑通 ≠ 硬件听话，按「由外到内」排查：A 查物理层（线松了？接反了？共地了吗——不共地信号不通！）；B 查映射层（代码写 IO4，线却插在 IO5，等于给邻居开灯）；C 查逻辑层（没有延时的流水灯每秒切换上万次，看起来就是「全亮」）。D 纯属干扰项——编译快慢和灯亮不亮没有任何关系。"},
+{s:4,type:"multi",q:"在 ESP-IDF 中初始化和读取光敏传感器的 ADC 数据，需要配置哪些关键参数？（多选）",o:["分辨率（如 12 位，输出 0~4095）","衰减增益（决定可测的最大电压范围）","Wi-Fi 信道","蓝牙设备地址"],a:[0,1],
+ e:"ADC 两大核心配置：① 分辨率——刻度有多细（12 位 = 4096 格）；② 衰减（attenuation）——量程有多大，11dB 衰减才能测到接近 3.3V 满量程。就像用尺子：分辨率是「最小刻度 1mm 还是 1cm」，衰减是「尺子总长 15cm 还是 30cm」。C、D 是无线功能，和 ADC 八竿子打不着。"},
+{s:4,type:"multi",q:"关于按钮的机械抖动，正确的说法有？（多选）",o:["按下 / 松开瞬间触点弹跳，会产生一串毛刺脉冲","可以用「延时后再确认」的软件方法消抖","只有质量差的按钮才会抖动","抖动是物理现象，无法从硬件上彻底避免"],a:[0,1,3],
+ e:"抖动源于金属触点的物理弹性——再贵的按钮也抖，只是程度不同，所以 C 错、D 对。A 是现象描述（毛刺脉冲会让一次按下被误判成好几次）。B 是最常用的对策（软件延时 10~20ms 再确认）。理解了抖动，你就明白流水灯项目里「按一下跳好几下」不是灵异事件，是物理。"}
+];
+
+const TYPE_INFO = {
+  judge:{name:"判断题",cls:"tag-judge",score:1},
+  single:{name:"单选题",cls:"tag-single",score:2},
+  multi:{name:"多选题",cls:"tag-multi",score:3}
+};
+
+/* ================= 游戏状态 ================= */
+let idx = 0, score = 0, answered = false, multiSel = new Set();
+let wrongList = [];   // {q, your, right}
+let secStat = SECTIONS.map(()=>({got:0, full:0}));
+
+const $ = id => document.getElementById(id);
+const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const fmt = s => esc(s).replace(/`([^`]+)`/g,"<code>$1</code>");
+
+function show(id){
+  document.querySelectorAll(".screen").forEach(e=>e.classList.remove("active"));
+  $(id).classList.add("active");
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+/* ---------- 开始 ---------- */
+function startGame(){
+  idx = 0; score = 0; wrongList = [];
+  secStat = SECTIONS.map(()=>({got:0, full:0}));
+  showStage();
+}
+function showStage(){
+  const st = SECTIONS.find(s => idx >= s.range[0] && idx <= s.range[1]);
+  const si = SECTIONS.indexOf(st);
+  const n = st.range[1]-st.range[0]+1;
+  const pts = Q.slice(st.range[0], st.range[1]+1).reduce((a,q)=>a+TYPE_INFO[q.type].score,0);
+  $("stNum").textContent = `STAGE ${si+1} / ${SECTIONS.length}`;
+  $("stEmoji").textContent = st.emoji;
+  $("stTitle").textContent = st.name;
+  $("stDesc").textContent = st.desc;
+  $("stMeta").textContent = `本关 ${n} 题 · 共 ${pts} 分`;
+  show("scr-stage");
+}
+function enterStage(){ renderQuestion(); show("scr-quiz"); }
+
+/* ---------- 渲染题目 ---------- */
+function renderQuestion(){
+  const q = Q[idx], ti = TYPE_INFO[q.type];
+  answered = false; multiSel = new Set();
+
+  $("qPos").textContent = `第 ${idx+1} / ${Q.length} 题`;
+  $("pbar").style.width = (idx / Q.length * 100) + "%";
+  $("scoreChip").textContent = `⭐ ${score} 分`;
+
+  const st = SECTIONS[q.s];
+  $("qtags").innerHTML =
+    `<span class="tag ${ti.cls}">${ti.name}</span>` +
+    `<span class="tag tag-score">${ti.score} 分</span>` +
+    `<span class="tag tag-section">${st.emoji} ${st.name}</span>`;
+  $("qtext").innerHTML = fmt(q.q);
+
+  const box = $("opts"); box.innerHTML = "";
+  q.o.forEach((opt,i)=>{
+    const d = document.createElement("div");
+    d.className = "opt"; d.dataset.i = i;
+    const markTxt = q.type==="judge" ? (i===0?"✓":"✗") : String.fromCharCode(65+i);
+    d.innerHTML = `<span class="mark">${markTxt}</span><span class="otxt">${fmt(opt)}</span>`;
+    d.onclick = ()=> onPick(d, i);
+    box.appendChild(d);
+  });
+
+  $("submitBtn").style.display = q.type==="multi" ? "block" : "none";
+  $("submitBtn").disabled = true;
+  $("explain").className = "explain";
+  $("nextBtn").className = "next-btn";
+}
+
+function onPick(el, i){
+  if(answered) return;
+  const q = Q[idx];
+  if(q.type === "multi"){
+    if(multiSel.has(i)){ multiSel.delete(i); el.classList.remove("selected"); }
+    else { multiSel.add(i); el.classList.add("selected"); }
+    $("submitBtn").disabled = multiSel.size === 0;
+  } else {
+    answer([i]);
+  }
+}
+
+function submitMulti(){ if(!answered && multiSel.size) answer([...multiSel]); }
+
+/* ---------- 判分 ---------- */
+function answer(picks){
+  answered = true;
+  const q = Q[idx], ti = TYPE_INFO[q.type];
+  const right = Array.isArray(q.a) ? q.a : [q.a];
+  const optEls = [...$("opts").children];
+  optEls.forEach(el=>el.classList.add("disabled"));
+
+  let gain = 0, verdict, ok;
+  const pickSet = new Set(picks), rightSet = new Set(right);
+  const hasWrong = picks.some(p=>!rightSet.has(p));
+
+  if(q.type === "multi"){
+    const allRight = rightSet.size===pickSet.size && !hasWrong;
+    if(allRight){ gain = ti.score; ok = true; verdict = "🎉 全部选对！"; }
+    else if(!hasWrong){ gain = 1; ok = false; verdict = "🙂 漏选了（无错选，得 1 分）"; }
+    else { gain = 0; ok = false; verdict = "😅 有错选，不得分"; }
+  } else {
+    ok = picks[0] === right[0];
+    gain = ok ? ti.score : 0;
+    verdict = ok ? "🎉 回答正确！" : "😅 回答错误";
+  }
+
+  // 标记选项
+  optEls.forEach((el,i)=>{
+    if(rightSet.has(i)) el.classList.add(pickSet.has(i) ? "correct" : "miss");
+    else if(pickSet.has(i)) el.classList.add("wrong");
+  });
+  if(!ok) $("qcard").classList.add("shake");
+  setTimeout(()=> $("qcard").classList.remove("shake"), 450);
+
+  // 计分动画
+  if(gain > 0){
+    score += gain;
+    const chip = $("scoreChip");
+    chip.textContent = `⭐ ${score} 分`;
+    chip.classList.remove("bump"); void chip.offsetWidth; chip.classList.add("bump");
+  }
+
+  // 关卡统计
+  secStat[q.s].full += ti.score;
+  secStat[q.s].got  += gain;
+
+  // 错题记录
+  if(gain < ti.score){
+    const letters = i => q.type==="judge" ? (i===0?"正确":"错误") : String.fromCharCode(65+i);
+    wrongList.push({
+      sec: SECTIONS[q.s].name,
+      q: q.q,
+      your: picks.length ? picks.map(letters).join("、") : "（未作答）",
+      right: right.map(letters).join("、")
+    });
+  }
+
+  // 展示解析
+  const ex = $("explain");
+  ex.classList.add("show"); if(!ok) ex.classList.add("bad");
+  $("verdict").innerHTML = `<span class="${ok?"ok":"no"}">${verdict}</span><span class="gain">+${gain} 分</span>`;
+  $("explainBody").innerHTML = "💡 " + fmt(q.e);
+  $("nextBtn").textContent = idx === Q.length-1 ? "🏁 查看成绩单" : "下一题 →";
+  $("nextBtn").classList.add("show");
+  $("submitBtn").style.display = "none";
+
+  setTimeout(()=> ex.scrollIntoView({behavior:"smooth", block:"nearest"}), 200);
+}
+
+/* ---------- 下一题 / 结算 ---------- */
+function nextQuestion(){
+  idx++;
+  if(idx >= Q.length){ showResult(); return; }
+  const prevSec = Q[idx-1].s, curSec = Q[idx].s;
+  if(curSec !== prevSec) showStage();
+  else { renderQuestion(); }
+}
+
+function showResult(){
+  $("pbar").style.width = "100%";
+  show("scr-result");
+
+  // 分数滚动
+  const numEl = $("scoreNum"); let cur = 0;
+  const step = Math.max(1, Math.ceil(score/40));
+  const timer = setInterval(()=>{
+    cur += step;
+    if(cur >= score){ cur = score; clearInterval(timer); }
+    numEl.textContent = cur;
+  }, 30);
+
+  // 评级
+  let g;
+  if(score >= 90) g = {e:"🏆", n:"S 级 · 嵌入式之星", c:"太强了！从 C 语言到原理图全部打通，你已经具备独立开发物联网固件的实力。下一块板子，放手去造！"};
+  else if(score >= 80) g = {e:"🥇", n:"A 级 · 硬件达人", c:"基本功扎实，大部分知识点已掌握。把错题对应章节翻一翻，满分就在眼前！"};
+  else if(score >= 70) g = {e:"🥈", n:"B 级 · 稳步进阶", c:"主干知识没问题，细节还有漏洞。建议重点复习错题涉及的关卡，再刷一次稳稳上 80。"};
+  else if(score >= 60) g = {e:"🥉", n:"C 级 · 及格线上", c:"惊险过关！说明概念有了但还不够牢。把错题回顾认真读一遍，配合课件重学薄弱环节。"};
+  else g = {e:"💪", n:"D 级 · 再接再厉", c:"别灰心，每个高手都从 0 开始。建议从第 1 关对应的课件重新学起，学完一章立刻回来测一次，进步会肉眼可见！"};
+  $("gEmoji").textContent = g.e;
+  $("gName").textContent = g.n;
+  $("gComment").textContent = g.c;
+
+  // 关卡条形图
+  const bars = $("secBars"); bars.innerHTML = "";
+  SECTIONS.forEach((st,i)=>{
+    const s = secStat[i];
+    const pc = s.full ? Math.round(s.got/s.full*100) : 0;
+    const row = document.createElement("div");
+    row.className = "sec-row";
+    row.innerHTML = `<span class="nm">${st.emoji} ${st.name}</span><span class="bar"><i></i></span><span class="pc">${pc}%</span>`;
+    bars.appendChild(row);
+    requestAnimationFrame(()=>{ row.querySelector("i").style.width = pc + "%"; });
+  });
+
+  // 错题回顾
+  $("wrongCount").textContent = wrongList.length;
+  const rb = $("reviewBox"); rb.innerHTML = "";
+  if(wrongList.length === 0){
+    rb.innerHTML = `<div class="allright">🎊 满分通关，一题没错，太完美了！</div>`;
+  } else {
+    rb.innerHTML = "<h3>📋 错题回顾（点击解析再看一眼课件对应章节）</h3>";
+    wrongList.forEach((w,i)=>{
+      const d = document.createElement("div");
+      d.className = "rv-item";
+      d.innerHTML = `<div class="q">${i+1}. 【${esc(w.sec)}】${fmt(w.q)}</div>
+                     <div>你的答案：<b style="color:#b91c1c">${esc(w.your)}</b>　正确答案：<span class="a"><b>${esc(w.right)}</b></span></div>`;
+      rb.appendChild(d);
+    });
+  }
+
+  // 历史最佳
+  try{
+    const best = parseInt(localStorage.getItem("espQuizBest")||"0");
+    if(score > best){
+      localStorage.setItem("espQuizBest", score);
+      $("gComment").textContent += "　🎈 新纪录！";
+    }
+  }catch(e){}
+
+  if(score >= 60) fireConfetti();
+}
+
+function toggleReview(){ $("reviewBox").classList.toggle("show"); }
+function restart(){
+  $("reviewBox").classList.remove("show");
+  show("scr-start");
+  renderBest();
+}
+function renderBest(){
+  try{
+    const best = parseInt(localStorage.getItem("espQuizBest")||"0");
+    $("bestScore").textContent = best > 0 ? `🏅 历史最佳：${best} 分` : "";
+  }catch(e){}
+}
+renderBest();
+
+/* ---------- 彩带特效 ---------- */
+function fireConfetti(){
+  const cv = $("confetti"), ctx = cv.getContext("2d");
+  cv.width = innerWidth; cv.height = innerHeight;
+  const colors = ["#f43f5e","#f59e0b","#22c55e","#3b82f6","#a855f7","#facc15"];
+  const ps = [];
+  for(let i=0;i<160;i++){
+    ps.push({ x:Math.random()*cv.width, y:-20-Math.random()*cv.height*.5,
+      w:6+Math.random()*6, h:8+Math.random()*8, c:colors[i%colors.length],
+      vy:2+Math.random()*3, vx:-1.5+Math.random()*3, r:Math.random()*Math.PI,
+      vr:-.1+Math.random()*.2 });
+  }
+  let frames = 0;
+  (function tick(){
+    ctx.clearRect(0,0,cv.width,cv.height);
+    ps.forEach(p=>{
+      p.y+=p.vy; p.x+=p.vx; p.r+=p.vr;
+      ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.r);
+      ctx.fillStyle=p.c; ctx.fillRect(-p.w/2,-p.h/2,p.w,p.h); ctx.restore();
+    });
+    if(++frames < 240) requestAnimationFrame(tick);
+    else ctx.clearRect(0,0,cv.width,cv.height);
+  })();
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<h1 id="若飞用-claude-code-搭建自己的-ai-学习系统">若飞：用 Claude Code 搭建自己的 AI 学习系统</h1>
+
+<blockquote>
+  <p><strong>核心命题</strong>：AI 学习稀缺的不是答案，缺的是一个能持续暴露问题的环境。Claude Code 维护”学习工作台” = <strong>4 文件</strong>（学习契约/资源/错题集/测试卷）+ <strong>CLAUDE.md 长期陪练规则</strong>（先提示→再追问→再检查→最后才揭示）+ <strong>3 周节奏</strong>（D1→D2→每日故障复现→W2 错题重练→W3 小项目）+ <strong>4 个小验收</strong>（24h 闭卷/换题能做/错误数减少/小项目落地）。</p>
+
+  <p>本文是若飞 Harness/Loop 主线”个人学习场景版”——与 [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]]（同作者 7 天试点）、[[02-ai-coding/Agentic-Engineering-AI-Workbench]]（同作者 AI 工作台 5 层）形成”工程 → 学习”同构迁移。</p>
+</blockquote>
+
+<h2 id="8-个知识节点">8 个知识节点</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>节点</th>
+      <th>一句话定义</th>
+      <th>关键洞察</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>学习工作台 vs 答案机</strong></td>
+      <td>前者帮你维护文件/出题/复盘；后者只回答问题</td>
+      <td>反馈快 vs 慢，能留下能力的往往是后者</td>
+    </tr>
+    <tr>
+      <td><strong>学习 Harness 四件套</strong></td>
+      <td>4 文件：学习契约/资源/错题集/测试卷</td>
+      <td>30 分钟启动；就是个很小的学习 Harness</td>
+    </tr>
+    <tr>
+      <td><strong>学习契约 = 反馈契约</strong></td>
+      <td>5 问（水平/用途/时间/目标/本轮不学）+ 3-5 阶段 + 完成标准 + 练习</td>
+      <td>“能定位 Service 访问不通”才是完成标准</td>
+    </tr>
+    <tr>
+      <td><strong>学习环境瘦身</strong></td>
+      <td>资源 ≤ 5 + 明确哪些本轮不看 + 设计 7 天路径</td>
+      <td>资料少一点，反馈反而更清楚</td>
+    </tr>
+    <tr>
+      <td><strong>答案不提前出现</strong></td>
+      <td>测验前置 + 一次 1 道 + 答错不急进 + 答薄弱先追问</td>
+      <td>答案先出 = 大脑进”识别”模式，不是”生成”模式</td>
+    </tr>
+    <tr>
+      <td><strong>CLAUDE.md 学习陪练</strong></td>
+      <td>5 条规则：先提示→再追问→再检查→最后才揭示</td>
+      <td>Claude Code 适合做学习系统 = 能在本地目录读写规则和记录</td>
+    </tr>
+    <tr>
+      <td><strong>学习卡 + 错误记录</strong></td>
+      <td>每轮压成两样：1 页学习卡 + 1 条错误记录</td>
+      <td>维护成本决定能否坚持；5 分钟恢复上下文</td>
+    </tr>
+    <tr>
+      <td><strong>3 周节奏 + 4 验收</strong></td>
+      <td>D1 契约 / D2 资源 / 每日故障复现 / W2 错题重练 / W3 小项目；4 验收 = 24h 闭卷/换题/错误数/项目</td>
+      <td>能讲出来只说明理解一部分；能换题做出来才说明能力长出来</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<p><strong>上游</strong>（基于 / 来自）：[[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]]（同作者 4 入口 → 4 文件的同构迁移）/ [[02-ai-coding/Agentic-Engineering-AI-Workbench]]（同作者 AI 工作台 5 层变体）/ [[02-ai-coding/Addy-Osmani-Loop-Engineering]]（Loop 主题方法论原典 5+1 积木）/ [[02-ai-coding/Claude-Code-主动式Agent-Routines]]（主动式 Agent → 学习 routine）/ [[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]]（Routine 异步化 + Context 极简主义范式来源）/ [[02-ai-coding/Claude-Code之父品味不是人类护城河]]（Boris “工作变成写 Loops” → 学习契约是 Loop 的学习对应）</p>
+
+<p><strong>下游</strong>（应用于 / 验证于）：[[seetong-daily-briefing]]（简报末尾加”每周 1 张核心知识卡”）/ [[seetong-tapd-version-review]]（版本复盘加”答错-答漏-答含糊”清单驱动下一版本）/ 个人学习场景（学 K8s / 学新语言 / 学业务）</p>
+
+<p><strong>同级</strong>（横向 / 并列）：[[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]]（3 个上手前提 = 学习场景的”3 个前提”）/ [[03-productivity/ai-learning-expert-perspective]]（本文是其”用 Claude Code 工具落地版”）/ [[03-productivity/karpathy-knowledge-system]]（关注”知识积累” vs 本文”能力形成”）</p>
+
+<h2 id="正文要点8-段每段--主张--案例--操作">正文要点（8 段，每段 = 主张 + 案例 + 操作）</h2>
+
+<p><strong>1. 答案机 vs 学习工作台，差别不在 AI 强不强，在学习过程留不留证据。</strong> 不懂就问 + 觉得懂了 = 第一种；不急给完整答案 + 帮你维护文件/追踪错误/出题/复盘 = 第二种。前者反馈快但不留证据；后者反馈慢但能留下能力。背后是 Karpicke &amp; Roediger 检索练习研究：测试本身也促进学习。</p>
+
+<p><strong>2. 第一版不要做重：4 文件 + 30 分钟 = 学习 Harness。</strong> 学习契约（目标/用途/阶段/完成标准）+ 学习资源（筛过 3-5 份）+ 错题集（答错/答漏/答含糊）+ 测试卷（小测验）。”看完文档”不是完成标准；”能独立完成 X 模块全流程”才算。</p>
+
+<p><strong>3. 学习契约 = 反馈契约，5 问 + 3-5 阶段 + 完成标准 + 一项练习。</strong> 5 问：水平/真实用途/可投入时间/目标类型（理解/项目/考试/工作）/本轮不学。反例：”请教我机器学习”太虚，”看完官方文档”不是完成标准；”能解释 Pod 为什么起不来”才是。目标虚则反馈没落点。</p>
+
+<p><strong>4. 学习环境要瘦身：≤ 5 资源 + 7 天路径。</strong> 筛资料时边界写清楚：权威可验证/按学习顺序/明确哪些热门本轮不看/基于筛选资源设计 7 天路径。最后一句”不要超过 5 个资源”很关键——强制控制学习环境。</p>
+
+<p><strong>5. 答案不能提前出现：测验前置 + 答错不急进。</strong> 让 Claude Code 扮演严格但友善的考官：一次 1 道题 + 10 分制评分 + 答错/漏掉/含糊的先追问 + <strong>不一次性给出答案</strong>。机制：答案先出 = 大脑进”识别答案”模式。Bastani 等人研究：无护栏 GPT-4 访问下，学生当场表现好，但 AI 被拿走后独立表现可能变差。</p>
+
+<p><strong>6. CLAUDE.md 5 条默认规则 = 长期陪练。</strong> (1) 先给提示和追问，不直接给完整答案；(2) 每次只推进一个概念或一道题；(3) 回答错误时指出具体错在哪 + 给更小的练习；(4) 每次学习结束帮我更新契约/测验/错题集；(5) 涉及事实时标注来源层级（官方文档/论文/教材/经验/模型推断）。把”先提示→再追问→再检查→最后才揭示”作为默认值。</p>
+
+<p><strong>7. 维护成本决定能否坚持：每轮只压成”1 页学习卡 + 1 条错误记录”。</strong> 学习卡 5 元素：1 句话解决什么问题 + 5 核心概念 + 5 最小例子 + 3 常见误区 + 3 道 1 分钟速答题。错误记录格式：”错误：把 Service selector 误判成 DNS 问题。原因：没先检查 endpoints。下次动作：先看 selector/endpoints/pod labels，再看 DNS。”</p>
+
+<p><strong>8. 3 周节奏 + 4 验收 = 闭环。</strong> 后端工程师学 K8s 排障示例：D1 学习契约（具体到 6 类：Pod 异常/Service 不通/Ingress/存储挂载/调度失败/资源限制）/ D2 筛 3-5 资源 / D3-D7 每天 1 故障复现 / W2 按错误模式重练 / W3 搭故意坏掉的服务链路做事故复盘。4 验收：(1) 24h 后能不能闭卷复述（讲不出来才让 Claude Code 追问补漏，不是让它重新解释）；(2) 换一道题还能不能做；(3) 错误会不会减少（同类错误反复出现就降一层）；(4) 能不能落到一个小项目。<strong>核心金句</strong>：”能讲出来，只说明你理解了一部分；能换题做出来，才说明能力开始长出来。”</p>
+
+<h2 id="5-个对-seetong-团队可借鉴动作">5 个对 Seetong 团队可借鉴动作</h2>
+
+<ol>
+  <li><strong>Seetong 新人 onboarding 第一周 = “Seetong 学习契约”</strong> — 写”能独立完成 X 模块全流程”不算”看完文档”；3-5 阶段 + 每阶段完成标准 + 一项练习</li>
+  <li><strong>TAPD 需求模板加”完成标准”必填字段</strong> — 模糊表述（”实现 XX 功能”）打回；可验收表述（”能在 iOS 18 + Android 14 + HarmonyOS 5 三端真机跑通”）通过</li>
+  <li><strong>Seetong 周报加”学习卡”+”错误复盘”两版块</strong> — 学习卡 5 元素（5 分钟恢复上下文）；错误复盘 ≤ 3 条（错误+原因+下次动作）</li>
+  <li><strong>OpenClaw SOUL.md 加 learning-mode 配置档</strong> — 学习类任务自动切陪练规则（先提示→再追问→再检查→最后才揭示），禁止 AI 直接给完整答案</li>
+  <li><strong>seetong-batch-issue-rootcause-analysis 加”答错不急进”机制</strong> — AI 给出根因前必须先反问 ≥ 3 个验证性问题（你能复现吗/最近版本回归过吗/相关 issue 还有哪些）</li>
+</ol>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li><strong>核心价值</strong>：把若飞 Loop/Harness 主线从”工程现场”迁移到”学习现场”——4 文件 = 4 入口的学习变体</li>
+  <li><strong>作者给的边界</strong>：AI 反馈 ≠ 真实反馈；目标错就走错得更快；事实问题要回第一来源</li>
+  <li><strong>3 个最实操的 prompt 模板</strong>（学习契约/筛资料/出测验）= 全文最值钱部分</li>
+  <li><strong>学习科学背书</strong>：Karpicke &amp; Roediger（检索练习促进学习）/ Dunlosky（practice testing 高优先级）/ Bastani（无护栏 AI 风险）/ Bloom（2-sigma = 持续反馈+纠正+再测试——Claude Code 是 2026 年版的”低成本一对一辅导”）</li>
+  <li><strong>速读摘要</strong>：见同目录 [[02-ai-coding/若飞-用ClaudeCode搭建AI学习系统-digest]]</li>
+</ul>
