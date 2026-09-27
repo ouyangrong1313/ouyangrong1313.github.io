@@ -1,5 +1,12 @@
 # AI Agents Wiki
 
+## Meta Muse：个人 Agent 执行环境（2026-09-27 新增）
+
+> 若飞梳理 Muse Spark、Hatch、Runtime Cell、Sentinel、客户端审批与状态恢复。Meta 官方说明、作者推断和社区逆向须分级采信；外部副作用以权威服务回执确认。
+
+- [[01-ai-agents/若飞-Meta-Muse-个人Agent执行环境]] - 九个节点与 Seetong 任务状态、权限和群投递回执的借鉴动作；与 [[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]] 的控制面设计互补。
+- [[01-ai-agents/若飞-Meta-Muse-个人Agent执行环境-digest]] - 模型提议、独立授权、执行及完成证据的速读版。
+
 ## 语音 AI 与真实业务可用性（2026-09-09 新增）
 
 > 深思圈对 Navana.ai 与 Ujjivan Hello Ujjivan 的案例分析：语音 AI 的价值不在于一次识别成功，而在于用户能否借助语音、图示、固定流程和首次教学独立完成真实业务；融资、下载、交易和用户数据均保留文章转述边界。

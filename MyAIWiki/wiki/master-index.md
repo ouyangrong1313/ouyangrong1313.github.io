@@ -1,6 +1,8 @@
 # AI 知识库索引
 
 ## 最近更新
+- [若飞：Meta Muse 个人 Agent 执行环境](./01-ai-agents/若飞-Meta-Muse-个人Agent执行环境.md) — 2026-09-27：Hatch、Runtime Cell、Sentinel、凭证代理与长任务恢复；区分官方说明与社区推断。
+- [Meta Muse 执行环境 - 速读](./01-ai-agents/若飞-Meta-Muse-个人Agent执行环境-digest.md) — 分层职责、三项边界与 Seetong 应用。
 - [吴恩达谈 AI 职业发展：问题定义、交付与作品](./02-ai-coding/AI觉醒观测者-吴恩达职业发展-问题定义与交付.md) — 2026-09-24：需求澄清、Agent 边界、维护成本与可检查的结果；演讲和研究均为二次转述。
 - [吴恩达谈 AI 职业发展 - 速读](./02-ai-coding/AI觉醒观测者-吴恩达职业发展-问题定义与交付-digest.md) — 三个反直觉点和最小实践。
 - [笔记侠：李开复谈“小人物”机会与 AI 原生组织](./03-productivity/笔记侠-李开复-小人物机会与AI原生组织.md) — 2026-09-24：财务结果检验、DRI 责任、小型服务与人的判断；书评转述，数据待核验。
@@ -551,6 +553,8 @@
 
 ### AI Agents
 
+- [若飞：Meta Muse 个人 Agent 执行环境](./01-ai-agents/若飞-Meta-Muse-个人Agent执行环境.md) - 模型意图、隔离执行、独立授权、人类审批与外部完成证据分层。
+- [Meta Muse 执行环境 - Digest](./01-ai-agents/若飞-Meta-Muse-个人Agent执行环境-digest.md) - 九节点与恢复边界速读。
 - [面试官：讲一讲多 Agent 协作如何保持一致性](./01-ai-agents/架构师-多Agent协作一致性-任务状态与证据.md) - 以任务、事实、状态为一致性边界，补齐交接、结果契约、幂等、租约和验收证据。
 - [多 Agent 协作一致性 - Digest](./01-ai-agents/架构师-多Agent协作一致性-任务状态与证据-digest.md) - 一致性三件事、可执行交接状态、权威事实和局部重试速读。
 - [GitHub三榜第一背后，一个“专升本”工程师的十年](./01-ai-agents/量子位-Archify-涂少坤-专升本工程师十年.md) - Archify 将模糊想法转成可视化图表；作品、用户反馈和开源实践成为学历之外的能力证明。
