@@ -1,6 +1,8 @@
 # AI 知识库索引
 
 ## 最近更新
+- [Datawhale：Anthropic AAR 自动化对齐研究](./01-ai-agents/Datawhale-AAR自动化对齐研究员.md) — 2026-09-28：有界研究循环、独立评测、探索多样性及外推边界；公众号数据待逐项核验。
+- [AAR 自动化对齐研究 - 速读](./01-ai-agents/Datawhale-AAR自动化对齐研究员-digest.md) — 候选、实验和独立验收速查。
 - [若飞：Meta Muse 个人 Agent 执行环境](./01-ai-agents/若飞-Meta-Muse-个人Agent执行环境.md) — 2026-09-27：Hatch、Runtime Cell、Sentinel、凭证代理与长任务恢复；区分官方说明与社区推断。
 - [Meta Muse 执行环境 - 速读](./01-ai-agents/若飞-Meta-Muse-个人Agent执行环境-digest.md) — 分层职责、三项边界与 Seetong 应用。
 - [吴恩达谈 AI 职业发展：问题定义、交付与作品](./02-ai-coding/AI觉醒观测者-吴恩达职业发展-问题定义与交付.md) — 2026-09-24：需求澄清、Agent 边界、维护成本与可检查的结果；演讲和研究均为二次转述。
@@ -553,6 +555,8 @@
 
 ### AI Agents
 
+- [Datawhale：Anthropic AAR 自动化对齐研究](./01-ai-agents/Datawhale-AAR自动化对齐研究员.md) - 研究代理、独立评分、候选多样性与防刷分隔离；特定论文实验不外推为通用研究能力。
+- [AAR 自动化对齐研究 - Digest](./01-ai-agents/Datawhale-AAR自动化对齐研究员-digest.md) - 九节点与实验边界速读。
 - [若飞：Meta Muse 个人 Agent 执行环境](./01-ai-agents/若飞-Meta-Muse-个人Agent执行环境.md) - 模型意图、隔离执行、独立授权、人类审批与外部完成证据分层。
 - [Meta Muse 执行环境 - Digest](./01-ai-agents/若飞-Meta-Muse-个人Agent执行环境-digest.md) - 九节点与恢复边界速读。
 - [面试官：讲一讲多 Agent 协作如何保持一致性](./01-ai-agents/架构师-多Agent协作一致性-任务状态与证据.md) - 以任务、事实、状态为一致性边界，补齐交接、结果契约、幂等、租约和验收证据。

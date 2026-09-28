@@ -1,5 +1,12 @@
 # AI Agents Wiki
 
+## Anthropic AAR：自动化对齐研究与独立评估（2026-09-28 新增）
+
+> Datawhale 解读 Anthropic 自动化对齐研究：候选生成须接独立评估、预算与防刷分隔离；“6 小时对比 28 名研究员”只在特定实验条件下成立，不能外推为通用研究能力。
+
+- [[01-ai-agents/Datawhale-AAR自动化对齐研究员]] - 九节点、研究循环与 Seetong 验证门禁；与 [[01-ai-agents/Agent评测漫谈-由浅入深讲解Agent评测]] 的分层评估互补。
+- [[01-ai-agents/Datawhale-AAR自动化对齐研究员-digest]] - 三个判断和最小试点速读。
+
 ## Meta Muse：个人 Agent 执行环境（2026-09-27 新增）
 
 > 若飞梳理 Muse Spark、Hatch、Runtime Cell、Sentinel、客户端审批与状态恢复。Meta 官方说明、作者推断和社区逆向须分级采信；外部副作用以权威服务回执确认。
