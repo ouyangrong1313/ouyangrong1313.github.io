@@ -153,6 +153,9 @@ exclude:
   - gulpfile.js
   - node_modules
   - '*.json'
+  # 热点站镜像：自带的站内路由链接指向热点站而非本站，交给 Jekyll 原样拷贝，
+  # 同时由 tools/test.sh 的 htmlproofer 忽略，避免内部链接检查误报。
+  - reports/hotspot
 
 jekyll-archives:
   enabled: [categories, tags]
