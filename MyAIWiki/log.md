@@ -419,6 +419,30 @@
 
 ---
 
+## 2026-09-29
+### ingest | 沈南鹏：CEO 最重要的能力——产品偏执与首席体验官
+
+- 来源：微信公众号「全球投资家说」；文中署名「观尘投研」（对沈南鹏多年公开表述的公众号改写，文末列 5 条参考文献）；发布时间 2026-09-09 16:27；原文：https://mp.weixin.qq.com/s/EhOCPj3CBA5Mf8MLEaacHA。
+- 获取：`scripts/fetch_wechat_article.py` 经 Playwright(channel=chrome, headless) 直取，正文 1,694 字符、未出现“环境异常”；正文 SHA-256 `06beb1815609a7736136c57cdfed94af4abccdb471979d2e40bb7710707f6a13`。
+- 写入：`raw/全球投资家说-沈南鹏-CEO最重要的能力.md`、`raw/全球投资家说-沈南鹏-CEO最重要的能力-digest.md`、`wiki/03-productivity/全球投资家说-沈南鹏-CEO最重要的能力.md`；更新 `wiki/03-productivity/index.md` 与 `wiki/master-index.md`。
+- 核心命题：沈南鹏的投人标尺把“对产品的认知高度”放在 CEO 能力首位；产品偏执 = 所有人都不看好时仍坚持自己的产品判断，首席体验官 = 体验判断权不能外包，极致体验只能靠 CEO 带团队一版一版抠出来。
+- 关联：[[03-productivity/笔记侠-老贾-禅与摩托车维修艺术与乔布斯产品哲学]]、[[03-productivity/官俊杰-如何选择一个创业想法-YC合伙人框架]]、[[03-productivity/宁向东-企业家凭什么能看见别人看不见的机会]]、[[03-productivity/领教工坊-不要想象客户要成为客户]]、[[03-productivity/华夏基石e洞察-梁宁-真需求五堂清醒课]]。
+- 证据边界：本文是二手改写，正文未逐段标注与参考文献的对应关系，原话不可直接当作一手记录；“美团单季收入 1046 亿”“净利同比增近七成”“AI 投入上百亿”“Keeta 22 个月盈利”均无口径或出处，按 reported/unverified 处理；文章含研修班招生广告与引流文案。
+- 状态：published；结构检查：完整 frontmatter、7 节点、上游/下游/同级关联图谱、正文哈希与证据限制均已写入。
+
+### ingest | 不需要懂Python，普通人如何用Claude Code实现软件自由？
+- 来源：https://mp.weixin.qq.com/s/Qp7hOw_XXyS5hDZsrILIMQ
+- 原文：raw/Leeka讲RPA-不懂Python-用Claude-Code实现软件自由.md
+- 拆解：raw/Leeka讲RPA-不懂Python-用Claude-Code实现软件自由-digest.md
+- wiki：wiki/02-ai-coding/Leeka讲RPA-不懂Python-用Claude-Code实现软件自由.md
+- 标签： #主题/AI-Coding #主题/Vibe-Coding #主题/AI编程平民化 #场景/公众号长文
+- 获取：`scripts/fetch_wechat_article.py` 经 Playwright(channel=chrome, headless) 直取，正文 2,644 字符、无“环境异常”；正文 SHA-256 `481f07a0ed107026df3a9808df359c7f3459d726b62a48374b0163601d246986`。
+- 核心命题：普通人做软件的瓶颈在于能否讲清痛点、收窄第一版范围，并把技术决策整体委托给 AI 后持续试用迭代；BITE = Briefing → Implement → Test → Evolve。
+- 证据边界：文中“机构针对数万人调查”“非编程背景成功率≈资深程序员”“不到十分钟生成第一版”均无机构名、样本口径或录屏，按 reported/unverified 处理；BITE 为作者自创、未经外部验证。
+- 写入：raw/、raw/-digest、wiki/ 三件套齐备；更新 `wiki/02-ai-coding/index.md`、`wiki/master-index.md`。
+- 状态：published；结构检查：完整 frontmatter、9 节点、上游/下游/同级关联图谱、正文哈希与证据限制均已写入。
+
+
 ## 2026-09-20
 ### ingest | 这是一篇把"RSI"讲明白的科普级综述！
 - 来源：https://mp.weixin.qq.com/s/rlfTKyWhALsNONhAwGih1A

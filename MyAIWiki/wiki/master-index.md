@@ -1,6 +1,9 @@
 # AI 知识库索引
 
 ## 最近更新
+- [沈南鹏：CEO 最重要的能力——产品偏执与首席体验官](./03-productivity/全球投资家说-沈南鹏-CEO最重要的能力.md) — 2026-09-29：投人标尺是“对产品的认知高度”；产品偏执 ≠ 固执，CEO 是首席体验官，极致体验靠迭代。人物引述与美团数据为二手转述。
+- [不需要懂Python，普通人如何用 Claude Code 实现软件自由？](./02-ai-coding/Leeka讲RPA-不懂Python-用Claude-Code实现软件自由.md) — 2026-09-29：BITE 四步（简报→落地→测试→演进）、技术决策委托与非工程者入门；调查数字为作者自述。
+- [普通人用 Claude Code 实现软件自由 - 速读](../raw/Leeka讲RPA-不懂Python-用Claude-Code实现软件自由-digest.md) — BITE 四步、Orbit 实操与证据边界速查。
 - [Datawhale：Anthropic AAR 自动化对齐研究](./01-ai-agents/Datawhale-AAR自动化对齐研究员.md) — 2026-09-28：有界研究循环、独立评测、探索多样性及外推边界；公众号数据待逐项核验。
 - [AAR 自动化对齐研究 - 速读](./01-ai-agents/Datawhale-AAR自动化对齐研究员-digest.md) — 候选、实验和独立验收速查。
 - [若飞：Meta Muse 个人 Agent 执行环境](./01-ai-agents/若飞-Meta-Muse-个人Agent执行环境.md) — 2026-09-27：Hatch、Runtime Cell、Sentinel、凭证代理与长任务恢复；区分官方说明与社区推断。
@@ -701,6 +704,8 @@
 
 ### Productivity
 
+- [沈南鹏：CEO 最重要的能力——产品偏执与首席体验官](./03-productivity/全球投资家说-沈南鹏-CEO最重要的能力.md) - 投人标尺是“对产品的认知高度”；产品偏执 = 所有人都不看好时仍坚持自己的产品判断，首席体验官意味着体验判断权不能外包，极致体验靠 CEO 带团队一版一版抠出来；与禅与摩托车产品哲学、YC 创业想法框架互补。人物引述与美团数据为二手转述，未独立核验。
+- [沈南鹏 CEO 能力 - 速读](./03-productivity/全球投资家说-沈南鹏-CEO最重要的能力-digest.md) - 产品认知高度、首席体验官、计算过的风险与证据边界速读。
 - [笔记侠：李开复谈“小人物”机会与 AI 原生组织](./03-productivity/笔记侠-李开复-小人物机会与AI原生组织.md) - 老贾拆解李开复新书：采用率不等于财务回报，CEO 与 DRI 管结果，OPC 先验证具体客户付费；数字和案例未独立核验。
 - [AI 原生组织与“小人物”机会 - Digest](./03-productivity/笔记侠-李开复-小人物机会与AI原生组织-digest.md) - 财务检验、责任归属、细分服务与隐私边界速读。
 - [Anthropic 的设计主管谈通用人工智能极简主义产品设计 | Joel Lewenstein](./03-productivity/晚点再听-Joel-Lewenstein-Anthropic-AGI极简主义产品设计.md) - 模型驱动规划、原型验证、代码事实依据、Artifacts 双界面与人类取舍。
