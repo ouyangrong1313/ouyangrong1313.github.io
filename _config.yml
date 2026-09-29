@@ -153,6 +153,9 @@ exclude:
   - gulpfile.js
   - node_modules
   - '*.json'
+  # Prebuilt hotspot SPA mirrors. The deploy workflow copies this into _site after the link
+  # check; letting Jekyll also emit it would pull 680+ pages into htmlproofer and fail the run.
+  - hotspot-src
 
 jekyll-archives:
   enabled: [categories, tags]
