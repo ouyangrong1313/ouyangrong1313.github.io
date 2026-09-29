@@ -65,5 +65,4 @@ bundle exec htmlproofer "$DEST" \
   --empty_alt_ignore \
   --allow_hash_href \
   --url_ignore $URL_IGNORE \
-  --file_ignore '/MyAIWiki/' \
-  --file_ignore '/reports/hotspot/'
+  --file_ignore '/MyAIWiki/'
