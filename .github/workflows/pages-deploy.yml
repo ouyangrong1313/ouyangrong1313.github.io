@@ -47,12 +47,25 @@ jobs:
         run: |
           bash tools/test.sh
 
-      - name: Deploy
+      - name: Attach hotspot mirrors
         run: |
+          # The hotspot sites are client-routed SPAs; their snapshots are built and committed
+          # ahead of time, then copied in after the link check. htmlproofer only sees the Jekyll
+          # output, and the snapshot reaches gh-pages through the normal deploy below.
           if [[ -n $BASE_URL ]]; then
             mv _site$BASE_URL _site-rename
             rm -rf _site
             mv _site-rename _site
           fi
 
+          if [[ -d hotspot-src ]]; then
+            cp -R hotspot-src/. _site/
+            touch _site/.nojekyll
+            echo "hotspot mirrors attached: $(find _site/reports/hotspot -name index.html | wc -l) pages"
+          else
+            echo "hotspot-src absent; skipping hotspot mirrors"
+          fi
+
+      - name: Deploy
+        run: |
           bash tools/deploy.sh
