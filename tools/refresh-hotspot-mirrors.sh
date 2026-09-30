@@ -47,9 +47,29 @@ for entry in "${SITES[@]}"; do
   fi
 done
 
-# Fingerprint the committed mirrors before rebuilding, ignoring clock fields, so a refresh
-# that found no new content does not create a few hundred timestamp-only diffs.
-DIGEST_BEFORE="$(python3 tools/hotspot-mirror-digest.py hotspot-src)"
+# Fingerprint the COMMITTED mirrors (HEAD), ignoring clock fields. Comparing against HEAD — not the
+# working tree — keeps a refresh from being mistaken for pure noise when the tree already carries
+# legitimate uncommitted changes (e.g. a builder change that drops obsolete files).
+DIGEST_BEFORE="$(git stash list >/dev/null 2>&1; python3 tools/hotspot-mirror-digest.py hotspot-src)"
+if git diff --quiet -- hotspot-src && git diff --cached --quiet -- hotspot-src; then
+  DIGEST_HEAD="$DIGEST_BEFORE"
+else
+  DIGEST_HEAD="$(git show HEAD:hotspot-src >/dev/null 2>&1 || true; python3 - <<'PY'
+import subprocess, tempfile, os, sys, importlib.util, pathlib
+spec = importlib.util.spec_from_file_location("d", "tools/hotspot-mirror-digest.py")
+m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m)
+names = subprocess.run(["git", "ls-tree", "-r", "--name-only", "HEAD", "hotspot-src"], capture_output=True, text=True).stdout.split()
+import hashlib
+digest = hashlib.sha256()
+for name in sorted(names):
+    blob = subprocess.run(["git", "show", f"HEAD:{name}"], capture_output=True).stdout
+    if name.endswith((".html", ".data", ".json", ".xml", ".txt", ".webmanifest")):
+        blob = m.normalize(blob.decode("utf-8", "replace")).encode()
+    digest.update(name.encode()); digest.update(b"\0"); digest.update(blob); digest.update(b"\0")
+print(digest.hexdigest())
+PY
+)"
+fi
 
 for entry in "${SITES[@]}"; do
   IFS='|' read -r site source assets out <<<"$entry"
@@ -63,7 +83,7 @@ done
 
 DIGEST_AFTER="$(python3 tools/hotspot-mirror-digest.py hotspot-src)"
 
-if [[ "$DIGEST_BEFORE" == "$DIGEST_AFTER" ]]; then
+if [[ "$DIGEST_HEAD" == "$DIGEST_AFTER" ]]; then
   # Only the rebuild timestamp moved. Throw the churn away so the worktree stays clean.
   git checkout -- hotspot-src 2>/dev/null || true
   echo "[refresh] 内容无实质变化（仅时间戳），已还原工作区"

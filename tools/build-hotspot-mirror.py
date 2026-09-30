@@ -252,15 +252,9 @@ def write_pages(order, source, out, base, public_base, filters: set[str] | None 
         with open(html_path, "w", encoding="utf-8") as fh:
             fh.write(text)
 
-        try:
-            data = fetch(source + path + ".data")
-        except (urllib.error.URLError, OSError):
-            continue
-        payload = rewrite_text(data.decode("utf-8", "replace"), base, public_base, source)
-        data_path = os.path.join(out, "_.data") if path == "/" else os.path.join(out, path.strip("/") + ".data")
-        os.makedirs(os.path.dirname(data_path) or out, exist_ok=True)
-        with open(data_path, "w", encoding="utf-8") as fh:
-            fh.write(payload)
+        # No ".data" payloads are written: every <script> is stripped above, so nothing in the
+        # published snapshot fetches them, while their pointer-indexed serialization shifts whenever
+        # any item is added — a permanent source of hundred-file pseudo-diffs.
 
 
 def copy_assets(assets, out, base, public_base, source) -> int:
@@ -449,24 +443,6 @@ def download_static_assets(source, out, base) -> int:
     return copied
 
 
-def write_basename_data(out, base) -> int:
-    """Mirror the index payload beside the mirror directory.
-
-    React Router resolves the index route's data against the router basename, so
-    a browser sitting on /reports/hotspot/ai/all asks for
-    /reports/hotspot/ai.data rather than /reports/hotspot/ai/_.data.
-    """
-    src = os.path.join(out, "_.data")
-    if not os.path.exists(src):
-        return 0
-    dest = os.path.join(os.path.dirname(out), os.path.basename(out) + ".data")
-    with open(src, encoding="utf-8", errors="replace") as fh:
-        payload = fh.read()
-    with open(dest, "w", encoding="utf-8") as fh:
-        fh.write(payload)
-    return 1
-
-
 def write_share_posters(source, out, base, item_ids: list[str]) -> int:
     """Mirror the per-item share poster (1080x1440 PNG) used by 生成分享海报.
 
@@ -573,6 +549,12 @@ def main() -> int:
 
     # Remove route directories from a previous build before repopulating. Otherwise routes that
     # disappear (or that a narrower builder once wrote) would linger in the snapshot forever.
+    # Remove legacy ".data" payloads from earlier builds (see write_pages).
+    for dirpath, _dirs, names in os.walk(out):
+        for name in names:
+            if name.endswith(".data"):
+                os.remove(os.path.join(dirpath, name))
+
     keep = {"assets", "avatars", "og"}
     for name in os.listdir(out):
         full = os.path.join(out, name)
@@ -593,7 +575,6 @@ def main() -> int:
     print(f"{args.site}: copied {copy_root_files(source, out, base, public_base)} root files")
     print(f"{args.site}: localized {localize_avatars(source, out, base)} avatars")
     print(f"{args.site}: copied {download_static_assets(source, out, base)} static assets")
-    print(f"{args.site}: wrote {write_basename_data(out, base)} basename data file")
     print(f"{args.site}: wrote mirror to {out} (base {base})")
     return 0
 
