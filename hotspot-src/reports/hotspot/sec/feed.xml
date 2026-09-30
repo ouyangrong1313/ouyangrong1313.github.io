@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>安防热点 — 精选</title>
-    <link>https://ouyangrong.com/reports/hotspot/sec:3100/</link>
+    <link>http://localhost:3100/</link>
     <description>最新 50 条 安防热点 精选摘要，保留标题、站内阅读与原文入口；需要阅读器内全文可改订 /feed/full.xml。</description>
     <language>zh-CN</language>
-    <atom:link href="https://ouyangrong.com/reports/hotspot/sec:3100/feed.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:3100/feed.xml" rel="self" type="application/rss+xml" />
     <ttl>30</ttl>
-    <generator>安防热点 (https://ouyangrong.com/reports/hotspot/sec:3100/agent)</generator>
+    <generator>安防热点 (http://localhost:3100/agent)</generator>
     <item>
       <title><![CDATA[海康威视首批通过网络安全标识三星级备案，亮相2026国家网络安全宣传周]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/i313ssh7cwxhl8e8zxu39t57q</link>
+      <link>http://localhost:3100/items/i313ssh7cwxhl8e8zxu39t57q</link>
       <description><![CDATA[<p>海康威视作为首批通过网络安全标识三星级（领先级）备案的企业，在2026国家网络安全宣传周上展示其安全方案。备案依据《消费类网联摄像头安全要求》，本次备案共两款4G球机，是唯一备案4G产品的厂商。海康还介绍了海康御心安全引擎的主动防御能力并宣布连续十年支撑国家信息安全漏洞库。</p>
 <p>🔗 <a href="https://www.asmag.com.cn/news/202609/115342.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/i313ssh7cwxhl8e8zxu39t57q">https://ouyangrong.com/reports/hotspot/sec:3100/items/i313ssh7cwxhl8e8zxu39t57q</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/i313ssh7cwxhl8e8zxu39t57q">http://localhost:3100/items/i313ssh7cwxhl8e8zxu39t57q</a></p>]]></description>
       <category>标准</category>
       <pubDate>Tue, 29 Sep 2026 11:14:49 GMT</pubDate>
       <guid isPermaLink="false">i313ssh7cwxhl8e8zxu39t57q</guid>
@@ -21,10 +21,10 @@
     </item>
     <item>
       <title><![CDATA[Veepai小鹰维拍发布端侧AI多模态模组系列，最低15元起]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/ohvhb8ggea30mz2735jyniyun</link>
+      <link>http://localhost:3100/items/ohvhb8ggea30mz2735jyniyun</link>
       <description><![CDATA[<p>Veepai小鹰维拍发布端侧AI多模态模组系列，包含小mini、小黄人板级、枪摇/枪球专用模组，覆盖100万至200万像素，最低15元起，同步开放100万片预售。模组内置端侧AI识别与夜视3D降噪，预制集成Sensor、图像调优与AI算法，可降低厂商开发门槛，适配迷你机、云台机、枪摇机等家用IPC形态。</p>
 <p>🔗 <a href="http://companynews.cps.com.cn/article/202609/943916.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/ohvhb8ggea30mz2735jyniyun">https://ouyangrong.com/reports/hotspot/sec:3100/items/ohvhb8ggea30mz2735jyniyun</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/ohvhb8ggea30mz2735jyniyun">http://localhost:3100/items/ohvhb8ggea30mz2735jyniyun</a></p>]]></description>
       <category>产品</category>
       <pubDate>Tue, 29 Sep 2026 01:48:00 GMT</pubDate>
       <guid isPermaLink="false">ohvhb8ggea30mz2735jyniyun</guid>
@@ -32,10 +32,10 @@
     </item>
     <item>
       <title><![CDATA[视美泰AIoT-3568S主板赋能电话班牌项目应用案例分享]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/c2jqdd84vfsqsut1omjlaymgv</link>
+      <link>http://localhost:3100/items/c2jqdd84vfsqsut1omjlaymgv</link>
       <description><![CDATA[<p>视美泰AIoT-3568S主板被用于电话班牌项目，其126×90mm超薄尺寸适配10.1-32英寸屏幕，内置1TOPS NPU实现本地人脸识别考勤，丰富的USB、串口及音频接口可集成摄像头、读卡器、对讲模块等外设。该主板兼容Android、Linux、OpenHarmony操作系统，支持双屏异显和有线/WiFi/蓝牙多网络融合，适合校园批量部署与管理。</p>
 <p>🔗 <a href="https://www.shimeta.com.cn/newsinfo/9251259.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/c2jqdd84vfsqsut1omjlaymgv">https://ouyangrong.com/reports/hotspot/sec:3100/items/c2jqdd84vfsqsut1omjlaymgv</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/c2jqdd84vfsqsut1omjlaymgv">http://localhost:3100/items/c2jqdd84vfsqsut1omjlaymgv</a></p>]]></description>
       <category>应用</category>
       <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">c2jqdd84vfsqsut1omjlaymgv</guid>
@@ -43,10 +43,10 @@
     </item>
     <item>
       <title><![CDATA[HID推出全新Signo Décor读卡器，兼顾门禁安全与设计美学]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/fhofkey37gkbgw9t6nd2n6yc2</link>
+      <link>http://localhost:3100/items/fhofkey37gkbgw9t6nd2n6yc2</link>
       <description><![CDATA[<p>HID推出全新Signo Décor读卡器，专为注重设计的空间打造，同时不牺牲门禁安全性。产品支持齐平安装，具备IK10防冲击和IP65防护等级，搭载EAL5+安全元件并通过OSDP协议加密通信。基于蓝牙和NFC，用户可使用手机完成开门，现已在欧洲、中国大陆、香港、新加坡和阿联酋开放订购，更多型号将于今年内推出。</p>
 <p>🔗 <a href="https://www.asmag.com.cn/news/202609/115314.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/fhofkey37gkbgw9t6nd2n6yc2">https://ouyangrong.com/reports/hotspot/sec:3100/items/fhofkey37gkbgw9t6nd2n6yc2</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/fhofkey37gkbgw9t6nd2n6yc2">http://localhost:3100/items/fhofkey37gkbgw9t6nd2n6yc2</a></p>]]></description>
       <category>产品</category>
       <pubDate>Sun, 20 Sep 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">fhofkey37gkbgw9t6nd2n6yc2</guid>
@@ -54,10 +54,10 @@
     </item>
     <item>
       <title><![CDATA[同方威视在福州长乐机场T2部署近300台套智慧安检设备]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/z1xgmtt4mk2vqdqcwcnsan09g</link>
+      <link>http://localhost:3100/items/z1xgmtt4mk2vqdqcwcnsan09g</link>
       <description><![CDATA[<p>2026年9月16日，福州长乐国际机场T2航站楼正式投运，同方威视近300台套安检设备及智慧安检方案同步上线。方案涵盖手提行李CT、毫米波人体安检门等设备，依托AI实现辅助判图与安检质控，并创新“一机双屏、一次过检”关航联合查验模式，支撑年3600万人次旅客吞吐量。</p>
 <p>🔗 <a href="https://xh.21csp.com.cn/c62/202609/11430785.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/z1xgmtt4mk2vqdqcwcnsan09g">https://ouyangrong.com/reports/hotspot/sec:3100/items/z1xgmtt4mk2vqdqcwcnsan09g</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/z1xgmtt4mk2vqdqcwcnsan09g">http://localhost:3100/items/z1xgmtt4mk2vqdqcwcnsan09g</a></p>]]></description>
       <category>应用</category>
       <pubDate>Fri, 18 Sep 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">z1xgmtt4mk2vqdqcwcnsan09g</guid>
@@ -65,10 +65,10 @@
     </item>
     <item>
       <title><![CDATA[拆解视美泰 AIoT-3576EV：面向交互大屏的 RK3576 硬件方案]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/k0g55fpi9kyhfbducbkdxhydq</link>
+      <link>http://localhost:3100/items/k0g55fpi9kyhfbducbkdxhydq</link>
       <description><![CDATA[<p>视美泰在官方动态中拆解了AIoT-3576EV主板，该主板基于瑞芯微RK3576平台（8核CPU+6TOPS NPU），支持4K@120Hz显示、7路USB及工业总线扩展，面向B端整机厂商和集成商，能够本地运行数字人驱动、客流统计等AI业务。</p>
 <p>🔗 <a href="https://www.shimeta.com.cn/newsinfo/9236118.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/k0g55fpi9kyhfbducbkdxhydq">https://ouyangrong.com/reports/hotspot/sec:3100/items/k0g55fpi9kyhfbducbkdxhydq</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/k0g55fpi9kyhfbducbkdxhydq">http://localhost:3100/items/k0g55fpi9kyhfbducbkdxhydq</a></p>]]></description>
       <category>产品</category>
       <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">k0g55fpi9kyhfbducbkdxhydq</guid>
@@ -76,10 +76,10 @@
     </item>
     <item>
       <title><![CDATA[安讯士发布 AXIS M3945-R、P3945-R 和 P3947-R 车载半球摄像机]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/t83703w9v5xds3d6eblh5vnz7</link>
+      <link>http://localhost:3100/items/t83703w9v5xds3d6eblh5vnz7</link>
       <description><![CDATA[<p>安讯士发布三款车载半球摄像机 AXIS M3945-R（2 MP，面向巴士）、P3945-R（2 MP）和 P3947-R（5 MP，面向火车/电车），内置麦克风支持音频采集。</p>
 <p>🔗 <a href="https://newsroom.axis.com/news/rugged-dome-cameras">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/t83703w9v5xds3d6eblh5vnz7">https://ouyangrong.com/reports/hotspot/sec:3100/items/t83703w9v5xds3d6eblh5vnz7</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/t83703w9v5xds3d6eblh5vnz7">http://localhost:3100/items/t83703w9v5xds3d6eblh5vnz7</a></p>]]></description>
       <category>产品</category>
       <pubDate>Mon, 14 Sep 2026 11:52:23 GMT</pubDate>
       <guid isPermaLink="false">t83703w9v5xds3d6eblh5vnz7</guid>
@@ -87,10 +87,10 @@
     </item>
     <item>
       <title><![CDATA[从信息通信业“十五五”规划看物联网发展特点]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/exw7bw5j6nenzcs2uccm6vyzt</link>
+      <link>http://localhost:3100/items/exw7bw5j6nenzcs2uccm6vyzt</link>
       <description><![CDATA[<p>信息通信业“十五五”规划明确物联网向“5G-A+6G+卫星”协同连接、人工智能融合以及补齐标准数据安全短板三大方向演进，要求移动物联网终端用户突破38亿，到2030年全面建成新一代通信网。</p>
 <p>🔗 <a href="https://www.iot101.com/news/10680.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/exw7bw5j6nenzcs2uccm6vyzt">https://ouyangrong.com/reports/hotspot/sec:3100/items/exw7bw5j6nenzcs2uccm6vyzt</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/exw7bw5j6nenzcs2uccm6vyzt">http://localhost:3100/items/exw7bw5j6nenzcs2uccm6vyzt</a></p>]]></description>
       <category>政策</category>
       <pubDate>Mon, 14 Sep 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">exw7bw5j6nenzcs2uccm6vyzt</guid>
@@ -98,10 +98,10 @@
     </item>
     <item>
       <title><![CDATA[安讯士发布AXIS D5210-E和AXIS D5211-E高性能IP供电LED补光灯]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/q64nvuajyvy70ujltl57yma8z</link>
+      <link>http://localhost:3100/items/q64nvuajyvy70ujltl57yma8z</link>
       <description><![CDATA[<p>安讯士发布AXIS D5210-E和AXIS D5211-E两款IP供电LED补光灯，最远补光距离分别为175米（白光）和200米（红外），支持PoE供电与远程亮度/照射角度调节。内置lux传感器可自动触发补光，PoE out可为其他设备供电；计划2026年第四季度通过安讯士分销渠道上市。</p>
 <p>🔗 <a href="https://newsroom.axis.com/news/led-illuminators">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/q64nvuajyvy70ujltl57yma8z">https://ouyangrong.com/reports/hotspot/sec:3100/items/q64nvuajyvy70ujltl57yma8z</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/q64nvuajyvy70ujltl57yma8z">http://localhost:3100/items/q64nvuajyvy70ujltl57yma8z</a></p>]]></description>
       <category>产品</category>
       <pubDate>Fri, 11 Sep 2026 08:56:09 GMT</pubDate>
       <guid isPermaLink="false">q64nvuajyvy70ujltl57yma8z</guid>
@@ -109,10 +109,10 @@
     </item>
     <item>
       <title><![CDATA[安讯士发布AXIS TQ1823-VE双舱安装柜]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/npg4yqwnewx26hqnbvtqtxdfh</link>
+      <link>http://localhost:3100/items/npg4yqwnewx26hqnbvtqtxdfh</link>
       <description><![CDATA[<p>安讯士（Axis）发布AXIS TQ1823-VE双舱安装柜，可同时容纳两台Axis设备并集成线缆管理，适用于室内外监控部署。该柜具备防破坏和宽温设计，支持壁挂或杆装，减少安装时间和硬件杂乱，将于2026年11月通过渠道上市。</p>
 <p>🔗 <a href="https://newsroom.axis.com/news/dual-mount-cabinet">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/npg4yqwnewx26hqnbvtqtxdfh">https://ouyangrong.com/reports/hotspot/sec:3100/items/npg4yqwnewx26hqnbvtqtxdfh</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/npg4yqwnewx26hqnbvtqtxdfh">http://localhost:3100/items/npg4yqwnewx26hqnbvtqtxdfh</a></p>]]></description>
       <category>产品</category>
       <pubDate>Fri, 11 Sep 2026 08:48:47 GMT</pubDate>
       <guid isPermaLink="false">npg4yqwnewx26hqnbvtqtxdfh</guid>
@@ -120,10 +120,10 @@
     </item>
     <item>
       <title><![CDATA[视美泰AIoT-3588A主板用于停车场智慧服务屏，实现人脸断点导航与VR反向寻车]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/lt3b2jt9fvurdwf1as9syu5m2</link>
+      <link>http://localhost:3100/items/lt3b2jt9fvurdwf1as9syu5m2</link>
       <description><![CDATA[<p>视美泰AIoT-3588A主板已在北京、上海等地停车场智慧服务屏项目落地，支持人脸断点导航、VR反向寻车、车位引导、车流监控、异常告警等功能。该主板搭载RK3588八核处理器和6TOPS NPU，可在本地完成人脸检测与车牌识别推理，支持HDMI 8K输出、丰富接口及工业级稳定性，无需依赖云端。</p>
 <p>🔗 <a href="https://www.shimeta.com.cn/newsinfo/9230551.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/lt3b2jt9fvurdwf1as9syu5m2">https://ouyangrong.com/reports/hotspot/sec:3100/items/lt3b2jt9fvurdwf1as9syu5m2</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/lt3b2jt9fvurdwf1as9syu5m2">http://localhost:3100/items/lt3b2jt9fvurdwf1as9syu5m2</a></p>]]></description>
       <category>应用</category>
       <pubDate>Fri, 11 Sep 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">lt3b2jt9fvurdwf1as9syu5m2</guid>
@@ -131,10 +131,10 @@
     </item>
     <item>
       <title><![CDATA[安讯士与思科合作，在云端实现IT与安防统一管理]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/b3p3phtozu484rwsv14t936si</link>
+      <link>http://localhost:3100/items/b3p3phtozu484rwsv14t936si</link>
       <description><![CDATA[<p>安讯士与思科合作，通过Axis Cloud Connect将支持的Axis设备集成到Cisco Meraki Dashboard，使IT与安防团队可在单一界面统一监测设备健康、固件和连接性，提高多站点运维效率。高级版还提供历史视频访问和30天云存储。</p>
 <p>🔗 <a href="https://newsroom.axis.com/blog/axis-cisco-collaboration">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/b3p3phtozu484rwsv14t936si">https://ouyangrong.com/reports/hotspot/sec:3100/items/b3p3phtozu484rwsv14t936si</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/b3p3phtozu484rwsv14t936si">http://localhost:3100/items/b3p3phtozu484rwsv14t936si</a></p>]]></description>
       <category>行业</category>
       <pubDate>Wed, 09 Sep 2026 07:00:00 GMT</pubDate>
       <guid isPermaLink="false">b3p3phtozu484rwsv14t936si</guid>
@@ -142,10 +142,10 @@
     </item>
     <item>
       <title><![CDATA[视美泰正式发布DSBOX-133SE高清数字标牌播放盒，主打1080P商显场景]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/fx8u9l7qbv3ky83zkq75dcpeq</link>
+      <link>http://localhost:3100/items/fx8u9l7qbv3ky83zkq75dcpeq</link>
       <description><![CDATA[<p>视美泰正式发布DSBOX-133SE高清数字标牌播放盒，面向1080P商显市场，强调高性价比与稳定运行。该产品搭载全志A133四核处理器及Android 10系统，支持1080P@60Hz输出，配备双USB、音频输出、以太网与WiFi等接口，采用无风扇低功耗设计和多重防护测试，可应用于电子餐牌、广告机、楼宇信息屏等场景。</p>
 <p>🔗 <a href="https://www.shimeta.com.cn/newsinfo/9226522.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/fx8u9l7qbv3ky83zkq75dcpeq">https://ouyangrong.com/reports/hotspot/sec:3100/items/fx8u9l7qbv3ky83zkq75dcpeq</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/fx8u9l7qbv3ky83zkq75dcpeq">http://localhost:3100/items/fx8u9l7qbv3ky83zkq75dcpeq</a></p>]]></description>
       <category>产品</category>
       <pubDate>Tue, 08 Sep 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">fx8u9l7qbv3ky83zkq75dcpeq</guid>
@@ -153,10 +153,10 @@
     </item>
     <item>
       <title><![CDATA[大华股份发布基于星汉大模型的风电叶片视觉智能检测方案]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/icmtvh4s7stvt5iunfh3wc2ug</link>
+      <link>http://localhost:3100/items/icmtvh4s7stvt5iunfh3wc2ug</link>
       <description><![CDATA[<p>大华股份发布基于星汉大模型与多模态视频理解技术的风电叶片视觉智能检测方案，在风机机舱部署抗振云台实现常态化在线监测。方案在甘肃某风电场运行半年，累计抓拍约15万张叶片画面，检出2台风机3支叶片的早期裂纹和脱胶缺陷，并自动生成预警与检修建议。</p>
 <p>🔗 <a href="https://www.dahuatech.com/news/info/1245.html?page=1">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/icmtvh4s7stvt5iunfh3wc2ug">https://ouyangrong.com/reports/hotspot/sec:3100/items/icmtvh4s7stvt5iunfh3wc2ug</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/icmtvh4s7stvt5iunfh3wc2ug">http://localhost:3100/items/icmtvh4s7stvt5iunfh3wc2ug</a></p>]]></description>
       <category>技术</category>
       <pubDate>Thu, 03 Sep 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">icmtvh4s7stvt5iunfh3wc2ug</guid>
@@ -164,10 +164,10 @@
     </item>
     <item>
       <title><![CDATA[安讯士发布 AXIS D2124-VE 雷达，360° 覆盖与 AI 分类实现全天候区域保护]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/m2u0141zoyu2aupen1qkkif6p</link>
+      <link>http://localhost:3100/items/m2u0141zoyu2aupen1qkkif6p</link>
       <description><![CDATA[<p>安讯士发布 AXIS D2124-VE 雷达，具备 360° 覆盖、AI 分类和雷达图像稳定，可全天候探测 200 米目标。人体识别面积达 40,000 m²，平均功耗 14.8 W，可与 AXIS Q6225-LE PTZ 摄像机联动实现自动跟踪复核，计划 2026 年第四季度上市。</p>
 <p>🔗 <a href="https://newsroom.axis.com/news/radar-device-area-protection">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/m2u0141zoyu2aupen1qkkif6p">https://ouyangrong.com/reports/hotspot/sec:3100/items/m2u0141zoyu2aupen1qkkif6p</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/m2u0141zoyu2aupen1qkkif6p">http://localhost:3100/items/m2u0141zoyu2aupen1qkkif6p</a></p>]]></description>
       <category>产品</category>
       <pubDate>Tue, 01 Sep 2026 12:46:38 GMT</pubDate>
       <guid isPermaLink="false">m2u0141zoyu2aupen1qkkif6p</guid>
@@ -175,10 +175,10 @@
     </item>
     <item>
       <title><![CDATA[视美泰发布AIoT-3576EV AI终端主板，面向交互大屏全品类设备]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/cuq8e1xamuijnb8qo89s2pdcc</link>
+      <link>http://localhost:3100/items/cuq8e1xamuijnb8qo89s2pdcc</link>
       <description><![CDATA[<p>视美泰发布AIoT-3576EV AI终端主板，搭载RK3576八核处理器与6TOPS NPU，支持M.2算力扩展与双千兆网口，具备V-By-One 4K@120Hz显示输出能力，适用于AI数字人、体测一体机、服务机器人等交互大屏设备。</p>
 <p>🔗 <a href="https://www.shimeta.com.cn/newsinfo/9218557.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/cuq8e1xamuijnb8qo89s2pdcc">https://ouyangrong.com/reports/hotspot/sec:3100/items/cuq8e1xamuijnb8qo89s2pdcc</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/cuq8e1xamuijnb8qo89s2pdcc">http://localhost:3100/items/cuq8e1xamuijnb8qo89s2pdcc</a></p>]]></description>
       <category>产品</category>
       <pubDate>Tue, 01 Sep 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">cuq8e1xamuijnb8qo89s2pdcc</guid>
@@ -186,10 +186,10 @@
     </item>
     <item>
       <title><![CDATA[视美泰发布AIoT-3576SE主板：100×80mm尺寸，6TOPS NPU，丰富接口]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/whoyby6caxyvkntk5vy9eoy3j</link>
+      <link>http://localhost:3100/items/whoyby6caxyvkntk5vy9eoy3j</link>
       <description><![CDATA[<p>视美泰发布AIoT-3576SE主板，基于瑞芯微RK3576八核芯片，集成6TOPS NPU，尺寸100×80mm。支持4K输出、MIPI摄像头和语音功能，待机电流低至22mA，适用于智能家居中控、小型网关等紧凑场景。</p>
 <p>🔗 <a href="https://www.shimeta.com.cn/newsinfo/9217068.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/whoyby6caxyvkntk5vy9eoy3j">https://ouyangrong.com/reports/hotspot/sec:3100/items/whoyby6caxyvkntk5vy9eoy3j</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/whoyby6caxyvkntk5vy9eoy3j">http://localhost:3100/items/whoyby6caxyvkntk5vy9eoy3j</a></p>]]></description>
       <category>产品</category>
       <pubDate>Mon, 31 Aug 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">whoyby6caxyvkntk5vy9eoy3j</guid>
@@ -197,10 +197,10 @@
     </item>
     <item>
       <title><![CDATA[中维世纪发布电梯四合一算法场景机，集成电动车、煤气罐、困人与遮挡检测]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/dwcwafzuwe8fvzhfq5sns3fic</link>
+      <link>http://localhost:3100/items/dwcwafzuwe8fvzhfq5sns3fic</link>
       <description><![CDATA[<p>中维世纪发布电梯四合一算法场景机，内置煤气罐检测、电动车检测、困人检测和遮挡检测四种算法。电动车或煤气罐入梯时联动梯控阻止关门；困人检测自动推送物业；遮挡检测触发防御警报并阻止关门。</p>
 <p>🔗 <a href="http://www.jovision.com/Company/ViewContent.aspx?id=903&amp;cid=349">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/dwcwafzuwe8fvzhfq5sns3fic">https://ouyangrong.com/reports/hotspot/sec:3100/items/dwcwafzuwe8fvzhfq5sns3fic</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/dwcwafzuwe8fvzhfq5sns3fic">http://localhost:3100/items/dwcwafzuwe8fvzhfq5sns3fic</a></p>]]></description>
       <category>技术</category>
       <pubDate>Fri, 28 Aug 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">dwcwafzuwe8fvzhfq5sns3fic</guid>
@@ -208,10 +208,10 @@
     </item>
     <item>
       <title><![CDATA[视美泰携全栈AI方案亮相第八届深圳智慧显示博览会]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/yohsi83a932qyegd9l99czim4</link>
+      <link>http://localhost:3100/items/yohsi83a932qyegd9l99czim4</link>
       <description><![CDATA[<p>2026年8月26-28日，视美泰亮相第八届深圳（国际）智慧显示系统产业应用博览会，展出基于瑞芯微等平台的RK3568、RK3576、RK3588系列主板盒子，以及AI大模型双屏翻译机、智能体广告机、多模态语视交互模组等产品，并布局OpenHarmony开源鸿蒙系列与AIBOX-M88边缘计算平台。</p>
 <p>🔗 <a href="https://www.shimeta.com.cn/newsinfo/9212330.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/yohsi83a932qyegd9l99czim4">https://ouyangrong.com/reports/hotspot/sec:3100/items/yohsi83a932qyegd9l99czim4</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/yohsi83a932qyegd9l99czim4">http://localhost:3100/items/yohsi83a932qyegd9l99czim4</a></p>]]></description>
       <category>产品</category>
       <pubDate>Thu, 27 Aug 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">yohsi83a932qyegd9l99czim4</guid>
@@ -219,10 +219,10 @@
     </item>
     <item>
       <title><![CDATA[涂鸦智能发布2026年Q2及H1财报：推动AI能力在真实设备和实际场景中落地]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/ia14xbm4ye1vesyrnrp2toxfx</link>
+      <link>http://localhost:3100/items/ia14xbm4ye1vesyrnrp2toxfx</link>
       <description><![CDATA[<p>涂鸦智能发布2026年Q2及H1财报，上半年总营收1.738亿美元，同比增长12.3%；第二季度营收9290万美元，同比增长16.0%，净利润率20.1%。公司持续推进AI能力产品化落地，上线端到端物理AI生成系统Tuya Cobuilder，AI开发者平台注册数超209万。</p>
 <p>🔗 <a href="https://www.tuya.com/cn/news-details/Kfw78hyi7htuk">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/ia14xbm4ye1vesyrnrp2toxfx">https://ouyangrong.com/reports/hotspot/sec:3100/items/ia14xbm4ye1vesyrnrp2toxfx</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/ia14xbm4ye1vesyrnrp2toxfx">http://localhost:3100/items/ia14xbm4ye1vesyrnrp2toxfx</a></p>]]></description>
       <category>行业</category>
       <pubDate>Tue, 25 Aug 2026 01:00:00 GMT</pubDate>
       <guid isPermaLink="false">ia14xbm4ye1vesyrnrp2toxfx</guid>
@@ -230,10 +230,10 @@
     </item>
     <item>
       <title><![CDATA[安防“瘦身”，公安部废止119项公共安全行业标准]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/ry6j7cx03143kigl46vytphqm</link>
+      <link>http://localhost:3100/items/ry6j7cx03143kigl46vytphqm</link>
       <description><![CDATA[<p>公安部发布公告，依据《行业标准管理办法》决定废止119项公共安全行业标准，涉及GA 374-2019《电子防盗锁》、GA/T 1093-2013《出入口控制人脸识别系统技术要求》等多项安防与警用装备标准。本次清理旨在解决标准陈旧、重复问题，为智能化转型释放空间，企业可降低合规成本并推动技术迭代。</p>
 <p>🔗 <a href="http://news.cps.com.cn/article/202606/943750.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/ry6j7cx03143kigl46vytphqm">https://ouyangrong.com/reports/hotspot/sec:3100/items/ry6j7cx03143kigl46vytphqm</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/ry6j7cx03143kigl46vytphqm">http://localhost:3100/items/ry6j7cx03143kigl46vytphqm</a></p>]]></description>
       <category>标准</category>
       <pubDate>Tue, 23 Jun 2026 01:19:00 GMT</pubDate>
       <guid isPermaLink="false">ry6j7cx03143kigl46vytphqm</guid>
@@ -241,10 +241,10 @@
     </item>
     <item>
       <title><![CDATA[安联锐视回顾越南IEAE与墨西哥EXPO SEGURIDAD展会，展示免钻孔与低功耗安防方案]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/ksmqcdtlqq2l9gjfdiofnp30e</link>
+      <link>http://localhost:3100/items/ksmqcdtlqq2l9gjfdiofnp30e</link>
       <description><![CDATA[<p>安联锐视（Ansjer）于2026年5月28日至6月4日先后参加越南IEAE电子展和墨西哥EXPO SEGURIDAD，展出免钻孔窗口相机、黑光全彩夜视相机、4K超高清IP摄像机。</p>
 <p>🔗 <a href="https://www.ansjer.com/ansjer-security-exhibitions-recap/">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/ksmqcdtlqq2l9gjfdiofnp30e">https://ouyangrong.com/reports/hotspot/sec:3100/items/ksmqcdtlqq2l9gjfdiofnp30e</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/ksmqcdtlqq2l9gjfdiofnp30e">http://localhost:3100/items/ksmqcdtlqq2l9gjfdiofnp30e</a></p>]]></description>
       <category>行业</category>
       <pubDate>Wed, 17 Jun 2026 01:48:18 GMT</pubDate>
       <guid isPermaLink="false">ksmqcdtlqq2l9gjfdiofnp30e</guid>
@@ -252,10 +252,10 @@
     </item>
     <item>
       <title><![CDATA[从创业幼苗到行业脊梁——中维世纪二十六年向上生长]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/n4voso60clj9gy3cwko64ddjn</link>
+      <link>http://localhost:3100/items/n4voso60clj9gy3cwko64ddjn</link>
       <description><![CDATA[<p>中维世纪二十六年从山大路起步成长为全球安防50强，在济南高新区政策支持下自研音视频后处理芯片JV9800，提出普惠AI战略，构建硬件+平台+算法+云服务全栈能力。公司推出AI场景机、双目AOV太阳能电池球机等产品，在农业看护、幼儿园、食品连锁等场景落地，其中食品连锁案例每年节省成本超100万元、销量提升约10%。2024年底，人工智能创新应用产业园全面投产。</p>
 <p>🔗 <a href="http://www.jovision.com/Company/ViewContent.aspx?id=899&amp;cid=349">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/n4voso60clj9gy3cwko64ddjn">https://ouyangrong.com/reports/hotspot/sec:3100/items/n4voso60clj9gy3cwko64ddjn</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/n4voso60clj9gy3cwko64ddjn">http://localhost:3100/items/n4voso60clj9gy3cwko64ddjn</a></p>]]></description>
       <category>行业</category>
       <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">n4voso60clj9gy3cwko64ddjn</guid>
@@ -263,10 +263,10 @@
     </item>
     <item>
       <title><![CDATA[捷高AOV新模组TD21A/TD25率先支持终身免费智慧云卡]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/o9cm2ckobl14w4uxwex880twd</link>
+      <link>http://localhost:3100/items/o9cm2ckobl14w4uxwex880twd</link>
       <description><![CDATA[<p>捷高AOV新模组TD21A/TD25率先支持终身免费智慧云卡。</p>
 <p>🔗 <a href="https://www.cnjabsco.com/newsArticleDetail?categoryId=73&amp;articleId=63">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/o9cm2ckobl14w4uxwex880twd">https://ouyangrong.com/reports/hotspot/sec:3100/items/o9cm2ckobl14w4uxwex880twd</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/o9cm2ckobl14w4uxwex880twd">http://localhost:3100/items/o9cm2ckobl14w4uxwex880twd</a></p>]]></description>
       <category>产品</category>
       <pubDate>Tue, 21 Apr 2026 07:36:27 GMT</pubDate>
       <guid isPermaLink="false">o9cm2ckobl14w4uxwex880twd</guid>
@@ -274,10 +274,10 @@
     </item>
     <item>
       <title><![CDATA[《网络安全标识管理办法》发布，家用摄像头为首批试点，7月施行]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/s3fh913cyocws3myalmd1l2qb</link>
+      <link>http://localhost:3100/items/s3fh913cyocws3myalmd1l2qb</link>
       <description><![CDATA[<p>2026年4月10日，国家网信办、工信部、公安部联合印发《网络安全标识管理办法》，7月1日起施行，消费类网联摄像头列为首批试点。办法实行基础级（一星）、增强级（二星）、领先级（三星）分级标识，生产者自愿参与，鼓励消费者优先选用。新规将加速行业洗牌，推动联网安防产品从价格竞争转向安全品质竞争。</p>
 <p>🔗 <a href="http://news.cps.com.cn/article/202604/943667.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/s3fh913cyocws3myalmd1l2qb">https://ouyangrong.com/reports/hotspot/sec:3100/items/s3fh913cyocws3myalmd1l2qb</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/s3fh913cyocws3myalmd1l2qb">http://localhost:3100/items/s3fh913cyocws3myalmd1l2qb</a></p>]]></description>
       <category>政策</category>
       <pubDate>Mon, 20 Apr 2026 07:58:00 GMT</pubDate>
       <guid isPermaLink="false">s3fh913cyocws3myalmd1l2qb</guid>
@@ -285,10 +285,10 @@
     </item>
     <item>
       <title><![CDATA[Yoosee在IEAE 2026展出AI摄像头新品，硬件+服务分润模式受关注]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/dupmg67utrtljduamxv5dutqp</link>
+      <link>http://localhost:3100/items/dupmg67utrtljduamxv5dutqp</link>
       <description><![CDATA[<p>Yoosee在IEAE 2026深圳消费电子展上展出多款AI摄像头新品，并推出硬件+服务分润模式。新品免费植入人形检测、车辆检测等六大AI算法，云存储订阅服务付费次月留存率达80%，单台设备生命周期可贡献数百美元持续收益，旨在帮助跨境电商卖家从卖设备转向持续分成。</p>
 <p>🔗 <a href="https://www.gwell.cc/?news_50/322.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/dupmg67utrtljduamxv5dutqp">https://ouyangrong.com/reports/hotspot/sec:3100/items/dupmg67utrtljduamxv5dutqp</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/dupmg67utrtljduamxv5dutqp">http://localhost:3100/items/dupmg67utrtljduamxv5dutqp</a></p>]]></description>
       <category>产品</category>
       <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">dupmg67utrtljduamxv5dutqp</guid>
@@ -296,10 +296,10 @@
     </item>
     <item>
       <title><![CDATA[台州公安自研防爆罐机器人亮相，自重50公斤可抵御500克TNT当量]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/pxeindylegkwy45253wxfocd3</link>
+      <link>http://localhost:3100/items/pxeindylegkwy45253wxfocd3</link>
       <description><![CDATA[<p>台州公安自主研发的自主移动式防爆罐机器人亮相，自重控制在50公斤内，可抵御500克TNT当量爆炸冲击。机器人搭载履带底盘与3D激光雷达，支持一键路径规划，具备自主导航与远程操作功能。目前已在台州机场、高铁站等核心安保部位部署，累计参与涉爆警情处置及实战演练20余起。2025年台州某商场可疑包裹处置中，机器人凭借自主导航完成无感转移，未大规模疏散人群。</p>
 <p>🔗 <a href="http://news.cps.com.cn/article/202603/943629.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/pxeindylegkwy45253wxfocd3">https://ouyangrong.com/reports/hotspot/sec:3100/items/pxeindylegkwy45253wxfocd3</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/pxeindylegkwy45253wxfocd3">http://localhost:3100/items/pxeindylegkwy45253wxfocd3</a></p>]]></description>
       <category>产品</category>
       <pubDate>Thu, 26 Mar 2026 09:11:00 GMT</pubDate>
       <guid isPermaLink="false">pxeindylegkwy45253wxfocd3</guid>
@@ -307,10 +307,10 @@
     </item>
     <item>
       <title><![CDATA[Yoosee广州体验店盛大开业：以服务赋能外贸商圈，共筑AI安防新标杆]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/elw0eubbxz12wtuq36gbwl0cq</link>
+      <link>http://localhost:3100/items/elw0eubbxz12wtuq36gbwl0cq</link>
       <description><![CDATA[<p>Yoosee于2026年1月17日在广州国际数码广场开设AI体验店，并举办行业交流会，聚焦珠三角外贸商圈。体验店以“安防体验实验室”为设计理念，展示AI摄像机的实时人车识别、哭声检测等功能，同时推出端侧算法与云端AI模型订阅、全球一卡通流量分成等模式，从硬件销售转向智能服务生态。</p>
 <p>🔗 <a href="https://www.gwell.cc/?news_50/321.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/elw0eubbxz12wtuq36gbwl0cq">https://ouyangrong.com/reports/hotspot/sec:3100/items/elw0eubbxz12wtuq36gbwl0cq</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/elw0eubbxz12wtuq36gbwl0cq">http://localhost:3100/items/elw0eubbxz12wtuq36gbwl0cq</a></p>]]></description>
       <category>行业</category>
       <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">elw0eubbxz12wtuq36gbwl0cq</guid>
@@ -318,10 +318,10 @@
     </item>
     <item>
       <title><![CDATA[Yoosee 亮相阿里云通义智能硬件展，展示星瀚 AI 大模型与端云协同新产品]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/vrn3prg8e7fzqchgj048lndcw</link>
+      <link>http://localhost:3100/items/vrn3prg8e7fzqchgj048lndcw</link>
       <description><![CDATA[<p>在 2026 年初的阿里云通义智能硬件展上，Yoosee 展示了基于通义大模型的星瀚 AI 大模型和端云协同架构，以及智能观鸟器、AOV 低功耗摄像机、黑光窗贴摄像机等产品。Yoosee 同时通过 AI 增值服务实现商业模式转型，客单价提升 30%，用户留存提升 75%。</p>
 <p>🔗 <a href="https://www.gwell.cc/?news_50/319.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/vrn3prg8e7fzqchgj048lndcw">https://ouyangrong.com/reports/hotspot/sec:3100/items/vrn3prg8e7fzqchgj048lndcw</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/vrn3prg8e7fzqchgj048lndcw">http://localhost:3100/items/vrn3prg8e7fzqchgj048lndcw</a></p>]]></description>
       <category>技术</category>
       <pubDate>Fri, 16 Jan 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">vrn3prg8e7fzqchgj048lndcw</guid>
@@ -329,10 +329,10 @@
     </item>
     <item>
       <title><![CDATA[涂鸦智能CES 2026发布多款AI硬件，包括AI情绪搭子、宠物项圈等]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/l3x7wu0p34rn3fn5c0zzb0cv9</link>
+      <link>http://localhost:3100/items/l3x7wu0p34rn3fn5c0zzb0cv9</link>
       <description><![CDATA[<p>涂鸦智能在CES 2026上发布六款AI硬件，包括与珞博智能共创的AI情绪搭子&apos;珞博芙崽&apos;、全球首发PetCare宠物情绪项圈、与英特尔合作的家庭AI中心等。家庭AI中心支持本地大模型部署与AI告警，AI行车记录仪内置4G和AI视觉算法，可实现碰撞预警与远程监控。</p>
 <p>🔗 <a href="https://www.tuya.com/cn/news-details/Kfb0j0rf0gfsz">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/l3x7wu0p34rn3fn5c0zzb0cv9">https://ouyangrong.com/reports/hotspot/sec:3100/items/l3x7wu0p34rn3fn5c0zzb0cv9</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/l3x7wu0p34rn3fn5c0zzb0cv9">http://localhost:3100/items/l3x7wu0p34rn3fn5c0zzb0cv9</a></p>]]></description>
       <category>产品</category>
       <pubDate>Thu, 08 Jan 2026 16:00:00 GMT</pubDate>
       <guid isPermaLink="false">l3x7wu0p34rn3fn5c0zzb0cv9</guid>
@@ -340,10 +340,10 @@
     </item>
     <item>
       <title><![CDATA[捷高TDL231A三目超全彩枪球新品发布]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/jafgn2wuudfauxd8xq96cyw09</link>
+      <link>http://localhost:3100/items/jafgn2wuudfauxd8xq96cyw09</link>
       <description><![CDATA[<p>捷高发布 TDL231A 三目超全彩枪球摄像机，具备 AOV、真三目、四电机、超全彩和日夜无界特性。</p>
 <p>🔗 <a href="https://www.cnjabsco.com/newsArticleDetail?categoryId=73&amp;articleId=61">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/jafgn2wuudfauxd8xq96cyw09">https://ouyangrong.com/reports/hotspot/sec:3100/items/jafgn2wuudfauxd8xq96cyw09</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/jafgn2wuudfauxd8xq96cyw09">http://localhost:3100/items/jafgn2wuudfauxd8xq96cyw09</a></p>]]></description>
       <category>产品</category>
       <pubDate>Sun, 04 Jan 2026 02:25:57 GMT</pubDate>
       <guid isPermaLink="false">jafgn2wuudfauxd8xq96cyw09</guid>
@@ -351,10 +351,10 @@
     </item>
     <item>
       <title><![CDATA[捷高D31C-4G单目300万超全彩AOV球机新品发布]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/apgx5gnujb7hheqor6xly0mbt</link>
+      <link>http://localhost:3100/items/apgx5gnujb7hheqor6xly0mbt</link>
       <description><![CDATA[<p>捷高发布 D31C-4G 单目 300 万超全彩 AOV 球机，官方称其为第三代 AOV 智能监控，定义行业能效新标杆。</p>
 <p>🔗 <a href="https://www.cnjabsco.com/newsArticleDetail?categoryId=73&amp;articleId=46">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/apgx5gnujb7hheqor6xly0mbt">https://ouyangrong.com/reports/hotspot/sec:3100/items/apgx5gnujb7hheqor6xly0mbt</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/apgx5gnujb7hheqor6xly0mbt">http://localhost:3100/items/apgx5gnujb7hheqor6xly0mbt</a></p>]]></description>
       <category>产品</category>
       <pubDate>Fri, 16 May 2025 03:46:30 GMT</pubDate>
       <guid isPermaLink="false">apgx5gnujb7hheqor6xly0mbt</guid>
@@ -362,10 +362,10 @@
     </item>
     <item>
       <title><![CDATA[捷高W42A单目400万双光源球机新品发布]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/beiip3us5fdhccohwg1rgrrae</link>
+      <link>http://localhost:3100/items/beiip3us5fdhccohwg1rgrrae</link>
       <description><![CDATA[<p>捷高发布W42A单目400万双光源球机，具备2.5K超清画质、1T算力，采用全新跟踪算法，跟踪更丝滑。</p>
 <p>🔗 <a href="https://www.cnjabsco.com/newsArticleDetail?categoryId=73&amp;articleId=51">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/beiip3us5fdhccohwg1rgrrae">https://ouyangrong.com/reports/hotspot/sec:3100/items/beiip3us5fdhccohwg1rgrrae</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/beiip3us5fdhccohwg1rgrrae">http://localhost:3100/items/beiip3us5fdhccohwg1rgrrae</a></p>]]></description>
       <category>产品</category>
       <pubDate>Thu, 24 Apr 2025 03:46:30 GMT</pubDate>
       <guid isPermaLink="false">beiip3us5fdhccohwg1rgrrae</guid>
@@ -373,10 +373,10 @@
     </item>
     <item>
       <title><![CDATA[涂鸦智能亮相CES 2025，发布支持Apple Home Key和Matter的智能门锁解决方案]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/dj5h8l2hwv8rkfg4l3gxr3s7h</link>
+      <link>http://localhost:3100/items/dj5h8l2hwv8rkfg4l3gxr3s7h</link>
       <description><![CDATA[<p>涂鸦智能在CES 2025推出支持Apple Home Key和Matter over Thread的智能门锁解决方案。用户可将密钥添加至Apple Wallet，通过iPhone或Apple Watch近场解锁门锁，并支持掌静脉、密码、App等多种开锁方式。涂鸦已获200余个Matter证书。</p>
 <p>🔗 <a href="https://www.tuya.com/cn/news-details/Keaq2ydh4vaq3">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/dj5h8l2hwv8rkfg4l3gxr3s7h">https://ouyangrong.com/reports/hotspot/sec:3100/items/dj5h8l2hwv8rkfg4l3gxr3s7h</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/dj5h8l2hwv8rkfg4l3gxr3s7h">http://localhost:3100/items/dj5h8l2hwv8rkfg4l3gxr3s7h</a></p>]]></description>
       <category>产品</category>
       <pubDate>Wed, 22 Jan 2025 03:58:30 GMT</pubDate>
       <guid isPermaLink="false">dj5h8l2hwv8rkfg4l3gxr3s7h</guid>
@@ -384,10 +384,10 @@
     </item>
     <item>
       <title><![CDATA[天视通受邀出席2024 HarmonyOS NEXT发布会，Seetong鸿蒙版本已发布]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/rf6vtufj29bwryt7jrkskndjs</link>
+      <link>http://localhost:3100/items/rf6vtufj29bwryt7jrkskndjs</link>
       <description><![CDATA[<p>天视通旗下App Seetong已发布面向HarmonyOS NEXT的首个版本，于9月上线，并获得上架证书。未来计划增加碰一碰分享、一键添加设备、小窗口预览和集成语音识别等功能。</p>
 <p>🔗 <a href="http://www.tpsee.com/index.php?md=article&amp;ct=show&amp;catid=21&amp;id=576">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/rf6vtufj29bwryt7jrkskndjs">https://ouyangrong.com/reports/hotspot/sec:3100/items/rf6vtufj29bwryt7jrkskndjs</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/rf6vtufj29bwryt7jrkskndjs">http://localhost:3100/items/rf6vtufj29bwryt7jrkskndjs</a></p>]]></description>
       <category>产品</category>
       <pubDate>Tue, 24 Dec 2024 16:00:00 GMT</pubDate>
       <guid isPermaLink="false">rf6vtufj29bwryt7jrkskndjs</guid>
@@ -395,10 +395,10 @@
     </item>
     <item>
       <title><![CDATA[捷高Y311-BLE 300万WIFI6摇头机新品上市]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/ul6himx6tpb17hubidx2gdkgo</link>
+      <link>http://localhost:3100/items/ul6himx6tpb17hubidx2gdkgo</link>
       <description><![CDATA[<p>捷高电子发布Y311-BLE 300万像素室内摇头机，支持WIFI6无线传输和蓝牙配网，提供全新体验。</p>
 <p>🔗 <a href="https://www.cnjabsco.com/newsArticleDetail?categoryId=73&amp;articleId=52">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/ul6himx6tpb17hubidx2gdkgo">https://ouyangrong.com/reports/hotspot/sec:3100/items/ul6himx6tpb17hubidx2gdkgo</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/ul6himx6tpb17hubidx2gdkgo">http://localhost:3100/items/ul6himx6tpb17hubidx2gdkgo</a></p>]]></description>
       <category>产品</category>
       <pubDate>Mon, 26 Aug 2024 03:46:30 GMT</pubDate>
       <guid isPermaLink="false">ul6himx6tpb17hubidx2gdkgo</guid>
@@ -406,10 +406,10 @@
     </item>
     <item>
       <title><![CDATA[捷高AI-L31双目300万超全彩枪球新品上市]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/ap4uwh065efe0m32rk0trdgyh</link>
+      <link>http://localhost:3100/items/ap4uwh065efe0m32rk0trdgyh</link>
       <description><![CDATA[<p>捷高发布AI-L31双目300万超全彩枪球新品，采用新一代AI ISP，实现日夜全彩成像，夜如白昼。</p>
 <p>🔗 <a href="https://www.cnjabsco.com/newsArticleDetail?categoryId=73&amp;articleId=54">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/ap4uwh065efe0m32rk0trdgyh">https://ouyangrong.com/reports/hotspot/sec:3100/items/ap4uwh065efe0m32rk0trdgyh</a></p>]]></description>
+<p>via 安防热点 · <a href="http://localhost:3100/items/ap4uwh065efe0m32rk0trdgyh">http://localhost:3100/items/ap4uwh065efe0m32rk0trdgyh</a></p>]]></description>
       <category>产品</category>
       <pubDate>Fri, 29 Mar 2024 03:46:30 GMT</pubDate>
       <guid isPermaLink="false">ap4uwh065efe0m32rk0trdgyh</guid>

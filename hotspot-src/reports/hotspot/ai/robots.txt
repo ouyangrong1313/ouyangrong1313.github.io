@@ -1,9 +1,0 @@
-User-agent: *
-Allow: /api/v1/
-Allow: /api/mcp
-Disallow: /api/
-Disallow: /admin/
-Disallow: /starred
-Disallow: /feedback
-
-Sitemap: https://ouyangrong.com/reports/hotspot/ai:3000/sitemap.xml
