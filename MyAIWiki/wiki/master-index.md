@@ -1,6 +1,9 @@
 # AI 知识库索引
 
 ## 最近更新
+- [HowToLiveBetter：给人生补一份 README](./03-productivity/菜鸟教程-HowToLiveBetter-人生补一份README.md) — 2026-09-30：把健康、租房、维权这类“吃亏才补课”的常识做成按性价比排序、遇事可查的清单；仓库 star 数与条数为文章转述。
+- [给人生补一份 README - 速读](./03-productivity/菜鸟教程-HowToLiveBetter-人生补一份README-digest.md) — “遇事入口”、性价比排序与 Seetong 团队 README 借鉴速查。
+- [GitHub 上的 golive-skill：把「网站上线一条龙」做成带审批的 Agent 流程](./02-ai-coding/Github上又一个神级skill-网站上线一条龙.md) — 2026-09-30
 - [沈南鹏：CEO 最重要的能力——产品偏执与首席体验官](./03-productivity/全球投资家说-沈南鹏-CEO最重要的能力.md) — 2026-09-29：投人标尺是“对产品的认知高度”；产品偏执 ≠ 固执，CEO 是首席体验官，极致体验靠迭代。人物引述与美团数据为二手转述。
 - [不需要懂Python，普通人如何用 Claude Code 实现软件自由？](./02-ai-coding/Leeka讲RPA-不懂Python-用Claude-Code实现软件自由.md) — 2026-09-29：BITE 四步（简报→落地→测试→演进）、技术决策委托与非工程者入门；调查数字为作者自述。
 - [普通人用 Claude Code 实现软件自由 - 速读](../raw/Leeka讲RPA-不懂Python-用Claude-Code实现软件自由-digest.md) — BITE 四步、Orbit 实操与证据边界速查。

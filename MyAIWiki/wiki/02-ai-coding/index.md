@@ -81,6 +81,7 @@ AI 辅助编程的实战经验、提示词模板、工作流总结。
 - [[Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了-digest]] - 提交产物、策略分层、受保护验证与人类门禁速读。
 
 ### 实战案例
+- [[Github上又一个神级skill-网站上线一条龙]] - golive-skill：把 Agent 部署做成 detect→plan→approve→apply→verify 的带审批流程
 - [[02-ai-coding/Leeka讲RPA-不懂Python-用Claude-Code实现软件自由]] - 微信公众号「Leeka讲RPA」2026-09-28 推送（作者 Leeka）：**核心命题**"普通人的瓶颈不在语法，而在能否讲清痛点、收窄第一版范围，并把技术决策整体委托给 AI 后持续试用迭代"；**9 节点**（BITE框架 / 需求简报 / 最小可行产品 / 真实测试 / 渐进演进 / 翻译官隐喻 / 技术决策委托 / 氛围编码 / AI管理能力）；**BITE 四步**（Briefing 说明给谁做、解决什么痛点、第一版长什么样、第一版坚决不做什么 → Implement 最快产出可用 MVP → Test 亲自使用并反馈 → Evolve 随需求生长）；**与 [[02-ai-coding/vibe-coding]] 和 [[02-ai-coding/VibeCoding的真正门槛-把意图变成可验证的工程任务]] 强关联**——前者是工程师视角的 Vibe Coding 原则，本文是非工程读者的大白话入门版，后者补足"口语化简报须升级为可验证工程任务"的团队侧边界；**证据边界**：匿名机构调查、"不到十分钟"生成 Orbit 第一版等数字均为作者自述，未核实 ⭐⭐
 - [普通人不写 Python 也能做软件 - BITE 速读](../../raw/Leeka讲RPA-不懂Python-用Claude-Code实现软件自由-digest.md) - BITE 四步 + Orbit 实操 + 9 节点速查 + 证据边界与匿名调查的未核实提示
 - [[AI时代-架构师必备的8大技能-4-100]] - AI 编程时代架构师的八项能力框架（2026-09-18）

@@ -419,6 +419,16 @@
 
 ---
 
+## 2026-09-30
+### ingest | GitHub 上的 golive-skill：把「网站上线一条龙」做成带审批的 Agent 流程
+- 来源：https://mp.weixin.qq.com/s/snz6fkTaHa6qxuKVUz6G5g
+- 原文：raw/Github上又一个神级skill-网站上线一条龙.md
+- 拆解：raw/Github上又一个神级skill-网站上线一条龙-digest.md
+- wiki：wiki/02-ai-coding/Github上又一个神级skill-网站上线一条龙.md
+- 标签： #主题/AI-Coding #主题/AI-Agent #主题/Skill #主题/部署 #场景/公众号长文
+- 说明：已人工复核并重写 digest 与 wiki；原文事实/作者主张/本文推断已分离，含 10 个知识节点与 4 条真实内链；链接至 [[02-ai-coding/谷歌开源agent-skills]] [[01-ai-agents/Skill-Self-Evolution]] [[02-ai-coding/Codex工具入口与能力边界]] [[02-ai-coding/Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]]
+
+
 ## 2026-09-29
 ### ingest | 沈南鹏：CEO 最重要的能力——产品偏执与首席体验官
 
@@ -1430,3 +1440,5 @@
 - 2026-09-24: 新增《吴恩达谈AI职业发展：代码越来越容易写，工程师该把能力放在哪里？》；来源微信公众号「AI觉醒观测者」，作者栏同公众号名，2026-09-18 13:16；原文 https://mp.weixin.qq.com/s/MKh5hvraDl8ee-N9XWD3jA；raw：[[raw/2026-09-AI觉醒观测者-吴恩达职业发展-问题定义与交付]] 与 [[raw/2026-09-AI觉醒观测者-吴恩达职业发展-问题定义与交付-digest]]；wiki：[[02-ai-coding/AI觉醒观测者-吴恩达职业发展-问题定义与交付]] 与 [[02-ai-coding/AI觉醒观测者-吴恩达职业发展-问题定义与交付-digest]]；核心命题：代码变便宜后以需求澄清、可维护交付和真实用户结果衡量工程师价值；9 节点；关联 [[02-ai-coding/winkrun-吴恩达-AI工程四项核心技能]]、[[02-ai-coding/大淘宝技术-永霸-AI-Coding-环境与验证驱动]]；标签 #主题/AI-Coding #主题/需求澄清 #主题/技术债 #主题/职业发展；分类 02-ai-coding，演讲与研究数字属二次转述，未独立核验。
 - 2026-09-27: 新增《Meta Muse 架构深度解析：到底有何不同？》；来源微信公众号「架构师」，作者若飞，2026-09-26 23:32；原文 https://mp.weixin.qq.com/s/nQTi_u4O0PnzaqEA_ukNww；raw：[[raw/2026-09-若飞-Meta-Muse-个人Agent执行环境]] 与 [[raw/2026-09-若飞-Meta-Muse-个人Agent执行环境-digest]]；wiki：[[01-ai-agents/若飞-Meta-Muse-个人Agent执行环境]] 与 [[01-ai-agents/若飞-Meta-Muse-个人Agent执行环境-digest]]；核心命题：模型提议、运行时受限执行、Sentinel 独立授权、客户端审批与外部完成证据须分层；9 节点；关联 [[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]] 与 [[01-ai-agents/源泉TheFountainhead-从GUI到AI-Native-产品接目标界面换职责]]；标签 #主题/Agent架构 #主题/权限控制 #主题/长任务恢复；分类 01-ai-agents，官方说明、作者分析和社区逆向不等强度。
 - 2026-09-28: 新增《AI 6小时干过28名研究员！Anthropic公开：自动化对齐神器AAR！》；来源微信公众号「Datawhale」，作者栏 Datawhale，2026-09-27 22:39；原文 https://mp.weixin.qq.com/s/9kJFQ-vxiRBIWohaJBjaoQ；一手论文 https://arxiv.org/abs/2608.28945；raw：[[raw/2026-09-Datawhale-AAR自动化对齐研究员]] 与 [[raw/2026-09-Datawhale-AAR自动化对齐研究员-digest]]；wiki：[[01-ai-agents/Datawhale-AAR自动化对齐研究员]] 与 [[01-ai-agents/Datawhale-AAR自动化对齐研究员-digest]]；核心命题：研究代理需要有界实验、独立评估、探索多样性和防刷分隔离；9 节点；关联 [[01-ai-agents/Agent评测漫谈-由浅入深讲解Agent评测]] 与 [[02-ai-coding/Karpathy-autoresearch-从上下文工程到自主研究循环]]；标签 #主题/Agent架构 #主题/AI安全 #主题/对齐评估；分类 01-ai-agents，公众号数字未逐项核对论文原件。
+
+- 2026-09-30: 新增《本想在 Github 学技术，结果刷到了一份人生指南：612 条建议，给人生补一份 README～》；来源微信公众号「菜鸟教程」，2026-09-29 11:27（Unix 1790652420）；原文 https://mp.weixin.qq.com/s/-LN8NNb-9DYZielCJtgQ8g；raw：[[raw/菜鸟教程-HowToLiveBetter-人生补一份README]] 与 [[raw/菜鸟教程-HowToLiveBetter-人生补一份README-digest]]；wiki：[[03-productivity/菜鸟教程-HowToLiveBetter-人生补一份README]] 与 [[03-productivity/菜鸟教程-HowToLiveBetter-人生补一份README-digest]]；核心命题：工作有 README，人生也该有一份——把健康、租房、维权这类“吃亏才补课”的常识做成按性价比排序、遇事可查的清单；8 节点（人生 README / 常识缺口 / 等以后失败模式 / 遇事入口 / 性价比排序 / 生活常识清单 / 成长方法论 / 静态可检索）；参考项目 HowToLiveBetter（614 条 / 33 文件 / 纯静态）与 byoungd/up（发现问题 → 主动学习 → 与 AI 协作 → 真实任务 → 保存证据 → 复盘迁移，star 60k+）；关联 [[03-productivity/2026年了-你的文件管理还停留在新建文件夹吗]]、[[03-productivity/APPSO-Obsidian+Codex-Karpathy同款本地知识库]]、[[03-productivity/十字路口Crossing-邦比快跑-AI让你成为你自己]]；标签 #主题/个人知识管理 #主题/生活常识清单 #主题/开源指南 #主题/遇事可查 #主题/性价比排序 #场景/个人成长；分类 03-productivity（个人成长/知识清单化，嵌入现有“个人知识整理”主线）；待补证：标题 612 / 正文 614 条不一致（按正文记 614 并标注）；原文 12 张图片承载章节列表未 OCR；仓库 star 数与条数为文章转述未独立核验；**透明玻璃自检**：wiki 5193B（≤8K）/ digest 2009B（≤4K）/ 节点 8（6-10）/ H2 wiki 6 / H2 digest 5 / 表格 1 wiki + 表格 1 digest（≤2）/ 0 陈词 / 0 称呼违规 / 0 标点违规。
