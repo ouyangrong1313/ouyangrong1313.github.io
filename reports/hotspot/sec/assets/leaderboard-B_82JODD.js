@@ -1,0 +1,1 @@
+var e={ranked:`参与排名`,cross_reference:`交叉参考`,observing:`观察中`,reference_only:`仅供参考`,awaiting:`等待成绩`},t={HIGH:`较充分`,MEDIUM:`持续积累`,LOW:`证据敏感`};export{e as n,t};
