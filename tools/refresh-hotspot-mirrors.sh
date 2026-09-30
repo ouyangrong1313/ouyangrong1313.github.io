@@ -47,6 +47,26 @@ for entry in "${SITES[@]}"; do
   fi
 done
 
+# Whether this refresh is worth a commit is decided by the *content signature*: which routes exist
+# plus each page's title, plus the hash of the builder and the injected interaction layer. Live-derived
+# numbers (rolling 48h heat, the "更新" clock, sparkline geometry) drift on every run and must never
+# trigger a push on their own. The last published signature is committed as
+# hotspot-src/.mirror-signature, so this compares against what readers actually have.
+SIG_FILE="hotspot-src/.mirror-signature"
+SIG_PUBLISHED="$(git show HEAD:$SIG_FILE 2>/dev/null | tr -d '[:space:]' || true)"
+
+for entry in "${SITES[@]}"; do
+  IFS='|' read -r site source assets out <<<"$entry"
+  if ! "$AIHOT/bin/site.sh" "$site" status >/dev/null 2>&1; then
+    echo "[refresh] $site 站点未运行；先执行 $AIHOT/bin/site.sh $site start" >&2
+    exit 1
+  fi
+  if [[ ! -d "$assets" ]]; then
+    echo "[refresh] 找不到前端资源目录：$assets" >&2
+    exit 1
+  fi
+done
+
 # Two signatures decide whether this refresh is worth a commit:
 #   * content signature  — routes plus each page's title/date. A new item changes it.
 #   * raw digest         — everything except clock fields. Catches a builder fix that must ship.
@@ -104,13 +124,17 @@ done
 
 SIG_AFTER="$(python3 tools/hotspot-mirror-content-signature.py hotspot-src)"
 
-if [[ "$SIG_BEFORE" == "$SIG_AFTER" ]]; then
-  # No page was added, removed, or retitled: only live-derived numbers moved. Roll the working tree
-  # back so the repository stays clean and the two-hourly job produces no commit.
+if [[ -n "$SIG_PUBLISHED" && "$SIG_PUBLISHED" == "$SIG_AFTER" ]]; then
+  # Nothing a reader would notice changed: no page appeared, disappeared or was retitled, and neither
+  # the builder nor the interaction layer changed. Only live-derived numbers moved. Roll back so the
+  # two-hourly job leaves the repository clean.
   git checkout -- hotspot-src 2>/dev/null || true
   echo "[refresh] 内容集合无变化（仅热度/时间等派生数值），已还原工作区"
   exit 0
 fi
+
+# Record what is about to be published, so the next run can compare against it.
+printf '%s\n' "$SIG_AFTER" > "$SIG_FILE"
 
 echo "[refresh] 完成。变更文件："
 git status --short hotspot-src | head -40

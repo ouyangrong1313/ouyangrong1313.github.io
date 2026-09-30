@@ -247,50 +247,107 @@
   }
   function mdAvailable() { return !!$('a[href$="/markdown"]'); }
 
+  /* The page renders the same control more than once (a desktop rail and a phone toolbar, plus a
+     copy inside each related-story card). Earlier this bound only the FIRST match, so on narrow
+     screens — where the first one is display:none — 更多操作 looked completely dead. Bind every
+     copy, and anchor the menu to whichever one was actually pressed. */
+  function placeMenu(menu, trigger) {
+    var r = trigger.getBoundingClientRect();
+    menu.style.top = (r.bottom + 6) + "px";
+    menu.style.left = Math.max(8, Math.min(r.right - 180, window.innerWidth - 190)) + "px";
+    requestAnimationFrame(function () {
+      var m = menu.getBoundingClientRect();
+      if (m.bottom > window.innerHeight - 8) {
+        menu.style.top = Math.max(8, r.top - m.height - 6) + "px";
+      }
+      if (menu.getBoundingClientRect().bottom > window.innerHeight - 8) {
+        menu.style.top = "8px";
+        menu.style.maxHeight = (window.innerHeight - 16) + "px";
+        menu.style.overflowY = "auto";
+      }
+    });
+  }
+
+  function openMoreMenu(trigger) {
+    var item = currentItemId();
+    if (!item) return;
+    var existing = $("#mh-menu");
+    if (existing) {
+      var wasOpenHere = existing.__mhAnchor === trigger;
+      existing.remove();
+      $$('button[aria-label="更多操作"]').forEach(function (b) { b.setAttribute("aria-expanded", "false"); });
+      if (wasOpenHere) return;
+    }
+    $$('button[aria-label="更多操作"]').forEach(function (b) { b.setAttribute("aria-expanded", "false"); });
+    trigger.setAttribute("aria-expanded", "true");
+
+    var menu = document.createElement("div");
+    menu.id = "mh-menu";
+    menu.__mhAnchor = trigger;
+    menu.setAttribute("role", "menu");
+    menu.style.cssText = "position:fixed;z-index:9999;background:var(--surface,#fff);border:1px solid var(--line,#e5e5e5);" +
+      "border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.16);padding:6px;min-width:180px;font-size:14px";
+    function row(label, fn) {
+      var b = document.createElement("button");
+      b.type = "button"; b.textContent = label; b.setAttribute("role", "menuitem");
+      b.style.cssText = "display:block;width:100%;text-align:left;padding:9px 12px;border:0;background:transparent;" +
+        "border-radius:8px;cursor:pointer;font-size:14px;color:inherit";
+      b.addEventListener("mouseenter", function () { b.style.background = "var(--bg-sunk,#f5f5f5)"; });
+      b.addEventListener("mouseleave", function () { b.style.background = "transparent"; });
+      b.addEventListener("click", function () { closeMenu(); fn(); });
+      menu.appendChild(b);
+    }
+    var title = txt($("h1"));
+    row("分享链接", shareLink);
+    row("生成分享海报", openPoster);
+    row("复制链接", function () {
+      var link = BASE + "/items/" + item + "/";
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(link).then(function () { toast("链接已复制"); }, function () { window.prompt("复制链接：", link); });
+      } else {
+        window.prompt("复制链接：", link);
+      }
+    });
+    if (mdAvailable()) row("导出 Markdown", function () { window.open(BASE + "/items/" + item + "/markdown", "_blank"); });
+
+    document.body.appendChild(menu);
+    placeMenu(menu, trigger);
+    setTimeout(function () {
+      document.addEventListener("click", function onDoc(e) {
+        if (!menu.contains(e.target) && !menu.__mhAnchor.contains(e.target)) {
+          closeMenu();
+          document.removeEventListener("click", onDoc);
+        }
+      });
+      document.addEventListener("keydown", function onEsc(e) {
+        if (e.key === "Escape") { closeMenu(); document.removeEventListener("keydown", onEsc); }
+      });
+    }, 0);
+  }
+
+  function closeMenu() {
+    var m = $("#mh-menu");
+    if (m) m.remove();
+    $$('button[aria-label="更多操作"]').forEach(function (b) { b.setAttribute("aria-expanded", "false"); });
+  }
+
   function attachItemActions() {
     var item = currentItemId();
     if (!item) return;
-    var actions = $('button[aria-label="更多操作"]');
-    if (!actions || actions.__mhMenu) return;
-    actions.__mhMenu = true;
-    actions.addEventListener("click", function (ev) {
-      ev.preventDefault();
-      ev.stopPropagation();
-      var existing = $("#mh-menu");
-      if (existing) { existing.remove(); return; }
-      var menu = document.createElement("div");
-      menu.id = "mh-menu";
-      var r = actions.getBoundingClientRect();
-      menu.style.cssText = "position:fixed;z-index:9999;background:var(--surface,#fff);border:1px solid var(--line,#e5e5e5);" +
-        "border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,.16);padding:6px;min-width:180px;font-size:14px";
-      menu.style.top = (r.bottom + 6) + "px";
-      menu.style.left = Math.max(8, Math.min(r.right - 180, window.innerWidth - 190)) + "px";
-      function row(label, fn) {
-        var b = document.createElement("button");
-        b.type = "button"; b.textContent = label;
-        b.style.cssText = "display:block;width:100%;text-align:left;padding:9px 12px;border:0;background:transparent;border-radius:8px;cursor:pointer;font-size:14px";
-        b.addEventListener("mouseenter", function () { b.style.background = "var(--bg-sunk,#f5f5f5)"; });
-        b.addEventListener("mouseleave", function () { b.style.background = "transparent"; });
-        b.addEventListener("click", function () { menu.remove(); fn(); });
-        menu.appendChild(b);
-      }
-      row("分享链接", shareLink);
-      row("生成分享海报", openPoster);
-      row("复制链接", function () {
-        navigator.clipboard.writeText(BASE + "/items/" + item + "/").then(function () { toast("链接已复制"); }, function () {
-          window.prompt("复制链接：", location.href);
-        });
+    $$('button[aria-label="更多操作"]').forEach(function (b) {
+      if (b.__mhMenu) return;
+      b.__mhMenu = true;
+      b.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        openMoreMenu(b);
       });
-      if (mdAvailable()) row("导出 Markdown", function () { window.open(BASE + "/items/" + item + "/markdown", "_blank"); });
-      document.body.appendChild(menu);
-      setTimeout(function () {
-        document.addEventListener("click", function onDoc(e) {
-          if (!menu.contains(e.target)) { menu.remove(); document.removeEventListener("click", onDoc); }
-        });
-      }, 0);
     });
-    var shareBtn = $('button[aria-label="分享"]');
-    if (shareBtn && !shareBtn.__mhShare) { shareBtn.__mhShare = true; shareBtn.addEventListener("click", function (e) { e.preventDefault(); shareLink(); }); }
+    $$('button[aria-label="分享"]').forEach(function (b) {
+      if (b.__mhShare) return;
+      b.__mhShare = true;
+      b.addEventListener("click", function (ev) { ev.preventDefault(); shareLink(); });
+    });
   }
 
   /* ---------- 搜索 ---------- */

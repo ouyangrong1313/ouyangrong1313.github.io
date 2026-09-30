@@ -21,11 +21,22 @@ import sys
 from pathlib import Path
 
 TITLE = re.compile(r"<title>(.*?)</title>", re.S)
+TOOLS = Path(__file__).resolve().parent
+
+# The builder and the injected interaction layer decide what the pages *do*, not just what they say.
+# Hashed in too, so shipping a fix to either one is never mistaken for "nothing changed".
+BUILDER_FILES = ("build-hotspot-mirror.py", "hotspot-mirror-interactive.js")
 
 
 def main() -> int:
     root = Path(sys.argv[1] if len(sys.argv) > 1 else "hotspot-src")
     digest = hashlib.sha256()
+    for name in BUILDER_FILES:
+        f = TOOLS / name
+        digest.update(name.encode())
+        digest.update(b"=")
+        digest.update(hashlib.sha256(f.read_bytes()).hexdigest().encode() if f.exists() else b"missing")
+        digest.update(b"\0")
     for path in sorted(root.rglob("index.html")):
         rel = str(path.parent.relative_to(root))
         digest.update(rel.encode())
