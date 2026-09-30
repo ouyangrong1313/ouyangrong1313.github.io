@@ -62,6 +62,32 @@ EXTRA_PATHS = {
 }
 
 
+# The feed filters ("全部 / 一手 / 各分类") are plain links carrying a query string. A static host
+# ignores the query string, so a snapshot would keep showing the unfiltered list no matter what the
+# visitor clicks. Each filter state is rendered once from the live site and published as its own
+# directory, then the links are rewritten to point at it — filtering works with no JavaScript:
+#   ?channel=firstParty   -> /channel-firstparty/
+#   ?category=ai-models   -> /category-ai-models/
+FILTER_KEYS = ("channel", "category")
+FILTER_LINK_RE = re.compile(r'href="([^"]*)\?((?:channel|category)=[^"&]+)"')
+
+
+def filter_dir_name(query: str) -> str:
+    key, value = query.split("=", 1)
+    return f"{key}-{re.sub(r'[^a-z0-9-]', '-', value.lower())}"
+
+
+def discover_filters(doc: str) -> set[str]:
+    """Collect the single-parameter channel/category queries linked from a page."""
+    out: set[str] = set()
+    for match in FILTER_LINK_RE.finditer(doc):
+        query = html_mod.unescape(match.group(2))
+        key, value = query.split("=", 1)
+        if key in FILTER_KEYS and value and "&" not in query:
+            out.add(query)
+    return out
+
+
 def fetch(url: str, timeout: int = 60) -> bytes:
     req = urllib.request.Request(url, headers={"Accept-Encoding": "identity"})
     with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -80,7 +106,7 @@ def rewrite_text(text: str, base: str, public_base: str, source: str) -> str:
     return text
 
 
-def rewrite_html(text: str, base: str, public_base: str, source: str) -> str:
+def rewrite_html(text: str, base: str, public_base: str, source: str, filters: set[str] | None = None) -> str:
     text = rewrite_text(text, base, public_base, source)
 
     def fix(match: re.Match[str]) -> str:
@@ -93,7 +119,25 @@ def rewrite_html(text: str, base: str, public_base: str, source: str) -> str:
             return f'{attr}="{base}{value}"'
         return match.group(0)
 
-    return ATTR_RE.sub(fix, text)
+    text = ATTR_RE.sub(fix, text)
+
+    # Point query-string filters at their pre-rendered static directories.
+    for query in sorted(filters or ()):
+        text = text.replace(f'href="{base}/?{query}"', f'href="{base}/{filter_dir_name(query)}/"')
+    text = FILTER_LINK_RE.sub(
+        lambda m: f'href="{base}/{filter_dir_name(html_mod.unescape(m.group(2)))}/"'
+        if html_mod.unescape(m.group(2)) in (filters or set())
+        else m.group(0),
+        text,
+    )
+
+    # Every route is SSR'd into full HTML, so the snapshot does not need the client bundle. Keeping
+    # the scripts makes React Router hydrate and 404 on the synthetic filter directories (they are
+    # not real routes). CSS stays so the layout survives; the result is a plain multi-page site.
+    text = re.sub(r"<script\b[^>]*>.*?</script>", "", text, flags=re.S)
+    text = re.sub(r"<script\b[^>]*/>", "", text)
+    text = re.sub(r'<link\b[^>]*rel="(?:prefetch|preload|modulepreload)"[^>]*/?>', "", text)
+    return text
 
 
 def rebase_srcset(text: str, base: str) -> str:
@@ -126,9 +170,10 @@ def is_route(path: str) -> bool:
     return not path.lower().endswith(SKIP_SUFFIXES)
 
 
-def crawl(source: str, extra: tuple[str, ...]) -> list[str]:
+def crawl(source: str, extra: tuple[str, ...]) -> tuple[list[str], set[str]]:
     seen = {"/"}
     order = ["/"]
+    filters: set[str] = set()
     queue: deque[str] = deque(["/"])
     for path in extra:
         if path not in seen:
@@ -142,6 +187,7 @@ def crawl(source: str, extra: tuple[str, ...]) -> list[str]:
         except (urllib.error.URLError, OSError) as exc:
             print(f"  ! cannot load {path}: {exc}", file=sys.stderr)
             continue
+        filters |= discover_filters(doc)
         for match in ATTR_RE.finditer(doc):
             value = html_mod.unescape(match.group(2))
             if not value.startswith("/") or value.startswith("//"):
@@ -152,17 +198,17 @@ def crawl(source: str, extra: tuple[str, ...]) -> list[str]:
             seen.add(target)
             order.append(target)
             queue.append(target)
-    return order
+    return order, filters
 
 
-def write_pages(order, source, out, base, public_base) -> None:
+def write_pages(order, source, out, base, public_base, filters: set[str] | None = None) -> None:
     for path in order:
         try:
             doc = fetch(source + path)
         except (urllib.error.URLError, OSError) as exc:
             print(f"  ! HTML {path}: {exc}", file=sys.stderr)
             continue
-        text = rebase_srcset(rewrite_html(doc.decode("utf-8", "replace"), base, public_base, source), base)
+        text = rebase_srcset(rewrite_html(doc.decode("utf-8", "replace"), base, public_base, source, filters), base)
         html_path = os.path.join(out, "index.html") if path == "/" else os.path.join(out, path.strip("/"), "index.html")
         os.makedirs(os.path.dirname(html_path), exist_ok=True)
         with open(html_path, "w", encoding="utf-8") as fh:
@@ -309,6 +355,24 @@ def localize_avatars(source, out, base) -> int:
     return len(mapping)
 
 
+def write_filter_pages(filters: set[str], source, out, base, public_base) -> int:
+    """Render each ?channel=/?category= state once and publish it as a directory."""
+    written = 0
+    for query in sorted(filters):
+        try:
+            doc = fetch(f"{source}/?{query}")
+        except (urllib.error.URLError, OSError) as exc:
+            print(f"  ! filter {query}: {exc}", file=sys.stderr)
+            continue
+        text = rebase_srcset(rewrite_html(doc.decode("utf-8", "replace"), base, public_base, source, filters), base)
+        dest = os.path.join(out, filter_dir_name(query), "index.html")
+        os.makedirs(os.path.dirname(dest), exist_ok=True)
+        with open(dest, "w", encoding="utf-8") as fh:
+            fh.write(text)
+        written += 1
+    return written
+
+
 STATIC_ASSET_DIRS = ("/model-providers/", "/leaderboard-sources/")
 
 
@@ -394,10 +458,20 @@ def main() -> int:
         print(f"assets directory not found: {args.assets}", file=sys.stderr)
         return 2
 
-    order = crawl(source, EXTRA_PATHS[args.site])
-    print(f"{args.site}: {len(order)} routes")
+    order, filters = crawl(source, EXTRA_PATHS[args.site])
+    print(f"{args.site}: {len(order)} routes, {len(filters)} filter states")
+
+    # Remove route directories from a previous build before repopulating. Otherwise routes that
+    # disappear (or that a narrower builder once wrote) would linger in the snapshot forever.
+    keep = {"assets", "avatars", "og"}
+    for name in os.listdir(out):
+        full = os.path.join(out, name)
+        if name not in keep and name not in ("index.html",):
+            if os.path.isdir(full):
+                shutil.rmtree(full)
     os.makedirs(out, exist_ok=True)
-    write_pages(order, source, out, base, public_base)
+    write_pages(order, source, out, base, public_base, filters)
+    print(f"{args.site}: wrote {write_filter_pages(filters, source, out, base, public_base)} filter pages")
     print(f"{args.site}: copied {copy_assets(args.assets, out, base, public_base, source)} assets")
     print(f"{args.site}: copied {copy_root_files(source, out, base, public_base)} root files")
     print(f"{args.site}: localized {localize_avatars(source, out, base)} avatars")
