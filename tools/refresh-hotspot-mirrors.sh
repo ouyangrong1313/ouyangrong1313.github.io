@@ -47,6 +47,10 @@ for entry in "${SITES[@]}"; do
   fi
 done
 
+# Fingerprint the committed mirrors before rebuilding, ignoring clock fields, so a refresh
+# that found no new content does not create a few hundred timestamp-only diffs.
+DIGEST_BEFORE="$(python3 tools/hotspot-mirror-digest.py hotspot-src)"
+
 for entry in "${SITES[@]}"; do
   IFS='|' read -r site source assets out <<<"$entry"
   echo "[refresh] 重建 $site 镜像：$out"
@@ -56,6 +60,15 @@ for entry in "${SITES[@]}"; do
   bytes="$(du -sk "$out" | awk '{print $1 * 1024}')"
   echo "[refresh] $site: $pages 个页面，$avatars 个头像，${bytes} 字节"
 done
+
+DIGEST_AFTER="$(python3 tools/hotspot-mirror-digest.py hotspot-src)"
+
+if [[ "$DIGEST_BEFORE" == "$DIGEST_AFTER" ]]; then
+  # Only the rebuild timestamp moved. Throw the churn away so the worktree stays clean.
+  git checkout -- hotspot-src 2>/dev/null || true
+  echo "[refresh] 内容无实质变化（仅时间戳），已还原工作区"
+  exit 0
+fi
 
 echo "[refresh] 完成。变更文件："
 git status --short hotspot-src | head -40
