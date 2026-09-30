@@ -34,15 +34,36 @@ VOLATILE = [
 ]
 
 
-# "52 分钟前更新" / "3 小时前" / "2 天前" — relative-time labels move on every rebuild even when
-# the underlying content is identical.
+# Time labels that move on every rebuild even when the underlying content is identical:
+#   "52 分钟前更新" / "3 小时前" / "2 天前"   relative
+#   "9月30日 17:55 更新"                     absolute, stamped with the rebuild minute
 RELATIVE_TIME = re.compile(r"\d+\s*(?:秒|分钟|小时|天)前")
+ABSOLUTE_STAMP = re.compile(r"\d{1,2}月\d{1,2}日\s+\d{1,2}:\d{2}(?=</span>|\s*更新)")
+
+
+# Sparkline / chart geometry: the 24-hour heat trend is redrawn from a rolling window, so its path
+# coordinates shift a little on every rebuild while the story and its numbers stay the same. The
+# axis labels (<text>) and the headline numbers are NOT touched, so a real data change still shows up.
+# Numeric geometry only. Text, aria-labels, `href`/`xlink:href` (nameplate references) and the
+# <text> axis labels are deliberately left alone, so a genuine content change still moves the digest.
+# SVG path data keeps its command letters (M/L/h/v), so `d` allows them; the other geometry
+# attributes are numeric. `href` is absent from the list on purpose: the nameplate SVGs are
+# referenced through it, and a real brand swap must still change the digest.
+_SVG_NUM = r'[0-9eE.,;\s+-]*(?:(?:translate|scale|rotate|matrix)\([^)]*\)[0-9eE.,;\s+-]*)*'
+CHART_GEOMETRY = re.compile(
+    r'(\bd=")[A-Za-z0-9eE.,;\s+-]*(")'
+    r'|(\b(?:points|cx|cy|x1|y1|x2|y2|x|y|r|transform|style)=)(")' .replace('=)(")', '=")' ) + r'(' + _SVG_NUM + r')(")'
+)
 
 
 def normalize(text: str) -> str:
     for pattern in VOLATILE:
         text = pattern.sub('"VOLATILE"', text)
-    return RELATIVE_TIME.sub("N 前", text)
+    text = RELATIVE_TIME.sub("N 前", text)
+    text = ABSOLUTE_STAMP.sub("T 更新", text)
+    # Only inside SVG chart elements, so ordinary text/attributes are untouched.
+    text = re.sub(r'(<svg\b[^>]*>(?:(?!</svg>).)*?</svg>)', lambda m: CHART_GEOMETRY.sub(r'\1CHART\2', m.group(1)), text, flags=re.S)
+    return text
 
 
 def main() -> int:

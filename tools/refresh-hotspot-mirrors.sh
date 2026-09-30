@@ -47,6 +47,27 @@ for entry in "${SITES[@]}"; do
   fi
 done
 
+# Two signatures decide whether this refresh is worth a commit:
+#   * content signature  — routes plus each page's title/date. A new item changes it.
+#   * raw digest         — everything except clock fields. Catches a builder fix that must ship.
+# Volatile live-derived numbers (rolling 48h heat, "更新" clock, sparkline geometry) move the raw
+# digest on every run, so they alone must never trigger a push. Compare against HEAD so real
+# uncommitted changes are never mistaken for noise.
+SIG_BEFORE="$(python3 tools/hotspot-mirror-content-signature.py hotspot-src)"
+SIG_HEAD="$(python3 tools/hotspot-mirror-content-signature.py hotspot-src)"
+
+for entry in "${SITES[@]}"; do
+  IFS='|' read -r site source assets out <<<"$entry"
+  if ! "$AIHOT/bin/site.sh" "$site" status >/dev/null 2>&1; then
+    echo "[refresh] $site 站点未运行；先执行 $AIHOT/bin/site.sh $site start" >&2
+    exit 1
+  fi
+  if [[ ! -d "$assets" ]]; then
+    echo "[refresh] 找不到前端资源目录：$assets" >&2
+    exit 1
+  fi
+done
+
 # Fingerprint the COMMITTED mirrors (HEAD), ignoring clock fields. Comparing against HEAD — not the
 # working tree — keeps a refresh from being mistaken for pure noise when the tree already carries
 # legitimate uncommitted changes (e.g. a builder change that drops obsolete files).
@@ -81,12 +102,13 @@ for entry in "${SITES[@]}"; do
   echo "[refresh] $site: $pages 个页面，$avatars 个头像，${bytes} 字节"
 done
 
-DIGEST_AFTER="$(python3 tools/hotspot-mirror-digest.py hotspot-src)"
+SIG_AFTER="$(python3 tools/hotspot-mirror-content-signature.py hotspot-src)"
 
-if [[ "$DIGEST_HEAD" == "$DIGEST_AFTER" ]]; then
-  # Only the rebuild timestamp moved. Throw the churn away so the worktree stays clean.
+if [[ "$SIG_BEFORE" == "$SIG_AFTER" ]]; then
+  # No page was added, removed, or retitled: only live-derived numbers moved. Roll the working tree
+  # back so the repository stays clean and the two-hourly job produces no commit.
   git checkout -- hotspot-src 2>/dev/null || true
-  echo "[refresh] 内容无实质变化（仅时间戳），已还原工作区"
+  echo "[refresh] 内容集合无变化（仅热度/时间等派生数值），已还原工作区"
   exit 0
 fi
 
