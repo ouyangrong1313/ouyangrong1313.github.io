@@ -30,6 +30,7 @@ from __future__ import annotations
 import argparse
 import gzip
 import hashlib
+import json
 import html as html_mod
 import os
 import re
@@ -40,6 +41,7 @@ import urllib.parse
 import urllib.request
 from collections import deque
 from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
 
 ATTR_RE = re.compile(r'(href|src|poster)="([^"]*)"')
 SRCSET_RE = re.compile(r'srcSet="([^"]*)"')
@@ -59,6 +61,16 @@ ROOT_FILES = (
 EXTRA_PATHS = {
     "ai": ("/starred", "/more", "/leaderboard/rules", "/leaderboard/sources", "/leaderboard"),
     "sec": ("/starred", "/more"),
+}
+
+# The snapshot has no server, so the reader-facing actions are restored by a small self-contained
+# script injected into every page (localStorage 收藏, local index 搜索, canvas 海报, history 返回,
+# mailto 反馈). See tools/hotspot-mirror-interactive.js for what it replaces and why.
+INTERACTIVE_JS = (Path(__file__).resolve().parent / "hotspot-mirror-interactive.js").read_text(encoding="utf-8")
+# Public feedback address, taken from the industry pack's contactEmail.
+SITE_STRINGS = {
+    "ai": {"site": "AI", "feedbackEmail": "rong.ouyang@tpsee8.com"},
+    "sec": {"site": "安防", "feedbackEmail": "rong.ouyang@tpsee8.com"},
 }
 
 
@@ -131,12 +143,21 @@ def rewrite_html(text: str, base: str, public_base: str, source: str, filters: s
         text,
     )
 
-    # Every route is SSR'd into full HTML, so the snapshot does not need the client bundle. Keeping
-    # the scripts makes React Router hydrate and 404 on the synthetic filter directories (they are
-    # not real routes). CSS stays so the layout survives; the result is a plain multi-page site.
+    # Drop the app bundle: it cannot boot under a nested path (React Router reroutes, the synthetic
+    # filter directories 404, and every action fetches a backend Pages does not serve). Keep the CSS.
+    # The reader-facing interactions come back through the injected mirror layer just below.
     text = re.sub(r"<script\b[^>]*>.*?</script>", "", text, flags=re.S)
     text = re.sub(r"<script\b[^>]*/>", "", text)
     text = re.sub(r'<link\b[^>]*rel="(?:prefetch|preload|modulepreload)"[^>]*/?>', "", text)
+
+    slug = base.rstrip("/").rsplit("/", 1)[-1]
+    strings = SITE_STRINGS.get(slug, SITE_STRINGS["sec"])
+    cfg = {"base": base, "site": strings["site"], "feedbackEmail": strings["feedbackEmail"]}
+    inject = (
+        "<script>window.__HOTSPOT_MIRROR__=" + json.dumps(cfg, ensure_ascii=False) + ";</script>"
+        "<script>" + INTERACTIVE_JS + "</script>"
+    )
+    text = text.replace("</body>", inject + "</body>", 1) if "</body>" in text else text + inject
     return text
 
 
@@ -170,13 +191,30 @@ def is_route(path: str) -> bool:
     return not path.lower().endswith(SKIP_SUFFIXES)
 
 
+def sitemap_paths(source: str) -> list[str]:
+    """All public routes the site advertises. Some (older story pages) are not linked from the home
+    page any more, so crawling alone would leave them out and the mirror would 404 on a shared link."""
+    try:
+        xml = fetch(f"{source}/sitemap.xml").decode("utf-8", "replace")
+    except Exception:
+        return []
+    out: list[str] = []
+    for raw in re.findall(r"<loc>([^<]+)</loc>", xml):
+        rest = raw.split("://", 1)[-1]
+        path = "/" + rest.split("/", 1)[1] if "/" in rest else "/"
+        path = html_mod.unescape(path).strip()
+        if path and path not in out:
+            out.append(path)
+    return out
+
+
 def crawl(source: str, extra: tuple[str, ...]) -> tuple[list[str], set[str]]:
     seen = {"/"}
     order = ["/"]
     filters: set[str] = set()
     queue: deque[str] = deque(["/"])
-    for path in extra:
-        if path not in seen:
+    for path in list(extra) + sitemap_paths(source):
+        if path not in seen and is_route(path):
             seen.add(path)
             order.append(path)
             queue.append(path)
@@ -429,6 +467,78 @@ def write_basename_data(out, base) -> int:
     return 1
 
 
+def write_share_posters(source, out, base, item_ids: list[str]) -> int:
+    """Mirror the per-item share poster (1080x1440 PNG) used by 生成分享海报.
+
+    The poster is rendered on demand by the live API, so it only exists as a URL; download it while
+    the local site is up, and keep it beside the page that links to it. The interactive layer points
+    at BASE + /og/posters/<id>.png; a poster that fails to download is left absent and the layer then
+    falls back to drawing one in the browser.
+    """
+    if not item_ids:
+        return 0
+    dest_dir = os.path.join(out, "og", "posters")
+    os.makedirs(dest_dir, exist_ok=True)
+    copied = 0
+    for iid in item_ids:
+        dest = os.path.join(dest_dir, iid + ".png")
+        if os.path.exists(dest) and os.path.getsize(dest) > 1000:
+            copied += 1
+            continue
+        try:
+            blob = fetch(f"{source}/og/posters/{iid}.png")
+        except SystemExit:
+            continue
+        except Exception:
+            continue
+        if len(blob) < 1000:
+            continue
+        with open(dest, "wb") as fh:
+            fh.write(blob)
+        copied += 1
+    return copied
+
+
+def write_search_index(source, out, base) -> int:
+    """Write a small client-side search index so 搜索 works without a backend.
+
+    The public API caps a page at 100 items, so this walks the cursor to collect everything public,
+    then keeps only the fields the mirror's search needs (title, summary, source, link).
+    """
+    items: list[dict] = []
+    cursor: str | None = None
+    for _ in range(20):
+        url = f"{source}/api/v1/items?mode=all&window=7d&limit=100"
+        if cursor:
+            url += "&cursor=" + urllib.parse.quote(cursor)
+        try:
+            body = json.loads(fetch(url).decode("utf-8", "replace"))
+        except Exception:
+            break
+        page = body.get("items") or []
+        for it in page:
+            iid = it.get("id")
+            if not iid:
+                continue
+            links = it.get("links") or {}
+            items.append({
+                "id": iid,
+                "title": it.get("title") or "",
+                "summary": it.get("summary") or "",
+                "source": (it.get("source") or {}).get("name") or "",
+                "href": f"{base}/items/{iid}/",
+                "original": links.get("original") or "",
+            })
+        meta = body.get("page") or {}
+        cursor = meta.get("nextCursor")
+        if not cursor or not meta.get("hasMore"):
+            break
+    dest = os.path.join(out, "search-index.json")
+    with open(dest, "w", encoding="utf-8") as fh:
+        json.dump({"items": items}, fh, ensure_ascii=False, separators=(",", ":"))
+    return len(items)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--site", required=True, choices=sorted(EXTRA_PATHS))
@@ -472,6 +582,13 @@ def main() -> int:
     os.makedirs(out, exist_ok=True)
     write_pages(order, source, out, base, public_base, filters)
     print(f"{args.site}: wrote {write_filter_pages(filters, source, out, base, public_base)} filter pages")
+    print(f"{args.site}: wrote {write_search_index(source, out, base)} search entries")
+    item_ids = []
+    for root, _dirs, names in os.walk(os.path.join(out, "items")):
+        for name in names:
+            if name == "index.html":
+                item_ids.append(os.path.basename(root))
+    print(f"{args.site}: mirrored {write_share_posters(source, out, base, item_ids)} share posters")
     print(f"{args.site}: copied {copy_assets(args.assets, out, base, public_base, source)} assets")
     print(f"{args.site}: copied {copy_root_files(source, out, base, public_base)} root files")
     print(f"{args.site}: localized {localize_avatars(source, out, base)} avatars")
