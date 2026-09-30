@@ -17,3 +17,8 @@ package-lock.json
 # Python bytecode
 __pycache__/
 *.pyc
+
+# The hotspot mirror refresh keeps its last-published content signature here so a two-hourly
+# rebuild can tell a real content change from live-derived number drift. `. *` above would
+# otherwise ignore it.
+!hotspot-src/.mirror-signature
