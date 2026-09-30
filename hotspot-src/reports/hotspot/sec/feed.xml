@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>安防热点 (https://ouyangrong.com/reports/hotspot/sec:3100/agent)</generator>
     <item>
+      <title><![CDATA[姿态估计算法如何实现边缘端商用？视美泰 RK3576/RK3588 AI 主板实战解析]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/w5m99se6midmav2csvvlec7qx</link>
+      <description><![CDATA[<p>视美泰介绍其 RK3576、RK3588 系列 AI 终端主板如何支撑姿态估计算法在边缘端商用：依靠 6TOPS NPU 完成本地推理，输出人体关键点与姿态判断结果，无需将视频流全部上传云端。配套 SDK 支持模型量化与算子适配，硬件兼容 Android、OpenHarmony，可覆盖 AI 体测、健身魔镜、运动分析和工业行为检测等场景。</p>
+<p>🔗 <a href="https://www.shimeta.com.cn/newsinfo/9252709.html">阅读原文</a></p>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec:3100/items/w5m99se6midmav2csvvlec7qx">https://ouyangrong.com/reports/hotspot/sec:3100/items/w5m99se6midmav2csvvlec7qx</a></p>]]></description>
+      <category>技术</category>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="false">w5m99se6midmav2csvvlec7qx</guid>
+      <author>noreply@localhost (视美泰企业动态)</author>
+    </item>
+    <item>
       <title><![CDATA[海康威视首批通过网络安全标识三星级备案，亮相2026国家网络安全宣传周]]></title>
       <link>https://ouyangrong.com/reports/hotspot/sec:3100/items/i313ssh7cwxhl8e8zxu39t57q</link>
       <description><![CDATA[<p>海康威视作为首批通过网络安全标识三星级（领先级）备案的企业，在2026国家网络安全宣传周上展示其安全方案。备案依据《消费类网联摄像头安全要求》，本次备案共两款4G球机，是唯一备案4G产品的厂商。海康还介绍了海康御心安全引擎的主动防御能力并宣布连续十年支撑国家信息安全漏洞库。</p>
