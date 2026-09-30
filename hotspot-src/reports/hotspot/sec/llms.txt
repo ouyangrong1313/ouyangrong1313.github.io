@@ -32,6 +32,7 @@
 - [安防日报](https://ouyangrong.com/reports/hotspot/sec:3100/daily): 每日精编汇总
 - [安防日报存档](https://ouyangrong.com/reports/hotspot/sec:3100/daily/archive): 历史安防日报归档
 - [安防周报](https://ouyangrong.com/reports/hotspot/sec:3100/weekly): 每周综合回顾
+- [安防月报](https://ouyangrong.com/reports/hotspot/sec:3100/monthly): 每月盘点
 - [主题](https://ouyangrong.com/reports/hotspot/sec:3100/topics): 按公司、方向、内容形态聚合的主题页
 
 ## 使用说明
