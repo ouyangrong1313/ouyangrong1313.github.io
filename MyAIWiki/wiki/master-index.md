@@ -1,6 +1,8 @@
 # AI 知识库索引
 
 ## 最近更新
+- [从诺奖点赞哈尔岑的领导力，看领导者的三重关键角色](./03-productivity/HBR-China-哈尔岑领导力-远见者榜样导师.md) — 2026-10-08：领导力不是性格天赋而是当下行为选择——远见者给意义、榜样给激情与安全、导师给归属与地位，三者可用 REIP（反思→模仿→意图→实践）练成；9 节点（远见者/榜样/导师/基本需求映射/愿景流畅感/反思价值观/换位思考/REIP四步/行为决定论）；关键数字为沟通不足被批评概率是过度的 10 倍、价值观反思 15 分钟者再就业概率 2 倍；反直觉点为天赋论失效、沉默比多言更危险、赋权优于替人扛；Seetong 借鉴为月度 REIP 四问、坏消息四段式沟通、周会主持权轮值；强关联 [[03-productivity/快刀青衣-OpenAI高管教练四层能力]]、[[03-productivity/陈春花-AI时代管理者影响力]]、[[03-productivity/HBR-China-为什么越来越多顶级领导者开始认真学哲学]]；分类 03-productivity（领导者能力/管理方法论，嵌入现有“领导者判断与团队协作”主线）；全部研究数字为文章转述未回溯论文原件。
+- [领导者的三重关键角色 - 速读](./03-productivity/HBR-China-哈尔岑领导力-远见者榜样导师-digest.md) — 三角色速查表、三个反直觉点与 Seetong 团队借鉴速读。
 - [HowToLiveBetter：给人生补一份 README](./03-productivity/菜鸟教程-HowToLiveBetter-人生补一份README.md) — 2026-09-30：把健康、租房、维权这类“吃亏才补课”的常识做成按性价比排序、遇事可查的清单；仓库 star 数与条数为文章转述。
 - [给人生补一份 README - 速读](./03-productivity/菜鸟教程-HowToLiveBetter-人生补一份README-digest.md) — “遇事入口”、性价比排序与 Seetong 团队 README 借鉴速查。
 - [GitHub 上的 golive-skill：把「网站上线一条龙」做成带审批的 Agent 流程](./02-ai-coding/Github上又一个神级skill-网站上线一条龙.md) — 2026-09-30
