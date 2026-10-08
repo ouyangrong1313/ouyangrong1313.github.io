@@ -4,16 +4,16 @@
     "title": "安防热点 Public API",
     "version": "2.0.0",
     "description": "Anonymous, read-only API for clients and Agents. No API key is required.\n\nPicking an endpoint: show recent or today's items -> /api/v1/items. Show what is trending right now -> /api/v1/hot-topics. Show the daily digest -> /api/v1/dailies/latest. Keep a complete local copy of the selected set -> /api/v1/selected/snapshot once, then /api/v1/selected/changes forever.\n\nHow often to poll: use each response's Cache-Control s-maxage as the minimum interval, and always send If-None-Match: an unchanged resource answers 304 with an empty body. On 429 or 503, honour Retry-After. There is no push channel (no SSE, webhooks or streaming): poll on an interval.\n\nTitles and summaries are generated from third-party sources; the original is always linked in links.original.",
-    "termsOfService": "http://localhost:3100/terms"
+    "termsOfService": "https://ouyangrong.com/reports/hotspot/sec/terms"
   },
   "servers": [
     {
-      "url": "http://localhost:3100"
+      "url": "https://ouyangrong.com/reports/hotspot/sec"
     }
   ],
   "externalDocs": {
     "description": "Machine-readable OpenAPI document",
-    "url": "http://localhost:3100/openapi-v1.json"
+    "url": "https://ouyangrong.com/reports/hotspot/sec/openapi-v1.json"
   },
   "paths": {
     "/api/v1/items": {

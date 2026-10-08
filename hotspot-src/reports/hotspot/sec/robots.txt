@@ -6,4 +6,4 @@ Disallow: /admin/
 Disallow: /starred
 Disallow: /feedback
 
-Sitemap: https://ouyangrong.com/reports/hotspot/sec:3100/sitemap.xml
+Sitemap: https://ouyangrong.com/reports/hotspot/sec/sitemap.xml
