@@ -42,17 +42,6 @@
       <author>noreply@ouyangrong.com (视美泰企业动态)</author>
     </item>
     <item>
-      <title><![CDATA[海康威视首批通过网络安全标识三星级备案，亮相2026国家网络安全宣传周]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec/items/i313ssh7cwxhl8e8zxu39t57q</link>
-      <description><![CDATA[<p>海康威视作为首批通过网络安全标识三星级（领先级）备案的企业，在2026国家网络安全宣传周上展示其安全方案。备案依据《消费类网联摄像头安全要求》，本次备案共两款4G球机，是唯一备案4G产品的厂商。海康还介绍了海康御心安全引擎的主动防御能力并宣布连续十年支撑国家信息安全漏洞库。</p>
-<p>🔗 <a href="https://www.asmag.com.cn/news/202609/115342.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/i313ssh7cwxhl8e8zxu39t57q">https://ouyangrong.com/reports/hotspot/sec/items/i313ssh7cwxhl8e8zxu39t57q</a></p>]]></description>
-      <category>标准</category>
-      <pubDate>Tue, 29 Sep 2026 11:14:49 GMT</pubDate>
-      <guid isPermaLink="false">i313ssh7cwxhl8e8zxu39t57q</guid>
-      <author>noreply@ouyangrong.com (a&amp;s 安防知识网资讯)</author>
-    </item>
-    <item>
       <title><![CDATA[Veepai小鹰维拍发布端侧AI多模态模组系列，最低15元起]]></title>
       <link>https://ouyangrong.com/reports/hotspot/sec/items/ohvhb8ggea30mz2735jyniyun</link>
       <description><![CDATA[<p>Veepai小鹰维拍发布端侧AI多模态模组系列，包含小mini、小黄人板级、枪摇/枪球专用模组，覆盖100万至200万像素，最低15元起，同步开放100万片预售。模组内置端侧AI识别与夜视3D降噪，预制集成Sensor、图像调优与AI算法，可降低厂商开发门槛，适配迷你机、云台机、枪摇机等家用IPC形态。</p>
@@ -73,6 +62,17 @@
       <pubDate>Tue, 29 Sep 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">c2jqdd84vfsqsut1omjlaymgv</guid>
       <author>noreply@ouyangrong.com (视美泰企业动态)</author>
+    </item>
+    <item>
+      <title><![CDATA[海康威视首批通过网络安全标识三星级备案，亮相2026国家网络安全宣传周]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/items/i313ssh7cwxhl8e8zxu39t57q</link>
+      <description><![CDATA[<p>海康威视作为首批企业通过网络安全标识三星级（领先级）备案，亮相第13届国家网络安全宣传周，申报的2个备案单元均为前端4G球机，在此次标识备案中也是唯一备案4G产品的厂商。该标识由国家网信办、工信部、公安部联合发起，依据《网络安全标识 消费类网联摄像头安全要求》开展测试认证，三星级为目前最高等级。海康威视深度参与了《消费类网联摄像头安全要求》的制定。</p>
+<p>🔗 <a href="https://www.asmag.com.cn/news/202609/115342.html">阅读原文</a></p>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/i313ssh7cwxhl8e8zxu39t57q">https://ouyangrong.com/reports/hotspot/sec/items/i313ssh7cwxhl8e8zxu39t57q</a></p>]]></description>
+      <category>标准</category>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="false">i313ssh7cwxhl8e8zxu39t57q</guid>
+      <author>noreply@ouyangrong.com (a&amp;s 安防知识网资讯)</author>
     </item>
     <item>
       <title><![CDATA[HID推出全新Signo Décor读卡器，兼顾门禁安全与设计美学]]></title>
@@ -168,7 +168,7 @@
       <description><![CDATA[<p>安讯士与思科合作，通过Axis Cloud Connect将支持的Axis设备集成到Cisco Meraki Dashboard，使IT与安防团队可在单一界面统一监测设备健康、固件和连接性，提高多站点运维效率。高级版还提供历史视频访问和30天云存储。</p>
 <p>🔗 <a href="https://newsroom.axis.com/blog/axis-cisco-collaboration">阅读原文</a></p>
 <p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/b3p3phtozu484rwsv14t936si">https://ouyangrong.com/reports/hotspot/sec/items/b3p3phtozu484rwsv14t936si</a></p>]]></description>
-      <category>行业</category>
+      <category>行业动态</category>
       <pubDate>Wed, 09 Sep 2026 07:00:00 GMT</pubDate>
       <guid isPermaLink="false">b3p3phtozu484rwsv14t936si</guid>
       <author>noreply@ouyangrong.com (安讯士 Axis 新闻中心)</author>
@@ -256,7 +256,7 @@
       <description><![CDATA[<p>涂鸦智能发布2026年Q2及H1财报，上半年总营收1.738亿美元，同比增长12.3%；第二季度营收9290万美元，同比增长16.0%，净利润率20.1%。公司持续推进AI能力产品化落地，上线端到端物理AI生成系统Tuya Cobuilder，AI开发者平台注册数超209万。</p>
 <p>🔗 <a href="https://www.tuya.com/cn/news-details/Kfw78hyi7htuk">阅读原文</a></p>
 <p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/ia14xbm4ye1vesyrnrp2toxfx">https://ouyangrong.com/reports/hotspot/sec/items/ia14xbm4ye1vesyrnrp2toxfx</a></p>]]></description>
-      <category>行业</category>
+      <category>行业动态</category>
       <pubDate>Tue, 25 Aug 2026 01:00:00 GMT</pubDate>
       <guid isPermaLink="false">ia14xbm4ye1vesyrnrp2toxfx</guid>
       <author>noreply@ouyangrong.com (涂鸦智能新闻)</author>
@@ -278,7 +278,7 @@
       <description><![CDATA[<p>安联锐视（Ansjer）于2026年5月28日至6月4日先后参加越南IEAE电子展和墨西哥EXPO SEGURIDAD，展出免钻孔窗口相机、黑光全彩夜视相机、4K超高清IP摄像机。</p>
 <p>🔗 <a href="https://www.ansjer.com/ansjer-security-exhibitions-recap/">阅读原文</a></p>
 <p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/ksmqcdtlqq2l9gjfdiofnp30e">https://ouyangrong.com/reports/hotspot/sec/items/ksmqcdtlqq2l9gjfdiofnp30e</a></p>]]></description>
-      <category>行业</category>
+      <category>行业动态</category>
       <pubDate>Wed, 17 Jun 2026 01:48:18 GMT</pubDate>
       <guid isPermaLink="false">ksmqcdtlqq2l9gjfdiofnp30e</guid>
       <author>noreply@ouyangrong.com (安联锐视 Ansjer 官方博客)</author>
@@ -289,7 +289,7 @@
       <description><![CDATA[<p>中维世纪二十六年从山大路起步成长为全球安防50强，在济南高新区政策支持下自研音视频后处理芯片JV9800，提出普惠AI战略，构建硬件+平台+算法+云服务全栈能力。公司推出AI场景机、双目AOV太阳能电池球机等产品，在农业看护、幼儿园、食品连锁等场景落地，其中食品连锁案例每年节省成本超100万元、销量提升约10%。2024年底，人工智能创新应用产业园全面投产。</p>
 <p>🔗 <a href="http://www.jovision.com/Company/ViewContent.aspx?id=899&amp;cid=349">阅读原文</a></p>
 <p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/n4voso60clj9gy3cwko64ddjn">https://ouyangrong.com/reports/hotspot/sec/items/n4voso60clj9gy3cwko64ddjn</a></p>]]></description>
-      <category>行业</category>
+      <category>行业动态</category>
       <pubDate>Mon, 15 Jun 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">n4voso60clj9gy3cwko64ddjn</guid>
       <author>noreply@ouyangrong.com (中维世纪企业动态)</author>
@@ -344,7 +344,7 @@
       <description><![CDATA[<p>Yoosee于2026年1月17日在广州国际数码广场开设AI体验店，并举办行业交流会，聚焦珠三角外贸商圈。体验店以“安防体验实验室”为设计理念，展示AI摄像机的实时人车识别、哭声检测等功能，同时推出端侧算法与云端AI模型订阅、全球一卡通流量分成等模式，从硬件销售转向智能服务生态。</p>
 <p>🔗 <a href="https://www.gwell.cc/?news_50/321.html">阅读原文</a></p>
 <p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/elw0eubbxz12wtuq36gbwl0cq">https://ouyangrong.com/reports/hotspot/sec/items/elw0eubbxz12wtuq36gbwl0cq</a></p>]]></description>
-      <category>行业</category>
+      <category>行业动态</category>
       <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">elw0eubbxz12wtuq36gbwl0cq</guid>
       <author>noreply@ouyangrong.com (技威时代 Yoosee 企业动态)</author>
@@ -399,7 +399,7 @@
       <description><![CDATA[<p>涂鸦智能荣获2025年亚马逊云科技“年度设计合作伙伴”奖，成为其全球众多推动客户创新的优秀合作伙伴之一。涂鸦基于Amazon Bedrock等云服务（仅海外业务）构建Omni AI Foundation，双方在智能摄像解决方案中实现包裹识别、异常事件检测等高级功能。截至2025年9月30日，涂鸦AI开发者平台累计注册账号超162.2万个，覆盖全球超200个国家和地区。</p>
 <p>🔗 <a href="https://www.tuya.com/cn/news-details/Kf98m4vyil0lt">阅读原文</a></p>
 <p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/yo72d69rn5pblmb8jfdyux46a">https://ouyangrong.com/reports/hotspot/sec/items/yo72d69rn5pblmb8jfdyux46a</a></p>]]></description>
-      <category>行业</category>
+      <category>行业动态</category>
       <pubDate>Mon, 08 Dec 2025 16:00:00 GMT</pubDate>
       <guid isPermaLink="false">yo72d69rn5pblmb8jfdyux46a</guid>
       <author>noreply@ouyangrong.com (涂鸦智能新闻)</author>
@@ -410,7 +410,7 @@
       <description><![CDATA[<p>涂鸦智能近日启动“蓝牙Mesh解决方案官方合作伙伴”计划，并为十家签约年度战略合作的企业颁发证书。每家合作伙伴获发唯一且可追溯的证书编号，行业客户与渠道商可通过涂鸦官方渠道查询验证资质；官方合作伙伴将享有供应链资源、优先授权和深度技术支持等权益。</p>
 <p>🔗 <a href="https://www.tuya.com/cn/news-details/Kf5gzn050qr6u">阅读原文</a></p>
 <p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/fexfyxer6t4e18ifvije9anav">https://ouyangrong.com/reports/hotspot/sec/items/fexfyxer6t4e18ifvije9anav</a></p>]]></description>
-      <category>行业</category>
+      <category>行业动态</category>
       <pubDate>Thu, 20 Nov 2025 16:00:00 GMT</pubDate>
       <guid isPermaLink="false">fexfyxer6t4e18ifvije9anav</guid>
       <author>noreply@ouyangrong.com (涂鸦智能新闻)</author>
@@ -487,7 +487,7 @@
       <description><![CDATA[<p>TUYA 开发者大会（新加坡）8月31日开幕，涂鸦智能（NYSE: TUYA，HKEX: 2391）展示 PaaS2.0、软硬一体解决方案及 HEMS，并围绕互联、应用、AI+IoT 三大主题分享生态进展。Wi-Fi联盟、SCG、ESR、M1、智生科技、Meta 等嘉宾出席，探讨智慧能源、家庭节能与基于大模型的 IoT 应用。</p>
 <p>🔗 <a href="https://www.tuya.com/cn/news-details/Kcw7hrmtii88r">阅读原文</a></p>
 <p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/xhh9316h68ph4v5rdck0izul7">https://ouyangrong.com/reports/hotspot/sec/items/xhh9316h68ph4v5rdck0izul7</a></p>]]></description>
-      <category>行业</category>
+      <category>行业动态</category>
       <pubDate>Thu, 31 Aug 2023 12:03:29 GMT</pubDate>
       <guid isPermaLink="false">xhh9316h68ph4v5rdck0izul7</guid>
       <author>noreply@ouyangrong.com (涂鸦智能新闻)</author>
@@ -498,7 +498,7 @@
       <description><![CDATA[<p>涂鸦智能发布2023年第一季度未经审计财报，总营收为4750万美元，环比增长约5%，其中IoT PaaS营收3360万美元；整体毛利率同比增长3.1个百分点至44.3%。SaaS及其他营收850万美元，同比增长约47.2%；non-GAAP净亏损同比收窄90%至370万美元，为上市以来新低。截至2023年3月31日，涂鸦IoT开发者平台注册开发者超78.2万人。</p>
 <p>🔗 <a href="https://www.tuya.com/cn/news-details/Kcu7r0bi24y8x">阅读原文</a></p>
 <p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/ltny12bu93cbi3upsccmsx3px">https://ouyangrong.com/reports/hotspot/sec/items/ltny12bu93cbi3upsccmsx3px</a></p>]]></description>
-      <category>行业</category>
+      <category>行业动态</category>
       <pubDate>Thu, 08 Jun 2023 10:31:00 GMT</pubDate>
       <guid isPermaLink="false">ltny12bu93cbi3upsccmsx3px</guid>
       <author>noreply@ouyangrong.com (涂鸦智能新闻)</author>
@@ -509,7 +509,7 @@
       <description><![CDATA[<p>涂鸦智能与中山照明企业亮信光电自2021年起合作，依托涂鸦IoT开发平台推出筒灯、射灯、磁吸轨道灯、绚彩灯带等多款智能产品。双方还搭建品牌专属OEM App，形成入门基础版、升级标准版、豪华版等全屋智能落地方案，亮信光电已加入Powered by Tuya生态实现跨品类互联互通。</p>
 <p>🔗 <a href="https://www.tuya.com/cn/news-details/Kbr2fstdlq78f">阅读原文</a></p>
 <p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/jqj59ee9y1moveuajye7xnfjh">https://ouyangrong.com/reports/hotspot/sec/items/jqj59ee9y1moveuajye7xnfjh</a></p>]]></description>
-      <category>行业</category>
+      <category>行业动态</category>
       <pubDate>Tue, 12 Jul 2022 10:24:17 GMT</pubDate>
       <guid isPermaLink="false">jqj59ee9y1moveuajye7xnfjh</guid>
       <author>noreply@ouyangrong.com (涂鸦智能新闻)</author>
