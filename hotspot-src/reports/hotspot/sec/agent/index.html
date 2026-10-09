@@ -47,6 +47,13 @@ codex mcp add sechot --url &#x27;https://ouyangrong.com/reports/hotspot/sec/api/
     el.__t = setTimeout(function () { el.style.opacity = "0"; }, 1600);
   }
 
+  var shownNotes = {};
+  function toastOnce(key, message) {
+    if (shownNotes[key]) return;
+    shownNotes[key] = true;
+    toast(message);
+  }
+
   /* ---------- 收藏 (localStorage) ---------- */
   function readStarred() {
     try { return JSON.parse(localStorage.getItem(STORE) || "[]") || []; } catch (e) { return []; }
@@ -567,6 +574,127 @@ codex mcp add sechot --url &#x27;https://ouyangrong.com/reports/hotspot/sec/api/
     host.appendChild(box);
   }
 
+  /* ---------- section tabs (story page: 事件概览 / 报道时间线 / 热度走势) ----------
+   * The live page switches sections with React state; the mirror keeps all sections and the tablist
+   * markup but strips the bundle, so the pills do nothing. Map each pill to its <section id> and
+   * scroll to it, then keep aria-selected in sync while the reader scrolls. */
+  var SECTION_ORDER = ["overview", "reports", "heat"];
+  var SECTION_ID = { overview: "event-overview", reports: "event-reports", heat: "event-heat" };
+  var SECTION_LABEL = { overview: "事件概览", reports: "报道时间线", heat: "热度走势" };
+
+  function sectionTabKey(label) {
+    // The label carries its count ("报道时间线3"), so match by prefix, longest label first.
+    var keys = Object.keys(SECTION_LABEL).sort(function (a, b) { return SECTION_LABEL[b].length - SECTION_LABEL[a].length; });
+    for (var i = 0; i < keys.length; i++) {
+      if (label.indexOf(SECTION_LABEL[keys[i]]) === 0) return keys[i];
+    }
+    return null;
+  }
+
+  function setPillActive(track, on) {
+    $$('button[role="tab"]', track).forEach(function (b) {
+      var sel = b === on;
+      b.setAttribute("aria-selected", sel ? "true" : "false");
+      b.classList.toggle("text-ink", sel);
+      b.classList.toggle("text-ink-3", !sel);
+      b.classList.toggle("hover:text-ink", !sel);
+      var old = $("span.absolute.inset-0", b);
+      if (sel && !old) {
+        var thumb = document.createElement("span");
+        thumb.className = "absolute inset-0 rounded-full bg-surface shadow-[var(--shadow-thumb)] ring-1 ring-line dark:bg-raised";
+        b.appendChild(thumb);
+        b.insertBefore(thumb, b.firstChild);
+      } else if (!sel && old) {
+        old.parentNode.removeChild(old);
+      }
+    });
+  }
+
+  function attachSectionTabs() {
+    var track = $('[aria-label="事件内容导航"]');
+    if (!track) return;
+    var ids = [];
+    SECTION_ORDER.forEach(function (k) {
+      if (document.getElementById(SECTION_ID[k])) ids.push(SECTION_ID[k]);
+    });
+    $$('button[role="tab"]', track).forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var key = sectionTabKey(txt(btn));
+        var el = key && document.getElementById(SECTION_ID[key]);
+        if (!el) return;
+        el.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
+        if (history.replaceState) history.replaceState(history.state, "", "#" + SECTION_ID[key]);
+        setPillActive(track, btn);
+      });
+    });
+    if (!ids.length) return;
+    var onScroll = function () {
+      var cur = ids[0];
+      ids.forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= 96) cur = id;
+      });
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) cur = ids[ids.length - 1];
+      var key = Object.keys(SECTION_ID).filter(function (k) { return SECTION_ID[k] === cur; })[0];
+      if (!key) return;
+      var btn = null;
+      $$('button[role="tab"]', track).forEach(function (b) { if (sectionTabKey(txt(b)) === key) btn = b; });
+      if (btn && btn.getAttribute("aria-selected") !== "true") setPillActive(track, btn);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  /* ---------- report filter tabs (全部报道 / 官方一手 / 精选报道) ----------
+   * Filtering runs on React state live; the mirror keeps every row. Mark each row from what it
+   * already shows (the 官方 badge, the 精选 star) and show/hide it. Rows whose mark the mirror cannot
+   * see stay visible, so a real match is never hidden. */
+  function timelineRowMarked(li, kind) {
+    // The mark is a small pill whose *text* is 精选 / 官方一手, not a class name. Match on the text
+    // of any badge-like child, then fall back to the row text so a real match is never hidden.
+    var pills = $$('span, div', li);
+    for (var i = 0; i < pills.length; i++) {
+      var label = txt(pills[i]);
+      if (label !== "精选" && label !== "官方一手" && label !== "官方") continue;
+      var cls = pills[i].className || "";
+      if (kind === "精选" && label === "精选") return true;
+      if (kind === "官方" && label.indexOf("官方") === 0) return true;
+    }
+    if (kind === "精选" && /\b精选\b/.test(txt(li))) return true;
+    if (kind === "官方" && /官方一手/.test(txt(li))) return true;
+    return false;
+  }
+
+  function attachFilterTabs() {
+    var track = $('[aria-label="报道筛选"]');
+    if (!track) return;
+    var panel = document.getElementById("event-reports");
+    if (!panel) return;
+    var list = $("ol", panel) || $("ul", panel);
+    if (!list) return;
+    var rows = $$("li", list);
+    var FILTER_LABEL = { "全部报道": "all", "官方一手": "official", "精选报道": "selected" };
+    $$('button[role="tab"]', track).forEach(function (btn) {
+      var key = null;
+      Object.keys(FILTER_LABEL).forEach(function (label) {
+        if (txt(btn).indexOf(label) === 0) key = label;
+      });
+      if (!key) return;
+      var kind = FILTER_LABEL[key];
+      btn.addEventListener("click", function () {
+        // 精选报道 is the only filter the mirror can verify: the row carries a 精选 badge. The
+        // 官方一手 mark is firstParty data with no badge in the HTML, so hiding non-matching rows
+        // would hide real matches; fall back to showing every row and note the limitation once.
+        rows.forEach(function (li) {
+          if (kind === "selected") li.style.display = timelineRowMarked(li, "精选") ? "" : "none";
+          else li.style.display = "";
+        });
+        if (kind === "official" && rows.length) toastOnce("mh-filt-note", "静态镜像无法识别「官方一手」标记，已显示全部报道");
+        setPillActive(track, btn);
+      });
+    });
+  }
+
   function boot() {
     fixMisc();
     attachBack();
@@ -576,6 +704,8 @@ codex mcp add sechot --url &#x27;https://ouyangrong.com/reports/hotspot/sec/api/
     attachSearch();
     attachFeedback();
     attachTheme();
+    attachSectionTabs();
+    attachFilterTabs();
     renderStarredPage();
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", boot);
