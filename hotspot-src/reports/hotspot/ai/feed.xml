@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[数学家称需数年消化 OpenAI 近 400 项 AI 生成数学成果]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/skt0z2mj6lzgvozqp5xyc4qoo</link>
+      <description><![CDATA[<p>OpenAI 本周一次性发布近 400 项 AI 生成的数学成果，分布在 700 多份手稿中，覆盖组合数学、几何、数论、拓扑、概率等多个方向。有数学家表示仅看完约 40 页的目录与摘要就花了近一小时，OpenAI 称 719 份手稿中只有 300 项核心结果做了 Lean 形式化，并已因符号错误撤回三篇论文。</p>
+<p>🔗 <a href="https://www.theverge.com/ai-artificial-intelligence/1008726/openai-mathematics-solutions-chaos">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/skt0z2mj6lzgvozqp5xyc4qoo">https://ouyangrong.com/reports/hotspot/ai/items/skt0z2mj6lzgvozqp5xyc4qoo</a></p>]]></description>
+      <category>论文</category>
+      <pubDate>Fri, 09 Oct 2026 19:09:44 GMT</pubDate>
+      <guid isPermaLink="false">skt0z2mj6lzgvozqp5xyc4qoo</guid>
+      <author>noreply@ouyangrong.com (The Verge · AI)</author>
+    </item>
+    <item>
       <title><![CDATA[部分数学家呼吁抵制 OpenAI，AI 生成证明大量涌入数学界]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/r41vu1ux1k90i7lo80btb3bmr</link>
       <description><![CDATA[<p>数学家组织 AHM 发表声明呼吁抵制 OpenAI，理由是 OpenAI 一次性放出 700 多份 AI 生成的数学证明，并称这不是学术展示而是权力展示。该声明由担任主席的菲尔兹奖得主 Terence Tao 在其博客转发，Scott Aaronson 则把这一局面称为 Mathocalypse。</p>
@@ -546,17 +557,6 @@
       <pubDate>Tue, 22 Sep 2026 17:28:01 GMT</pubDate>
       <guid isPermaLink="false">h7qwhlvwp9iyvjc8wo6ywm5pm</guid>
       <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
-    </item>
-    <item>
-      <title><![CDATA[GitHub 使用 Copilot 将 Copilot 智能体运行时迁移到 Rust]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/wjxxhp1ax1lnsdfq3bfcnbiy2</link>
-      <description><![CDATA[<p>GitHub 已将支撑 GitHub Copilot CLI、GitHub Copilot app 和 GitHub Copilot SDK 的 Copilot 智能体运行时从 TypeScript/Node.js 重写为超过 800,000 行生产 Rust。</p>
-<p>🔗 <a href="https://github.blog/ai-and-ml/generative-ai/migrating-the-github-copilot-runtime-to-rust-using-copilot/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/wjxxhp1ax1lnsdfq3bfcnbiy2">https://ouyangrong.com/reports/hotspot/ai/items/wjxxhp1ax1lnsdfq3bfcnbiy2</a></p>]]></description>
-      <category>教程</category>
-      <pubDate>Thu, 17 Sep 2026 00:26:43 GMT</pubDate>
-      <guid isPermaLink="false">wjxxhp1ax1lnsdfq3bfcnbiy2</guid>
-      <author>noreply@ouyangrong.com (GitHub Blog · AI &amp; ML)</author>
     </item>
   </channel>
 </rss>
