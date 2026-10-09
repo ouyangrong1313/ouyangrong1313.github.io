@@ -419,6 +419,16 @@
 
 ---
 
+## 2026-10-09
+### ingest | 费曼学习法2.0：学会的标准是什么？
+- 来源：https://mp.weixin.qq.com/s/K4GbYx0yNgA35A5iz0-X-g
+- 原文：raw/系统思考-费曼学习法2.0-从复述到生成.md
+- 拆解：raw/系统思考-费曼学习法2.0-从复述到生成-digest.md
+- wiki：wiki/03-productivity/系统思考-费曼学习法2.0-从复述到生成.md
+- 标签： #主题/效率 #主题/学习方法 #主题/学习科学 #主题/AI学习 #主题/深度思考 #场景/公众号长文
+- 说明：已人工复核并重写 digest 与 wiki（一句话结论 / 8 节点 / 4 内链 / status: published）；来源为方法论观点文章，"费曼学习法2.0 / 艾普学习法 / 模型学习法"均为作者自创命名，无对照证据
+
+
 ## 2026-09-30
 ### ingest | GitHub 上的 golive-skill：把「网站上线一条龙」做成带审批的 Agent 流程
 - 来源：https://mp.weixin.qq.com/s/snz6fkTaHa6qxuKVUz6G5g
