@@ -108,14 +108,29 @@ def fetch(url: str, timeout: int = 60) -> bytes:
 
 def rewrite_text(text: str, base: str, public_base: str, source: str) -> str:
     text = text.replace('"basename":"/"', f'"basename":"{base}"')
+    # Replace any local origin (host with or without its port, in every spelling the site may emit)
+    # with the public base. The site renders og:url/canonical from its own request host, so a mirror
+    # fetched over 127.0.0.1:3000 must have *both* "127.0.0.1:3000" and "localhost:3000" rewritten;
+    # replacing the bare source string alone left the port behind (…/hotspot/ai:3000/).
+    source_rest = source.split("://", 1)[-1]
+    source_host = source_rest.split("/", 1)[0]
+    source_port = source_host.rsplit(":", 1)[1] if ":" in source_host else ""
+    origins = {source_rest, source_url_normalized(source)}
     for host in LOCAL_HOSTS:
+        if source_port:
+            origins.add(f"{host}:{source_port}")
+        origins.add(host)
+    for origin in sorted(origins, key=len, reverse=True):
         for scheme in ("http", "https"):
-            text = text.replace(f"{scheme}://{host}:{source}", public_base)
-            text = text.replace(f"{scheme}://{host}", public_base)
-    text = text.replace(source, public_base)
+            text = text.replace(f"{scheme}://{origin}", public_base)
     for quote in ('"', "'", "`", "("):
         text = text.replace(f"{quote}/assets/", f"{quote}{base}/assets/")
     return text
+
+
+def source_url_normalized(source: str) -> str:
+    """The source origin with its scheme stripped, for origin-set matching."""
+    return source.split("://", 1)[-1].rstrip("/")
 
 
 def rewrite_html(text: str, base: str, public_base: str, source: str, filters: set[str] | None = None) -> str:
@@ -286,7 +301,7 @@ def copy_root_files(source, out, base, public_base) -> int:
             continue
         dest = os.path.join(out, path.lstrip("/"))
         os.makedirs(os.path.dirname(dest), exist_ok=True)
-        if path.endswith((".xml", ".txt", ".webmanifest")):
+        if path.endswith((".xml", ".txt", ".webmanifest", ".json")):
             blob = rewrite_text(blob.decode("utf-8", "replace"), base, public_base, source).encode("utf-8")
         with open(dest, "wb") as fh:
             fh.write(blob)
@@ -458,9 +473,6 @@ def write_share_posters(source, out, base, item_ids: list[str]) -> int:
     copied = 0
     for iid in item_ids:
         dest = os.path.join(dest_dir, iid + ".png")
-        if os.path.exists(dest) and os.path.getsize(dest) > 1000:
-            copied += 1
-            continue
         try:
             blob = fetch(f"{source}/og/posters/{iid}.png")
         except SystemExit:

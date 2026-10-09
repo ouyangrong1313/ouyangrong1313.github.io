@@ -27,6 +27,11 @@ TOOLS = Path(__file__).resolve().parent
 # Hashed in too, so shipping a fix to either one is never mistaken for "nothing changed".
 BUILDER_FILES = ("build-hotspot-mirror.py", "hotspot-mirror-interactive.js")
 
+# Rendered media (share posters, OG cards) carry the site's host and other reader-visible text.
+# A config change that only repaints these images (e.g. SITE_URL) would otherwise look like
+# "nothing changed" and be rolled back, so their content is hashed in too.
+MEDIA_DIRS = ("og/posters", "og/items", "og/reports")
+
 
 def main() -> int:
     root = Path(sys.argv[1] if len(sys.argv) > 1 else "hotspot-src")
@@ -46,6 +51,16 @@ def main() -> int:
         if m:
             digest.update(m.group(1).strip().encode())
         digest.update(b"\0")
+    for media_dir in MEDIA_DIRS:
+        base = root / media_dir
+        if not base.is_dir():
+            continue
+        for path in sorted(p for p in base.rglob("*") if p.is_file()):
+            rel = str(path.relative_to(root))
+            digest.update(rel.encode())
+            digest.update(b"\0")
+            digest.update(hashlib.sha256(path.read_bytes()).hexdigest().encode())
+            digest.update(b"\0")
     print(digest.hexdigest())
     return 0
 
