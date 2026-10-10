@@ -419,6 +419,16 @@
 
 ---
 
+## 2026-10-10
+### ingest | 别只盯着 AI Coding，真正的变化发生在整个研发流程
+- 来源：https://mp.weixin.qq.com/s/s_AmjWIB57b7fQY_3VNkoQ
+- 原文：raw/别只盯着AICoding-真正的变化发生在整个研发流程.md
+- 拆解：raw/别只盯着AICoding-真正的变化发生在整个研发流程-digest.md
+- wiki：wiki/02-ai-coding/别只盯着AICoding-真正的变化发生在整个研发流程.md
+- 标签： #主题/AI-Coding #主题/AI-Agent #主题/研发效能 #主题/知识管理 #场景/公众号长文
+- 说明：已精修发布；10 个知识节点、两道质量门与三档审查标准已提炼，原文自述数据的前后矛盾（254/172/68%/547 对 170/66%/491）与跨来源二手数据均在「证据边界」中标注
+
+
 ## 2026-10-09
 ### ingest | 费曼学习法2.0：学会的标准是什么？
 - 来源：https://mp.weixin.qq.com/s/K4GbYx0yNgA35A5iz0-X-g
