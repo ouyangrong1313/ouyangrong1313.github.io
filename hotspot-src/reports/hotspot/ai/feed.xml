@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[OpenAI 批量发布 700 多篇数学手稿，数学家反应震惊与厌恶]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/vfydp3iptz59temutphlqw4n3</link>
+      <description><![CDATA[<p>OpenAI 在 10 月 6 日一次性发布 700 多篇手稿，声称解决了数百个未解数学问题，数学博客 Proofs and Prompts 随后汇总了 100 多位研究者的回应。</p>
+<p>🔗 <a href="https://the-decoder.com/how-much-beauty-have-we-lost-mathematicians-react-with-shock-and-disgust-as-openai-bulldozes-their-field/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/vfydp3iptz59temutphlqw4n3">https://ouyangrong.com/reports/hotspot/ai/items/vfydp3iptz59temutphlqw4n3</a></p>]]></description>
+      <category>观点</category>
+      <pubDate>Sat, 10 Oct 2026 13:03:59 GMT</pubDate>
+      <guid isPermaLink="false">vfydp3iptz59temutphlqw4n3</guid>
+      <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
       <title><![CDATA[数学家称需数年消化 OpenAI 近 400 项 AI 生成数学成果]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/skt0z2mj6lzgvozqp5xyc4qoo</link>
       <description><![CDATA[<p>OpenAI 本周一次性发布近 400 项 AI 生成的数学成果，分布在 700 多份手稿中，覆盖组合数学、几何、数论、拓扑、概率等多个方向。有数学家表示仅看完约 40 页的目录与摘要就花了近一小时，OpenAI 称 719 份手稿中只有 300 项核心结果做了 Lean 形式化，并已因符号错误撤回三篇论文。</p>
@@ -546,17 +557,6 @@
       <pubDate>Tue, 22 Sep 2026 18:00:00 GMT</pubDate>
       <guid isPermaLink="false">pkg6z73o7bjochs6652x90emo</guid>
       <author>noreply@ouyangrong.com (OpenAI News)</author>
-    </item>
-    <item>
-      <title><![CDATA[Claude Opus 5.5 现已在 AWS 上线]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/h7qwhlvwp9iyvjc8wo6ywm5pm</link>
-      <description><![CDATA[<p>Claude Opus 5.5 已在 Amazon Bedrock 和 Claude Platform on AWS 上线，是 Claude 5.5 模型家族首个模型。</p>
-<p>🔗 <a href="https://aws.amazon.com/blogs/machine-learning/claude-opus-5-5-is-now-available-on-aws/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/h7qwhlvwp9iyvjc8wo6ywm5pm">https://ouyangrong.com/reports/hotspot/ai/items/h7qwhlvwp9iyvjc8wo6ywm5pm</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Tue, 22 Sep 2026 17:28:01 GMT</pubDate>
-      <guid isPermaLink="false">h7qwhlvwp9iyvjc8wo6ywm5pm</guid>
-      <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
     </item>
   </channel>
 </rss>
