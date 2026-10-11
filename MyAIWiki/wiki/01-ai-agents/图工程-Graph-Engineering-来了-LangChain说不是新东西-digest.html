@@ -1,0 +1,82 @@
+<h1 id="图工程graph-engineering来了langchain说不是新东西速读摘要">图工程（Graph Engineering）来了？LangChain说不是新东西（速读摘要）</h1>
+
+<blockquote>
+  <p><strong>一句话</strong>：Graph Engineering 不是新物种，而是按真实数据依赖重画 Agent 拓扑：边只在真正读到上游输出时才存在；图适合可预画路径，Harness 适合开放探索。</p>
+</blockquote>
+
+<h2 id="8-节点速查表">8 节点速查表</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>节点</th>
+      <th>一句话定义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>线性Agent是退化图</td>
+      <td>不读上游输出的串行链路，本质是在浪费等待时间</td>
+    </tr>
+    <tr>
+      <td>节点契约</td>
+      <td>节点必须有明确输入、输出和单一职责</td>
+    </tr>
+    <tr>
+      <td>数据契约边</td>
+      <td>边表示数据依赖，而不是“第几步”</td>
+    </tr>
+    <tr>
+      <td>钻石拓扑</td>
+      <td>fan-out → reduce → synthesize 是并行骨架</td>
+    </tr>
+    <tr>
+      <td>验证器节点</td>
+      <td>结果进入下游前先过对抗验证或多视角审查</td>
+    </tr>
+    <tr>
+      <td>有环图</td>
+      <td>生产 Agent 要支持重试、补问、回修和恢复</td>
+    </tr>
+    <tr>
+      <td>动态Send</td>
+      <td>运行时才知道工作规模时，必须动态生成分支</td>
+    </tr>
+    <tr>
+      <td>图-vs-Harness</td>
+      <td>可预画路径用图；路径需探索用 Harness</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="3-个关键模式">3 个关键模式</h2>
+
+<ul>
+  <li><strong>钻石拓扑</strong>：先拆任务，再并行执行，最后合并结论，适合研究、审查、迁移等场景。</li>
+  <li><strong>验证器节点</strong>：把 reviewer / critic / judge 做成显式节点，比最后统一返工更稳。</li>
+  <li><strong>动态Send</strong>：当输入规模或任务数运行时才确定时，不要把边提前画死。</li>
+</ul>
+
+<h2 id="3-个反直觉点">3 个反直觉点</h2>
+
+<ol>
+  <li><strong>生产图通常不是 DAG</strong>：重试、追问和恢复都要求环。</li>
+  <li><strong>Loop 不是图的对立面</strong>：一个循环本身就是一个有向有环图。</li>
+  <li><strong>路由尽量代码化</strong>：模型负责判断，控制流尽量交给代码保证确定性。</li>
+</ol>
+
+<h2 id="5-个对-seetong--myaiwiki-可借鉴动作">5 个对 Seetong / MyAIWiki 可借鉴动作</h2>
+
+<ol>
+  <li><strong>并行前先问一句</strong>：下游是否真的读取上游输出？</li>
+  <li><strong>子 Agent 返回统一结构</strong>：优先 schema，不要默认自由文本。</li>
+  <li><strong>把验证器做成节点</strong>：review / critic / judge 独立复用。</li>
+  <li><strong>未知规模任务设停止条件</strong>：例如连续 K 轮没有新发现就停。</li>
+  <li><strong>开放探索任务别强上静态 DAG</strong>：深度研究、排障和搜索优先走 Harness。</li>
+</ol>
+
+<h2 id="关联--备注">关联 + 备注</h2>
+
+<p><strong>关联</strong>：[[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]] / [[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] / [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] / [[02-ai-coding/Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] / [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]</p>
+
+<p><strong>备注</strong>：本文最强的部分不是“Graph Engineering”这个名词，而是那句很能落地的判定句：<strong>只有下一步真的读取上一步输出时，边才成立。</strong></p>

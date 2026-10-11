@@ -1,0 +1,95 @@
+<h1 id="从零开始玩转循环-getting-started-with-loops译">从零开始玩转循环 (Getting started with loops)【译】</h1>
+
+<ul>
+  <li>原文链接：https://mp.weixin.qq.com/s/lG4WU5sSykOVu4XMHtWq1g</li>
+  <li>原始来源：https://x.com/ClaudeDevs/status/2074208949205881033</li>
+  <li>来源：微信公众号 / 宝玉AI</li>
+  <li>发布日期：2026-07-07 12:26</li>
+  <li>编译时间：2026-07-08</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论（一句话）</h2>
+
+<p>Loop 不是“多问几轮 AI”，而是先定义触发器、停止条件、验证方式和成本边界，再按任务强度从 turn-based、<code class="language-plaintext highlighter-rouge">/goal</code>、<code class="language-plaintext highlighter-rouge">/loop</code> / <code class="language-plaintext highlighter-rouge">/schedule</code> 到 proactive 逐级升级。</p>
+
+<h2 id="分类提炼">分类提炼</h2>
+
+<ul>
+  <li>场景：Claude Code / Loop 工程 / 工作流设计 / 公众号长文</li>
+  <li>标签： #主题/AI-Coding #主题/Claude-Code #主题/Loop #主题/工作流设计 #主题/验证 #场景/公众号长文</li>
+  <li>类型：Claude Code loop 入门分类法 / 官方工作流心法翻译稿</li>
+</ul>
+
+<h2 id="知识节点5-10-个独立概念">知识节点（5-10 个独立概念）</h2>
+
+<ul>
+  <li><strong>回合制循环</strong>：每条 prompt 本质上都在触发一个 loop，适合短任务与探索性问题，核心是把人工检查尽量前移进 verifier。</li>
+  <li><strong>目标导向循环</strong>：<code class="language-plaintext highlighter-rouge">/goal</code> 的价值不在“多跑几轮”，而在于把完成定义外显，避免模型凭感觉过早收工。</li>
+  <li><strong>时间基循环</strong>：<code class="language-plaintext highlighter-rouge">/loop</code> 适合本地按时间轮询，<code class="language-plaintext highlighter-rouge">/schedule</code> 适合云端长期例行程序，关键在任务是否会持续接收外部输入。</li>
+  <li><strong>主动式循环</strong>：当 <code class="language-plaintext highlighter-rouge">schedule + goal + skills + dynamic workflows + auto mode</code> 被组合起来，AI 才像一个持续上班的岗位，而不是一次性对话。</li>
+  <li><strong>停止条件</strong>：没有 stop condition 的 loop 会退化成乐观的 while 循环，成本和漂移都会失控。</li>
+  <li><strong>验证技能</strong>：把人工验收步骤写进 <code class="language-plaintext highlighter-rouge">SKILL.md</code>，让 Claude 能看页面、点按钮、查控制台、跑性能指标，才算真正的闭环。</li>
+  <li><strong>触发器设计</strong>：事件触发通常优于盲目定时轮询，因为它更贴近外部世界的变化频率，也更省 token。</li>
+  <li><strong>Token边界</strong>：小任务用小模型、确定性工作用脚本、高频任务先试水再扩容，这是 loop 成本治理的基本盘。</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+
+<ul>
+  <li>[[02-ai-coding/Addy-Osmani-Loop-Engineering]]：给出了 Loop Engineering 的 5+1 积木总框架，本文把它落成 Claude Code 视角下的 4 类 loop 分类法。</li>
+  <li>[[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]]：Boris / Cat 把“我不写 prompt，我写 loop”讲成产品心智，本文提供的是可执行的分类入口。</li>
+  <li>[[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]]：同一主线下的作者视角补充，解释为什么 loop 会替代单轮 prompt 成为新默认。</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+
+<ul>
+  <li>[[02-ai-coding/Claude-Code-主动式Agent-Routines]]：把本文的 time-based / proactive loop 继续产品化为 Routines。</li>
+  <li>[[02-ai-coding/claude-code-dynamic-workflows]]：说明 proactive loop 里多 agent 编排、并行 worktree 和 reviewer judge 是怎么落地的。</li>
+  <li>[[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]]：把本文的 trigger / stop / verifier 思路扩展成中文工程实践中的任务卡、准入表和 7 天试点。</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+
+<ul>
+  <li>[[02-ai-coding/Agentic-Engineering-AI-Workbench]]：从工作台 5 层结构看 loop 的上下文、执行、验证与治理控制面。</li>
+  <li>[[02-ai-coding/APPSO-Codex-Claude-Code-Loop-Engineering]]：从产业视角解释为什么 2026 年大家都开始从 prompt 迁移到 loop。</li>
+  <li>[[02-ai-coding/AI循环-Claude-GPT和Mira到底什么才是真正好用的]]：给出 loop 五步骨架与五个积木的轻量版入门表述，可与本文的 4 类分类法对照看。</li>
+</ul>
+
+<h2 id="正文要点3-7-条">正文要点（3-7 条）</h2>
+
+<ol>
+  <li>
+    <p><strong>这篇文章把“loop 是什么”讲成了一个四维选择题。</strong> 不要先问“要不要上自动化”，先问触发方式、停止条件、调用原语和任务类型是否匹配。这样 loop 不是玄学，而是控制面设计。</p>
+  </li>
+  <li>
+    <p><strong>Turn-based loop 不是低级版，而是默认版。</strong> 你每次发 prompt，本来就在做 loop。它真正的升级点不是把 prompt 写得更复杂，而是把人工验收翻译成可执行的 skill 和 verifier，让 Claude 自己把检查跑完。</p>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">/goal</code> 的核心是防止“差不多就停”。</strong> 对复杂任务，模型最常见的问题不是完全不会做，而是太早宣布完成。<code class="language-plaintext highlighter-rouge">/goal</code> 把成功标准和最大尝试次数都显式化，让 loop 在明确门槛前继续迭代。</p>
+  </li>
+  <li>
+    <p><strong><code class="language-plaintext highlighter-rouge">/loop</code> / <code class="language-plaintext highlighter-rouge">/schedule</code> 解决的是“外部世界还在变”这件事。</strong> 当任务是 PR 审查、CI 失败、Slack 汇总、用户反馈分诊这类持续流入输入的工作时，单轮对话已经不够。此时重点不是“能不能定时跑”，而是频率是否和输入变化速度一致。</p>
+  </li>
+  <li>
+    <p><strong>Proactive loop 不是单指令，而是组合系统。</strong> <code class="language-plaintext highlighter-rouge">schedule + goal + skills + dynamic workflows + auto mode</code> 一起用，才接近“长期工作岗位”的形态。其难点从来不在“让 AI 去做”，而在“让它知道何时开始、何时停、如何自证、何时升级给人”。</p>
+  </li>
+  <li>
+    <p><strong>质量和成本的边界必须前置。</strong> 干净代码库、第二个 reviewer agent、文档可达、失败教训回写规则、用脚本替代确定性推理、按任务匹配模型，这些都不是附属建议，而是 loop 能否进生产的前置条件。</p>
+  </li>
+</ol>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+  <li>[[02-ai-coding/Addy-Osmani-Loop-Engineering]]</li>
+  <li>[[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]]</li>
+  <li>[[02-ai-coding/Claude-Code-主动式Agent-Routines]]</li>
+  <li>[[02-ai-coding/claude-code-dynamic-workflows]]</li>
+  <li>[[02-ai-coding/Agentic-Engineering-AI-Workbench]]</li>
+  <li>[[02-ai-coding/Claude-Code一周年回顾-Boris-Cat]]</li>
+  <li>[[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]]</li>
+</ul>

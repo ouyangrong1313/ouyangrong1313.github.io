@@ -1,0 +1,90 @@
+<h1 id="yc-研讨会为什么-harness-比模型更重要">YC 研讨会：为什么 Harness 比模型更重要</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<p>模型提供潜在能力，Harness 通过上下文、工具、状态、恢复、验证和权限，把潜在能力变成可持续执行的生产系统；但本条目依据的是 AI 生成二次解读，案例与数字必须回到原视频核验。</p>
+
+<h2 id="5-个核心观点">5 个核心观点</h2>
+
+<ol>
+  <li><strong>Harness 是运行时而非装饰层</strong>：它管理 Agent Loop、工具调用、记忆、任务状态、沙箱、预算和结果验收。</li>
+  <li><strong>同一模型也能有巨大差异</strong>：节目以 ARC-AGI、研究 Agent 和端侧推理举例，强调系统设计可能比换模型更快带来任务收益。</li>
+  <li><strong>静态脚手架正在走向自进化</strong>：从固定 Prompt/工具表，发展到可写代码、沉淀技能、优化调度逻辑的 Harness；自修改必须受评测和安全边界约束。</li>
+  <li><strong>多 Agent 的关键是协作协议</strong>：自由自然语言群聊容易产生同步成本和 Token 浪费；强类型事件、任务 I/O、共享状态表和明确交接更可靠。</li>
+  <li><strong>生产可信度来自系统控制</strong>：持久状态、临时计算容器、最小权限、确定性检查、预算上限和人工审批，决定 Agent 能否长时间运行。</li>
+</ol>
+
+<h2 id="关键参数均为节目转写中的待核验说法">关键参数（均为节目/转写中的待核验说法）</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>说法</th>
+      <th>解读</th>
+      <th>证据状态</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ARC-AGI 约 30%→95%+</td>
+      <td>Harness、工具和搜索/验证流程可能主导基准成绩</td>
+      <td>AI 音频转述，待原视频核验</td>
+    </tr>
+    <tr>
+      <td>端侧推理最高约 800 倍降本</td>
+      <td>云端编译 Harness、本地重复执行的混合架构</td>
+      <td>AI 音频转述，依硬件/任务而变</td>
+    </tr>
+    <tr>
+      <td>YC 内部 50+ Agent / QM</td>
+      <td>企业级多 Agent 的状态中心化与反模式经验</td>
+      <td>AI 音频转述，待原视频核验</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="5-个可复用判断">5 个可复用判断</h2>
+
+<ul>
+  <li>模型变强不会自动解决状态、权限、恢复和外部副作用。</li>
+  <li>上下文不是越多越好，应按任务加载、压缩和回收。</li>
+  <li>Agent 的“已完成”必须由外部证据确认，不能采信自我声明。</li>
+  <li>多 Agent 的默认优化目标应是减少无效通信，而非增加角色数量。</li>
+  <li>真正的工程资产是任务协议、评测集、运行日志、恢复机制和领域技能。</li>
+</ul>
+
+<h2 id="5-个对-seetong--myaiwiki-的借鉴动作">5 个对 Seetong / MyAIWiki 的借鉴动作</h2>
+
+<ol>
+  <li>为每个 Agent 任务定义输入、输出、验收证据和失败状态。</li>
+  <li>将长任务状态与计算进程解耦，支持断点恢复和执行者替换。</li>
+  <li>给工具按读/写/外发/生产副作用分级，默认最小权限和人工审批。</li>
+  <li>用结构化事件和共享状态代替 Agent 间无界闲聊。</li>
+  <li>把一次任务的成功经验先写成候选 Skill，经评测后再发布为默认能力。</li>
+</ol>
+
+<h2 id="7-个分析角度与开头钩子">7 个分析角度与开头钩子</h2>
+
+<ul>
+  <li><strong>模型观</strong>：模型不是全部；强模型也会失效；先问系统缺什么。</li>
+  <li><strong>运行时</strong>：Agent 是循环；状态决定连续性；恢复比重试重要。</li>
+  <li><strong>上下文</strong>：全量注入会污染注意力；L1/L2/L3 分层；压缩是能力。</li>
+  <li><strong>多 Agent</strong>：聊天不等于协作；协议优于热闹；通信本身有成本。</li>
+  <li><strong>自进化</strong>：经验要外置；候选变更要评测；安全边界不能自改。</li>
+  <li><strong>本地化</strong>：隐私、成本、延迟共同决定部署；云端适合编译；本地适合重复执行。</li>
+  <li><strong>生产治理</strong>：模型提议、系统裁决；证据验收；高风险动作必须可接管。</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<ul>
+  <li>上游：[[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]、[[01-ai-agents/DataFunTalk-Graph-Engineering-从Harness到Ontology]]</li>
+  <li>同级：[[06-ai-tech/Agent Harness 与 OpenClaw：从工具到系统的中文解读]]、[[01-ai-agents/LilianWeng-那个把Agent讲清楚的人-又开始定义Harness]]</li>
+  <li>下游：[[01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制]]、[[02-ai-coding/Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了]]</li>
+</ul>
+
+<h2 id="证据边界">证据边界</h2>
+
+<p>本拆解来自完整 35:48 音频的 Whisper tiny 自动转写，并参考小宇宙 shownotes。节目页面明确标注音频为 AI 生成；原视频字幕未取得，专名、案例、数字和引述均不得视为已独立核验的 YC/Prime Intellect/Stanford/Y Combinator 事实。</p>
+
+<p>标签： #主题/AI-Agent #主题/Harness工程 #主题/Agent运行时 #手法/对比冲突 #场景/播客 #节点/Harness #节点/Agent-Loop #节点/Context-Engineering</p>

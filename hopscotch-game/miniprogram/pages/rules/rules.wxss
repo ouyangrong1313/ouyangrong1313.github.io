@@ -1,0 +1,157 @@
+/**
+ * 童年跳房子大挑战 - 规则页样式
+ * pages/rules/rules.wxss
+ */
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #87CEEB 0%, #B0E0E6 30%, #FFF8DC 100%);
+  padding: 30rpx;
+}
+
+/* 头部 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.btn-back {
+  background: rgba(255, 255, 255, 0.8);
+  border: 3rpx solid #FF6B6B;
+  border-radius: 30rpx;
+  padding: 15rpx 30rpx;
+  font-size: 26rpx;
+  color: #FF6B6B;
+  font-weight: bold;
+}
+
+.page-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  color: #5D4E37;
+}
+
+.placeholder {
+  width: 120rpx;
+}
+
+/* 规则卡片 */
+.rules-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 30rpx;
+  padding: 40rpx;
+  margin-top: 20rpx;
+  border: 4rpx dashed #FF6B6B;
+  box-shadow: 0 10rpx 40rpx rgba(0, 0, 0, 0.1);
+}
+
+.rule-section {
+  margin-bottom: 40rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 2rpx dashed #FFE4E1;
+}
+
+.rule-section:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.rule-icon {
+  font-size: 50rpx;
+  text-align: center;
+  margin-bottom: 15rpx;
+}
+
+.rule-title {
+  font-size: 32rpx;
+  font-weight: bold;
+  color: #FF6B6B;
+  text-align: center;
+  margin-bottom: 15rpx;
+}
+
+.rule-content {
+  font-size: 26rpx;
+  color: #5D4E37;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.score-rule {
+  display: flex;
+  flex-direction: column;
+  gap: 10rpx;
+}
+
+.rule-item {
+  display: block;
+  padding: 8rpx 0;
+}
+
+/* 跳房子演示 */
+.hopscotch-demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rpx;
+  padding: 20rpx;
+  background: #FFF8DC;
+  border-radius: 20rpx;
+  margin-top: 15rpx;
+}
+
+.demo-row {
+  display: flex;
+  gap: 10rpx;
+}
+
+.demo-row.single {
+  justify-content: center;
+}
+
+.demo-tile {
+  width: 70rpx;
+  height: 70rpx;
+  background: linear-gradient(135deg, #FFE66D 0%, #FFD93D 100%);
+  border: 4rpx solid #5D4E37;
+  border-radius: 12rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #5D4E37;
+  box-shadow: 0 4rpx 0rpx #D4A84B;
+}
+
+.tile-7 {
+  width: 100rpx;
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+  border-color: #CC5555;
+  box-shadow: 0 4rpx 0rpx #AA4444;
+}
+
+/* 小贴士 */
+.tips {
+  background: #FFFEF0;
+  border-radius: 20rpx;
+  padding: 25rpx;
+  margin-top: 20rpx;
+}
+
+/* 开始按钮 */
+.btn-start-game {
+  width: 90%;
+  margin: 40rpx auto 30rpx;
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+  color: white;
+  border: none;
+  border-radius: 50rpx;
+  padding: 25rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  box-shadow: 0 8rpx 25rpx rgba(255, 107, 107, 0.4);
+}

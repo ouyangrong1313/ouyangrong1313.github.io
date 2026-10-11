@@ -1,0 +1,119 @@
+<h1 id="一个通用的ai-agent平台应该具备哪些harness工程技术底座能力">一个通用的AI Agent平台应该具备哪些Harness工程技术底座能力</h1>
+
+<ul>
+  <li>原文链接：https://mp.weixin.qq.com/s/g9gsWggIqMqQtlU4jeBUKA</li>
+  <li>来源：微信公众号「人月聊IT」；作者：何明璐；发布时间：2026-07-29 21:29</li>
+  <li>获取时间：2026-07-30</li>
+  <li>来源说明：作者称文章基于 Abu-Cowork 源码逆向整理；本文未独立核验项目实现。</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论（一句话）</h2>
+
+<blockquote>
+  <p>Harness 的价值不在让模型“更聪明”，而在将记忆、上下文、能力接入、执行控制、安全边界和运行证据做成可替换、可恢复、可审计的 Agent 平台底座。</p>
+</blockquote>
+
+<h2 id="分类提炼">分类提炼</h2>
+
+<ul>
+  <li>场景：通用 Agent 平台、企业 Harness、跨会话与自动化运行</li>
+  <li>标签： #主题/AI-Agent #主题/Harness #主题/Agent平台 #主题/Context-Engineering #主题/MCP #主题/安全沙箱 #主题/可观测性</li>
+  <li>类型：架构能力地图 / 开源代码解读 / 平台工程清单</li>
+  <li>分类理由：本文把 Agent 平台拆成可独立建设的基础设施模块，补充本库 Agent OS 主线的运行时与控制面细节。</li>
+</ul>
+
+<h2 id="知识节点10-个独立概念">知识节点（10 个独立概念）</h2>
+
+<ul>
+  <li><strong>分层记忆</strong>：记忆按职责和生命周期分层，自动写入、相关性召回，并用 TTL 避免陈旧偏好长期污染。</li>
+  <li><strong>会话快照</strong>：消息逐条持久化，在工具完成、用户打断和错误处创建 Checkpoint，支持恢复与回放。</li>
+  <li><strong>上下文调度</strong>：Token 估算、相关性裁剪、结构化压缩和缓存共同决定上下文的成本与有效性。</li>
+  <li><strong>Skill生命周期</strong>：Skill 从创建、安装、注册、按需调用到更新和卸载都需要可见、可管理的状态。</li>
+  <li><strong>MCP运行时</strong>：MCP Client 负责传输、工具发现、按需连接、健康检查、环境隔离和权限代理。</li>
+  <li><strong>异步任务</strong>：Cron、事件和 Webhook 触发的任务要绑定工作区、输出、通知与 headless 约束。</li>
+  <li><strong>浏览器桥接</strong>：网页操作依赖浏览器与平台之间的通信桥，还需要 Cookie、文件与高风险页面控制。</li>
+  <li><strong>多Agent隔离</strong>：子 Agent 应有独立 Prompt、工具集、上下文和结构化输出，避免共享状态放大错误。</li>
+  <li><strong>安全沙箱</strong>：路径、命令、文件和网络操作应采用分级授权、默认阻断和可恢复写入。</li>
+  <li><strong>全链路追踪</strong>：一次任务以 Trace 串联模型调用、工具、压缩和错误，并关联 Token、成本与成功率。</li>
+</ul>
+
+<h2 id="平台能力如何形成闭环">平台能力如何形成闭环</h2>
+
+<p>文章的十二类能力可以收束为四个相互约束的层面：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>层面</th>
+      <th>核心能力</th>
+      <th>需要避免的误区</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>状态与上下文</td>
+      <td>记忆、会话、Checkpoint、压缩、缓存</td>
+      <td>把所有历史塞进 Prompt，或把可变偏好写成硬规则</td>
+    </tr>
+    <tr>
+      <td>能力与编排</td>
+      <td>Skills、MCP、任务调度、浏览器、Computer Use、多 Agent</td>
+      <td>把“能调用”误当“能安全完成”</td>
+    </tr>
+    <tr>
+      <td>安全与交互</td>
+      <td>工作区、权限分级、命令解析、白黑名单、Stop</td>
+      <td>让 headless 或桌面操作绕开人工边界</td>
+    </tr>
+    <tr>
+      <td>运行与改进</td>
+      <td>Trace、工具成功率、成本、用户中断、隐私</td>
+      <td>只看最终回答，无法定位行为链与副作用</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>这张能力图不是实现顺序。更稳妥的路径是先建立工作区绑定、会话持久化、权限与追踪，再接入外部工具和异步任务，最后才扩大 Computer Use 与多 Agent 的自治面。否则平台会先获得行动能力，却没有足够的状态、审计与急停能力来约束它。</p>
+
+<p>文章还将“自动记忆”与“确定性规则”分开：前者应能按相关性加载和老化，后者由用户维护、随项目版本化且不可被 Agent 自动覆盖。这与“Skill 是任务流程、MCP 是外部能力协议”的分层一起，避免把偏好、规则、流程和工具混成一个不可维护的 Prompt。</p>
+
+<h2 id="关联图谱与证据边界">关联图谱与证据边界</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+
+<ul>
+  <li>[[01-ai-agents/储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]]：提供从 Prompt 到 Agent OS 的五层演进视图；本文将其压到记忆、运行时、安全和观测等具体部件。</li>
+  <li>[[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：说明 Context、Memory、Skill、MCP、Harness 和 Loop 的产品层分工；本文补运行时实现能力。</li>
+  <li>[[01-ai-agents/lencx-Agent开发指南-技术太多-该怎么学]]：其可信完成与动作回执，为会话状态、权限与 Trace 提供交付视角。</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+
+<ul>
+  <li>[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]：可将本文的分层记忆、会话状态与规则边界，落实为读取/写入链和经验晋升门。</li>
+  <li>[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]：Trace、成功率和工具失败率可转化为可复跑的评测基线。</li>
+  <li>[[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]：本文的多 Agent 隔离、安全沙箱和外部能力管理，可作为其生产级架构部件清单。</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+
+<ul>
+  <li>[[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：偏产品和方法论解释；本文偏通用平台的工程能力目录。</li>
+  <li>[[01-ai-agents/储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]]：偏 Agent OS 的演进框架；本文偏底层运行时的拆件与边界。</li>
+</ul>
+
+<h3 id="证据边界">证据边界</h3>
+
+<ul>
+  <li>原文称基于 Abu-Cowork 源码逆向整理，但没有给出逐项文件、测试或基准；此处不将清单视为已验证的项目事实。</li>
+  <li>十二类能力是通用平台能力地图，而非每个 Agent 或团队的最小实现清单；应按风险、场景和运维能力分阶段采用。</li>
+  <li>文中列举的安全级别、TTL、浏览器实现方式等属于设计建议，实际阈值需要由产品权限模型和平台能力决定。</li>
+</ul>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+  <li><a href="https://mp.weixin.qq.com/s/g9gsWggIqMqQtlU4jeBUKA">原文</a></li>
+  <li><a href="../../raw/人月聊IT-通用AI-Agent平台-Harness技术底座-digest.md">原文摘要</a></li>
+  <li><a href="./2026-07-29-人月聊IT-通用AI-Agent平台-Harness技术底座-digest.md">速读版</a></li>
+</ul>

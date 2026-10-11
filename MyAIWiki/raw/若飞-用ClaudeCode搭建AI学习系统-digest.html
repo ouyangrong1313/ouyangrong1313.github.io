@@ -1,0 +1,126 @@
+<h1 id="如何用-claude-code-搭建自己的-ai-学习系统--digest">如何用 Claude Code 搭建自己的 AI 学习系统 — Digest</h1>
+
+<blockquote>
+  <p>微信公众号”架构师 JiaGouX”主理人若飞 2026-06-22 22:42 推送。</p>
+</blockquote>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<p><strong>AI 学习稀缺的不是答案，缺的是一个能持续暴露问题的环境。</strong> 用 Claude Code 搭”学习工作台”——4 个文件（学习契约 / 资源 / 错题集 / 测试卷）+ CLAUDE.md 长期陪练规则 + 3 周节奏（D1 契约→D2 资源→每日故障复现→W2 错题重练→W3 小项目）+ 4 个小验收（24h 闭卷复述 / 换题能做 / 错误数减少 / 真实项目落地），把”答案机”升级为”能留下能力的学习系统”。</p>
+
+<h2 id="核心观点">核心观点</h2>
+
+<ol>
+  <li><strong>答案机 vs 学习工作台</strong>：前一种反馈快，后一种更慢，但能留下能力的往往是后一种</li>
+  <li><strong>第一版不用复杂</strong>：4 个文件 + 30 分钟就能启动 = 一个很小的学习 Harness</li>
+  <li><strong>目标要先”可验收”</strong>：写学习契约再讲解；后端学 K8s 不是”看完官方文档”而是”能定位 Service 访问不通”</li>
+  <li><strong>学习环境先瘦身</strong>：资源 ≤ 5 个，明确说哪些热门资源本轮先不看</li>
+  <li><strong>答案不能提前出现</strong>：一旦答案先出，大脑进入”识别答案”模式，不是”生成答案”模式</li>
+  <li><strong>规则写进 CLAUDE.md</strong>：先提示→再追问→再检查→最后才揭示答案</li>
+  <li><strong>每轮只压成”一页学习卡 + 一条错误记录”</strong>：维护成本决定能否坚持</li>
+  <li><strong>3 周具体节奏</strong>：D1 契约 / D2 资源 / 每天一故障复现 / W2 错题重练 / W3 真实小项目</li>
+  <li><strong>4 个小验收</strong>：24h 闭卷复述 / 换题能做 / 错误数减少 / 小项目落地</li>
+  <li><strong>AI 学习系统的边界</strong>：AI 反馈 ≠ 真实反馈；目标错就更快走错；事实问题要回第一来源</li>
+</ol>
+
+<h2 id="关键参数">关键参数</h2>
+
+<ul>
+  <li>4 个文件 = 学习契约 / 资源 / 错题集 / 测试卷</li>
+  <li>学习契约 ≤ 5 个问题 = 当前水平 / 真实用途 / 可投入时间 / 目标类型 / 本轮不学</li>
+  <li>学习阶段 = 3-5 个，每个有完成标准 + 一项练习</li>
+  <li>资源数 = 3-5 个，明确说明哪些热门本轮不看</li>
+  <li>7 天学习路径 = 基于筛选资源设计</li>
+  <li>测验规则 = 一次 1 道 / 10 分制 / 答错不急进 / 结束后给薄弱点</li>
+  <li>CLAUDE.md = 5 条默认规则</li>
+  <li>学习卡 = 1 句话 + 5 概念 + 5 例子 + 3 误区 + 3 道 1 分钟速答题</li>
+  <li>错误记录 = 错误 + 原因 + 下次动作</li>
+  <li>3 周节奏 = D1 契约 / D2 资源 / D3-D7 故障复现 / W2 错题重练 / W3 小项目</li>
+  <li>4 个小验收 = 24h 闭卷 / 换题能做 / 错误数减少 / 项目落地</li>
+</ul>
+
+<h2 id="速查表3-个核心-prompt-模板">速查表：3 个核心 prompt 模板</h2>
+
+<p><strong>写学习契约</strong>（不讲解正文）：</p>
+<blockquote>
+  <p>我想学习【主题】。请先帮我建立一份学习契约，暂时不要讲解正文内容。请问我不超过 5 个问题（当前水平 / 真实用途 / 可投入时间 / 目标类型 / 本轮不学），问完后给 3-5 个学习阶段 + 完成标准 + 一项练习。</p>
+</blockquote>
+
+<p><strong>筛资料</strong>（不超 5 个）：</p>
+<blockquote>
+  <p>我要学习【主题】，目标是【真实用途】。请帮我筛选 3 到 5 个最值得投入的学习资源（权威 / 适合当前水平 / 按学习顺序 / 明确哪些本轮先不看 + 原因），基于这些资源设计 7 天学习路径。<strong>不要超过 5 个资源。</strong></p>
+</blockquote>
+
+<p><strong>出测验</strong>（不一次给答案）：</p>
+<blockquote>
+  <p>我刚学完【主题】里的【具体范围】。请你扮演严格但友善的考官。一次只问 1 道题，等我回答后再继续；10 分制评分；只讲我答错/漏掉/含糊的部分；薄弱先追问不急进；结束后给薄弱点和下一组练习。<strong>不要一次性给出答案。</strong></p>
+</blockquote>
+
+<h2 id="核心金句">核心金句</h2>
+
+<ol>
+  <li><strong>“AI 可以提高当场完成度，不等于提高了长期学习。”</strong></li>
+  <li><strong>“如果 AI 只是更快解释，它会放大’我好像懂了’的感觉。等它开始让你先答、先做、先复述，再把错误记下来，它才有点像学习系统。”</strong></li>
+  <li><strong>“看懂答案和自己答出来，中间隔着一道很深的沟。”</strong></li>
+  <li><strong>“学习失败，很多时候不是人不努力。是目标一开始就太虚。”</strong></li>
+  <li><strong>“环境不是越大越好，关键是能不能给出高质量反馈。”</strong></li>
+  <li><strong>“答案不能提前出现。”</strong></li>
+  <li><strong>“测验不只是考试感。它更像一次小型验收：这一轮到底有没有形成能力，至少要留下一个可复查的结果。”</strong></li>
+  <li><strong>“能讲出来，只说明你理解了一部分；能换题做出来，才说明能力开始长出来。”</strong></li>
+  <li><strong>“AI 反馈不等于真实反馈。”</strong></li>
+  <li><strong>“AI 学习稀缺的不是答案。更稀缺的是一个能持续暴露问题的环境。”</strong></li>
+</ol>
+
+<h2 id="反直觉点">反直觉点</h2>
+
+<ol>
+  <li><strong>理解感 ≠ 能力</strong>：第一天的清楚解释不会变成第二天的复述能力</li>
+  <li><strong>越护栏越好</strong>：无护栏 GPT-4 访问，学生当场表现好，被拿走后独立表现可能变差</li>
+  <li><strong>第一版越简单越好</strong>：4 个文件 + 30 分钟 = 学习 Harness；做重了就坚持不下来</li>
+  <li><strong>资源越多 ≠ 推进</strong>：实际可能只是不断换入口</li>
+  <li><strong>完整回答不一定是好事</strong>：默认值要调成”先提示→再追问→再检查→最后才揭示”</li>
+  <li><strong>学习卡不追求完整</strong>：只解决”5 分钟把脑子接回去”</li>
+  <li><strong>错误记录不用长</strong>：够用就行，”错误 + 原因 + 下次动作”</li>
+  <li><strong>AI 反馈 ≠ 真实反馈</strong>：能不能在项目里用出来，靠真实任务、真实约束、真实结果</li>
+  <li><strong>目标错就走错得更快</strong>：AI 会顺着你的目标走，目标错了它帮你更高效地走错</li>
+  <li><strong>Bloom 羡慕的不是”讲得细”</strong>：而是形成性测试 + 反馈 + 纠正 + 再测试能持续发生</li>
+</ol>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+<ul>
+  <li><strong>学习科学</strong>：Karpicke &amp; Roediger 检索练习研究 / Dunlosky 综述（practice testing + distributed practice 高优先级）/ Bastani 等人高中数学无护栏 AI 研究</li>
+  <li><strong>AI 产品方向</strong>：Anthropic Claude Learning mode / OpenAI Study Mode（都在往”少给答案、多引导”走）</li>
+  <li><strong>同作者主线</strong>：若飞前期 Harness / Loop / Environment / Self-Harness 系列；本文 = 把这些思路应用到”个人学习”场景</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+<ul>
+  <li>个人学习场景（最直接）：学 K8s 排障 / 学新编程语言 / 学业务领域知识</li>
+  <li>团队新人 onboarding：把”学习契约”思路应用到 Seetong 新人第一周</li>
+  <li>AI tutor 方向的产品验证：验证”少给答案、多追问”是否能真正带来长期学习</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+<ul>
+  <li>个人知识管理：Karpathy LLM Wiki / 各种 Obsidian + Claude 工作流（关注”知识积累”，本文关注”能力形成”）</li>
+  <li>AI Coding 工具用法：Claude Code / Codex（关注”工程任务”，本文关注”学习任务”）</li>
+</ul>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li><strong>本篇的特殊价值</strong>：把”工程 Harness / Loop”思路迁移到”个人学习场景”，是若飞 Loop 主题的”个人版”</li>
+  <li><strong>作者主动给的边界</strong>：AI 反馈 ≠ 真实反馈；目标错就走错得更快；事实问题要回第一来源</li>
+  <li><strong>未在文中展开但隐含的点</strong>：学习系统本身也是一个”可 loop 的任务”——和工程 loop 共享同一套思路</li>
+  <li><strong>3 个 prompt 模板</strong>（学习契约 / 筛资料 / 出测验）是全文最实操的部分，可直接复用到 Seetong 任何学习场景</li>
+  <li><strong>与同期 Loop / Routines 主题强关联</strong>：同作者”Loop Engineering 详解”讲工程 loop，本文讲学习 loop，两者同构</li>
+</ul>
+
+<h2 id="相关阅读">相关阅读</h2>
+
+<ul>
+  <li>作者：若飞 / 架构师 JiaGouX 公众号</li>
+  <li>同主线：[[Addy-Osmani-Loop-Engineering]] / [[Loop-Engineering-详解-把反馈循环放进工程现场]] / [[Agentic-Engineering-AI-Workbench]] / [[Claude-Code-主动式Agent-Routines]]</li>
+</ul>

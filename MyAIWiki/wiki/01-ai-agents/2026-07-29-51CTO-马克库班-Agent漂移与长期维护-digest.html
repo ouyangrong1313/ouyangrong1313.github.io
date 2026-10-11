@@ -1,0 +1,60 @@
+<h1 id="马克库班谈-agent-漂移与长期维护---digest">马克·库班谈 Agent 漂移与长期维护 - Digest</h1>
+
+<ul>
+  <li>原文：https://mp.weixin.qq.com/s/P1tt77545YjGMzeL84Eh4A</li>
+  <li>一手访谈参考：https://www.youtube.com/watch?v=1P1hJ36rxM0&amp;t=226s</li>
+</ul>
+
+<h2 id="一句话">一句话</h2>
+
+<p>生产级 Agent 的交付物是可长期运行的工作流，而不是一次成功的 Demo；模型、工具和数据变化后，仍要能验证、诊断、接管和回滚。</p>
+
+<h2 id="五项运行控制">五项运行控制</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>控制</th>
+      <th>解决的问题</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>固定任务回归集</td>
+      <td>模型、Prompt、工具变化后的行为漂移</td>
+    </tr>
+    <tr>
+      <td>版本与步骤日志</td>
+      <td>失败可定位、可复现</td>
+    </tr>
+    <tr>
+      <td>模型外权限和网关</td>
+      <td>数据边界与供应商可替换</td>
+    </tr>
+    <tr>
+      <td>预算、超时、审批点</td>
+      <td>长任务失控和高风险动作</td>
+    </tr>
+    <tr>
+      <td>降级与回滚路径</td>
+      <td>Agent 失效时业务持续运行</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="关键判断">关键判断</h2>
+
+<ul>
+  <li>12 分钟做出第一版，只证明原型成本下降；企业上线还需治理身份、权限、审计、重试和责任归属。</li>
+  <li>驻场部署工程师的价值在数据源、身份映射、业务规则与人工审批的连接，不是替模型补一条 Prompt。</li>
+  <li>“回答看起来不错”不是验收；回归任务应记录结果、耗时、Token 与人工接管次数。</li>
+</ul>
+
+<h2 id="关联与边界">关联与边界</h2>
+
+<ul>
+  <li>[[01-ai-agents/phodal-Better-Harness-任务级证据评估]]：任务证据与纵向复验。</li>
+  <li>[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]：将固定任务集实现为评测基线。</li>
+  <li>[[01-ai-agents/Loop-Engineering-验证才是瓶颈]]：验证器决定自动化可放权的上限。</li>
+  <li>本文为公众号对访谈的二手整理；数字与引语应以视频为准，不能作为通用投入或收益基准。</li>
+</ul>

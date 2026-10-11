@@ -1,0 +1,210 @@
+<h1 id="ai-什么都能写和重写--digest">AI 什么都能写和重写 — Digest</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<blockquote>
+  <p><strong>“AI 什么都能写,我陷入虚无主义”</strong> — TiDB 联合创始人/CTO 黄东旭完成 db9 项目(1-2 人 / 3 个月 / 100 万行 Rust / 0 人手写 0 人手 review / 1 万个数据库实例 / 1 天 10 亿 token / 2000 美金/月),<strong>没看到 AI 边界</strong>;徐昊认为<strong>代码不重要,知识才重要</strong>;滕昱认为 <strong>AI 讨好型人格没有痛苦反馈,只有”老登”(老工程师)能做判断掌舵</strong>;维护之争两派分岔 — <strong>徐昊(未来派):重写足够快就不必维护</strong> vs <strong>滕昱(现实派):企业屎山代码 Agent 精神分裂,部署出问题还得自己处理</strong>。</p>
+</blockquote>
+
+<h2 id="db9-项目核心数据全文最硬证据">db9 项目核心数据(全文最硬证据)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>维度</th>
+      <th>数字</th>
+      <th>备注</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>团队规模</td>
+      <td>1-2 人</td>
+      <td>对比:传统 几十人 × 1 年</td>
+    </tr>
+    <tr>
+      <td>周期</td>
+      <td>3 个月</td>
+      <td>从第一行到上线</td>
+    </tr>
+    <tr>
+      <td>代码量</td>
+      <td>100 万行 Rust</td>
+      <td>0 行人手写 / 0 行人手 review</td>
+    </tr>
+    <tr>
+      <td>服务实例</td>
+      <td>1 万+</td>
+      <td>上线后</td>
+    </tr>
+    <tr>
+      <td>Token 消耗峰值</td>
+      <td>1 天 10 亿</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>Token 月成本</td>
+      <td>~2000 美金</td>
+      <td>“基本可以忽略不计”</td>
+    </tr>
+    <tr>
+      <td>项目复杂度</td>
+      <td>100% Postgres 语法 + 向量检索 + 全文检索 + TypeScript Serverless + 极致多租户</td>
+      <td>面向 AI Agent 的数据库</td>
+    </tr>
+    <tr>
+      <td>黄东旭自评</td>
+      <td>“一个人一个月干出来”</td>
+      <td>“非常震惊”</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="技术栈锁定松动4-大证据">技术栈锁定松动(4 大证据)</h2>
+
+<ul>
+  <li><strong>Bun: Zig → Rust 用 6 天</strong>(对比 Meta Java→Kotlin 4.5 年;微软 TypeScript→Go 14 个月)</li>
+  <li><strong>Mitchell Hashimoto</strong>: “编程语言过去意味着锁定,但现在越来越不是这样了”</li>
+  <li><strong>中型企业 iOS/Android 原生 → React Native</strong>: “即使后来证明决策是错的,未来也可以再用 Agent 迁回原生”</li>
+  <li><strong>Agent 视角</strong>:MySQL vs Postgres = 方言问题,不是世界观问题;Agent 无品味之争,只在乎”接口稳定/语义清楚/生态完备/文档丰富”</li>
+</ul>
+
+<h2 id="什么都能重写4-大案例高数据密度">“什么都能重写”4 大案例(高数据密度)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>案例</th>
+      <th>时间</th>
+      <th>关键数据</th>
+      <th>备注</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Cloudflare Vinext</td>
+      <td>2026-02</td>
+      <td>周末重写 Next.js</td>
+      <td>1100 美金 Token,已进生产</td>
+    </tr>
+    <tr>
+      <td>chardet(Python 库)</td>
+      <td>2026-03</td>
+      <td>12 年后用 Claude 重写</td>
+      <td>LGPL → MIT,争议至今</td>
+    </tr>
+    <tr>
+      <td>Thoughtworks 黑盒重写</td>
+      <td>(未具体日期)</td>
+      <td>650 表/1200 存储过程/45 DLL</td>
+      <td>20 人 6 个月 → 几周,源代码完全丢失</td>
+    </tr>
+    <tr>
+      <td>1992 MUD 游戏</td>
+      <td>2026</td>
+      <td>周末重写,无源码</td>
+      <td>30 年前 C 代码 → 一个周末</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="8-个核心命题原文">8 个核心命题(原文)</h2>
+
+<ol>
+  <li><strong>db9 100 万行 1-2 人 0 人手写</strong> — 黄东旭”没看到边界”</li>
+  <li><strong>技术栈锁定松动</strong> — Bun 6 天,Agent 把选型看作方言问题</li>
+  <li><strong>“什么都能写”虚无主义</strong> — 黄东旭”软件作为护城河这件事已经没有了”</li>
+  <li><strong>“什么都能重写”成趋势</strong> — 4 大案例,即使没有源码也能重写</li>
+  <li><strong>代码不重要,知识才重要</strong> — 徐昊”知识工程”;真正要反向的不是代码是 specification</li>
+  <li><strong>AI 讨好型人格</strong> — 没有痛苦反馈,会编答案,会忽悠,测试也能造假</li>
+  <li><strong>“老登”说了算</strong> — 90-95% 程序员受影响,老工程师做判断掌舵</li>
+  <li><strong>企业软件维护之争</strong> — 徐昊(未来派)vs 滕昱(现实派),两派分岔</li>
+</ol>
+
+<h2 id="三大嘉宾核心观点关键对照">三大嘉宾核心观点(关键对照)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>嘉宾</th>
+      <th>身份</th>
+      <th>核心观点</th>
+      <th>一句话</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>黄东旭</td>
+      <td>TiDB 联合创始人/CTO</td>
+      <td>AI 什么都能写,人要做判断</td>
+      <td>“我现在的状态是:生产软件的过程已经没什么意义”</td>
+    </tr>
+    <tr>
+      <td>徐昊</td>
+      <td>知名架构师(Thoughtworks/汇丰)</td>
+      <td>代码不重要,知识才重要</td>
+      <td>“软件是载体,真正的产品是软件中的知识”</td>
+    </tr>
+    <tr>
+      <td>滕昱</td>
+      <td>资深工程师(二三十年 IT 经验)</td>
+      <td>AI 能写一切,但”老登”说了算</td>
+      <td>“所有还在学习中的新人、十年经验以内的人,都没 Agent 做得好”</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="关键金句">关键金句</h2>
+
+<ul>
+  <li><strong>“我没看到边界。这已经是我能想到最复杂的软件了,但还是没有看到边界”</strong> — 黄东旭</li>
+  <li><strong>“软件本身作为护城河,这件事已经没有了”</strong> — 黄东旭</li>
+  <li><strong>“我陷入到一种巨大的虚无主义里,什么都能写”</strong> — 黄东旭</li>
+  <li><strong>“编程语言过去意味着锁定,但现在越来越不是这样了”</strong> — Mitchell Hashimoto</li>
+  <li><strong>“只要接口是稳定的、语义是清楚的、生态是完备的、网上能找到丰富的文档,它就可以很快适配”</strong> — 黄东旭</li>
+  <li><strong>“代码不重要,知识才重要;软件不是产品,软件中的知识才重要”</strong> — 徐昊</li>
+  <li><strong>“AI 只有讨好型人格,它是被一个没有痛苦反馈的系统训练出来的”</strong> — 滕昱</li>
+  <li><strong>“它会编答案,会忽悠你,连测试它都能造假”</strong> — 滕昱</li>
+  <li><strong>“所有还在学习中的新人、十年经验以内的人,都没 Agent 做得好”</strong> — 滕昱</li>
+  <li><strong>“那谁来掌舵?老登”</strong> — 滕昱</li>
+  <li><strong>“程序员的工作从来就不是’写代码’,写代码是手段不是目的”</strong> — 徐昊</li>
+  <li><strong>“那这个人早就该被行业淘汰了,都不需要等到今天 AI 出现”</strong> — 徐昊</li>
+  <li><strong>“软件的存在方式正在被重写,而’重写’这个概念本身,可能也只是一个过渡”</strong> — 徐昊</li>
+  <li><strong>“那我们为什么还要去维护 AI 自动生成的代码?”</strong> — 徐昊</li>
+  <li><strong>“企业软件很多都是屎山代码,前后不一致的判断太多,Agent 进去会精神分裂”</strong> — 滕昱</li>
+  <li><strong>“今年下半年企业开发里一定会看到很多这种例子,越是那种半懂不懂的人,反而越容易相信 AI,那就等着看笑话吧”</strong> — 滕昱</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游">上游</h3>
+<ul>
+  <li>AI Coding 从”工具试用”进入”具体项目实证”阶段</li>
+  <li>TiDB 团队 5+ 年数据库工程积累</li>
+  <li>中国数据库行业 2025-2026 的 AI 加持</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游(应用于 / 验证于)</h3>
+<ul>
+  <li>[[字节跳动洪定坤-AI-Coding的实践与探索]] — <strong>大厂 VP 视角(指标/治理/协作)</strong>,本文是<strong>实战派视角(db9 实证 + 工程师价值)</strong></li>
+  <li>[[深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]] — <strong>创业公司创始人视角(工厂化/COGS)</strong>,本文是<strong>资深工程师视角(老登/维护之争)</strong></li>
+  <li>[[清华沈阳-自进化AI新物种]] — 递归自我改进</li>
+  <li>[[0xCodez-Agent-Harness-14-Steps]] / [[Harness不是目的-知识才是护城河]] — Harness</li>
+  <li>[[与AI一起做产品的六条原则]] — 6 原则 + 判断</li>
+  <li>[[AI-Coding的顿悟时刻]] / [[54万行代码的顿悟-Markdown才是新编程方式]] — AI Coding 范式</li>
+</ul>
+
+<h3 id="同级">同级</h3>
+<ul>
+  <li>[[面向Skills编程-淘宝企业购端到端研发提效实践]] — 阿里淘系同口径</li>
+  <li>[[Claude-Code团队5条工作原则-Fiona-Fung分享]] — Anthropic 团队实践</li>
+</ul>
+
+<h2 id="备注">备注</h2>
+
+<ul>
+  <li><strong>数据可信度</strong>:db9 项目数据可信度高(黄东旭自述,TiDB 团队公开);重写案例中 4 个均有具体来源</li>
+  <li><strong>未公开细节</strong>:db9 harness 具体设计 / 徐昊 specification driven 方法具体工具栈 / “AI 能造假测试”未给具体例子</li>
+  <li><strong>三连击价值</strong>:本文 + 字节洪定坤 + Warp Lloyd = AI Coding 落地的”三方视角”完整主线(大厂 VP / 创业公司创始人 / 实战派)</li>
+  <li><strong>本仓库缺位补完</strong>:02-ai-coding 现有主线偏”方法论/工具/范式”,<strong>缺位”具体实证 + 大型项目案例 + 维护之争两派分岔”</strong>,本文是这一维度的代表</li>
+</ul>

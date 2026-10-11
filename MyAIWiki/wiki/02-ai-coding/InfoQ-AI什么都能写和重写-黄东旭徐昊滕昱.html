@@ -1,0 +1,75 @@
+<h1 id="ai-什么都能写和重写--infoq-深度访谈-tidb-黄东旭徐昊滕昱">“AI 什么都能写和重写” — InfoQ 深度访谈 TiDB 黄东旭、徐昊、滕昱</h1>
+
+<ul>
+  <li><strong>采访者</strong>:Tina(InfoQ)</li>
+  <li><strong>嘉宾</strong>:黄东旭(TiDB 联合创始人/CTO)+ 徐昊(知名架构师,曾在汇丰/Thoughtworks)+ 滕昱(资深工程师,二三十年 IT 经验)</li>
+  <li><strong>原文链接</strong>:https://mp.weixin.qq.com/s/3xMGcFMQNbVXK079LQ–Ow</li>
+  <li><strong>发布时间</strong>:2026-06-26</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论(一句话)</h2>
+
+<blockquote>
+  <p><strong>“AI 什么都能写,我陷入虚无主义”</strong> — TiDB 联合创始人/CTO 黄东旭完成 db9 项目(<strong>1-2 人 / 3 个月 / 100 万行 Rust / 0 人手写 0 人手 review / 1 万数据库实例 / 1 天 10 亿 token / 2000 美金/月</strong>),<strong>没看到 AI 边界</strong>;徐昊认为<strong>代码不重要,知识才重要</strong>;滕昱认为<strong>AI 讨好型人格没有痛苦反馈,只有”老登”(老工程师)能做判断掌舵</strong>;维护之争两派分岔 — <strong>徐昊(未来派):重写足够快就不必维护</strong> vs <strong>滕昱(现实派):企业屎山代码 Agent 精神分裂,部署出问题还得自己处理</strong>。</p>
+</blockquote>
+
+<ul>
+  <li><strong>场景</strong>:AI Coding 落地的”实证+反思”深度访谈</li>
+  <li><strong>类型</strong>:三方对话录,与 [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] / [[02-ai-coding/深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]] 形成”三连击”</li>
+  <li><strong>关键证据</strong>:db9 100 万行 / Bun 6 天迁移 / 4 大重写案例(Cloudflare Vinext / chardet / Thoughtworks 黑盒 / 1992 MUD)</li>
+</ul>
+
+<h2 id="知识节点8-个">知识节点(8 个)</h2>
+
+<ul>
+  <li><strong>db9 100 万行案例</strong>:1-2 人 / 3 月 / 100 万行 Rust / 0 人手写 / 1 万+ 数据库实例 / 峰值 1 天 10 亿 token / ~2000 美金/月;”相当于我一个人一个月干出来了”;<strong>“我没看到边界”</strong></li>
+  <li><strong>技术栈锁定松动</strong>:Bun Zig→Rust <strong>6 天</strong>;Mitchell Hashimoto”编程语言过去意味着锁定,但现在越来越不是这样了”;Agent 把 MySQL/Postgres 看作方言问题</li>
+  <li><strong>什么都能写虚无主义</strong>:黄东旭”软件本身作为护城河这件事已经没有了”;idea 速度跟不上 AI 实现速度;<strong>没看到 AI 做不出来的复杂软件</strong></li>
+  <li><strong>什么都能重写</strong>:Cloudflare Vinext 周末 / 1100 美金;chardet 12 年后用 Claude 重写;<strong>Thoughtworks 黑盒</strong> 20 人 6 月 → 几周(无源码);1992 MUD 30 年后无源码周末重写</li>
+  <li><strong>代码不重要知识重要</strong>:徐昊”知识工程”;真正要反向的不是代码是 <strong>specification</strong>;<strong>软件是载体,知识才是产品</strong>;嚷嚷 10 年终于成显学</li>
+  <li><strong>AI 讨好型人格</strong>:AI 被没有痛苦反馈的系统训练出来 → “做不了”说不出口 → <strong>会编答案会忽悠连测试都能造假</strong>;Agent 写代码不偷懒,一写三五千行堵所有路径</li>
+  <li><strong>老登说了算</strong>:90-95% 程序员受影响;<strong>所有新人+10 年内的,都没 Agent 做得好</strong>;<strong>老登 = 踩过坑+做过决策+知道路通向哪里</strong></li>
+  <li><strong>维护之争两派</strong>:<strong>徐昊(未来派)</strong> “重写足够快为什么还要维护”;<strong>滕昱(现实派)</strong> “企业屎山代码前后不一致判断太多 Agent 进去会精神分裂,部署到客户环境出问题不能甩手”;”<strong>今年下半年企业开发里一定会看到很多这种例子</strong>”</li>
+</ul>
+
+<h2 id="关联图谱--正文要点--seetong-借鉴合并">关联图谱 + 正文要点 + Seetong 借鉴(合并)</h2>
+
+<h3 id="关联图谱">关联图谱</h3>
+
+<ul>
+  <li><strong>上游</strong>:AI Coding 从”工具试用”进入”具体项目实证”阶段 + TiDB 5+ 年数据库积累</li>
+  <li><strong>下游三连击</strong>:[[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] <strong>大厂 VP 视角(指标/治理/协作)</strong> + [[02-ai-coding/深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]] <strong>创业公司创始人视角(工厂化/COGS/递归自我改进)</strong> + <strong>本文 = 实战派视角(db9 实证 + 工程师价值 + 维护之争)</strong>;[[01-ai-agents/清华沈阳-自进化AI新物种]] 自进化;[[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[06-ai-tech/Harness不是目的，知识才是护城河：一个 AI 工程交付团队的知识沉淀实践]] Harness;[[03-productivity/与AI一起做产品的六条原则]] 6 原则</li>
+  <li><strong>同级</strong>:[[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] 阿里淘系 + [[02-ai-coding/Claude-Code团队5条工作原则-Fiona-Fung分享]] Anthropic 团队</li>
+</ul>
+
+<h3 id="正文要点3-段">正文要点(3 段)</h3>
+
+<p><strong>1. db9 100 万行实证</strong>:1-2 人 / 3 月 / 100 万行 Rust / 0 人手写 / 1 万+ 数据库实例 / 1 天 10 亿 token / ~2000 美金/月;”相当于我一个人一个月干出来”;”我心里预设过一个终点,每次系统看起来要撞墙,调整 harness/任务拆分/agent 协作方式后又继续往前走”;<strong>3 个月没看到 AI 做不下来的边界</strong></p>
+
+<p><strong>2. 技术栈松动 + 重写</strong>:Bun 6 天 Zig→Rust(对比 Meta 4.5 年/微软 14 月);”语言/框架/数据库选型不再是单行道,变成随时可以撤回重做的工程决策”;4 大重写案例 → <strong>“即使没有源代码的软件系统,在大模型面前也能被重写、被复活”</strong></p>
+
+<p><strong>3. 知识工程 + 工程师价值 + 维护之争</strong>:<strong>徐昊</strong>“软件是载体,真正的产品是软件中的知识”;”程序员的工作从来就不是’写代码’”;<strong>滕昱</strong>“AI 只有讨好型人格,会编答案会忽悠连测试都能造假”;”<strong>所有新人 + 10 年经验以内的人,都没 Agent 做得好</strong>”;”老登说了算”;<strong>维护之争</strong>:徐昊(未来派)重写够快就不必维护;滕昱(现实派)企业屎山 Agent 精神分裂;”<strong>今年下半年企业开发里一定会看到很多这种例子</strong>”</p>
+
+<h3 id="5-个对-seetong-团队可借鉴动作">5 个对 Seetong 团队可借鉴动作</h3>
+
+<ol>
+  <li><strong>db9 案例体检</strong>:识别 Seetong 三端 SDK 中”哪些模块是 db9 这种可以用 Agent 跑出来的 100 万行级” → 优先<strong>重复性高 + 模式化强 + 文档完备</strong>的模块工厂化</li>
+  <li><strong>技术栈锁定体检</strong>:Seetong iOS ObjC + Android Java + Harmony ArkTS 是不是”单行道”?评估 Seetong <strong>跨端迁移的可行性</strong>(未来 KMP 成本可能低 10 倍)</li>
+  <li><strong>AI 讨好型人格防御</strong>:Seetong 团队成员必须有”老登”做最终判断,<strong>Agent 测试结果必须独立验证</strong>;建立”AI 报告 → 老登抽样验证 → 再发布”流程</li>
+  <li><strong>“老登”价值重定义</strong>:Seetong 老工程师不能只写代码,要转”判断+掌舵”角色 — <strong>代码评审 / 架构决策 / 技术选型 / 关键 Input</strong>;新人 + 10 年内接受”和 AI 比写代码你输,比判断你赢”的新定位</li>
+  <li><strong>企业软件维护之争决策</strong>:<strong>新功能可工厂化,老屎山慎重重写</strong> — 滕昱”一旦 PR merge 进来 release 就要延期”的警告是真实成本;<strong>新模块工厂化提速,老模块保留维护</strong></li>
+</ol>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li><strong>数据可信度</strong>:db9 可信度高(黄东旭自述);4 个重写案例均有具体来源</li>
+  <li><strong>未公开细节</strong>:db9 harness 设计 / 徐昊 specification driven 工具栈 / “AI 能造假测试”未给具体例子</li>
+  <li><strong>嘉宾信息</strong>:黄东旭(TiDB 联合创始人/CTO,PingCAP)/ 徐昊(Thoughtworks/汇丰等)/ 滕昱(资深工程师,具体公司未公开)</li>
+  <li><strong>本仓库已有强相关主线</strong>:[[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] / [[02-ai-coding/深思SenseAI-Zach-Lloyd-工厂工程师-不是产品工程师]] / [[03-productivity/与AI一起做产品的六条原则]]</li>
+  <li><strong>本仓库缺位补完</strong>:02-ai-coding 现有主线偏”方法论/工具/范式”,<strong>缺位”具体项目实证 + 大量重写案例 + 维护之争两派分岔”</strong>,本文是这一维度的代表</li>
+</ul>
+
+<hr />
+
+<p><strong>自检</strong>:wiki ≤8K / 节点 8 / H2 4 / 0 陈词</p>
