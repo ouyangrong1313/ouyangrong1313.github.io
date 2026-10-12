@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Meta 发布首个前沿模型 Muse Wonder]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/odzetar0j2vfico1pbfut027i</link>
+      <description><![CDATA[<p>Meta 的 Superintelligence Lab 发布 Muse Wonder 和 Muse Wonder Full 两款模型，这是 Meta 首次推出前沿模型。</p>
+<p>🔗 <a href="https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/odzetar0j2vfico1pbfut027i">https://ouyangrong.com/reports/hotspot/ai/items/odzetar0j2vfico1pbfut027i</a></p>]]></description>
+      <category>AI 模型</category>
+      <pubDate>Mon, 12 Oct 2026 17:56:56 GMT</pubDate>
+      <guid isPermaLink="false">odzetar0j2vfico1pbfut027i</guid>
+      <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
+    </item>
+    <item>
       <title><![CDATA[NVIDIA 在 OCP 峰会开放 Vera Rubin 架构，贡献 MGX 机架设计与 DSX 开源组件]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/q5rxil6eloj7c9cgkbyyrixg7</link>
       <description><![CDATA[<p>NVIDIA 在 OCP Global Summit 上开放 Vera Rubin 架构，通过 NVIDIA MGX 架构向 OCP 贡献机架与计算托盘设计，为系统厂商提供下一代 AI 工厂基础设施的共同基础。</p>
@@ -546,17 +557,6 @@
       <pubDate>Wed, 23 Sep 2026 15:25:14 GMT</pubDate>
       <guid isPermaLink="false">ebecugesp1le5p38r4ki6m8q5</guid>
       <author>noreply@ouyangrong.com (Google DeepMind)</author>
-    </item>
-    <item>
-      <title><![CDATA[Anthropic 发布 Claude Opus 5.5，OpenAI 同期推出 GPT-6 Sol 与 Luna]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/w6k7tzlrb7rnl37s6wk83ofd9</link>
-      <description><![CDATA[<p>Anthropic 发布 Claude 5.5 家族首个模型 Claude Opus 5.5，称其在多数任务上达到 Claude Fable 5.1 的水平，运行成本比 Opus 5 低 40%，并已成为 Claude Code 与 Claude 应用的默认模型，默认 effort 为 medium，Sonnet 5.5 与 Haiku 5.5 将在未来几周跟进。</p>
-<p>🔗 <a href="https://www.latent.space/p/ainews-claude-opus-55-the-new-default">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/w6k7tzlrb7rnl37s6wk83ofd9">https://ouyangrong.com/reports/hotspot/ai/items/w6k7tzlrb7rnl37s6wk83ofd9</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Wed, 23 Sep 2026 06:41:41 GMT</pubDate>
-      <guid isPermaLink="false">w6k7tzlrb7rnl37s6wk83ofd9</guid>
-      <author>noreply@ouyangrong.com (Latent Space)</author>
     </item>
   </channel>
 </rss>
