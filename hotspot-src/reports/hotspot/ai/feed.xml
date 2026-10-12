@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Google DeepMind 的 AlphaProof Nexus 解决数十个开放数学问题，研究通过同行评审]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/hejr4g336c414lpiyhy4njugo</link>
+      <description><![CDATA[<p>Google DeepMind 的 AlphaProof Nexus 自行解决了数十个开放数学问题，相关研究发表在 Science 上，它攻克了 353 个开放 Erdős 问题中的 9 个，其中两个已有 56 年未被解决。</p>
+<p>🔗 <a href="https://the-decoder.com/google-deepminds-alphaproof-nexus-solved-dozens-of-open-math-problems-and-actually-got-peer-reviewed/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/hejr4g336c414lpiyhy4njugo">https://ouyangrong.com/reports/hotspot/ai/items/hejr4g336c414lpiyhy4njugo</a></p>]]></description>
+      <category>论文</category>
+      <pubDate>Mon, 12 Oct 2026 09:35:54 GMT</pubDate>
+      <guid isPermaLink="false">hejr4g336c414lpiyhy4njugo</guid>
+      <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
       <title><![CDATA[OpenAI 批量发布 700 多篇数学手稿，数学家反应震惊与厌恶]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/vfydp3iptz59temutphlqw4n3</link>
       <description><![CDATA[<p>OpenAI 在 10 月 6 日一次性发布 700 多篇手稿，声称解决了数百个未解数学问题，数学博客 Proofs and Prompts 随后汇总了 100 多位研究者的回应。</p>
@@ -546,17 +557,6 @@
       <pubDate>Tue, 22 Sep 2026 18:10:22 GMT</pubDate>
       <guid isPermaLink="false">i2k117f35gl56nzhxhtkvmue9</guid>
       <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 发布 GPT-6 Sol 和 Luna 两款模型]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/pkg6z73o7bjochs6652x90emo</link>
-      <description><![CDATA[<p>OpenAI 发布 GPT-6 Sol 和 Luna 两款模型，面向日常工作场景提供前沿智能。两款模型在能力与成本上提供了不同的平衡。</p>
-<p>🔗 <a href="https://openai.com/index/introducing-gpt-6-sol-and-luna">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/pkg6z73o7bjochs6652x90emo">https://ouyangrong.com/reports/hotspot/ai/items/pkg6z73o7bjochs6652x90emo</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Tue, 22 Sep 2026 18:00:00 GMT</pubDate>
-      <guid isPermaLink="false">pkg6z73o7bjochs6652x90emo</guid>
-      <author>noreply@ouyangrong.com (OpenAI News)</author>
     </item>
   </channel>
 </rss>
