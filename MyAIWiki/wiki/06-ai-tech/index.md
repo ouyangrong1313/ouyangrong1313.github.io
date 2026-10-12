@@ -1,5 +1,12 @@
 # AI Tech Wiki
 
+## Google Labs 实验室式团队：AI 让做题变廉价，选对题更稀缺（2026-10-12 新增）
+
+> **微信公众号「LaterCast」编译 Lenny's Podcast，2026-10-11**：嘉宾 Josh Woodward（Google Labs 副总裁，负责 Gemini 应用与 AI Studio）主张 AI 让每个人都能做出原型后，稀缺的转向选对问题的判断、看懂早期反馈的眼力与走不通就转身的速度；团队要像实验室一样运作。团队规模从 5-7 人降到 2-3 人、部分项目转 3-5 次方向仍可能行不通——均为口述，无独立数据来源；播客中文编译非逐字稿，引语为转述。
+
+- [[06-ai-tech/LaterCast-Google-Labs-Josh-Woodward-实验室式团队]] - **核心命题**“AI 让‘做出来’变廉价之后，稀缺的是选对问题的判断、看懂早期反馈的眼力、以及走不通就转身的速度——所以团队要像实验室一样运作”；**9 节点**（主修与辅修 / almost possible 清单 / 选对问题 / 看反应而非指标 / unlearning rate / 团队比负责人更早知道该停 / 小团队与音乐人式合作 / explosive endurance / 冲刺期与探索期）；与 [[06-ai-tech/OpenAI-AI原生组织-4条工作原则]]、[[03-productivity/AI组织进化论-Codex负责人-AI原生工作法]]、[[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]] 同“AI 原生组织 / 团队运作”主线。
+- [[06-ai-tech/LaterCast-Google-Labs-Josh-Woodward-实验室式团队-digest]] - 速查表、四个反直觉点与 Seetong 团队借鉴速读。
+
 ## 维特根斯坦与 AI：从语言边界审计概念系统（2026-09-07 新增）
 
 > **微信公众号「系统思考」艾璞，2026-09-06**：将维特根斯坦的语言边界、“意义即用法”和生活形式用于反思 AI 的概念、表示与共享规则；LLM、图谱、多模态与形式化工具能扩展表示材料，但新概念仍需任务实践、共同体协商与证据建立。文章是哲学评论，不是模型机制实证。
