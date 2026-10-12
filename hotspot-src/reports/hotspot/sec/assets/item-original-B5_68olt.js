@@ -1,0 +1,1 @@
+import{lt as e}from"./shared-Ceo7U0Qx.js";import{i as t,n,r}from"./item-DhahVDOp.js";var{clientLoader:i,shouldRevalidate:a}=e();export{i as clientLoader,r as default,n as handle,t as meta,a as shouldRevalidate};
