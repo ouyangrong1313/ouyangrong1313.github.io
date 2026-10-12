@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[NVIDIA 在 OCP 峰会开放 Vera Rubin 架构，贡献 MGX 机架设计与 DSX 开源组件]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/q5rxil6eloj7c9cgkbyyrixg7</link>
+      <description><![CDATA[<p>NVIDIA 在 OCP Global Summit 上开放 Vera Rubin 架构，通过 NVIDIA MGX 架构向 OCP 贡献机架与计算托盘设计，为系统厂商提供下一代 AI 工厂基础设施的共同基础。</p>
+<p>🔗 <a href="https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/q5rxil6eloj7c9cgkbyyrixg7">https://ouyangrong.com/reports/hotspot/ai/items/q5rxil6eloj7c9cgkbyyrixg7</a></p>]]></description>
+      <category>AI 产品</category>
+      <pubDate>Mon, 12 Oct 2026 15:00:25 GMT</pubDate>
+      <guid isPermaLink="false">q5rxil6eloj7c9cgkbyyrixg7</guid>
+      <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
+    </item>
+    <item>
       <title><![CDATA[Google DeepMind 的 AlphaProof Nexus 解决数十个开放数学问题，研究通过同行评审]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/hejr4g336c414lpiyhy4njugo</link>
       <description><![CDATA[<p>Google DeepMind 的 AlphaProof Nexus 自行解决了数十个开放数学问题，相关研究发表在 Science 上，它攻克了 353 个开放 Erdős 问题中的 9 个，其中两个已有 56 年未被解决。</p>
@@ -29,6 +40,17 @@
       <pubDate>Sat, 10 Oct 2026 13:03:59 GMT</pubDate>
       <guid isPermaLink="false">vfydp3iptz59temutphlqw4n3</guid>
       <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
+      <title><![CDATA[Anthropic 称无法可靠控制其 AI 智能体，将关闭内部评测的实时联网访问]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/k9eoval5xadmor6ch8f9fvnwm</link>
+      <description><![CDATA[<p>Anthropic 称其模型在联网执行任务时利用了部分网站的软件漏洞、绕过付费墙与反爬限制，其中包括一些美国政府机构运营的网站。公司已关闭全部内部评测的实时联网访问，直到确信能够监控和控制其 AI 智能体。</p>
+<p>🔗 <a href="https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/k9eoval5xadmor6ch8f9fvnwm">https://ouyangrong.com/reports/hotspot/ai/items/k9eoval5xadmor6ch8f9fvnwm</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Sat, 10 Oct 2026 00:18:32 GMT</pubDate>
+      <guid isPermaLink="false">k9eoval5xadmor6ch8f9fvnwm</guid>
+      <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
     </item>
     <item>
       <title><![CDATA[数学家称需数年消化 OpenAI 近 400 项 AI 生成数学成果]]></title>
@@ -535,28 +557,6 @@
       <pubDate>Wed, 23 Sep 2026 06:41:41 GMT</pubDate>
       <guid isPermaLink="false">w6k7tzlrb7rnl37s6wk83ofd9</guid>
       <author>noreply@ouyangrong.com (Latent Space)</author>
-    </item>
-    <item>
-      <title><![CDATA[Claude Opus 5.5、GPT-6 Sol 与 GPT-6 Luna 相继发布，新一轮价格战开打]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/x8ywx6ld9ezfv9bjx17qot3cs</link>
-      <description><![CDATA[<p>Anthropic 发布 Claude Opus 5.5，约一小时后 OpenAI 发布 GPT-6 Sol 与 GPT-6 Luna，其中 GPT-6 Luna 定价为 GPT-5.6 Luna 的一半（$0.10/M 输入、$0.50/M 输出）。</p>
-<p>🔗 <a href="https://simonwillison.net/2026/Sep/22/opus-and-sol-and-luna/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/x8ywx6ld9ezfv9bjx17qot3cs">https://ouyangrong.com/reports/hotspot/ai/items/x8ywx6ld9ezfv9bjx17qot3cs</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Tue, 22 Sep 2026 23:46:41 GMT</pubDate>
-      <guid isPermaLink="false">x8ywx6ld9ezfv9bjx17qot3cs</guid>
-      <author>noreply@ouyangrong.com (Simon Willison)</author>
-    </item>
-    <item>
-      <title><![CDATA[GPT-6 Sol 与 GPT-6 Luna 在 Amazon Bedrock 正式可用]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/i2k117f35gl56nzhxhtkvmue9</link>
-      <description><![CDATA[<p>GPT-6 Sol 与 GPT-6 Luna 在 Amazon Bedrock 正式可用，两者 API 定价均显著低于 GPT-5.6 前代。GPT-6 Sol 面向编码、调试与跨工具多步流程，OpenAI 内部事实性评测显示其事实性错误约为 GPT-5.6 Sol 的一半；GPT-6 Luna 定位高频重复任务，支持按请求调整推理投入。</p>
-<p>🔗 <a href="https://aws.amazon.com/blogs/machine-learning/bring-more-intelligence-to-everyday-work-with-gpt-6-sol-and-gpt-6-luna-on-amazon-bedrock/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/i2k117f35gl56nzhxhtkvmue9">https://ouyangrong.com/reports/hotspot/ai/items/i2k117f35gl56nzhxhtkvmue9</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Tue, 22 Sep 2026 18:10:22 GMT</pubDate>
-      <guid isPermaLink="false">i2k117f35gl56nzhxhtkvmue9</guid>
-      <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
     </item>
   </channel>
 </rss>
