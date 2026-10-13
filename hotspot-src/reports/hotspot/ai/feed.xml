@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[NVIDIA RTX Spark 笔记本 10 月 16 日开售，本地 AI 软件与模型同步就绪]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/rl7y8l7xw0cepye9myrsu2itw</link>
+      <description><![CDATA[<p>NVIDIA 宣布 RTX Spark 笔记本将于 10 月 16 日开售，并同步推出面向本地 AI 的智能体、模型与开发工具更新。专为本地智能体打造的 Nemotron 3.5 Bolt 74B-A9B 24GB 模型于 10 月 15 日发布，采用 2-bit 量化，可通过 llama.cpp、vLLM、Ollama 等运行。</p>
+<p>🔗 <a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/rl7y8l7xw0cepye9myrsu2itw">https://ouyangrong.com/reports/hotspot/ai/items/rl7y8l7xw0cepye9myrsu2itw</a></p>]]></description>
+      <category>AI 产品</category>
+      <pubDate>Tue, 13 Oct 2026 12:00:49 GMT</pubDate>
+      <guid isPermaLink="false">rl7y8l7xw0cepye9myrsu2itw</guid>
+      <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
+    </item>
+    <item>
       <title><![CDATA[Character.AI 申请破产，迪士尼成为资产主要竞购方]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/sk1lcq22mke86k3qmrpovcniw</link>
       <description><![CDATA[<p>Character.AI 在美国申请 Chapter 11 破产保护，并计划将公司及部分资产出售。迪士尼作为主要竞购方，将以 2000 万美元收购部分未披露资产并获得非独占 IP 许可；Character.AI 在破产文件中列出负债约 5000 万至 1 亿美元。公司预计交易在 11 月底或 12 月初完成，期间包括付费订阅在内的服务照常运营，若无合适报价平台将关停。</p>
@@ -545,17 +556,6 @@
       <category>教程</category>
       <pubDate>Fri, 25 Sep 2026 18:00:00 GMT</pubDate>
       <guid isPermaLink="false">g56e8d6t7euvnrx2b52tr1cr9</guid>
-      <author>noreply@ouyangrong.com (GitHub Blog · AI &amp; ML)</author>
-    </item>
-    <item>
-      <title><![CDATA[GitHub Security Lab 用 Taskflow Agent 自动化 C/C++ 项目 fuzzing]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/o7j873vuidrjiyj6gjnjidk9i</link>
-      <description><![CDATA[<p>GitHub Security Lab 开源 Fuzzing Taskflow，一个基于 Taskflow Agent 的自主 C/C++ fuzzing 流水线。</p>
-<p>🔗 <a href="https://github.blog/security/application-security/ai-powered-fuzzing-with-the-github-security-lab-taskflow-agent/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/o7j873vuidrjiyj6gjnjidk9i">https://ouyangrong.com/reports/hotspot/ai/items/o7j873vuidrjiyj6gjnjidk9i</a></p>]]></description>
-      <category>AI 产品</category>
-      <pubDate>Thu, 24 Sep 2026 18:26:12 GMT</pubDate>
-      <guid isPermaLink="false">o7j873vuidrjiyj6gjnjidk9i</guid>
       <author>noreply@ouyangrong.com (GitHub Blog · AI &amp; ML)</author>
     </item>
   </channel>
