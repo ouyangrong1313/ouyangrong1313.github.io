@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>安防热点 日报</title>
+    <link>https://ouyangrong.com/reports/hotspot/sec/daily</link>
+    <description>安防热点 每天 08:00（北京时间）发布的精编日报，保留最近 30 期。</description>
+    <language>zh-CN</language>
+    <atom:link href="https://ouyangrong.com/reports/hotspot/sec/feed/daily.xml" rel="self" type="application/rss+xml" />
+    <ttl>30</ttl>
+    <generator>安防热点 (https://ouyangrong.com/reports/hotspot/sec/agent)</generator>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-10-13 — 鸿蒙 AI 主板怎么选？视美泰 OpenHarmony 主板矩阵与 AI 能力全景]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-13</link>
+      <description><![CDATA[<p>视美泰梳理了旗下 OpenHarmony 开源鸿蒙 AI 主板矩阵，算力覆盖 1TOPS 至 6TOPS，并给出三档选型对照与系统适配深度、NPU 可用性等五项检查项。</p>
+<p><strong>观点与研究</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/pnzogtdvalc2wbiug5dpdpe7v">鸿蒙 AI 主板怎么选？视美泰 OpenHarmony 主板矩阵与 AI 能力全景</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-13">https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-13</a></p>]]></description>
+      <pubDate>Tue, 13 Oct 2026 00:00:37 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-10-13</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-10-11 — 今日安静，无大事发生]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-11</link>
+      <description><![CDATA[<p>北京时间 10 月 10 日 08:00 至 10 月 11 日 08:00，没有新的安防大事。</p>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-11">https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-11</a></p>]]></description>
+      <pubDate>Mon, 12 Oct 2026 01:13:59 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-10-11</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-10-10 — 视美泰 AIoT-3576E 嵌入式主板采用国产 RK3576 八核处理器，实现全链路国产化适配]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-10</link>
+      <description><![CDATA[<p>视美泰 AIoT-3576E 嵌入式主板采用国产 RK3576 八核处理器，集成最高 6 TOPS NPU 并支持 Transformer 架构硬件加速。主板标配 Android 14，可支持 Linux、OpenHarmony 等国产系统，提供 DP/LVDS/eDP 显示接口及多路串口、USB 扩展。该产品完成 60℃ 与 0℃ 连续老化等可靠性验证，主要面向政企信创与工业控制场景。</p>
+<p><strong>产品与方案发布</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/x38gwyp3cdo82nu7iek3x5teg">视美泰 AIoT-3576E 嵌入式主板采用国产 RK3576 八核处理器，实现全链路国产化适配</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-10">https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-10</a></p>]]></description>
+      <pubDate>Sat, 10 Oct 2026 00:00:44 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-10-10</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-10-09 — 今日安静，无大事发生]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-09</link>
+      <description><![CDATA[<p>北京时间 10 月 8 日 08:00 至 10 月 9 日 08:00，没有新的安防大事。</p>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-09">https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-09</a></p>]]></description>
+      <pubDate>Fri, 09 Oct 2026 03:49:07 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-10-09</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-10-01 — 视美泰AI主板实现姿态估计算法边缘端商用]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-01</link>
+      <description><![CDATA[<p>视美泰推出RK3576/RK3588系列AI终端主板，凭借6TOPS NPU在边缘端完成姿态估计算法的本地推理，输出人体关键点与姿态判断，无需将视频流全部上传云端。配套SDK支持模型量化与算子适配，硬件兼容性助力算法在安防场景快速落地。</p>
+<p><strong>技术方向</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/w5m99se6midmav2csvvlec7qx">姿态估计算法如何实现边缘端商用？视美泰 RK3576/RK3588 AI 主板实战解析</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-01">https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-01</a></p>]]></description>
+      <pubDate>Fri, 09 Oct 2026 03:09:55 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-10-01</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-09-30 — 视美泰AIoT-3568S主板赋能电话班牌项目]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-30</link>
+      <description><![CDATA[<p>视美泰AIoT-3568S主板近日应用于电话班牌项目，其超薄尺寸适配10.1至32英寸屏幕，内置1TOPS NPU支持本地人脸识别考勤，并通过丰富接口集成摄像头、读卡器、对讲模块等外设。该方案展示了主板在智慧办公与考勤场景的适配能力。</p>
+<p><strong>场景与项目落地</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/c2jqdd84vfsqsut1omjlaymgv">视美泰AIoT-3568S主板赋能电话班牌项目应用案例分享</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-30">https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-30</a></p>]]></description>
+      <pubDate>Wed, 30 Sep 2026 00:00:32 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-09-30</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-09-21 — HID推出Signo Décor读卡器，兼顾门禁安全与设计美学]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-21</link>
+      <description><![CDATA[<p>HID推出全新Signo Décor读卡器，专为注重设计的空间打造，同时不牺牲门禁安全性。产品支持齐平安装，具备IK10防冲击和IP65防护等级，搭载EAL5+安全元件并通过OSDP协议加密通信。基于蓝牙和NFC，用户可使用手机完成开门。</p>
+<p><strong>产品与方案发布</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/fhofkey37gkbgw9t6nd2n6yc2">HID推出全新Signo Décor读卡器，兼顾门禁安全与设计美学</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-21">https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-21</a></p>]]></description>
+      <pubDate>Wed, 30 Sep 2026 07:14:04 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-09-21</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-09-19 — 福州长乐机场T2投运 同方威视部署近300台智慧安检设备]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-19</link>
+      <description><![CDATA[<p>9月16日，福州长乐国际机场T2航站楼正式投运，同方威视近300台安检设备及智慧安检方案同步上线。方案涵盖手提行李CT、毫米波人体安检门等设备，依托AI实现辅助判图与安检质控，并创新“一机双屏、一次过检”关航联合查验模式。</p>
+<p><strong>场景与项目落地</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/z1xgmtt4mk2vqdqcwcnsan09g">同方威视在福州长乐机场T2部署近300台套智慧安检设备</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-19">https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-19</a></p>]]></description>
+      <pubDate>Wed, 30 Sep 2026 07:14:04 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-09-19</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-09-17 — 视美泰拆解AIoT-3576EV：RK3576方案面向交互大屏]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-17</link>
+      <description><![CDATA[<p>视美泰公布AIoT-3576EV主板细节，基于瑞芯微RK3576平台，配备8核CPU和6TOPS NPU，支持4K@120Hz显示及7路USB扩展。该方案面向B端整机厂商，可本地运行数字人驱动、客流统计等AI业务。</p>
+<p><strong>产品与方案发布</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/k0g55fpi9kyhfbducbkdxhydq">拆解视美泰 AIoT-3576EV：面向交互大屏的 RK3576 硬件方案</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-17">https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-17</a></p>]]></description>
+      <pubDate>Wed, 30 Sep 2026 07:14:04 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-09-17</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-09-15 — 信息通信业十五五规划明确物联网三大演进方向]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-15</link>
+      <description><![CDATA[<p>信息通信业“十五五”规划明确物联网向5G-A+6G+卫星协同连接、人工智能融合等方向演进，要求移动物联网终端用户突破38亿。安讯士同日发布三款车载半球摄像机，覆盖巴士与火车场景，内置麦克风支持音频采集。</p>
+<p><strong>产品与方案发布</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/t83703w9v5xds3d6eblh5vnz7">安讯士发布 AXIS M3945-R、P3945-R 和 P3947-R 车载半球摄像机</a></li></ul>
+<p><strong>政策与监管</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/exw7bw5j6nenzcs2uccm6vyzt">从信息通信业“十五五”规划看物联网发展特点</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-15">https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-15</a></p>]]></description>
+      <pubDate>Wed, 30 Sep 2026 07:13:48 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-09-15</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-09-12 — 安讯士发布IP供电LED补光灯新品]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-12</link>
+      <description><![CDATA[<p>安讯士今日发布AXIS D5210-E和AXIS D5211-E两款IP供电LED补光灯，最远补光距离分别达175米（白光）和200米（红外），支持PoE供电及远程亮度调节，并内置光感自动触发补光。同期还推出双舱安装柜，简化多设备部署。</p>
+<p><strong>产品与方案发布</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/q64nvuajyvy70ujltl57yma8z">安讯士发布AXIS D5210-E和AXIS D5211-E高性能IP供电LED补光灯</a></li><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/npg4yqwnewx26hqnbvtqtxdfh">安讯士发布AXIS TQ1823-VE双舱安装柜</a></li></ul>
+<p><strong>场景与项目落地</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/lt3b2jt9fvurdwf1as9syu5m2">视美泰AIoT-3588A主板用于停车场智慧服务屏，实现人脸断点导航与VR反向寻车</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-12">https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-12</a></p>]]></description>
+      <pubDate>Wed, 30 Sep 2026 07:13:48 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-09-12</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-09-10 — 安讯士与思科合作实现IT安防统一管理]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-10</link>
+      <description><![CDATA[<p>安讯士与思科宣布合作，通过Axis Cloud Connect将安讯士设备集成到Cisco Meraki Dashboard。IT与安防团队可在单一界面统一监测设备健康、固件和连接性，提高多站点运维效率。高级版还提供历史视频访问功能。</p>
+<p><strong>行业动态</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/b3p3phtozu484rwsv14t936si">安讯士与思科合作，在云端实现IT与安防统一管理</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-10">https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-10</a></p>]]></description>
+      <pubDate>Wed, 30 Sep 2026 07:13:43 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-09-10</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-09-09 — 视美泰发布DSBOX-133SE高清数字标牌播放盒]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-09</link>
+      <description><![CDATA[<p>视美泰正式发布DSBOX-133SE高清数字标牌播放盒，面向1080P商显市场，强调高性价比与稳定运行。该产品搭载全志A133四核处理器及Android 10系统，支持1080P@60Hz输出，并配备双USB、音频、以太网与WiFi等接口。</p>
+<p><strong>产品与方案发布</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/fx8u9l7qbv3ky83zkq75dcpeq">视美泰正式发布DSBOX-133SE高清数字标牌播放盒，主打1080P商显场景</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-09">https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-09</a></p>]]></description>
+      <pubDate>Wed, 30 Sep 2026 07:13:42 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-09-09</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-09-04 — 大华发布风电叶片视觉智能检测方案]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-04</link>
+      <description><![CDATA[<p>大华股份推出基于星汉大模型的风电叶片视觉智能检测方案，通过机舱抗振云台实现常态化在线监测。方案在甘肃某风电场运行半年，成功检出多支叶片早期裂纹和脱胶缺陷，并自动生成预警与检修建议。</p>
+<p><strong>技术方向</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/icmtvh4s7stvt5iunfh3wc2ug">大华股份发布基于星汉大模型的风电叶片视觉智能检测方案</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-04">https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-04</a></p>]]></description>
+      <pubDate>Wed, 30 Sep 2026 07:13:40 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-09-04</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-09-02 — 安讯士发布360°覆盖AI雷达]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-02</link>
+      <description><![CDATA[<p>安讯士推出D2124-VE雷达，360°覆盖并支持AI分类，可全天候探测200米目标；视美泰发布AIoT-3576EV主板，搭载6TOPS NPU，面向AI交互大屏设备。</p>
+<p><strong>产品与方案发布</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/m2u0141zoyu2aupen1qkkif6p">安讯士发布 AXIS D2124-VE 雷达，360° 覆盖与 AI 分类实现全天候区域保护</a></li><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/cuq8e1xamuijnb8qo89s2pdcc">视美泰发布AIoT-3576EV AI终端主板，面向交互大屏全品类设备</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-02">https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-02</a></p>]]></description>
+      <pubDate>Wed, 30 Sep 2026 07:13:29 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-09-02</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-09-01 — 视美泰发布AIoT-3576SE主板，6TOPS NPU加持]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-01</link>
+      <description><![CDATA[<p>视美泰今日发布AIoT-3576SE主板，基于瑞芯微RK3576八核芯片，集成6TOPS NPU，尺寸仅100×80mm。该主板支持4K输出、MIPI摄像头与语音功能，待机电流低至22mA，适用于智能家居中控、小型网关等紧凑场景。</p>
+<p><strong>产品与方案发布</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/whoyby6caxyvkntk5vy9eoy3j">视美泰发布AIoT-3576SE主板：100×80mm尺寸，6TOPS NPU，丰富接口</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-01">https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-01</a></p>]]></description>
+      <pubDate>Wed, 30 Sep 2026 07:13:16 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-09-01</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-08-29 — 中维世纪发布电梯四合一算法场景机]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-08-29</link>
+      <description><![CDATA[<p>中维世纪今日发布电梯四合一算法场景机，内置电动车、煤气罐、困人与遮挡检测四种算法。其中电动车或煤气罐入梯可联动梯控阻止关门，困人检测自动推送物业，遮挡检测触发防御警报并阻止关门。</p>
+<p><strong>技术方向</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/dwcwafzuwe8fvzhfq5sns3fic">中维世纪发布电梯四合一算法场景机，集成电动车、煤气罐、困人与遮挡检测</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-08-29">https://ouyangrong.com/reports/hotspot/sec/daily/2026-08-29</a></p>]]></description>
+      <pubDate>Wed, 30 Sep 2026 07:13:16 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-08-29</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-08-28 — 视美泰携全栈AI方案亮相深圳智慧显示博览会]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-08-28</link>
+      <description><![CDATA[<p>视美泰于2026年8月26-28日亮相第八届深圳（国际）智慧显示系统产业应用博览会，展出基于瑞芯微平台的RK3568、RK3576、RK3588系列主板盒子，以及AI大模型双屏翻译机、智能体广告机、多模态语视交互模组等产品。此次展示聚焦AI与显示融合的全栈方案。</p>
+<p><strong>产品与方案发布</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/yohsi83a932qyegd9l99czim4">视美泰携全栈AI方案亮相第八届深圳智慧显示博览会</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-08-28">https://ouyangrong.com/reports/hotspot/sec/daily/2026-08-28</a></p>]]></description>
+      <pubDate>Wed, 30 Sep 2026 07:13:16 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-08-28</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-08-26 — 涂鸦智能Q2营收9290万美元，同比增16%]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-08-26</link>
+      <description><![CDATA[<p>涂鸦智能发布2026年Q2及上半年财报。第二季度营收9290万美元，同比增长16.0%，净利润率20.1%；上半年总营收1.738亿美元，同比增长12.3%。公司持续推进AI能力产品化落地，上线端到端物理AI生成系统Tuya Cobuilde。</p>
+<p><strong>行业动态</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/ia14xbm4ye1vesyrnrp2toxfx">涂鸦智能发布2026年Q2及H1财报：推动AI能力在真实设备和实际场景中落地</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-08-26">https://ouyangrong.com/reports/hotspot/sec/daily/2026-08-26</a></p>]]></description>
+      <pubDate>Wed, 30 Sep 2026 07:13:16 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-08-26</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-06-24 — 公安部废止119项公共安全行业标准]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-06-24</link>
+      <description><![CDATA[<p>公安部今日发布公告，依据《行业标准管理办法》废止119项公共安全行业标准，涉及电子防盗锁、出入口控制人脸识别系统等安防与警用装备标准。此次清理旨在解决标准陈旧、重复问题，推动安防行业标准体系优化升级。</p>
+<p><strong>标准与检测认证</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/ry6j7cx03143kigl46vytphqm">安防“瘦身”，公安部废止119项公共安全行业标准</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-06-24">https://ouyangrong.com/reports/hotspot/sec/daily/2026-06-24</a></p>]]></description>
+      <pubDate>Wed, 30 Sep 2026 07:13:16 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-06-24</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-06-18 — 安联锐视亮相越南墨西哥展会，展示免钻孔安防方案]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-06-18</link>
+      <description><![CDATA[<p>安联锐视于2026年5月28日至6月4日先后参加越南IEAE电子展和墨西哥EXPO SEGURIDAD安防展。展会上重点展示免钻孔窗口相机、黑光全彩夜视相机及4K超高清IP摄像机，主打低功耗与免钻孔安装方案。</p>
+<p><strong>行业动态</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/ksmqcdtlqq2l9gjfdiofnp30e">安联锐视回顾越南IEAE与墨西哥EXPO SEGURIDAD展会，展示免钻孔与低功耗安防方案</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-06-18">https://ouyangrong.com/reports/hotspot/sec/daily/2026-06-18</a></p>]]></description>
+      <pubDate>Wed, 30 Sep 2026 07:13:13 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-06-18</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
+      <title><![CDATA[安防热点 日报 · 2026-06-16 — 中维世纪二十六年向上生长，从山大路到全球安防50强]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-06-16</link>
+      <description><![CDATA[<p>中维世纪从山大路起步二十六年，成长为全球安防50强；在济南高新区政策支持下，自研音视频后处理芯片JV9800，提出普惠AI战略，构建硬件+平台+算法+云服务全栈能力。公司推出AI场景机、双目AOV太阳能电池球机，应用于农业看护、幼儿园、食品链等场景。</p>
+<p><strong>行业动态</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/n4voso60clj9gy3cwko64ddjn">从创业幼苗到行业脊梁——中维世纪二十六年向上生长</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-06-16">https://ouyangrong.com/reports/hotspot/sec/daily/2026-06-16</a></p>]]></description>
+      <pubDate>Wed, 30 Sep 2026 07:12:31 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-06-16</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+  </channel>
+</rss>
