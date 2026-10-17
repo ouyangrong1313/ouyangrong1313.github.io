@@ -1,0 +1,91 @@
+<h1 id="agent评测漫谈--由浅入深讲解agent评测速查">Agent评测漫谈 —— 由浅入深讲解Agent评测（速查）</h1>
+
+<blockquote>
+  <p>原文：[[01-ai-agents/Agent评测漫谈-由浅入深讲解Agent评测]]；作者图灵Agent评测；来源「美团技术团队」；发布时间 2026-08-06。</p>
+</blockquote>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<p>Agent 评测从“回答是否正确”升级为“任务是否完成、过程是否可靠、结果是否可解释且可回归”。</p>
+
+<h2 id="8-个节点">8 个节点</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>节点</th>
+      <th>一句话</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Response Evaluation</td>
+      <td>看最终回复、产物和任务结果。</td>
+    </tr>
+    <tr>
+      <td>Trajectory Evaluation</td>
+      <td>看规划、工具调用和中间状态。</td>
+    </tr>
+    <tr>
+      <td>评测搭桥</td>
+      <td>连接模型能力、任务系统和业务结果。</td>
+    </tr>
+    <tr>
+      <td>Rubric 二元化</td>
+      <td>把模糊标准拆成是/否/未知规则。</td>
+    </tr>
+    <tr>
+      <td>Good/Bad Case 飞轮</td>
+      <td>让线上样本持续修正评测体系。</td>
+    </tr>
+    <tr>
+      <td>Task 评测</td>
+      <td>用输入、成功标准和 Trace 定义测试。</td>
+    </tr>
+    <tr>
+      <td>Evaluation Harness</td>
+      <td>运行、记录、评分并汇总评测任务。</td>
+    </tr>
+    <tr>
+      <td>长程评测基建</td>
+      <td>回放、Case、沙箱、归因、回归、门禁。</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="核心方法">核心方法</h2>
+
+<ol>
+  <li><strong>先观测再评测</strong>：没有 Trace 就无法还原现场，无法区分偶然成功和稳定能力。</li>
+  <li><strong>先搭桥再堆指标</strong>：业务关心 DAU、留存和点击，系统关心召回和点击率，Agent 层要补齐意图、检索和结果整合指标。</li>
+  <li><strong>人人一致 + 人机一致</strong>：指标下钻、Rubric 二元化，用一致率和 unknown 占比持续校准。</li>
+  <li><strong>实践科学</strong>：从高频场景和少量指标开始，用 Good Case 定义范式，用 Bad Case 暴露边界。</li>
+  <li><strong>人机分工</strong>：人负责高价值标准设计和 Rubric 对齐，AI 负责规模化运行、初筛和回归，平台负责沉淀、回放、告警和归因。</li>
+</ol>
+
+<h2 id="长程-agent-评测清单">长程 Agent 评测清单</h2>
+
+<ul>
+  <li><strong>Task</strong>：明确输入和成功标准的单个测试。</li>
+  <li><strong>Trace / Trajectory</strong>：包含输出、工具调用、推理、中间结果和交互的完整记录。</li>
+  <li><strong>Outcome</strong>：环境最终状态，不等同于 Agent 的口头回复。</li>
+  <li><strong>Evaluation Harness</strong>：并发运行任务、记录步骤、评分和汇总结果。</li>
+  <li><strong>基础设施能力</strong>：全链路回放、Case 管理、执行沙箱、AI 评测引擎、报告归因、历史回归、准入准出门禁。</li>
+</ul>
+
+<h2 id="关键提醒">关键提醒</h2>
+
+<ul>
+  <li>ChatAgent 评测关心“说得好不好”；长程 Agent 评测关心“事情做成没有，以及是怎么做成的”。</li>
+  <li>Skill 越容易由 AI 生成，评测越需要简单、标准化、自动化并接入发布流程。</li>
+  <li>评测真正放大的不是机器打分，而是核心评测员已经对齐的判断标准。</li>
+  <li>配图中的流程图、对比表和开源项目表未做 OCR；原文数字按经验案例保留，不作为通用基准。</li>
+</ul>
+
+<h2 id="关联">关联</h2>
+
+<ul>
+  <li>[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]：评分器、五维指标、用例基线和 Trace。</li>
+  <li>[[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]]：评测驱动工程改造。</li>
+  <li>[[02-ai-coding/研发工程化升级-Coding-Agent-AI-Testing与Verification-First]]：测试、验证前移和分层信任。</li>
+</ul>

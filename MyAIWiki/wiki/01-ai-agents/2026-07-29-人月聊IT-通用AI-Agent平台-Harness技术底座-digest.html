@@ -1,0 +1,64 @@
+<h1 id="通用-ai-agent-平台-harness-技术底座---digest">通用 AI Agent 平台 Harness 技术底座 - Digest</h1>
+
+<ul>
+  <li>原文：https://mp.weixin.qq.com/s/g9gsWggIqMqQtlU4jeBUKA</li>
+  <li>作者：何明璐；文章称基于 Abu-Cowork 源码逆向整理。</li>
+</ul>
+
+<h2 id="一句话">一句话</h2>
+
+<p>Harness 是 Agent 平台的执行底盘：它用状态、能力、控制和证据，让模型从单次回答变成可维护的系统行为。</p>
+
+<h2 id="四层速查">四层速查</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>层面</th>
+      <th>最小能力</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>状态</td>
+      <td>分层记忆、逐条持久化、Checkpoint、压缩、缓存</td>
+    </tr>
+    <tr>
+      <td>能力</td>
+      <td>Skill 生命周期、MCP 运行时、调度、浏览器、Computer Use、多 Agent</td>
+    </tr>
+    <tr>
+      <td>控制</td>
+      <td>工作区绑定、权限分级、路径/命令防护、Stop、白黑名单</td>
+    </tr>
+    <tr>
+      <td>证据</td>
+      <td>Trace、Token、成本、工具成功率、用户中断与隐私策略</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="建设顺序">建设顺序</h2>
+
+<ol>
+  <li>先做会话持久化、工作区边界、权限与 Trace。</li>
+  <li>再接 Skills、MCP、外部工具与异步任务。</li>
+  <li>最后扩大浏览器、桌面操作和多 Agent 的自治范围，并保留审批与中断。</li>
+</ol>
+
+<h2 id="关键分层">关键分层</h2>
+
+<ul>
+  <li>可变记忆按相关性召回并能老化；不可变项目规则随 Git 版本化。</li>
+  <li>Skill 封装任务流程；MCP 标准化外部工具、资源和 Prompt；平台统一管理其运行时与权限。</li>
+  <li>“能调用”不是“能安全完成”，每个动作都应留下可追溯状态和可恢复边界。</li>
+</ul>
+
+<h2 id="关联与边界">关联与边界</h2>
+
+<ul>
+  <li>[[01-ai-agents/储旭-从Prompt到Harness-企业级Agent工程的完整演进之路]]：Agent OS 的演进框架。</li>
+  <li>[[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]]：Context、Memory、Skill、MCP 的产品层解释。</li>
+  <li>[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]：记忆的准入、失效和晋升治理。</li>
+  <li>文章未给出 Abu-Cowork 各能力的逐项源码与测试证据；清单应按具体风险分阶段采纳。</li>
+</ul>

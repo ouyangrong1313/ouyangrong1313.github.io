@@ -1,0 +1,96 @@
+<h1 id="研发工程化升级coding-agentai-testingverification-first与研发效能---digest">研发工程化升级：Coding Agent、AI Testing、Verification First与研发效能 - Digest</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<blockquote>
+  <p>AI 编程已经进入“Agent 足够强，验证才是瓶颈”的阶段；真正的研发升级，是把自主编码、有效测试、验证前移和效能量化串成同一套信任闭环。</p>
+</blockquote>
+
+<h2 id="8-节点速查表">8 节点速查表</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>节点</th>
+      <th>一句话</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Coding-Agent三代进化</strong></td>
+      <td>补全 -&gt; 对话 -&gt; 自主，真正差异在是否能自规划、自测试、自修复</td>
+    </tr>
+    <tr>
+      <td><strong>Agentic-Coding工作流</strong></td>
+      <td>需求/Issue -&gt; 计划 -&gt; 编码 -&gt; 测试 -&gt; 修复 -&gt; PR -&gt; Review</td>
+    </tr>
+    <tr>
+      <td><strong>Probe-and-Refine</strong></td>
+      <td>大仓先探测结构和依赖，再缩小改动面，避免 Agent 迷路</td>
+    </tr>
+    <tr>
+      <td><strong>覆盖率陷阱</strong></td>
+      <td>覆盖率高不代表测试有效，边界和异常才是关键</td>
+    </tr>
+    <tr>
+      <td><strong>Agentic-Testing</strong></td>
+      <td>Agent 可生成并执行测试策略，但最终验收标准仍应留在人手里</td>
+    </tr>
+    <tr>
+      <td><strong>Verification-First四层</strong></td>
+      <td>需求 / 设计 / 实现 / 运行四层都先写清“什么算对”</td>
+    </tr>
+    <tr>
+      <td><strong>概率验证</strong></td>
+      <td>验证目标不是零误差，而是可接受失败率和置信区间</td>
+    </tr>
+    <tr>
+      <td><strong>研发效能量化与分层信任</strong></td>
+      <td>DORA 之外，还要补 AI 指标和任务信任分层</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="关键数字--5-个核心提醒">关键数字 + 5 个核心提醒</h2>
+
+<ul>
+  <li><strong>30%</strong>：文中引用的 AI 生成代码缺陷率</li>
+  <li><strong>25-35%</strong>：团队平均效率提升区间</li>
+  <li><strong>53%</strong>：文中引用的 Devin 在 SWE-bench Verified 的成绩</li>
+  <li><strong>&gt;80%</strong>：建议变异检测率目标</li>
+  <li><strong>11 周 -&gt; 5 周</strong>：文中支付系统重构案例的工期变化</li>
+  <li><strong>35% / 50-70%</strong>：AI 代码接受率行业平均 / 最佳实践区间</li>
+  <li><strong>3035%</strong>：文中示例的 ROI 计算结果</li>
+</ul>
+
+<ol>
+  <li>真问题不是 AI 能不能写，而是团队能不能信任 AI 写的代码。</li>
+  <li>覆盖率数字好看，不代表测试真的在抓 bug。</li>
+  <li>验证标准应该先于实现，而不是等上线前补救。</li>
+  <li>AI 放大强团队，不会自动修复弱流程。</li>
+  <li>研发效能要连速度、质量和技术债一起看。</li>
+</ol>
+
+<h2 id="3-个反直觉点--6-个借鉴动作">3 个反直觉点 + 6 个借鉴动作</h2>
+
+<p><strong>3 个反直觉点</strong>：① 高覆盖率不等于高测试质量 ② 最大升级点不是换更强模型，而是把验证前移 ③ 高绩效团队从 AI 获益更大，弱流程只会被放大。</p>
+
+<p><strong>6 个借鉴动作</strong>：</p>
+
+<ol>
+  <li>给任务做 L1/L2/L3 信任分层，不同层级配不同审核深度</li>
+  <li>需求模板强制写功能 / 性能 / 兼容 / 安全验证标准</li>
+  <li>在关键链路上加变异检测率、边界覆盖率、断言密度</li>
+  <li>把 Probe-and-Refine 固定成 AI 多文件改动前置动作</li>
+  <li>月报补 AI 接受率、AI 审查节省时长、技术债增长率</li>
+  <li>先挑 1 条中等复杂度链路跑完整闭环，再扩大范围</li>
+</ol>
+
+<h2 id="关联--备注">关联 + 备注</h2>
+
+<ul>
+  <li><strong>同作者主线</strong>：[[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]</li>
+  <li><strong>同主题</strong>：[[02-ai-coding/生产级Agent全景]] / [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]] / [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]</li>
+  <li><strong>落地对照</strong>：[[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] / [[02-ai-coding/字节跳动洪定坤-AI-Coding的实践与探索]] / [[02-ai-coding/用Agent评测思路管理AI-Coding-31万行代码重构实践]]</li>
+  <li><strong>限制</strong>：文中价格、基准、ROI 和案例数字多为作者二次整理或示意计算；<code class="language-plaintext highlighter-rouge">Probe-and-Refine</code> 与 <code class="language-plaintext highlighter-rouge">Probabilistic Verification</code> 的论文来源需要二次补证。</li>
+</ul>

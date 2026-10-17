@@ -1,0 +1,101 @@
+<h1 id="andrej-karpathyai写代码只需要问自己这一个问题---digest">Andrej Karpathy：AI写代码，只需要问自己这一个问题 - Digest</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<p><strong>先问“思考到底发生在哪一步”再决定要不要交给 AI</strong>。Karpathy 用一句话给 AI Coding 任务分流，rvaniaaa 用 8 段 GitHub 技能蒸馏流水线把“人做判断，AI 做执行”做成了会持续长技能的 Agent 机制。</p>
+
+<h2 id="8-节点速查表">8 节点速查表</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>节点</th>
+      <th>一句话</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>思考发生点</td>
+      <td>AI Coding 先问“思考到底发生在哪一步”</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>判断执行分界</td>
+      <td>判断没完成的任务留给人，执行型任务交给 AI</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>双资深一致</td>
+      <td>两个资深工程师会写出近似实现的活，通常适合 AI</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>工作流档位切换</td>
+      <td>自己写 / 补全 / 全代理只是同一问题的三档模式</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Scout-Filter-Reader</td>
+      <td>搜仓库、去噪、文档优先读取，最后才进源码</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Workflow-Extractor</td>
+      <td>真正要沉淀的是可复用 workflow，不是整仓库</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Skill-Score</td>
+      <td>是否变成 Skill，优先用确定性规则打分</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Reviewer-Publisher</td>
+      <td>生成与审核分离，自动化提议，人类批准</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="5-句核心金句--3-个反直觉点">5 句核心金句 + 3 个反直觉点</h2>
+
+<ol>
+  <li>“思考到底发生在哪一步？”</li>
+  <li>判断没完成的任务，不要假装能外包给 AI。</li>
+  <li>两个资深工程师会收敛到近似实现的活，通常才适合 Agent 接管。</li>
+  <li>不是每个环节都该交给 LLM，能写成确定性规则的地方越多越稳。</li>
+  <li>自动化负责提议，人类负责批准。</li>
+</ol>
+
+<p><strong>3 个反直觉点</strong></p>
+
+<ul>
+  <li>争论“自己写 / 补全 / 全代理谁更先进”没意义，它们只是不同判断密度下的三档工作模式。</li>
+  <li>Agent 不会自己变聪明，真正缺的不是模型能力，而是“发现 Skill → 抽 workflow → 审核发布”的外循环。</li>
+  <li>读仓库最省 token 的方式不是更短摘要，而是先读 README / docs / examples，很多时候根本不用进源码。</li>
+</ul>
+
+<h2 id="5-个对-seetong--myaiwiki-可借鉴动作">5 个对 Seetong / MyAIWiki 可借鉴动作</h2>
+
+<ol>
+  <li>所有 AI Coding 任务先加一个“判断密度”分流：需求 / 架构类默认人主导，执行类默认 AI 主导。</li>
+  <li>把“双资深一致”写进 Skill / 任务模板：若实现分歧仍大，就别直接交给 Agent。</li>
+  <li>Reader 默认按 README → docs → examples → 依赖 → 源码顺序读取，先省 token 再省误判。</li>
+  <li>Skill 入库前把生成、评分、审核拆开，避免“自己写自己批”。</li>
+  <li>MyAIWiki 后续可把高质量 GitHub workflow 当成候选源，定期编译成知识页或 Skill 草稿。</li>
+</ol>
+
+<h2 id="关联--备注">关联 + 备注</h2>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>关联</strong>：AI Coding 边界 [[02-ai-coding/AI-Coding的顿悟时刻]] / [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]]</td>
+      <td>Skill 工程 [[02-ai-coding/面向Skills编程-淘宝企业购端到端研发提效实践]] / [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]] / [[01-ai-agents/Skill-Self-Evolution]]</td>
+      <td>验证 [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>备注</strong>：本文前半段是 Karpathy 判断框架，后半段是 rvaniaaa 项目拆解；公众号末尾引流、小程序、点赞分享等交互噪声已剔除。</p>

@@ -1,0 +1,101 @@
+<h1 id="腾讯-teg-agent-skill-测评方案--速读摘要">腾讯 TEG Agent Skill 测评方案 — 速读摘要</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<p><strong>测评是 Agent 从 Demo 可用走向生产可靠必须跨过的门槛。</strong> 腾讯 TEG 网关测试团队给出”三类评分器 + 五大维度 + 5 步闭环”完整框架:TPerf 性能分析 Agent 已在生产验证,核心理念是”Agent/Skill 设计阶段就要把 Trace 输出作为标准能力纳入,而非事后补救”。</p>
+
+<h2 id="核心观点-6-条">核心观点 6 条</h2>
+
+<ol>
+  <li><strong>Agent 三大独有痛点</strong>:非确定性(同 prompt 多次结果不同)/ 黑盒化(模型升级/Prompt 微调导致行为漂移)/ 错误级联放大(单点错误引发下游连锁)</li>
+  <li><strong>三类评分器 + 选择优先级</strong>:确定性评分器 &gt; Rubric 评分器 &gt; 人工评分器——”能用代码判断的绝不用模型,必要时用模型,人工用于校准”</li>
+  <li><strong>五大评测维度</strong>:功能正确性 / 过程质量 / 效率成本 / 鲁棒性安全 / 体验对齐</li>
+  <li><strong>三类 Agent 侧重不同</strong>:知识库问答类更依赖 Rubric 评分器(判断质量、检测幻觉)/ 功能工具类关注过程对比(工具调用序列是否与基线一致)/ Skill 类用例量最大</li>
+  <li><strong>用例设计 5 步闭环</strong>:设计测评用例集 → 设计评分规则 → 建立用例基线 → 执行测评 → 维护用例集</li>
+  <li><strong>多轮执行稳定性</strong>:N 次执行中只要 1 次不通过,就说明存在稳定性风险;不同 Agent 类型,不通过比例容忍阈值完全不同</li>
+</ol>
+
+<h2 id="知识节点-8-个">知识节点 8 个</h2>
+
+<ul>
+  <li><strong>三类评分器</strong>:确定性(代码判断) / Rubric(模型按规则打分) / 人工(校准);优先级:确定性 &gt; Rubric &gt; 人工</li>
+  <li><strong>五大评测维度</strong>:功能正确性 / 过程质量 / 效率成本 / 鲁棒性安全 / 体验对齐</li>
+  <li><strong>用例基线 Baseline</strong>:单个用例执行 1 次后,经人工确认的预期过程和预期结果的快照</li>
+  <li><strong>结构化 Trace 输出</strong>:每行独立解析、可按 type 过滤工具调用或思维链、可与基线逐步对比;过程评测的前提</li>
+  <li><strong>三类 Agent 测评侧重</strong>:知识库问答类(更依赖 Rubric)/ 功能工具类(更关注过程对比)/ Skill 类(用例量最大,需覆盖所有核心分支)</li>
+  <li><strong>负向触发用例</strong>:只测正例,Agent 可能学会”什么都触发”——过度触发比不触发更难发现</li>
+  <li><strong>用例设计 5 步闭环</strong>:设计 → 评分规则 → 基线 → 执行 → 维护</li>
+  <li><strong>稳定性评估</strong>:多轮执行(N 次)检测幻觉和不通过比例;Agent 类型决定容忍阈值</li>
+</ul>
+
+<h2 id="关键数字--事实">关键数字 / 事实</h2>
+
+<ul>
+  <li><strong>3 类评分器 + 5 大维度</strong> 的通用框架覆盖所有 Agent 类型</li>
+  <li><strong>5 步闭环</strong> 是实施层面的标准路径</li>
+  <li><strong>多轮执行</strong>:N 次执行中 1 次不通过即标记为存在稳定性风险</li>
+  <li><strong>落地项目</strong>:TPerf 性能平台智能分析 Agent(腾讯 TEG 网关测试团队)</li>
+  <li><strong>可复用产物</strong>:评分模板、评分方法论、自动化流水线工程实现</li>
+</ul>
+
+<h2 id="反直觉点-5-个">反直觉点 5 个</h2>
+
+<ol>
+  <li><strong>测评不是写完代码再做,而是 Agent/Skill 设计阶段就该把 Trace 输出作为标准能力</strong>——事后补救成本极高</li>
+  <li><strong>过度触发比不触发更难发现</strong>——负向触发用例比正向触发更重要</li>
+  <li><strong>能用代码判断的绝不用模型</strong>——Rubric 是补确定性评分的盲区,不是替代</li>
+  <li><strong>不通过比例阈值因 Agent 类型而异</strong>——知识库问答容忍度高,功能工具容忍度低</li>
+  <li><strong>过程评测比结果评测更通用</strong>——结果对但过程错=可解释性差=线上排障会难</li>
+</ol>
+
+<h2 id="关键金句-5-条">关键金句 5 条</h2>
+
+<ul>
+  <li>“Agent 的自主性带来了三个传统软件没有的问题:非确定性、黑盒化、错误级联放大”</li>
+  <li>“能用代码判断的绝不用模型,必要时用模型,人工用于校准”</li>
+  <li>“只测正例,Agent 可能学会’什么都触发’——过度触发比不触发更难发现”</li>
+  <li>“用例基线 = 单个用例执行 1 次后,经人工确认的预期过程和预期结果的快照”</li>
+  <li>“建议:在 Agent/Skill 设计阶段就将结构化 Trace 输出作为标准能力纳入,而非事后补救”</li>
+</ul>
+
+<h2 id="对-seetong-团队可借鉴动作-5-个">对 Seetong 团队可借鉴动作 5 个</h2>
+
+<ol>
+  <li><strong>建立”Seetong Agent 评测集”</strong> — 对每个 Skill(seetong-daily-briefing / seetong-tapd-version-review / seetong-batch-issue-rootcause-analysis / seetong-clarify / seetong-execute 等)都建”用例基线 + 评分规则 + 多轮稳定性评估”</li>
+  <li><strong>把 Trace 输出作为 Skill 设计阶段标准能力</strong> — 当前 Seetong skill 默认不输出结构化 trace,需要补;参考 Loonggg 2026-06 那套 worktree 模式</li>
+  <li><strong>设”过度触发比不触发更难发现”作为新 Skill 设计的硬规则</strong> — 每个 Skill 必须配负向触发用例(什么时候不应该触发)</li>
+  <li><strong>用例设计 5 步闭环作为 Seetong 内部 Agent SOP</strong> — design → rubric → baseline → execute → maintenance</li>
+  <li><strong>TPerf 项目作为基准参考</strong> — 腾讯 TEG 这套已在生产环境跑通,作为 Seetong Agent 评测体系的”先例”参考,不重复造轮子</li>
+</ol>
+
+<h2 id="关联图谱只画三段">关联图谱(只画三段)</h2>
+
+<p><strong>上游(基于 / 来自)</strong>:</p>
+<ul>
+  <li>[[Skill-Self-Evolution]] — Trace2Skill / EvoSkill / SkillOpt 都需要”评测指标”支撑,本套框架是上游基础</li>
+  <li>[[陈进-读完Agent-Loop工程手册]] — Agent Loop 范式跃迁的工程落地配套</li>
+  <li>[[阿里妹-端到端业务需求专家Agent-4层架构8步流程]] — 业务需求 Agent 设计与本评测体系互补</li>
+</ul>
+
+<p><strong>下游(应用于 / 验证于)</strong>:</p>
+<ul>
+  <li>[[用Agent评测思路管理AI-Coding-31万行代码AI重构实践]] — 同主线”用 Agent 评测做工程”</li>
+  <li>[[如何构建一个更”好”的知识库：RAGAS 三维度评估 + 8 步构建流程 + 前沿架构选型]] — RAGAS 三维度与本文五大维度是同主线</li>
+  <li>[[seetong-batch-issue-rootcause-analysis]] — Seetong 现成的批量 bug 根因分析场景,可直接套用本评测框架</li>
+  <li>[[seetong-daily-briefing]] — Seetong 每日简报,需要建用例基线(网络 -102 / 自动登录失败 / 注册成功率)</li>
+</ul>
+
+<p><strong>同级(横向 / 并列)</strong>:</p>
+<ul>
+  <li>[[清华沈阳-自进化AI新物种]] — 自进化 AI 也需要评测指标支撑</li>
+  <li>[[Multica-AI-Native-组织]] — Agent idle 率本身就是评测指标的一种</li>
+</ul>
+
+<h2 id="备注">备注</h2>
+
+<ul>
+  <li><strong>本套框架的特殊价值</strong>:这是 2026-06 在 01-ai-agents 主题下<strong>第一个完整的”Agent 评测工程实践”落地参考</strong>——之前只有理论/方法论(Skill 自进化 / Agent Loop 等),本篇是”如何在生产环境跑通”的实证</li>
+  <li><strong>可复用产物</strong>:评分模板、5 大维度 5 级严重性分级、3 类评分器优先级、5 步闭环 SOP、多轮稳定性评估的容忍阈值表</li>
+  <li><strong>未在文中出现但 TEG 团队反复强调的反问句</strong>:”你的 Agent/Skill 现在还在’跑通一次就好’,还是已经有了基线 + 评分规则 + 多轮验证?”</li>
+  <li><strong>本框架对 Seetong 团队的最大价值</strong>:不是技术方案,而是”没有测评会让团队陷入的被动局面”清单——为 Seetong Skill 自进化补上评测维度</li>
+</ul>
