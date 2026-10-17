@@ -419,6 +419,20 @@
 
 ---
 
+## 2026-10-17
+### ingest | 蒙克：AI时代最重要的两件事，建模和健身
+- 来源：微信公众号「哈佛商业评论」；文末署名刘玥；发布时间 2026-10-17 08:00；https://mp.weixin.qq.com/s/Z1Gsh2FXXOA_1ZAVhnDSpg
+- 抓取：`scripts/fetch_wechat_article.py` 返回完整正文且无“环境异常”；抓取器未输出模式字段，按首选路径记为 Playwright headless；正文 SHA-256 `83f3be6b0049536d5f9e82750e59320e5e6c44000ef3036baeec5f004e079a7e`。
+- 原文：raw/蒙克-AI时代最重要的两件事-建模和健身.md
+- 拆解：raw/蒙克-AI时代最重要的两件事-建模和健身-digest.md
+- wiki：wiki/06-ai-tech/蒙克-AI时代最重要的两件事-建模和健身.md
+- 索引：wiki/06-ai-tech/index.md、wiki/master-index.md。
+- 核心结论：AI 能力更新快于制度、组织和观念；价值兑现需要配套重构工作方式，并由人持续建模、感知现实、判断目标和承担责任。
+- 关联：[[06-ai-tech/麦肯锡-AI提效只是第一波红利]]、[[06-ai-tech/曾鸣-AI组织正在-远离-公司]]、[[06-ai-tech/经纬创投-李飞飞-当答案变得廉价]]、[[03-productivity/陈春花-从岗位到角色-AI时代组织设计的新逻辑]]、[[03-productivity/Capihom-Tom-Yeh-AI时代慢学习与学习能力]]。
+- 证据边界：电气化生产率故事及“近半个世纪”为文章转述，未回溯原论文；本文为新书观点解读，不将其对 AI、组织和认知训练的判断写成已验证的普遍规律。
+- 状态：published；原文正文完整归档，digest 含 7 个分析角度和 21 个钩子，wiki 含 8 个知识节点、有效内链及上游/下游/同级图谱。
+
+
 ## 2026-10-10
 ### ingest | 别只盯着 AI Coding，真正的变化发生在整个研发流程
 - 来源：https://mp.weixin.qq.com/s/s_AmjWIB57b7fQY_3VNkoQ

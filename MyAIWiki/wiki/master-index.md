@@ -1,6 +1,7 @@
 # AI 知识库索引
 
 ## 最近更新
+- [蒙克：AI时代最重要的两件事，建模和健身](./06-ai-tech/蒙克-AI时代最重要的两件事-建模和健身.md) — 2026-10-17
 - [Google Labs 副总裁：为什么每家公司都需要像实验室团队一样思考和运作](./06-ai-tech/LaterCast-Google-Labs-Josh-Woodward-实验室式团队.md) — 2026-10-12：AI 让"做出来"变廉价后，稀缺的是选对问题的判断、看懂早期反馈的眼力、走不通就转身的速度；9 节点（主修与辅修 / almost possible 清单 / 选对问题 / 看反应而非指标 / unlearning rate / 团队比负责人更早知道该停 / 小团队与音乐人式合作 / explosive endurance / 冲刺期与探索期）；关键事实为团队规模 5-7 人降至 2-3 人、部分项目转 3-5 次方向仍可能行不通；反直觉点为"人人都是创造者"被过度强调、早期不该看留存、AI 增强个人后合作能力更重要；Seetong 借鉴为建团队版 almost possible 清单、早期验证看反应、复盘记录转身次数；强关联 [[06-ai-tech/OpenAI-AI原生组织-4条工作原则]]、[[03-productivity/AI组织进化论-Codex负责人-AI原生工作法]]、[[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]]；分类 06-ai-tech（AI 原生组织 / 团队运作）；播客中文编译，引语为转述、未与英文原音逐句核对。
 - [实验室式团队 - 速读](./06-ai-tech/LaterCast-Google-Labs-Josh-Woodward-实验室式团队-digest.md) — 速查表、四个反直觉点与 Seetong 团队借鉴速读。
 - [别只盯着 AI Coding，真正的变化发生在整个研发流程](./02-ai-coding/别只盯着AICoding-真正的变化发生在整个研发流程.md) — 2026-10-10
