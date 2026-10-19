@@ -1,6 +1,8 @@
 # AI 知识库索引
 
 ## 最近更新
+- [Paul Graham：写作如何生成并检验思想](./05-content-creation/BillionWrites-Paul-Graham-写作与思考.md) — 2026-10-19：写作把复杂、模糊的想法外化、检验并继续生成；阅读的影响也会沉淀为认知模型。四篇原文中 AI 造成写作者分化是 Graham 的预测，公众号导读的“99%”没有来源依据。
+- [Paul Graham：写作如何生成并检验思想 - 拆解](../raw/BillionWrites-Paul-Graham-写作与思考-digest.md) — 5 个核心观点、7 个分析角度与 21 个开头钩子、最小实践和证据边界。
 - [蒙克：AI时代最重要的两件事，建模和健身](./06-ai-tech/蒙克-AI时代最重要的两件事-建模和健身.md) — 2026-10-17
 - [Google Labs 副总裁：为什么每家公司都需要像实验室团队一样思考和运作](./06-ai-tech/LaterCast-Google-Labs-Josh-Woodward-实验室式团队.md) — 2026-10-12：AI 让"做出来"变廉价后，稀缺的是选对问题的判断、看懂早期反馈的眼力、走不通就转身的速度；9 节点（主修与辅修 / almost possible 清单 / 选对问题 / 看反应而非指标 / unlearning rate / 团队比负责人更早知道该停 / 小团队与音乐人式合作 / explosive endurance / 冲刺期与探索期）；关键事实为团队规模 5-7 人降至 2-3 人、部分项目转 3-5 次方向仍可能行不通；反直觉点为"人人都是创造者"被过度强调、早期不该看留存、AI 增强个人后合作能力更重要；Seetong 借鉴为建团队版 almost possible 清单、早期验证看反应、复盘记录转身次数；强关联 [[06-ai-tech/OpenAI-AI原生组织-4条工作原则]]、[[03-productivity/AI组织进化论-Codex负责人-AI原生工作法]]、[[03-productivity/LaterCast-Netflix产品技术负责人-AI时代更需要系统型人才]]；分类 06-ai-tech（AI 原生组织 / 团队运作）；播客中文编译，引语为转述、未与英文原音逐句核对。
 - [实验室式团队 - 速读](./06-ai-tech/LaterCast-Google-Labs-Josh-Woodward-实验室式团队-digest.md) — 速查表、四个反直觉点与 Seetong 团队借鉴速读。
@@ -753,6 +755,8 @@
 - [知识库分层编排:从 RAG 到 Agent-native Knowledge Context Layer](./07-rag-systems/知识库分层编排-从RAG到Agent-native-KCL.md) - 板牙 2026-06-10 提出第 5 种范式「金字塔(Pyramid KB)」:5 层抽象分层(原则/架构/规范/实现/经验)+ 7 种有向边跨层关联 + 角色感知(架构师看 L1+L2 / 开发者看 L2-L4)+ 变更驱动更新;Pyramid+RAG Hit@3=89% vs Naive RAG 75%(200 条 QA / 831 篇源文档实测);类比法律体系 = 宪法/法律/规章/手册/判例 ⭐⭐⭐
 
 ### Content Creation
+- [Paul Graham：写作如何生成并检验思想](./05-content-creation/BillionWrites-Paul-Graham-写作与思考.md) - 写作外化并检验复杂问题中的推理；阅读会内化为认知模型；区分 Graham 的 AI 预测与公众号导读未证实的“99%”比例。
+- [Paul Graham：写作如何生成并检验思想 - 拆解](../raw/BillionWrites-Paul-Graham-写作与思考-digest.md) - 5 个核心观点、7 个分析角度与 21 个开头钩子、最小实践和证据边界。
 - [写作，会让一个人重新获得生活的力量](./05-content-creation/写作-会让一个人重新获得生活的力量.md) - 写作作为经验加工：把事实、选择、担忧和可控行动写开，将经历转成经验；与知识管理和表达打磨页面构成“材料-加工-表达”链条。
 - [写作，会让一个人重新获得生活的力量 - 速读](./05-content-creation/写作-会让一个人重新获得生活的力量-digest.md) - 困境、动作与获得结果速查表 + 三步练习。
 - [透明玻璃--写作的最高境界](./05-content-creation/透明玻璃-写作的最高境界.md) - 微信公众号 红豆范 2026-06 写作方法论:3 特征(精准/凝练/自然)+ 4 步骤(减法/工匠/规律/精准表达)+ 5 技巧(动作/具象/对话/短句/删过渡词)+ 1 警示(透明 ≠ 简陋 = 经历绚丽的简单 = 第三重境界);**"池塘生春草" 5 字 = 字字珠玑** ⭐⭐

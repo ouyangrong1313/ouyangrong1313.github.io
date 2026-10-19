@@ -419,6 +419,17 @@
 
 ---
 
+## 2026-10-19
+### ingest | Paul Graham：写作如何生成并检验思想
+- 来源：微信公众号「BillionWrites」；发布：2026-10-18 15:08；获取：2026-10-19；https://mp.weixin.qq.com/s/A1MqHECfhc-nDkrtdO-wQg
+- 抓取：`scripts/fetch_wechat_article.py` 返回完整正文；原始记录未标注具体命中路线；正文 SHA-256：`bd884b8ea567cd77003d03dfbea7d203c77bb90ce2d46fd718ca445481477033`
+- 原文：raw/BillionWrites-Paul-Graham-写作与思考.md
+- 拆解：raw/BillionWrites-Paul-Graham-写作与思考-digest.md
+- wiki：wiki/05-content-creation/BillionWrites-Paul-Graham-写作与思考.md
+- 标签： #主题/内容创作 #主题/写作方法论 #主题/思考工具 #主题/AI时代 #场景/公众号长文
+- 说明：归档 Paul Graham 2014、2022、2024 年四篇写作/阅读文章的公众号汇编与中文编译；整理 5 个核心观点、7 个分析角度与 21 个钩子。保留“写作促进复杂问题思考”的适用边界；公众号导读中的“99%”没有来源依据，未作为事实引用。
+
+
 ## 2026-10-17
 ### ingest | 蒙克：AI时代最重要的两件事，建模和健身
 - 来源：微信公众号「哈佛商业评论」；文末署名刘玥；发布时间 2026-10-17 08:00；https://mp.weixin.qq.com/s/Z1Gsh2FXXOA_1ZAVhnDSpg
