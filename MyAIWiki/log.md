@@ -420,6 +420,14 @@
 ---
 
 ## 2026-10-19
+### ingest | 2026 Agent 年中总结：从整体架构到关键细节
+- 来源：微信公众号「叶小钗」/ 叶小钗；发布：2026-10-19 09:00；获取：2026-10-19；https://mp.weixin.qq.com/s/cX3-i0N7HmV5aS3zNsCTsg
+- 抓取：`scripts/fetch_wechat_article.py` 返回完整正文；原始记录未标注具体命中路线；规范化纯空白表格分隔后正文 SHA-256：`349a5319ce1d001c23dd4bc41066e66e82a5e10b6aa75384f12b6b5c52fd9b84`
+- 原文：raw/叶小钗-2026-Agent年中总结-系统架构全景.md
+- 拆解：raw/叶小钗-2026-Agent年中总结-系统架构全景-digest.md
+- wiki：wiki/01-ai-agents/叶小钗-2026-Agent年中总结-系统架构全景.md
+- 标签： #主题/AI-Agent #主题/Harness工程 #主题/Agent运行时 #主题/Context-Engineering #主题/Agent-Skills #主题/Agent评测 #场景/公众号长文
+- 说明：编译 Agent 系统架构概览；保留作者实践未独立验证、142/144 消息与十万行订单属于示例、MCP/Agent Skills 规范未独立核验等边界。文末训练营推广未纳入提炼，原始正文已完整归档。
 ### ingest | Paul Graham：写作如何生成并检验思想
 - 来源：微信公众号「BillionWrites」；发布：2026-10-18 15:08；获取：2026-10-19；https://mp.weixin.qq.com/s/A1MqHECfhc-nDkrtdO-wQg
 - 抓取：`scripts/fetch_wechat_article.py` 返回完整正文；原始记录未标注具体命中路线；正文 SHA-256：`bd884b8ea567cd77003d03dfbea7d203c77bb90ce2d46fd718ca445481477033`
