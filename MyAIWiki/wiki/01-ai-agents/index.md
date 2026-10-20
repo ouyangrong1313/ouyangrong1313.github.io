@@ -1,5 +1,12 @@
 # AI Agents Wiki
 
+## Agent Skills 工具栈：按缺口分层（2026-10-20 新增）
+
+> 「AI大模型观察站」将 20 个仓库归入 Research、Engineering、Create、Grow + Ship 四层，主张按 Agent 工作流的能力缺口逐层补充。星数是发布时的近似快照，不能替代效果或安全验证。
+
+- [[01-ai-agents/AI大模型观察站-Agent-Skills-完整技术栈]] - **核心命题**“Skill 是工作方法和验证边界的可复用封装；应按缺失能力补齐，而非堆叠热门仓库”；**9 节点**（能力缺口选择 / 技能化工作方法 / 证据先行 / 仓库知识图谱 / 简洁决策阶梯 / 仓库级错误记忆 / 可检查创作 / 确定性执行分层 / 技能依赖治理）；与 [[01-ai-agents/agent-skills-systematic-survey]]、[[01-ai-agents/perplexity-agent-skills-design]]、[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]] 和 [[01-ai-agents/Skill-Self-Evolution]] 互补。列表与星数为文章选集，未独立核验。
+- [拆解](../../raw/AI大模型观察站-Agent-Skills-完整技术栈-digest.md) - 5 个核心观点、20 项工具与作者报告的近似星数、7 个分析角度与 21 个钩子、治理建议和证据边界。
+
 ## Agent 系统架构全景（2026-10-19 新增）
 
 > 叶小钗从客户跟进任务串联 Agent 的判断循环、Harness/Runtime/业务系统分工、工具反馈、上下文、Skill、多 Agent、长任务恢复与评测。文章中的作者实践未独立复现，消息版本与订单行数是解释性示例。

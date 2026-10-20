@@ -1,6 +1,8 @@
 # AI 知识库索引
 
 ## 最近更新
+- [20 个 AI Agent Skills：从研究到发布的能力栈](./01-ai-agents/AI大模型观察站-Agent-Skills-完整技术栈.md) — 2026-10-20：将 Research、Engineering、Create、Grow + Ship 组织为可选能力栈；建议按工作流缺口项目级引入，并审查权限、版本和验证。文中 Stars 为发布时近似快照。
+- [20 个 AI Agent Skills - 拆解](../raw/AI大模型观察站-Agent-Skills-完整技术栈-digest.md) — 5 个核心观点、20 个仓库及作者报告的星数快照、7 个分析角度与 21 个钩子、证据边界。
 - [2026 Agent 年中总结：从整体架构到关键细节](./01-ai-agents/叶小钗-2026-Agent年中总结-系统架构全景.md) — 2026-10-19：以客户跟进为线索，说明 Agent 判断、工具、上下文、Skill、状态恢复与评测如何组成可验证的执行系统；案例来自作者叙述，示例数据并非实测。
 - [2026 Agent 年中总结 - 拆解](../raw/叶小钗-2026-Agent年中总结-系统架构全景-digest.md) — 5 个核心观点、7 个分析角度与 21 个开头钩子、最小实践和证据边界。
 - [Paul Graham：写作如何生成并检验思想](./05-content-creation/BillionWrites-Paul-Graham-写作与思考.md) — 2026-10-19：写作把复杂、模糊的想法外化、检验并继续生成；阅读的影响也会沉淀为认知模型。四篇原文中 AI 造成写作者分化是 Graham 的预测，公众号导读的“99%”没有来源依据。
@@ -572,6 +574,8 @@
 
 ### AI Agents
 
+- [20 个 AI Agent Skills：从研究到发布的能力栈](./01-ai-agents/AI大模型观察站-Agent-Skills-完整技术栈.md) - 20 个仓库按 Research、Engineering、Create、Grow + Ship 分层；推荐按缺口选择，星数为文章快照。
+- [20 个 AI Agent Skills - 拆解](../raw/AI大模型观察站-Agent-Skills-完整技术栈-digest.md) - 20 项工具目录、作者报告的近似星数与安全边界速查。
 - [2026 Agent 年中总结：从整体架构到关键细节](./01-ai-agents/叶小钗-2026-Agent年中总结-系统架构全景.md) - Harness、Runtime、业务系统、上下文、Skill 与评测的职责概览；作者案例未独立复现。
 - [2026 Agent 年中总结 - 拆解](../raw/叶小钗-2026-Agent年中总结-系统架构全景-digest.md) - 5 个核心观点、7 个分析角度与 21 个开头钩子、最小实践和证据边界。
 - [Datawhale：Anthropic AAR 自动化对齐研究](./01-ai-agents/Datawhale-AAR自动化对齐研究员.md) - 研究代理、独立评分、候选多样性与防刷分隔离；特定论文实验不外推为通用研究能力。

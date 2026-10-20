@@ -419,6 +419,17 @@
 
 ---
 
+## 2026-10-20
+### ingest | 20 个 AI Agent Skills：从研究到发布的能力栈
+- 来源：微信公众号「AI大模型观察站」；发布：2026-10-07 16:36；获取：2026-10-20；https://mp.weixin.qq.com/s/SDbA2-lw_yLl9nzP8wp5XQ
+- 抓取：`scripts/fetch_wechat_article.py` 返回完整正文；原始记录未标注具体命中路线；正文 SHA-256：`03342019c8b90d83fcbfb4666a28cafe44eb0148f44a4b687296b9a6e0c7d05e`
+- 原文：raw/AI大模型观察站-Agent-Skills-完整技术栈.md
+- 拆解：raw/AI大模型观察站-Agent-Skills-完整技术栈-digest.md
+- wiki：wiki/01-ai-agents/AI大模型观察站-Agent-Skills-完整技术栈.md
+- 标签： #主题/AI-Agent #主题/Agent-Skills #主题/Agent工程化 #主题/工具链 #主题/上下文工程 #主题/评测 #场景/公众号长文
+- 说明：归档 20 个 Agent Skills 仓库的 Research、Engineering、Create、Grow + Ship 分层目录，并整理按缺口选择能力、检查 Skill 权限与验证产物的方法。Stars 为文章在发布时报告的近似值，未独立复核；未对仓库做安全审计。
+
+
 ## 2026-10-19
 ### ingest | 2026 Agent 年中总结：从整体架构到关键细节
 - 来源：微信公众号「叶小钗」/ 叶小钗；发布：2026-10-19 09:00；获取：2026-10-19；https://mp.weixin.qq.com/s/cX3-i0N7HmV5aS3zNsCTsg
