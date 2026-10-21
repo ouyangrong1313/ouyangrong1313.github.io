@@ -420,9 +420,6 @@
 ---
 
 ## 2026-10-21
-### preference | HTML 评估页路径
-- 用户偏好：交付本地 HTML 评估页时，同时提供可点击链接和完整 `file:///...` 路径，方便直接用浏览器打开。
-
 ### ingest | AI时代-软件的终局
 - 来源：微信公众号「人月聊IT」；发布：2026-10-20 10:34；获取：2026-10-21；https://mp.weixin.qq.com/s/gh5fGO_iZmtWsy1zqmqBOg
 - 抓取：`scripts/fetch_wechat_article.py`；Playwright 首选路径成功，抓取器未输出显式模式字段；正文 SHA-256：`03727c893451970606cff5906dd36ada26e0ec6f96404c1b73a7ceac4bf2d993`
