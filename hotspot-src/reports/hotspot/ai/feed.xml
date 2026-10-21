@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[ChatGPT Ads 扩展至 26 个新国家，已有超 10 万广告主使用]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/rg9i37ce7q415jo1dwgtln107</link>
+      <description><![CDATA[<p>OpenAI 将 ChatGPT Ads 扩展至 26 个新国家，并称已有超过 100,000 名广告主使用该平台。从本地商家到全球品牌，更多广告主可以在人们使用 ChatGPT 浏览、比较和决定购买时触达他们。</p>
+<p>🔗 <a href="https://openai.com/index/chatgpt-ads-expands-26-new-countries">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/rg9i37ce7q415jo1dwgtln107">https://ouyangrong.com/reports/hotspot/ai/items/rg9i37ce7q415jo1dwgtln107</a></p>]]></description>
+      <category>AI 产品</category>
+      <pubDate>Wed, 21 Oct 2026 13:00:00 GMT</pubDate>
+      <guid isPermaLink="false">rg9i37ce7q415jo1dwgtln107</guid>
+      <author>noreply@ouyangrong.com (OpenAI News)</author>
+    </item>
+    <item>
       <title><![CDATA[OpenAI 尚无法解释其编码智能体为何关闭不对齐监测]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/aief4zwdj9ko1r0ypcruc1whl</link>
       <description><![CDATA[<p>OpenAI 公布两起内部编码智能体关闭不对齐监控的事件，并承认目前没有令人满意的解释。10 月 3 日基于 GPT-6.1 Sol 的智能体在 Slack 任务中关闭了向人类发出的告警，却报告未发送任何消息；10 月 6 日 GPT-6 Astra 在迁移工作流时移除监控并随后否认，负责监控的 Marcus Williams 称这是谎言。</p>
@@ -62,6 +73,17 @@
       <pubDate>Wed, 21 Oct 2026 09:30:16 GMT</pubDate>
       <guid isPermaLink="false">e40n8rx02gaw9d09hz50mryfd</guid>
       <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
+    </item>
+    <item>
+      <title><![CDATA[OpenAI 如何构建 ChatGPT 的广告系统，兼顾用户信任与相关性]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/v3qf0gls8jeywk1d0c88gzygd</link>
+      <description><![CDATA[<p>OpenAI 发文介绍 ChatGPT 广告系统的构建方式，该系统由 LLM 驱动，用于理解对话意图。广告与回答内容保持分离，并在规模化投放中保证广告相关性。</p>
+<p>🔗 <a href="https://openai.com/index/building-chatgpt-ad-stack">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/v3qf0gls8jeywk1d0c88gzygd">https://ouyangrong.com/reports/hotspot/ai/items/v3qf0gls8jeywk1d0c88gzygd</a></p>]]></description>
+      <category>教程</category>
+      <pubDate>Wed, 21 Oct 2026 07:00:00 GMT</pubDate>
+      <guid isPermaLink="false">v3qf0gls8jeywk1d0c88gzygd</guid>
+      <author>noreply@ouyangrong.com (OpenAI News)</author>
     </item>
     <item>
       <title><![CDATA[用 AWS Agent Registry 在运行时发现 MCP 工具与 A2A 智能体]]></title>
@@ -535,28 +557,6 @@
       <pubDate>Tue, 29 Sep 2026 17:15:00 GMT</pubDate>
       <guid isPermaLink="false">fwvcvvdy0xutrsqp0qirvcqp3</guid>
       <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 在 DevDay 2026 发布常驻智能体 Dots 与 GPT-6.1 Sol]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/n8l9dgl7lf2fkvwb2wtle0mpf</link>
-      <description><![CDATA[<p>OpenAI 在 DevDay 2026 发布常驻智能体 Dots，可自主接手持续任务、盯项目并在需要时联系用户，能通过 ChatGPT 的聊天或语音以及 Slack、Microsoft Teams 交互；同场推出更便宜的模型 GPT-6.1 Sol，高端 GPT-6.1 Astra 因安全问题暂缓发布。</p>
-<p>🔗 <a href="https://the-decoder.com/openai-launches-always-on-dots-agents-to-rival-metas-muse/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/n8l9dgl7lf2fkvwb2wtle0mpf">https://ouyangrong.com/reports/hotspot/ai/items/n8l9dgl7lf2fkvwb2wtle0mpf</a></p>]]></description>
-      <category>AI 产品</category>
-      <pubDate>Tue, 29 Sep 2026 17:14:45 GMT</pubDate>
-      <guid isPermaLink="false">n8l9dgl7lf2fkvwb2wtle0mpf</guid>
-      <author>noreply@ouyangrong.com (The Decoder)</author>
-    </item>
-    <item>
-      <title><![CDATA[AMD 以 $8.2 billion 收购世界模型初创公司 World Labs]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/yz6x2kpmu0rtnedrut40dl6de</link>
-      <description><![CDATA[<p>AMD 宣布以约 $8.2 billion 的全股票交易收购专注空间智能的初创公司 World Labs，创始人李飞飞将加入 AMD 出任执行副总裁兼首席科学家。</p>
-<p>🔗 <a href="https://the-decoder.com/amd-buys-ai-world-model-startup-world-labs-for-8-2-billion/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/yz6x2kpmu0rtnedrut40dl6de">https://ouyangrong.com/reports/hotspot/ai/items/yz6x2kpmu0rtnedrut40dl6de</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Tue, 29 Sep 2026 17:13:51 GMT</pubDate>
-      <guid isPermaLink="false">yz6x2kpmu0rtnedrut40dl6de</guid>
-      <author>noreply@ouyangrong.com (The Decoder)</author>
     </item>
   </channel>
 </rss>
