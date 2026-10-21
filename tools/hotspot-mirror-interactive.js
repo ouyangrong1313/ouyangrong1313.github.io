@@ -14,9 +14,11 @@
   var CONFIG = window.__HOTSPOT_MIRROR__ || {};
   var BASE = CONFIG.base || "";
   var SITE = CONFIG.site || "安防";
+  var SITE_KEY = CONFIG.slug || SITE;
   var STR = CONFIG.strings || {};
-  var STORE = "aihot-starred-items";
-  var DRAFT = "aihot-feedback-draft";
+  // Both mirrors share ouyangrong.com, so unprefixed storage mixes AI and security bookmarks.
+  var STORE = "aihot-starred-items:" + SITE_KEY;
+  var DRAFT = "aihot-feedback-draft:" + SITE_KEY;
 
   function $(sel, root) { return (root || document).querySelector(sel); }
   function $$(sel, root) { return Array.prototype.slice.call((root || document).querySelectorAll(sel)); }
@@ -97,13 +99,20 @@
     });
     syncStarButtons();
   }
-  /* Card-level star buttons on feed pages: every article gets one.
-     Skipped on detail pages, where the articles are related-story previews and the page already has
-     its own 收藏 button in the toolbar and the right rail. */
+  function syncCardStar(btn, on) {
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+    btn.setAttribute("title", on ? "取消收藏" : "收藏");
+    btn.style.color = on ? "var(--accent)" : "";
+    var svg = $("svg", btn);
+    if (svg) svg.style.fill = on ? "currentColor" : "none";
+  }
+
+  /* The SSR feed already renders a star control in every card. Bind that control rather than
+     looking only for cards without one; otherwise every visible star click is inert. */
   function attachCardStars() {
     if (currentItemId()) return;
     $$("article").forEach(function (card) {
-      if (card.__mhStar || $('button[aria-label="收藏"]', card)) return;
+      if (card.__mhStar) return;
       card.__mhStar = true;
       var link = $('a[href*="/items/"]', card);
       if (!link) return;
@@ -111,24 +120,25 @@
       if (!m) return;
       var id = m[1];
       var title = txt($("h3", card)) || txt(link);
-      var btn = document.createElement("button");
-      btn.type = "button";
-      btn.setAttribute("aria-label", "收藏");
-      btn.style.cssText = "position:absolute;top:8px;right:8px;z-index:5;width:30px;height:30px;border-radius:50%;" +
-        "border:1px solid var(--line,#e5e5e5);background:var(--surface,#fff);cursor:pointer;color:var(--ink-4,#999);font-size:14px;line-height:1";
-      btn.textContent = "☆";
-      var on = isStarred(id);
-      if (on) { btn.textContent = "★"; btn.style.color = "var(--accent)"; }
+      var btn = $('button[aria-label="收藏"]', card);
+      if (!btn) {
+        btn = document.createElement("button");
+        btn.type = "button";
+        btn.setAttribute("aria-label", "收藏");
+        btn.style.cssText = "position:absolute;top:8px;right:8px;z-index:5;width:30px;height:30px;border-radius:50%;" +
+          "border:1px solid var(--line,#e5e5e5);background:var(--surface,#fff);cursor:pointer;color:var(--ink-4,#999);font-size:14px;line-height:1";
+        if (getComputedStyle(card).position === "static") card.style.position = "relative";
+        card.appendChild(btn);
+      }
+      syncCardStar(btn, isStarred(id));
       btn.addEventListener("click", function (ev) {
         ev.preventDefault();
         ev.stopPropagation();
         var now = toggleStar(id, title);
-        btn.textContent = now ? "★" : "☆";
-        btn.style.color = now ? "var(--accent)" : "var(--ink-4,#999)";
+        if (!btn.querySelector("svg")) btn.textContent = now ? "★" : "☆";
+        syncCardStar(btn, now);
         toast(now ? "已收藏" : "已取消收藏");
       });
-      if (getComputedStyle(card).position === "static") card.style.position = "relative";
-      card.appendChild(btn);
     });
   }
 
@@ -410,12 +420,171 @@
         ev.preventDefault();
         var input = $('input[name="q"]');
         if (input) { input.focus(); input.scrollIntoView({ block: "center" }); }
-        else runSearch(window.prompt("搜索标题、摘要：", "") || "");
+        else openSearchDialog();
+      });
+    });
+    $$('button[aria-label="搜索"]').forEach(function (button) {
+      if (button.__mhSearch) return;
+      button.__mhSearch = true;
+      button.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        var input = $('input[name="q"]');
+        if (input && input.getClientRects().length) {
+          input.scrollIntoView({ block: "center" });
+          input.focus();
+          return;
+        }
+        openSearchDialog();
       });
     });
     var params = new URLSearchParams(location.search);
     var q = params.get("q");
     if (q) runSearch(q);
+  }
+
+  function openSearchDialog() {
+    var existing = $("#mh-search-dialog");
+    if (existing) {
+      $("input", existing).focus();
+      return;
+    }
+    var wrap = document.createElement("div");
+    wrap.id = "mh-search-dialog";
+    wrap.style.cssText = "position:fixed;inset:0;z-index:9998;background:rgba(8,14,15,.48);" +
+      "display:flex;align-items:flex-start;justify-content:center;padding:max(72px,env(safe-area-inset-top)) 16px 16px";
+    var form = document.createElement("form");
+    form.setAttribute("role", "search");
+    form.style.cssText = "display:flex;gap:8px;width:min(100%,560px);padding:12px;border-radius:14px;" +
+      "background:var(--surface,#fff);box-shadow:0 18px 60px rgba(0,0,0,.24)";
+    var input = document.createElement("input");
+    input.type = "search";
+    input.placeholder = "搜索标题、摘要…";
+    input.setAttribute("aria-label", "搜索标题、摘要");
+    input.style.cssText = "min-width:0;flex:1;height:44px;border:1px solid var(--line,#ddd);border-radius:10px;" +
+      "padding:0 13px;background:var(--surface,#fff);color:var(--ink,#111);font:inherit;outline:none";
+    var submit = document.createElement("button");
+    submit.type = "submit";
+    submit.textContent = "搜索";
+    submit.style.cssText = "height:44px;padding:0 18px;border:0;border-radius:10px;background:var(--accent,#111);" +
+      "color:#fff;font:inherit;font-weight:700;cursor:pointer";
+    var close = document.createElement("button");
+    close.type = "button";
+    close.textContent = "关闭";
+    close.style.cssText = "height:44px;padding:0 12px;border:1px solid var(--line,#ddd);border-radius:10px;" +
+      "background:transparent;color:inherit;font:inherit;cursor:pointer";
+    form.appendChild(input);
+    form.appendChild(submit);
+    form.appendChild(close);
+    wrap.appendChild(form);
+    document.body.appendChild(wrap);
+    close.addEventListener("click", function () { wrap.remove(); });
+    wrap.addEventListener("click", function (ev) { if (ev.target === wrap) wrap.remove(); });
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var q = input.value.trim();
+      wrap.remove();
+      runSearch(q);
+    });
+    setTimeout(function () { input.focus(); }, 0);
+  }
+
+  /* ---------- feed controls ---------- */
+  function attachFeedFilters() {
+    var filters = Array.isArray(CONFIG.filters) ? CONFIG.filters : [];
+    $$('button[aria-label^="筛选"]').forEach(function (button) {
+      if (button.__mhFilter) return;
+      button.__mhFilter = true;
+      button.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        openFilterDialog(filters);
+      });
+    });
+  }
+
+  function openFilterDialog(filters) {
+    var existing = $("#mh-filter-dialog");
+    if (existing) return;
+    var wrap = document.createElement("div");
+    wrap.id = "mh-filter-dialog";
+    wrap.style.cssText = "position:fixed;inset:0;z-index:9998;background:rgba(8,14,15,.5);" +
+      "display:flex;align-items:flex-end;justify-content:center";
+    var panel = document.createElement("section");
+    panel.setAttribute("role", "dialog");
+    panel.setAttribute("aria-modal", "true");
+    panel.setAttribute("aria-label", "筛选");
+    panel.style.cssText = "width:min(100%,620px);max-height:82vh;overflow:auto;padding:20px 20px calc(20px + env(safe-area-inset-bottom));" +
+      "border-radius:18px 18px 0 0;background:var(--surface,#fff);color:var(--ink,#111);box-shadow:0 -18px 60px rgba(0,0,0,.24)";
+    var head = document.createElement("div");
+    head.style.cssText = "display:flex;align-items:center;justify-content:space-between;margin-bottom:12px";
+    var title = document.createElement("h2");
+    title.textContent = "筛选";
+    title.style.cssText = "margin:0;font-size:18px;font-weight:700";
+    var close = document.createElement("button");
+    close.type = "button";
+    close.textContent = "关闭";
+    close.style.cssText = "border:0;background:transparent;color:var(--ink-3,#666);font:inherit;cursor:pointer;padding:8px";
+    head.appendChild(title);
+    head.appendChild(close);
+    panel.appendChild(head);
+    var list = document.createElement("div");
+    list.style.cssText = "display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px";
+    filters.forEach(function (filter) {
+      var a = document.createElement("a");
+      a.href = filter.href;
+      a.textContent = filter.label;
+      var active = location.pathname === new URL(filter.href, location.origin).pathname;
+      a.setAttribute("aria-current", active ? "page" : "false");
+      a.style.cssText = "display:flex;min-height:46px;align-items:center;justify-content:center;padding:8px 12px;" +
+        "border:1px solid var(--line,#ddd);border-radius:10px;text-decoration:none;color:inherit;font-weight:600;" +
+        (active ? "background:var(--accent-soft,#e8f5ee);color:var(--accent,#176b52);" : "background:var(--surface,#fff);");
+      list.appendChild(a);
+    });
+    panel.appendChild(list);
+    wrap.appendChild(panel);
+    document.body.appendChild(wrap);
+    close.addEventListener("click", function () { wrap.remove(); });
+    wrap.addEventListener("click", function (ev) { if (ev.target === wrap) wrap.remove(); });
+  }
+
+  function attachDayToggles() {
+    $$('button[aria-expanded]').forEach(function (button) {
+      var label = button.getAttribute("aria-label") || txt(button);
+      if (!/^(展开|收起).+\d{1,2}月\d{1,2}日/.test(label)) return;
+      if (button.__mhDayToggle) return;
+      button.__mhDayToggle = true;
+      button.addEventListener("click", function (ev) {
+        ev.preventDefault();
+        var section = button.closest("section");
+        if (!section) return;
+        var list = $("ol", section);
+        if (!list) return;
+        var expanded = button.getAttribute("aria-expanded") === "true";
+        list.hidden = expanded;
+        $$('button[aria-expanded]', section).forEach(function (other) {
+          var otherLabel = other.getAttribute("aria-label") || "";
+          if (!/^(展开|收起)/.test(otherLabel)) return;
+          other.setAttribute("aria-expanded", expanded ? "false" : "true");
+          other.setAttribute("aria-label", otherLabel.replace(/^(展开|收起)/, expanded ? "展开" : "收起"));
+        });
+      });
+    });
+  }
+
+  function attachBackToTop() {
+    var button = $('button[aria-label="回到顶部"]');
+    if (!button || button.__mhTop) return;
+    button.__mhTop = true;
+    function sync() {
+      var show = window.scrollY > 480;
+      button.classList.toggle("pointer-events-none", !show);
+      button.classList.toggle("translate-y-2", !show);
+      button.classList.toggle("opacity-0", !show);
+    }
+    button.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    });
+    window.addEventListener("scroll", sync, { passive: true });
+    sync();
   }
 
   /* ---------- 反馈 ---------- */
@@ -692,6 +861,9 @@
     attachDetailStars();
     attachCardStars();
     attachSearch();
+    attachFeedFilters();
+    attachDayToggles();
+    attachBackToTop();
     attachFeedback();
     attachTheme();
     attachSectionTabs();
