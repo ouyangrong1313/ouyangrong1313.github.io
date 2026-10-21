@@ -419,6 +419,19 @@
 
 ---
 
+## 2026-10-21
+### ingest | AI时代-软件的终局
+- 来源：微信公众号「人月聊IT」；发布：2026-10-20 10:34；获取：2026-10-21；https://mp.weixin.qq.com/s/gh5fGO_iZmtWsy1zqmqBOg
+- 抓取：`scripts/fetch_wechat_article.py`；Playwright 首选路径成功，抓取器未输出显式模式字段；正文 SHA-256：`03727c893451970606cff5906dd36ada26e0ec6f96404c1b73a7ceac4bf2d993`
+- 原文：raw/人月聊IT-AI时代软件终局.md
+- 拆解：raw/人月聊IT-AI时代软件终局-digest.md
+- wiki：wiki/01-ai-agents/人月聊IT-AI时代软件终局.md
+- 标签： #主题/AI-Agent #主题/软件架构 #主题/Agent-Skills #主题/本体工程 #主题/人机交互 #场景/公众号长文
+- 核心命题：软件可能由预设界面和业务烟囱转向对象语义、可复用能力与受治理 Agent；原文为趋势观点，缺少实证和迁移数据。
+- 关联：[[01-ai-agents/源泉TheFountainhead-从GUI到AI-Native-产品接目标界面换职责]]、[[01-ai-agents/若飞-Agent如何理解业务-把对象-状态和权限接进执行流程]]、[[01-ai-agents/DataFunTalk-Graph-Engineering-从Harness到Ontology]]、[[07-rag-systems/架构师-若飞-企业知识库本体论解决什么问题]]。
+- 状态：published；含完整原文、正文哈希、7 个分析角度与 21 个开头钩子；编译页保留趋势判断、替代解释和最小验证路径。
+
+
 ## 2026-10-20
 ### ingest | 20 个 AI Agent Skills：从研究到发布的能力栈
 - 来源：微信公众号「AI大模型观察站」；发布：2026-10-07 16:36；获取：2026-10-20；https://mp.weixin.qq.com/s/SDbA2-lw_yLl9nzP8wp5XQ
