@@ -546,6 +546,70 @@
     wrap.addEventListener("click", function (ev) { if (ev.target === wrap) wrap.remove(); });
   }
 
+  function attachTagFilters() {
+    var clear = null;
+    function restore() {
+      $$("article").forEach(function (article) { article.hidden = false; });
+      $$("section[aria-label]").forEach(function (section) { section.hidden = false; });
+      var bar = $("#mh-tag-filter");
+      if (bar) bar.remove();
+      clear = null;
+    }
+    function apply(tag) {
+      var needle = "#" + tag;
+      var visible = 0;
+      $$("article").forEach(function (article) {
+        var match = txt(article).indexOf(needle) >= 0;
+        article.hidden = !match;
+        if (match) visible += 1;
+      });
+      $$("section[aria-label]").forEach(function (section) {
+        section.hidden = !$("article:not([hidden])", section);
+      });
+      var old = $("#mh-tag-filter");
+      if (old) old.remove();
+      var bar = document.createElement("div");
+      bar.id = "mh-tag-filter";
+      bar.style.cssText = "position:fixed;left:50%;top:max(64px,calc(env(safe-area-inset-top) + 12px));transform:translateX(-50%);" +
+        "z-index:9997;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 24px);padding:8px 10px 8px 14px;" +
+        "border:1px solid var(--line,#ddd);border-radius:999px;background:var(--surface,#fff);color:var(--ink,#111);" +
+        "box-shadow:0 10px 30px rgba(0,0,0,.16);font-size:13px;white-space:nowrap";
+      var label = document.createElement("span");
+      label.textContent = "已筛选 #" + tag + " · " + visible + " 条";
+      label.style.cssText = "overflow:hidden;text-overflow:ellipsis";
+      var button = document.createElement("button");
+      button.type = "button";
+      button.textContent = "清除";
+      button.style.cssText = "border:0;border-radius:999px;padding:5px 9px;background:var(--bg-sunk,#f2f2f2);color:inherit;font:inherit;cursor:pointer";
+      button.addEventListener("click", restore);
+      bar.appendChild(label);
+      bar.appendChild(button);
+      document.body.appendChild(bar);
+      clear = restore;
+      window.scrollTo({ top: Math.max(0, (($("main") || document.body).offsetTop || 0)), behavior: "auto" });
+    }
+    $$('span[href*="tag="]').forEach(function (tagLink) {
+      if (tagLink.__mhTag) return;
+      tagLink.__mhTag = true;
+      var href = tagLink.getAttribute("href") || "";
+      var tag = new URL(href, location.origin).searchParams.get("tag");
+      if (!tag) return;
+      tagLink.setAttribute("role", "button");
+      tagLink.setAttribute("tabindex", "0");
+      tagLink.style.cursor = "pointer";
+      function activate(ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        if (clear) restore();
+        apply(tag);
+      }
+      tagLink.addEventListener("click", activate);
+      tagLink.addEventListener("keydown", function (ev) {
+        if (ev.key === "Enter" || ev.key === " ") activate(ev);
+      });
+    });
+  }
+
   function attachDayToggles() {
     $$('button[aria-expanded]').forEach(function (button) {
       var label = button.getAttribute("aria-label") || txt(button);
@@ -862,6 +926,7 @@
     attachCardStars();
     attachSearch();
     attachFeedFilters();
+    attachTagFilters();
     attachDayToggles();
     attachBackToTop();
     attachFeedback();
