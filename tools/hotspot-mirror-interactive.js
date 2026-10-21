@@ -610,6 +610,42 @@
     });
   }
 
+  function attachTopicFilter() {
+    var topic = new URLSearchParams(location.search).get("topic");
+    if (!topic) return;
+    var terms = topic.toLowerCase().split(/[\s/|、，,]+/).filter(function (word) {
+      return word.length > 1 && ["the", "and", "ai"].indexOf(word) < 0;
+    });
+    if (!terms.length) terms = [topic.toLowerCase()];
+    var visible = 0;
+    $$("article").forEach(function (article) {
+      var body = txt(article).toLowerCase();
+      var match = terms.some(function (word) { return body.indexOf(word) >= 0; });
+      article.hidden = !match;
+      if (match) visible += 1;
+    });
+    $$("section[aria-label]").forEach(function (section) {
+      section.hidden = !$("article:not([hidden])", section);
+    });
+    var bar = document.createElement("div");
+    bar.id = "mh-topic-filter";
+    bar.style.cssText = "position:fixed;left:50%;top:max(64px,calc(env(safe-area-inset-top) + 12px));transform:translateX(-50%);" +
+      "z-index:9997;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 24px);padding:8px 10px 8px 14px;" +
+      "border:1px solid var(--line,#ddd);border-radius:999px;background:var(--surface,#fff);color:var(--ink,#111);" +
+      "box-shadow:0 10px 30px rgba(0,0,0,.16);font-size:13px;white-space:nowrap";
+    var label = document.createElement("span");
+    label.textContent = topic + " · " + visible + " 条";
+    label.style.cssText = "overflow:hidden;text-overflow:ellipsis";
+    var clear = document.createElement("button");
+    clear.type = "button";
+    clear.textContent = "清除";
+    clear.style.cssText = "border:0;border-radius:999px;padding:5px 9px;background:var(--bg-sunk,#f2f2f2);color:inherit;font:inherit;cursor:pointer";
+    clear.addEventListener("click", function () { location.href = BASE + "/all/"; });
+    bar.appendChild(label);
+    bar.appendChild(clear);
+    document.body.appendChild(bar);
+  }
+
   function attachDayToggles() {
     $$('button[aria-expanded]').forEach(function (button) {
       var label = button.getAttribute("aria-label") || txt(button);
@@ -630,6 +666,53 @@
           other.setAttribute("aria-expanded", expanded ? "false" : "true");
           other.setAttribute("aria-label", otherLabel.replace(/^(展开|收起)/, expanded ? "展开" : "收起"));
         });
+      });
+    });
+  }
+
+  /* React Router renders some Link components as span[href] in the SSR snapshot. They keep the
+     visual affordance but have no native navigation, including 精选 / 日报日期 / 周报 / 月报 /
+     往期记录. Bind every remaining pseudo-link to a real page transition. */
+  function attachRouteLinks() {
+    $$('[href]').forEach(function (el) {
+      if (el.tagName === "A" || el.tagName === "LINK" || el.tagName === "USE" || el.__mhRoute) return;
+      var href = el.getAttribute("href") || "";
+      if (!href || href.charAt(0) === "#" || /[?&]tag=/.test(href)) return;
+      el.__mhRoute = true;
+      el.setAttribute("role", "link");
+      el.setAttribute("tabindex", "0");
+      el.style.cursor = "pointer";
+      function go(ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        var url;
+        try { url = new URL(href, location.origin); } catch (e) { return; }
+        if (url.origin !== location.origin) {
+          location.href = url.href;
+          return;
+        }
+        var relativePath = url.pathname.replace(/^\/+|\/+$/g, "");
+        if ((CONFIG.unavailable || []).indexOf(relativePath) >= 0) {
+          toast("该入口在线源暂不可用");
+          return;
+        }
+        if (url.pathname === "/" || (url.pathname.indexOf(BASE + "/") !== 0 && url.pathname !== BASE)) {
+          url.pathname = BASE + (url.pathname === "/" ? "/" : url.pathname.replace(/\/?$/, "/"));
+        }
+        if (url.searchParams.get("search") === "1") {
+          var input = $('input[name="q"]');
+          if (input) {
+            history.replaceState(history.state, "", location.pathname + location.search);
+            input.focus();
+            input.scrollIntoView({ behavior: "smooth", block: "center" });
+            return;
+          }
+        }
+        location.href = url.href;
+      }
+      el.addEventListener("click", go);
+      el.addEventListener("keydown", function (ev) {
+        if (ev.key === "Enter" || ev.key === " ") go(ev);
       });
     });
   }
@@ -754,7 +837,7 @@
     /* Query-string links that a static host cannot answer: strip them so the page still loads. */
     $$('a[href*="?"]').forEach(function (a) {
       var href = a.getAttribute("href") || "";
-      if (href.indexOf(BASE) === 0 && href.indexOf("?") > 0 && !/channel=|category=/.test(href)) {
+      if (href.indexOf(BASE) === 0 && href.indexOf("?") > 0 && !/(?:channel|category|topic)=/.test(href)) {
         a.setAttribute("href", href.split("?")[0]);
       }
     });
@@ -927,6 +1010,8 @@
     attachSearch();
     attachFeedFilters();
     attachTagFilters();
+    attachTopicFilter();
+    attachRouteLinks();
     attachDayToggles();
     attachBackToTop();
     attachFeedback();
