@@ -86,9 +86,9 @@
       <author>noreply@ouyangrong.com (Microsoft Research)</author>
     </item>
     <item>
-      <title><![CDATA[NVIDIA 扩展 Nemotron 家族，发布 120B 参数开源多模态模型 Super VL 与端侧 Bolt 模型]]></title>
+      <title><![CDATA[NVIDIA 发布 120B Nemotron 3.5 Super VL 及两款 Bolt 端侧模型]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/ha6dshyy6a76nzmycqtgy9d6e</link>
-      <description><![CDATA[<p>NVIDIA 发布 Nemotron 3.5 Super VL，一款 120B 参数的开源多模态模型，面向高频常驻智能体任务，官方称其吞吐量比同级次优模型快 5 倍。</p>
+      <description><![CDATA[<p>NVIDIA 发布 120B 参数的开源多模态模型 Nemotron 3.5 Super VL，主打常驻智能体任务，吞吐最高为同类模型的 5 倍。同系列还推出端侧 Nemotron 3.5 Bolt 74B-A9B 24GB 与 Bolt E4B 4GB，前者已上线，后者将于 10 月 23 日推出。</p>
 <p>🔗 <a href="https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/">阅读原文</a></p>
 <p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ha6dshyy6a76nzmycqtgy9d6e">https://ouyangrong.com/reports/hotspot/ai/items/ha6dshyy6a76nzmycqtgy9d6e</a></p>]]></description>
       <category>AI 模型</category>
