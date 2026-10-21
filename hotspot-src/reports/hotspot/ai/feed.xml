@@ -9,6 +9,39 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[NVIDIA 在 GTC Berlin 更新 RTX Spark、DGX Spark 与 DGX Station 本地 AI 产品线]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/mammdh1206wcm5vlpy172bbeq</link>
+      <description><![CDATA[<p>NVIDIA 在 GTC Berlin 公布 RTX Spark、DGX Spark 与 DGX Station 的本地 AI 更新，涉及硬件出货时间、新模型适配与推理加速。</p>
+<p>🔗 <a href="https://blogs.nvidia.com/blog/local-ai-gtc-rtx-dgx-spark-station-sync/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/mammdh1206wcm5vlpy172bbeq">https://ouyangrong.com/reports/hotspot/ai/items/mammdh1206wcm5vlpy172bbeq</a></p>]]></description>
+      <category>AI 产品</category>
+      <pubDate>Wed, 21 Oct 2026 10:50:37 GMT</pubDate>
+      <guid isPermaLink="false">mammdh1206wcm5vlpy172bbeq</guid>
+      <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
+    </item>
+    <item>
+      <title><![CDATA[NVIDIA 发布 Nemotron 3.5、Kumo、Cosmos 3.5 等多款开放模型]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/msrzuhwye2kvcxn6qdwcna948</link>
+      <description><![CDATA[<p>NVIDIA 扩展其开放模型家族，覆盖语言、机器人、生物与量子计算，包含 Nemotron 3.5 Super VL、Nemotron 3.5 Bolt、Nemotron Retriever、Kumo、Cosmos 3.5、Alpamayo 2 Edge、BioNeMo RFD4-Proteina 和 Ising。</p>
+<p>🔗 <a href="https://blogs.nvidia.com/blog/open-models-europe-industry/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/msrzuhwye2kvcxn6qdwcna948">https://ouyangrong.com/reports/hotspot/ai/items/msrzuhwye2kvcxn6qdwcna948</a></p>]]></description>
+      <category>AI 模型</category>
+      <pubDate>Wed, 21 Oct 2026 10:00:07 GMT</pubDate>
+      <guid isPermaLink="false">msrzuhwye2kvcxn6qdwcna948</guid>
+      <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
+    </item>
+    <item>
+      <title><![CDATA[NVIDIA GTC Berlin 2026 主题演讲发布 DSX POD、OpenShell 与 Agile ONE SN 人形机器人]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/e40n8rx02gaw9d09hz50mryfd</link>
+      <description><![CDATA[<p>黄仁勋在 GTC Berlin 2026 主题演讲中发布面向 AI 工厂的 DSX POD 参考设计、OpenShell 安全智能体运行时与 Agile ONE SN 人形机器人参考平台。</p>
+<p>🔗 <a href="https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/e40n8rx02gaw9d09hz50mryfd">https://ouyangrong.com/reports/hotspot/ai/items/e40n8rx02gaw9d09hz50mryfd</a></p>]]></description>
+      <category>AI 产品</category>
+      <pubDate>Wed, 21 Oct 2026 09:30:16 GMT</pubDate>
+      <guid isPermaLink="false">e40n8rx02gaw9d09hz50mryfd</guid>
+      <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
+    </item>
+    <item>
       <title><![CDATA[用 AWS Agent Registry 在运行时发现 MCP 工具与 A2A 智能体]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/ldr3gjk2zvt8uvhyqovwju55m</link>
       <description><![CDATA[<p>AWS Agent Registry 让编排器在运行时通过语义与关键词混合搜索发现已审批的 MCP 服务器和 A2A 智能体，再按描述符即时构建客户端。示例中编排器部署在 Amazon Bedrock AgentCore runtime，每次请求只装载本次检索到的能力并在该轮结束后销毁，无需为新增能力改动编排器代码。</p>
@@ -524,39 +557,6 @@
       <pubDate>Tue, 29 Sep 2026 12:45:05 GMT</pubDate>
       <guid isPermaLink="false">ozg0yh2uq2djzn60fbjzeiugr</guid>
       <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
-    </item>
-    <item>
-      <title><![CDATA[Anthropic 在 IPO 招股书中警告 AI 存在灾难性风险]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/ftcjtb3g5m3ejifzr7el0v2bj</link>
-      <description><![CDATA[<p>Anthropic 在 IPO 招股书中警告，其先进模型的开发与用例扩展可能加大模型造成伤害的风险，并称先进 AI 可能给人类带来「灾难性甚至生存性风险」，261 页文件中有 80 页用于陈述这类担忧。</p>
-<p>🔗 <a href="https://www.theverge.com/ai-artificial-intelligence/1001838/anthropic-ipo-prospectus-ai-safety-threat">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ftcjtb3g5m3ejifzr7el0v2bj">https://ouyangrong.com/reports/hotspot/ai/items/ftcjtb3g5m3ejifzr7el0v2bj</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Tue, 29 Sep 2026 11:48:27 GMT</pubDate>
-      <guid isPermaLink="false">ftcjtb3g5m3ejifzr7el0v2bj</guid>
-      <author>noreply@ouyangrong.com (The Verge · AI)</author>
-    </item>
-    <item>
-      <title><![CDATA[Anthropic IPO 招股书披露收入激增、成本攀升与生存风险]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/m00hzcjs9dkqeljx717cxze1j</link>
-      <description><![CDATA[<p>Anthropic 的 S-1 招股书显示，2025 年收入增长 12 倍至近 46 亿美元，运营亏损扩大至 80.6 亿美元。文件披露计算和基础设施支出达 73.3 亿美元，并警告先进 AI 模型可能带来人类生存风险。支持者认为估值可能超过 2 万亿美元，分析师预期首家上市的 AI 公司将为包括 OpenAI 在内的行业设定估值参照。</p>
-<p>🔗 <a href="https://the-decoder.com/anthropics-ipo-filing-shows-soaring-revenue-mounting-costs-and-existential-risks/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/m00hzcjs9dkqeljx717cxze1j">https://ouyangrong.com/reports/hotspot/ai/items/m00hzcjs9dkqeljx717cxze1j</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Tue, 29 Sep 2026 10:21:36 GMT</pubDate>
-      <guid isPermaLink="false">m00hzcjs9dkqeljx717cxze1j</guid>
-      <author>noreply@ouyangrong.com (The Decoder)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 发布 GPT-6.1 Sol，API 价格为 Astra 的五分之一]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/tesyh8z5gsf30euhk0wb3rqoz</link>
-      <description><![CDATA[<p>OpenAI 发布 GPT-6.1 Sol，官方称其在编码、电脑操作和专业工作上具备接近 Astra 的智能水平。该模型的标准 API 输入和输出 token 价格为 Astra 的五分之一。</p>
-<p>🔗 <a href="https://openai.com/index/introducing-gpt-6-1-sol">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/tesyh8z5gsf30euhk0wb3rqoz">https://ouyangrong.com/reports/hotspot/ai/items/tesyh8z5gsf30euhk0wb3rqoz</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Tue, 29 Sep 2026 10:00:00 GMT</pubDate>
-      <guid isPermaLink="false">tesyh8z5gsf30euhk0wb3rqoz</guid>
-      <author>noreply@ouyangrong.com (OpenAI News)</author>
     </item>
   </channel>
 </rss>
