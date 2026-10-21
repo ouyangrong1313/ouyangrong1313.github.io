@@ -855,7 +855,8 @@ Flox 2020 年从 KTH 分拆，开发边缘 AI 设备驱离野生动物：运动�
     $$('a[href]').forEach(function (a) {
       var href = a.getAttribute("href");
       if (!href || href.charAt(0) === "#") return;
-      if (href.indexOf(BASE + "/") === 0 && !/\/$|\.|\?|#/.test(href.slice(BASE.length + 1))) {
+      var rest = href.slice(BASE.length + 1);
+      if (href.indexOf(BASE + "/") === 0 && rest && !/\/$|\.|\?|#/.test(rest)) {
         a.setAttribute("href", href + "/");
       }
     });

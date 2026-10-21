@@ -853,7 +853,8 @@ a16z 说明，支出数据来自抽样面板，不代表总收入；Gemini 因�
     $$('a[href]').forEach(function (a) {
       var href = a.getAttribute("href");
       if (!href || href.charAt(0) === "#") return;
-      if (href.indexOf(BASE + "/") === 0 && !/\/$|\.|\?|#/.test(href.slice(BASE.length + 1))) {
+      var rest = href.slice(BASE.length + 1);
+      if (href.indexOf(BASE + "/") === 0 && rest && !/\/$|\.|\?|#/.test(rest)) {
         a.setAttribute("href", href + "/");
       }
     });

@@ -853,7 +853,8 @@ AWS 称，内部测试中一次生成不到 90 秒完成。</p><p class="mt-2 te
     $$('a[href]').forEach(function (a) {
       var href = a.getAttribute("href");
       if (!href || href.charAt(0) === "#") return;
-      if (href.indexOf(BASE + "/") === 0 && !/\/$|\.|\?|#/.test(href.slice(BASE.length + 1))) {
+      var rest = href.slice(BASE.length + 1);
+      if (href.indexOf(BASE + "/") === 0 && rest && !/\/$|\.|\?|#/.test(rest)) {
         a.setAttribute("href", href + "/");
       }
     });

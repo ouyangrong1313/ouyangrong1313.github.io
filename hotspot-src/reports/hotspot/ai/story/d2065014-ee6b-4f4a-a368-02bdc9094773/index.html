@@ -853,7 +853,8 @@ Willison 称，加入该功能是因为他在笔记本上从手机运行 pelican
     $$('a[href]').forEach(function (a) {
       var href = a.getAttribute("href");
       if (!href || href.charAt(0) === "#") return;
-      if (href.indexOf(BASE + "/") === 0 && !/\/$|\.|\?|#/.test(href.slice(BASE.length + 1))) {
+      var rest = href.slice(BASE.length + 1);
+      if (href.indexOf(BASE + "/") === 0 && rest && !/\/$|\.|\?|#/.test(rest)) {
         a.setAttribute("href", href + "/");
       }
     });

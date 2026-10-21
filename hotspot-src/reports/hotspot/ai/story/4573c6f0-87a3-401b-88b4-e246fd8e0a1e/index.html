@@ -853,7 +853,8 @@ Tolan 称过去一年有超过 25 万名活跃用户、逾 7000 万次对话，�
     $$('a[href]').forEach(function (a) {
       var href = a.getAttribute("href");
       if (!href || href.charAt(0) === "#") return;
-      if (href.indexOf(BASE + "/") === 0 && !/\/$|\.|\?|#/.test(href.slice(BASE.length + 1))) {
+      var rest = href.slice(BASE.length + 1);
+      if (href.indexOf(BASE + "/") === 0 && rest && !/\/$|\.|\?|#/.test(rest)) {
         a.setAttribute("href", href + "/");
       }
     });
