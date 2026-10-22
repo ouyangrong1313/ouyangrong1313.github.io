@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[NVIDIA 扩展 Cosmos 平台，新增世界模型训练、评估与部署工具]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/rft1k6hi7jt0lsrnmiuyvteuv</link>
+      <description><![CDATA[<p>NVIDIA 扩展 Cosmos 平台，新增训练工具、仿真 checkpoint 和 Cosmos Data Factory 蓝图，用于构建物理 AI 世界模型。</p>
+<p>🔗 <a href="https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/rft1k6hi7jt0lsrnmiuyvteuv">https://ouyangrong.com/reports/hotspot/ai/items/rft1k6hi7jt0lsrnmiuyvteuv</a></p>]]></description>
+      <category>AI 产品</category>
+      <pubDate>Thu, 22 Oct 2026 05:00:27 GMT</pubDate>
+      <guid isPermaLink="false">rft1k6hi7jt0lsrnmiuyvteuv</guid>
+      <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
+    </item>
+    <item>
       <title><![CDATA[多智能体系统上生产的 5 个挑战及 Deep Insight 的解法]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/j2z6iw876fi15jzv54q2xrl3t</link>
       <description><![CDATA[<p>AWS 解决方案架构团队开源的多智能体数据分析系统 Deep Insight 发布系列第一篇，梳理其投入生产时必须解决的五个核心挑战及对应技术栈。</p>
@@ -546,17 +557,6 @@
       <pubDate>Tue, 29 Sep 2026 21:14:49 GMT</pubDate>
       <guid isPermaLink="false">rrgd7dw5cryyt2ti2cidaud69</guid>
       <author>noreply@ouyangrong.com (Ars Technica · AI)</author>
-    </item>
-    <item>
-      <title><![CDATA[GPT-6.1 Sol 在 Amazon Bedrock 正式可用]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/tq0g9kolj5546teyw0ikhvd60</link>
-      <description><![CDATA[<p>GPT-6.1 Sol 现已在 Amazon Bedrock 正式可用，作为 GPT-6 Sol 的大版本升级，它面向智能体编码、计算机使用和专业工作负载提供更强推理。</p>
-<p>🔗 <a href="https://aws.amazon.com/blogs/machine-learning/bring-near-astra-intelligence-to-everyday-work-with-gpt-6-1-sol-on-amazon-bedrock/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/tq0g9kolj5546teyw0ikhvd60">https://ouyangrong.com/reports/hotspot/ai/items/tq0g9kolj5546teyw0ikhvd60</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Tue, 29 Sep 2026 19:34:14 GMT</pubDate>
-      <guid isPermaLink="false">tq0g9kolj5546teyw0ikhvd60</guid>
-      <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
     </item>
   </channel>
 </rss>
