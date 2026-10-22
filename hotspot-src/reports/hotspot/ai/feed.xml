@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[OpenAI 的 Patch the Planet 项目用 GPT-5.6 Sol 发现影响 70% 网站的 PHP 核心漏洞 PHP2Shell]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/v5qy33snb8gi6ooj3injlwpo4</link>
+      <description><![CDATA[<p>OpenAI 称其 Patch the Planet 项目研究人员借助 GPT-5.6 Sol 发现了 PHP 引擎内存破坏漏洞 PHP2Shell（CVE-2026-109618 与 CVE-2026-109619），该漏洞影响约 70% 的网站。</p>
+<p>🔗 <a href="https://www.latent.space/p/ainews-openais-patch-the-planet-program">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/v5qy33snb8gi6ooj3injlwpo4">https://ouyangrong.com/reports/hotspot/ai/items/v5qy33snb8gi6ooj3injlwpo4</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Thu, 22 Oct 2026 07:42:44 GMT</pubDate>
+      <guid isPermaLink="false">v5qy33snb8gi6ooj3injlwpo4</guid>
+      <author>noreply@ouyangrong.com (Latent Space)</author>
+    </item>
+    <item>
       <title><![CDATA[NVIDIA 扩展 Cosmos 平台，新增世界模型训练、评估与部署工具]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/rft1k6hi7jt0lsrnmiuyvteuv</link>
       <description><![CDATA[<p>NVIDIA 扩展 Cosmos 平台，新增训练工具、仿真 checkpoint 和 Cosmos Data Factory 蓝图，用于构建物理 AI 世界模型。</p>
@@ -546,17 +557,6 @@
       <pubDate>Wed, 30 Sep 2026 05:53:10 GMT</pubDate>
       <guid isPermaLink="false">ey79aoaca1ew8kovd1mb6fw21</guid>
       <author>noreply@ouyangrong.com (Latent Space)</author>
-    </item>
-    <item>
-      <title><![CDATA[AMD 收购 World Labs，加码对抗 Nvidia]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/rrgd7dw5cryyt2ti2cidaud69</link>
-      <description><![CDATA[<p>AMD 收购 World Labs，交易金额 $8.2 billion，预计年底完成交割。World Labs 是李飞飞创办的世界模型初创公司，这笔交易被 Ars Technica 视为 AMD 对 Nvidia 的加码竞争。</p>
-<p>🔗 <a href="https://arstechnica.com/ai/2026/09/amd-acquires-world-labs-ai-pioneer-fei-fei-lis-world-models-startup/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/rrgd7dw5cryyt2ti2cidaud69">https://ouyangrong.com/reports/hotspot/ai/items/rrgd7dw5cryyt2ti2cidaud69</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Tue, 29 Sep 2026 21:14:49 GMT</pubDate>
-      <guid isPermaLink="false">rrgd7dw5cryyt2ti2cidaud69</guid>
-      <author>noreply@ouyangrong.com (Ars Technica · AI)</author>
     </item>
   </channel>
 </rss>
