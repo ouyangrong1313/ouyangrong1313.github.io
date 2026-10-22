@@ -9,6 +9,28 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[多智能体系统上生产的 5 个挑战及 Deep Insight 的解法]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/j2z6iw876fi15jzv54q2xrl3t</link>
+      <description><![CDATA[<p>AWS 解决方案架构团队开源的多智能体数据分析系统 Deep Insight 发布系列第一篇，梳理其投入生产时必须解决的五个核心挑战及对应技术栈。</p>
+<p>🔗 <a href="https://aws.amazon.com/blogs/machine-learning/5-production-challenges-in-multi-agent-systems-and-how-deep-insight-solved-them/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/j2z6iw876fi15jzv54q2xrl3t">https://ouyangrong.com/reports/hotspot/ai/items/j2z6iw876fi15jzv54q2xrl3t</a></p>]]></description>
+      <category>教程</category>
+      <pubDate>Wed, 21 Oct 2026 23:36:47 GMT</pubDate>
+      <guid isPermaLink="false">j2z6iw876fi15jzv54q2xrl3t</guid>
+      <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
+    </item>
+    <item>
+      <title><![CDATA[OpenAI 与 Wiz 用 AI 发现 PHP 两个高危漏洞，NSA 建议修不好就先下线]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/tjhogaozqwz4vjjy1svjzzkmt</link>
+      <description><![CDATA[<p>美国国家安全局（NSA）警告 PHP 存在两个高危漏洞，攻击者可借此侵入服务器文件系统或数据库，PHP 基金会已发布补丁，建议升级到 PHP 8.5.12，无法立即修复的站点应先行下线。</p>
+<p>🔗 <a href="https://techcrunch.com/2026/10/21/php-armageddon-openai-googles-wiz-find-ancient-holes-panicking-the-internet/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/tjhogaozqwz4vjjy1svjzzkmt">https://ouyangrong.com/reports/hotspot/ai/items/tjhogaozqwz4vjjy1svjzzkmt</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Wed, 21 Oct 2026 17:59:12 GMT</pubDate>
+      <guid isPermaLink="false">tjhogaozqwz4vjjy1svjzzkmt</guid>
+      <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
+    </item>
+    <item>
       <title><![CDATA[微软研究者证明 31 年未解的 KLS 猜想]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/xja51nytxnpii4q6h5hi1hst5</link>
       <description><![CDATA[<p>微软研究院的 Xinzhi Zhang 与合作者证明了 1995 年提出的 KLS 猜想，即最佳超平面切割与任意形状最佳切割之间只差一个与维度无关的常数。作者在人工引导的智能体流程中探索了超过 100 条候选路径，将同一论证递归复用，并证明各阶段误差累积仍被常数界住。同期另有独立团队给出完整证明，随后出现了 Lean 4 形式化验证。</p>
@@ -535,28 +557,6 @@
       <pubDate>Tue, 29 Sep 2026 19:34:14 GMT</pubDate>
       <guid isPermaLink="false">tq0g9kolj5546teyw0ikhvd60</guid>
       <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 在 DevDay 发布 ChatGPT 更新，推出插件系统、共享工作区与企业市场]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/jxoj72mjdkxioln6nxronvthr</link>
-      <description><![CDATA[<p>OpenAI 在 DevDay 发布 ChatGPT 多项更新，包括开放插件系统 Plugin Extensions、团队共享工作区 Space、协作文档 Pages 与 Collaborative Slides、Slack 和 Microsoft Teams 集成、Meetings 插件以及新定价和企业市场。</p>
-<p>🔗 <a href="https://the-decoder.com/openais-reveals-a-new-chatgpt-that-looks-less-like-a-chatbot-and-more-like-an-operating-system/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/jxoj72mjdkxioln6nxronvthr">https://ouyangrong.com/reports/hotspot/ai/items/jxoj72mjdkxioln6nxronvthr</a></p>]]></description>
-      <category>AI 产品</category>
-      <pubDate>Tue, 29 Sep 2026 17:23:22 GMT</pubDate>
-      <guid isPermaLink="false">jxoj72mjdkxioln6nxronvthr</guid>
-      <author>noreply@ouyangrong.com (The Decoder)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 发布 GPT-6.1 Sol，称性能接近 GPT-6 Astra 且成本更低]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/fwvcvvdy0xutrsqp0qirvcqp3</link>
-      <description><![CDATA[<p>OpenAI 在 DevDay 上发布 GPT-6.1 Sol，称其在智能体编码、computer use 和专业工作上接近 GPT-6 Astra 的水平，输入输出 token 价格为标准价的五分之一。</p>
-<p>🔗 <a href="https://techcrunch.com/2026/09/29/openai-launches-gpt-6-1-sol-says-it-nearly-matches-gpt-6-astra-and-costs-less/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/fwvcvvdy0xutrsqp0qirvcqp3">https://ouyangrong.com/reports/hotspot/ai/items/fwvcvvdy0xutrsqp0qirvcqp3</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Tue, 29 Sep 2026 17:15:00 GMT</pubDate>
-      <guid isPermaLink="false">fwvcvvdy0xutrsqp0qirvcqp3</guid>
-      <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
     </item>
   </channel>
 </rss>
