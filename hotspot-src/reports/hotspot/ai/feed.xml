@@ -20,6 +20,17 @@
       <author>noreply@ouyangrong.com (The Decoder)</author>
     </item>
     <item>
+      <title><![CDATA[哈萨克斯坦扩大 AI 算力，Firebird 获 45000 块 NVIDIA Grace Blackwell GPU 出口许可]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/gs4tacorch4kst9rdpk0vg09b</link>
+      <description><![CDATA[<p>Jensen Huang 访问阿斯塔纳，NVIDIA 宣布投资哈萨克斯坦创立的 Higgsfield AI，Firebird 同期与哈政府签署投资协议，并已获得 45000 块 NVIDIA Grace Blackwell GPU 的美国出口许可。</p>
+<p>🔗 <a href="https://blogs.nvidia.com/blog/kazakhstan-ai-compute-ecosystem/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/gs4tacorch4kst9rdpk0vg09b">https://ouyangrong.com/reports/hotspot/ai/items/gs4tacorch4kst9rdpk0vg09b</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Fri, 23 Oct 2026 02:00:13 GMT</pubDate>
+      <guid isPermaLink="false">gs4tacorch4kst9rdpk0vg09b</guid>
+      <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
+    </item>
+    <item>
       <title><![CDATA[中国黑客攻破 IT 服务商 ConnectWise，借 AI 智能体窃取凭证窥探数千家机构]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/ogs5xo0zpt4raapzfzc5upt6m</link>
       <description><![CDATA[<p>微软研究人员称，与中国政府关联的黑客入侵 IT 管理与远程访问厂商 ConnectWise 的云备份服务，窃取用于建立客户数据链路的应用程序凭证，从而以授权用户身份登入约 2250 家机构的 Microsoft 托管环境，读取邮件等文件。</p>
@@ -546,17 +557,6 @@
       <pubDate>Tue, 06 Oct 2026 19:57:04 GMT</pubDate>
       <guid isPermaLink="false">vrarwyp1kn54xuo2xw0fxshv7</guid>
       <author>noreply@ouyangrong.com (Google DeepMind)</author>
-    </item>
-    <item>
-      <title><![CDATA[GitHub 发布 AI 代码审查开源基准 ReviewBench]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/kf5h4qyn1xk8aji3h879no4no</link>
-      <description><![CDATA[<p>GitHub 发布面向 AI 代码审查的开源基准 ReviewBench，覆盖 19 种语言、187 个开源仓库的 219 个 pull request，并提供排行榜和自助评测入口。</p>
-<p>🔗 <a href="https://github.blog/ai-and-ml/github-copilot/reviewbench-an-open-benchmark-for-ai-code-review/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/kf5h4qyn1xk8aji3h879no4no">https://ouyangrong.com/reports/hotspot/ai/items/kf5h4qyn1xk8aji3h879no4no</a></p>]]></description>
-      <category>论文</category>
-      <pubDate>Mon, 05 Oct 2026 15:59:40 GMT</pubDate>
-      <guid isPermaLink="false">kf5h4qyn1xk8aji3h879no4no</guid>
-      <author>noreply@ouyangrong.com (GitHub Blog · AI &amp; ML)</author>
     </item>
   </channel>
 </rss>
