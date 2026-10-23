@@ -284,6 +284,17 @@
       <author>noreply@ouyangrong.com (The Verge · AI)</author>
     </item>
     <item>
+      <title><![CDATA[AINews：Gemini 4 Argon 正式开放，Vals AI 与 Anthropic 亮相 AI Engineer NYC]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/edx7k2nzrfl1ijp68lov4wv9m</link>
+      <description><![CDATA[<p>Gemini 4 Argon 正式开放，覆盖 Gemini API、Gemini 应用与 Search AI Mode、Antigravity 等入口，介绍期 API 定价为每百万输入/输出 token 2/10 美元。</p>
+<p>🔗 <a href="https://www.latent.space/p/ainews-ai-engineer-nyc-gemini-4-argon">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/edx7k2nzrfl1ijp68lov4wv9m">https://ouyangrong.com/reports/hotspot/ai/items/edx7k2nzrfl1ijp68lov4wv9m</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Wed, 14 Oct 2026 05:40:28 GMT</pubDate>
+      <guid isPermaLink="false">edx7k2nzrfl1ijp68lov4wv9m</guid>
+      <author>noreply@ouyangrong.com (Latent Space)</author>
+    </item>
+    <item>
       <title><![CDATA[Google DeepMind 发布 Gemini 4 Argon 前沿模型]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/foss36qktvm3406xogf08wp0t</link>
       <description><![CDATA[<p>Google DeepMind 发布 Gemini 4 Argon，今日通过 Gemini API、AI Studio 面向开发者与企业开放，也上线 Gemini 应用与 AI Mode in Search，定价为每百万输入 tokens 2 美元、每百万输出 tokens 10 美元，缓存输入 tokens 享 95% 折扣。</p>
@@ -546,17 +557,6 @@
       <pubDate>Mon, 05 Oct 2026 15:59:40 GMT</pubDate>
       <guid isPermaLink="false">kf5h4qyn1xk8aji3h879no4no</guid>
       <author>noreply@ouyangrong.com (GitHub Blog · AI &amp; ML)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 在 ChatGPT 推出新视觉广告形式并扩展衡量工具]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/fd0ellka6pwf57fur5r95a3me</link>
-      <description><![CDATA[<p>OpenAI 在 ChatGPT 中推出新的视觉广告形式，并为广告主扩展衡量工具、归因合作与品牌适宜性。</p>
-<p>🔗 <a href="https://openai.com/index/new-chatgpt-ads-format-and-measurement">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/fd0ellka6pwf57fur5r95a3me">https://ouyangrong.com/reports/hotspot/ai/items/fd0ellka6pwf57fur5r95a3me</a></p>]]></description>
-      <category>AI 产品</category>
-      <pubDate>Mon, 05 Oct 2026 10:00:00 GMT</pubDate>
-      <guid isPermaLink="false">fd0ellka6pwf57fur5r95a3me</guid>
-      <author>noreply@ouyangrong.com (OpenAI News)</author>
     </item>
   </channel>
 </rss>
