@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[DeepSeek 据报融资约 150 亿美元，距美国限制令仅两天]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/ijr5sxnnw7jcip1w18g3hmege</link>
+      <description><![CDATA[<p>DeepSeek 据彭博报道融资约 150 亿美元（约 1000 亿元人民币），距美国要求联邦民事机构移除其 AI 技术仅两天，潜在投资方包括宁德时代和腾讯。此前该公司 6 月融资超 70 亿美元、估值 500 亿美元，7 月曾以约 710 亿美元估值寻求再融 15 亿美元，并计划最早明年在中国 IPO。</p>
+<p>🔗 <a href="https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ijr5sxnnw7jcip1w18g3hmege">https://ouyangrong.com/reports/hotspot/ai/items/ijr5sxnnw7jcip1w18g3hmege</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Thu, 22 Oct 2026 13:11:13 GMT</pubDate>
+      <guid isPermaLink="false">ijr5sxnnw7jcip1w18g3hmege</guid>
+      <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
+    </item>
+    <item>
       <title><![CDATA[OpenAI 的 Patch the Planet 项目用 GPT-5.6 Sol 发现影响 70% 网站的 PHP 核心漏洞 PHP2Shell]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/v5qy33snb8gi6ooj3injlwpo4</link>
       <description><![CDATA[<p>OpenAI 称其 Patch the Planet 项目研究人员借助 GPT-5.6 Sol 发现了 PHP 引擎内存破坏漏洞 PHP2Shell（CVE-2026-109618 与 CVE-2026-109619），该漏洞影响约 70% 的网站。</p>
@@ -546,17 +557,6 @@
       <pubDate>Wed, 30 Sep 2026 10:40:30 GMT</pubDate>
       <guid isPermaLink="false">u9animmmb1oyrx8qoiollopuy</guid>
       <author>noreply@ouyangrong.com (MIT Technology Review · AI)</author>
-    </item>
-    <item>
-      <title><![CDATA[AINews 周报：OpenAI DevDay 2026 发布 Dots、GPT-6.1 Sol 与多项平台更新]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/ey79aoaca1ew8kovd1mb6fw21</link>
-      <description><![CDATA[<p>OpenAI 在 DevDay 2026 发布全天候智能体 Dots、GPT-6.1 Sol、Ultrafast 模式和 Decisions API，Dots 由 GPT-6 Astra 驱动、可连接 4000+ 应用，ChatGPT 周活达 12 亿。</p>
-<p>🔗 <a href="https://www.latent.space/p/ainews-openai-devday-2026-dots-61">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ey79aoaca1ew8kovd1mb6fw21">https://ouyangrong.com/reports/hotspot/ai/items/ey79aoaca1ew8kovd1mb6fw21</a></p>]]></description>
-      <category>AI 产品</category>
-      <pubDate>Wed, 30 Sep 2026 05:53:10 GMT</pubDate>
-      <guid isPermaLink="false">ey79aoaca1ew8kovd1mb6fw21</guid>
-      <author>noreply@ouyangrong.com (Latent Space)</author>
     </item>
   </channel>
 </rss>
