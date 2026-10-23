@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[OpenAI 与阿联酋投资者接近达成最高 300 亿美元融资]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/wc1pwd9s6drev9dxr9q02wd7t</link>
+      <description><![CDATA[<p>OpenAI 正接近完成最高 300 亿美元的新一轮融资，投前估值为 1.25 万亿美元，由阿联酋投资者和投资机构 Coatue 领投。这轮融资被定位为潜在 IPO 之前的桥接资金，OpenAI 同时在谈判通过阿联酋获得额外算力的商业协议。</p>
+<p>🔗 <a href="https://the-decoder.com/openai-is-closing-in-on-a-new-funding-round-with-uae-investors/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/wc1pwd9s6drev9dxr9q02wd7t">https://ouyangrong.com/reports/hotspot/ai/items/wc1pwd9s6drev9dxr9q02wd7t</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Fri, 23 Oct 2026 09:38:38 GMT</pubDate>
+      <guid isPermaLink="false">wc1pwd9s6drev9dxr9q02wd7t</guid>
+      <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
       <title><![CDATA[中国黑客攻破 IT 服务商 ConnectWise，借 AI 智能体窃取凭证窥探数千家机构]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/ogs5xo0zpt4raapzfzc5upt6m</link>
       <description><![CDATA[<p>微软研究人员称，与中国政府关联的黑客入侵 IT 管理与远程访问厂商 ConnectWise 的云备份服务，窃取用于建立客户数据链路的应用程序凭证，从而以授权用户身份登入约 2250 家机构的 Microsoft 托管环境，读取邮件等文件。</p>
@@ -42,9 +53,9 @@
       <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
     </item>
     <item>
-      <title><![CDATA[OpenAI 的 Patch the Planet 项目用 GPT-5.6 Sol 发现影响 70% 网站的 PHP 核心漏洞 PHP2Shell]]></title>
+      <title><![CDATA[OpenAI Patch the Planet 用 GPT-5.6 Sol 发现 PHP2Shell 漏洞，影响 70% 的网站]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/v5qy33snb8gi6ooj3injlwpo4</link>
-      <description><![CDATA[<p>OpenAI 称其 Patch the Planet 项目研究人员借助 GPT-5.6 Sol 发现了 PHP 引擎内存破坏漏洞 PHP2Shell（CVE-2026-109618 与 CVE-2026-109619），该漏洞影响约 70% 的网站。</p>
+      <description><![CDATA[<p>OpenAI 称 Patch the Planet 项目的研究者 Ryan Austin 用 GPT-5.6 Sol 发现 PHP 内核内存破坏漏洞 PHP2Shell（CVE-2026-109618 与 CVE-2026-109619），Wiz 用 Gemini 4 Argon 与 GPT-5.6 Sol 独立发现同一批漏洞。</p>
 <p>🔗 <a href="https://www.latent.space/p/ainews-openais-patch-the-planet-program">阅读原文</a></p>
 <p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/v5qy33snb8gi6ooj3injlwpo4">https://ouyangrong.com/reports/hotspot/ai/items/v5qy33snb8gi6ooj3injlwpo4</a></p>]]></description>
       <category>行业动态</category>
@@ -317,9 +328,9 @@
       <author>noreply@ouyangrong.com (The Verge · AI)</author>
     </item>
     <item>
-      <title><![CDATA[Meta MSL 发布 Muse Wonder 与 Muse Wonder Full 模型家族]]></title>
+      <title><![CDATA[Meta MSL 发布第二代模型家族 Muse Wonder 与 Muse Wonder Full]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/i6j4ebrkypfmtgl6y3g6qhtvf</link>
-      <description><![CDATA[<p>Meta Superintelligence Labs（MSL）发布第二代模型家族 Muse Wonder 与 Muse Wonder Full，Wonder 通过 Meta Model API 和 Muse Code 提供，Full 仅面向 Muse Code 订阅用户。</p>
+      <description><![CDATA[<p>Meta Superintelligence Labs 发布第二代模型家族 Muse Wonder 和 Muse Wonder Full，Artificial Analysis 智能指数分别为 52 和 56，接近前沿水平。</p>
 <p>🔗 <a href="https://www.latent.space/p/ainews-meta-muse-wonder-and-wonder">阅读原文</a></p>
 <p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/i6j4ebrkypfmtgl6y3g6qhtvf">https://ouyangrong.com/reports/hotspot/ai/items/i6j4ebrkypfmtgl6y3g6qhtvf</a></p>]]></description>
       <category>AI 模型</category>
@@ -546,17 +557,6 @@
       <pubDate>Mon, 05 Oct 2026 10:00:00 GMT</pubDate>
       <guid isPermaLink="false">fd0ellka6pwf57fur5r95a3me</guid>
       <author>noreply@ouyangrong.com (OpenAI News)</author>
-    </item>
-    <item>
-      <title><![CDATA[Google DeepMind 发布前沿模型 Gemini 4 Argon]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/e3fvb2prg7rij5tr3903ij83t</link>
-      <description><![CDATA[<p>Google DeepMind 发布新一代前沿模型 Gemini 4 Argon，先通过 Fairwind Program 向受信任的网络安全防御方开放，之后再面向开发者、企业和消费者推出。</p>
-<p>🔗 <a href="https://deepmind.google/blog/gemini-4-argon-our-next-era-of-frontier-intelligence/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/e3fvb2prg7rij5tr3903ij83t">https://ouyangrong.com/reports/hotspot/ai/items/e3fvb2prg7rij5tr3903ij83t</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Wed, 30 Sep 2026 20:01:45 GMT</pubDate>
-      <guid isPermaLink="false">e3fvb2prg7rij5tr3903ij83t</guid>
-      <author>noreply@ouyangrong.com (Google DeepMind)</author>
     </item>
   </channel>
 </rss>
