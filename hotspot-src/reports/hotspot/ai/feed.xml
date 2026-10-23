@@ -9,6 +9,50 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Kimi K3.1 Pro 上线 Kimi API，完整权重将于 11 月 4 日前发布]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/g9pjiyf9uzrp56yui2b7jafu8</link>
+      <description><![CDATA[<p>Kimi K3.1 Pro 已在 Kimi API 上线，输入定价为每百万 tokens 2 美元、输出为每百万 tokens 10 美元，与 GPT-6.1 Sol 相同，约为 Claude Opus 5.5 的一半。</p>
+<p>🔗 <a href="https://simonwillison.net/2026/Oct/23/kimi-k31-pro/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/g9pjiyf9uzrp56yui2b7jafu8">https://ouyangrong.com/reports/hotspot/ai/items/g9pjiyf9uzrp56yui2b7jafu8</a></p>]]></description>
+      <category>AI 模型</category>
+      <pubDate>Fri, 23 Oct 2026 19:40:54 GMT</pubDate>
+      <guid isPermaLink="false">g9pjiyf9uzrp56yui2b7jafu8</guid>
+      <author>noreply@ouyangrong.com (Simon Willison)</author>
+    </item>
+    <item>
+      <title><![CDATA[Moonshot AI 发布 Kimi K3.1 Pro，AA 智能指数 55 分位列第四]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/ntl1w2xzrqyx860fzpwk499um</link>
+      <description><![CDATA[<p>Moonshot AI 发布后训练版推理模型 Kimi K3.1 Pro，在 Artificial Analysis 智能指数上得 55 分，比 Kimi K3 提升 11 分、排在第四位。</p>
+<p>🔗 <a href="https://the-decoder.com/chinese-ai-model-kimi-k3-1-pro-is-closing-in-on-anthropics-claude-opus-5-5/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ntl1w2xzrqyx860fzpwk499um">https://ouyangrong.com/reports/hotspot/ai/items/ntl1w2xzrqyx860fzpwk499um</a></p>]]></description>
+      <category>AI 模型</category>
+      <pubDate>Fri, 23 Oct 2026 19:00:07 GMT</pubDate>
+      <guid isPermaLink="false">ntl1w2xzrqyx860fzpwk499um</guid>
+      <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
+      <title><![CDATA[METR 与 Redwood 驻场审计 OpenAI 三周，发现 AI 安全监控存在多处缺口]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/chmhjhbubnr91qoqge49slnrp</link>
+      <description><![CDATA[<p>METR 与 Redwood Research 的两名研究人员在 OpenAI 驻场三周（7 月 21 日至 8 月 11 日）审计内部监控系统，发现多处监控缺口。</p>
+<p>🔗 <a href="https://the-decoder.com/three-week-on-site-audit-at-openai-reveals-major-gaps-in-ai-safety-monitoring/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/chmhjhbubnr91qoqge49slnrp">https://ouyangrong.com/reports/hotspot/ai/items/chmhjhbubnr91qoqge49slnrp</a></p>]]></description>
+      <category>论文</category>
+      <pubDate>Fri, 23 Oct 2026 18:00:32 GMT</pubDate>
+      <guid isPermaLink="false">chmhjhbubnr91qoqge49slnrp</guid>
+      <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
+      <title><![CDATA[Amazon SageMaker AI 多轮强化学习实操指南：用 Wordle 把 gpt-oss-20b 解谜率提至 84%]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/q8vuhtz5ik6460ebeksj0q7rg</link>
+      <description><![CDATA[<p>AWS 发布 Amazon SageMaker AI 多轮强化学习（MTRL）实操指南，以 Wordle 为例走完从 AgentCore 部署、数据集准备、训练到评测的完整流程。</p>
+<p>🔗 <a href="https://aws.amazon.com/blogs/machine-learning/multi-turn-reinforcement-learning-on-amazon-sagemaker-ai-a-hands-on-guide/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/q8vuhtz5ik6460ebeksj0q7rg">https://ouyangrong.com/reports/hotspot/ai/items/q8vuhtz5ik6460ebeksj0q7rg</a></p>]]></description>
+      <category>教程</category>
+      <pubDate>Fri, 23 Oct 2026 17:48:54 GMT</pubDate>
+      <guid isPermaLink="false">q8vuhtz5ik6460ebeksj0q7rg</guid>
+      <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
+    </item>
+    <item>
       <title><![CDATA[Bayer 作物科学如何在 Amazon Bedrock AgentCore 上构建智能体决策引擎]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/ykgtokb02nzkqe0ix4mr7hmuc</link>
       <description><![CDATA[<p>Bayer Crop Science 在 Amazon Bedrock AgentCore 上构建了多智能体决策引擎 ADE，为 Connected Decision Engine 提供自然语言查询入口，首阶段约 80% 的用户问题无需工程师介入即可解决。</p>
@@ -513,50 +557,6 @@
       <pubDate>Wed, 07 Oct 2026 18:45:28 GMT</pubDate>
       <guid isPermaLink="false">jg9hto7rqa627ey6ldsofm94g</guid>
       <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 为 ChatGPT 推出 Intelligent UI 新界面，随 GPT-6 上线]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/o2kft2icsnc390byqkta9b0o9</link>
-      <description><![CDATA[<p>OpenAI 为 ChatGPT 推出名为 Intelligent UI 的新界面，随新 GPT-6 模型一同上线，在对话中大量加入可点击按钮、交互式图表和可编辑图形等视觉元素。该界面周三面向 Pro、Plus、Business 和 Enterprise 用户全球推出，免费和 Go 档用户周四可用，用户可自行调低视觉元素的数量。OpenAI 称这一改动的目标是让学习复杂主题更容易。</p>
-<p>🔗 <a href="https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/o2kft2icsnc390byqkta9b0o9">https://ouyangrong.com/reports/hotspot/ai/items/o2kft2icsnc390byqkta9b0o9</a></p>]]></description>
-      <category>AI 产品</category>
-      <pubDate>Wed, 07 Oct 2026 18:00:19 GMT</pubDate>
-      <guid isPermaLink="false">o2kft2icsnc390byqkta9b0o9</guid>
-      <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
-    </item>
-    <item>
-      <title><![CDATA[微软开源 Agent Lightning v1.0，3500 行轻量框架可直接用真实 harness 训练 Agent]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/naa7dmblyiulvlvlgo6jd9srj</link>
-      <description><![CDATA[<p>微软研究院开源 Agent Lightning v1.0，用约 3500 行代码实现完整的 Harnessed Agentic RL 训练框架，让部署中使用的 agent harness 直接参与强化学习，无需在训练框架内重新实现 agent。</p>
-<p>🔗 <a href="https://www.microsoft.com/en-us/research/blog/agent-lightning-v1-0-a-3500-line-lightweight-agentic-rl-framework-for-training-agents-with-real-harnesses/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/naa7dmblyiulvlvlgo6jd9srj">https://ouyangrong.com/reports/hotspot/ai/items/naa7dmblyiulvlvlgo6jd9srj</a></p>]]></description>
-      <category>论文</category>
-      <pubDate>Wed, 07 Oct 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="false">naa7dmblyiulvlvlgo6jd9srj</guid>
-      <author>noreply@ouyangrong.com (Microsoft Research)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 在 ChatGPT 全球上线 GPT-6 与 Intelligent UI]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/shhqrj0yiypsq2whd2o0oimg3</link>
-      <description><![CDATA[<p>OpenAI 在 ChatGPT 中面向全球上线 GPT-6，并同步推出 Intelligent UI。该版本提供更快的响应，带来可视化内容以及可直接探索和使用的交互体验，官方称正在全球范围推送。</p>
-<p>🔗 <a href="https://openai.com/index/gpt-6-for-everyone">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/shhqrj0yiypsq2whd2o0oimg3">https://ouyangrong.com/reports/hotspot/ai/items/shhqrj0yiypsq2whd2o0oimg3</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Wed, 07 Oct 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="false">shhqrj0yiypsq2whd2o0oimg3</guid>
-      <author>noreply@ouyangrong.com (OpenAI News)</author>
-    </item>
-    <item>
-      <title><![CDATA[Google DeepMind 发布 EmbeddingGemma 2 开源轻量级多模态嵌入模型]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/vrarwyp1kn54xuo2xw0fxshv7</link>
-      <description><![CDATA[<p>Google DeepMind 发布 EmbeddingGemma 2，一款 740M 参数、Apache 2.0 许可的开源端侧多模态嵌入模型，可把文本、代码、图像、音频和视频映射到统一嵌入空间。</p>
-<p>🔗 <a href="https://deepmind.google/blog/embeddinggemma-2-an-open-lightweight-multimodal-embedding-model/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/vrarwyp1kn54xuo2xw0fxshv7">https://ouyangrong.com/reports/hotspot/ai/items/vrarwyp1kn54xuo2xw0fxshv7</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Tue, 06 Oct 2026 19:57:04 GMT</pubDate>
-      <guid isPermaLink="false">vrarwyp1kn54xuo2xw0fxshv7</guid>
-      <author>noreply@ouyangrong.com (Google DeepMind)</author>
     </item>
   </channel>
 </rss>
