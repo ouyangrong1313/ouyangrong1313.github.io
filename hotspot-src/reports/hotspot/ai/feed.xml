@@ -20,6 +20,17 @@
       <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
     </item>
     <item>
+      <title><![CDATA[Google DeepMind 发布 10 米分辨率全球森林类型地图 ForTy 2020]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/nvsrhuhr40hnz4u6ygb7ay472</link>
+      <description><![CDATA[<p>Google DeepMind、Google Research 与 WRI、IIASA 发布 Forest Typology（ForTy）2020，以 10 米分辨率把全球每块土地划为原始林、自然再生林、人工林、种植林、木本作物与农林、其他土地六类。</p>
+<p>🔗 <a href="https://deepmind.google/blog/beyond-tree-cover-mapping-the-worlds-forest-types/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/nvsrhuhr40hnz4u6ygb7ay472">https://ouyangrong.com/reports/hotspot/ai/items/nvsrhuhr40hnz4u6ygb7ay472</a></p>]]></description>
+      <category>论文</category>
+      <pubDate>Thu, 22 Oct 2026 14:30:24 GMT</pubDate>
+      <guid isPermaLink="false">nvsrhuhr40hnz4u6ygb7ay472</guid>
+      <author>noreply@ouyangrong.com (Google DeepMind)</author>
+    </item>
+    <item>
       <title><![CDATA[DeepSeek 据报融资约 150 亿美元，美国限制令发布两天后]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/ijr5sxnnw7jcip1w18g3hmege</link>
       <description><![CDATA[<p>彭博社报道，DeepSeek 在美国要求联邦文职机构移除其技术两天后融资约 150 亿美元（约 1000 亿元人民币），潜在投资方包括宁德时代和腾讯。这是继 6 月以 500 亿美元估值融资超 70 亿美元后的新一轮，公司 7 月还曾以约 710 亿美元估值寻求额外 15 亿美元，并计划最早明年在中国 IPO。</p>
@@ -545,17 +556,6 @@
       <category>AI 模型</category>
       <pubDate>Wed, 30 Sep 2026 20:01:45 GMT</pubDate>
       <guid isPermaLink="false">e3fvb2prg7rij5tr3903ij83t</guid>
-      <author>noreply@ouyangrong.com (Google DeepMind)</author>
-    </item>
-    <item>
-      <title><![CDATA[Google DeepMind 推出 SynthID Bio，为 AI 生成蛋白质加入可验证水印]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/qoqv45zgnltjtr0po4awn3sqy</link>
-      <description><![CDATA[<p>Google DeepMind 推出 SynthID Bio，把水印技术带到合成生物学，在蛋白质的生物学代码中嵌入不可察觉的签名，使其在数字模型和合成出的实体蛋白质上都能被验证，同时保持生物功能。</p>
-<p>🔗 <a href="https://deepmind.google/blog/introducing-synthid-bio/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/qoqv45zgnltjtr0po4awn3sqy">https://ouyangrong.com/reports/hotspot/ai/items/qoqv45zgnltjtr0po4awn3sqy</a></p>]]></description>
-      <category>AI 产品</category>
-      <pubDate>Wed, 30 Sep 2026 15:03:07 GMT</pubDate>
-      <guid isPermaLink="false">qoqv45zgnltjtr0po4awn3sqy</guid>
       <author>noreply@ouyangrong.com (Google DeepMind)</author>
     </item>
   </channel>
