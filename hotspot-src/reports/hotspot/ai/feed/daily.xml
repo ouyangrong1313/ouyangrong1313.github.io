@@ -9,6 +9,19 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[MyHOT 日报 · 2026-10-23 — OpenAI 的 Patch the Planet 项目用 GPT-5.6 Sol 发现影响 70% 网站的 PHP 核心漏洞 PHP2Shell]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-23</link>
+      <description><![CDATA[<p>OpenAI 称其 Patch the Planet 项目研究人员借助 GPT-5.6 Sol 发现了 PHP 引擎内存破坏漏洞 PHP2Shell（CVE-2026-109618 与 CVE-2026-109619），该漏洞影响约 70% 的网站。</p>
+<p><strong>产品发布/更新</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/rft1k6hi7jt0lsrnmiuyvteuv">NVIDIA 扩展 Cosmos 平台，新增世界模型训练、评估与部署工具</a></li></ul>
+<p><strong>行业动态</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/v5qy33snb8gi6ooj3injlwpo4">OpenAI 的 Patch the Planet 项目用 GPT-5.6 Sol 发现影响 70% 网站的 PHP 核心漏洞 PHP2Shell</a></li><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/ijr5sxnnw7jcip1w18g3hmege">DeepSeek 据报融资约 150 亿美元，距美国限制令仅两天</a></li></ul>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-23">https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-23</a></p>]]></description>
+      <pubDate>Fri, 23 Oct 2026 06:37:12 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-10-23</guid>
+      <author>noreply@ouyangrong.com (MyHOT)</author>
+    </item>
+    <item>
       <title><![CDATA[MyHOT 日报 · 2026-10-22 — 微软研究者证明 31 年未解的 KLS 猜想]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-22</link>
       <description><![CDATA[<p>微软研究院的 Xinzhi Zhang 与合作者证明了 1995 年提出的 KLS 猜想，即最佳超平面切割与任意形状最佳切割之间只差一个与维度无关的常数。作者在人工引导的智能体流程中探索了超过 100 条候选路径，将同一论证递归复用，并证明各阶段误差累积仍被常数界住。同期另有独立团队给出完整证明，随后出现了 Lean 4 形式化验证。</p>
@@ -323,15 +336,6 @@
 <p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-09-24">https://ouyangrong.com/reports/hotspot/ai/daily/2026-09-24</a></p>]]></description>
       <pubDate>Tue, 29 Sep 2026 10:15:34 GMT</pubDate>
       <guid isPermaLink="false">daily-2026-09-24</guid>
-      <author>noreply@ouyangrong.com (MyHOT)</author>
-    </item>
-    <item>
-      <title><![CDATA[MyHOT 日报 · 2026-09-23]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-09-23</link>
-      <description><![CDATA[<p></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-09-23">https://ouyangrong.com/reports/hotspot/ai/daily/2026-09-23</a></p>]]></description>
-      <pubDate>Tue, 29 Sep 2026 10:15:34 GMT</pubDate>
-      <guid isPermaLink="false">daily-2026-09-23</guid>
       <author>noreply@ouyangrong.com (MyHOT)</author>
     </item>
   </channel>

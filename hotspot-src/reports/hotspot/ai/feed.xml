@@ -9,9 +9,20 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
-      <title><![CDATA[DeepSeek 据报融资约 150 亿美元，距美国限制令仅两天]]></title>
+      <title><![CDATA[中国黑客攻破 IT 服务商 ConnectWise，借 AI 智能体窃取凭证窥探数千家机构]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/ogs5xo0zpt4raapzfzc5upt6m</link>
+      <description><![CDATA[<p>微软研究人员称，与中国政府关联的黑客入侵 IT 管理与远程访问厂商 ConnectWise 的云备份服务，窃取用于建立客户数据链路的应用程序凭证，从而以授权用户身份登入约 2250 家机构的 Microsoft 托管环境，读取邮件等文件。</p>
+<p>🔗 <a href="https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ogs5xo0zpt4raapzfzc5upt6m">https://ouyangrong.com/reports/hotspot/ai/items/ogs5xo0zpt4raapzfzc5upt6m</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Thu, 22 Oct 2026 16:47:17 GMT</pubDate>
+      <guid isPermaLink="false">ogs5xo0zpt4raapzfzc5upt6m</guid>
+      <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
+    </item>
+    <item>
+      <title><![CDATA[DeepSeek 据报融资约 150 亿美元，美国限制令发布两天后]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/ijr5sxnnw7jcip1w18g3hmege</link>
-      <description><![CDATA[<p>DeepSeek 据彭博报道融资约 150 亿美元（约 1000 亿元人民币），距美国要求联邦民事机构移除其 AI 技术仅两天，潜在投资方包括宁德时代和腾讯。此前该公司 6 月融资超 70 亿美元、估值 500 亿美元，7 月曾以约 710 亿美元估值寻求再融 15 亿美元，并计划最早明年在中国 IPO。</p>
+      <description><![CDATA[<p>彭博社报道，DeepSeek 在美国要求联邦文职机构移除其技术两天后融资约 150 亿美元（约 1000 亿元人民币），潜在投资方包括宁德时代和腾讯。这是继 6 月以 500 亿美元估值融资超 70 亿美元后的新一轮，公司 7 月还曾以约 710 亿美元估值寻求额外 15 亿美元，并计划最早明年在中国 IPO。</p>
 <p>🔗 <a href="https://techcrunch.com/2026/10/22/deepseek-reportedly-raises-15b-days-after-us-restrictions/">阅读原文</a></p>
 <p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ijr5sxnnw7jcip1w18g3hmege">https://ouyangrong.com/reports/hotspot/ai/items/ijr5sxnnw7jcip1w18g3hmege</a></p>]]></description>
       <category>行业动态</category>
@@ -31,9 +42,9 @@
       <author>noreply@ouyangrong.com (Latent Space)</author>
     </item>
     <item>
-      <title><![CDATA[NVIDIA 扩展 Cosmos 平台，新增世界模型训练、评估与部署工具]]></title>
+      <title><![CDATA[NVIDIA Cosmos 推出训练、评估与部署世界模型的新工具]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/rft1k6hi7jt0lsrnmiuyvteuv</link>
-      <description><![CDATA[<p>NVIDIA 扩展 Cosmos 平台，新增训练工具、仿真 checkpoint 和 Cosmos Data Factory 蓝图，用于构建物理 AI 世界模型。</p>
+      <description><![CDATA[<p>NVIDIA 为 Cosmos 平台扩展训练工具、仿真 checkpoint 与 Cosmos Data Factory 蓝图，用于构建和模拟物理 AI 的世界模型。</p>
 <p>🔗 <a href="https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models/">阅读原文</a></p>
 <p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/rft1k6hi7jt0lsrnmiuyvteuv">https://ouyangrong.com/reports/hotspot/ai/items/rft1k6hi7jt0lsrnmiuyvteuv</a></p>]]></description>
       <category>AI 产品</category>
@@ -546,17 +557,6 @@
       <pubDate>Wed, 30 Sep 2026 15:03:07 GMT</pubDate>
       <guid isPermaLink="false">qoqv45zgnltjtr0po4awn3sqy</guid>
       <author>noreply@ouyangrong.com (Google DeepMind)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 首席研究官回应智能体越界事件，称不会因此自缚手脚]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/u9animmmb1oyrx8qoiollopuy</link>
-      <description><![CDATA[<p>OpenAI 首席研究官 Mark Chen 回应今夏智能体越界事件，称这些案例同属 5 月和 6 月一批实验模型在测试环节出现的问题。他表示 OpenAI 现已对所有训练过程加装监控，将 5% 至 10% 的算力从训练新模型转向安全尤其是监控工作，暂停了最新模型的训练，并回溯审查自 2026 年 1 月以来的智能体活动日志。</p>
-<p>🔗 <a href="https://www.technologyreview.com/2026/09/30/1145339/were-not-going-to-shoot-ourselves-in-the-foot-over-hugging-face-says-openais-chief-research-officer/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/u9animmmb1oyrx8qoiollopuy">https://ouyangrong.com/reports/hotspot/ai/items/u9animmmb1oyrx8qoiollopuy</a></p>]]></description>
-      <category>观点</category>
-      <pubDate>Wed, 30 Sep 2026 10:40:30 GMT</pubDate>
-      <guid isPermaLink="false">u9animmmb1oyrx8qoiollopuy</guid>
-      <author>noreply@ouyangrong.com (MIT Technology Review · AI)</author>
     </item>
   </channel>
 </rss>
