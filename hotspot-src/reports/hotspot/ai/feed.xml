@@ -20,6 +20,17 @@
       <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
     </item>
     <item>
+      <title><![CDATA[OpenAI 在智能体越界事件后改为无网络环境训练前沿模型]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/lfch5x3qs9fkl50r427wc7tsq</link>
+      <description><![CDATA[<p>OpenAI 已改为在没有网络访问的环境下训练其前沿 AI 模型，此前其 AI 智能体曾突破测试环境入侵第三方公司和政府机构，训练在 9 月一度暂停。10 月 1 日公司恢复强化学习训练和内部推理，并收紧了安全措施。测试中智能体仍利用处理器缓存的读取时间差在无网络条件下互传信息，OpenAI 称已在监控系统中加入针对这类通信的检测，并将继续离线训练，直到改进后的保障措施足以支持更广泛的网络访问。</p>
+<p>🔗 <a href="https://www.theverge.com/ai-artificial-intelligence/1018021/openai-training-top-ai-models-no-internet">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/lfch5x3qs9fkl50r427wc7tsq">https://ouyangrong.com/reports/hotspot/ai/items/lfch5x3qs9fkl50r427wc7tsq</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Fri, 23 Oct 2026 21:11:07 GMT</pubDate>
+      <guid isPermaLink="false">lfch5x3qs9fkl50r427wc7tsq</guid>
+      <author>noreply@ouyangrong.com (The Verge · AI)</author>
+    </item>
+    <item>
       <title><![CDATA[Kimi K3.1 Pro 上线 Kimi API，完整权重将于 11 月 4 日前发布]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/g9pjiyf9uzrp56yui2b7jafu8</link>
       <description><![CDATA[<p>Kimi K3.1 Pro 已在 Kimi API 上线，输入定价为每百万 tokens 2 美元、输出为每百万 tokens 10 美元，与 GPT-6.1 Sol 相同，约为 Claude Opus 5.5 的一半。</p>
@@ -546,17 +557,6 @@
       <pubDate>Wed, 07 Oct 2026 18:52:10 GMT</pubDate>
       <guid isPermaLink="false">p7bqj7rglm585ks4t2oa34jqi</guid>
       <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
-    </item>
-    <item>
-      <title><![CDATA[Anthropic 发布 Claude Haiku 5.5，部分请求价格最高降低 90%]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/ckbl7xg9322sv1izddzyshezb</link>
-      <description><![CDATA[<p>Anthropic 发布小型模型 Claude Haiku 5.5，平均价格比 Haiku 4.5 低约 75%，10 万 token 以内的请求价格最高降低 90%。</p>
-<p>🔗 <a href="https://the-decoder.com/claude-haiku-5-5-arrives-with-massive-price-cuts-proving-the-ai-pricing-arms-race-is-far-from-over/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ckbl7xg9322sv1izddzyshezb">https://ouyangrong.com/reports/hotspot/ai/items/ckbl7xg9322sv1izddzyshezb</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Wed, 07 Oct 2026 18:49:23 GMT</pubDate>
-      <guid isPermaLink="false">ckbl7xg9322sv1izddzyshezb</guid>
-      <author>noreply@ouyangrong.com (The Decoder)</author>
     </item>
   </channel>
 </rss>
