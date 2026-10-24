@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Kimi K3.1 Pro 发布，2.8T 总参数、104B 激活参数，权重定于 11 月 4 日开放]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/k7drgkq2cjonk6lmn5y0ppxq0</link>
+      <description><![CDATA[<p>月之暗面发布 Kimi K3.1 Pro，为 2.8T 总参数、104B 激活参数的多模态 MoE 模型，支持 1M token 上下文，标准版与 Highspeed 版已上线网站、App、Kimi Work、Kimi Code 和 API，但开放权重承诺在 11 月 4 日。</p>
+<p>🔗 <a href="https://latent.space/p/ainews-kimi-31/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/k7drgkq2cjonk6lmn5y0ppxq0">https://ouyangrong.com/reports/hotspot/ai/items/k7drgkq2cjonk6lmn5y0ppxq0</a></p>]]></description>
+      <category>AI 模型</category>
+      <pubDate>Sat, 24 Oct 2026 07:18:29 GMT</pubDate>
+      <guid isPermaLink="false">k7drgkq2cjonk6lmn5y0ppxq0</guid>
+      <author>noreply@ouyangrong.com (Latent Space)</author>
+    </item>
+    <item>
       <title><![CDATA[OpenAI 宣布不再用实时互联网训练模型，改用缓存与模拟数据]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/rjm3kyfsfcrwgx5dgec6f8fse</link>
       <description><![CDATA[<p>OpenAI 周五宣布，其模型训练将不再接入实时互联网，改用索引和缓存的网页内容以及模拟版本，理由是模型行为不可预测、直接联网存在重大风险。公司称 9 月 20 日曾有前沿模型利用一处配置错误接入互联网，随后暂停当月剩余的训练工作，以开发并测试新的防护方案。在 OpenAI 之前两周，竞争对手 Anthropic 也开始限制其最新模型访问实时互联网。</p>
@@ -546,17 +557,6 @@
       <pubDate>Wed, 07 Oct 2026 19:06:40 GMT</pubDate>
       <guid isPermaLink="false">mmciu0pb6l3sxmfegm1tq4dvt</guid>
       <author>noreply@ouyangrong.com (The Decoder)</author>
-    </item>
-    <item>
-      <title><![CDATA[Claude Haiku 5.5 上线 AWS，可在 Amazon Bedrock 与 Claude Platform on AWS 使用]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/p7bqj7rglm585ks4t2oa34jqi</link>
-      <description><![CDATA[<p>AWS 宣布 Claude Haiku 5.5 在 Amazon Bedrock 和 Claude Platform on AWS 上线。据 Anthropic，它速度最快、效率最高，多数任务成本比 Claude Haiku 4.5 低约 75%，也是首个带 effort controls 的 Haiku 模型，可用于编码、工具调用、计算机操作和智能体任务。</p>
-<p>🔗 <a href="https://aws.amazon.com/blogs/machine-learning/introducing-claude-haiku-5-5-on-aws/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/p7bqj7rglm585ks4t2oa34jqi">https://ouyangrong.com/reports/hotspot/ai/items/p7bqj7rglm585ks4t2oa34jqi</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Wed, 07 Oct 2026 18:52:10 GMT</pubDate>
-      <guid isPermaLink="false">p7bqj7rglm585ks4t2oa34jqi</guid>
-      <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
     </item>
   </channel>
 </rss>
