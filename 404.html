@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light dark">
+  <title>页面暂不可用</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --page: #f5f7f6;
+      --surface: #ffffff;
+      --text: #17231f;
+      --muted: #63706b;
+      --border: #dce3df;
+      --accent: #176b52;
+      --accent-hover: #115640;
+      --link: #176b52;
+      --shadow: 0 18px 55px rgba(23, 35, 31, 0.1);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --page: #101713;
+        --surface: #17211c;
+        --text: #edf4f0;
+        --muted: #a8b5af;
+        --border: #2c3a33;
+        --accent: #73c7a7;
+        --accent-hover: #94d7bd;
+        --link: #8bd1b5;
+        --shadow: 0 18px 55px rgba(0, 0, 0, 0.28);
+      }
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: var(--page);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+        "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.65;
+    }
+
+    main {
+      width: min(100%, 560px);
+      padding: clamp(32px, 7vw, 56px);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .status {
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(28px, 6vw, 40px);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+
+    p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      border: 0;
+      border-radius: 7px;
+      background: var(--accent);
+      color: #ffffff;
+      font: inherit;
+      font-weight: 700;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: var(--accent-hover);
+    }
+
+    .button:focus-visible,
+    a:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .secondary {
+      color: var(--link);
+      font-weight: 600;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+
+    .hint {
+      margin: 22px 0 0;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section id="report-state" aria-labelledby="report-title" hidden>
+      <p class="status">报告页面</p>
+      <h1 id="report-title">报告还在部署中</h1>
+      <p>你打开的报告暂时还没有准备好，通常等待一到两分钟即可。</p>
+      <p>请稍后重试，不需要重新登录或更换浏览器。</p>
+      <div class="actions">
+        <a class="button" id="retry-link" href="/">立即重试</a>
+        <a class="secondary" href="/">返回首页</a>
+      </div>
+      <p class="hint">如果等待较久仍未恢复，可以稍后再打开原链接。</p>
+      <noscript>
+        <p class="hint">当前浏览器未启用 JavaScript，请手动刷新页面或稍后再试。</p>
+      </noscript>
+    </section>
+
+    <section id="not-found-state" aria-labelledby="not-found-title">
+      <p class="status">404</p>
+      <h1 id="not-found-title">页面未找到</h1>
+      <p>这个地址可能已经失效，或者页面还没有准备好。</p>
+      <div class="actions">
+        <a class="button" href="/">返回首页</a>
+        <a class="secondary" href="/archives/">浏览文章归档</a>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      var path = window.location.pathname;
+      var isReport = /^\/reports(?:\/|$)/.test(path);
+
+      if (!isReport) {
+        return;
+      }
+
+      document.title = "报告还在部署中";
+      document.getElementById("not-found-state").hidden = true;
+      document.getElementById("report-state").hidden = false;
+
+      var retryLink = document.getElementById("retry-link");
+      var retryPath = path.replace(/\/+$/, "") || "/reports";
+      retryLink.href = retryPath + "?retry=" + Date.now();
+    }());
+  </script>
+</body>
+</html>

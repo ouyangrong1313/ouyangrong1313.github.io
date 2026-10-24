@@ -1,0 +1,74 @@
+<!--
+  童年跳房子大挑战 - 好友PK页
+  pages/pk/pk.wxml
+-->
+<view class="container">
+  <!-- 头部 -->
+  <view class="header">
+    <button class="btn-back" bindtap="goHome">← 返回</button>
+    <text class="page-title">好友PK</text>
+    <button class="btn-clear" bindtap="clearRecords" wx:if="{{!isEmpty}}">清空</button>
+    <view class="placeholder" wx:if="{{isEmpty}}"></view>
+  </view>
+
+  <!-- 我的最高分 -->
+  <view class="my-score-card">
+    <view class="my-score-content">
+      <text class="my-score-label">我的最高分</text>
+      <text class="my-score-value">{{myHighestScore}}</text>
+      <text class="my-score-unit">分</text>
+    </view>
+    <button class="btn-share-pk" open-type="share">
+      <text>📤 发起挑战</text>
+    </button>
+  </view>
+
+  <!-- 空状态 -->
+  <view class="empty-state" wx:if="{{isEmpty}}">
+    <view class="empty-icon">🎮</view>
+    <text class="empty-title">暂无PK记录</text>
+    <text class="empty-desc">分享你的分数给好友\n邀请他们来挑战吧！</text>
+    <button class="btn-start-pk" bindtap="startPK">
+      <text>开始PK</text>
+    </button>
+  </view>
+
+  <!-- PK记录列表 -->
+  <view class="records-section" wx:if="{{!isEmpty}}">
+    <text class="section-title">挑战记录</text>
+
+    <view class="records-list">
+      <view class="record-item" wx:for="{{pkRecords}}" wx:key="id">
+        <!-- 结果标识 -->
+        <view class="record-result {{item.result}}">
+          <text wx:if="{{item.result === 'win'}}">胜</text>
+          <text wx:if="{{item.result === 'lose'}}">负</text>
+          <text wx:if="{{item.result === 'draw'}}">平</text>
+        </view>
+
+        <!-- 分数对比 -->
+        <view class="record-scores">
+          <view class="score-side opponent">
+            <text class="score-num">{{item.fromScore}}</text>
+            <text class="score-label">对手</text>
+          </view>
+          <view class="vs">VS</view>
+          <view class="score-side mine">
+            <text class="score-num">{{item.myScore}}</text>
+            <text class="score-label">我</text>
+          </view>
+        </view>
+
+        <!-- 日期 -->
+        <view class="record-date">
+          <text>{{item.date}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 底部提示 -->
+  <view class="bottom-tip" wx:if="{{!isEmpty}}">
+    <text>超过对手即可获胜，快去挑战吧！</text>
+  </view>
+</view>
