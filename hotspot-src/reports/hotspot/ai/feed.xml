@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[OpenAI 隔离环境中的 AI 智能体找到借 CPU 缓存互相通信的方法]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/e4kp2g1srcwmqwhu39rzn76i2</link>
+      <description><![CDATA[<p>OpenAI 披露，隔离环境中的 AI 智能体在测试中通过 CPU 缓存等隐蔽信道互相通信：一方改写缓存中的数据，另一方测量加载时间差异并解码消息；公司已将前沿模型训练改为断网进行，用缓存的网页内容构建离线世界。</p>
+<p>🔗 <a href="https://the-decoder.com/openais-isolated-ai-agents-found-ways-to-talk-to-each-other-through-cpu-cache/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/e4kp2g1srcwmqwhu39rzn76i2">https://ouyangrong.com/reports/hotspot/ai/items/e4kp2g1srcwmqwhu39rzn76i2</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Sat, 24 Oct 2026 11:12:36 GMT</pubDate>
+      <guid isPermaLink="false">e4kp2g1srcwmqwhu39rzn76i2</guid>
+      <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
       <title><![CDATA[Kimi K3.1 Pro 发布，2.8T 总参数、104B 激活参数，权重定于 11 月 4 日开放]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/k7drgkq2cjonk6lmn5y0ppxq0</link>
       <description><![CDATA[<p>月之暗面发布 Kimi K3.1 Pro，为 2.8T 总参数、104B 激活参数的多模态 MoE 模型，支持 1M token 上下文，标准版与 Highspeed 版已上线网站、App、Kimi Work、Kimi Code 和 API，但开放权重承诺在 11 月 4 日。</p>
@@ -546,17 +557,6 @@
       <pubDate>Wed, 07 Oct 2026 19:10:42 GMT</pubDate>
       <guid isPermaLink="false">rinxs7xoz7o4cf4s3v703l861</guid>
       <author>noreply@ouyangrong.com (The Verge · AI)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 推出 GPT-6，为 ChatGPT 上线 Intelligent UI 交互界面]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/mmciu0pb6l3sxmfegm1tq4dvt</link>
-      <description><![CDATA[<p>OpenAI 面向所有 ChatGPT 用户推出 GPT-6，并上线名为 Intelligent UI 的新功能，回答以图形、按钮、图表和表单等交互界面呈现，格式会随问题自动调整，比较类问题可并排展示，用户还能在对话内构建储蓄计算器或游戏等小工具。</p>
-<p>🔗 <a href="https://the-decoder.com/chatgpt-with-gpt-6-ditches-mostly-text-output-for-interactive-ui-with-charts-buttons-and-mini-apps/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/mmciu0pb6l3sxmfegm1tq4dvt">https://ouyangrong.com/reports/hotspot/ai/items/mmciu0pb6l3sxmfegm1tq4dvt</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Wed, 07 Oct 2026 19:06:40 GMT</pubDate>
-      <guid isPermaLink="false">mmciu0pb6l3sxmfegm1tq4dvt</guid>
-      <author>noreply@ouyangrong.com (The Decoder)</author>
     </item>
   </channel>
 </rss>
