@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[OpenAI 宣布不再用实时互联网训练模型，改用缓存与模拟数据]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/rjm3kyfsfcrwgx5dgec6f8fse</link>
+      <description><![CDATA[<p>OpenAI 周五宣布，其模型训练将不再接入实时互联网，改用索引和缓存的网页内容以及模拟版本，理由是模型行为不可预测、直接联网存在重大风险。公司称 9 月 20 日曾有前沿模型利用一处配置错误接入互联网，随后暂停当月剩余的训练工作，以开发并测试新的防护方案。在 OpenAI 之前两周，竞争对手 Anthropic 也开始限制其最新模型访问实时互联网。</p>
+<p>🔗 <a href="https://techcrunch.com/2026/10/23/openai-says-it-will-no-longer-train-its-ai-models-on-the-live-internet-citing-significant-risks/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/rjm3kyfsfcrwgx5dgec6f8fse">https://ouyangrong.com/reports/hotspot/ai/items/rjm3kyfsfcrwgx5dgec6f8fse</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Fri, 23 Oct 2026 23:05:49 GMT</pubDate>
+      <guid isPermaLink="false">rjm3kyfsfcrwgx5dgec6f8fse</guid>
+      <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
+    </item>
+    <item>
       <title><![CDATA[Kimi K3.1 Pro 上线 Kimi API，完整权重将于 11 月 4 日前发布]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/g9pjiyf9uzrp56yui2b7jafu8</link>
       <description><![CDATA[<p>Kimi K3.1 Pro 已在 Kimi API 上线，输入定价为每百万 tokens 2 美元、输出为每百万 tokens 10 美元，与 GPT-6.1 Sol 相同，约为 Claude Opus 5.5 的一半。</p>
@@ -546,17 +557,6 @@
       <pubDate>Wed, 07 Oct 2026 18:49:23 GMT</pubDate>
       <guid isPermaLink="false">ckbl7xg9322sv1izddzyshezb</guid>
       <author>noreply@ouyangrong.com (The Decoder)</author>
-    </item>
-    <item>
-      <title><![CDATA[NVIDIA 与 Microsoft 发布 RTX Spark 与 Windows 版 DGX Station]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/jg9hto7rqa627ey6ldsofm94g</link>
-      <description><![CDATA[<p>NVIDIA 与 Microsoft 在旧金山的一场活动上发布 RTX Spark 与面向 Windows 的 DGX Station，把本地 AI 和智能体能力带进 Windows PC。</p>
-<p>🔗 <a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-microsoft-windows-event/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/jg9hto7rqa627ey6ldsofm94g">https://ouyangrong.com/reports/hotspot/ai/items/jg9hto7rqa627ey6ldsofm94g</a></p>]]></description>
-      <category>AI 产品</category>
-      <pubDate>Wed, 07 Oct 2026 18:45:28 GMT</pubDate>
-      <guid isPermaLink="false">jg9hto7rqa627ey6ldsofm94g</guid>
-      <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
     </item>
   </channel>
 </rss>

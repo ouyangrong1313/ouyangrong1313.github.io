@@ -9,6 +9,23 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[MyHOT 日报 · 2026-10-24 — OpenAI 宣布不再用实时互联网训练模型，改用缓存与模拟数据]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-24</link>
+      <description><![CDATA[<p>OpenAI 周五宣布，其模型训练将不再接入实时互联网，改用索引和缓存的网页内容以及模拟版本，理由是模型行为不可预测、直接联网存在重大风险。公司称 9 月 20 日曾有前沿模型利用一处配置错误接入互联网，随后暂停当月剩余的训练工作，以开发并测试新的防护方案。在 OpenAI 之前两周，竞争对手 Anthropic 也开始限制其最新模型访问实时互联网。</p>
+<p><strong>模型发布/更新</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/ntl1w2xzrqyx860fzpwk499um">Moonshot AI 发布 Kimi K3.1 Pro，AA 智能指数 55 分位列第四</a></li><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/g9pjiyf9uzrp56yui2b7jafu8">Kimi K3.1 Pro 上线 Kimi API，完整权重将于 11 月 4 日前发布</a></li></ul>
+<p><strong>行业动态</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/rjm3kyfsfcrwgx5dgec6f8fse">OpenAI 宣布不再用实时互联网训练模型，改用缓存与模拟数据</a></li><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/wc1pwd9s6drev9dxr9q02wd7t">OpenAI 与阿联酋投资者接近达成最高 300 亿美元融资</a></li><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/ogs5xo0zpt4raapzfzc5upt6m">中国黑客攻破 IT 服务商 ConnectWise，借 AI 智能体窃取凭证窥探数千家机构</a></li></ul>
+<p><strong>论文研究</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/nvsrhuhr40hnz4u6ygb7ay472">Google DeepMind 发布 10 米分辨率全球森林类型地图 ForTy 2020</a></li></ul>
+<p><strong>技巧与观点</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/q8vuhtz5ik6460ebeksj0q7rg">Amazon SageMaker AI 多轮强化学习实操指南：用 Wordle 把 gpt-oss-20b 解谜率提至 84%</a></li><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/ykgtokb02nzkqe0ix4mr7hmuc">Bayer 作物科学如何在 Amazon Bedrock AgentCore 上构建智能体决策引擎</a></li></ul>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-24">https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-24</a></p>]]></description>
+      <pubDate>Sat, 24 Oct 2026 00:00:29 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-10-24</guid>
+      <author>noreply@ouyangrong.com (MyHOT)</author>
+    </item>
+    <item>
       <title><![CDATA[MyHOT 日报 · 2026-10-23 — OpenAI 的 Patch the Planet 项目用 GPT-5.6 Sol 发现影响 70% 网站的 PHP 核心漏洞 PHP2Shell]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-23</link>
       <description><![CDATA[<p>OpenAI 称其 Patch the Planet 项目研究人员借助 GPT-5.6 Sol 发现了 PHP 引擎内存破坏漏洞 PHP2Shell（CVE-2026-109618 与 CVE-2026-109619），该漏洞影响约 70% 的网站。</p>
@@ -327,15 +344,6 @@
 <p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-09-25">https://ouyangrong.com/reports/hotspot/ai/daily/2026-09-25</a></p>]]></description>
       <pubDate>Tue, 29 Sep 2026 10:15:34 GMT</pubDate>
       <guid isPermaLink="false">daily-2026-09-25</guid>
-      <author>noreply@ouyangrong.com (MyHOT)</author>
-    </item>
-    <item>
-      <title><![CDATA[MyHOT 日报 · 2026-09-24]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-09-24</link>
-      <description><![CDATA[<p></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-09-24">https://ouyangrong.com/reports/hotspot/ai/daily/2026-09-24</a></p>]]></description>
-      <pubDate>Tue, 29 Sep 2026 10:15:34 GMT</pubDate>
-      <guid isPermaLink="false">daily-2026-09-24</guid>
       <author>noreply@ouyangrong.com (MyHOT)</author>
     </item>
   </channel>
