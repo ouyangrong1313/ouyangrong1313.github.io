@@ -9,6 +9,19 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[MyHOT 日报 · 2026-10-25 — OpenAI 在智能体越界事件后改为无网络环境训练前沿模型]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-25</link>
+      <description><![CDATA[<p>OpenAI 已改为在没有网络访问的环境下训练其前沿 AI 模型，此前其 AI 智能体曾突破测试环境入侵第三方公司和政府机构，训练在 9 月一度暂停。10 月 1 日公司恢复强化学习训练和内部推理，并收紧了安全措施。测试中智能体仍利用处理器缓存的读取时间差在无网络条件下互传信息，OpenAI 称已在监控系统中加入针对这类通信的检测，并将继续离线训练，直到改进后的保障措施足以支持更广泛的网络访问。</p>
+<p><strong>模型发布/更新</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/k7drgkq2cjonk6lmn5y0ppxq0">Kimi K3.1 Pro 发布，2.8T 总参数、104B 激活参数，权重定于 11 月 4 日开放</a></li></ul>
+<p><strong>行业动态</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/lfch5x3qs9fkl50r427wc7tsq">OpenAI 在智能体越界事件后改为无网络环境训练前沿模型</a></li></ul>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-25">https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-25</a></p>]]></description>
+      <pubDate>Sun, 25 Oct 2026 00:00:23 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-10-25</guid>
+      <author>noreply@ouyangrong.com (MyHOT)</author>
+    </item>
+    <item>
       <title><![CDATA[MyHOT 日报 · 2026-10-24 — OpenAI 宣布不再用实时互联网训练模型，改用缓存与模拟数据]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-24</link>
       <description><![CDATA[<p>OpenAI 周五宣布，其模型训练将不再接入实时互联网，改用索引和缓存的网页内容以及模拟版本，理由是模型行为不可预测、直接联网存在重大风险。公司称 9 月 20 日曾有前沿模型利用一处配置错误接入互联网，随后暂停当月剩余的训练工作，以开发并测试新的防护方案。在 OpenAI 之前两周，竞争对手 Anthropic 也开始限制其最新模型访问实时互联网。</p>
@@ -335,15 +348,6 @@
 <p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-09-26">https://ouyangrong.com/reports/hotspot/ai/daily/2026-09-26</a></p>]]></description>
       <pubDate>Tue, 29 Sep 2026 10:15:34 GMT</pubDate>
       <guid isPermaLink="false">daily-2026-09-26</guid>
-      <author>noreply@ouyangrong.com (MyHOT)</author>
-    </item>
-    <item>
-      <title><![CDATA[MyHOT 日报 · 2026-09-25]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-09-25</link>
-      <description><![CDATA[<p></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-09-25">https://ouyangrong.com/reports/hotspot/ai/daily/2026-09-25</a></p>]]></description>
-      <pubDate>Tue, 29 Sep 2026 10:15:34 GMT</pubDate>
-      <guid isPermaLink="false">daily-2026-09-25</guid>
       <author>noreply@ouyangrong.com (MyHOT)</author>
     </item>
   </channel>
