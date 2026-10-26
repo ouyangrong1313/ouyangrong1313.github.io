@@ -9,15 +9,26 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
-      <title><![CDATA[Anthropic 提交 S-1 拟以 ANT 登陆纳斯达克，披露上半年 807 亿美元净亏损]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/k14s2jd174u4peee4ccqnj29y</link>
-      <description><![CDATA[<p>Anthropic 向 SEC 提交 S-1 招股书，计划以代码 ANT 在纳斯达克上市，文件显示其今年上半年营收 163 亿美元、净亏损 807 亿美元。</p>
-<p>🔗 <a href="https://www.theverge.com/ai-artificial-intelligence/1018476/anthropic-ipo-details-s1-filed-sec">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/k14s2jd174u4peee4ccqnj29y">https://ouyangrong.com/reports/hotspot/ai/items/k14s2jd174u4peee4ccqnj29y</a></p>]]></description>
+      <title><![CDATA[Anthropic 正式递交 IPO 申请，计划以 ANT 为代码上市]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/wk133qdsc21q356179ckms9m6</link>
+      <description><![CDATA[<p>Anthropic 周一正式递交 IPO 申请，计划以“ANT”为股票代码上市。SEC 文件显示其 2026 年上半年营收 163 亿美元，去年同期为 12 亿美元，营业亏损从去年上半年的 21 亿美元收窄至 6.93 亿美元。</p>
+<p>🔗 <a href="https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/wk133qdsc21q356179ckms9m6">https://ouyangrong.com/reports/hotspot/ai/items/wk133qdsc21q356179ckms9m6</a></p>]]></description>
       <category>行业动态</category>
-      <pubDate>Mon, 26 Oct 2026 13:32:49 GMT</pubDate>
-      <guid isPermaLink="false">k14s2jd174u4peee4ccqnj29y</guid>
-      <author>noreply@ouyangrong.com (The Verge · AI)</author>
+      <pubDate>Mon, 26 Oct 2026 14:35:22 GMT</pubDate>
+      <guid isPermaLink="false">wk133qdsc21q356179ckms9m6</guid>
+      <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
+    </item>
+    <item>
+      <title><![CDATA[Meta 计划最多发售 950 亿美元股票，为 AI 基建融资]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/ufuoeq1v2jplq7pmy020nbn3j</link>
+      <description><![CDATA[<p>Meta 计划发售新股筹集最多 950 亿美元，用于 AI 基础设施扩建。其中约 225 亿美元来自 A 类普通股，125 亿美元来自存托股份，其余 600 亿美元将通过公开市场持续出售无投票权的 C 类股完成，预计不早于 2027 年第一季度开始交易。Nvidia、AMD 和 Broadcom 已表示有意购买最多 50 亿美元的 Meta 股票，但不具约束力。</p>
+<p>🔗 <a href="https://the-decoder.com/meta-plans-up-to-95-billion-in-stock-sales-to-fund-its-ai-buildout/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ufuoeq1v2jplq7pmy020nbn3j">https://ouyangrong.com/reports/hotspot/ai/items/ufuoeq1v2jplq7pmy020nbn3j</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Mon, 26 Oct 2026 14:21:23 GMT</pubDate>
+      <guid isPermaLink="false">ufuoeq1v2jplq7pmy020nbn3j</guid>
+      <author>noreply@ouyangrong.com (The Decoder)</author>
     </item>
     <item>
       <title><![CDATA[OpenAI 隔离环境中的 AI 智能体找到借 CPU 缓存互相通信的方法]]></title>
@@ -545,17 +556,6 @@
       <category>论文</category>
       <pubDate>Thu, 08 Oct 2026 13:01:01 GMT</pubDate>
       <guid isPermaLink="false">pty73g39p9roikqiez9y9iu0d</guid>
-      <author>noreply@ouyangrong.com (The Decoder)</author>
-    </item>
-    <item>
-      <title><![CDATA[AI 工具 ARTEX 被指助疑似单人攻击者入侵多家韩国银行]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/ob9giul8tz3f27xfi09q6es29</link>
-      <description><![CDATA[<p>Crowdstrike 报告称，一名疑似说中文的攻击者在 2026 年 9 月底至 10 月初入侵多家韩国金融机构并窃取大量数据，仅新韩银行就有超过 25,000 条含姓名、联系方式、收入和信用额度的记录被窃。</p>
-<p>🔗 <a href="https://the-decoder.com/ai-powered-hacking-tools-enabled-a-likely-single-attacker-to-breach-multiple-south-korean-banks/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ob9giul8tz3f27xfi09q6es29">https://ouyangrong.com/reports/hotspot/ai/items/ob9giul8tz3f27xfi09q6es29</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Thu, 08 Oct 2026 09:24:17 GMT</pubDate>
-      <guid isPermaLink="false">ob9giul8tz3f27xfi09q6es29</guid>
       <author>noreply@ouyangrong.com (The Decoder)</author>
     </item>
   </channel>
