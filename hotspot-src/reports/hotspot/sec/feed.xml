@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>安防热点 (https://ouyangrong.com/reports/hotspot/sec/agent)</generator>
     <item>
+      <title><![CDATA[Anthropic 研究预警 AI 蠕虫风险，实验验证模型可在低成本物联网设备上分布式运行]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/items/svzea1ts6dkxove3nvsak8lp0</link>
+      <description><![CDATA[<p>Anthropic 最新研究预警，小型 AI 模型可能很快具备在商用物联网设备上自主复制的能力。实验中一个 90 亿参数的模型在 9 种硬件类型中的 8 种上完成推理。</p>
+<p>🔗 <a href="https://www.iot101.com/news/10723.html">阅读原文</a></p>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/svzea1ts6dkxove3nvsak8lp0">https://ouyangrong.com/reports/hotspot/sec/items/svzea1ts6dkxove3nvsak8lp0</a></p>]]></description>
+      <category>技术</category>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="false">svzea1ts6dkxove3nvsak8lp0</guid>
+      <author>noreply@ouyangrong.com (物联网智库资讯)</author>
+    </item>
+    <item>
       <title><![CDATA[视美泰拆解 AIoT-M-F01 语视模组的三重技术逻辑]]></title>
       <link>https://ouyangrong.com/reports/hotspot/sec/items/cx0przkb6z5xge1vdrndaf73o</link>
       <description><![CDATA[<p>视美泰拆解其 AIoT-M-F01 语视模组的三重技术逻辑，涵盖人体检测、四阵列定向麦克风加 AI 降噪，以及唇动算法结合声源方位锁定说话人。模组采用 500 万像素单目宽动态摄像头，配 1/2.5 英寸 CMOS 感光芯片、F2.0 大光圈与 ≥75° 视场角，只判断有人在场，不做身份识别，也不留存面部信息。</p>
@@ -546,17 +557,6 @@
       <pubDate>Fri, 10 Apr 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">dupmg67utrtljduamxv5dutqp</guid>
       <author>noreply@ouyangrong.com (技威时代 Yoosee 企业动态)</author>
-    </item>
-    <item>
-      <title><![CDATA[台州公安自研防爆罐机器人亮相，自重50公斤可抵御500克TNT当量]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec/items/pxeindylegkwy45253wxfocd3</link>
-      <description><![CDATA[<p>台州公安自主研发的自主移动式防爆罐机器人亮相，自重控制在50公斤内，可抵御500克TNT当量爆炸冲击。机器人搭载履带底盘与3D激光雷达，支持一键路径规划，具备自主导航与远程操作功能。目前已在台州机场、高铁站等核心安保部位部署，累计参与涉爆警情处置及实战演练20余起。2025年台州某商场可疑包裹处置中，机器人凭借自主导航完成无感转移，未大规模疏散人群。</p>
-<p>🔗 <a href="http://news.cps.com.cn/article/202603/943629.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/pxeindylegkwy45253wxfocd3">https://ouyangrong.com/reports/hotspot/sec/items/pxeindylegkwy45253wxfocd3</a></p>]]></description>
-      <category>产品</category>
-      <pubDate>Thu, 26 Mar 2026 09:11:00 GMT</pubDate>
-      <guid isPermaLink="false">pxeindylegkwy45253wxfocd3</guid>
-      <author>noreply@ouyangrong.com (CPS中安网智能安防)</author>
     </item>
   </channel>
 </rss>

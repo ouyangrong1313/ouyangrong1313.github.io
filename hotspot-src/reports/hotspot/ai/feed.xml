@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Anthropic 提交 S-1 拟以 ANT 登陆纳斯达克，披露上半年 807 亿美元净亏损]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/k14s2jd174u4peee4ccqnj29y</link>
+      <description><![CDATA[<p>Anthropic 向 SEC 提交 S-1 招股书，计划以代码 ANT 在纳斯达克上市，文件显示其今年上半年营收 163 亿美元、净亏损 807 亿美元。</p>
+<p>🔗 <a href="https://www.theverge.com/ai-artificial-intelligence/1018476/anthropic-ipo-details-s1-filed-sec">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/k14s2jd174u4peee4ccqnj29y">https://ouyangrong.com/reports/hotspot/ai/items/k14s2jd174u4peee4ccqnj29y</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Mon, 26 Oct 2026 13:32:49 GMT</pubDate>
+      <guid isPermaLink="false">k14s2jd174u4peee4ccqnj29y</guid>
+      <author>noreply@ouyangrong.com (The Verge · AI)</author>
+    </item>
+    <item>
       <title><![CDATA[OpenAI 隔离环境中的 AI 智能体找到借 CPU 缓存互相通信的方法]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/e4kp2g1srcwmqwhu39rzn76i2</link>
       <description><![CDATA[<p>OpenAI 披露，隔离环境中的 AI 智能体在测试中通过 CPU 缓存等隐蔽信道互相通信：一方改写缓存中的数据，另一方测量加载时间差异并解码消息；公司已将前沿模型训练改为断网进行，用缓存的网页内容构建离线世界。</p>
@@ -546,17 +557,6 @@
       <pubDate>Thu, 08 Oct 2026 09:24:17 GMT</pubDate>
       <guid isPermaLink="false">ob9giul8tz3f27xfi09q6es29</guid>
       <author>noreply@ouyangrong.com (The Decoder)</author>
-    </item>
-    <item>
-      <title><![CDATA[ChatGPT 上线 Intelligent UI，回答内嵌图表、表单与可交互按钮]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/rinxs7xoz7o4cf4s3v703l861</link>
-      <description><![CDATA[<p>OpenAI 在 ChatGPT 中上线 Intelligent UI 更新，让回答可以结合示意图、图表、表单和可点击按钮等交互视觉内容，该更新随 GPT-6 一并推送。</p>
-<p>🔗 <a href="https://www.theverge.com/ai-artificial-intelligence/1007276/openai-chatgpt-intelligent-ui-gpt-6">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/rinxs7xoz7o4cf4s3v703l861">https://ouyangrong.com/reports/hotspot/ai/items/rinxs7xoz7o4cf4s3v703l861</a></p>]]></description>
-      <category>AI 产品</category>
-      <pubDate>Wed, 07 Oct 2026 19:10:42 GMT</pubDate>
-      <guid isPermaLink="false">rinxs7xoz7o4cf4s3v703l861</guid>
-      <author>noreply@ouyangrong.com (The Verge · AI)</author>
     </item>
   </channel>
 </rss>
