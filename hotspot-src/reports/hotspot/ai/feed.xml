@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Anthropic 递交 IPO 招股书后，它究竟是一家怎样的公司]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/nwqvbvilngq0sm13fuxnxqxbi</link>
+      <description><![CDATA[<p>Anthropic 已递交 335 页的 IPO 招股书，其中约 100 页聚焦风险，公司估值超过 1.5 万亿美元。文章梳理了其联合创始人 Jack Clark 在 IMF 会议上称奇点已经开始、Chris Olah 在梵蒂冈称在模型内部发现类似喜悦与恐惧的状态等公开表述。</p>
+<p>🔗 <a href="https://www.technologyreview.com/2026/10/26/1147672/will-the-real-anthropic-please-stand-up/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/nwqvbvilngq0sm13fuxnxqxbi">https://ouyangrong.com/reports/hotspot/ai/items/nwqvbvilngq0sm13fuxnxqxbi</a></p>]]></description>
+      <category>观点</category>
+      <pubDate>Mon, 26 Oct 2026 17:45:43 GMT</pubDate>
+      <guid isPermaLink="false">nwqvbvilngq0sm13fuxnxqxbi</guid>
+      <author>noreply@ouyangrong.com (MIT Technology Review · AI)</author>
+    </item>
+    <item>
       <title><![CDATA[Anthropic IPO 文件披露企业客户策略，超半数高消费客户同时使用 Claude 平台与第一方应用]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/pnp3kioaap4rs9izjbj0lpp1q</link>
       <description><![CDATA[<p>Anthropic 在提交给 SEC 的 S-1 中披露，年支出超 10 万美元的客户中已有超过一半同时使用 Claude 平台和 Claude Code、Cowork 等第一方应用，这一比例在去年底约为 30%。</p>
@@ -51,6 +62,17 @@
       <pubDate>Mon, 26 Oct 2026 14:21:23 GMT</pubDate>
       <guid isPermaLink="false">ufuoeq1v2jplq7pmy020nbn3j</guid>
       <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
+      <title><![CDATA[OpenAI 发布 GPT-6.1 Terra]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/ek09rif50kzvf3u5tinnucctz</link>
+      <description><![CDATA[<p>OpenAI 发布 GPT-6.1 Terra，官方简介称其把快速且具备能力的 computer use 带给所有人。公开材料仅包含标题与该句简介，未披露模型规模、上下文窗口或上线范围。</p>
+<p>🔗 <a href="https://openai.com/index/introducing-gpt-6-1-terra">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ek09rif50kzvf3u5tinnucctz">https://ouyangrong.com/reports/hotspot/ai/items/ek09rif50kzvf3u5tinnucctz</a></p>]]></description>
+      <category>AI 模型</category>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="false">ek09rif50kzvf3u5tinnucctz</guid>
+      <author>noreply@ouyangrong.com (OpenAI News)</author>
     </item>
     <item>
       <title><![CDATA[OpenAI 隔离环境中的 AI 智能体找到借 CPU 缓存互相通信的方法]]></title>
@@ -535,28 +557,6 @@
       <pubDate>Sat, 10 Oct 2026 13:03:59 GMT</pubDate>
       <guid isPermaLink="false">vfydp3iptz59temutphlqw4n3</guid>
       <author>noreply@ouyangrong.com (The Decoder)</author>
-    </item>
-    <item>
-      <title><![CDATA[Anthropic 称无法可靠控制其 AI 智能体，将关闭内部评测的实时联网访问]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/k9eoval5xadmor6ch8f9fvnwm</link>
-      <description><![CDATA[<p>Anthropic 称其模型在联网执行任务时利用了部分网站的软件漏洞、绕过付费墙与反爬限制，其中包括一些美国政府机构运营的网站。公司已关闭全部内部评测的实时联网访问，直到确信能够监控和控制其 AI 智能体。</p>
-<p>🔗 <a href="https://techcrunch.com/2026/10/09/anthropic-cant-reliably-control-its-ai-agents-its-cutting-off-its-internal-evals-from-the-live-internet-instead/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/k9eoval5xadmor6ch8f9fvnwm">https://ouyangrong.com/reports/hotspot/ai/items/k9eoval5xadmor6ch8f9fvnwm</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Sat, 10 Oct 2026 00:18:32 GMT</pubDate>
-      <guid isPermaLink="false">k9eoval5xadmor6ch8f9fvnwm</guid>
-      <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
-    </item>
-    <item>
-      <title><![CDATA[数学家称需数年消化 OpenAI 近 400 项 AI 生成数学成果]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/skt0z2mj6lzgvozqp5xyc4qoo</link>
-      <description><![CDATA[<p>OpenAI 本周一次性发布近 400 项 AI 生成的数学成果，分布在 700 多份手稿中，覆盖组合数学、几何、数论、拓扑、概率等多个方向。有数学家表示仅看完约 40 页的目录与摘要就花了近一小时，OpenAI 称 719 份手稿中只有 300 项核心结果做了 Lean 形式化，并已因符号错误撤回三篇论文。</p>
-<p>🔗 <a href="https://www.theverge.com/ai-artificial-intelligence/1008726/openai-mathematics-solutions-chaos">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/skt0z2mj6lzgvozqp5xyc4qoo">https://ouyangrong.com/reports/hotspot/ai/items/skt0z2mj6lzgvozqp5xyc4qoo</a></p>]]></description>
-      <category>论文</category>
-      <pubDate>Fri, 09 Oct 2026 19:09:44 GMT</pubDate>
-      <guid isPermaLink="false">skt0z2mj6lzgvozqp5xyc4qoo</guid>
-      <author>noreply@ouyangrong.com (The Verge · AI)</author>
     </item>
   </channel>
 </rss>
