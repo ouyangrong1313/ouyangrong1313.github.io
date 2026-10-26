@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>安防热点 (https://ouyangrong.com/reports/hotspot/sec/agent)</generator>
     <item>
+      <title><![CDATA[视美泰拆解 AIoT-M-F01 语视模组的三重技术逻辑]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/items/cx0przkb6z5xge1vdrndaf73o</link>
+      <description><![CDATA[<p>视美泰拆解其 AIoT-M-F01 语视模组的三重技术逻辑，涵盖人体检测、四阵列定向麦克风加 AI 降噪，以及唇动算法结合声源方位锁定说话人。模组采用 500 万像素单目宽动态摄像头，配 1/2.5 英寸 CMOS 感光芯片、F2.0 大光圈与 ≥75° 视场角，只判断有人在场，不做身份识别，也不留存面部信息。</p>
+<p>🔗 <a href="https://www.shimeta.com.cn/newsinfo/9278666.html">阅读原文</a></p>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/cx0przkb6z5xge1vdrndaf73o">https://ouyangrong.com/reports/hotspot/sec/items/cx0przkb6z5xge1vdrndaf73o</a></p>]]></description>
+      <category>技术</category>
+      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="false">cx0przkb6z5xge1vdrndaf73o</guid>
+      <author>noreply@ouyangrong.com (视美泰企业动态)</author>
+    </item>
+    <item>
       <title><![CDATA[大华股份发布2026年第三季度报告，前三季度营收251.07亿元同比增长9.58%]]></title>
       <link>https://ouyangrong.com/reports/hotspot/sec/items/sat0gso1x9lg1zryl2t48tst4</link>
       <description><![CDATA[<p>大华股份于2026年10月24日发布《2026年第三季度报告》，前三季度营收251.07亿元、同比增长9.58%，扣非归母净利润26.97亿元、同比增长5.51%，归母净利润29.03亿元、同比下降17.88%。</p>
@@ -546,17 +557,6 @@
       <pubDate>Thu, 26 Mar 2026 09:11:00 GMT</pubDate>
       <guid isPermaLink="false">pxeindylegkwy45253wxfocd3</guid>
       <author>noreply@ouyangrong.com (CPS中安网智能安防)</author>
-    </item>
-    <item>
-      <title><![CDATA[Yoosee广州体验店盛大开业：以服务赋能外贸商圈，共筑AI安防新标杆]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec/items/elw0eubbxz12wtuq36gbwl0cq</link>
-      <description><![CDATA[<p>Yoosee于2026年1月17日在广州国际数码广场开设AI体验店，并举办行业交流会，聚焦珠三角外贸商圈。体验店以“安防体验实验室”为设计理念，展示AI摄像机的实时人车识别、哭声检测等功能，同时推出端侧算法与云端AI模型订阅、全球一卡通流量分成等模式，从硬件销售转向智能服务生态。</p>
-<p>🔗 <a href="https://www.gwell.cc/?news_50/321.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/elw0eubbxz12wtuq36gbwl0cq">https://ouyangrong.com/reports/hotspot/sec/items/elw0eubbxz12wtuq36gbwl0cq</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Tue, 20 Jan 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="false">elw0eubbxz12wtuq36gbwl0cq</guid>
-      <author>noreply@ouyangrong.com (技威时代 Yoosee 企业动态)</author>
     </item>
   </channel>
 </rss>
