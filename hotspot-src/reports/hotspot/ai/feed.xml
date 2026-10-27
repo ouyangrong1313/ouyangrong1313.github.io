@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Google DeepMind 发布世界模型 Genie 4，原生生成音频并支持实时交互]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/s6hhbacc1a6p2mk9pz1ltepu6</link>
+      <description><![CDATA[<p>Google DeepMind 发布新一代世界模型 Genie 4，可实时生成带原生音频、并可用文本提示实时操控的模拟世界，目前以研究预览形式开放给可信测试者。</p>
+<p>🔗 <a href="https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/s6hhbacc1a6p2mk9pz1ltepu6">https://ouyangrong.com/reports/hotspot/ai/items/s6hhbacc1a6p2mk9pz1ltepu6</a></p>]]></description>
+      <category>AI 模型</category>
+      <pubDate>Tue, 27 Oct 2026 16:01:38 GMT</pubDate>
+      <guid isPermaLink="false">s6hhbacc1a6p2mk9pz1ltepu6</guid>
+      <author>noreply@ouyangrong.com (Google DeepMind)</author>
+    </item>
+    <item>
       <title><![CDATA[OpenAI 请包括诺奖得主在内的外部专家复核其 AI 产出的数学、计算机科学与物理证明]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/kcnybzl3sdr3hn6ns1y9vi3o8</link>
       <description><![CDATA[<p>OpenAI 请外部专家复核其 AI 在数学、计算机科学和物理三个领域产出的证明，其中物理组由 2004 年诺贝尔物理学奖得主 David Gross 牵头。计算机科学方面称证明了 ETH 为假，数学方面称把局部光滑猜想推广到所有维度，物理方面只覆盖 Yang-Mills 理论的存在性而未涉及质量间隙。</p>
@@ -546,17 +557,6 @@
       <pubDate>Tue, 13 Oct 2026 09:37:04 GMT</pubDate>
       <guid isPermaLink="false">i6j4ebrkypfmtgl6y3g6qhtvf</guid>
       <author>noreply@ouyangrong.com (Latent Space)</author>
-    </item>
-    <item>
-      <title><![CDATA[Meta 发布首个前沿模型 Muse Wonder]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/odzetar0j2vfico1pbfut027i</link>
-      <description><![CDATA[<p>Meta 的 Superintelligence Lab 发布 Muse Wonder 和 Muse Wonder Full 两款模型，这是 Meta 首次推出前沿模型。</p>
-<p>🔗 <a href="https://techcrunch.com/2026/10/12/meta-releases-its-first-frontier-model-muse-wonder/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/odzetar0j2vfico1pbfut027i">https://ouyangrong.com/reports/hotspot/ai/items/odzetar0j2vfico1pbfut027i</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Mon, 12 Oct 2026 17:56:56 GMT</pubDate>
-      <guid isPermaLink="false">odzetar0j2vfico1pbfut027i</guid>
-      <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
     </item>
   </channel>
 </rss>
