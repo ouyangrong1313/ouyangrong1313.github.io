@@ -9,6 +9,28 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Property Finder 如何修正评测偏置，在 Amazon Bedrock 上选出更优视觉模型]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/wd0gv4kwns5ofin8clnv0n5qg</link>
+      <description><![CDATA[<p>Property Finder 与 AWS Generative AI Innovation Center 团队发现其视觉评测集中 96.8% 的标签直接沿用了旧模型的预测，在重建人工标注并改用 Llama 4 Maverick 17B Instruct 后，356 张图片评测集上的 Micro F1 达到 0.80，原专有模型 A 为 0.56。</p>
+<p>🔗 <a href="https://aws.amazon.com/blogs/machine-learning/fix-evaluation-bias-to-unlock-better-models-on-amazon-bedrock/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/wd0gv4kwns5ofin8clnv0n5qg">https://ouyangrong.com/reports/hotspot/ai/items/wd0gv4kwns5ofin8clnv0n5qg</a></p>]]></description>
+      <category>教程</category>
+      <pubDate>Tue, 27 Oct 2026 16:53:02 GMT</pubDate>
+      <guid isPermaLink="false">wd0gv4kwns5ofin8clnv0n5qg</guid>
+      <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
+    </item>
+    <item>
+      <title><![CDATA[Anthropic 计划以特殊治理结构在 IPO 后抵御华尔街压力]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/pifmqmv3tqtk6oeoknqday71m</link>
+      <description><![CDATA[<p>Anthropic 计划在 IPO 中采用一套特殊治理结构，由长期利益信托任命 7 名董事中的 4 名，创始人组成的 Founder LLC 掌握 50.1% 投票权，以此抵御股东施压。多位法学教授认为普通股东实际上无法选择董事会，但创始人自身的财务利益与持续融资需求仍可能侵蚀安全承诺。若多数创始人离开，Founder LLC 将解散，股东可能获得削弱信托保护的权力。</p>
+<p>🔗 <a href="https://www.theverge.com/ai-artificial-intelligence/1019470/anthropic-ipo-resist-investor-pressure-cut-corners-safety">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/pifmqmv3tqtk6oeoknqday71m">https://ouyangrong.com/reports/hotspot/ai/items/pifmqmv3tqtk6oeoknqday71m</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Tue, 27 Oct 2026 16:51:22 GMT</pubDate>
+      <guid isPermaLink="false">pifmqmv3tqtk6oeoknqday71m</guid>
+      <author>noreply@ouyangrong.com (The Verge · AI)</author>
+    </item>
+    <item>
       <title><![CDATA[Google DeepMind 发布世界模型 Genie 4，原生生成音频并支持实时交互]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/s6hhbacc1a6p2mk9pz1ltepu6</link>
       <description><![CDATA[<p>Google DeepMind 发布新一代世界模型 Genie 4，可实时生成带原生音频、并可用文本提示实时操控的模拟世界，目前以研究预览形式开放给可信测试者。</p>
@@ -535,28 +557,6 @@
       <pubDate>Tue, 13 Oct 2026 12:00:49 GMT</pubDate>
       <guid isPermaLink="false">rl7y8l7xw0cepye9myrsu2itw</guid>
       <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
-    </item>
-    <item>
-      <title><![CDATA[Character.AI 申请破产，迪士尼成为资产主要竞购方]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/sk1lcq22mke86k3qmrpovcniw</link>
-      <description><![CDATA[<p>Character.AI 在美国申请 Chapter 11 破产保护，并计划将公司及部分资产出售。迪士尼作为主要竞购方，将以 2000 万美元收购部分未披露资产并获得非独占 IP 许可；Character.AI 在破产文件中列出负债约 5000 万至 1 亿美元。公司预计交易在 11 月底或 12 月初完成，期间包括付费订阅在内的服务照常运营，若无合适报价平台将关停。</p>
-<p>🔗 <a href="https://www.theverge.com/ai-artificial-intelligence/1009802/character-ai-files-for-bankruptcy-disney">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/sk1lcq22mke86k3qmrpovcniw">https://ouyangrong.com/reports/hotspot/ai/items/sk1lcq22mke86k3qmrpovcniw</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Tue, 13 Oct 2026 10:32:23 GMT</pubDate>
-      <guid isPermaLink="false">sk1lcq22mke86k3qmrpovcniw</guid>
-      <author>noreply@ouyangrong.com (The Verge · AI)</author>
-    </item>
-    <item>
-      <title><![CDATA[Meta 发布 Muse Wonder 与 Muse Wonder Full 模型家族]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/i6j4ebrkypfmtgl6y3g6qhtvf</link>
-      <description><![CDATA[<p>Meta Superintelligence Labs 发布第二代模型家族 Muse Wonder 与 Muse Wonder Full，称 Wonder 是更大的模型类别并把这支团队带到前沿水平。</p>
-<p>🔗 <a href="https://www.latent.space/p/ainews-meta-muse-wonder-and-wonder">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/i6j4ebrkypfmtgl6y3g6qhtvf">https://ouyangrong.com/reports/hotspot/ai/items/i6j4ebrkypfmtgl6y3g6qhtvf</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Tue, 13 Oct 2026 09:37:04 GMT</pubDate>
-      <guid isPermaLink="false">i6j4ebrkypfmtgl6y3g6qhtvf</guid>
-      <author>noreply@ouyangrong.com (Latent Space)</author>
     </item>
   </channel>
 </rss>
