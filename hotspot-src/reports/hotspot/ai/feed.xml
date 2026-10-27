@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[OpenAI 宣布数学、计算机与物理三项科学发现，并公布与学术界合作的新方式]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/q3815fs520qks1jcoi9nv914t</link>
+      <description><![CDATA[<p>OpenAI 公布数学、计算机科学和物理三项发现，把模型输出和 Lean 证明发布到 GitHub。数学部分称证明了任意维度的 local smoothing 猜想，并由此解决 Kakeya 猜想和 Stein 限制猜想；计算机科学部分给出确定性子指数时间的精确计数算法，称 3-SAT 情形推翻了指数时间假设（ETH）。</p>
+<p>🔗 <a href="https://www.theverge.com/ai-artificial-intelligence/1019143/openai-eth-kaseya-science-math-physics">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/q3815fs520qks1jcoi9nv914t">https://ouyangrong.com/reports/hotspot/ai/items/q3815fs520qks1jcoi9nv914t</a></p>]]></description>
+      <category>论文</category>
+      <pubDate>Mon, 26 Oct 2026 23:34:58 GMT</pubDate>
+      <guid isPermaLink="false">q3815fs520qks1jcoi9nv914t</guid>
+      <author>noreply@ouyangrong.com (The Verge · AI)</author>
+    </item>
+    <item>
       <title><![CDATA[Anthropic 递交 IPO 招股书后，它究竟是一家怎样的公司]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/nwqvbvilngq0sm13fuxnxqxbi</link>
       <description><![CDATA[<p>Anthropic 已递交 335 页的 IPO 招股书，其中约 100 页聚焦风险，公司估值超过 1.5 万亿美元。文章梳理了其联合创始人 Jack Clark 在 IMF 会议上称奇点已经开始、Chris Olah 在梵蒂冈称在模型内部发现类似喜悦与恐惧的状态等公开表述。</p>
@@ -545,17 +556,6 @@
       <category>论文</category>
       <pubDate>Mon, 12 Oct 2026 09:35:54 GMT</pubDate>
       <guid isPermaLink="false">hejr4g336c414lpiyhy4njugo</guid>
-      <author>noreply@ouyangrong.com (The Decoder)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 批量发布 700 多篇数学手稿，数学家反应震惊与厌恶]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/vfydp3iptz59temutphlqw4n3</link>
-      <description><![CDATA[<p>OpenAI 在 10 月 6 日一次性发布 700 多篇手稿，声称解决了数百个未解数学问题，数学博客 Proofs and Prompts 随后汇总了 100 多位研究者的回应。</p>
-<p>🔗 <a href="https://the-decoder.com/how-much-beauty-have-we-lost-mathematicians-react-with-shock-and-disgust-as-openai-bulldozes-their-field/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/vfydp3iptz59temutphlqw4n3">https://ouyangrong.com/reports/hotspot/ai/items/vfydp3iptz59temutphlqw4n3</a></p>]]></description>
-      <category>观点</category>
-      <pubDate>Sat, 10 Oct 2026 13:03:59 GMT</pubDate>
-      <guid isPermaLink="false">vfydp3iptz59temutphlqw4n3</guid>
       <author>noreply@ouyangrong.com (The Decoder)</author>
     </item>
   </channel>
