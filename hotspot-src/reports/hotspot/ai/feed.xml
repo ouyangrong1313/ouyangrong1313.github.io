@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Anthropic 提交 S-1 拟在纳斯达克上市，上半年营收 163 亿美元、Q2 营业利润 9.74 亿美元]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/jo7bqxscla1nddgeiye2a8fym</link>
+      <description><![CDATA[<p>Anthropic 于周一公开提交 S-1，计划以代码 ANT 在纳斯达克上市，文件显示 2026 年上半年营收 163 亿美元，Q2 单季 116 亿美元、同比增长 1368%，Q2 营业利润 9.74 亿美元。</p>
+<p>🔗 <a href="https://latent.space/p/ainews-anthropic-s1/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/jo7bqxscla1nddgeiye2a8fym">https://ouyangrong.com/reports/hotspot/ai/items/jo7bqxscla1nddgeiye2a8fym</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Tue, 27 Oct 2026 07:24:59 GMT</pubDate>
+      <guid isPermaLink="false">jo7bqxscla1nddgeiye2a8fym</guid>
+      <author>noreply@ouyangrong.com (Latent Space)</author>
+    </item>
+    <item>
       <title><![CDATA[OpenAI 宣布数学、计算机与物理三项科学发现，并公布与学术界合作的新方式]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/q3815fs520qks1jcoi9nv914t</link>
       <description><![CDATA[<p>OpenAI 公布数学、计算机科学和物理三项发现，把模型输出和 Lean 证明发布到 GitHub。数学部分称证明了任意维度的 local smoothing 猜想，并由此解决 Kakeya 猜想和 Stein 限制猜想；计算机科学部分给出确定性子指数时间的精确计数算法，称 3-SAT 情形推翻了指数时间假设（ETH）。</p>
@@ -546,17 +557,6 @@
       <pubDate>Mon, 12 Oct 2026 15:00:25 GMT</pubDate>
       <guid isPermaLink="false">q5rxil6eloj7c9cgkbyyrixg7</guid>
       <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
-    </item>
-    <item>
-      <title><![CDATA[Google DeepMind 的 AlphaProof Nexus 解决数十个开放数学问题，研究通过同行评审]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/hejr4g336c414lpiyhy4njugo</link>
-      <description><![CDATA[<p>Google DeepMind 的 AlphaProof Nexus 自行解决了数十个开放数学问题，相关研究发表在 Science 上，它攻克了 353 个开放 Erdős 问题中的 9 个，其中两个已有 56 年未被解决。</p>
-<p>🔗 <a href="https://the-decoder.com/google-deepminds-alphaproof-nexus-solved-dozens-of-open-math-problems-and-actually-got-peer-reviewed/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/hejr4g336c414lpiyhy4njugo">https://ouyangrong.com/reports/hotspot/ai/items/hejr4g336c414lpiyhy4njugo</a></p>]]></description>
-      <category>论文</category>
-      <pubDate>Mon, 12 Oct 2026 09:35:54 GMT</pubDate>
-      <guid isPermaLink="false">hejr4g336c414lpiyhy4njugo</guid>
-      <author>noreply@ouyangrong.com (The Decoder)</author>
     </item>
   </channel>
 </rss>
