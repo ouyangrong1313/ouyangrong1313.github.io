@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Anthropic 递交 IPO 招股书，警示 AI 或勒索人类、产生自我意识并终结人类]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/em9qprtb8u5ywstijnwgpor78</link>
+      <description><![CDATA[<p>Anthropic 在 IPO 前公开的 S-1 招股书中，用 93 页、超过 7 万词的「风险因素」章节列出数百项潜在问题，包括其 AI 可能勒索人类、产生自我意识乃至终结人类。报道提到其收入快速膨胀但仍需面对更高的成本，并从这份书级篇幅的风险清单中挑出七个最出人意料的失败点，供潜在投资人参考。</p>
+<p>🔗 <a href="https://arstechnica.com/ai/2026/10/anthropic-ipo-warns-its-ai-could-blackmail-people-become-sentient-end-humanity/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/em9qprtb8u5ywstijnwgpor78">https://ouyangrong.com/reports/hotspot/ai/items/em9qprtb8u5ywstijnwgpor78</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Tue, 27 Oct 2026 21:31:14 GMT</pubDate>
+      <guid isPermaLink="false">em9qprtb8u5ywstijnwgpor78</guid>
+      <author>noreply@ouyangrong.com (Ars Technica · AI)</author>
+    </item>
+    <item>
       <title><![CDATA[Property Finder 如何修正评测偏置，在 Amazon Bedrock 上选出更优视觉模型]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/wd0gv4kwns5ofin8clnv0n5qg</link>
       <description><![CDATA[<p>Property Finder 与 AWS Generative AI Innovation Center 团队发现其视觉评测集中 96.8% 的标签直接沿用了旧模型的预测，在重建人工标注并改用 Llama 4 Maverick 17B Instruct 后，356 张图片评测集上的 Micro F1 达到 0.80，原专有模型 A 为 0.56。</p>
@@ -546,17 +557,6 @@
       <pubDate>Tue, 13 Oct 2026 16:00:00 GMT</pubDate>
       <guid isPermaLink="false">mhurv5p7061vqil3jg5hodhmc</guid>
       <author>noreply@ouyangrong.com (The Verge · AI)</author>
-    </item>
-    <item>
-      <title><![CDATA[NVIDIA RTX Spark 笔记本 10 月 16 日上市，PC 应用生态同步就绪]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/rl7y8l7xw0cepye9myrsu2itw</link>
-      <description><![CDATA[<p>NVIDIA 宣布 RTX Spark 笔记本将于 10 月 16 日上市，配套的本地 AI 软件与生态更新同步就绪。该平台最高提供 128GB 统一内存与 1 petaflop AI 算力，专为本地智能体打造的 Nemotron 3.5 Bolt 74B 模型于 10 月 15 日发布。</p>
-<p>🔗 <a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-software-updates/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/rl7y8l7xw0cepye9myrsu2itw">https://ouyangrong.com/reports/hotspot/ai/items/rl7y8l7xw0cepye9myrsu2itw</a></p>]]></description>
-      <category>AI 产品</category>
-      <pubDate>Tue, 13 Oct 2026 12:00:49 GMT</pubDate>
-      <guid isPermaLink="false">rl7y8l7xw0cepye9myrsu2itw</guid>
-      <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
     </item>
   </channel>
 </rss>
