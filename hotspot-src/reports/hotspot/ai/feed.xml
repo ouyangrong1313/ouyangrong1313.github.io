@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[OpenAI 请包括诺奖得主在内的外部专家复核其 AI 产出的数学、计算机科学与物理证明]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/kcnybzl3sdr3hn6ns1y9vi3o8</link>
+      <description><![CDATA[<p>OpenAI 请外部专家复核其 AI 在数学、计算机科学和物理三个领域产出的证明，其中物理组由 2004 年诺贝尔物理学奖得主 David Gross 牵头。计算机科学方面称证明了 ETH 为假，数学方面称把局部光滑猜想推广到所有维度，物理方面只覆盖 Yang-Mills 理论的存在性而未涉及质量间隙。</p>
+<p>🔗 <a href="https://the-decoder.com/openai-asks-outside-experts-including-a-nobel-laureate-to-check-proofs-its-ai-produced-in-math-computer-science-and-physics/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/kcnybzl3sdr3hn6ns1y9vi3o8">https://ouyangrong.com/reports/hotspot/ai/items/kcnybzl3sdr3hn6ns1y9vi3o8</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Tue, 27 Oct 2026 12:37:24 GMT</pubDate>
+      <guid isPermaLink="false">kcnybzl3sdr3hn6ns1y9vi3o8</guid>
+      <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
       <title><![CDATA[Anthropic 提交 S-1 拟在纳斯达克上市，上半年营收 163 亿美元、Q2 营业利润 9.74 亿美元]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/jo7bqxscla1nddgeiye2a8fym</link>
       <description><![CDATA[<p>Anthropic 于周一公开提交 S-1，计划以代码 ANT 在纳斯达克上市，文件显示 2026 年上半年营收 163 亿美元，Q2 单季 116 亿美元、同比增长 1368%，Q2 营业利润 9.74 亿美元。</p>
@@ -546,17 +557,6 @@
       <pubDate>Mon, 12 Oct 2026 17:56:56 GMT</pubDate>
       <guid isPermaLink="false">odzetar0j2vfico1pbfut027i</guid>
       <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
-    </item>
-    <item>
-      <title><![CDATA[NVIDIA 在 OCP 峰会开放 Vera Rubin 架构并发布 DSX AI Factory 开源组件]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/q5rxil6eloj7c9cgkbyyrixg7</link>
-      <description><![CDATA[<p>NVIDIA 在 OCP Global Summit 上把 Vera Rubin 机架与计算托盘设计贡献给 OCP，并通过 MGX 1.2 规范开放机架级盲插液冷、互连基础设施与 5,000A 液冷母线，支持最高 250kW 机架部署。</p>
-<p>🔗 <a href="https://blogs.nvidia.com/blog/ocp-global-summit-vera-rubin-scale-ai-factories/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/q5rxil6eloj7c9cgkbyyrixg7">https://ouyangrong.com/reports/hotspot/ai/items/q5rxil6eloj7c9cgkbyyrixg7</a></p>]]></description>
-      <category>AI 产品</category>
-      <pubDate>Mon, 12 Oct 2026 15:00:25 GMT</pubDate>
-      <guid isPermaLink="false">q5rxil6eloj7c9cgkbyyrixg7</guid>
-      <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
     </item>
   </channel>
 </rss>
