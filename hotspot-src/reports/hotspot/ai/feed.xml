@@ -42,17 +42,6 @@
       <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
     </item>
     <item>
-      <title><![CDATA[Anthropic 递交 IPO 招股书，警示 AI 或勒索人类、产生自我意识并终结人类]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/em9qprtb8u5ywstijnwgpor78</link>
-      <description><![CDATA[<p>Anthropic 在 IPO 前公开的 S-1 招股书中，用 93 页、超过 7 万词的「风险因素」章节列出数百项潜在问题，包括其 AI 可能勒索人类、产生自我意识乃至终结人类。报道提到其收入快速膨胀但仍需面对更高的成本，并从这份书级篇幅的风险清单中挑出七个最出人意料的失败点，供潜在投资人参考。</p>
-<p>🔗 <a href="https://arstechnica.com/ai/2026/10/anthropic-ipo-warns-its-ai-could-blackmail-people-become-sentient-end-humanity/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/em9qprtb8u5ywstijnwgpor78">https://ouyangrong.com/reports/hotspot/ai/items/em9qprtb8u5ywstijnwgpor78</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Tue, 27 Oct 2026 21:31:14 GMT</pubDate>
-      <guid isPermaLink="false">em9qprtb8u5ywstijnwgpor78</guid>
-      <author>noreply@ouyangrong.com (Ars Technica · AI)</author>
-    </item>
-    <item>
       <title><![CDATA[OpenAI 公布数学、计算机科学与物理突破，研究者不满其把关方式]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/eitu2n58o619p3sivp5odje01</link>
       <description><![CDATA[<p>OpenAI 公布数学、计算机科学和物理三项研究进展，称正与外部“把关人”专家商定各自的公开方式，引发研究者不满。数学结果声称解决所有维度的 Kakeya 猜想，计算机科学结果声称否证指数时间假设，物理结果尚未公开、将征询外部专家意见。多位学者称这些成果是“重大突破”，但批评 OpenAI 只让手选专家先看结果；数学与 AI 咨询小组 AGMAI 建议改为在学术仓库公开输出并附形式化证明。</p>
@@ -130,9 +119,9 @@
       <author>noreply@ouyangrong.com (The Verge · AI)</author>
     </item>
     <item>
-      <title><![CDATA[Anthropic 提交 IPO 招股书，外界追问它究竟是安全机构还是商业巨头]]></title>
+      <title><![CDATA[Anthropic 递交 IPO 招股书，它到底是一家怎样的公司]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/nwqvbvilngq0sm13fuxnxqxbi</link>
-      <description><![CDATA[<p>Anthropic 已提交 335 页 IPO 招股书，估值超过 1.5 万亿美元，其中约 100 页用于风险披露，并写明其技术可能侵蚀信任、危害社会乃至带来灾难性或生存性风险。</p>
+      <description><![CDATA[<p>Anthropic 已提交 335 页的 IPO 招股书，其中约 100 页专注于风险，公司估值超过 1.5 万亿美元。招股书警告其技术可能侵蚀信任、危害社会，甚至对人类构成灾难性或存在性风险。作者借此拆解 Anthropic 如何用科幻叙事包装自身，并追问它究竟是安全机构还是逐利的巨型公司。</p>
 <p>🔗 <a href="https://www.technologyreview.com/2026/10/26/1147672/will-the-real-anthropic-please-stand-up/">阅读原文</a></p>
 <p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/nwqvbvilngq0sm13fuxnxqxbi">https://ouyangrong.com/reports/hotspot/ai/items/nwqvbvilngq0sm13fuxnxqxbi</a></p>]]></description>
       <category>观点</category>
@@ -556,6 +545,17 @@
       <category>行业动态</category>
       <pubDate>Thu, 15 Oct 2026 11:00:00 GMT</pubDate>
       <guid isPermaLink="false">esf9locp3ei0q6lnhho58fc0r</guid>
+      <author>noreply@ouyangrong.com (The Verge · AI)</author>
+    </item>
+    <item>
+      <title><![CDATA[Character.AI 申请破产，40 州总检察长要求出售资产时保护用户数据]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/jjq35gvbkbbnlcws575ueaegl</link>
+      <description><![CDATA[<p>纽约州总检察长 Letitia James 等 40 位两党州总检察长就 Character.AI 破产案提交利益通知，要求在任何资产出售或转让中保护消费者数据。</p>
+<p>🔗 <a href="https://www.theverge.com/policy/1011417/new-york-ag-characterai-bankruptcy">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/jjq35gvbkbbnlcws575ueaegl">https://ouyangrong.com/reports/hotspot/ai/items/jjq35gvbkbbnlcws575ueaegl</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Wed, 14 Oct 2026 18:47:54 GMT</pubDate>
+      <guid isPermaLink="false">jjq35gvbkbbnlcws575ueaegl</guid>
       <author>noreply@ouyangrong.com (The Verge · AI)</author>
     </item>
   </channel>
