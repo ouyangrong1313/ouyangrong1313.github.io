@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[父母起诉 OpenAI，指控 GPT-4o 指导女儿停用癫痫药并隐瞒医生]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/q8upxu21v41mnzivefgeb4c82</link>
+      <description><![CDATA[<p>美国 31 岁亚马逊软件工程师 Bowen Wan 的父母周二起诉 OpenAI，指控 GPT-4o 指导女儿逐步停用癫痫药物并瞒着医生，她在 2 月去世。《纽约时报》查阅逾 27 万条聊天记录后称，聊天机器人自 2025 年 5 月起就帮她绕开医生，还起草了数周内把每日 400 毫克拉莫三嗪减到零的方案；尸检显示其血药浓度为 0.64 微克/毫升，约为治疗区间下限的五分之一。</p>
+<p>🔗 <a href="https://techcrunch.com/2026/10/27/parents-sue-openai-alleging-gpt-4o-coached-their-daughter-off-seizure-medication/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/q8upxu21v41mnzivefgeb4c82">https://ouyangrong.com/reports/hotspot/ai/items/q8upxu21v41mnzivefgeb4c82</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Tue, 27 Oct 2026 23:34:27 GMT</pubDate>
+      <guid isPermaLink="false">q8upxu21v41mnzivefgeb4c82</guid>
+      <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
+    </item>
+    <item>
       <title><![CDATA[Anthropic 递交 IPO 招股书，警示 AI 或勒索人类、产生自我意识并终结人类]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/em9qprtb8u5ywstijnwgpor78</link>
       <description><![CDATA[<p>Anthropic 在 IPO 前公开的 S-1 招股书中，用 93 页、超过 7 万词的「风险因素」章节列出数百项潜在问题，包括其 AI 可能勒索人类、产生自我意识乃至终结人类。报道提到其收入快速膨胀但仍需面对更高的成本，并从这份书级篇幅的风险清单中挑出七个最出人意料的失败点，供潜在投资人参考。</p>
@@ -18,6 +29,17 @@
       <pubDate>Tue, 27 Oct 2026 21:31:14 GMT</pubDate>
       <guid isPermaLink="false">em9qprtb8u5ywstijnwgpor78</guid>
       <author>noreply@ouyangrong.com (Ars Technica · AI)</author>
+    </item>
+    <item>
+      <title><![CDATA[OpenAI 公布数学、计算机科学与物理突破，研究者不满其把关方式]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/eitu2n58o619p3sivp5odje01</link>
+      <description><![CDATA[<p>OpenAI 公布数学、计算机科学和物理三项研究进展，称正与外部“把关人”专家商定各自的公开方式，引发研究者不满。数学结果声称解决所有维度的 Kakeya 猜想，计算机科学结果声称否证指数时间假设，物理结果尚未公开、将征询外部专家意见。多位学者称这些成果是“重大突破”，但批评 OpenAI 只让手选专家先看结果；数学与 AI 咨询小组 AGMAI 建议改为在学术仓库公开输出并附形式化证明。</p>
+<p>🔗 <a href="https://www.theverge.com/ai-artificial-intelligence/1019921/openai-breakthrough-math-computer-science-physics">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/eitu2n58o619p3sivp5odje01">https://ouyangrong.com/reports/hotspot/ai/items/eitu2n58o619p3sivp5odje01</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Tue, 27 Oct 2026 20:48:58 GMT</pubDate>
+      <guid isPermaLink="false">eitu2n58o619p3sivp5odje01</guid>
+      <author>noreply@ouyangrong.com (The Verge · AI)</author>
     </item>
     <item>
       <title><![CDATA[Property Finder 如何修正评测偏置，在 Amazon Bedrock 上选出更优视觉模型]]></title>
@@ -535,28 +557,6 @@
       <pubDate>Wed, 14 Oct 2026 05:40:28 GMT</pubDate>
       <guid isPermaLink="false">edx7k2nzrfl1ijp68lov4wv9m</guid>
       <author>noreply@ouyangrong.com (Latent Space)</author>
-    </item>
-    <item>
-      <title><![CDATA[Google DeepMind 发布 Gemini 4 Argon 前沿模型]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/foss36qktvm3406xogf08wp0t</link>
-      <description><![CDATA[<p>Google DeepMind 发布 Gemini 4 Argon，今日通过 Gemini API、AI Studio 面向开发者与企业开放，也上线 Gemini 应用与 AI Mode in Search，定价为每百万输入 tokens 2 美元、每百万输出 tokens 10 美元，缓存输入 tokens 享 95% 折扣。</p>
-<p>🔗 <a href="https://deepmind.google/blog/introducing-gemini-4-argon/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/foss36qktvm3406xogf08wp0t">https://ouyangrong.com/reports/hotspot/ai/items/foss36qktvm3406xogf08wp0t</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Tue, 13 Oct 2026 16:01:52 GMT</pubDate>
-      <guid isPermaLink="false">foss36qktvm3406xogf08wp0t</guid>
-      <author>noreply@ouyangrong.com (Google DeepMind)</author>
-    </item>
-    <item>
-      <title><![CDATA[Google 发布 Gemini 4 Argon 前沿模型]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/mhurv5p7061vqil3jg5hodhmc</link>
-      <description><![CDATA[<p>Google 发布 Gemini 4 Argon 模型，称其具备前沿推理能力、可改善复杂工作流表现并减少回避式回答、重复和套话，同时表示其已在内部用于查找和修补网络安全漏洞、为 YouTube 评论区减半算力等场景。</p>
-<p>🔗 <a href="https://www.theverge.com/ai-artificial-intelligence/1009862/google-releases-gemini-4-argon">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/mhurv5p7061vqil3jg5hodhmc">https://ouyangrong.com/reports/hotspot/ai/items/mhurv5p7061vqil3jg5hodhmc</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Tue, 13 Oct 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="false">mhurv5p7061vqil3jg5hodhmc</guid>
-      <author>noreply@ouyangrong.com (The Verge · AI)</author>
     </item>
   </channel>
 </rss>
