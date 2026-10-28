@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Cathedral用AI智能体攻入Anthropic内部系统，双方就影响范围各执一词]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/msvsjjh4f5liyms3bt8v7dqi3</link>
+      <description><![CDATA[<p>网络安全初创公司Cathedral用AI智能体经第三方业务软件进入Anthropic内部系统，触及会议记录、薪资数据、招聘信息和Slack消息。Anthropic确认被访问的是部分销售、人事和IT系统，含部分客户与合作伙伴联系方式及基础账号数据，Claude对话、源代码和模型权重未暴露，受影响入口在发现当天关闭并通知了美国联邦机构。</p>
+<p>🔗 <a href="https://the-decoder.com/ai-agents-hacked-anthropic-maker-of-arguably-the-most-capable-ai-models-for-cyberdefense/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/msvsjjh4f5liyms3bt8v7dqi3">https://ouyangrong.com/reports/hotspot/ai/items/msvsjjh4f5liyms3bt8v7dqi3</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Wed, 28 Oct 2026 10:56:24 GMT</pubDate>
+      <guid isPermaLink="false">msvsjjh4f5liyms3bt8v7dqi3</guid>
+      <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
       <title><![CDATA[Anthropic IPO 中，风投将获利数十亿，亚马逊收益更高]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/ve2g7yswhpust8n88edrj6tsd</link>
       <description><![CDATA[<p>Anthropic 的 S-1 显示，Menlo Ventures、Sequoia、Sound Ventures、Spark Capital 等风投机构持股均不足 5%，IPO 的最大财务受益方可能是亚马逊。</p>
@@ -545,17 +556,6 @@
       <category>行业动态</category>
       <pubDate>Thu, 15 Oct 2026 11:00:00 GMT</pubDate>
       <guid isPermaLink="false">esf9locp3ei0q6lnhho58fc0r</guid>
-      <author>noreply@ouyangrong.com (The Verge · AI)</author>
-    </item>
-    <item>
-      <title><![CDATA[Character.AI 申请破产，40 州总检察长要求出售资产时保护用户数据]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/jjq35gvbkbbnlcws575ueaegl</link>
-      <description><![CDATA[<p>纽约州总检察长 Letitia James 等 40 位两党州总检察长就 Character.AI 破产案提交利益通知，要求在任何资产出售或转让中保护消费者数据。</p>
-<p>🔗 <a href="https://www.theverge.com/policy/1011417/new-york-ag-characterai-bankruptcy">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/jjq35gvbkbbnlcws575ueaegl">https://ouyangrong.com/reports/hotspot/ai/items/jjq35gvbkbbnlcws575ueaegl</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Wed, 14 Oct 2026 18:47:54 GMT</pubDate>
-      <guid isPermaLink="false">jjq35gvbkbbnlcws575ueaegl</guid>
       <author>noreply@ouyangrong.com (The Verge · AI)</author>
     </item>
   </channel>
