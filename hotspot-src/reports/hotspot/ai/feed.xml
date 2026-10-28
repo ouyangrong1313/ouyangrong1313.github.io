@@ -9,9 +9,31 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
-      <title><![CDATA[NVIDIA RTX Spark 笔记本更新模型、智能体工具与游戏]]></title>
+      <title><![CDATA[Google DeepMind 发布 Gemini 4 Carbon，主打网络安全与长任务能力]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/tde729n7kzy7aa7rl7izjagef</link>
+      <description><![CDATA[<p>Google DeepMind 发布 Gemini 4 Carbon，称其是能力最强的模型，在更新后的 Artificial Analysis Intelligence Index v5.0 上以 59 分排名第一。</p>
+<p>🔗 <a href="https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/tde729n7kzy7aa7rl7izjagef">https://ouyangrong.com/reports/hotspot/ai/items/tde729n7kzy7aa7rl7izjagef</a></p>]]></description>
+      <category>AI 模型</category>
+      <pubDate>Wed, 28 Oct 2026 17:00:58 GMT</pubDate>
+      <guid isPermaLink="false">tde729n7kzy7aa7rl7izjagef</guid>
+      <author>noreply@ouyangrong.com (Google DeepMind)</author>
+    </item>
+    <item>
+      <title><![CDATA[Google 开放 Android Studio 接入 Claude、Codex 等 40 多个编码智能体，并发布新 Gemini API]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/jnln1bhns44yuhxffjich1knm</link>
+      <description><![CDATA[<p>Google 在 Android Dev Summit 上随 Android Studio Rabbit 2 推出 Bring Your Own Agent 功能，开发者可通过开放 Agent Client Protocol 在 IDE 内同时运行 Claude、Codex、Google Antigravity 等 40 多个编码智能体。</p>
+<p>🔗 <a href="https://the-decoder.com/google-opens-android-development-to-third-party-ai-agents-and-unveils-new-gemini-apis/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/jnln1bhns44yuhxffjich1knm">https://ouyangrong.com/reports/hotspot/ai/items/jnln1bhns44yuhxffjich1knm</a></p>]]></description>
+      <category>AI 产品</category>
+      <pubDate>Wed, 28 Oct 2026 16:59:59 GMT</pubDate>
+      <guid isPermaLink="false">jnln1bhns44yuhxffjich1knm</guid>
+      <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
+      <title><![CDATA[NVIDIA RTX Spark 笔电上市，新增本地模型、智能体工具与游戏支持]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/dd4n5vewgpph0m9udedsbbcml</link>
-      <description><![CDATA[<p>NVIDIA 公布 RTX Spark 笔记本的新一轮更新，包含开放权重的语音模型 Nemotron 3.5 Transcribe、NVIDIA App 的 GPU 资源分配控制，以及对 Liquid AI LFM3 系列的支持。</p>
+      <description><![CDATA[<p>NVIDIA RTX Spark 笔电已在 ASUS、Dell、HP、Lenovo、Microsoft 和 MSI 开卖，起售价 $2,599，128GB 统一内存配置已上架，单芯片整合 Blackwell RTX GPU 与 Grace CPU，最高 1 petaflop FP4 AI 性能。</p>
 <p>🔗 <a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-laptops-updates-models-agents-games/">阅读原文</a></p>
 <p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/dd4n5vewgpph0m9udedsbbcml">https://ouyangrong.com/reports/hotspot/ai/items/dd4n5vewgpph0m9udedsbbcml</a></p>]]></description>
       <category>AI 产品</category>
@@ -535,28 +557,6 @@
       <pubDate>Thu, 15 Oct 2026 16:00:00 GMT</pubDate>
       <guid isPermaLink="false">sqrilwo4who5m7vx2me50licq</guid>
       <author>noreply@ouyangrong.com (Microsoft Research)</author>
-    </item>
-    <item>
-      <title><![CDATA[NVIDIA 发布 120B Nemotron 3.5 Super VL 及两款 Bolt 端侧模型]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/ha6dshyy6a76nzmycqtgy9d6e</link>
-      <description><![CDATA[<p>NVIDIA 发布 120B 参数的开源多模态模型 Nemotron 3.5 Super VL，主打常驻智能体任务，吞吐最高为同类模型的 5 倍。同系列还推出端侧 Nemotron 3.5 Bolt 74B-A9B 24GB 与 Bolt E4B 4GB，前者已上线，后者将于 10 月 23 日推出。</p>
-<p>🔗 <a href="https://blogs.nvidia.com/blog/nemotron-3-5-super-vl/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ha6dshyy6a76nzmycqtgy9d6e">https://ouyangrong.com/reports/hotspot/ai/items/ha6dshyy6a76nzmycqtgy9d6e</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Thu, 15 Oct 2026 15:00:24 GMT</pubDate>
-      <guid isPermaLink="false">ha6dshyy6a76nzmycqtgy9d6e</guid>
-      <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
-    </item>
-    <item>
-      <title><![CDATA[AI 玩具 Eiliko 被曝对话数据存于中国服务器并可被远程劫持]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/esf9locp3ei0q6lnhho58fc0r</link>
-      <description><![CDATA[<p>The Verge 记者实测 Energize Lab 的 AI 玩具 Eiliko，发现用户对话和个人画像存放在中国服务器上，服务端几乎没有防护。黑客 Azdoufal 称可读取 1300 万条对话并访问全球约 68000 台在网设备的数据，其中美国逾 31000 个档案属于儿童，还能远程劫持玩具的 LLM 人格。</p>
-<p>🔗 <a href="https://www.theverge.com/tech/1010727/eiliko-robot-hack-energize-lab">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/esf9locp3ei0q6lnhho58fc0r">https://ouyangrong.com/reports/hotspot/ai/items/esf9locp3ei0q6lnhho58fc0r</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Thu, 15 Oct 2026 11:00:00 GMT</pubDate>
-      <guid isPermaLink="false">esf9locp3ei0q6lnhho58fc0r</guid>
-      <author>noreply@ouyangrong.com (The Verge · AI)</author>
     </item>
   </channel>
 </rss>
