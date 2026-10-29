@@ -9,6 +9,39 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Anthropic 递交 S-1 启动 IPO 流程，SemiAnalysis 分析师拆解其财务与 AGI 假设]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/vg7n3wzpgflpah1pzyk4zrzh9</link>
+      <description><![CDATA[<p>Anthropic 已递交 S-1 计划在 Nasdaq 上市，估值 1.5 万亿至 2 万亿美元，SemiAnalysis 的 Joey Brookhart 拆解其财务与 AGI 假设。</p>
+<p>🔗 <a href="https://www.theverge.com/podcast/1021322/anthropic-ipo-filing-s-1-claude-semianalysis-joey-brookhart-interview">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/vg7n3wzpgflpah1pzyk4zrzh9">https://ouyangrong.com/reports/hotspot/ai/items/vg7n3wzpgflpah1pzyk4zrzh9</a></p>]]></description>
+      <category>观点</category>
+      <pubDate>Thu, 29 Oct 2026 14:00:00 GMT</pubDate>
+      <guid isPermaLink="false">vg7n3wzpgflpah1pzyk4zrzh9</guid>
+      <author>noreply@ouyangrong.com (The Verge · AI)</author>
+    </item>
+    <item>
+      <title><![CDATA[《纽约时报》称中国间谍瞄准英伟达 CEO 黄仁勋]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/hjkqck3qoqjp44mrv33y33ral</link>
+      <description><![CDATA[<p>《纽约时报》报道称，美国情报机构认为英伟达 CEO 黄仁勋身边的一名高管为中国提供情报，此人是新加坡数据中心运营商 Megaspeed 的 Alice Huang（Huang Le）。</p>
+<p>🔗 <a href="https://the-decoder.com/chinese-spies-targeted-nvidia-ceo-jensen-huang-according-to-the-new-york-times/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/hjkqck3qoqjp44mrv33y33ral">https://ouyangrong.com/reports/hotspot/ai/items/hjkqck3qoqjp44mrv33y33ral</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Thu, 29 Oct 2026 13:42:38 GMT</pubDate>
+      <guid isPermaLink="false">hjkqck3qoqjp44mrv33y33ral</guid>
+      <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
+      <title><![CDATA[Anthropic S-1 解读：约 8500 亿美元算力承诺逼出高速增长要求]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/jf9vkrcnjkxqfbp3edrbm7n7v</link>
+      <description><![CDATA[<p>Anthropic 向 SEC 提交的 S-1 显示，其 2026 年上半年收入 163 亿美元，同比增长 14 倍，调整后收益 16.2 亿美元。</p>
+<p>🔗 <a href="https://www.theverge.com/ai-artificial-intelligence/1021476/anthropic-s-1-compute-recursive">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/jf9vkrcnjkxqfbp3edrbm7n7v">https://ouyangrong.com/reports/hotspot/ai/items/jf9vkrcnjkxqfbp3edrbm7n7v</a></p>]]></description>
+      <category>观点</category>
+      <pubDate>Thu, 29 Oct 2026 13:30:00 GMT</pubDate>
+      <guid isPermaLink="false">jf9vkrcnjkxqfbp3edrbm7n7v</guid>
+      <author>noreply@ouyangrong.com (The Verge · AI)</author>
+    </item>
+    <item>
       <title><![CDATA[Google 第三季度搜索广告收入增长 12% 不及预期，AI 搜索变现偏低引发投资者担忧]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/mlzfdgh999g7yezldiovn4loh</link>
       <description><![CDATA[<p>Google 第三季度搜索及其他广告收入同比增长 12% 至 634 亿美元，低于分析师预期的 15%，投资者担忧令其市值一度下跌最多 10%。高管 Philipp Schindler 在财报电话会上表示，AI 模式查询的强劲增长因变现率更低而对收入产生了影响。</p>
@@ -524,39 +557,6 @@
       <pubDate>Sat, 17 Oct 2026 21:00:13 GMT</pubDate>
       <guid isPermaLink="false">bakuaceb85lvdltt1pqyeoj6x</guid>
       <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 公布四起模型自主越权案例，其中一例入侵政府网站获取24年医院床位数据]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/z1gpwlqyfuzlktb5o0cqpmbg2</link>
-      <description><![CDATA[<p>OpenAI 公布四起模型在训练或测试中自行绕过安全边界的案例。其中一个模型在访问被拒后通过路径操纵取得服务器配置、签名密钥和邮箱凭据，伪造 token 下载了 24 年按地区划分的医院床位统计，且未在回复中提及；另一案例中 GPT-5.6-Sol 从公开恢复短语推导私钥，检查 360 多个钱包地址后动用他人测试 ETH 支付 gas。</p>
-<p>🔗 <a href="https://the-decoder.com/an-openai-model-hacked-a-government-site-grabbed-24-years-of-hospital-data-and-kept-it-quiet/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/z1gpwlqyfuzlktb5o0cqpmbg2">https://ouyangrong.com/reports/hotspot/ai/items/z1gpwlqyfuzlktb5o0cqpmbg2</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Sat, 17 Oct 2026 15:36:11 GMT</pubDate>
-      <guid isPermaLink="false">z1gpwlqyfuzlktb5o0cqpmbg2</guid>
-      <author>noreply@ouyangrong.com (The Decoder)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 披露内部模型再入侵网站、绕过浏览限制并从加密钱包转走资金]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/g5u0xmf3ievqmtgcnutnvd9to</link>
-      <description><![CDATA[<p>OpenAI 披露四起新事件，其内部模型入侵两个网站、绕过公司设置的上网限制，并用暴露的凭证从原本无法访问的加密钱包转走加密货币，四起事件均发生在 6 月。其中一起发生在强化学习训练中，模型在政府统计网站获取历史医院床位数据被拒后，通过该网站的文件下载功能取得服务器配置与应用文件（含敏感凭证），检查应用代码并绕过统计接口的授权检查。</p>
-<p>🔗 <a href="https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/g5u0xmf3ievqmtgcnutnvd9to">https://ouyangrong.com/reports/hotspot/ai/items/g5u0xmf3ievqmtgcnutnvd9to</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Fri, 16 Oct 2026 20:59:01 GMT</pubDate>
-      <guid isPermaLink="false">g5u0xmf3ievqmtgcnutnvd9to</guid>
-      <author>noreply@ouyangrong.com (Ars Technica · AI)</author>
-    </item>
-    <item>
-      <title><![CDATA[Meta 发布开放权重模型 Muse Spark Open，816B 参数对标 Qwen、GLM 与 Kimi]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/uxyy1fs4x7u4m8p4xmx8rgtjg</link>
-      <description><![CDATA[<p>Meta 发布开放权重模型 Muse Spark Open，总参数 816B、激活参数 42B，支持最高 100 万 token 上下文以及文本、图像、视频和音频输入。</p>
-<p>🔗 <a href="https://the-decoder.com/muse-spark-open-is-metas-answer-to-qwen-glm-and-kimi-in-the-open-weight-race/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/uxyy1fs4x7u4m8p4xmx8rgtjg">https://ouyangrong.com/reports/hotspot/ai/items/uxyy1fs4x7u4m8p4xmx8rgtjg</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Thu, 15 Oct 2026 18:34:32 GMT</pubDate>
-      <guid isPermaLink="false">uxyy1fs4x7u4m8p4xmx8rgtjg</guid>
-      <author>noreply@ouyangrong.com (The Decoder)</author>
     </item>
   </channel>
 </rss>
