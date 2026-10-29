@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[美国反垄断监管机构审查 Nvidia 收购 Hugging Face 交易及销售行为]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/jk4wlc9g6xhyng2ubb4d3j3tm</link>
+      <description><![CDATA[<p>美国司法部正在审查 Nvidia 以 129.3 亿美元收购开源平台 Hugging Face 的计划，官员关注该交易是否会让 Nvidia 控制 AI 分发的关键枢纽并损害竞争对手，Nvidia 预计在 2027 年上半年完成交易。</p>
+<p>🔗 <a href="https://the-decoder.com/us-antitrust-regulators-are-scrutinizing-nvidias-hugging-face-deal-and-sales-practices/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/jk4wlc9g6xhyng2ubb4d3j3tm">https://ouyangrong.com/reports/hotspot/ai/items/jk4wlc9g6xhyng2ubb4d3j3tm</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Thu, 29 Oct 2026 14:07:49 GMT</pubDate>
+      <guid isPermaLink="false">jk4wlc9g6xhyng2ubb4d3j3tm</guid>
+      <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
       <title><![CDATA[Anthropic 递交 S-1 启动 IPO 流程，SemiAnalysis 分析师拆解其财务与 AGI 假设]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/vg7n3wzpgflpah1pzyk4zrzh9</link>
       <description><![CDATA[<p>Anthropic 已递交 S-1 计划在 Nasdaq 上市，估值 1.5 万亿至 2 万亿美元，SemiAnalysis 的 Joey Brookhart 拆解其财务与 AGI 假设。</p>
@@ -546,17 +557,6 @@
       <pubDate>Tue, 20 Oct 2026 11:34:54 GMT</pubDate>
       <guid isPermaLink="false">stjvqvm5vveb9j7f5oqmj5wqm</guid>
       <author>noreply@ouyangrong.com (The Decoder)</author>
-    </item>
-    <item>
-      <title><![CDATA[NVIDIA RTX Spark 笔记本上市，起售价 2,399 美元]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/bakuaceb85lvdltt1pqyeoj6x</link>
-      <description><![CDATA[<p>NVIDIA RTX Spark 笔记本已上市，搭载 Blackwell RTX GPU 与 Grace CPU，提供最高 1 petaflop AI 算力和最高 128GB 统一内存，起售价 2,399 美元。</p>
-<p>🔗 <a href="https://blogs.nvidia.com/blog/local-ai-rtx-spark-windows-laptops-celebration/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/bakuaceb85lvdltt1pqyeoj6x">https://ouyangrong.com/reports/hotspot/ai/items/bakuaceb85lvdltt1pqyeoj6x</a></p>]]></description>
-      <category>AI 产品</category>
-      <pubDate>Sat, 17 Oct 2026 21:00:13 GMT</pubDate>
-      <guid isPermaLink="false">bakuaceb85lvdltt1pqyeoj6x</guid>
-      <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
     </item>
   </channel>
 </rss>
