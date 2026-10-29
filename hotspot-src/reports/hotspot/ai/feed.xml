@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Google 第三季度搜索广告收入增长 12% 不及预期，AI 搜索变现偏低引发投资者担忧]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/mlzfdgh999g7yezldiovn4loh</link>
+      <description><![CDATA[<p>Google 第三季度搜索及其他广告收入同比增长 12% 至 634 亿美元，低于分析师预期的 15%，投资者担忧令其市值一度下跌最多 10%。高管 Philipp Schindler 在财报电话会上表示，AI 模式查询的强劲增长因变现率更低而对收入产生了影响。</p>
+<p>🔗 <a href="https://the-decoder.com/googles-ai-search-problem-finally-shows-up-in-the-earnings-report-some-investors-believe/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/mlzfdgh999g7yezldiovn4loh">https://ouyangrong.com/reports/hotspot/ai/items/mlzfdgh999g7yezldiovn4loh</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Thu, 29 Oct 2026 10:16:34 GMT</pubDate>
+      <guid isPermaLink="false">mlzfdgh999g7yezldiovn4loh</guid>
+      <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
       <title><![CDATA[Google DeepMind 发布 Gemini 4 Carbon，主打网络安全与长任务能力]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/tde729n7kzy7aa7rl7izjagef</link>
       <description><![CDATA[<p>Google DeepMind 发布 Gemini 4 Carbon，称其是能力最强的模型，在更新后的 Artificial Analysis Intelligence Index v5.0 上以 59 分排名第一。</p>
@@ -546,17 +557,6 @@
       <pubDate>Thu, 15 Oct 2026 18:34:32 GMT</pubDate>
       <guid isPermaLink="false">uxyy1fs4x7u4m8p4xmx8rgtjg</guid>
       <author>noreply@ouyangrong.com (The Decoder)</author>
-    </item>
-    <item>
-      <title><![CDATA[Microsoft Research 的 Magnetar 用零知识证明实现通用可验证计算]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/sqrilwo4who5m7vx2me50licq</link>
-      <description><![CDATA[<p>Microsoft Research 公布零知识虚拟机 Magnetar，可直接证明 Rust、Go 或 C 编写的 RISC-V 程序，在 15 个基准程序上平均比同机最快 zkVM 快 10 到 39 倍。</p>
-<p>🔗 <a href="https://www.microsoft.com/en-us/research/blog/proof-based-general-purpose-computing-with-magnetar/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/sqrilwo4who5m7vx2me50licq">https://ouyangrong.com/reports/hotspot/ai/items/sqrilwo4who5m7vx2me50licq</a></p>]]></description>
-      <category>论文</category>
-      <pubDate>Thu, 15 Oct 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="false">sqrilwo4who5m7vx2me50licq</guid>
-      <author>noreply@ouyangrong.com (Microsoft Research)</author>
     </item>
   </channel>
 </rss>
