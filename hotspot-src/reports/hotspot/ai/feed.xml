@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[AI 支出热潮出现裂痕，四大科技巨头今年资本开支计划超 7400 亿美元]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/ag2cpk6dw3485a051qjd73caj</link>
+      <description><![CDATA[<p>Alphabet、Amazon、Meta 和 Microsoft 今年计划在资本开支上投入超 7400 亿美元，投资者开始担忧自由现金流转负、债务攀升以及这些投入能否带来足够回报。</p>
+<p>🔗 <a href="https://techcrunch.com/2026/10/30/cracks-are-emerging-in-the-ai-spending-boom/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ag2cpk6dw3485a051qjd73caj">https://ouyangrong.com/reports/hotspot/ai/items/ag2cpk6dw3485a051qjd73caj</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Fri, 30 Oct 2026 21:17:40 GMT</pubDate>
+      <guid isPermaLink="false">ag2cpk6dw3485a051qjd73caj</guid>
+      <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
+    </item>
+    <item>
       <title><![CDATA[Epoch AI 称开源模型 GLM 5.3 零人工输入在 48 小时内构建完整 Firefox 利用链]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/llmrwzy1reqp49bibnivg9t1b</link>
       <description><![CDATA[<p>Epoch AI 研究人员发现，开放权重模型 GLM 5.3 无需人工输入即可自动构建完整的 Firefox 漏洞利用链，单次成功攻击的 API 费用约 1000 美元。</p>
@@ -545,17 +556,6 @@
       <category>AI 模型</category>
       <pubDate>Wed, 21 Oct 2026 10:00:07 GMT</pubDate>
       <guid isPermaLink="false">msrzuhwye2kvcxn6qdwcna948</guid>
-      <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
-    </item>
-    <item>
-      <title><![CDATA[NVIDIA GTC Berlin 2026 主题演讲发布 DSX POD、OpenShell 与 Agile ONE SN 人形机器人]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/e40n8rx02gaw9d09hz50mryfd</link>
-      <description><![CDATA[<p>黄仁勋在 GTC Berlin 2026 主题演讲中发布面向 AI 工厂的 DSX POD 参考设计、OpenShell 安全智能体运行时与 Agile ONE SN 人形机器人参考平台。</p>
-<p>🔗 <a href="https://blogs.nvidia.com/blog/gtc-berlin-2026-keynote/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/e40n8rx02gaw9d09hz50mryfd">https://ouyangrong.com/reports/hotspot/ai/items/e40n8rx02gaw9d09hz50mryfd</a></p>]]></description>
-      <category>AI 产品</category>
-      <pubDate>Wed, 21 Oct 2026 09:30:16 GMT</pubDate>
-      <guid isPermaLink="false">e40n8rx02gaw9d09hz50mryfd</guid>
       <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
     </item>
   </channel>
