@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Epoch AI 称开源模型 GLM 5.3 零人工输入在 48 小时内构建完整 Firefox 利用链]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/llmrwzy1reqp49bibnivg9t1b</link>
+      <description><![CDATA[<p>Epoch AI 研究人员发现，开放权重模型 GLM 5.3 无需人工输入即可自动构建完整的 Firefox 漏洞利用链，单次成功攻击的 API 费用约 1000 美元。</p>
+<p>🔗 <a href="https://the-decoder.com/open-weight-model-glm-5-3-built-full-firefox-exploit-chains-with-zero-human-input-in-under-48-hours/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/llmrwzy1reqp49bibnivg9t1b">https://ouyangrong.com/reports/hotspot/ai/items/llmrwzy1reqp49bibnivg9t1b</a></p>]]></description>
+      <category>论文</category>
+      <pubDate>Fri, 30 Oct 2026 12:22:18 GMT</pubDate>
+      <guid isPermaLink="false">llmrwzy1reqp49bibnivg9t1b</guid>
+      <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
       <title><![CDATA[Google 承认 AI 搜索创收不及传统搜索，计划靠增加广告弥补]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/dl33fcwur4dg75legxy6quj5g</link>
       <description><![CDATA[<p>Alphabet 公布 Q3 2026 财报，营收近 1280 亿美元、同比增长 25%，但净利润约 260 亿美元、比去年同期少近 90 亿美元，股价下跌约 12%。公司承认 AI 搜索创收不及传统搜索，计划通过投放更多广告来弥补，并预计明年在 AI 上支出更高。Google Cloud 营收突破 300 亿美元，高于分析师预期。</p>
@@ -546,17 +557,6 @@
       <pubDate>Wed, 21 Oct 2026 07:00:00 GMT</pubDate>
       <guid isPermaLink="false">v3qf0gls8jeywk1d0c88gzygd</guid>
       <author>noreply@ouyangrong.com (OpenAI News)</author>
-    </item>
-    <item>
-      <title><![CDATA[用 AWS Agent Registry 在运行时发现 MCP 工具与 A2A 智能体]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/ldr3gjk2zvt8uvhyqovwju55m</link>
-      <description><![CDATA[<p>AWS Agent Registry 让编排器在运行时通过语义与关键词混合搜索发现已审批的 MCP 服务器和 A2A 智能体，再按描述符即时构建客户端。示例中编排器部署在 Amazon Bedrock AgentCore runtime，每次请求只装载本次检索到的能力并在该轮结束后销毁，无需为新增能力改动编排器代码。</p>
-<p>🔗 <a href="https://aws.amazon.com/blogs/machine-learning/discover-tools-at-runtime-with-aws-agent-registry/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ldr3gjk2zvt8uvhyqovwju55m">https://ouyangrong.com/reports/hotspot/ai/items/ldr3gjk2zvt8uvhyqovwju55m</a></p>]]></description>
-      <category>教程</category>
-      <pubDate>Tue, 20 Oct 2026 16:22:24 GMT</pubDate>
-      <guid isPermaLink="false">ldr3gjk2zvt8uvhyqovwju55m</guid>
-      <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
     </item>
   </channel>
 </rss>
