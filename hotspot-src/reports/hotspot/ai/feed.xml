@@ -20,6 +20,17 @@
       <author>noreply@ouyangrong.com (The Decoder)</author>
     </item>
     <item>
+      <title><![CDATA[OpenAI 将遵循共享 robots.txt 信号，方便网站表达 AI 训练偏好]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/fns30fwsg99hgd1u8989bes77</link>
+      <description><![CDATA[<p>OpenAI 宣布将遵循一项共享的 robots.txt 信号，帮助网站运营者向参与的提供商传达其 AI 训练偏好。</p>
+<p>🔗 <a href="https://openai.com/index/helping-websites-express-ai-training-preferences">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/fns30fwsg99hgd1u8989bes77">https://ouyangrong.com/reports/hotspot/ai/items/fns30fwsg99hgd1u8989bes77</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Fri, 30 Oct 2026 09:30:00 GMT</pubDate>
+      <guid isPermaLink="false">fns30fwsg99hgd1u8989bes77</guid>
+      <author>noreply@ouyangrong.com (OpenAI News)</author>
+    </item>
+    <item>
       <title><![CDATA[Google 承认 AI 搜索创收不及传统搜索，计划靠增加广告弥补]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/dl33fcwur4dg75legxy6quj5g</link>
       <description><![CDATA[<p>Alphabet 公布 Q3 2026 财报，营收近 1280 亿美元、同比增长 25%，但净利润约 260 亿美元、比去年同期少近 90 亿美元，股价下跌约 12%。公司承认 AI 搜索创收不及传统搜索，计划通过投放更多广告来弥补，并预计明年在 AI 上支出更高。Google Cloud 营收突破 300 亿美元，高于分析师预期。</p>
@@ -546,17 +557,6 @@
       <pubDate>Wed, 21 Oct 2026 09:30:16 GMT</pubDate>
       <guid isPermaLink="false">e40n8rx02gaw9d09hz50mryfd</guid>
       <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 如何构建 ChatGPT 的广告系统，兼顾用户信任与相关性]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/v3qf0gls8jeywk1d0c88gzygd</link>
-      <description><![CDATA[<p>OpenAI 发文介绍 ChatGPT 广告系统的构建方式，该系统由 LLM 驱动，用于理解对话意图。广告与回答内容保持分离，并在规模化投放中保证广告相关性。</p>
-<p>🔗 <a href="https://openai.com/index/building-chatgpt-ad-stack">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/v3qf0gls8jeywk1d0c88gzygd">https://ouyangrong.com/reports/hotspot/ai/items/v3qf0gls8jeywk1d0c88gzygd</a></p>]]></description>
-      <category>教程</category>
-      <pubDate>Wed, 21 Oct 2026 07:00:00 GMT</pubDate>
-      <guid isPermaLink="false">v3qf0gls8jeywk1d0c88gzygd</guid>
-      <author>noreply@ouyangrong.com (OpenAI News)</author>
     </item>
   </channel>
 </rss>
