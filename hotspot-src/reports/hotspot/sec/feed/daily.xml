@@ -9,6 +9,15 @@
     <ttl>30</ttl>
     <generator>安防热点 (https://ouyangrong.com/reports/hotspot/sec/agent)</generator>
     <item>
+      <title><![CDATA[安防热点 日报 · 2026-10-31 — 今日安静，无大事发生]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-31</link>
+      <description><![CDATA[<p>北京时间 10 月 30 日 08:00 至 10 月 31 日 08:00，没有新的安防大事。</p>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-31">https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-31</a></p>]]></description>
+      <pubDate>Sat, 31 Oct 2026 00:00:39 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-10-31</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
       <title><![CDATA[安防热点 日报 · 2026-10-30 — 视美泰发布 AIoT-3572SC AI 终端主板，搭载瑞芯微 RK3572 与 4TOPS NPU]]></title>
       <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-10-30</link>
       <description><![CDATA[<p>视美泰推出 AIoT-3572SC AI 终端主板，搭载瑞芯微 RK3572 八核处理器，最高主频 2.2GHz，提供 4TOPS NPU 端侧算力。主板标配 4GB 内存 + 64GB 存储与 Android 16 系统，板载 eDP、MIPI-DSI 双路显示接口支持双屏输出，并配备双目 MIPI Camera 接口，最高接入 1200 万像素摄像头。</p>
@@ -329,17 +338,6 @@
 <p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-02">https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-02</a></p>]]></description>
       <pubDate>Wed, 30 Sep 2026 07:13:29 GMT</pubDate>
       <guid isPermaLink="false">daily-2026-09-02</guid>
-      <author>noreply@ouyangrong.com (安防热点)</author>
-    </item>
-    <item>
-      <title><![CDATA[安防热点 日报 · 2026-09-01 — 视美泰发布AIoT-3576SE主板，6TOPS NPU加持]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-01</link>
-      <description><![CDATA[<p>视美泰今日发布AIoT-3576SE主板，基于瑞芯微RK3576八核芯片，集成6TOPS NPU，尺寸仅100×80mm。该主板支持4K输出、MIPI摄像头与语音功能，待机电流低至22mA，适用于智能家居中控、小型网关等紧凑场景。</p>
-<p><strong>产品与方案发布</strong></p>
-<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/whoyby6caxyvkntk5vy9eoy3j">视美泰发布AIoT-3576SE主板：100×80mm尺寸，6TOPS NPU，丰富接口</a></li></ul>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-01">https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-01</a></p>]]></description>
-      <pubDate>Wed, 30 Sep 2026 07:13:16 GMT</pubDate>
-      <guid isPermaLink="false">daily-2026-09-01</guid>
       <author>noreply@ouyangrong.com (安防热点)</author>
     </item>
   </channel>

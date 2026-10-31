@@ -9,6 +9,19 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[MyHOT 日报 · 2026-10-31 — Epoch AI 称开源模型 GLM 5.3 零人工输入在 48 小时内构建完整 Firefox 利用链]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-31</link>
+      <description><![CDATA[<p>Epoch AI 研究人员发现，开放权重模型 GLM 5.3 无需人工输入即可自动构建完整的 Firefox 漏洞利用链，单次成功攻击的 API 费用约 1000 美元。</p>
+<p><strong>行业动态</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/ag2cpk6dw3485a051qjd73caj">AI 支出热潮出现裂痕，四大科技巨头今年资本开支计划超 7400 亿美元</a></li><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/fns30fwsg99hgd1u8989bes77">OpenAI 将遵循共享 robots.txt 信号，方便网站表达 AI 训练偏好</a></li></ul>
+<p><strong>论文研究</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/llmrwzy1reqp49bibnivg9t1b">Epoch AI 称开源模型 GLM 5.3 零人工输入在 48 小时内构建完整 Firefox 利用链</a></li></ul>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-31">https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-31</a></p>]]></description>
+      <pubDate>Sat, 31 Oct 2026 00:00:33 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-10-31</guid>
+      <author>noreply@ouyangrong.com (MyHOT)</author>
+    </item>
+    <item>
       <title><![CDATA[MyHOT 日报 · 2026-10-30 — Anthropic 递交 S-1 启动 IPO 流程，SemiAnalysis 分析师拆解其财务与 AGI 假设]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-30</link>
       <description><![CDATA[<p>Anthropic 已递交 S-1 计划在 Nasdaq 上市，估值 1.5 万亿至 2 万亿美元，SemiAnalysis 的 Joey Brookhart 拆解其财务与 AGI 假设。</p>
@@ -361,15 +374,6 @@
 <p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-02">https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-02</a></p>]]></description>
       <pubDate>Thu, 08 Oct 2026 23:15:21 GMT</pubDate>
       <guid isPermaLink="false">daily-2026-10-02</guid>
-      <author>noreply@ouyangrong.com (MyHOT)</author>
-    </item>
-    <item>
-      <title><![CDATA[MyHOT 日报 · 2026-10-01 — 今日安静，无大事发生]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-01</link>
-      <description><![CDATA[<p>北京时间 9 月 30 日 08:00 至 10 月 1 日 08:00，没有新的 AI 大事。</p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-01">https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-01</a></p>]]></description>
-      <pubDate>Fri, 09 Oct 2026 04:00:13 GMT</pubDate>
-      <guid isPermaLink="false">daily-2026-10-01</guid>
       <author>noreply@ouyangrong.com (MyHOT)</author>
     </item>
   </channel>
