@@ -1,0 +1,88 @@
+<h1 id="大淘宝技术agent-优化之-gepa一种提示词自进化的优化方案">大淘宝技术：agent 优化之 GEPA——一种提示词自进化的优化方案</h1>
+
+<ul>
+  <li>原文链接：https://mp.weixin.qq.com/s/jf5OKEhBDWkP0228tC5o1w</li>
+  <li>来源：微信公众号「大淘宝技术」；作者：营销&amp;交易技术团队</li>
+  <li>发布：2026-09-16；获取：2026-09-17</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论（一句话）</h2>
+
+<blockquote>
+  <p>GEPA 将 Prompt 优化从人工盲调改成可度量的闭环：任务模型执行，评分器量化，Judge 归因错误，反思模型生成候选，再用 Pareto 前沿在多个目标之间选择；真正上线仍需要冻结区、回归集和人类控制面。</p>
+</blockquote>
+
+<h2 id="分类提炼">分类提炼</h2>
+
+<ul>
+  <li>场景：Agent / LLM Judge / Prompt 优化服务</li>
+  <li>类型：论文启发的工程方案与实现复盘</li>
+  <li>标签： #主题/AI-Agent #主题/自进化 #主题/评测 #主题/Prompt工程 #主题/多目标优化 #场景/公众号长文</li>
+</ul>
+
+<h2 id="知识节点">知识节点</h2>
+
+<ul>
+  <li><strong>GEPA</strong>：基于 Genetic-Pareto、Reflective Prompt Evolution 的提示词自进化路径，以反馈驱动候选 Prompt 迭代。</li>
+  <li><strong>反思式变异</strong>：对错误样本做错误定位、Prompt 归因和改进建议，再把结构化反馈交给变异模型。</li>
+  <li><strong>Pareto 前沿</strong>：保留互不支配的候选解，让精确率、召回率、成本或长度等冲突目标保留可选权衡。</li>
+  <li><strong>任务无关适配层</strong>：以数据、解析、评分和反馈协议承接 GEPA，让新任务通过配置和插件接入。</li>
+  <li><strong>零配置推断</strong>：Inspector 先画像字段，再推断标注列、任务类型、输入字段、模板和种子 Prompt。</li>
+  <li><strong>三模型分工</strong>：任务模型负责执行，Judge 模型负责错误诊断，反思模型负责生成候选；角色可相同但职责应分离。</li>
+  <li><strong>Schema 对齐</strong>：由输出 Schema 同时生成格式指令和校验规则，减少“要求的格式”和“评分的格式”漂移。</li>
+  <li><strong>双层评分</strong>：样本级分数用于反馈轨迹，批次级分数作为优化目标；两者不能混作同一类信号。</li>
+  <li><strong>Prompt 冻结区</strong>：硬约束、工具协议和输出 Schema 不进入变异范围，可变区只承载判断优先级与异常处理等策略。</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+
+<ul>
+  <li>[[01-ai-agents/Skill-Self-Evolution]]：提供 Prompt/Skill 自进化的研究谱系，本文把其中的反馈与候选变更落到 GEPA 服务。</li>
+  <li>[[01-ai-agents/叶小钗-Agent评测-维度方法与落地实践]]：提供评测集、评分器、Run 快照和持续回归的工程前提。</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+
+<ul>
+  <li>[[01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制]]：把本文的候选 Prompt 放入评测信号、记忆治理和发布控制飞轮。</li>
+  <li>[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]：可用于治理 GEPA 产出的反馈、候选规则和回滚记录。</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+
+<ul>
+  <li>[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]：同样强调评测器、基线和稳定性门禁，侧重点从 Prompt 变异转向 Skill 质量评估。</li>
+  <li>[[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]：从 Harness 边界和 reward hacking 解释为何不能让优化器编辑所有控制逻辑。</li>
+</ul>
+
+<h2 id="正文要点">正文要点</h2>
+
+<ol>
+  <li>文章将 LLM Judge 与被评测 Agent 的 Prompt 优化问题归纳为盲目性、伪自动化、难复制和无权衡四类痛点，并把人工标注对齐与线上业务对齐视为两个目标。</li>
+  <li>GEPA 主循环是“种子 Prompt → 批量推理 → 结构化解析与评分 → 错误归因和反思变异 → Pareto 选择”。温度、并发、重试和停止条件属于工程配置，不是算法保证。</li>
+  <li>方案以配置层、引擎层、组件层和服务层拆分职责；<code class="language-plaintext highlighter-rouge">run_optimize</code>、<code class="language-plaintext highlighter-rouge">run_evaluate</code>、<code class="language-plaintext highlighter-rouge">validate_config</code> 形成外部 API，Parser、Scorer、Feedback 和 LLM Client 作为可插拔组件。</li>
+  <li>Inspector 通过字段画像推断任务类型和输入/答案字段；<code class="language-plaintext highlighter-rouge">build_config()</code> 让 Schema、答案提取和评分方式按任务类型成套生成，降低手工配置错误。</li>
+  <li>评分同时服务两个环节：样本级反馈回答“这一条错在哪”，批次级目标回答“候选整体是否更好”。业务若偏好精确率或召回率，应显式写成约束，而不是只用平均分。</li>
+  <li>没有 Ground Truth 时，文章提出把离线评测、线上业务效果和历史策略回溯作为排序/否决信号；这部分是设计设想，必须防止“少做事更容易得分”的保守化偏差。</li>
+</ol>
+
+<h2 id="机制与替代解释">机制与替代解释</h2>
+
+<p>机制上，GEPA 的收益来自把“错误样本”转换为“可操作的规则归因”，再用多目标选择保留候选多样性；因此它比静态 Prompt 扫描多了一条由数据驱动的反馈路径。替代解释是：若数据集代表性不足、评分器本身偏移，或线上目标与离线目标不一致，候选分数上升可能只是过拟合、奖励黑客或指标转移，并不代表业务效果改善。</p>
+
+<h2 id="证据与限制">证据与限制</h2>
+
+<p>本文是大淘宝技术团队对 GEPA 论文和内部方案的工程整理。原文没有提供可独立复现的数据集、基线、完整代码或统计检验；调用时长、切分比例、重试参数、效果提升和论文收录信息均为原文/作者口径。冻结区、长度目标和无 Ground Truth 双通道属于合理的工程设计方向，不应当视为已经验证的通用结论。</p>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+  <li>[[01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制]]</li>
+  <li>[[01-ai-agents/叶小钗-Agent评测-维度方法与落地实践]]</li>
+  <li>[[01-ai-agents/Skill-Self-Evolution]]</li>
+  <li>[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]</li>
+  <li>[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]</li>
+  <li>原文：https://mp.weixin.qq.com/s/jf5OKEhBDWkP0228tC5o1w</li>
+</ul>
