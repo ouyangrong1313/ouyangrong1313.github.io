@@ -185,6 +185,17 @@
       <author>noreply@ouyangrong.com (The Verge · AI)</author>
     </item>
     <item>
+      <title><![CDATA[Google Research 提出睡眠框架，让大语言模型在持续学习中保留知识]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/ram7z18cifigijs32qie04qqm</link>
+      <description><![CDATA[<p>Google Research 提出睡眠框架，让大语言模型在活跃交互与离线睡眠阶段之间交替，把短期上下文巩固为长期参数。该框架通过参数扩展、知识蒸馏和强化学习完成记忆巩固，并用随机专家激活与筛选后的合成样本进行自我改进。</p>
+<p>🔗 <a href="https://research.google/blog/the-sleep-framework-a-new-way-for-llms-to-retain-knowledge-in-continual-learning/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ram7z18cifigijs32qie04qqm">https://ouyangrong.com/reports/hotspot/ai/items/ram7z18cifigijs32qie04qqm</a></p>]]></description>
+      <category>论文</category>
+      <pubDate>Tue, 27 Oct 2026 17:35:00 GMT</pubDate>
+      <guid isPermaLink="false">ram7z18cifigijs32qie04qqm</guid>
+      <author>noreply@ouyangrong.com (Google Research)</author>
+    </item>
+    <item>
       <title><![CDATA[Property Finder 如何修正评测偏置，在 Amazon Bedrock 上选出更优视觉模型]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/wd0gv4kwns5ofin8clnv0n5qg</link>
       <description><![CDATA[<p>Property Finder 与 AWS Generative AI Innovation Center 团队发现其视觉评测集中 96.8% 的标签直接沿用了旧模型的预测，在重建人工标注并改用 Llama 4 Maverick 17B Instruct 后，356 张图片评测集上的 Micro F1 达到 0.80，原专有模型 A 为 0.56。</p>
@@ -504,6 +515,17 @@
       <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
     </item>
     <item>
+      <title><![CDATA[Google Research 用 AI 解读盲扫超声评估孕龄，误差与专家超声相当]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/olmwaex9euzw3ff3r51y8w78b</link>
+      <description><![CDATA[<p>Google Research 在 JAMA Network Open 发表前瞻性多中心研究，用 AI 解读由未受超声训练的操作者采集的盲扫超声图像来评估孕龄，在 385 名 16 至 36 周孕妇中平均绝对误差为 4.18 天，与专家超声医师的 4.48 天相比达到非劣效。</p>
+<p>🔗 <a href="https://research.google/blog/empowering-frontline-maternal-care-with-ai-assisted-ultrasound/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/olmwaex9euzw3ff3r51y8w78b">https://ouyangrong.com/reports/hotspot/ai/items/olmwaex9euzw3ff3r51y8w78b</a></p>]]></description>
+      <category>论文</category>
+      <pubDate>Wed, 21 Oct 2026 16:23:53 GMT</pubDate>
+      <guid isPermaLink="false">olmwaex9euzw3ff3r51y8w78b</guid>
+      <author>noreply@ouyangrong.com (Google Research)</author>
+    </item>
+    <item>
       <title><![CDATA[微软研究者证明 31 年未解的 KLS 猜想]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/xja51nytxnpii4q6h5hi1hst5</link>
       <description><![CDATA[<p>微软研究院的 Xinzhi Zhang 与合作者证明了 1995 年提出的 KLS 猜想，即最佳超平面切割与任意形状最佳切割之间只差一个与维度无关的常数。作者在人工引导的智能体流程中探索了超过 100 条候选路径，将同一论证递归复用，并证明各阶段误差累积仍被常数界住。同期另有独立团队给出完整证明，随后出现了 Lean 4 形式化验证。</p>
@@ -535,28 +557,6 @@
       <pubDate>Wed, 21 Oct 2026 12:34:57 GMT</pubDate>
       <guid isPermaLink="false">aief4zwdj9ko1r0ypcruc1whl</guid>
       <author>noreply@ouyangrong.com (The Decoder)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 模型与 Codex 工作流将登陆 Google Cloud]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/y2bfku2eq9693gklcl5kf5c0g</link>
-      <description><![CDATA[<p>OpenAI 与 Google Cloud 宣布，OpenAI 的前沿模型和 Codex 工作流将进入 Gemini 的 Model Garden，并通过 Google Cloud Marketplace 提供。</p>
-<p>🔗 <a href="https://openai.com/index/openai-models-google-cloud">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/y2bfku2eq9693gklcl5kf5c0g">https://ouyangrong.com/reports/hotspot/ai/items/y2bfku2eq9693gklcl5kf5c0g</a></p>]]></description>
-      <category>AI 产品</category>
-      <pubDate>Wed, 21 Oct 2026 12:00:00 GMT</pubDate>
-      <guid isPermaLink="false">y2bfku2eq9693gklcl5kf5c0g</guid>
-      <author>noreply@ouyangrong.com (OpenAI News)</author>
-    </item>
-    <item>
-      <title><![CDATA[NVIDIA 发布 Nemotron 3.5、Kumo、Cosmos 3.5、Ising 等开源模型家族]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/msrzuhwye2kvcxn6qdwcna948</link>
-      <description><![CDATA[<p>NVIDIA 发布覆盖语言、机器人、生物与量子计算的开源模型家族，包括 Nemotron 3.5 Super VL、Nemotron 3.5 Bolt、Nemotron Retriever、Kumo、Cosmos 3.5、Alpamayo 2 Edge、BioNeMo RFD4-Proteina 和 Ising。</p>
-<p>🔗 <a href="https://blogs.nvidia.com/blog/open-models-europe-industry/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/msrzuhwye2kvcxn6qdwcna948">https://ouyangrong.com/reports/hotspot/ai/items/msrzuhwye2kvcxn6qdwcna948</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Wed, 21 Oct 2026 10:00:07 GMT</pubDate>
-      <guid isPermaLink="false">msrzuhwye2kvcxn6qdwcna948</guid>
-      <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
     </item>
   </channel>
 </rss>
