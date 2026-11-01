@@ -1,6 +1,8 @@
 # AI 知识库索引
 
 ## 最近更新
+- [突发！DeepSeek重磅开源：超级Agent架构！](./01-ai-agents/Datawhale-DeepSeek-Super-Agent架构-Router-Worker双层.md) — 2026-11-01：常驻 Router（不配执行工具）、隔离 Worker（只汇报不对人说话），用两级过滤、订阅直通、Inline & Spill、投机执行让 Agent 被环境事件驱动；性能数字均转述自官方长文，仓库名含 prototype 属原型。
+- [DeepSeek Super-Agent - 速读](./01-ai-agents/Datawhale-DeepSeek-Super-Agent架构-Router-Worker双层-digest.md) — 三层速查表、四个反直觉点与 Seetong 团队借鉴动作。
 - [为什么很多人坚持写作，却始终没有取得明显的进步？](./05-content-creation/AlphaWriter-富兰克林写作训练-模仿对照与反馈环境.md) — 2026-10-29：写作量只记录重复次数，进步来自作品反馈与读者反馈，而稳定产出反馈的环境最容易被低估；富兰克林用隔日重写对照《旁观者》，再用 Junto 让反馈定期发生。运动员练习偏好差异为作者转述。
 - [富兰克林写作训练 - 速读](./05-content-creation/AlphaWriter-富兰克林写作训练-模仿对照与反馈环境-digest.md) — 两种反馈速查表、三个反直觉点与 Seetong 团队借鉴速读。
 - [从一份 PDF 开始：普通人如何打造第一款产品](./03-productivity/AlphaWriter-从PDF开始-普通人的第一款产品.md) — 2026-10-26：先把已有经验整理成用户完成任务的路径，用最简单形态做出可独立使用的首版，再让真实用户试用决定扩展；销售额与人物案例为原文转述。

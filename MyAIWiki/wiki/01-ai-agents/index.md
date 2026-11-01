@@ -1,5 +1,12 @@
 # AI Agents Wiki
 
+## Super-Agent 底座：Router + Worker 双层与事件驱动（2026-11-01 新增）
+
+> **微信公众号「Datawhale」2026-10-31**：DeepSeek 开源 `dsh-superagent-prototype`，把「全局连续性」与「高并发干活」拆成常驻 Router 与隔离 Worker；四个经典计算机系统设计回应同一约束——上下文窗口稀缺。性能数字转述自官方长文，仓库为原型。
+
+- [[01-ai-agents/Datawhale-DeepSeek-Super-Agent架构-Router-Worker双层]] - **核心命题**「Router 不配 Bash、Worker 只汇报」，10 个节点（Router / Worker / Batch 合并 / 两级过滤 / 订阅直通 / Inline & Spill / 链式召回 / 投机执行 / 异步双工 ReAct / Watchdog）；与 [[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]、[[01-ai-agents/LangChainCEO-Agent越复杂-越需要自建Harness-恰恰不是]] 可对照。
+- [拆解](../../raw/2026-10-Datawhale-DeepSeek-Super-Agent架构-Router-Worker双层-digest.md) - 四组硬数据、五个金句、证据边界。
+
 ## Agent Skills 工具栈：按缺口分层（2026-10-20 新增）
 
 > 「AI大模型观察站」将 20 个仓库归入 Research、Engineering、Create、Grow + Ship 四层，主张按 Agent 工作流的能力缺口逐层补充。星数是发布时的近似快照，不能替代效果或安全验证。
