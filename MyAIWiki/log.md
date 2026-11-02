@@ -419,6 +419,20 @@
 
 ---
 
+## 2026-11-02
+### ingest | 折腾了整整1年，毫无保留地分享一下我这套Agent自动化系统。
+- 来源：微信公众号「数字生命卡兹克」；发布：2026-11-02 08:19；原文：https://mp.weixin.qq.com/s/2R9xtPdgYr3kF6L-LGr8aA。
+- 获取：使用 `scripts/fetch_wechat_article.py` 的 Playwright headless Chrome 路径抓取正文；正文 23,740 字节，SHA-256 `a806546bff08d96f542dd15ea1996919743b4327b52a3cc140e034d7b2299583`。
+- 原文：raw/折腾了整整1年-毫无保留地分享一下我这套Agent自动化系统.md
+- 拆解：raw/折腾了整整1年-毫无保留地分享一下我这套Agent自动化系统-digest.md
+- wiki：wiki/01-ai-agents/折腾了整整1年-毫无保留地分享一下我这套Agent自动化系统.md
+- 核心命题：事件触发、统一路由和验证流水线接手可自动推进的工作；人只处理高影响决策，并持续保留用户反馈入口。
+- 证据边界：298 个合并请求、333 条审查问题、306 条修复、51 条最高级别问题及耗时/成本均为作者自述，未独立审计；本地权限、队列认证、隔离和回滚细节不完整。
+- 关联：[[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]、[[01-ai-agents/架构师-多Agent协作一致性-任务状态与证据]]、[[02-ai-coding/程序员的新岗位是监工-Codex负责人-我不想再同时盯10个Agent了-未来让系统接手分工-人只在关键时刻拍板]]。
+- 标签： #主题/AI-Agent #主题/多Agent调度 #主题/自动化 #主题/Harness #主题/CI-CD #主题/风险审批 #场景/公众号长文
+- 状态：published；已验证正文 SHA-256、9 个知识节点、有效内链与关联图谱。
+
+
 ## 2026-10-23
 ### ingest | AI研发提效，很多公司都搞错了方向！周受资：写代码只占程序员30%的时间
 - 来源：微信公众号「杨小树Tree」/ 杨小树Tree；发布：2026-10-22 13:33；原文：https://mp.weixin.qq.com/s/NpBZ7YKXMNX80MnEV3BeFQ。

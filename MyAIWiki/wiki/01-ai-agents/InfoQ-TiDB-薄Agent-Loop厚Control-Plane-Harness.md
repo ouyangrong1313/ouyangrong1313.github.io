@@ -55,6 +55,7 @@ source: 微信公众号「InfoQ」/ Tina 对话 TiDB 唐刘
 ### 下游（应用于 / 验证于）
 
 - [[01-ai-agents/DataFunTalk-Graph-Engineering-从Harness到Ontology]]：该页将任务、能力、运行时状态、证据、权限与恢复组织为图；本文用数据库的版本、事务、检查点和 Failover 类比强化其运行时实现边界。
+- [[01-ai-agents/折腾了整整1年-毫无保留地分享一下我这套Agent自动化系统]]：个人实践将 Control Plane 落到事件规范化、规则路由、任务去重与人工升级，并以本地 CI 验证交付流程。
 
 ### 同级（横向 / 并列）
 
