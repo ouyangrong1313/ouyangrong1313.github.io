@@ -1049,8 +1049,6 @@ def generate_markdown():
         "",
         "## 风险边界",
         f"- {risk}",
-        "",
-        "*本消息由 Seetong小助手 自动生成，欧阳荣 监督发布。*",
     ])
     return "\n".join(lines)
 
