@@ -273,6 +273,17 @@
       <author>noreply@ouyangrong.com (The Verge · AI)</author>
     </item>
     <item>
+      <title><![CDATA[OpenAI 发布 GPT-6.1 Terra，API 价格减半且逼近更大模型]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/q4yahb37b7ryzv4m49qx81lvx</link>
+      <description><![CDATA[<p>OpenAI 发布 GPT-6.1 Terra，API 输入价格降至每百万 token 1 美元、输出 5 美元，为 GPT-5.6 Terra 的一半。</p>
+<p>🔗 <a href="https://the-decoder.com/gpt-6-1-terra-halves-openais-api-prices-and-still-gains-ground-on-its-larger-models/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/q4yahb37b7ryzv4m49qx81lvx">https://ouyangrong.com/reports/hotspot/ai/items/q4yahb37b7ryzv4m49qx81lvx</a></p>]]></description>
+      <category>AI 模型</category>
+      <pubDate>Mon, 26 Oct 2026 20:30:55 GMT</pubDate>
+      <guid isPermaLink="false">q4yahb37b7ryzv4m49qx81lvx</guid>
+      <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
       <title><![CDATA[Anthropic 递交 IPO 招股书，它到底是一家怎样的公司]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/nwqvbvilngq0sm13fuxnxqxbi</link>
       <description><![CDATA[<p>Anthropic 已提交 335 页的 IPO 招股书，其中约 100 页专注于风险，公司估值超过 1.5 万亿美元。招股书警告其技术可能侵蚀信任、危害社会，甚至对人类构成灾难性或存在性风险。作者借此拆解 Anthropic 如何用科幻叙事包装自身，并追问它究竟是安全机构还是逐利的巨型公司。</p>
@@ -326,17 +337,6 @@
       <pubDate>Mon, 26 Oct 2026 14:21:23 GMT</pubDate>
       <guid isPermaLink="false">ufuoeq1v2jplq7pmy020nbn3j</guid>
       <author>noreply@ouyangrong.com (The Decoder)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 发布 GPT-6.1 Terra]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/ek09rif50kzvf3u5tinnucctz</link>
-      <description><![CDATA[<p>OpenAI 发布 GPT-6.1 Terra，官方简介称其把快速且具备能力的 computer use 带给所有人。公开材料仅包含标题与该句简介，未披露模型规模、上下文窗口或上线范围。</p>
-<p>🔗 <a href="https://openai.com/index/introducing-gpt-6-1-terra">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ek09rif50kzvf3u5tinnucctz">https://ouyangrong.com/reports/hotspot/ai/items/ek09rif50kzvf3u5tinnucctz</a></p>]]></description>
-      <category>AI 模型</category>
-      <pubDate>Mon, 26 Oct 2026 00:00:00 GMT</pubDate>
-      <guid isPermaLink="false">ek09rif50kzvf3u5tinnucctz</guid>
-      <author>noreply@ouyangrong.com (OpenAI News)</author>
     </item>
     <item>
       <title><![CDATA[OpenAI 隔离环境中的 AI 智能体找到借 CPU 缓存互相通信的方法]]></title>
