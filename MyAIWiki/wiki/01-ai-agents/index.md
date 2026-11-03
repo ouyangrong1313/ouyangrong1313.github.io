@@ -21,6 +21,11 @@
 - [[01-ai-agents/Datawhale-DeepSeek-Super-Agent架构-Router-Worker双层]] - **核心命题**「Router 不配 Bash、Worker 只汇报」，10 个节点（Router / Worker / Batch 合并 / 两级过滤 / 订阅直通 / Inline & Spill / 链式召回 / 投机执行 / 异步双工 ReAct / Watchdog）；与 [[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]、[[01-ai-agents/LangChainCEO-Agent越复杂-越需要自建Harness-恰恰不是]] 可对照。
 - [拆解](../../raw/2026-10-Datawhale-DeepSeek-Super-Agent架构-Router-Worker双层-digest.md) - 四组硬数据、五个金句、证据边界。
 
+### 注意力、授权与恢复：工程常识的另一视角
+
+- [[01-ai-agents/范冰-dsh-superagent-主动型Coding-Agent工程常识]] - 范冰基于同一原型补充注意力纪律、Thread 顺序、异步任务、Policy / Mandate 与 Stored Work，并用五个痛点反观个人自动化。5 秒、30 分钟等设计参数为文章转述；record-only 影子模式仍属蓝图。
+- [拆解](../../raw/范冰-dsh-superagent-主动型Coding-Agent工程常识-digest.md) - 5 个核心观点、7 个分析角度与 21 个开头钩子、关联页面和证据边界。
+
 ## Agent Skills 工具栈：按缺口分层（2026-10-20 新增）
 
 > 「AI大模型观察站」将 20 个仓库归入 Research、Engineering、Create、Grow + Ship 四层，主张按 Agent 工作流的能力缺口逐层补充。星数是发布时的近似快照，不能替代效果或安全验证。

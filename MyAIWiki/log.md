@@ -2,6 +2,18 @@
 
 时间序变更记录。格式：`## [日期] 操作 | 标题`
 
+## 2026-11-03
+### ingest | 解读 dsh-superagent：一个主动型 Coding Agent 的工程常识与后厨美学
+
+- 来源：微信公众号「范冰的二次学习」；作者范冰；发布时间 2026-11-02 20:34；原文：https://mp.weixin.qq.com/s/8GP8w-lbKN3kgtnKt3XURw。
+- 获取：`scripts/fetch_wechat_article.py` 的 Playwright headless Chrome 首选路径；正文 20,939 字节；SHA-256 `fb3b15c85f1393f1edf861bca9c7a2af7998da12be875fd17688cb51ea87dbeb`。
+- 写入：`raw/范冰-dsh-superagent-主动型Coding-Agent工程常识.md`、对应 `-digest.md`、`wiki/01-ai-agents/范冰-dsh-superagent-主动型Coding-Agent工程常识.md`；更新分类索引、总索引，并在同一原型的 Datawhale 条目添加反向关联。
+- 核心命题：主动型 Agent 要兼顾持续响应与长任务执行，应把注意力门控、按 Thread 有序事件处理、异步唤醒、独立监护、可审计授权和持久化恢复做成工程机制。
+- 节点：Router-Worker 分离、注意力纪律、Trigger 事件、Thread 串行处理、异步任务唤醒、Watchdog 超时恢复、Policy 与 Mandate、record-only 影子模式、Stored Work 与 Outbox。
+- 关联：[[01-ai-agents/Datawhale-DeepSeek-Super-Agent架构-Router-Worker双层]]、[[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]、[[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]、[[01-ai-agents/Agent评测白皮书-系列01-Agent评测全览]]。
+- 证据边界：公众号对研究原型的二手解读；5 秒切换、30 分钟超时和恢复机制未独立核对；影子模式仍属蓝图；作者对个人系统的诊断与改造计划是自述，未独立评测。
+- 状态：published；页面通过 frontmatter、9 个节点、真实内链、三段关联图谱和正文哈希检查；摄取状态记录不含正文或凭据。
+
 ## 2026-09-15
 ### ingest | 胡言Ray语：YC 研讨会：为什么 Harness 比模型更重要
 

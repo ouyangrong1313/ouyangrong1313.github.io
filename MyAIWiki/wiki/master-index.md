@@ -1,6 +1,8 @@
 # AI 知识库索引
 
 ## 最近更新
+- [解读 dsh-superagent：一个主动型 Coding Agent 的工程常识与后厨美学](./01-ai-agents/范冰-dsh-superagent-主动型Coding-Agent工程常识.md) — 2026-11-03：从注意力纪律、Thread 顺序、异步任务、权限治理与持久化恢复解读主动型 Agent 原型；5 秒、30 分钟等参数为公众号转述，影子模式仍属蓝图。
+- [dsh-superagent 工程常识 - 拆解](./01-ai-agents/范冰-dsh-superagent-主动型Coding-Agent工程常识-digest.md) — 5 个核心观点、7 个分析角度与 21 个开头钩子，保留原型与作者自述的证据边界。
 - [Karpathy用Claude做HackerTube——社区共识替代平台推荐算法](./01-ai-agents/AgenticHub-Karpathy用Claude做HackerTube-社区共识替代平台算法.md) — 2026-11-03：Claude Code + Opus 5.5 花 2 小时处理 HN 20 年 4300 万条评论，筛出 6454 个视频；人类提意图、AI 完成从 0 到 1 全部实现。
 - [Karpathy用Claude做HackerTube - 速读](./01-ai-agents/AgenticHub-Karpathy用Claude做HackerTube-社区共识替代平台算法-digest.md) — 三组数字、两个反直觉点与 Seetong 团队借鉴速读。
 - [Agent能力不足维护代码库——HumanLayer创始人质疑"无人值守"软件工厂](./01-ai-agents/51CTO技术栈-Agent能力不足维护代码库-HumanLayer创始人质疑无人值守软件工厂.md) — 2026-11-03：SlopCodeBench 分阶段评测最优 Agent 仅通过 16.3% 检查点，"关灯软件工厂"在复杂长期项目中尚未成立；先规划再动手、给 Agent 可视化验证、保留会话记录。
