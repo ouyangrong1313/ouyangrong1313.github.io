@@ -1,5 +1,12 @@
 # AI Agents Wiki
 
+## Agent 维护代码库的能力边界（2026-11-03 新增）
+
+> HumanLayer 创始人德克斯·霍西用 SlopCodeBench 分阶段评测实证：最优 Agent 仅通过 16.3% 检查点，"关灯软件工厂"在复杂长期项目中尚未成立。
+
+- [[01-ai-agents/51CTO技术栈-Agent能力不足维护代码库-HumanLayer创始人质疑无人值守软件工厂]] - **核心命题**“Agent 能加速单次实现，但无法在长期迭代中自动维持架构质量”；8 节点（关灯软件工厂 / 架构退化延迟 / SlopCodeBench / 分阶段迭代评测 / 规划前置 / Agent 可视化验证 / 会话记录留存 / 测试与可维护性鸿沟）；与 [[01-ai-agents/Datawhale-DeepSeek-Super-Agent架构-Router-Worker双层]]、[[透明玻璃-写作的最高境界]] 互补。
+- [速读](./51CTO技术栈-Agent能力不足维护代码库-HumanLayer创始人质疑无人值守软件工厂-digest.md) - SlopCodeBench 数字、四个反直觉点与 Seetong 团队借鉴速读。
+
 ## Super-Agent 底座：Router + Worker 双层与事件驱动（2026-11-01 新增）
 
 > **微信公众号「Datawhale」2026-10-31**：DeepSeek 开源 `dsh-superagent-prototype`，把「全局连续性」与「高并发干活」拆成常驻 Router 与隔离 Worker；四个经典计算机系统设计回应同一约束——上下文窗口稀缺。性能数字转述自官方长文，仓库为原型。

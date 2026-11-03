@@ -1,6 +1,8 @@
 # AI 知识库索引
 
 ## 最近更新
+- [Agent能力不足维护代码库——HumanLayer创始人质疑"无人值守"软件工厂](./01-ai-agents/51CTO技术栈-Agent能力不足维护代码库-HumanLayer创始人质疑无人值守软件工厂.md) — 2026-11-03：SlopCodeBench 分阶段评测最优 Agent 仅通过 16.3% 检查点，"关灯软件工厂"在复杂长期项目中尚未成立；先规划再动手、给 Agent 可视化验证、保留会话记录。
+- [Agent能力不足维护代码库 - 速读](./01-ai-agents/51CTO技术栈-Agent能力不足维护代码库-HumanLayer创始人质疑无人值守软件工厂-digest.md) — SlopCodeBench 数字、四个反直觉点与 Seetong 团队借鉴速读。
 - [折腾了整整1年，毫无保留地分享一下我这套Agent自动化系统。](./01-ai-agents/折腾了整整1年-毫无保留地分享一下我这套Agent自动化系统.md) — 2026-11-02
 - [突发！DeepSeek重磅开源：超级Agent架构！](./01-ai-agents/Datawhale-DeepSeek-Super-Agent架构-Router-Worker双层.md) — 2026-11-01：常驻 Router（不配执行工具）、隔离 Worker（只汇报不对人说话），用两级过滤、订阅直通、Inline & Spill、投机执行让 Agent 被环境事件驱动；性能数字均转述自官方长文，仓库名含 prototype 属原型。
 - [DeepSeek Super-Agent - 速读](./01-ai-agents/Datawhale-DeepSeek-Super-Agent架构-Router-Worker双层-digest.md) — 三层速查表、四个反直觉点与 Seetong 团队借鉴动作。
