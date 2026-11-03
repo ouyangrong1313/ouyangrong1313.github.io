@@ -1,5 +1,12 @@
 # AI Agents Wiki
 
+## Karpathy HackerTube：社区共识替代平台算法（2026-11-03 新增）
+
+> Karpathy 用 Claude Code + Opus 5.5 花 2 小时处理 HN 20 年 4300 万条评论，筛出 6454 个视频；人类提意图、AI 完成从 0 到 1 全部实现。
+
+- [[01-ai-agents/AgenticHub-Karpathy用Claude做HackerTube-社区共识替代平台算法]] - **核心命题**“社区共识过滤 + few-shotted 开发 + 数据开放复用”；8 节点（HackerTube / 社区共识过滤 / few-shotted 开发 / ClaudeCode 全流程 / 数据可复用性 / 人类意图与 AI 执行分工 / HackerNews 信号源 / 无登录设计）；与 [[01-ai-agents/51CTO技术栈-Agent能力不足维护代码库-HumanLayer创始人质疑无人值守软件工厂]] 形成正反对照。
+- [速读](./AgenticHub-Karpathy用Claude做HackerTube-社区共识替代平台算法-digest.md) - 三组数字、两个反直觉点与 Seetong 团队借鉴速读。
+
 ## Agent 维护代码库的能力边界（2026-11-03 新增）
 
 > HumanLayer 创始人德克斯·霍西用 SlopCodeBench 分阶段评测实证：最优 Agent 仅通过 16.3% 检查点，"关灯软件工厂"在复杂长期项目中尚未成立。

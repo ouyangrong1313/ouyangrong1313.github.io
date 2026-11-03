@@ -1,6 +1,8 @@
 # AI 知识库索引
 
 ## 最近更新
+- [Karpathy用Claude做HackerTube——社区共识替代平台推荐算法](./01-ai-agents/AgenticHub-Karpathy用Claude做HackerTube-社区共识替代平台算法.md) — 2026-11-03：Claude Code + Opus 5.5 花 2 小时处理 HN 20 年 4300 万条评论，筛出 6454 个视频；人类提意图、AI 完成从 0 到 1 全部实现。
+- [Karpathy用Claude做HackerTube - 速读](./01-ai-agents/AgenticHub-Karpathy用Claude做HackerTube-社区共识替代平台算法-digest.md) — 三组数字、两个反直觉点与 Seetong 团队借鉴速读。
 - [Agent能力不足维护代码库——HumanLayer创始人质疑"无人值守"软件工厂](./01-ai-agents/51CTO技术栈-Agent能力不足维护代码库-HumanLayer创始人质疑无人值守软件工厂.md) — 2026-11-03：SlopCodeBench 分阶段评测最优 Agent 仅通过 16.3% 检查点，"关灯软件工厂"在复杂长期项目中尚未成立；先规划再动手、给 Agent 可视化验证、保留会话记录。
 - [Agent能力不足维护代码库 - 速读](./01-ai-agents/51CTO技术栈-Agent能力不足维护代码库-HumanLayer创始人质疑无人值守软件工厂-digest.md) — SlopCodeBench 数字、四个反直觉点与 Seetong 团队借鉴速读。
 - [折腾了整整1年，毫无保留地分享一下我这套Agent自动化系统。](./01-ai-agents/折腾了整整1年-毫无保留地分享一下我这套Agent自动化系统.md) — 2026-11-02
