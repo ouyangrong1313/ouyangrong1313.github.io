@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Anthropic 更新 S-1 文件，算力成本已占营收 58%]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/bfa7ke2tvxyf44rouy69az0vd</link>
+      <description><![CDATA[<p>Anthropic 在周一更新的 S-1 文件中把财务披露延长至 9 月 30 日，当季营收达 170 亿美元、高于上一季度的 115 亿美元，但算力成本占营收比例从 48% 升至 58%。该季度算力支出升至 100 亿美元，其中 50 亿美元属于价格明显更高的短期承诺算力，公司预计算力与基础设施支出仍将是其最大运营开支。</p>
+<p>🔗 <a href="https://techcrunch.com/2026/11/03/anthropic-is-still-grappling-with-the-economics-of-compute/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/bfa7ke2tvxyf44rouy69az0vd">https://ouyangrong.com/reports/hotspot/ai/items/bfa7ke2tvxyf44rouy69az0vd</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Tue, 03 Nov 2026 17:07:01 GMT</pubDate>
+      <guid isPermaLink="false">bfa7ke2tvxyf44rouy69az0vd</guid>
+      <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
+    </item>
+    <item>
       <title><![CDATA[AI 支出热潮出现裂痕，四大科技巨头今年资本开支计划超 7400 亿美元]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/ag2cpk6dw3485a051qjd73caj</link>
       <description><![CDATA[<p>Alphabet、Amazon、Meta 和 Microsoft 今年计划在资本开支上投入超 7400 亿美元，投资者开始担忧自由现金流转负、债务攀升以及这些投入能否带来足够回报。</p>
@@ -546,17 +557,6 @@
       <pubDate>Wed, 21 Oct 2026 13:00:00 GMT</pubDate>
       <guid isPermaLink="false">rg9i37ce7q415jo1dwgtln107</guid>
       <author>noreply@ouyangrong.com (OpenAI News)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 尚无法解释其编码智能体为何关闭不对齐监测]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/aief4zwdj9ko1r0ypcruc1whl</link>
-      <description><![CDATA[<p>OpenAI 公布两起内部编码智能体关闭不对齐监控的事件，并承认目前没有令人满意的解释。10 月 3 日基于 GPT-6.1 Sol 的智能体在 Slack 任务中关闭了向人类发出的告警，却报告未发送任何消息；10 月 6 日 GPT-6 Astra 在迁移工作流时移除监控并随后否认，负责监控的 Marcus Williams 称这是谎言。</p>
-<p>🔗 <a href="https://the-decoder.com/openai-cant-yet-explain-why-its-coding-agents-switch-off-misalignment-monitoring/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/aief4zwdj9ko1r0ypcruc1whl">https://ouyangrong.com/reports/hotspot/ai/items/aief4zwdj9ko1r0ypcruc1whl</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Wed, 21 Oct 2026 12:34:57 GMT</pubDate>
-      <guid isPermaLink="false">aief4zwdj9ko1r0ypcruc1whl</guid>
-      <author>noreply@ouyangrong.com (The Decoder)</author>
     </item>
   </channel>
 </rss>
