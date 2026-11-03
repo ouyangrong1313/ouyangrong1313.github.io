@@ -1,6 +1,8 @@
 # AI 知识库索引
 
 ## 最近更新
+- [亲自答：如何评价 DeepSeek Harness 发布的 Super-agent 构想？](./01-ai-agents/知乎日报-崔添翼-Super-agent构想-双层架构与边界.md) — 2026-11-03：Super-agent 是执行 Agent 上方的协调层，试图平衡跨任务连续性与吞吐量；回答者称 prototype 只在小规模受信环境运行，长期记忆、Session 外协作、A2A 与安全仍有开放问题。
+- [Super-agent 构想：双层架构与工程边界 - 拆解](./01-ai-agents/知乎日报-崔添翼-Super-agent构想-双层架构与边界-digest.md) — 5 个核心观点、7 个分析角度与 21 个钩子，注明作者自述和时点限制。
 - [解读 dsh-superagent：一个主动型 Coding Agent 的工程常识与后厨美学](./01-ai-agents/范冰-dsh-superagent-主动型Coding-Agent工程常识.md) — 2026-11-03：从注意力纪律、Thread 顺序、异步任务、权限治理与持久化恢复解读主动型 Agent 原型；5 秒、30 分钟等参数为公众号转述，影子模式仍属蓝图。
 - [dsh-superagent 工程常识 - 拆解](./01-ai-agents/范冰-dsh-superagent-主动型Coding-Agent工程常识-digest.md) — 5 个核心观点、7 个分析角度与 21 个开头钩子，保留原型与作者自述的证据边界。
 - [Karpathy用Claude做HackerTube——社区共识替代平台推荐算法](./01-ai-agents/AgenticHub-Karpathy用Claude做HackerTube-社区共识替代平台算法.md) — 2026-11-03：Claude Code + Opus 5.5 花 2 小时处理 HN 20 年 4300 万条评论，筛出 6454 个视频；人类提意图、AI 完成从 0 到 1 全部实现。

@@ -14,6 +14,17 @@
 - 证据边界：公众号对研究原型的二手解读；5 秒切换、30 分钟超时和恢复机制未独立核对；影子模式仍属蓝图；作者对个人系统的诊断与改造计划是自述，未独立评测。
 - 状态：published；页面通过 frontmatter、9 个节点、真实内链、三段关联图谱和正文哈希检查；摄取状态记录不含正文或凭据。
 
+### ingest | 亲自答丨如何评价 DeepSeek Harness 发布的 Super-agent 构想？
+
+- 来源：微信公众号「知乎日报」；回答者崔添翼（回答中自述为 DeepSeek 产品部负责人、原文章最终审稿人之一）；发布时间 2026-11-02 20:00；原文：https://mp.weixin.qq.com/s/eP_4prXjvvrthOzTdBCL7w。
+- 获取：`scripts/fetch_wechat_article.py` 的 Playwright headless Chrome 首选路径；正文 4,352 字节；SHA-256 `78ee8eeb6ec9cf2f5532a5eea5ec065bb976e19df13a29e5e482d8888de10cac`。
+- 写入：`raw/知乎日报-崔添翼-Super-agent构想-双层架构与边界.md`、对应 `-digest.md`、`wiki/01-ai-agents/知乎日报-崔添翼-Super-agent构想-双层架构与边界.md`；更新分类索引、总索引，并在 Datawhale 与范冰两篇同原型文章中添加反向关联。
+- 核心命题：Super-agent 描述的是位于执行 Agent 上方的协调层；双层架构试图拆解跨任务连续性与吞吐量之间的张力，但不自动提供长期语义记忆或生产级安全。
+- 节点：Super-agent 命名、连续性与吞吐量、跨 Session 长期记忆、主 Agent 与 Executor、运行态与语义记忆、计算状态环境解耦、受信原型边界、Session 外人机协作、上下文边界与 A2A、Agent 安全与隐私。
+- 关联：[[01-ai-agents/Datawhale-DeepSeek-Super-Agent架构-Router-Worker双层]]、[[01-ai-agents/范冰-dsh-superagent-主动型Coding-Agent工程常识]]、[[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]、[[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]。
+- 证据边界：问答回答者是原文审稿人之一，但工程实现与实验由其所述的其他同事负责；产品状态和原型规模均是 2026-11-02 的自述，没有独立测量数据。跨 Session 长期记忆的“可能快有了”是预期，不是功能承诺。
+- 状态：published；页面结构校验通过，含 10 个节点、真实内链、三段关联图谱和正文 SHA-256；摄取状态记录不含正文或凭据。
+
 ## 2026-09-15
 ### ingest | 胡言Ray语：YC 研讨会：为什么 Harness 比模型更重要
 

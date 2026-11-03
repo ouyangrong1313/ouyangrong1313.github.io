@@ -15,6 +15,7 @@ links:
   - "[[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]"
   - "[[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]"
   - "[[01-ai-agents/Agent评测白皮书-系列01-Agent评测全览]]"
+  - "[[01-ai-agents/知乎日报-崔添翼-Super-agent构想-双层架构与边界]]"
 date: 2026-11-03
 source: 微信公众号 / 范冰的二次学习
 status: published
@@ -62,6 +63,7 @@ status: published
 ### 同级（横向 / 并列）
 
 - [[01-ai-agents/Datawhale-DeepSeek-Super-Agent架构-Router-Worker双层]]：同一原型的另一篇解读，更侧重 Router / Worker、上下文管理和事件输入设计。
+- [[01-ai-agents/知乎日报-崔添翼-Super-agent构想-双层架构与边界]]：DeepSeek 产品部回答者澄清 Super-agent 并非“更强模型”，并指出长期记忆和规模化仍未解决。
 - [[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]：对照厚控制面、薄执行循环与系统可靠性边界。
 - [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]：从评估、权限、状态和治理角度扩展生产级 Harness 讨论。
 - [[01-ai-agents/Agent评测白皮书-系列01-Agent评测全览]]：关联影子运行、线上评估与发布门禁。

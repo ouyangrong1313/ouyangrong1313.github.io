@@ -26,6 +26,11 @@
 - [[01-ai-agents/范冰-dsh-superagent-主动型Coding-Agent工程常识]] - 范冰基于同一原型补充注意力纪律、Thread 顺序、异步任务、Policy / Mandate 与 Stored Work，并用五个痛点反观个人自动化。5 秒、30 分钟等设计参数为文章转述；record-only 影子模式仍属蓝图。
 - [拆解](../../raw/范冰-dsh-superagent-主动型Coding-Agent工程常识-digest.md) - 5 个核心观点、7 个分析角度与 21 个开头钩子、关联页面和证据边界。
 
+### 原型定位、长期记忆与规模化边界
+
+- [[01-ai-agents/知乎日报-崔添翼-Super-agent构想-双层架构与边界]] - 崔添翼解释 Super-agent 是“位于执行 Agent 上方”的协调层，并非能力等级；双层设计针对跨任务连续性与吞吐量的权衡。回答者称其原型只在小规模受信环境运行，长期记忆、安全、上下文边界和 Session 外协作仍有开放问题。
+- [拆解](../../raw/知乎日报-崔添翼-Super-agent构想-双层架构与边界-digest.md) - 5 个核心观点、7 个分析角度与 21 个开头钩子，区分任务恢复、会话历史与语义记忆。
+
 ## Agent Skills 工具栈：按缺口分层（2026-10-20 新增）
 
 > 「AI大模型观察站」将 20 个仓库归入 Research、Engineering、Create、Grow + Ship 四层，主张按 Agent 工作流的能力缺口逐层补充。星数是发布时的近似快照，不能替代效果或安全验证。

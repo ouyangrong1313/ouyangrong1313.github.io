@@ -25,6 +25,7 @@ links:
   - "[[01-ai-agents/LangChainCEO-Agent越复杂-越需要自建Harness-恰恰不是]]"
   - "[[01-ai-agents/Agent时代架构师系统能力]]"
   - "[[01-ai-agents/范冰-dsh-superagent-主动型Coding-Agent工程常识]]"
+  - "[[01-ai-agents/知乎日报-崔添翼-Super-agent构想-双层架构与边界]]"
 date: 2026-11-01
 source: 微信公众号 / Datawhale
 ---
@@ -70,6 +71,7 @@ source: 微信公众号 / Datawhale
 - [[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]：同样主张薄 Loop + 厚控制面，但走数据库可靠性路线
 - [[01-ai-agents/LangChainCEO-Agent越复杂-越需要自建Harness-恰恰不是]]：对「堆 Harness」的反向主张，可与本文的四个经典设计对照
 - [[01-ai-agents/范冰-dsh-superagent-主动型Coding-Agent工程常识]]：基于同一原型，补充注意力纪律、授权治理、持久化恢复和作者个人系统反思；影子模式仍属设计蓝图
+- [[01-ai-agents/知乎日报-崔添翼-Super-agent构想-双层架构与边界]]：原文最终审稿人解释 Super-agent 命名、连续性与吞吐量权衡，以及原型尚未覆盖的规模、安全与协作问题
 
 ## 正文要点
 
