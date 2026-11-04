@@ -9,6 +9,28 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[美国中期选举数据中心议题受挫，45 项地方公投中 33 项将限制开发]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/cz71b0el2ioqd5r7xkxkskies</link>
+      <description><![CDATA[<p>美国中期选举中，多名支持暂停数据中心开发的候选人胜选；截至周三上午，全国 45 项地方公投中有 33 项的结果将限制数据中心开发。NBC News 选举日民调显示，76% 的受访选民反对在自己所在社区建设数据中心。得州当选州长 Gina Hinojosa 与密歇根州当选参议员 Abdul El-Sayed 均支持暂停开发，俄亥俄州数座城市则投票禁止超过 25MW 的数据中心。</p>
+<p>🔗 <a href="https://www.theverge.com/policy/1026365/data-centers-midterms-results">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/cz71b0el2ioqd5r7xkxkskies">https://ouyangrong.com/reports/hotspot/ai/items/cz71b0el2ioqd5r7xkxkskies</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Wed, 04 Nov 2026 16:05:39 GMT</pubDate>
+      <guid isPermaLink="false">cz71b0el2ioqd5r7xkxkskies</guid>
+      <author>noreply@ouyangrong.com (The Verge · AI)</author>
+    </item>
+    <item>
+      <title><![CDATA[OpenAI 将收购 Pierre Computer Company，扩展 Codex 编码工具]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/nh03vnhox44wyfm7xjxiuy94g</link>
+      <description><![CDATA[<p>OpenAI 宣布将收购 Pierre Computer Company，以扩展 Codex 在代码构建、理解和审查方面的工具能力。</p>
+<p>🔗 <a href="https://openai.com/index/openai-to-acquire-pierre">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/nh03vnhox44wyfm7xjxiuy94g">https://ouyangrong.com/reports/hotspot/ai/items/nh03vnhox44wyfm7xjxiuy94g</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Wed, 04 Nov 2026 14:30:00 GMT</pubDate>
+      <guid isPermaLink="false">nh03vnhox44wyfm7xjxiuy94g</guid>
+      <author>noreply@ouyangrong.com (OpenAI News)</author>
+    </item>
+    <item>
       <title><![CDATA[Anthropic 更新 S-1 文件，算力成本已占营收 58%]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/bfa7ke2tvxyf44rouy69az0vd</link>
       <description><![CDATA[<p>Anthropic 在周一更新的 S-1 文件中把财务披露延长至 9 月 30 日，当季营收达 170 亿美元、高于上一季度的 115 亿美元，但算力成本占营收比例从 48% 升至 58%。该季度算力支出升至 100 亿美元，其中 50 亿美元属于价格明显更高的短期承诺算力，公司预计算力与基础设施支出仍将是其最大运营开支。</p>
@@ -535,28 +557,6 @@
       <pubDate>Wed, 21 Oct 2026 16:23:53 GMT</pubDate>
       <guid isPermaLink="false">olmwaex9euzw3ff3r51y8w78b</guid>
       <author>noreply@ouyangrong.com (Google Research)</author>
-    </item>
-    <item>
-      <title><![CDATA[微软研究者证明 31 年未解的 KLS 猜想]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/xja51nytxnpii4q6h5hi1hst5</link>
-      <description><![CDATA[<p>微软研究院的 Xinzhi Zhang 与合作者证明了 1995 年提出的 KLS 猜想，即最佳超平面切割与任意形状最佳切割之间只差一个与维度无关的常数。作者在人工引导的智能体流程中探索了超过 100 条候选路径，将同一论证递归复用，并证明各阶段误差累积仍被常数界住。同期另有独立团队给出完整证明，随后出现了 Lean 4 形式化验证。</p>
-<p>🔗 <a href="https://www.microsoft.com/en-us/research/blog/solving-a-31-year-old-grand-challenge-in-mathematics-the-kls-conjecture/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/xja51nytxnpii4q6h5hi1hst5">https://ouyangrong.com/reports/hotspot/ai/items/xja51nytxnpii4q6h5hi1hst5</a></p>]]></description>
-      <category>论文</category>
-      <pubDate>Wed, 21 Oct 2026 16:00:00 GMT</pubDate>
-      <guid isPermaLink="false">xja51nytxnpii4q6h5hi1hst5</guid>
-      <author>noreply@ouyangrong.com (Microsoft Research)</author>
-    </item>
-    <item>
-      <title><![CDATA[ChatGPT Ads 扩展至 26 个新国家，已有超 10 万广告主使用]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/rg9i37ce7q415jo1dwgtln107</link>
-      <description><![CDATA[<p>OpenAI 将 ChatGPT Ads 扩展至 26 个新国家，并称已有超过 100,000 名广告主使用该平台。从本地商家到全球品牌，更多广告主可以在人们使用 ChatGPT 浏览、比较和决定购买时触达他们。</p>
-<p>🔗 <a href="https://openai.com/index/chatgpt-ads-expands-26-new-countries">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/rg9i37ce7q415jo1dwgtln107">https://ouyangrong.com/reports/hotspot/ai/items/rg9i37ce7q415jo1dwgtln107</a></p>]]></description>
-      <category>AI 产品</category>
-      <pubDate>Wed, 21 Oct 2026 13:00:00 GMT</pubDate>
-      <guid isPermaLink="false">rg9i37ce7q415jo1dwgtln107</guid>
-      <author>noreply@ouyangrong.com (OpenAI News)</author>
     </item>
   </channel>
 </rss>
