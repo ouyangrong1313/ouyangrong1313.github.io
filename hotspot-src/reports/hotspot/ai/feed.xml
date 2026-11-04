@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Deep Insight 如何在代码中落地生产级 AI 智能体的四层上下文工程]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/xm645di1ji4b0q08kaj0w73ef</link>
+      <description><![CDATA[<p>AWS 博客以开源多智能体数据分析方案 Deep Insight 为例，拆解生产级 AI 智能体的四层上下文工程做法。把写文件与执行合并成一个 write_and_execute_tool 后，每个脚本进入上下文的 token 减少约 95%；按需加载技能使系统提示词缩小约 97%。</p>
+<p>🔗 <a href="https://aws.amazon.com/blogs/machine-learning/four-layers-of-context-engineering-for-production-ai-agents-how-deep-insight-applies-them-in-working-code/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/xm645di1ji4b0q08kaj0w73ef">https://ouyangrong.com/reports/hotspot/ai/items/xm645di1ji4b0q08kaj0w73ef</a></p>]]></description>
+      <category>教程</category>
+      <pubDate>Wed, 04 Nov 2026 16:30:40 GMT</pubDate>
+      <guid isPermaLink="false">xm645di1ji4b0q08kaj0w73ef</guid>
+      <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
+    </item>
+    <item>
       <title><![CDATA[美国中期选举数据中心议题受挫，45 项地方公投中 33 项将限制开发]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/cz71b0el2ioqd5r7xkxkskies</link>
       <description><![CDATA[<p>美国中期选举中，多名支持暂停数据中心开发的候选人胜选；截至周三上午，全国 45 项地方公投中有 33 项的结果将限制数据中心开发。NBC News 选举日民调显示，76% 的受访选民反对在自己所在社区建设数据中心。得州当选州长 Gina Hinojosa 与密歇根州当选参议员 Abdul El-Sayed 均支持暂停开发，俄亥俄州数座城市则投票禁止超过 25MW 的数据中心。</p>
@@ -546,17 +557,6 @@
       <pubDate>Wed, 21 Oct 2026 17:59:12 GMT</pubDate>
       <guid isPermaLink="false">tjhogaozqwz4vjjy1svjzzkmt</guid>
       <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
-    </item>
-    <item>
-      <title><![CDATA[Google Research 用 AI 解读盲扫超声评估孕龄，误差与专家超声相当]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/olmwaex9euzw3ff3r51y8w78b</link>
-      <description><![CDATA[<p>Google Research 在 JAMA Network Open 发表前瞻性多中心研究，用 AI 解读由未受超声训练的操作者采集的盲扫超声图像来评估孕龄，在 385 名 16 至 36 周孕妇中平均绝对误差为 4.18 天，与专家超声医师的 4.48 天相比达到非劣效。</p>
-<p>🔗 <a href="https://research.google/blog/empowering-frontline-maternal-care-with-ai-assisted-ultrasound/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/olmwaex9euzw3ff3r51y8w78b">https://ouyangrong.com/reports/hotspot/ai/items/olmwaex9euzw3ff3r51y8w78b</a></p>]]></description>
-      <category>论文</category>
-      <pubDate>Wed, 21 Oct 2026 16:23:53 GMT</pubDate>
-      <guid isPermaLink="false">olmwaex9euzw3ff3r51y8w78b</guid>
-      <author>noreply@ouyangrong.com (Google Research)</author>
     </item>
   </channel>
 </rss>
