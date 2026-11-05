@@ -442,6 +442,16 @@
 
 ---
 
+## 2026-11-05
+### ingest | 开源我这折腾了1年的「Agent自动化系统」，愿所有人都能感受Agent的魅力。
+- 来源：https://mp.weixin.qq.com/s/T9_acg247gxzUNL4j5zrCw
+- 原文：raw/数字生命卡兹克-Agent-Autoloop-开源插件化自动化系统.md
+- 拆解：raw/数字生命卡兹克-Agent-Autoloop-开源插件化自动化系统-digest.md
+- wiki：wiki/01-ai-agents/数字生命卡兹克-Agent-Autoloop-开源插件化自动化系统.md
+- 标签： #主题/AI-Agent #主题/Agent自动化 #主题/Harness #场景/公众号长文
+- 说明：人工编译：插件化事件控制面、挂起恢复、事件溯源与风险审批；性能与公司案例数字为作者自述，未独立复现。正文 SHA-256：943cb3b59e94ac6e26fe8a7346daf7025a9e4b3380c6af0945202e10a7e13930
+
+
 ## 2026-11-02
 ### ingest | 折腾了整整1年，毫无保留地分享一下我这套Agent自动化系统。
 - 来源：微信公众号「数字生命卡兹克」；发布：2026-11-02 08:19；原文：https://mp.weixin.qq.com/s/2R9xtPdgYr3kF6L-LGr8aA。
