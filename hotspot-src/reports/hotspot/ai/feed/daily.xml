@@ -9,6 +9,21 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[MyHOT 日报 · 2026-11-05 — 美国中期选举数据中心议题受挫，45 项地方公投中 33 项将限制开发]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-11-05</link>
+      <description><![CDATA[<p>美国中期选举中，多名支持暂停数据中心开发的候选人胜选；截至周三上午，全国 45 项地方公投中有 33 项的结果将限制数据中心开发。NBC News 选举日民调显示，76% 的受访选民反对在自己所在社区建设数据中心。得州当选州长 Gina Hinojosa 与密歇根州当选参议员 Abdul El-Sayed 均支持暂停开发，俄亥俄州数座城市则投票禁止超过 25MW 的数据中心。</p>
+<p><strong>行业动态</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/cz71b0el2ioqd5r7xkxkskies">美国中期选举数据中心议题受挫，45 项地方公投中 33 项将限制开发</a></li><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/r871xt1pf49lfi4d26ezxsdrr">美国中期选举：德州民主党赢得州长与参议院席位，AI 数据中心扩建面临叫停风险</a></li><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/nh03vnhox44wyfm7xjxiuy94g">OpenAI 将收购 Pierre Computer Company，扩展 Codex 编码工具</a></li></ul>
+<p><strong>论文研究</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/m4nzs8yjumk4b91ndiirqzkfx">OpenAI 自动化流水线为 Linux 内核 948 个本地提权漏洞生成补丁</a></li></ul>
+<p><strong>技巧与观点</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/xm645di1ji4b0q08kaj0w73ef">Deep Insight 如何在代码中落地生产级 AI 智能体的四层上下文工程</a></li></ul>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-11-05">https://ouyangrong.com/reports/hotspot/ai/daily/2026-11-05</a></p>]]></description>
+      <pubDate>Thu, 05 Nov 2026 00:00:19 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-11-05</guid>
+      <author>noreply@ouyangrong.com (MyHOT)</author>
+    </item>
+    <item>
       <title><![CDATA[MyHOT 日报 · 2026-11-04 — Anthropic 更新 S-1 文件，算力成本已占营收 58%]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-11-04</link>
       <description><![CDATA[<p>Anthropic 在周一更新的 S-1 文件中把财务披露延长至 9 月 30 日，当季营收达 170 亿美元、高于上一季度的 115 亿美元，但算力成本占营收比例从 48% 升至 58%。该季度算力支出升至 100 亿美元，其中 50 亿美元属于价格明显更高的短期承诺算力，公司预计算力与基础设施支出仍将是其最大运营开支。</p>
@@ -367,15 +382,6 @@
 <p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-07">https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-07</a></p>]]></description>
       <pubDate>Fri, 09 Oct 2026 03:15:22 GMT</pubDate>
       <guid isPermaLink="false">daily-2026-10-07</guid>
-      <author>noreply@ouyangrong.com (MyHOT)</author>
-    </item>
-    <item>
-      <title><![CDATA[MyHOT 日报 · 2026-10-06]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-06</link>
-      <description><![CDATA[<p></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-06">https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-06</a></p>]]></description>
-      <pubDate>Fri, 09 Oct 2026 03:15:22 GMT</pubDate>
-      <guid isPermaLink="false">daily-2026-10-06</guid>
       <author>noreply@ouyangrong.com (MyHOT)</author>
     </item>
   </channel>

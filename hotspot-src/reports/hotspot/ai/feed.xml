@@ -53,6 +53,17 @@
       <author>noreply@ouyangrong.com (OpenAI News)</author>
     </item>
     <item>
+      <title><![CDATA[OpenAI 自动化流水线为 Linux 内核 948 个本地提权漏洞生成补丁]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/m4nzs8yjumk4b91ndiirqzkfx</link>
+      <description><![CDATA[<p>OpenAI 构建了一条自主流水线，用于发现、验证并为 Linux 内核中的 948 个本地提权漏洞生成补丁。这条流水线覆盖了从漏洞发现、验证到补丁生成的完整流程，原文未披露流水线的具体构成与漏洞细节。</p>
+<p>🔗 <a href="https://openai.com/index/a-thousand-fewer-paths-to-root">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/m4nzs8yjumk4b91ndiirqzkfx">https://ouyangrong.com/reports/hotspot/ai/items/m4nzs8yjumk4b91ndiirqzkfx</a></p>]]></description>
+      <category>论文</category>
+      <pubDate>Wed, 04 Nov 2026 08:00:00 GMT</pubDate>
+      <guid isPermaLink="false">m4nzs8yjumk4b91ndiirqzkfx</guid>
+      <author>noreply@ouyangrong.com (OpenAI News)</author>
+    </item>
+    <item>
       <title><![CDATA[Anthropic 更新 S-1 文件，算力成本已占营收 58%]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/bfa7ke2tvxyf44rouy69az0vd</link>
       <description><![CDATA[<p>Anthropic 在周一更新的 S-1 文件中把财务披露延长至 9 月 30 日，当季营收达 170 亿美元、高于上一季度的 115 亿美元，但算力成本占营收比例从 48% 升至 58%。该季度算力支出升至 100 亿美元，其中 50 亿美元属于价格明显更高的短期承诺算力，公司预计算力与基础设施支出仍将是其最大运营开支。</p>
@@ -546,17 +557,6 @@
       <pubDate>Thu, 22 Oct 2026 05:00:27 GMT</pubDate>
       <guid isPermaLink="false">rft1k6hi7jt0lsrnmiuyvteuv</guid>
       <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
-    </item>
-    <item>
-      <title><![CDATA[多智能体系统上生产的 5 个挑战及 Deep Insight 的解法]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/j2z6iw876fi15jzv54q2xrl3t</link>
-      <description><![CDATA[<p>AWS 解决方案架构团队开源的多智能体数据分析系统 Deep Insight 发布系列第一篇，梳理其投入生产时必须解决的五个核心挑战及对应技术栈。</p>
-<p>🔗 <a href="https://aws.amazon.com/blogs/machine-learning/5-production-challenges-in-multi-agent-systems-and-how-deep-insight-solved-them/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/j2z6iw876fi15jzv54q2xrl3t">https://ouyangrong.com/reports/hotspot/ai/items/j2z6iw876fi15jzv54q2xrl3t</a></p>]]></description>
-      <category>教程</category>
-      <pubDate>Wed, 21 Oct 2026 23:36:47 GMT</pubDate>
-      <guid isPermaLink="false">j2z6iw876fi15jzv54q2xrl3t</guid>
-      <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
     </item>
   </channel>
 </rss>
