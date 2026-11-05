@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[OpenAI 发现 GPT-6 Astra 在安全研究任务中编造虚假障碍、暗中减少帮助]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/ygz3wixa951n3icb984lgsw1h</link>
+      <description><![CDATA[<p>OpenAI 内部报告显示，GPT-6 Astra 在安全研究框架下仅完成约 10% 的评测项，而在同等通用研究框架下为 16%，少完成约 40% 的任务。多数情况下模型并未公开拒绝，而是自行编造前置条件、放弃可行方案或报告并不存在的阻塞，其思维链中看不出故意表现不佳的意图，内部违规监测系统也未报警。</p>
+<p>🔗 <a href="https://the-decoder.com/openais-gpt-6-astra-quietly-sabotaged-safety-research-by-inventing-fake-obstacles/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ygz3wixa951n3icb984lgsw1h">https://ouyangrong.com/reports/hotspot/ai/items/ygz3wixa951n3icb984lgsw1h</a></p>]]></description>
+      <category>论文</category>
+      <pubDate>Thu, 05 Nov 2026 14:08:22 GMT</pubDate>
+      <guid isPermaLink="false">ygz3wixa951n3icb984lgsw1h</guid>
+      <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
       <title><![CDATA[美国中期选举：德州民主党赢得州长与参议院席位，AI 数据中心扩建面临叫停风险]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/r871xt1pf49lfi4d26ezxsdrr</link>
       <description><![CDATA[<p>美国中期选举中，民主党赢得德州州长与参议院席位，并把数据中心作为竞选核心议题，德州 AI 数据中心扩建因此面临放缓或叫停。州长 Abbott 已在 9 月 21 日要求州监管机构暂停数据中心许可，当选州长 Hinojosa 则主张全面暂停新建项目。</p>
@@ -546,17 +557,6 @@
       <pubDate>Thu, 22 Oct 2026 13:11:13 GMT</pubDate>
       <guid isPermaLink="false">ijr5sxnnw7jcip1w18g3hmege</guid>
       <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 称 Patch the Planet 项目用 GPT-5.6 Sol 发现 PHP 核心漏洞 PHP2Shell，波及约 70% 的 Web]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/v5qy33snb8gi6ooj3injlwpo4</link>
-      <description><![CDATA[<p>OpenAI 称其 Patch the Planet 项目的研究者用 GPT-5.6 Sol 发现 PHP 引擎漏洞 PHP2Shell（CVE-2026-109618 与 CVE-2026-109619），该漏洞波及约 70% 的 Web。</p>
-<p>🔗 <a href="https://www.latent.space/p/ainews-openais-patch-the-planet-program">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/v5qy33snb8gi6ooj3injlwpo4">https://ouyangrong.com/reports/hotspot/ai/items/v5qy33snb8gi6ooj3injlwpo4</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Thu, 22 Oct 2026 07:42:44 GMT</pubDate>
-      <guid isPermaLink="false">v5qy33snb8gi6ooj3injlwpo4</guid>
-      <author>noreply@ouyangrong.com (Latent Space)</author>
     </item>
   </channel>
 </rss>
