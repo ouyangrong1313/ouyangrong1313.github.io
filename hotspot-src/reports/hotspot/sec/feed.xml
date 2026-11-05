@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>安防热点 (https://ouyangrong.com/reports/hotspot/sec/agent)</generator>
     <item>
+      <title><![CDATA[视美泰 AIoT-3568SC 主板搭载 OpenHarmony 在可视对讲一体机落地]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/items/ik665y6ngs17y07wrwnvq49qx</link>
+      <description><![CDATA[<p>视美泰披露，合作伙伴基于其 AIoT-3568SC 主板推出新一代国产化可视对讲一体机，采用 OpenHarmony 系统。该主板采用瑞芯微 RK3568 四核 Cortex-A55 处理器，内置 1TOPS NPU，可在本地完成人脸特征提取与活体检测，并原生适配 7 英寸触控屏、13M 像素摄像头、全双工音频和门禁扩展接口。方案面向园区、政企和涉密场景的信创合规与国产化采购需求。</p>
+<p>🔗 <a href="https://www.shimeta.com.cn/newsinfo/9290473.html">阅读原文</a></p>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/ik665y6ngs17y07wrwnvq49qx">https://ouyangrong.com/reports/hotspot/sec/items/ik665y6ngs17y07wrwnvq49qx</a></p>]]></description>
+      <category>应用</category>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="false">ik665y6ngs17y07wrwnvq49qx</guid>
+      <author>noreply@ouyangrong.com (视美泰企业动态)</author>
+    </item>
+    <item>
       <title><![CDATA[南京大学智慧教室系统为何触发“算法凝视”焦虑]]></title>
       <link>https://ouyangrong.com/reports/hotspot/sec/items/qj9ueaiyduox3i67txyk9vbz3</link>
       <description><![CDATA[<p>南京大学11月4日就智慧教室系统引发的隐私争议发布说明，否认到课率与平时成绩挂钩等传闻，并称当前已不再统计抬头率数据。据中国政府采购网中标公告，该项目中标金额3152.052万元，覆盖仙林校区113间公共教室，招标文件包含人脸检测、人脸识别、AI人数统计、AI抬头率计算等技术要求。文章认为，焦虑的落点在于敏感分析能力与启用规则之间的缝隙，高校宜在采购阶段公开数据治理规则并将学生纳入知情与同意链条。</p>
@@ -546,17 +557,6 @@
       <pubDate>Tue, 25 Aug 2026 01:00:00 GMT</pubDate>
       <guid isPermaLink="false">ia14xbm4ye1vesyrnrp2toxfx</guid>
       <author>noreply@ouyangrong.com (涂鸦智能新闻)</author>
-    </item>
-    <item>
-      <title><![CDATA[安防“瘦身”，公安部废止119项公共安全行业标准]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec/items/ry6j7cx03143kigl46vytphqm</link>
-      <description><![CDATA[<p>公安部发布公告，依据《行业标准管理办法》决定废止119项公共安全行业标准，涉及GA 374-2019《电子防盗锁》、GA/T 1093-2013《出入口控制人脸识别系统技术要求》等多项安防与警用装备标准。本次清理旨在解决标准陈旧、重复问题，为智能化转型释放空间，企业可降低合规成本并推动技术迭代。</p>
-<p>🔗 <a href="http://news.cps.com.cn/article/202606/943750.html">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/ry6j7cx03143kigl46vytphqm">https://ouyangrong.com/reports/hotspot/sec/items/ry6j7cx03143kigl46vytphqm</a></p>]]></description>
-      <category>标准</category>
-      <pubDate>Tue, 23 Jun 2026 01:19:00 GMT</pubDate>
-      <guid isPermaLink="false">ry6j7cx03143kigl46vytphqm</guid>
-      <author>noreply@ouyangrong.com (CPS中安网智能安防)</author>
     </item>
   </channel>
 </rss>
