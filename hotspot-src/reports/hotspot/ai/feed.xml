@@ -64,6 +64,17 @@
       <author>noreply@ouyangrong.com (OpenAI News)</author>
     </item>
     <item>
+      <title><![CDATA[OpenAI 发布 Images 2.6，支持 GIF 创建并增强 API 控制]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/qza2mzr9eld3cj5pui8c5lgt9</link>
+      <description><![CDATA[<p>OpenAI 发布 Images 2.6，带来更快的图像生成、GIF 创建、更精确的编辑和新的 API 控制。该版本覆盖 ChatGPT、Codex 和 API。</p>
+<p>🔗 <a href="https://openai.com/index/introducing-images-2-6">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/qza2mzr9eld3cj5pui8c5lgt9">https://ouyangrong.com/reports/hotspot/ai/items/qza2mzr9eld3cj5pui8c5lgt9</a></p>]]></description>
+      <category>AI 模型</category>
+      <pubDate>Wed, 04 Nov 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="false">qza2mzr9eld3cj5pui8c5lgt9</guid>
+      <author>noreply@ouyangrong.com (OpenAI News)</author>
+    </item>
+    <item>
       <title><![CDATA[Anthropic 更新 S-1 文件，算力成本已占营收 58%]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/bfa7ke2tvxyf44rouy69az0vd</link>
       <description><![CDATA[<p>Anthropic 在周一更新的 S-1 文件中把财务披露延长至 9 月 30 日，当季营收达 170 亿美元、高于上一季度的 115 亿美元，但算力成本占营收比例从 48% 升至 58%。该季度算力支出升至 100 亿美元，其中 50 亿美元属于价格明显更高的短期承诺算力，公司预计算力与基础设施支出仍将是其最大运营开支。</p>
@@ -546,17 +557,6 @@
       <pubDate>Thu, 22 Oct 2026 07:42:44 GMT</pubDate>
       <guid isPermaLink="false">v5qy33snb8gi6ooj3injlwpo4</guid>
       <author>noreply@ouyangrong.com (Latent Space)</author>
-    </item>
-    <item>
-      <title><![CDATA[NVIDIA Cosmos 推出训练、评估与部署世界模型的新工具]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/rft1k6hi7jt0lsrnmiuyvteuv</link>
-      <description><![CDATA[<p>NVIDIA 为 Cosmos 平台扩展训练工具、仿真 checkpoint 与 Cosmos Data Factory 蓝图，用于构建和模拟物理 AI 的世界模型。</p>
-<p>🔗 <a href="https://blogs.nvidia.com/blog/cosmos-open-train-evaluate-deploy-world-models/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/rft1k6hi7jt0lsrnmiuyvteuv">https://ouyangrong.com/reports/hotspot/ai/items/rft1k6hi7jt0lsrnmiuyvteuv</a></p>]]></description>
-      <category>AI 产品</category>
-      <pubDate>Thu, 22 Oct 2026 05:00:27 GMT</pubDate>
-      <guid isPermaLink="false">rft1k6hi7jt0lsrnmiuyvteuv</guid>
-      <author>noreply@ouyangrong.com (NVIDIA Blog)</author>
     </item>
   </channel>
 </rss>
