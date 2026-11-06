@@ -42,12 +42,23 @@ layout: page
 
 <div id="post-list">
 
+<header class="home-masthead">
+  <p class="home-eyebrow">Personal journal</p>
+  <h1>{{ site.title }}</h1>
+  <p class="home-tagline">{{ site.tagline }}</p>
+</header>
+
+<div class="home-feed-heading">
+  <h2>Latest writing</h2>
+  <span>{{ site.posts | size }} posts</span>
+</div>
+
 {% for post in posts %}
 
   <div class="post-preview">
-    <h1>
+    <h3>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-    </h1>
+    </h3>
 
     <div class="post-content">
       <p>
