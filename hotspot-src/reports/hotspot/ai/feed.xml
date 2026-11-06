@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Thinking Machines 发布 Inkling 2 Small 多模态 MoE，预训练耗时 68 小时]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/q9x4gw4h0x7zoy6q4sgw03a9v</link>
+      <description><![CDATA[<p>Thinking Machines 发布 Inkling 2 Small，这是一个 594B 总参数 / 17B 激活的多模态 MoE，已在 Tinker 上线，并承诺下周外部安全测试完成后开放 Apache 2.0 权重。</p>
+<p>🔗 <a href="https://latent.space/p/ainews-inkling-2-small-17a-594b-trained-in-68-hours-on-12t-tokens-beating-muse-spark/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/q9x4gw4h0x7zoy6q4sgw03a9v">https://ouyangrong.com/reports/hotspot/ai/items/q9x4gw4h0x7zoy6q4sgw03a9v</a></p>]]></description>
+      <category>AI 模型</category>
+      <pubDate>Fri, 06 Nov 2026 10:35:21 GMT</pubDate>
+      <guid isPermaLink="false">q9x4gw4h0x7zoy6q4sgw03a9v</guid>
+      <author>noreply@ouyangrong.com (Latent Space)</author>
+    </item>
+    <item>
       <title><![CDATA[民主党拿下中期选举，美国 AI 行业面临监管收紧与数据中心建设放缓]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/i3srem019c0oyqbckr73e4o49</link>
       <description><![CDATA[<p>美国中期选举中民主党夺下参众两院，多名当选者承诺追究 AI 公司责任，业界预计 AI 监管收紧与数据中心建设放缓。44 项地方数据中心禁令公投中有 43 项通过，得州当选州长 Gina Hinojosa 表示将暂停所有数据中心审批。OpenAI 与 Anthropic 未回应 The Verge 的置评请求，报道并援引 WSJ 称多家公司 CEO 私下讨论算力容量受限问题。</p>
@@ -546,17 +557,6 @@
       <pubDate>Fri, 23 Oct 2026 09:38:38 GMT</pubDate>
       <guid isPermaLink="false">wc1pwd9s6drev9dxr9q02wd7t</guid>
       <author>noreply@ouyangrong.com (The Decoder)</author>
-    </item>
-    <item>
-      <title><![CDATA[中国黑客攻破 IT 服务商 ConnectWise，借 AI 智能体窃取凭证窥探数千家机构]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/ogs5xo0zpt4raapzfzc5upt6m</link>
-      <description><![CDATA[<p>微软研究人员称，与中国政府关联的黑客入侵 IT 管理与远程访问厂商 ConnectWise 的云备份服务，窃取用于建立客户数据链路的应用程序凭证，从而以授权用户身份登入约 2250 家机构的 Microsoft 托管环境，读取邮件等文件。</p>
-<p>🔗 <a href="https://techcrunch.com/2026/10/22/chinese-hackers-spied-on-thousands-of-companies-after-breaching-it-giant-connectwise/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ogs5xo0zpt4raapzfzc5upt6m">https://ouyangrong.com/reports/hotspot/ai/items/ogs5xo0zpt4raapzfzc5upt6m</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Thu, 22 Oct 2026 16:47:17 GMT</pubDate>
-      <guid isPermaLink="false">ogs5xo0zpt4raapzfzc5upt6m</guid>
-      <author>noreply@ouyangrong.com (TechCrunch · AI)</author>
     </item>
   </channel>
 </rss>
