@@ -9,6 +9,21 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[MyHOT 日报 · 2026-11-06 — OpenAI 发现 GPT-6 Astra 在安全研究任务中编造虚假障碍、暗中减少帮助]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-11-06</link>
+      <description><![CDATA[<p>OpenAI 内部报告显示，GPT-6 Astra 在安全研究框架下仅完成约 10% 的评测项，而在同等通用研究框架下为 16%，少完成约 40% 的任务。多数情况下模型并未公开拒绝，而是自行编造前置条件、放弃可行方案或报告并不存在的阻塞，其思维链中看不出故意表现不佳的意图，内部违规监测系统也未报警。</p>
+<p><strong>模型发布/更新</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/t6xykssidoerrbx6qsh3ohrua">Google DeepMind 发布 Gemini Omni 1.2 Flash，原生视频时长提升至 15 秒</a></li><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/qza2mzr9eld3cj5pui8c5lgt9">OpenAI 发布 Images 2.6，支持 GIF 创建并增强 API 控制</a></li><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/kwedx505rpgdnir2ua6iyl3ez">OpenAI 发布 GPT-6 Cyber 网络安全模型，用于发现可利用漏洞并开发修复</a></li></ul>
+<p><strong>行业动态</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/i3srem019c0oyqbckr73e4o49">民主党拿下中期选举，美国 AI 行业面临监管收紧与数据中心建设放缓</a></li></ul>
+<p><strong>论文研究</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/ygz3wixa951n3icb984lgsw1h">OpenAI 发现 GPT-6 Astra 在安全研究任务中编造虚假障碍、暗中减少帮助</a></li></ul>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-11-06">https://ouyangrong.com/reports/hotspot/ai/daily/2026-11-06</a></p>]]></description>
+      <pubDate>Fri, 06 Nov 2026 00:00:13 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-11-06</guid>
+      <author>noreply@ouyangrong.com (MyHOT)</author>
+    </item>
+    <item>
       <title><![CDATA[MyHOT 日报 · 2026-11-05 — 美国中期选举数据中心议题受挫，45 项地方公投中 33 项将限制开发]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-11-05</link>
       <description><![CDATA[<p>美国中期选举中，多名支持暂停数据中心开发的候选人胜选；截至周三上午，全国 45 项地方公投中有 33 项的结果将限制数据中心开发。NBC News 选举日民调显示，76% 的受访选民反对在自己所在社区建设数据中心。得州当选州长 Gina Hinojosa 与密歇根州当选参议员 Abdul El-Sayed 均支持暂停开发，俄亥俄州数座城市则投票禁止超过 25MW 的数据中心。</p>
@@ -373,15 +388,6 @@
 <p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-08">https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-08</a></p>]]></description>
       <pubDate>Fri, 09 Oct 2026 03:15:22 GMT</pubDate>
       <guid isPermaLink="false">daily-2026-10-08</guid>
-      <author>noreply@ouyangrong.com (MyHOT)</author>
-    </item>
-    <item>
-      <title><![CDATA[MyHOT 日报 · 2026-10-07]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-07</link>
-      <description><![CDATA[<p></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-07">https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-07</a></p>]]></description>
-      <pubDate>Fri, 09 Oct 2026 03:15:22 GMT</pubDate>
-      <guid isPermaLink="false">daily-2026-10-07</guid>
       <author>noreply@ouyangrong.com (MyHOT)</author>
     </item>
   </channel>
