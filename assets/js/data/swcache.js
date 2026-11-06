@@ -7,7 +7,7 @@ layout: compress
 const resource = [
 
   /* --- CSS --- */
-  '{{ "/assets/css/style.css" | relative_url }}',
+  '{{ "/assets/css/style.css" | relative_url }}?v={{ site.time | date: "%Y%m%d%H%M%S" }}',
 
   /* --- JavaScripts --- */
   {% assign js_path = "/assets/js" | relative_url %}
