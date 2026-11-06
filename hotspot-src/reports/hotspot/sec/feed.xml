@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>安防热点 (https://ouyangrong.com/reports/hotspot/sec/agent)</generator>
     <item>
+      <title><![CDATA[视美泰端侧 AI 主板选型指南：以 AIOT-3572SE 为例算清算力、底板与量产三笔账]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/items/uzd9u0oc7i6281n9wi87gr7s5</link>
+      <description><![CDATA[<p>视美泰提出端侧 AI 主板选型方法，主张先按算法、路数、帧率和延迟列出算法清单，再衡量算力边界、底板复用与量产一致性三项关键考量。文中以 RK3572 平台的 AIOT-3572SE 为例，其独立 NPU 提供 4TOPS 算力、支持 INT4 到 BF16 混合精度运算，同时明确这一档位不适合在设备上运行 7B 以上模型。</p>
+<p>🔗 <a href="https://www.shimeta.com.cn/newsinfo/9291450.html">阅读原文</a></p>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/uzd9u0oc7i6281n9wi87gr7s5">https://ouyangrong.com/reports/hotspot/sec/items/uzd9u0oc7i6281n9wi87gr7s5</a></p>]]></description>
+      <category>观点</category>
+      <pubDate>Fri, 06 Nov 2026 00:00:00 GMT</pubDate>
+      <guid isPermaLink="false">uzd9u0oc7i6281n9wi87gr7s5</guid>
+      <author>noreply@ouyangrong.com (视美泰企业动态)</author>
+    </item>
+    <item>
       <title><![CDATA[视美泰 AIoT-3568SC 主板搭载 OpenHarmony 在可视对讲一体机落地]]></title>
       <link>https://ouyangrong.com/reports/hotspot/sec/items/ik665y6ngs17y07wrwnvq49qx</link>
       <description><![CDATA[<p>视美泰披露，合作伙伴基于其 AIoT-3568SC 主板推出新一代国产化可视对讲一体机，采用 OpenHarmony 系统。该主板采用瑞芯微 RK3568 四核 Cortex-A55 处理器，内置 1TOPS NPU，可在本地完成人脸特征提取与活体检测，并原生适配 7 英寸触控屏、13M 像素摄像头、全双工音频和门禁扩展接口。方案面向园区、政企和涉密场景的信创合规与国产化采购需求。</p>
@@ -546,17 +557,6 @@
       <pubDate>Thu, 27 Aug 2026 00:00:00 GMT</pubDate>
       <guid isPermaLink="false">yohsi83a932qyegd9l99czim4</guid>
       <author>noreply@ouyangrong.com (视美泰企业动态)</author>
-    </item>
-    <item>
-      <title><![CDATA[涂鸦智能发布2026年Q2及H1财报：推动AI能力在真实设备和实际场景中落地]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec/items/ia14xbm4ye1vesyrnrp2toxfx</link>
-      <description><![CDATA[<p>涂鸦智能发布2026年Q2及H1财报，上半年总营收1.738亿美元，同比增长12.3%；第二季度营收9290万美元，同比增长16.0%，净利润率20.1%。公司持续推进AI能力产品化落地，上线端到端物理AI生成系统Tuya Cobuilder，AI开发者平台注册数超209万。</p>
-<p>🔗 <a href="https://www.tuya.com/cn/news-details/Kfw78hyi7htuk">阅读原文</a></p>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/items/ia14xbm4ye1vesyrnrp2toxfx">https://ouyangrong.com/reports/hotspot/sec/items/ia14xbm4ye1vesyrnrp2toxfx</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Tue, 25 Aug 2026 01:00:00 GMT</pubDate>
-      <guid isPermaLink="false">ia14xbm4ye1vesyrnrp2toxfx</guid>
-      <author>noreply@ouyangrong.com (涂鸦智能新闻)</author>
     </item>
   </channel>
 </rss>
