@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[Greenlight 如何用 Amazon Bedrock AgentCore 构建自主 SOC 系统 Luna]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/kq6iv2kpydeyk0p5q0kya5suh</link>
+      <description><![CDATA[<p>Greenlight Financial 基于 Amazon Bedrock AgentCore 构建自主 SOC 系统 Luna，每月处理 3,000–4,000 个安全与风险事件，自动解决率超过 90%。</p>
+<p>🔗 <a href="https://aws.amazon.com/blogs/machine-learning/how-greenlight-financial-built-an-autonomous-soc-solution-on-amazon-bedrock-agentcore/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/kq6iv2kpydeyk0p5q0kya5suh">https://ouyangrong.com/reports/hotspot/ai/items/kq6iv2kpydeyk0p5q0kya5suh</a></p>]]></description>
+      <category>教程</category>
+      <pubDate>Fri, 06 Nov 2026 16:55:05 GMT</pubDate>
+      <guid isPermaLink="false">kq6iv2kpydeyk0p5q0kya5suh</guid>
+      <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
+    </item>
+    <item>
       <title><![CDATA[Thinking Machines 发布 Inkling 2 Small 多模态 MoE，预训练耗时 68 小时]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/q9x4gw4h0x7zoy6q4sgw03a9v</link>
       <description><![CDATA[<p>Thinking Machines 发布 Inkling 2 Small，这是一个 594B 总参数 / 17B 激活的多模态 MoE，已在 Tinker 上线，并承诺下周外部安全测试完成后开放 Apache 2.0 权重。</p>
@@ -546,17 +557,6 @@
       <pubDate>Fri, 23 Oct 2026 16:21:36 GMT</pubDate>
       <guid isPermaLink="false">ykgtokb02nzkqe0ix4mr7hmuc</guid>
       <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
-    </item>
-    <item>
-      <title><![CDATA[OpenAI 与阿联酋投资者接近达成最高 300 亿美元融资]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/wc1pwd9s6drev9dxr9q02wd7t</link>
-      <description><![CDATA[<p>OpenAI 正接近完成最高 300 亿美元的新一轮融资，投前估值为 1.25 万亿美元，由阿联酋投资者和投资机构 Coatue 领投。这轮融资被定位为潜在 IPO 之前的桥接资金，OpenAI 同时在谈判通过阿联酋获得额外算力的商业协议。</p>
-<p>🔗 <a href="https://the-decoder.com/openai-is-closing-in-on-a-new-funding-round-with-uae-investors/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/wc1pwd9s6drev9dxr9q02wd7t">https://ouyangrong.com/reports/hotspot/ai/items/wc1pwd9s6drev9dxr9q02wd7t</a></p>]]></description>
-      <category>行业动态</category>
-      <pubDate>Fri, 23 Oct 2026 09:38:38 GMT</pubDate>
-      <guid isPermaLink="false">wc1pwd9s6drev9dxr9q02wd7t</guid>
-      <author>noreply@ouyangrong.com (The Decoder)</author>
     </item>
   </channel>
 </rss>
