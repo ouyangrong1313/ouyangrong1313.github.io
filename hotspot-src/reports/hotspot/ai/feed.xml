@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[OpenAI 获 110 亿美元首笔融资，估值 1.25 万亿美元]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/l9dmmw3hq525kcngle8s5ab5z</link>
+      <description><![CDATA[<p>OpenAI 已收到约 110 亿美元新融资，这是其 1.25 万亿美元估值轮次的首笔资金，据 Bloomberg 报道款项于周五划出。本轮总额最高可达 200 亿美元，OpenAI 最初寻求以 1.4 万亿美元估值融资 300 亿美元，在 AI 板块抛售后缩减了规模。</p>
+<p>🔗 <a href="https://the-decoder.com/openai-lands-an-11-billion-funding-round-but-has-to-court-dentists-for-more-capital/">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/l9dmmw3hq525kcngle8s5ab5z">https://ouyangrong.com/reports/hotspot/ai/items/l9dmmw3hq525kcngle8s5ab5z</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Sat, 07 Nov 2026 09:45:23 GMT</pubDate>
+      <guid isPermaLink="false">l9dmmw3hq525kcngle8s5ab5z</guid>
+      <author>noreply@ouyangrong.com (The Decoder)</author>
+    </item>
+    <item>
       <title><![CDATA[OpenAI 新一轮融资募资 110 亿美元、估值达 1.25 万亿美元，Anthropic 上周递交 S-1 筹备 IPO]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/trvees889fdhb0gmhrb5xlcg7</link>
       <description><![CDATA[<p>据彭博社报道，OpenAI 在新一轮融资中募资 110 亿美元，估值达到 1.25 万亿美元。彭博社称其仍在争取更多投资，总额可能增至 200 亿美元，最初目标则是募资至多 300 亿美元、估值 1.4 万亿美元。竞争对手 Anthropic 上周已递交 S-1 筹备 IPO，而 Sam Altman 此前表示 OpenAI 暂缓上市，直到能对模型安全作出更有把握的表述。</p>
@@ -546,17 +557,6 @@
       <pubDate>Fri, 23 Oct 2026 18:00:32 GMT</pubDate>
       <guid isPermaLink="false">chmhjhbubnr91qoqge49slnrp</guid>
       <author>noreply@ouyangrong.com (The Decoder)</author>
-    </item>
-    <item>
-      <title><![CDATA[Amazon SageMaker AI 多轮强化学习实操指南：用 Wordle 把 gpt-oss-20b 解谜率提至 84%]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/q8vuhtz5ik6460ebeksj0q7rg</link>
-      <description><![CDATA[<p>AWS 发布 Amazon SageMaker AI 多轮强化学习（MTRL）实操指南，以 Wordle 为例走完从 AgentCore 部署、数据集准备、训练到评测的完整流程。</p>
-<p>🔗 <a href="https://aws.amazon.com/blogs/machine-learning/multi-turn-reinforcement-learning-on-amazon-sagemaker-ai-a-hands-on-guide/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/q8vuhtz5ik6460ebeksj0q7rg">https://ouyangrong.com/reports/hotspot/ai/items/q8vuhtz5ik6460ebeksj0q7rg</a></p>]]></description>
-      <category>教程</category>
-      <pubDate>Fri, 23 Oct 2026 17:48:54 GMT</pubDate>
-      <guid isPermaLink="false">q8vuhtz5ik6460ebeksj0q7rg</guid>
-      <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
     </item>
   </channel>
 </rss>
