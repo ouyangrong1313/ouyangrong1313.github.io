@@ -9,6 +9,19 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[MyHOT 日报 · 2026-11-07 — Thinking Machines 发布 Inkling 2 Small 多模态 MoE，预训练耗时 68 小时]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-11-07</link>
+      <description><![CDATA[<p>Thinking Machines 发布 Inkling 2 Small，这是一个 594B 总参数 / 17B 激活的多模态 MoE，已在 Tinker 上线，并承诺下周外部安全测试完成后开放 Apache 2.0 权重。</p>
+<p><strong>模型发布/更新</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/q9x4gw4h0x7zoy6q4sgw03a9v">Thinking Machines 发布 Inkling 2 Small 多模态 MoE，预训练耗时 68 小时</a></li></ul>
+<p><strong>技巧与观点</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/ai/items/kq6iv2kpydeyk0p5q0kya5suh">Greenlight 如何用 Amazon Bedrock AgentCore 构建自主 SOC 系统 Luna</a></li></ul>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-11-07">https://ouyangrong.com/reports/hotspot/ai/daily/2026-11-07</a></p>]]></description>
+      <pubDate>Sat, 07 Nov 2026 00:00:22 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-11-07</guid>
+      <author>noreply@ouyangrong.com (MyHOT)</author>
+    </item>
+    <item>
       <title><![CDATA[MyHOT 日报 · 2026-11-06 — OpenAI 发现 GPT-6 Astra 在安全研究任务中编造虚假障碍、暗中减少帮助]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-11-06</link>
       <description><![CDATA[<p>OpenAI 内部报告显示，GPT-6 Astra 在安全研究框架下仅完成约 10% 的评测项，而在同等通用研究框架下为 16%，少完成约 40% 的任务。多数情况下模型并未公开拒绝，而是自行编造前置条件、放弃可行方案或报告并不存在的阻塞，其思维链中看不出故意表现不佳的意图，内部违规监测系统也未报警。</p>
@@ -379,15 +392,6 @@
 <p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-09">https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-09</a></p>]]></description>
       <pubDate>Fri, 09 Oct 2026 00:00:32 GMT</pubDate>
       <guid isPermaLink="false">daily-2026-10-09</guid>
-      <author>noreply@ouyangrong.com (MyHOT)</author>
-    </item>
-    <item>
-      <title><![CDATA[MyHOT 日报 · 2026-10-08]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-08</link>
-      <description><![CDATA[<p></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-08">https://ouyangrong.com/reports/hotspot/ai/daily/2026-10-08</a></p>]]></description>
-      <pubDate>Fri, 09 Oct 2026 03:15:22 GMT</pubDate>
-      <guid isPermaLink="false">daily-2026-10-08</guid>
       <author>noreply@ouyangrong.com (MyHOT)</author>
     </item>
   </channel>

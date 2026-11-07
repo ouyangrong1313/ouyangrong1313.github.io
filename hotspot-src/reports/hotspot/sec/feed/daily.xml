@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>安防热点 (https://ouyangrong.com/reports/hotspot/sec/agent)</generator>
     <item>
+      <title><![CDATA[安防热点 日报 · 2026-11-07 — 视美泰端侧 AI 主板选型指南：以 AIOT-3572SE 为例算清算力、底板与量产三笔账]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-11-07</link>
+      <description><![CDATA[<p>视美泰提出端侧 AI 主板选型方法，主张先按算法、路数、帧率和延迟列出算法清单，再衡量算力边界、底板复用与量产一致性三项关键考量。文中以 RK3572 平台的 AIOT-3572SE 为例，其独立 NPU 提供 4TOPS 算力、支持 INT4 到 BF16 混合精度运算，同时明确这一档位不适合在设备上运行 7B 以上模型。</p>
+<p><strong>观点与研究</strong></p>
+<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/uzd9u0oc7i6281n9wi87gr7s5">视美泰端侧 AI 主板选型指南：以 AIOT-3572SE 为例算清算力、底板与量产三笔账</a></li></ul>
+<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-11-07">https://ouyangrong.com/reports/hotspot/sec/daily/2026-11-07</a></p>]]></description>
+      <pubDate>Sat, 07 Nov 2026 00:00:11 GMT</pubDate>
+      <guid isPermaLink="false">daily-2026-11-07</guid>
+      <author>noreply@ouyangrong.com (安防热点)</author>
+    </item>
+    <item>
       <title><![CDATA[安防热点 日报 · 2026-11-06 — 南京大学智慧教室系统为何触发“算法凝视”焦虑]]></title>
       <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-11-06</link>
       <description><![CDATA[<p>南京大学11月4日就智慧教室系统引发的隐私争议发布说明，否认到课率与平时成绩挂钩等传闻，并称当前已不再统计抬头率数据。据中国政府采购网中标公告，该项目中标金额3152.052万元，覆盖仙林校区113间公共教室，招标文件包含人脸检测、人脸识别、AI人数统计、AI抬头率计算等技术要求。文章认为，焦虑的落点在于敏感分析能力与启用规则之间的缝隙，高校宜在采购阶段公开数据治理规则并将学生纳入知情与同意链条。</p>
@@ -321,19 +332,6 @@
 <p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-17">https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-17</a></p>]]></description>
       <pubDate>Wed, 30 Sep 2026 07:14:04 GMT</pubDate>
       <guid isPermaLink="false">daily-2026-09-17</guid>
-      <author>noreply@ouyangrong.com (安防热点)</author>
-    </item>
-    <item>
-      <title><![CDATA[安防热点 日报 · 2026-09-15 — 信息通信业十五五规划明确物联网三大演进方向]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-15</link>
-      <description><![CDATA[<p>信息通信业“十五五”规划明确物联网向5G-A+6G+卫星协同连接、人工智能融合等方向演进，要求移动物联网终端用户突破38亿。安讯士同日发布三款车载半球摄像机，覆盖巴士与火车场景，内置麦克风支持音频采集。</p>
-<p><strong>产品与方案发布</strong></p>
-<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/t83703w9v5xds3d6eblh5vnz7">安讯士发布 AXIS M3945-R、P3945-R 和 P3947-R 车载半球摄像机</a></li></ul>
-<p><strong>政策与监管</strong></p>
-<ul><li><a href="https://ouyangrong.com/reports/hotspot/sec/items/exw7bw5j6nenzcs2uccm6vyzt">从信息通信业“十五五”规划看物联网发展特点</a></li></ul>
-<p>via 安防热点 · <a href="https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-15">https://ouyangrong.com/reports/hotspot/sec/daily/2026-09-15</a></p>]]></description>
-      <pubDate>Wed, 30 Sep 2026 07:13:48 GMT</pubDate>
-      <guid isPermaLink="false">daily-2026-09-15</guid>
       <author>noreply@ouyangrong.com (安防热点)</author>
     </item>
   </channel>
