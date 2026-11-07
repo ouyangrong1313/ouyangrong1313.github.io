@@ -9,6 +9,17 @@
     <ttl>30</ttl>
     <generator>MyHOT (https://ouyangrong.com/reports/hotspot/ai/agent)</generator>
     <item>
+      <title><![CDATA[OpenAI 新一轮融资募资 110 亿美元、估值达 1.25 万亿美元，Anthropic 上周递交 S-1 筹备 IPO]]></title>
+      <link>https://ouyangrong.com/reports/hotspot/ai/items/trvees889fdhb0gmhrb5xlcg7</link>
+      <description><![CDATA[<p>据彭博社报道，OpenAI 在新一轮融资中募资 110 亿美元，估值达到 1.25 万亿美元。彭博社称其仍在争取更多投资，总额可能增至 200 亿美元，最初目标则是募资至多 300 亿美元、估值 1.4 万亿美元。竞争对手 Anthropic 上周已递交 S-1 筹备 IPO，而 Sam Altman 此前表示 OpenAI 暂缓上市，直到能对模型安全作出更有把握的表述。</p>
+<p>🔗 <a href="https://www.theverge.com/ai-artificial-intelligence/1029380/openai-1-25-trillion-investment-valuation">阅读原文</a></p>
+<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/trvees889fdhb0gmhrb5xlcg7">https://ouyangrong.com/reports/hotspot/ai/items/trvees889fdhb0gmhrb5xlcg7</a></p>]]></description>
+      <category>行业动态</category>
+      <pubDate>Fri, 06 Nov 2026 23:46:18 GMT</pubDate>
+      <guid isPermaLink="false">trvees889fdhb0gmhrb5xlcg7</guid>
+      <author>noreply@ouyangrong.com (The Verge · AI)</author>
+    </item>
+    <item>
       <title><![CDATA[Greenlight 如何用 Amazon Bedrock AgentCore 构建自主 SOC 系统 Luna]]></title>
       <link>https://ouyangrong.com/reports/hotspot/ai/items/kq6iv2kpydeyk0p5q0kya5suh</link>
       <description><![CDATA[<p>Greenlight Financial 基于 Amazon Bedrock AgentCore 构建自主 SOC 系统 Luna，每月处理 3,000–4,000 个安全与风险事件，自动解决率超过 90%。</p>
@@ -545,17 +556,6 @@
       <category>教程</category>
       <pubDate>Fri, 23 Oct 2026 17:48:54 GMT</pubDate>
       <guid isPermaLink="false">q8vuhtz5ik6460ebeksj0q7rg</guid>
-      <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
-    </item>
-    <item>
-      <title><![CDATA[Bayer 作物科学如何在 Amazon Bedrock AgentCore 上构建智能体决策引擎]]></title>
-      <link>https://ouyangrong.com/reports/hotspot/ai/items/ykgtokb02nzkqe0ix4mr7hmuc</link>
-      <description><![CDATA[<p>Bayer Crop Science 在 Amazon Bedrock AgentCore 上构建了多智能体决策引擎 ADE，为 Connected Decision Engine 提供自然语言查询入口，首阶段约 80% 的用户问题无需工程师介入即可解决。</p>
-<p>🔗 <a href="https://aws.amazon.com/blogs/machine-learning/how-bayer-crop-science-built-an-agentic-decision-engine-on-amazon-bedrock-agentcore-with-aws-unified-operations/">阅读原文</a></p>
-<p>via MyHOT · <a href="https://ouyangrong.com/reports/hotspot/ai/items/ykgtokb02nzkqe0ix4mr7hmuc">https://ouyangrong.com/reports/hotspot/ai/items/ykgtokb02nzkqe0ix4mr7hmuc</a></p>]]></description>
-      <category>教程</category>
-      <pubDate>Fri, 23 Oct 2026 16:21:36 GMT</pubDate>
-      <guid isPermaLink="false">ykgtokb02nzkqe0ix4mr7hmuc</guid>
       <author>noreply@ouyangrong.com (AWS Machine Learning Blog)</author>
     </item>
   </channel>
