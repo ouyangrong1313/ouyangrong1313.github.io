@@ -1,0 +1,122 @@
+<h1 id="agent-模式框架-digest">Agent 模式框架 (Digest)</h1>
+
+<h2 id="一句话--8-节点速查表">一句话 + 8 节点速查表</h2>
+
+<blockquote>
+  <p>Agent 的本质不是聊天，而是行动；把智能稳定、可控、可评估地嵌入企业运行——吴恩达 4 模式 + Anthropic Workflow vs Agent 区分 + 三层路径（个人助手 → 流程嵌入 → 企业智能）。</p>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th>节点</th>
+      <th>一句话定义</th>
+      <th>关键洞察</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>4 类型分级</td>
+      <td>Chatbot / Copilot / Agent / Multi-Agent</td>
+      <td>Agent 核心是”完成任务”不是”回答问题”</td>
+    </tr>
+    <tr>
+      <td>Reflection</td>
+      <td>自我修改：生成→检查→修改</td>
+      <td>不能单独用，必须配测试/工具/评估</td>
+    </tr>
+    <tr>
+      <td>Tool Use</td>
+      <td>大模型是脑，工具是手</td>
+      <td>是能力入口，也是治理起点</td>
+    </tr>
+    <tr>
+      <td>Planning</td>
+      <td>先想后做：目标→拆解→步骤→执行</td>
+      <td>适合多步骤复杂任务</td>
+    </tr>
+    <tr>
+      <td>Multi-Agent</td>
+      <td>分工协作：研究员+分析师+写作者+评审员</td>
+      <td>通信成本高，简单任务别用</td>
+    </tr>
+    <tr>
+      <td>Workflow vs Agent</td>
+      <td>Workflow 人定义流程，Agent LLM 决定</td>
+      <td>Anthropic 5 种 Workflow 模式</td>
+    </tr>
+    <tr>
+      <td>三层路径</td>
+      <td>个人助手→流程嵌入→企业智能</td>
+      <td>常见错误：一上来就做企业智能</td>
+    </tr>
+    <tr>
+      <td>5 大误区</td>
+      <td>一步到位/过度自主/盲目多 Agent/无评估/无权限</td>
+      <td>7 项评估指标：完成率/准确率/正确率/成本/延迟/反馈/业务结果</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="6-个对-seetong-借鉴动作">6 个对 Seetong 借鉴动作</h2>
+
+<ol>
+  <li><strong>4 类型分级盘点</strong>：Seetong AI 助手所有 Skill 按 4 类重新分类</li>
+  <li><strong>Reflection 配 Reviewer 子 Skill</strong>：写代码 Skill 必配 Reviewer 子 Skill 循环 2-3 轮（对应 [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] 验证闸门）</li>
+  <li><strong>Tool Use 治理 8 项</strong>：权限/白名单/日志/审计/沙箱/确认/回滚/分级</li>
+  <li><strong>Planning 入 Skill 模板</strong>：多步骤任务类 Skill 必走 Planning——目标→拆解→执行→检查→调整</li>
+  <li><strong>单 Agent 优先</strong>：1-2 个”5 步能解决”复杂任务做成单 Agent + Workflow，验证后再考虑 Multi-Agent</li>
+  <li><strong>三层路径定位</strong>：当前在第 1 层（个人助手），6-12 个月推到第 2 层（流程嵌入），第 3 层暂不急</li>
+</ol>
+
+<h2 id="5-金句--3-反直觉--4-类型对比">5 金句 + 3 反直觉 + 4 类型对比</h2>
+
+<p><strong>金句</strong>：”Agent 不是多说几句话，而是能接入真实系统，完成真实任务” / “大模型是脑，工具是手” / “Tool Use 是能力入口，也是治理起点” / “多 Agent 不是越多越好” / “企业不是拥有很多 Agent，而是拥有一套可学习、可执行、可优化、可治理的智能系统”。</p>
+
+<p><strong>反直觉</strong>：① Agent 越强越要从半自主开始 ② 简单任务用单 Agent ③ Reflection 不能单独用。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>类型</th>
+      <th>典型能力</th>
+      <th>核心特征</th>
+      <th>适合场景</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Chatbot</td>
+      <td>问答、总结、生成文本</td>
+      <td>被动响应</td>
+      <td>FAQ / 简单问答</td>
+    </tr>
+    <tr>
+      <td>Copilot</td>
+      <td>辅助写作、辅助编码、辅助分析</td>
+      <td>人主导 AI 辅助</td>
+      <td>写作 / 编程辅助</td>
+    </tr>
+    <tr>
+      <td>Agent</td>
+      <td>规划、调用工具、执行任务、自我检查</td>
+      <td>目标驱动</td>
+      <td>流程化任务执行</td>
+    </tr>
+    <tr>
+      <td>Multi-Agent</td>
+      <td>多角色分工、协同、评审、编排</td>
+      <td>团队协作</td>
+      <td>复杂任务 / 跨域任务</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="关联--备注">关联 + 备注</h2>
+
+<ul>
+  <li><strong>同主线</strong> [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]（<strong>同作者 2 周内连发</strong>——5 级组织维度 + 本文 5 误区 Agent 实施维度 = “AI Native 完整工程化框架”）[[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]] [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]]</li>
+  <li><strong>强关联</strong> [[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]]（Groupon 实证印证 5 误区第 4 条）[[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]</li>
+  <li><strong>作者</strong> Knock = 微信公众号「ThinkingAgent」主理人　<strong>来源</strong> 2026-07-16 08:27 推送，约 8300 字</li>
+  <li><strong>Seetong 优先级</strong> Tool Use → Reflection → Planning → Multi-Agent　<strong>关键区分</strong> 现有 90% Skill 应是 Workflow 不是 Agent，避免”什么都是 Agent”陷阱</li>
+</ul>

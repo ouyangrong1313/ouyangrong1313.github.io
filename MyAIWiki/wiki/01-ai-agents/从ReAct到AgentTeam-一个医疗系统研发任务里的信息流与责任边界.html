@@ -1,0 +1,141 @@
+<h1 id="从-react-到-agent-team一个医疗系统研发任务里的信息流与责任边界">从 ReAct 到 Agent Team：一个医疗系统研发任务里的信息流与责任边界</h1>
+
+<ul>
+  <li>原文链接：https://mp.weixin.qq.com/s/JpDAPxDxt8HWdxwuVpOCGg</li>
+  <li>来源：微信公众号「架构师」/ 若飞</li>
+  <li>发布时间：2026-09-17 23:16</li>
+  <li>获取时间：2026-09-18</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论（一句话）</h2>
+
+<blockquote>
+  <p>多 Agent 协作的关键不是增加执行者数量，而是先固定业务语义、责任边界、版本化状态和可回溯制品，再根据依赖图决定采用 ReAct、固定工作流、中心化协调或 Agent Team。</p>
+</blockquote>
+
+<h2 id="分类提炼">分类提炼</h2>
+
+<ul>
+  <li>场景：医疗信息系统研发、只读汇总服务、Agent 辅助开发与测试</li>
+  <li>标签： #主题/AI-Agent #主题/Multi-Agent #主题/Agent协作 #主题/任务一致性 #主题/证据链 #主题/医疗信息系统 #场景/公众号长文</li>
+  <li>类型：架构案例 / 协作设计 / 测试与治理方法</li>
+</ul>
+
+<h2 id="知识节点8-个独立概念">知识节点（8 个独立概念）</h2>
+
+<ul>
+  <li><strong>事件时间与可用时间</strong>：事件发生时间、结果可用时间和本次拉取时间必须分开，避免把未来才发布的结果带入历史视图。</li>
+  <li><strong>只读读模型</strong>：汇总服务可以缓存和引用来源，但不应成为病历或医嘱的新写入入口；研发 Agent 与运行链路隔离。</li>
+  <li><strong>ReAct反馈循环</strong>：Agent 根据目标选择工具、读取真实返回、修正行动并决定继续或交给人，反馈质量取决于测试和工具设计。</li>
+  <li><strong>责任先于拆分</strong>：先固定契约、输入和验收依据，再决定哪些任务可以由多个 Agent 并行。</li>
+  <li><strong>外部制品交接</strong>：报告、数据、代码、路径、摘要和状态应写入工程制品系统，不能只留在某个 Agent 的对话上下文里。</li>
+  <li><strong>版本化任务状态</strong>：任务需绑定 commit、契约、fixture、attempt、version 和 result，拒绝过期或迟到消息覆盖新状态。</li>
+  <li><strong>信息流拓扑</strong>：中心化协调便于权限和预算管理，成员直接通信减少转述；两者差异在于信息如何流动及确认结果如何落盘。</li>
+  <li><strong>并行收益边界</strong>：只有输入、产物和合并都相对独立时并行才可能有收益；共享契约和依赖密集的修改更适合串行或单 Agent。</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+
+<ul>
+  <li>[[01-ai-agents/架构师-多Agent协作一致性-任务状态与证据]]：提供任务、事实、状态三类一致性及版本化交接的基础框架；本文将其放进医疗研发的时间语义和测试案例。</li>
+  <li>[[01-ai-agents/AI-团队协作-Loop-SDD]]：强调规格、循环和交付物驱动协作；本文补充临床字段语义和只读边界。</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+
+<ul>
+  <li>[[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]]：把本文的版本、状态、权限和证据要求延展为 Control Plane / Harness 的工程控制面。</li>
+  <li>[[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]]：将 ReAct 的工具反馈落到可重放测试、回归门禁和持续修复循环。</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+
+<ul>
+  <li>[[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]]：同样讨论多 Agent 拆分、协调和合并，但本文更聚焦业务语义、证据和医疗风险边界。</li>
+  <li>[[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]：从生产级运行时角度讨论任务、权限、重试和审计，本文提供一个具体研发场景的最小落地切片。</li>
+</ul>
+
+<h2 id="正文要点">正文要点</h2>
+
+<ol>
+  <li><strong>先把“最近 24 小时”和“截至 08:00”写成契约</strong>：事件发生时间不等于结果可用时间；历史页面还需要源记录版本或查询快照。空返回只能表达“本次没有查到记录”，不能变成“患者无过敏”。</li>
+  <li><strong>读链路与研发链路分开</strong>：医疗系统保留各自领域记录，汇总服务只生成面向工作站的读模型；Agent 工作区、测试工具和生产写权限隔离，默认使用合成或批准脱敏数据。</li>
+  <li><strong>ReAct 不是质量保证</strong>：循环能利用工具反馈，但测试漏掉可用时间、医嘱执行状态或数据缺失时，Agent 仍可能稳定地产出错误实现。</li>
+  <li><strong>交接必须携带证据</strong>：字段映射、代码提交、测试报告、输入快照、假设和未验证行为都应能回到工程系统；一句“模块完成”不足以支撑集成。</li>
+  <li><strong>状态要防止迟到结果覆盖新结果</strong>：把候选、已验证、冲突、已否决分开，用 <code class="language-plaintext highlighter-rouge">attempt</code>、<code class="language-plaintext highlighter-rouge">version</code>、租约和条件更新处理重试、超时、乱序和调度器重启。</li>
+  <li><strong>信息流决定 Agent Team 的代价</strong>：中心化汇总更易控制权限、预算和归属；成员直接通信更适合持续追问，但共享任务列表不等于业务数据库或发布记录。</li>
+  <li><strong>集成测试验证业务含义</strong>：不仅检查 HTTP 200 和字段格式，还要验证身份、时间、用药与执行、过敏空返回、来源证据、缺失表达、只读边界和审计记录。</li>
+  <li><strong>多 Agent 需要可解释的增量</strong>：应比较交付时间、返工次数、有效缺陷发现数和总调用成本；多生成一份相似报告不构成增加 Agent 的理由。</li>
+</ol>
+
+<h2 id="架构选择速查">架构选择速查</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>任务特征</th>
+      <th>适合的组织方式</th>
+      <th>原因</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>单个适配器修改、反馈可验证</td>
+      <td>单 Agent + ReAct</td>
+      <td>上下文集中，故障面小</td>
+    </tr>
+    <tr>
+      <td>步骤固定、依赖明确</td>
+      <td>固定工作流或状态图</td>
+      <td>控制流可读，容易重放</td>
+    </tr>
+    <tr>
+      <td>需要额外质量检查</td>
+      <td>生成与评估分开</td>
+      <td>复核可以退回具体任务</td>
+    </tr>
+    <tr>
+      <td>多个适配器可独立开发</td>
+      <td>协调者 + 执行者</td>
+      <td>分支和制品可独立验证</td>
+    </tr>
+    <tr>
+      <td>成员需要持续补充上下文</td>
+      <td>Agent Team</td>
+      <td>直接通信可能减少转述</td>
+    </tr>
+    <tr>
+      <td>多人修改同一制品、依赖密集</td>
+      <td>单 Agent 或串行协作</td>
+      <td>合并与同步成本更低</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="医疗场景安全边界">医疗场景安全边界</h2>
+
+<ul>
+  <li>本文案例是只读的临床信息汇总研发，不代表上线后的自动摘要或临床决策方案。</li>
+  <li>首版明确不下诊断、不改医嘱、不写回病历；任何扩展都需要单独的需求、风险评估和验收。</li>
+  <li>HL7 FHIR 的字段定义可用于检查映射，但当地接口、业务定义、授权范围和记录版本仍需以实际系统为准。</li>
+</ul>
+
+<h2 id="证据边界">证据边界</h2>
+
+<ul>
+  <li>本页为微信公众号文章编译；文中对 Anthropic、Google Research、Claude Code Agent Teams、Codex Multi-Agents 和 K2.5 Agent Swarm 的描述，部分来自二手整理或作者在线观察，未逐项独立复核。</li>
+  <li>文中“90.2%”“15 倍 token”“80.9%”“下降 39%-70%”等数字属于原文引用的特定评测/配置口径，不是医疗研发效率承诺，也不能跨任务直接比较。</li>
+  <li>医疗字段的示例用于说明语义和测试设计，不构成医疗建议、临床规则或合规意见。</li>
+</ul>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+  <li><a href="../../raw/从ReAct到AgentTeam-一个医疗系统研发任务里的信息流与责任边界.md">原文归档</a></li>
+  <li><a href="../../raw/从ReAct到AgentTeam-一个医疗系统研发任务里的信息流与责任边界-digest.md">拆解版</a></li>
+  <li><a href="https://arxiv.org/abs/2210.03629">ReAct 论文</a></li>
+  <li><a href="https://hl7.org/fhir/R4/observation.html">HL7 FHIR R4 Observation</a></li>
+  <li><a href="https://hl7.org/fhir/R4/medicationadministration.html">HL7 FHIR R4 MedicationAdministration</a></li>
+</ul>

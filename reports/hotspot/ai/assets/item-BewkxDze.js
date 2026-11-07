@@ -1,0 +1,1 @@
+import{a as e,i as t,n,r,t as i}from"./item-DPeIBtdt.js";export{i as clientLoader,r as default,n as handle,t as meta,e as shouldRevalidate};

@@ -1,0 +1,20 @@
+<h1 id="多-agent-协作一致性---速读">多 Agent 协作一致性 - 速读</h1>
+
+<blockquote>
+  <p>多 Agent 一致性不是让答案一样，而是让任务、事实和状态一致；模型负责判断，运行时负责版本、证据、副作用和完成证明。</p>
+</blockquote>
+
+<ul>
+  <li><strong>一致性三件事</strong>：同一任务、同一事实、同一状态；推理可以保留分歧。</li>
+  <li><strong>可执行交接状态</strong>：传递 snapshot、evidence、assumptions、constraints、artifacts 和 acceptance。</li>
+  <li><strong>权威事实</strong>：聊天是历史，摘要是工作集，代码、测试、部署和业务库才是事实来源。</li>
+  <li><strong>结果契约</strong>：保留来源、版本和状态，区分候选、已验证、冲突、否决。</li>
+  <li><strong>局部重试与幂等</strong>：失败按子任务恢复，副作用先查状态，再用幂等键安全重放。</li>
+  <li><strong>完成证据</strong>：commit、命令、退出码、报告和 Reviewer 结果共同定义“完成”。</li>
+</ul>
+
+<p>最小实践：先为一个窄任务建立 <code class="language-plaintext highlighter-rouge">global_task_id / sub_task_id / version / attempt / lease_until / result_ref</code>，再补结构化 handoff 和局部重试。</p>
+
+<p>证据边界：Google 研究数字为特定实验口径，本文架构建议来自公众号作者与参考资料综合解读。</p>
+
+<p>关联：[[01-ai-agents/架构师-多Agent协作一致性-任务状态与证据]]、[[01-ai-agents/Loop-Engineering-验证才是瓶颈]]、[[01-ai-agents/phodal-Better-Harness-任务级证据评估]]。</p>

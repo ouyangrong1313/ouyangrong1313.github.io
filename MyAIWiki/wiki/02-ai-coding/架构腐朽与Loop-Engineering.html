@@ -1,0 +1,123 @@
+<h1 id="架构腐朽与-loop-engineering">架构腐朽与 Loop Engineering</h1>
+
+<ul>
+  <li><strong>原文链接</strong>：https://mp.weixin.qq.com/s/wINKSDQCroWBvf29h567zA</li>
+  <li><strong>原始作者</strong>：lencx（微信公众号「lencx」，Mark Text 等开源工具作者）</li>
+  <li><strong>发布时间</strong>：2026-07（推送日未在原文标注）</li>
+  <li><strong>获取时间</strong>：2026-07-15 10:42 Asia/Shanghai</li>
+</ul>
+
+<h2 id="核心结论">核心结论</h2>
+
+<blockquote>
+  <p>屎山源于不敢删，架构活于持续排熵；AI Coding 时代代码生成边际成本接近 0，腐朽速率同样翻倍——唯一解药是把架构约束编码到 Loop + CI 里让机器维护。</p>
+</blockquote>
+
+<p><strong>分类</strong>：本文是”AI Coding 时代架构腐朽应对 + Loop Engineering 方法论”专题，主轴是代码工程实践而非 Agent 架构。放 02-ai-coding 与现有 Loop/Harness/AI Coding 主线同分类；补完现有主线偏”Loop 入门/Harness 实战”缺位的”架构腐朽 + AI Coding 时代新紧迫性”维度。</p>
+
+<h2 id="知识节点8-个独立概念">知识节点（8 个独立概念）</h2>
+
+<ul>
+  <li><strong>架构定义五层</strong>：图（快照）/ 决策记录（ADR）/ 约束（”你不许做什么”，不是增加自由而是把危险自由收掉）/ 运行时结构（模块边界、依赖方向、并发模型、可降级）/ <strong>“删起来贵的部分”</strong>——第五层是工程现实最贴的工作定义</li>
+  <li><strong>腐朽必然性 = 历史负担 + 失败成本不对称</strong>：三年前的字段约定可能承载合规要求；五年前的 if 分支可能绕过了某个 SDK bug；历史负担越来越重 + 工程师越来越保守 = 系统越来越没人敢动</li>
+  <li><strong>重构悖论</strong>：立项永远漂亮（边界清晰/性能更好/风险更低），但两年后多数人选择绕道——在旧系统旁边起新服务、用适配层接上，旧系统没被替换只是被包裹，问题没消失只是多了一层壳</li>
+  <li><strong>Linux 外紧内松</strong>：稳定性预算必须花在正确的边界上——绝大多数 commit 不进稳定树，预算集中在系统调用/驱动 API/文件系统语义”对外承诺”接口；内部实现频繁重写反而是好事</li>
+  <li><strong>提交即重构</strong>：把重构分摊到每次 commit——小步前进 + 主干可编译 + 重构不动语义 + 删死代码 + 命名即文档（5 条原则）；反模式是”攒够一波再重构一次”——攒得越多越不敢动 + 重构 PR 越大越难评审 + git bisect 失效</li>
+  <li><strong>守卫自检</strong>：永远 pass 的检查器信息量为零（系统完美 OR 检查器早已失效）；每条规则配反例测试，故意写一个违反规则的 commit 让 CI 报错后回滚，证明检查器还能工作</li>
+  <li><strong>删比改更重要</strong>：祖训（那个模块别动/那张表别删字段/那段逻辑别修）是软件熵的化石；定期盘点”已知死代码” + 让删变成正常开发动作（review checklist 加”能不能删”）+ 删前加引用监控</li>
+  <li><strong>Loop Engineering</strong>：AI Coding 让代码生成边际成本接近 0（熟练工程师 + Claude Code + 良好 Harness 一周可写出以前团队一月的代码量）；腐朽速率同样翻倍（手写 bug 变成模型批量生成烂代码 + 工程师审核不过来）；架构师工作从”画图”变成”把约束编码到 Loop”——约束进 Loop，Loop 进 CI，CI 不可绕过</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+
+<ul>
+  <li>Linux 内核稳定性分配实践</li>
+  <li>Addy Osmani Loop Engineering 推文（参考链接 [18]）</li>
+  <li>Sairahul1《Loops: What Every AI Engineer Needs to Know in 2026》（参考链接 [19]）</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+
+<ul>
+  <li>AI Coding 时代架构腐朽应对（排熵机制）</li>
+  <li>Loop 自动化 + CI 强制卡口（约束代码化）</li>
+  <li>删代码 vs 加代码的 review 标准重设</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+
+<ul>
+  <li>[[02-ai-coding/Addy-Osmani-Loop-Engineering]]（Loop 主线原典）/ [[02-ai-coding/AI循环-Claude-GPT和Mira到底什么才是真正好用的]]（Loop 五步骨架）/ [[01-ai-agents/Loop-Engineering-验证才是瓶颈]]（验证主题）/ [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]]（Claude Code 团队 Skill 心法）</li>
+</ul>
+
+<h2 id="正文要点--seetong-借鉴动作">正文要点 + Seetong 借鉴动作</h2>
+
+<p><strong>4 段核心论证 + 6 个对 Seetong 借鉴动作</strong>：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>论点</th>
+      <th>原文证据</th>
+      <th>Seetong 借鉴动作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>腐朽必然性 + 祖训清单</strong></td>
+      <td>“每个人都记得几条祖训：那个模块不要动；那张表有几个字段没人知道用途”</td>
+      <td><strong>动作 1</strong>：欧阳荣+黄松佳+谭伟+张威 4 人共同列 Seetong 当前”祖训清单”（哪些模块不能动/字段不敢删/逻辑没人敢改），反思哪几条源于”不敢删”而不是”真正必要”</td>
+    </tr>
+    <tr>
+      <td><strong>Linux 外紧内松 + 稳定性预算</strong></td>
+      <td>“稳定性预算必须花在正确的边界上——系统调用边界、驱动 API、文件系统语义”</td>
+      <td><strong>动作 2</strong>：做 Seetong 稳定性预算体检——80% 监控/告警预算投在哪些边界（4G IPC 设备协议/神策埋点 schema/用户 API/Logan 格式），是否对称？内部实现可激进重构</td>
+    </tr>
+    <tr>
+      <td><strong>提交即重构 + 排熵机制</strong></td>
+      <td>“把重构分摊到每一次提交里”</td>
+      <td><strong>动作 3</strong>：每 sprint 强制 1 个删废弃代码 PR；review checklist 加”能不能删”项；定期盘点 Seetong 老屎山（4G IPC 多版本兼容层/老 API 适配层/弃用 UI 组件）</td>
+    </tr>
+    <tr>
+      <td><strong>守卫自检 + 永远 pass</strong></td>
+      <td>“一个永远通过的检查，对判断当前代码是否破坏约束几乎没有信息量”</td>
+      <td><strong>动作 4</strong>：找出 Seetong 自动化检查中”永远 pass”的项——神策埋点 schema 校验/反馈分类一致性/友盟崩溃字段对齐/数据清洁体检；配反例测试故意触发失败，证明检查器还在工作</td>
+    </tr>
+    <tr>
+      <td><strong>删比改更重要 + 删前加监控</strong></td>
+      <td>“删的勇气，比改的能力更难培养”</td>
+      <td><strong>动作 5</strong>：Seetong 删代码前加 1-2 周引用监控（看哪些埋点/接口/字段真没人调用），监控期内确认 0 引用再删；让”删”成为正常开发动作</td>
+    </tr>
+    <tr>
+      <td><strong>Loop Engineering + AI Coding 时代</strong></td>
+      <td>“约束进 Loop，Loop 进 CI，CI 不可绕过”</td>
+      <td><strong>动作 6</strong>：把 Seetong 重要架构约束编码到 Loop + CI——数据清洁体检/字段命名一致/反馈分类规则/报警阈值规则 → CI 卡口自动跑，与 [[seetong-feedback-radar]] skill 衔接做反馈分类 Loop 自动化</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="备注与相关链接">备注与相关链接</h2>
+
+<p><strong>备注与限制</strong>：</p>
+
+<ul>
+  <li>作者 lencx 是 Mark Text 等开源工具作者，独立开发者视角；推送日未在原文标注，按抓取日 2026-07-15 反推归 2026-07</li>
+  <li>“AI Coding 代码量 10x 增长”是 lencx 经验判断，非独立统计数据；”重构悖论（立项漂亮 → 两年后绕道）”是观察未给量化数据</li>
+  <li>Linux 内核”绝大多数 commit 不进稳定树”是 lencx 简化表述，实际有 stable/longterm/mainline 三线模型</li>
+</ul>
+
+<p><strong>相关链接</strong>：</p>
+
+<ul>
+  <li>原文 raw/digest 见 <code class="language-plaintext highlighter-rouge">raw/lencx-架构腐朽与Loop-Engineering*.md</code></li>
+  <li>Wiki digest 见 <code class="language-plaintext highlighter-rouge">wiki/02-ai-coding/架构腐朽与Loop-Engineering-digest.md</code></li>
+  <li>参考 [18] Addy Osmani Loop Engineering：https://x.com/addyosmani/status/2064127981161959567</li>
+  <li>参考 [19] Sairahul1 Loops：https://x.com/sairahul1/status/2064277888216555684</li>
+  <li>同分类已挂载：[[02-ai-coding/Addy-Osmani-Loop-Engineering]] [[02-ai-coding/AI循环-Claude-GPT和Mira到底什么才是真正好用的]] [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]] [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]]</li>
+</ul>
+
+<hr />
+
+<p><em>透明玻璃自检：wiki 字节 (≤8K)/ 节点 8 (6-10)/ H2 5 (≤5)/ 表格 1 (≤2)/ 0 陈词（按硬约束清单逐项核查）</em></p>
