@@ -30,11 +30,16 @@ jobs:
 
       - name: Clean expired remote-network report archives
         run: |
+          # 本步骤只负责删除过期归档、刷新归档页自身的「历史日报」链接。
+          # 入口页 reports/seetong-remote-network-metrics.html 的写入权归日报任务
+          # （scripts/publish-group-report.py）独占：它只展示统计日前 9 天，与这里
+          # 30 天的删除窗口不重叠，两边同时写必然在 push 阶段分叉
+          # （2026-11-10 事故：日报连续 6 次推送被拒，群里断更）。
           python3 tools/cleanup-remote-network-metrics.py
-          if ! git diff --quiet -- reports/archive reports/seetong-remote-network-metrics.html; then
+          if ! git diff --quiet -- reports/archive; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add -u -- reports/archive reports/seetong-remote-network-metrics.html
+            git add -u -- reports/archive
             git commit -m "chore: remove remote-network reports older than 30 days"
             git push origin HEAD:master
           fi

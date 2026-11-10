@@ -60,14 +60,17 @@ def render_history(report_date: date, archives: list[Archive], archive_page: boo
     if not history:
         body = f'<p class="history-empty">{EMPTY_HISTORY}</p>'
     else:
+        # 条目标记必须与 scripts/publish-group-report.py 的 remote_history_section
+        # 逐字节一致（单个 history-day span）。历史上这里写的是 history-stamp +
+        # history-title 两个 span，两边各写一套，导致每次运行都判定「内容变了」，
+        # 于是清理任务和日报任务反复互相覆盖同一批文件，最终 push 分叉
+        # （2026-11-10 事故：日报连续 6 次推送被拒，群里断更）。
         prefix = "" if archive_page else "archive/"
         items = "".join(
-            '<li><a href="{}{}"><span class="history-stamp">{}</span>'
-            '<span class="history-title">{}</span></a></li>'.format(
+            '<li><a href="{}{}"><span class="history-day">{}</span></a></li>'.format(
                 prefix,
                 item.path.name,
                 item.report_date.isoformat(),
-                REPORT_TITLE,
             )
             for item in history
         )
@@ -116,8 +119,9 @@ def cleanup_reports(reports_dir: Path, today: date, dry_run: bool = False) -> li
         return [item.path for item in expired]
 
     remaining = [item for item in archives if item not in expired]
-    stable_page = reports_dir / "seetong-remote-network-metrics.html"
-    update_history(stable_page, remaining, archive_page=False)
+    # 入口页（reports/seetong-remote-network-metrics.html）的写入权归日报任务独占。
+    # 它只展示「统计日前 9 天」的归档，而这里删的是 30 天以前的，两者窗口不重叠，
+    # 所以清理任务无需、也不得改动入口页——一旦两边都写，必然在 push 阶段分叉。
     for item in remaining:
         update_history(item.path, remaining, archive_page=True)
 
