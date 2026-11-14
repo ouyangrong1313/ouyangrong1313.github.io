@@ -1,0 +1,103 @@
+<h1 id="ai-native-企业agent-团队和-ai-factory-会怎么重写公司体系">AI-Native 企业：Agent 团队和 AI Factory 会怎么重写公司体系</h1>
+
+<h2 id="核心结论一句话">核心结论（一句话）</h2>
+
+<blockquote>
+  <p><strong>AI-native 公司不是”加了 AI 的公司”，是先改组织图、再配 truth layer + eval 的公司——任务交给 Agent 执行，人负责指挥和审阅；先让一个小循环跑起来，比开会先定完整方案重要得多。</strong></p>
+</blockquote>
+
+<h2 id="分类提炼">分类提炼</h2>
+
+<ul>
+  <li><strong>场景</strong>：企业级 AI 落地 / 组织变革 / AI Factory 实证</li>
+  <li><strong>标签</strong>：AI-Native / 组织图 / Truth Layer / Eval / Agent Crew / 企业落地</li>
+  <li><strong>类型</strong>：编译长文（Augmented U 节目浓缩）+ 一手访谈（Masha Sharma / Groupon VP）</li>
+</ul>
+
+<h2 id="知识节点8-个独立概念">知识节点（8 个独立概念）</h2>
+
+<h3 id="1-ai-native-先改组织图不是先改产品">1. AI-native 先改组织图（不是先改产品）</h3>
+
+<p>Groupon <strong>2027 AI-native 时间表</strong>——核心是”任务开始交给 Agent 执行，人负责指挥和审阅”。最容易被低估的 AI 变化不在模型发布会，而在组织内部——一个销售能不能自己搭 lead research 仪表盘、一个 PM 能不能直接问代码”这里有没有 hard-code”。<strong>提案必须带输入样例、输出样例、失败场景和评估指标 4 件套</strong>——”只带一个需求标题已经不够”。</p>
+
+<h3 id="2-每个职能都要能动手搭-agentspeedboat-模式">2. 每个职能都要能动手搭 Agent（speedboat 模式）</h3>
+
+<p>非工程补 AI 能力的路径不是”上培训课”，是”放到能触达的位置”：训练资源、模型访问、共享 connector、MCP、Claude CoWork/Design/Code 全下沉到一线。具体执行是 <strong>speedboat 模式</strong>——业务 + 工程 2-3 人小队一起搭、一起集成、一起上线。她团队里的 PM 和 UX designer 现在至少都能 ship 到 staging。<strong>“成为 builder，不是 vibing 一个原型然后放在那里。成为 builder，意味着你要 ship。”</strong></p>
+
+<h3 id="3-build-vs-buy-倾向自建eval-不能外包">3. Build vs Buy 倾向自建（eval 不能外包）</h3>
+
+<p>过去 Masha 倾向先买、先把流程跑通再自建。<strong>现在反过来</strong>：采购、测试、流程都要时间，自建小版本反而更快更便宜。<strong>“基础设施可以买，能形成 unfair advantage 的业务环节要自己建，尤其是 eval，那一层不能外包。”</strong> ——eval 是企业的判断力护城河，不能交给 SaaS。</p>
+
+<h3 id="4-truth-layer-决定-agent-能不能进生产业务专家写规则">4. Truth Layer 决定 Agent 能不能进生产（业务专家写规则）</h3>
+
+<p>企业卡在 pilot → production 的真正原因不是模型不聪明，是 <strong>Agent 不知道按哪套知识行动</strong>。Groupon 把这层基础叫 <strong>truth layer</strong>——每个类别（激光脱毛、按摩等）由对应服务领域的<strong>业务专家</strong>维护权威 source of truth，做成 <strong>AI-readable manifests</strong>（category playbook）。关键设计：<strong>谁拥有真相，谁维护真相</strong>——类别经理不能只讲一次就放手，必须持续写规则；deal 表现能追到 playbook 里某次具体编辑，错了能回源头改。</p>
+
+<h3 id="5-eval-把每条生成结果接回业务规则双阶段上线">5. Eval 把每条生成结果接回业务规则（双阶段上线）</h3>
+
+<p>Groupon 的 eval 体系 3 特征：①<strong>确定性规则 + 概率性判断 + 回流循环</strong> 三组合 ②<strong>按服务层级聚合 insight</strong>（按摩 20 种服务生成 60 个 deal 看上下文捕捉；eval 暴露”Reiki massage 偏得厉害”，立刻定位到 playbook 哪条规则）③<strong>双阶段上线</strong>——早期系统保持开放让团队学习 pattern match，学到足够多后才划门槛（什么指标触发 human review，什么允许全自动）。Groupon 还跑 <strong>weekly quality control agents</strong> 持续监测。</p>
+
+<h3 id="6-自主-agent-的规模双刃剑blast-radius">6. 自主 Agent 的规模双刃剑（blast radius）</h3>
+
+<p><strong>自主 Agent 的吸引力来自规模，风险也来自规模</strong>。后台建议错了 = 内部返工；面向商家/消费者的自动决策错了 = 收入、信任、合规全部受损。Groupon 用<strong>小比例 customer rollout 控制 blast radius</strong>——换学习速度，守住客户信任。<strong>先让系统暴露错误，再用门槛决定什么时候放手，最后才扩大自动化比例</strong>——这与 Addy Loop “先仪表化再去扩循环”是同一思路的企业级版。</p>
+
+<h3 id="7-领导者先搭自己的工作-os高管自己用-ai">7. 领导者先搭自己的工作 OS（高管自己用 AI）</h3>
+
+<p>Masha 一年前还很保守（讨厌”经验不足的人把 thinking 外包给 AI”），现在她变了——<strong>因为她先搭了自己的 operating system</strong>：stakeholder、strategy、vision、metrics、source of truth、direct reports、决策记录 7 维全部持续进入她的知识库。她不逐封读邮件、不逐条读 Asana，信息先进入 Agent，按月/周策略排序给结论；外部知识（新工具、Claude 变化、GitHub trending repo）也先被 Agent 带回来再判断是否有用。她<strong>直接问代码”这里怎么运行”</strong>，四周自己写了 2-3 张 code audit tickets。</p>
+
+<h3 id="8-高管必须自己用-ai不要委托给-ai-团队">8. 高管必须自己用 AI（不要委托给 AI 团队）</h3>
+
+<p><strong>“不要把理解 AI 的责任委托给 AI 团队”</strong>——高管、PM、运营、销售如果只等别人做培训，很快会看不懂自己公司的新生产方式。最好的训练方式是<strong>自己搭一个小系统，让 Agent 读你的材料、理解你的目标、帮你完成一个真实任务</strong>。</p>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<p><strong>上游</strong>：[[01-ai-agents/未来属于垂直领域Agent]]（同”晚点再听LaterCast”，那篇是”未来形态预测”，本文是”Groupon 企业实证”）+ [[02-ai-coding/Addy-Osmani-Loop-Engineering]] Loop 5+1 积木（本文”先跑小循环”对应 Loop 最小可用版）+ [[03-productivity/Laurel-CPO-Jiaona-Zhang-公司OS]]（同样是”公司 OS”视角，Laurel 给方法，本文给实证）</p>
+
+<p><strong>同级</strong>：[[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]]（Anthropic 管理者视角）+ [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]（极端样本）+ [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]]（L3-L4 数据框架，本文是 Groupon 实证）+ [[01-ai-agents/Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]]（同 Capihom 编译系列）</p>
+
+<h2 id="5-个核心主张--操作">5 个核心主张 + 操作</h2>
+
+<p><strong>主张 1</strong>：AI-native 公司先改的不是产品，是组织图
+操作：Seetong 画组织图，把每个岗位标”指挥 Agent”还是”亲自做”，找出 5 个还是”业务提需求-工程写 PRD”老链路的岗位</p>
+
+<p><strong>主张 2</strong>：每个职能都能搭 1 个最小 Agent（speedboat）
+操作：客服/产品/测试/运营各 1 个最小 Skill，1 周 ship 到 staging（哪怕 60% 完成度）</p>
+
+<p><strong>主张 3</strong>：Truth Layer 是 Agent 进生产的瓶颈（eval 不能外包）
+操作：设备配置/报警规则/反馈分类的 source of truth 由张威+各产品线 owner 维护 → AI-readable manifests</p>
+
+<p><strong>主张 4</strong>：Eval 是企业的护城河，不能外包
+操作：设备分诊/反馈分诊 eval suite，验收=该分到正确类别，每周跑 quality control agents</p>
+
+<p><strong>主张 5</strong>：高管自己用 AI 是新素养
+操作：主人月报加”上周 AI 做的决策数 vs 主人亲自做的决策数”指标对齐 Masha 模式</p>
+
+<h2 id="6-个对-seetong-借鉴动作">6 个对 Seetong 借鉴动作</h2>
+
+<ol>
+  <li><strong>AI-native 组织图体检</strong>——找出 5 个还是”业务提需求-工程写 PRD”老链路的岗位；主人+黄松佳+谭伟+张威共同标出待改节点</li>
+  <li><strong>每个职能搭 1 个最小 Agent</strong>——客服/产品/测试/运营各 1 个 Skill（哪怕 60%），1 周 ship 到 staging；速度比完美重要</li>
+  <li><strong>小商家上线路 AI 化</strong>——设备添加从”填 5 张表”到”对话一句话”，MCP 标准化 + 设备配网知识库 + 1 次性合规评估</li>
+  <li><strong>Truth Layer 沉淀</strong>——设备配置/报警规则/反馈分类的 source of truth → AI-readable manifests（参考 [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] 的”知识库结构化”）</li>
+  <li><strong>Eval 接回业务规则</strong>——设备分诊/反馈分诊 eval suite，每周跑 quality control agents；与 [[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]] “用例基线”思路一致</li>
+  <li><strong>主人先搭自己的 OS</strong>——7 维 OS + 月报加”AI 决策数 vs 主人亲自决策数”指标对齐 Masha 模式</li>
+</ol>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li>所有数据（60 deal 评估、Reiki massage 偏差、4 周 code audit tickets）来自 Masha Sharma 本人口述，无第三方验证</li>
+  <li>Masha 经验以 Groupon 1 万+ 员工公司实证为主，<strong>Seetong 30-50 人团队不能直接套，需裁剪</strong></li>
+  <li>“Truth Layer / Manifest / Speedboat” 是 Groupon 内部用法未标准化</li>
+  <li>偏”工程主管视角”未触及一线员工体验</li>
+  <li>原文 4000 字是晚点再听LaterCast 中文浓缩稿，Augmented U 原视频 30+ 分钟含更多问答细节未抓取</li>
+</ul>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+  <li>原文：https://mp.weixin.qq.com/s/LkMuNLTHRHTFJUYD6iAyaA</li>
+  <li>一手原视频：https://www.youtube.com/watch?v=pQj8qOyan-Q</li>
+  <li>公众号：晚点再听LaterCast（Capihom）</li>
+  <li>同主线 wiki：[[01-ai-agents/未来属于垂直领域Agent]] [[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] [[01-ai-agents/ThinkingAgent-Knock-AI-Native组织5级成熟度模型]] [[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]]</li>
+  <li>同 Capihom 编译系列：[[01-ai-agents/Capihom-AI-Agent帮上门服务多接单-YC-Root-Access-Avoca]] [[02-ai-coding/Capihom-OpenAI-Codex-Andrew-Ambrosino-产品工作新形态]]</li>
+</ul>

@@ -1,0 +1,92 @@
+<h1 id="从-ai-coding-到-harness-engineering-应用宝活动平台端到端实践">从 AI Coding 到 Harness Engineering 应用宝活动平台端到端实践</h1>
+
+<blockquote>
+  <p><strong>核心结论</strong>:<strong>Harness 化不是给对话式 AI Coding 加更多规则,而是把”一个对话窗口”升级为一套工程系统——拆上下文 + 状态文件 + 确定性编排 + DAG 并行 + 脚本化执行 + DevOps 集成</strong>;知识库是底座(800+ 文档覆盖 90+ 微服务),端到端流程沉淀 12 个专家 Agent + 30+ 业务 Skill + 10+ 流程脚本。</p>
+</blockquote>
+
+<h2 id="8-个独立知识节点">8 个独立知识节点</h2>
+
+<ul>
+  <li>
+    <p><strong>状态文件驱动(product-state.json + e2e-state.json)</strong>:把端到端流程从”对话历史”中抽出来,持久化到两类结构化 JSON——多 Story 并行的 <code class="language-plaintext highlighter-rouge">product-state.json</code>(breakdown / forking / joining) + 单 Story 端到端的 <code class="language-plaintext highlighter-rouge">e2e-state.json</code>(Phase 0~7 / 产出 / 接口验证结果)。子 Agent 在独立上下文执行完毕后写状态文件,主调度器直接读文件判断”下一步干什么”,<strong>三件事一次解决</strong>:上下文有损压缩、流程中断无法恢复、推进缺乏可观测。配套 3 个 hook(Stop / SessionStart / SessionEnd)防止主调度器”偷懒式”提前停止。</p>
+  </li>
+  <li>
+    <p><strong>专家 Agent 体系(12 个专家 + 5 项设计原则)</strong>:每个 Agent 只做一件事——code-reviewer 只评不改、interface-verifier 只诊断不改、code-fixer 只在收到问题清单后才动手。<strong>5 项设计原则</strong>:单一职责 / 上下文隔离 / 工具最小权限(审查类不给写文件,规划类不给发布) / 确定性输入输出(不靠对话传信息,靠结构化字段) / 模型可插拔(便宜模型做状态解析,强模型做代码审查)。沉淀 12 个专家(prd-decomposer / task-planner / story-developer / unit-test-agent / codar-reviewer / galileo-root-cause / test-case-designer / code-reviewer / publisher / git-committer 等)。<strong>3 个收益</strong>:行为稳定 / 主调度器负担减少 / 单点修改不影响全局。</p>
+  </li>
+  <li>
+    <p><strong>Worktree 隔离 + DAG 编排 + Fork-Join(从串行到并行)</strong>:两层并行。<strong>第一层</strong> task-planner 根据需求文档按接口/模块拆任务,标注依赖关系,构建 DAG 拓扑分层,同层任务并发,每个并发任务分配独立 git worktree,本轮结束后统一 merge。<strong>第二层</strong> 多 Story 场景:Phase R 产品需求拆解 → Fork 段并行跑 Phase 1~4(任务拆解→波次开发→单测→代码审查) → Join 段串行收口(合并→发布→验证→提交)。<strong>两个反直觉</strong>:① 不仅是性能优化,主流程上下文也会因并发而大幅减少 ② 多 Story 场景模拟”人协作的临时分支”,而不是”每个 Story 独立发布”。</p>
+  </li>
+  <li>
+    <p><strong>冲突治理四象限(能事前隔离就事前隔离,必须共享就串行收口)</strong>:并行多 Agent 改代码不可避免冲突,4 类冲突 4 种策略。① <strong>Merge Conflict</strong>:task-planner touches 做文件级事前隔离,真冲突正常解,绝不用 –no-verify/丢弃绕过;② <strong>Shared file</strong>(如 main.go):并行阶段禁改,统一收敛到集成收口阶段单 Agent 执行;③ <strong>Proto 协议</strong>:仅当 has_pb_change=true 时由 proto-engineer 在 Rick 平台统一变更+生成桩代码,下游基于已生成桩开发;④ <strong>DB/配置变更</strong>:全局变更一次性前置确认(task-planner 阶段汇总),落地由专门 Agent 执行。</p>
+  </li>
+  <li>
+    <p><strong>脚本化执行(AI 负责认知,脚本负责执行)</strong>:把状态文件 JSON 解析 / git worktree 创建 / 编译发布 / 知识库初始化等”确定性操作”从 AI 手里收回到脚本。<strong>核心原因</strong>:让 AI 做这些事不仅消耗 token,还引入不必要随机性(写错 shell 语法 / 用错参数 / 同需求多次跑结果不一致)。前后沉淀约 15 个脚本——<code class="language-plaintext highlighter-rouge">e2e-dev.py</code> 状态机解析 / <code class="language-plaintext highlighter-rouge">worktree.sh + sub_worktree.sh</code> 多 worktree 操作 / <code class="language-plaintext highlighter-rouge">build-and-publish.sh</code> 一键发布 / <code class="language-plaintext highlighter-rouge">kb-init.sh</code> 知识库初始化。<strong>判断标准</strong>:有明确输入输出 / 操作路径非常清晰 → 脚本化;需要判断/分析/生成 → 留给 AI。</p>
+  </li>
+  <li>
+    <p><strong>DevOps 多平台读写集成(打通最后一公里)</strong>:端到端不止写代码,还要 TAPD 建子需求 / Rick 改协议 / 123 发布服务 / 七彩石改配置 / 伽利略查日志。<strong>集成策略</strong>:公司内大部分平台都有 MCP 服务或 Skill,集成到 Knot 平台 + 03 平台,AI 经人工确认后可直接读写。<strong>两个具体方案</strong>:① <strong>tRPC-Gateway</strong>:本地 AI 调通 123 内网 idc 接口(为每个服务申请白名单不通用);② <strong>Codar CR skill</strong>:AI 写代码让 AI 来审——增量 CR 由 Codar CLI 执行,问题清单返回主调度器,FIX Agent 修复。<strong>已知例外</strong>:七彩石 mcp 不支持 tconf 集群,123 业务配置页无法通过七彩石 mcp 读写。</p>
+  </li>
+  <li>
+    <p><strong>结构化知识库 + 渐进式加载(替代 RAG)</strong>:借鉴 LLM Wiki / Obsidian-Wiki / GBrain,<strong>两层结构</strong>:自动生成(AI 读代码生成)+ 人工沉淀(custom.md + common/ 沉淀业务背景/架构决策/使用规范)。<strong>三层目录</strong>:总览层 backend/overview.md → 域层 {group}/meta.yaml + custom/ → 服务层 {service}/*.md(8 类)+ custom/。<strong>8 类自动生成文档</strong>:overview / interfaces / architecture / dependencies / storage / config / pitfalls / log.md(不可覆盖历史)。<strong>渐进式加载 3 层</strong>:第一层关键词匹配缩小到 1-2 业务域 → 第二层 grep 在 meta.yaml 精确筛选 → 第三层按查询模式只加载必要文档类型(接口搜索连 overview.md 都不读)。<strong>4 种查询模式</strong>:A PRD 拆解 / B 技术方案拆解 / C 接口搜索 / D 知识库问答。<strong>相对 RAG 的 4 个优势</strong>:精准定位 / 自顶向下按需吸收 / 主动探索 / 维护成本低。</p>
+  </li>
+  <li>
+    <p><strong>文档新鲜度检测(过期知识比没有知识更危险)+ 核心工程原则 7 条</strong>:<code class="language-plaintext highlighter-rouge">meta.yaml</code> 记录 <code class="language-plaintext highlighter-rouge">git_hash</code>(上次生成时代码版本),与仓库当前 HEAD hash 对比,超阈值标记过期,派发 codebuddy 命令行以增量模式更新。<strong>增量模式 3 特性</strong>:① 最小改动原则(避免大改);② 人工批注保留(业务背景说明、使用示例等”高价值内容”继承);③ log.md 追加不可覆盖(可审计、可回溯)。<strong>实战教训</strong>:曾因知识库未更新,AI 调用了老接口,整个链路通了但拿不到预期结果,排查很久才发现。<strong>7 条核心工程原则</strong>(从具体场景向上抽象):① AI 负责认知,脚本负责执行;② 长链路必须状态化;③ 知识库必须结构化;④ Agent 必须职责隔离;⑤ 执行步骤必须脚本化;⑥ Workflow 比 Prompt 更重要;⑦ 终局认知——未来比拼的不是”用了多少 AI”,而是能否把 AI 当作一个工程系统来设计。</p>
+  </li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游(基于 / 来自)</h3>
+<ul>
+  <li><strong>Harness Engineering 概念走红</strong>:Claude Code / OpenClaw / Hermes / Addy Osmani Loop 思想带火”模型能力是概率的,真正让 Agent 可用可控的是外面那层工程化骨架”</li>
+  <li><strong>LLM Wiki / Obsidian-Wiki / GBrain</strong>:知识库结构化方法论</li>
+  <li><strong>强类型语言与状态机思想</strong>:Go 强类型重构 Shell 脚本 + 状态文件 = 流程可中断可恢复</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游(应用于 / 验证于)</h3>
+<ul>
+  <li><strong>应用宝活动平台重构</strong>:上半年完成,4 业务域(活动/福利/商城/增长) / 90+ 微服务 / 800+ 结构化文档 / 12 专家 Agent / 30+ 业务 Skill / 10+ 流程脚本</li>
+  <li><strong>With 平台活动集成看板</strong>:100% AI Vibe Coding 生成,无任何 CR,适合”结果导向 + 容错率高 + 无强一致性”场景——验证”代码黑盒化”的边界</li>
+  <li><strong>Claude Workflow 模式</strong>:团队正在探索”由脚本串联流程,必要时脚本 call AI”,而非”AI 串联流程”</li>
+</ul>
+
+<h3 id="同级横向--并列">同级(横向 / 并列)</h3>
+<ul>
+  <li>Harness 主线:[[01-ai-agents/Harness工程AgentLoop]] / [[01-ai-agents/HarnessEngineering企业级实战]] / [[01-ai-agents/阿里云开发者-淘宝主播Agent的Harness工程实战]] / [[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] / [[01-ai-agents/harness-engineering]] / [[02-ai-coding/Code-is-cheap-AI-Native-五倍效率]]</li>
+  <li>端到端流程:[[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] / [[01-ai-agents/Hermes-Agent重构得物数仓工作流]] / [[01-ai-agents/Leeka-Task-Decomposition-Agentic-Workflow]]</li>
+  <li>Loop 验证:[[01-ai-agents/Loop-Engineering-验证才是瓶颈]] / [[02-ai-coding/Addy-Osmani-Loop-Engineering]]</li>
+  <li>多 Agent 架构:[[01-ai-agents/OpenClaw-vs-Hermes-多-Agent-架构设计]] / [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]]</li>
+</ul>
+
+<h2 id="6-个对-seetong-团队可借鉴动作">6 个对 Seetong 团队可借鉴动作</h2>
+
+<ol>
+  <li><strong>状态文件驱动先于多 Agent</strong>:把 Seetong AI 助手每个长流程(如 Bug 修复、版本回顾、简报生成)的状态写盘——当前 Phase / 已完成步骤 / 下一步动作 / 中间产物。即使会话中断也能续上,这是”AI 提效 ≠ AI 可靠”的关键工程动作。优先用 JSON 而非数据库(MVP 阶段)。</li>
+  <li><strong>专家 Agent 5 项原则体检 Seetong Skill</strong>:单一职责(seetong-bug-triage 不该同时改代码)/ 上下文隔离(每个 Skill 只加载必要文档)/ 工具最小权限(只读 Skill 不给写权限)/ 确定性输入输出(参数化,Skill 之间不靠对话)/ 模型可插拔(便宜模型做分类,强模型做根因)。12 个专家 Agent 体系可借鉴但不强求规模。</li>
+  <li><strong>冲突治理四象限入版本流程</strong>:Seetong 多版本分支(8.3.x / 8.4.x)合并时的冲突类型映射——Merge Conflict(配置/路由文件)/ Shared file(Info.plist)/ Proto 协议变更 / 配置变更,各对应一个收口负责人或脚本。</li>
+  <li><strong>知识库先建”分层加载 + 自定义沉淀”再谈 RAG</strong>:借鉴应用宝的”meta.yaml 注册中心 + 渐进式 3 层加载 + 4 种查询模式”。MyAIWiki 已经是结构化,但 Seetong AI 助手用的 Seetong 项目知识库(seetong-iOS / seetong-android / Seetong-cli 等)还需要按”3 层加载”重构,避免把所有文档一次塞上下文。</li>
+  <li><strong>15 个脚本沉淀 + 调度架构转 Go 强类型</strong>:把 Seetong 重复执行的操作(Git worktree 操作 / TAPD 工时填写 / 反馈分诊 SOP / 简报模板渲染)沉淀为 shell 脚本或 Python 脚本;主调度器如果未来要做,优先 Go 而非 Shell(大模型生成的 Shell 脚本常潜藏隐性语法错误,长链路末端才暴露,极耗排查)。</li>
+  <li><strong>Vibe Coding 边界体检</strong>:Seetong 内部区分”看板类系统”(适合 AI 全自动生成 + 不 CR)与”核心在线业务系统”(仍需人守住架构)。比如 Seetong 后台运营看板 / 内部工具 / Demo 类需求,可放开让 AI 100% 生成不 CR;4G IPC / 4G 远程开门 / 支付 / 安全 / 数据删除等路径,严守 review + 测试 + 灰度。</li>
+</ol>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li><strong>作者</strong>:zimingxing、kinglongli、yifhao(腾讯应用宝活动平台团队),发布于腾讯程序员公众号</li>
+  <li><strong>当前阶段</strong>:团队自评”仅处于’能跑’的刚起步状态”,缺少自进化能力 / 评估体系 / 工具解耦</li>
+  <li><strong>范围</strong>:仅 Go 后台业务覆盖,前端/客户端/嵌入式系统未涉及</li>
+  <li><strong>依赖</strong>:整套体系重度依赖 codebuddy cli 工具运行,工程与工具解耦未完成</li>
+  <li><strong>未来方向</strong>:Claude Workflow 模式启发下,探索”脚本串联流程”替代”AI 串联流程”,让”确定性的归脚本,认知的归 AI”</li>
+  <li><strong>取舍</strong>:弃用主子 Agent 模式(改由外部主程序编排) + 弃用 Shell 脚本(改 Go 强类型) + 严格禁用项目级 Memory(防止上下文串扰)</li>
+  <li><strong>微信原文</strong>:约 15.8K 字符,5 个一级章节 + 27 个二级章节,涵盖知识库工程 + 端到端开发工程两条主线</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>raw:../../raw/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践.md</td>
+          <td>raw-digest:../../raw/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践-digest.md</td>
+          <td>wiki-digest:./腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践-digest.md</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>

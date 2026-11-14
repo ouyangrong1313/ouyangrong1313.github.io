@@ -1,0 +1,88 @@
+<h1 id="一文讲清-agent-如何理解业务把对象状态和权限接进执行流程速读摘要">一文讲清 Agent 如何理解业务：把对象、状态和权限接进执行流程（速读摘要）</h1>
+
+<blockquote>
+  <p><strong>一句话</strong>：Agent 真正理解业务，不是能把一句话分到正确意图，而是能把正确业务对象从当前状态推进到目标状态，并且全过程绑定真实状态、规则版本、权限边界与完成证据。</p>
+</blockquote>
+
+<h2 id="9-节点速查表">9 节点速查表</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>节点</th>
+      <th>一句话定义</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>意图识别只是入口</td>
+      <td>能识别 <code class="language-plaintext highlighter-rouge">cancel_order</code>，不等于知道取消哪张单、现在能不能取消</td>
+    </tr>
+    <tr>
+      <td>六项业务语义</td>
+      <td>统一术语 / 业务对象 / 实时状态 / 规则版本 / 权限边界 / 可执行动作</td>
+    </tr>
+    <tr>
+      <td>事实源分层</td>
+      <td>文档给背景，业务系统给状态，权限系统给授权，审计链给证据</td>
+    </tr>
+    <tr>
+      <td>三类状态分离</td>
+      <td>对话状态、业务状态、执行状态必须分开建模</td>
+    </tr>
+    <tr>
+      <td>业务决策记录</td>
+      <td>自然语言先编译成结构化中间产物，再进入执行链</td>
+    </tr>
+    <tr>
+      <td>理解决策执行三层</td>
+      <td>理解层整理候选，决策层绑定现场，执行层控制副作用</td>
+    </tr>
+    <tr>
+      <td>五份小合同</td>
+      <td>术语 / 状态 / 规则权限 / 工具 / 验收 五合同比知识库大全更适合起步</td>
+    </tr>
+    <tr>
+      <td>业务理解卡</td>
+      <td>用 10 格卡片快速判断这条流程是否适合交给 Agent</td>
+    </tr>
+    <tr>
+      <td>四类伪懂测试</td>
+      <td>对象错、状态旧、身份错、事务半完成，比正例更能暴露风险</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="5-个最该抄回工程的合同">5 个最该抄回工程的合同</h2>
+
+<ol>
+  <li><strong>术语合同</strong>：同一个词在不同边界里是什么意思。</li>
+  <li><strong>状态合同</strong>：对象有哪些状态、怎么迁移、哪个系统是真相源。</li>
+  <li><strong>规则与权限合同</strong>：当前用哪版规则、谁能自动做、谁必须审批。</li>
+  <li><strong>工具合同</strong>：每个工具只做一件事，前置条件、副作用、幂等和错误类型写清楚。</li>
+  <li><strong>验收合同</strong>：不只测正例，要收对象不明、状态变化、权限不足、部分成功等例外。</li>
+</ol>
+
+<h2 id="4-个最危险的看起来懂了">4 个最危险的“看起来懂了”</h2>
+
+<ol>
+  <li><strong>目标对了，对象错了</strong>：确实要取消订单，却选中了另一张单。</li>
+  <li><strong>规则对了，状态旧了</strong>：按“未发货可取消”执行，但仓库刚刚出库。</li>
+  <li><strong>动作合法，身份不对</strong>：退款动作存在，但当前操作人额度不足或越权。</li>
+  <li><strong>工具成功，业务只完成一半</strong>：订单取消和退款成功，优惠券恢复失败。</li>
+</ol>
+
+<h2 id="4-步放权路径">4 步放权路径</h2>
+
+<ol>
+  <li><strong>历史回放</strong>：只生成业务决策记录，不调用写工具。</li>
+  <li><strong>只读影子模式</strong>：跟真实流量读取数据、给出计划，但不产生副作用。</li>
+  <li><strong>低风险路径开放</strong>：先放查询、信息补齐、草稿生成。</li>
+  <li><strong>按失败证据扩边</strong>：根据误执行、人工接管、补偿成功和业务结果数据逐步放权。</li>
+</ol>
+
+<h2 id="关联--备注">关联 + 备注</h2>
+
+<p><strong>关联</strong>：[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]] / [[01-ai-agents/阿里妹-端到端业务需求专家Agent-4层架构8步流程]] / [[01-ai-agents/腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] / [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]] / [[01-ai-agents/从零设计生产级-Multi-Agent-Harness]] / [[01-ai-agents/AI-PM核心技能-观测评估与反馈闭环]] / [[02-ai-coding/Loop-Engineering-详解-把反馈循环放进工程现场]] / [[02-ai-coding/Agentic-Engineering-AI-Workbench]]</p>
+
+<p><strong>备注</strong>：这篇文章最值钱的不是“再教你补 Prompt”，而是把业务理解压成一组可执行契约：对象、状态、权限、动作、证据、测试、放权边界。</p>

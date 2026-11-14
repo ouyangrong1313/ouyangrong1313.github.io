@@ -1,0 +1,87 @@
+<h1 id="ai循环claudegpt和mira到底什么才是真正好用的速读摘要">AI循环：Claude、GPT和Mira，到底什么才是真正好用的(速读摘要)</h1>
+
+<blockquote>
+  <p><strong>一句话</strong>：Loop 不是“多问几轮提示词”，而是让 AI 围绕目标自己规划、执行、验证、迭代的递归系统；关键不是模型更强，而是 <strong>验证、状态、停止条件</strong> 是否齐全。</p>
+</blockquote>
+
+<h2 id="速查表">速查表</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>维度</th>
+      <th>核心命题</th>
+      <th>关键事实</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>提示词 vs 循环</td>
+      <td>提示词是一轮问答，循环是围绕目标的持续努力</td>
+      <td>你退出来，活还在继续，才算 Loop</td>
+    </tr>
+    <tr>
+      <td>五步骨架</td>
+      <td>DISCOVER → PLAN → EXECUTE → VERIFY → ITERATE</td>
+      <td>真正的关键是验证 / 状态 / 停止条件</td>
+    </tr>
+    <tr>
+      <td>验证心脏</td>
+      <td>没有 Verify = AI 给自己改作业</td>
+      <td>重复 ≠ 进步</td>
+    </tr>
+    <tr>
+      <td>停止条件</td>
+      <td>没出口的循环会空转烧钱</td>
+      <td>成功 + 硬性上限都要有</td>
+    </tr>
+    <tr>
+      <td>Ralph Wiggum</td>
+      <td>AI 太早觉得完成，半成品退出，但循环还在烧 token</td>
+      <td>安静失败的典型模式</td>
+    </tr>
+    <tr>
+      <td>五个积木</td>
+      <td>自动化 / 技能 / 子代理 / 连接器 / 验证器</td>
+      <td>Claude Code / Codex 基本都内置</td>
+    </tr>
+    <tr>
+      <td>子代理分工</td>
+      <td>写的人和审的人分开</td>
+      <td>写手快便宜，审稿人慢严格</td>
+    </tr>
+    <tr>
+      <td>成本红线</td>
+      <td>单任务约 50K–200K tokens</td>
+      <td>采纳率 &lt; 50% = 亏钱</td>
+    </tr>
+    <tr>
+      <td>搭建顺序</td>
+      <td>先手动跑通一次 → skill → loop → schedule</td>
+      <td>不能直接排日程</td>
+    </tr>
+    <tr>
+      <td>Mira</td>
+      <td>Telegram 里的 zero-code 循环方案</td>
+      <td>500+ App / 长期记忆 / 明显 advertorial 色彩</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>3 个反直觉点</strong>：① 真正难的不是执行，而是验证；② 最重要的指标不是“跑了几轮”，而是“每个被采纳的修改花多少钱”；③ 99% 的人不需要一上来就搭重型循环，先用一段提示词手搓轻量版更划算。</p>
+
+<h2 id="5-个对-seetong-团队可借鉴动作">5 个对 Seetong 团队可借鉴动作</h2>
+
+<ol>
+  <li><strong>先跑轻量循环</strong>：把反馈分诊、日志初筛、回放异常汇总先做成“目标 + 严格标准 + 自检协议”的提示词循环，低成本验证价值。</li>
+  <li><strong>优先建验证器</strong>：Seetong 多数 AI 场景最缺的不是模型，而是自动拒绝差输出的关卡。问题雷达、告警分析、反馈归因都该先补这一层。</li>
+  <li><strong>定时任务一律补停止条件</strong>：成功条件 + 最大迭代次数 + 超时退出，防止半夜空转烧 token。</li>
+  <li><strong>生成 / 审核拆成子代理</strong>：写简报草稿和核对数据一致性不要交给同一个 agent，写手快、审稿人严，质量更稳。</li>
+  <li><strong>看采纳率，不看总输出量</strong>：真正该追踪的是每条被采纳的结果花了多少 token、多少人工复核时间，而不是循环跑了多少轮。</li>
+</ol>
+
+<h2 id="关联--备注">关联 + 备注</h2>
+
+<p><strong>关联</strong>：[[01-ai-agents/Loop-Engineering-验证才是瓶颈]] / [[02-ai-coding/Claude-Code作者Boris-我已经不写prompt了我写loop]] / [[02-ai-coding/loonggg-Claude-Code-技能心法-11条建议]] / [[01-ai-agents/530万人-自循环-提示词]] / [[02-ai-coding/oh-my-codex]] / [[02-ai-coding/Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]</p>
+
+<p><strong>备注</strong>：互动约 58 回复 / 167 转发 / 27 万浏览；单任务 token 量级约 50K–200K；Mira 部分明显带软广色彩，阅读时要把概念框架与产品宣传拆开看；只适合“高频、可验证、端到端能自己做完、完成标准客观”的任务。</p>
