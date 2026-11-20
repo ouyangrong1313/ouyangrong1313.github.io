@@ -1,5 +1,9 @@
 # Productivity Wiki
 
+## macOS 应用迁移：UU Remote 本机观察（2026-11-20）
+
+- [[03-productivity/macOS应用与用户数据迁移到外置APFS磁盘-本机观察]] - 单机验证应用包外置、原安装路径兼容和部分用户数据迁移；Cookie 登录数据被应用重建，root-owned helper 与系统缓存留在内置盘；标为 observation，未推广为通用 SOP。
+
 ## 第一款产品：从已有经验到最小可交付（2026-10-26 新增）
 
 > **微信公众号「AlphaWriter」，作者陆甲第，2026-10-25**：以 Nathan Barry 制作《The App Design Handbook》为线索，说明普通人可以把已经熟练掌握的经验整理成用户完成任务的操作路径，先用 PDF、视频或模板中的一种形态交付，再通过真实用户试用逐步扩展。案例数据为原文转述，未独立核验。

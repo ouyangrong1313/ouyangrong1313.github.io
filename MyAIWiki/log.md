@@ -2,6 +2,13 @@
 
 时间序变更记录。格式：`## [日期] 操作 | 标题`
 
+## 2026-11-20
+### observation | UU Remote 应用与用户数据迁移到外置 APFS 磁盘
+
+- 记录本机应用包签名验证、原路径符号链接兼容、用户级数据迁移及登录 Cookie 被应用重建的观察。
+- root-owned helper 与系统缓存保留在内置盘；原应用回滚副本移入废纸篓但未清空。外置卷重启冷启动和自动更新仍未验证。
+- 写入 `wiki/03-productivity/macOS应用与用户数据迁移到外置APFS磁盘-本机观察.md`，更新分类索引与总索引；状态为 `observation`，不推广为通用 SOP。
+
 ## 2026-11-03
 ### ingest | 解读 dsh-superagent：一个主动型 Coding Agent 的工程常识与后厨美学
 
