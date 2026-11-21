@@ -1,0 +1,76 @@
+<h1 id="agent能力不足维护代码库humanlayer创始人质疑无人值守软件工厂">Agent能力不足维护代码库——HumanLayer创始人质疑”无人值守”软件工厂</h1>
+
+<ul>
+  <li>原文链接：https://mp.weixin.qq.com/s/CrEorp4srOhMM5wlS-Up7w</li>
+  <li>原始作者：德克斯·霍西（Dex Horsey），HumanLayer 联合创始人兼 CEO</li>
+  <li>来源：51CTO技术栈</li>
+  <li>发布时间：2026-11-03</li>
+  <li>获取时间：2026-11-03</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论（一句话）</h2>
+<blockquote>
+  <p>Agent 能加速单次实现，但在长期迭代的代码库中无法自动维持架构质量；SlopCodeBench 最优 Agent 仅通过 16.3% 检查点，”无人值守软件工厂”在复杂系统中尚未成立。</p>
+</blockquote>
+
+<ul>
+  <li>场景：AI Agent 参与软件工程的全流程自动化边界</li>
+  <li>标签：Agent 落地、代码维护、架构退化、人机协作</li>
+  <li>类型：演讲实录 + 基准评测</li>
+</ul>
+
+<h2 id="知识节点8-个独立概念">知识节点（8 个独立概念）</h2>
+<ul>
+  <li><strong>关灯软件工厂</strong>：让 Agent 从接需求到上线全程无需人看代码的设想；小任务可行，复杂系统因架构退化而不可持续。</li>
+  <li><strong>架构退化延迟</strong>：糟糕架构的成本按月/年计，当前测试只验证本次功能正确，无法预判下月新需求对模块边界的影响。</li>
+  <li><strong>SlopCodeBench</strong>：HumanLayer 发布的分阶段迭代评测基准，36 任务、196 检查点，要求 Agent 在自己写的代码上连续扩展而非一次性交付。</li>
+  <li><strong>分阶段迭代评测</strong>：区别于单次 Bug 工单，模拟真实团队不断加需求、改已有行为的场景；最优 Agent 严格通过率仅 14.8%→16.3%。</li>
+  <li><strong>规划前置</strong>：影响面大的任务先花 20-30 分钟与 Agent 讨论模块划分和提交顺序，省掉审查时数小时返工；小改动不必过度规划。</li>
+  <li><strong>Agent 可视化验证</strong>：给 Agent 浏览器和运行中的应用，让它自己操作、截图、调用接口，不要只在终端看见”测试通过”。</li>
+  <li><strong>会话记录留存</strong>：计划、会话记录和架构文档应跟着代码一起留在工作记录里；只留最终代码，下一个人或 Agent 接手时判断得重做。</li>
+  <li><strong>测试与可维护性鸿沟</strong>：测试通过说明眼前这关过了，但不等于代码给下一次修改留好了路；一个 PR 今天能合，不说明半年后别人还看得懂。</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+<ul>
+  <li>[[Datawhale-DeepSeek-Super-Agent架构-Router-Worker双层]]：Agent 架构设计中的 Control Plane 思想与本文”人工把控架构边界”互为印证</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+<ul>
+  <li>代码审查流程、CI/CD 门禁设计、团队知识沉淀机制</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+<ul>
+  <li>[[透明玻璃-写作的最高境界]]：写作方法论中的”不隔”标准与本文”可读性即长期价值”相通</li>
+</ul>
+
+<p><strong>正文要点（4 条）</strong></p>
+
+<ol>
+  <li><strong>“关灯软件工厂”的诱惑与陷阱</strong>：Agent 把实现从几天缩到几小时，但审查未同比缩短；诱人想法是把审查也交给 AI，但复杂项目的架构退化代价按月/年计，无人看管的模型很难在一次次修改中维持代码库质量。</li>
+  <li><strong>测试通过 ≠ 可维护</strong>：当前测试只验证本次功能正确，无法预判下月新需求对模块边界的影响；Agent 为交付眼前功能在三处各补一段判断，测试全过，下次规则变化就得同步改三处。</li>
+  <li><strong>SlopCodeBench 实证</strong>：36 任务、196 阶段检查点，要求 Agent 在自己写的代码上连续扩展；无一完整完成全部任务，最优 Agent 严格通过率仅 14.8%→16.3%，远未到”长期维护已解决”。</li>
+  <li><strong>实操建议</strong>：影响面大的任务先花 20-30 分钟规划；给 Agent 浏览器让它看见实际运行效果；把用户反馈和事故告警接入后续改动；保留会话记录和架构文档供后续回溯。</li>
+</ol>
+
+<h2 id="3-个对-seetong-团队可借鉴动作">3 个对 Seetong 团队可借鉴动作</h2>
+<ol>
+  <li><strong>Seetong iOS/Android 大改动前强制规划段</strong>：涉及多模块联动的需求（如注册页海外适配、回放架构切换），提 MR 前先写 200 字以内的改动方案（动哪些模块、保留哪些旧接口），欧阳荣或对应负责人确认后再让 Agent 铺开实现。</li>
+  <li><strong>给 Agent 加”看见运行效果”的能力</strong>：在 Seetong-App-AI 的 Agent 工作流中接入模拟器截图或真机录屏，不要只靠单元测试判定交付；特别是 UI 类改动，Agent 交 PR 前必须附上运行画面。</li>
+  <li><strong>建立 Agent 会话归档机制</strong>：每次 Agent 参与的代码改动，把规划对话、否决方案和最终决策写入 <code class="language-plaintext highlighter-rouge">memory/seetong-ios/</code> 或 <code class="language-plaintext highlighter-rouge">memory/seetong-android/</code>，避免下一个人或下一个 Agent 接手时重复踩坑。</li>
+</ol>
+
+<h2 id="备注与链接">备注与链接</h2>
+<ul>
+  <li>演讲视频：https://www.youtube.com/watch?v=ntO2eQ2iu6o</li>
+  <li>SlopCodeBench 数字仍在更新，16.3% 为 2026-10 月数据</li>
+  <li>
+    <p>本文针对复杂长期项目，不否定 Agent 在小任务/一次性工具上的价值</p>
+  </li>
+  <li>[[Datawhale-DeepSeek-Super-Agent架构-Router-Worker双层]]</li>
+  <li>[[透明玻璃-写作的最高境界]]</li>
+</ul>

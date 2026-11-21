@@ -1,0 +1,135 @@
+<h1 id="claude-code-团队的技能skills心法大曝光原文摘要">Claude Code 团队的技能(Skills)心法大曝光(原文摘要)</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+<p><strong>Claude Code 团队内部把 Skill 沉淀成”操作手册+踩坑记录”,分 9 大类(库/API 参考 / 产品验证 / 数据获取 / 流程自动化 / 脚手架 / 代码质量 / CI-CD / 运维手册 / 基础设施),并提炼 11 条写 Skill 的心法——核心是”验证类技能最被低估 + 渐进式信息披露 + 给 AI 灵活度 + 踩坑记录含金量最高 + 自下而上分享管理”。</strong></p>
+
+<h2 id="5-条核心观点">5 条核心观点</h2>
+
+<ol>
+  <li>
+    <p><strong>Skill = 预先写好的指令,告诉 AI 在具体场景下怎么做</strong>——可类比为”操作手册”,AI 拿到后遇到对应问题就知道怎么处理。<strong>9 大类技能</strong>涵盖库/API 参考、产品验证、数据获取、流程自动化、代码脚手架、代码质量审查、CI/CD 部署、运维手册、基础设施。</p>
+  </li>
+  <li>
+    <p><strong>验证类技能的价值被严重低估</strong>——所有 Skill 中,验证类对 AI 输出质量提升最明显,值得花一整周专门打磨。与其花大量时间教 AI 写代码,不如花时间教它检查自己写的代码(录测试视频 + 程序化断言 + 状态校验)。<strong>核心反直觉</strong>:”验证”比”做”更能提升质量,日常工作中”做完不复盘”是常见浪费。</p>
+  </li>
+  <li>
+    <p><strong>别说废话,只说 AI 不知道的</strong>——第一条写 Skill 建议。Claude 本来就会写代码,如果你写的 Skill 只是在重复它已经会做的事情,就是浪费上下文。真正有用的是把 AI 从惯性思维里拉出来的信息(如纠正 AI 的”审美默认值”——避免总是用 Inter 字体+紫色渐变)。</p>
+  </li>
+  <li>
+    <p><strong>踩坑记录(Gotchas)是含金量最高的部分</strong>——Skill 中最有价值的部分来自 AI 在实际使用中反复犯的错误,且要持续补充。例子:”subscriptions 这张表是只追加的,你要找的是版本号最高的那一行,不是创建时间最新的那一行”;再如”这个字段在 API 网关里叫 request_id,在计费服务里叫 trace_id,其实是同一个值”。</p>
+  </li>
+  <li>
+    <p><strong>渐进式信息披露 + 给 AI 灵活度</strong>——不要把所有信息堆在一个文件里,主文件只告诉 AI 有哪些子文件可参考,AI 需要时自己读,避免信息过载。同时不要把指令写得太死板太具体,Claude 严格遵守指令的特性让它在不该死板的时候也死板——这是”过度控制会扼杀创造力和应变能力”。</p>
+  </li>
+</ol>
+
+<h2 id="关键参数数字">关键参数/数字</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>项</th>
+      <th>数字/范围</th>
+      <th>用途</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>技能九大类</td>
+      <td>9 类</td>
+      <td>库/API / 验证 / 数据 / 流程自动化 / 脚手架 / 质量 / CI-CD / 运维 / 基建</td>
+    </tr>
+    <tr>
+      <td>验证类技能投入</td>
+      <td>1 整周(1 名工程师)</td>
+      <td>验证类价值最高</td>
+    </tr>
+    <tr>
+      <td>验证手段</td>
+      <td>录视频 / 程序化断言 / 状态校验</td>
+      <td>三种验证方法</td>
+    </tr>
+    <tr>
+      <td>触发表达</td>
+      <td>“触发条件式”描述</td>
+      <td>写给机器看</td>
+    </tr>
+    <tr>
+      <td>信息分层</td>
+      <td>主文件 + N 个子文件</td>
+      <td>渐进式披露</td>
+    </tr>
+    <tr>
+      <td>记忆机制</td>
+      <td>日志文件追加</td>
+      <td>跨次执行对比</td>
+    </tr>
+    <tr>
+      <td>分享管理</td>
+      <td>小团队:仓库直接放 / 大团队:内部技能市场</td>
+      <td>自下而上</td>
+    </tr>
+    <tr>
+      <td>审批方式</td>
+      <td>不设委员会审批,试用区验证后上架</td>
+      <td>用数据说话</td>
+    </tr>
+    <tr>
+      <td>上架依据</td>
+      <td>钩子统计使用频率</td>
+      <td>数据驱动管理</td>
+    </tr>
+    <tr>
+      <td>起步方式</td>
+      <td>几行简单指令 + 一条踩坑记录</td>
+      <td>MVP 起步</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="核心金句">核心金句</h2>
+
+<ol>
+  <li><strong>“在所有类型的技能里,验证类技能对 AI 输出质量的提升最明显,值得让一个工程师花一整周的时间专门去打磨。”</strong>(对验证类的最高级定位)</li>
+  <li><strong>“一个技能里面最有价值的部分就是’踩坑记录’(Gotchas)。”</strong>(持续更新踩坑清单是最宝贵的经验资产)</li>
+  <li><strong>“真正有用的是那些能把 AI 从它的惯性思维里拉出来的信息。”</strong>(别说废话,只说 AI 不知道的)</li>
+  <li><strong>“如果你把指令写得太死板、太具体,它就会在不该死板的时候也死板。”</strong>(给 AI 灵活度的反直觉提醒)</li>
+  <li><strong>“没有人能一开始就写出完美的技能。重要的是先动手,先有一个最小可用的版本,然后在实际使用中不断打磨。”</strong>(MVP 起步,实践中迭代)</li>
+  <li><strong>“好东西自己会说话,让它在真实环境里被检验,比任何评审流程都靠谱。”</strong>(自下而上分享管理)</li>
+</ol>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游(基于 / 来自)</h3>
+<ul>
+  <li><strong>Anthropic Claude Code 团队官方分享</strong>:本文 11 条心法的一手来源</li>
+  <li><strong>loonggg 公众号</strong>:中文解读编译者,翻译风格偏”大白话 + 个人理解”</li>
+  <li><strong>Addy Osmani agent-skills 项目</strong>:同一主线”如何设计好 Skill”的另一权威版本(7 块骨架 + 反合理化)</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游(应用于 / 验证于)</h3>
+<ul>
+  <li><strong>Claude Code 内部 Skill 库</strong>:9 大类覆盖、验证类专项投入</li>
+  <li><strong>企业内部技能市场</strong>:大团队规模后的自下而上管理实践</li>
+  <li><strong>Loonggg 个人推荐</strong>:用于读者日常工作反思(“写文章不复盘就发”、”做方案不复盘”)</li>
+</ul>
+
+<h3 id="同级横向--并列">同级(横向 / 并列)</h3>
+<ul>
+  <li>Skill 设计主线:[[Addy-Osmani-agent-skills-设计哲学-23-技能-7-块骨架]] / [[PM-Skills-Marketplace-产品经理必备skill]] / [[面向Skills编程-淘宝企业购端到端研发提效实践]] / [[谷歌开源agent-skills]]</li>
+  <li>AI Coding 实践主线:[[Claude-Code团队5条工作原则-Fiona-Fung分享]] / [[Claude-Code作者Boris-28分钟教你写真正有效的Prompts]] / [[Claude-Code在大代码库中的最佳实践]] / [[字节跳动洪定坤-AI-Coding的实践与探索]]</li>
+  <li>Harness 框架主线:[[Claude-Code动态工作流-让AI自己写Harness-这事靠谱吗]] / [[Claude-Code架构深度解读-Agent系统的真正护城河不在模型-而在-Harness]]</li>
+  <li>知识库主线:[[腾讯程序员-AI-Coding到Harness-Engineering-应用宝活动平台实践]] / [[harness-engineering]]</li>
+</ul>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li><strong>作者</strong>:loonggg(微信公众号”老码农”类 AI/技术自媒体),非 Anthropic 官方原文,是一手 Anthropic 文章的中文解读</li>
+  <li><strong>一手原文未公开链接</strong>:本文没有给出 Anthropic Claude Code 团队分享的原始英文文章 URL,所有内容是 loonggg 的编译</li>
+  <li><strong>9 大类分类为 loonggg 整理</strong>:可能与 Anthropic 官方分类略有差异</li>
+  <li><strong>11 条心法的边界</strong>:多数是经验总结,缺具体量化指标(如”验证类技能提升 X%”)</li>
+  <li><strong>微信公众号文末推广</strong>:原文包含 loonggg 个人付费”星球社群”广告(199 元→169 元,与正文无关)</li>
+  <li><strong>目标读者偏广泛</strong>:不像工程实践文,更偏”做事方法论”风格,可读性强但技术深度有限</li>
+  <li><strong>11 条心法的内在逻辑</strong>:”验证类最被低估”是首要点,其他 10 条围绕”信息/记忆/灵活度/管理/迭代”展开,构成完整的 Skill 工程心法体系</li>
+</ul>

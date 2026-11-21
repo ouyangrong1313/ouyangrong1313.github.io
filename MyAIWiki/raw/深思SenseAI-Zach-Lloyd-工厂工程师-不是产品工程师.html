@@ -1,0 +1,133 @@
+<h1 id="工厂工程师不是产品工程师--warp-创始人-zach-lloyd-内部备忘录编译">工厂工程师,不是产品工程师 — Warp 创始人 Zach Lloyd 内部备忘录编译</h1>
+
+<blockquote>
+  <p>上个月我写过一篇,设计工具创始人 Paul Bakaus 说了句挺动人的话:<strong>别把人推出循环,那是个无聊又反乌托邦的故事;人留在最后那 20%,才是重点</strong>。</p>
+
+  <p>这个月,另一个创始人发了一份内部备忘录,几乎是逐字反着说的。</p>
+
+  <p><strong>Zach Lloyd,Warp 终端的创始人,前 Google Docs 首席工程师</strong>。他对自己团队说了一句:<strong>我们现在是工厂工程师,不再是产品工程师了</strong>。</p>
+
+  <p>最扎的是这一句——以后你每用一次「人在环里」的 agent 去写代码,都要把它当成一次需要复盘的失败。同一个行业,同一个月,两个创始人,把「人到底该待在哪」这件事,吵到了完全相反的两极。</p>
+
+  <p>我把 Lloyd 这份备忘录讲清楚,再说我站哪一边。</p>
+</blockquote>
+
+<h2 id="同一个月两份针锋相对的备忘录">同一个月,两份针锋相对的备忘录</h2>
+
+<p>工程师的活,从造车变成了造工厂。 他先划了条时间线。过去一年,我们从 AI 自动补全,走到了交互式编码 agent。接下来六个月,范式还会再变一次——走向「<strong>自动化开发</strong>」(Automated Development)。</p>
+
+<p>在那个世界里,工程师的工作不再是写代码,甚至不再是做产品。而是造一台内部的机器,一座「<strong>云端软件工厂</strong>」,让它替你把产品做出来。</p>
+
+<p>你每天的活,不是直接去做那个产品,是去做那个「<strong>做产品的东西</strong>」。于是「成功」的定义,当场被掉了个个儿。</p>
+
+<p>不再看你交付了多少功能——他说,那是个<strong>失败指标</strong>。而是看:你有多大比例的改动,是「<strong>全自动</strong>」发出去的,又花了多少钱。</p>
+
+<p>「全自动」的意思是,一个 agent 从分诊、写 spec、实现、review、验证一路到监控,全包了。还做不到全自动的(现在很多都做不到),那就退一步做半自动,让 agent 尽可能多干。</p>
+
+<h2 id="从亲手造那辆车到去造那座造车的工厂">从亲手造那辆车,到去造那座造车的工厂</h2>
+
+<p><strong>这笔账,要记到 COGS 那一栏去</strong>。这里有句话,我觉得是整篇最狠的。</p>
+
+<blockquote>
+  <p>「给所有工程师无限 token 预算、去玩交互式 agent 的日子,要结束了。」</p>
+</blockquote>
+
+<p>公司会把软件生产,当成一种<strong>可变成本</strong>,而不是研发开支。它会出现在损益表的 <strong>COGS(销货成本)</strong> 那一栏。</p>
+
+<p>我翻译一下这意味着什么。过去写软件是 R&amp;D——你养着一支固定的团队,那是一笔按人头算的、沉下去的成本。现在它变成了「每多生产一单位产品,要花多少钱」的<strong>边际账</strong>。</p>
+
+<p>老板会像盯工厂良率一样盯着它:我多投一块钱在自动化上,业务能不能多赚回超过一块钱?</p>
+
+<p>他给的公式是:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>工厂效率 ≈ 出货的产品 / (推理成本 + 人的时间成本)
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>注意分母里那一项——「<strong>人的时间</strong>」。在这个公式里,你的工时,是要被往下压的成本。</p>
+
+<p><strong>软件生产,从研发开支变成了可变成本</strong>。</p>
+
+<h2 id="那条流水线和1300-个待办在等什么">那条流水线,和「1300 个待办在等什么」</h2>
+
+<p>他给的流水线其实不复杂:</p>
+
+<blockquote>
+  <p><strong>分诊 agent</strong> 先看懂、复现问题 → 能自动的交给<strong>实现 agent</strong>;有歧义、要定范围的,让 <strong>spec agent</strong> 写规格、人来 review → 实现 agent 写代码 → <strong>code review agent</strong> 审 → <strong>验证 agent</strong> 用 computer-use 跑一遍 → 人审一遍代码和验证结果 → <strong>CI/CD</strong> → 上线 → <strong>监控 agent</strong> 巡查,发现问题再开 issue,闭环。</p>
+</blockquote>
+
+<p>这套,他们已经在那个 6 万星的开源仓库上跑起来了。他自己给的评价是「半成品」。</p>
+
+<p>但有个细节我印象很深。他说:我看着面板上 1300 个「可实现」状态的 issue,心想——<strong>我们在等什么?让 agent 去实现啊</strong>。</p>
+
+<p>而且每次有人不得不介入,他们的平台 Oz 会把这次介入记下来,让「<strong>自我改进 agent</strong>」去优化流程,争取下一次人不必再插手;还让这些 agent 去扫所有的工厂对话,找哪里在浪费 token。他说如果这事做对了,这座工厂最终会进入「<strong>递归自我改进</strong>」——这是黄金路径。</p>
+
+<h2 id="agent-流水线分诊实现审查验证监控闭环">agent 流水线:分诊、实现、审查、验证、监控,闭环</h2>
+
+<p><strong>他自己也知道,这听着像在拥抱苦役</strong>。他不回避这一点:这听起来像在拥抱枯燥,像你以后整天只是在 review agent 生成的垃圾。</p>
+
+<p>但他换了个角度——这是在解决软件工程里最后、也最重要的那个问题,他管它叫 <strong>meta-engineering</strong>:去设计那个「让编码 agent 能最高效地造出有用东西」的系统。</p>
+
+<blockquote>
+  <p>短期一定会很痛,agent 会失败,你得去收拾它的烂摊子。但我们必须逼自己去经历这种痛,才能搞清楚怎么把它自动化掉。<strong>我们不做,别人会做</strong>。</p>
+</blockquote>
+
+<p>这话我是服气的,尤其最后那句「我们不做,别人会做」。</p>
+
+<p>对那些<strong>能被机器校验对错的活</strong>——能不能编译、测试过不过、bug 复不复现——他几乎全对。这就是未来,没什么可争的。</p>
+
+<h2 id="对我们意味着什么">对我们意味着什么</h2>
+
+<p>但我得把上个月 Bakaus 那句,正面拉回来撞一下。</p>
+
+<ul>
+  <li><strong>一个说「人在环里是重点」</strong></li>
+  <li><strong>一个说「人在环里是要复盘的失败」</strong></li>
+</ul>
+
+<p>两个都是创始人,也都在卖自己的东西——Bakaus 卖品味工具,Lloyd 卖工厂平台 Oz。顺便说一句,他把一份「内部备忘录」公开发给 8 万人看,这本身就是一次漂亮的 GTM。屁股,都得先扣掉一点。</p>
+
+<p>可你仔细看,他俩其实没那么对立,真相又落回我写了好几遍的那条线:<strong>看任务</strong>。</p>
+
+<ul>
+  <li>能被机器校验对错的(怎么做:实现、验证、监控),交给工厂,Lloyd 对</li>
+  <li>靠判断定生死的(做什么:到底该做哪一个、这产品有没有观点),留住人,Bakaus 对</li>
+</ul>
+
+<p>工厂自动化的是「<strong>怎么做</strong>」,人,依然攥着「<strong>做什么</strong>」和「<strong>为什么</strong>」。</p>
+
+<h2 id="而这恰恰是他这份备忘录里最危险的地方">而这,恰恰是他这份备忘录里,最危险的地方</h2>
+
+<p>他把「成功」定义成「自动出货的比例」。可他自己在一个括号里,轻飘飘写了一句:「出货的产品,是一个不完美的价值衡量。」</p>
+
+<p>这句被他一笔带过的话,其实才是整盘棋。</p>
+
+<p>你完全可以有一座良率极高的工厂,把「错的产品」用最低的成本、最快的速度,源源不断地造出来。那 1300 个待办,真正的问题从来不是「谁来实现」,而是——<strong>这 1300 个里,到底哪些根本就不该做</strong>。</p>
+
+<blockquote>
+  <p><strong>无脑地、更快地造更多,从来不是战略</strong>。</p>
+</blockquote>
+
+<p>所以这事最反直觉的地方在于:</p>
+
+<blockquote>
+  <p><strong>你把「怎么做」自动化得越彻底,整盘棋,就越押在那一件工厂永远没法替你决定的事上 —— 什么,才值得做。</strong></p>
+</blockquote>
+
+<p>Lloyd 把「怎么做」说透了,却对「做什么」出奇地安静。而那,恰好是这座工厂关不掉的、唯一的一道工序。◇ ◆ ◇</p>
+
+<blockquote>
+  <p>来源:Zach Lloyd(@zachlloydtweets)公开的 Warp 内部备忘录《We are now factory engineers, not product engineers》。</p>
+</blockquote>
+
+<hr />
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li><strong>未公开细节</strong>:备忘录原始发布日期(深思圈文章中只说”上个月 Bakaus” + “这个月 Lloyd”,可推断 Lloyd 备忘录在 2026-05/06 发布);Warp Oz 平台 6 万星仓库的具体 GitHub 链接未给出;8 步流水线的具体 Agent 工具栈未公开</li>
+  <li><strong>关键金句出处</strong>:”你在环里是要复盘的失败”是 Lloyd 在内部备忘录中的原话(深思圈转引)</li>
+  <li><strong>本仓库已有强相关主线</strong>:[[字节跳动洪定坤-AI-Coding的实践与探索]] / [[清华沈阳-自进化AI新物种]] / [[0xCodez-Agent-Harness-14-Steps]] / [[Harness不是目的-知识才是护城河]] / [[与AI一起做产品的六条原则]] / [[AI-Coding的顿悟时刻]] / [[54万行代码的顿悟-Markdown才是新编程方式]]</li>
+  <li><strong>本仓库缺位补完</strong>:02-ai-coding 现有主线偏”怎么做”的工具/方法论(Harness/Loop/Skills),<strong>缺位”工厂化思维 + COGS 视角 + 递归自我改进”</strong> 的反思性内容,本文是这一维度的代表</li>
+  <li><strong>深思圈主编立场</strong>:不站 Lloyd 也不站 Bakaus,主张”看任务”分工 — 工厂自动化”怎么做” + 人攥”做什么”和”为什么”,补完 Lloyd 备忘录的盲点</li>
+</ul>

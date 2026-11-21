@@ -1,0 +1,53 @@
+<h1 id="meta-muse个人-agent-执行环境的分层边界">Meta Muse：个人 Agent 执行环境的分层边界</h1>
+
+<ul>
+  <li>原文：<a href="https://mp.weixin.qq.com/s/nQTi_u4O0PnzaqEA_ukNww">Meta Muse 架构深度解析：到底有何不同？</a></li>
+  <li>来源：架构师（JiaGouX），若飞；发布于 2026-09-26 23:32；获取于 2026-09-27</li>
+  <li><a href="../../raw/2026-09-若飞-Meta-Muse-个人Agent执行环境.md">清洗正文</a> · <a href="../../raw/2026-09-若飞-Meta-Muse-个人Agent执行环境-digest.md">原文摘要</a></li>
+</ul>
+
+<h2 id="核心结论">核心结论</h2>
+
+<blockquote>
+  <p>Muse 的差异不是单个模型能做多少，而是将持续计算、工具执行、授权审批、凭证处理和恢复状态放进相互制约的个人执行环境。</p>
+</blockquote>
+
+<p>归入 <code class="language-plaintext highlighter-rouge">01-ai-agents</code>：本文讨论 Agent 系统边界，而非 AI Coding 技巧。资料由 Meta 官方说明、作者推断和社区仓库组成，三者不能混用为同级证据。</p>
+
+<h2 id="九个知识节点">九个知识节点</h2>
+
+<ol>
+  <li><strong>个人执行环境</strong>：作者引用 Meta 的个人云端 VM 描述；浏览器、工作区与后台任务可在 App 关闭后继续，但也增加平台隔离和隐私责任。</li>
+  <li><strong>模型与 Harness 分离</strong>：Muse Spark 负责提出动作，Hatch 驱动循环与工具；大上下文窗口不能替代持久目标、权限和状态。</li>
+  <li><strong>Runtime Cell 隔离</strong>：按文章引用的安全说明，不可信页面和 Agent 工具位于隔离 Cell，敏感服务在外；即使模型误判，也限制所能接触的系统资源。</li>
+  <li><strong>Sentinel 授权</strong>：独立控制面基于连接器、动作、对象和网络出口返回 allow、deny 或 ask；模型声称获得许可不等于用户实际批准。</li>
+  <li><strong>确定性审批</strong>：需要确认的网络或购买动作进入客户端 UI；接管浏览器、输入凭证和付款不应由自然语言推测同意。</li>
+  <li><strong>凭证代理</strong>：模型只接触替身令牌，真实凭证在被授权的网络边界使用；持有能力与持有明文秘密是两种不同权限。</li>
+  <li><strong>污染数据出网</strong>：进程读过私有内容后应更谨慎审核出站请求；该机制降低注入攻击链的成功范围，不保证所有注入都被拦截。</li>
+  <li><strong>状态与记忆分层</strong>：保存、可检索、进入当前上下文是不同状态；目标、事件、检查点和外部动作回执须分开维护。</li>
+  <li><strong>外部副作用确认</strong>：发送邮件或付款不能凭模型文字和授权结果判成功；回执丢失时先查权威系统，再决定是否重试。</li>
+</ol>
+
+<h2 id="架构与证据">架构与证据</h2>
+
+<p>文章以安排出差为例：用户提出预算与付款前确认，模型选择下一步，Hatch 组装工具，Sentinel 判断权限，Runtime Cell 或浏览器执行，客户端处理需要用户决策的操作，结果回写检查点。要分别保存三份证据：模型意图、授权结果、外部服务成功状态。前两者都不能证明邮件已发或订单已付。</p>
+
+<p>Meta 的个人 VM、隔离 Cell、Sentinel 与审批边界是本文引用的官方架构方向；具体脚本、连接器字段和快照多来自社区项目，不应推定为当前生产 API。文章同时比较 Codex、OpenClaw、Hermes 和 DSH：它们将复杂度分别放在开发工作区、本地可读文件、压缩回查和开发者运行时；并非同条件性能或安全评测。</p>
+
+<h2 id="seetong-可借鉴动作">Seetong 可借鉴动作</h2>
+
+<ul>
+  <li><strong>将意图、许可与结果三段分开记账</strong>：质量日报等群投递保留数据校验、目标群授权与企微 ACK；模型写出“已发送”不能代替 ACK。</li>
+  <li><strong>跨端设备操作加对象约束</strong>：在设备 SN、用户和功能范围内发放最小权限；写入、配置与删除比只读查询需要更明确的确认和审计。</li>
+  <li><strong>重试先查权威状态</strong>：群消息或外部任务的回执丢失时核对实际送达、报告日期与任务 ID，再决定是否重试；避免同一期重复发送。</li>
+  <li><strong>检验权限边界</strong>：若设计云端 Agent，分别验证页面注入、敏感数据出网、浏览器接管和凭证输入，记录允许、拒绝和人工审批的实际结果。</li>
+</ul>
+
+<h2 id="关联与限制">关联与限制</h2>
+
+<ul>
+  <li>上游：[[01-ai-agents/InfoQ-TiDB-薄Agent-Loop厚Control-Plane-Harness]] 讨论稳定控制面与状态治理。</li>
+  <li>下游：[[01-ai-agents/源泉TheFountainhead-从GUI到AI-Native-产品接目标界面换职责]] 解释审批、接管与用户可见状态；[[01-ai-agents/phodal-面向人机交互设计Harness-产物中心Agent-Loop]] 强调产物和回执。</li>
+  <li>同级：[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]] 讨论记忆与验证，同作者、本页聚焦运行时权限和长任务恢复。</li>
+  <li>限制：未独立复现 Meta 的生产环境、源代码或全部安全策略；社区逆向仓库不是官方接口。本文既不证明某平台绝对安全，也不把作者的架构推导写成 Meta 的正式承诺。</li>
+</ul>

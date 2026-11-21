@@ -1,0 +1,103 @@
+<h1 id="叶小钗-agent-loop-vs-graph-engineering---digest">叶小钗 Agent Loop vs Graph Engineering - Digest</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<p><strong>Agent Loop 与 Graph Engineering 不是替代关系，是不同层面对”怎么让 AI 系统稳定、可控、高效地干活”的同一回答——Loop 是管理层方法论（隐性 SOP 显性化为代码），Graph 是工程架构层（节点之间的数据流 + 依赖关系 + 容错机制）。作者判断：现阶段 Graph 没太大深入价值。</strong></p>
+
+<h2 id="速查表8-节点">速查表（8 节点）</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>节点</th>
+      <th>一句话定义</th>
+      <th>关键洞察</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>AI炒冷饭循环</td>
+      <td>同一概念的再包装</td>
+      <td>新词活不过 3 个月</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Agent-Loop复盘</td>
+      <td>隐性 SOP 显性化为代码</td>
+      <td>AI 原生组织实践</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Graph-Engineering-定义</td>
+      <td>节点之间数据流/依赖/容错</td>
+      <td>系统架构层（区别于 Loop 管理层）</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Node-Edge模型</td>
+      <td>节点=干活单元，边=数据流动通道</td>
+      <td>节点只干一件事</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>数据依赖≠执行顺序</td>
+      <td>先后连续不代表有数据依赖</td>
+      <td>无流动则无边</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>线性流程是退化图</td>
+      <td>A→B→C→D 单一路径</td>
+      <td>单点卡住全部得等</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Graph-适用边界与代价</td>
+      <td>必须明确节点/边/路由/隔离</td>
+      <td>上下文塞不下 / 不同模型 / 局部重跑</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Loop-vs-Graph-本质</td>
+      <td>管理层 vs 工程架构层</td>
+      <td>不是替代，是同一问题两回答</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="5-句核心金句">5 句核心金句</h2>
+
+<ol>
+  <li>“AI 是出了名的喜欢炒冷饭行业”</li>
+  <li>“Loop Engineering 是设计一套外部系统，让 Agent 无人持续干预下自动完成【接收任务→执行→检查→决策下一步】的完整闭环”</li>
+  <li>“执行顺序不等于数据依赖——代码里的先后顺序只代表什么时候执行，图里的边代表谁需要谁的结果”</li>
+  <li>“Loop 解决一个 Agent 反复干到合格；Graph 解决多个执行单元怎么分工、交接、验证”</li>
+  <li>“技术是手段，解决问题才是目的”</li>
+</ol>
+
+<h2 id="3-个反直觉点">3 个反直觉点</h2>
+
+<ul>
+  <li><strong>Graph 不是新东西</strong>：市场鼓吹 Graph（Steinberger 7/18 / AdrianPunk115 7/26 / AI 工程化 7/23）——叶小钗认为”工程探索，被淘汰概率大”</li>
+  <li><strong>执行顺序 ≠ 数据依赖</strong>：自然语言”先 A 再 B”不代表图里 A→B——无数据流动就没边，可并行</li>
+  <li><strong>AI 炒冷饭循环</strong>：Prompt / RAG / Context / ReAct / Agent / MCP / Skills / Harness / Loop / Graph 都是同一概念再包装</li>
+</ul>
+
+<h2 id="6-个对-seetong-团队可借鉴动作">6 个对 Seetong 团队可借鉴动作</h2>
+
+<ol>
+  <li><strong>先跑 Loop 不盲目追 Graph</strong>——反馈分诊 / 友盟崩溃初筛 / 周报整合 3 小场景跑通 Loop 闭环</li>
+  <li><strong>Node-Edge 模型用作 Skill 拆解参考</strong>——每 Skill 问”节点还是边”，节点”只干一件事”，边”数据格式 + 上下游”</li>
+  <li><strong>执行顺序 ≠ 数据依赖 判定法</strong>——只有”下游 Skill 输入 = 上游 Skill 输出”才算”边”，否则并行</li>
+  <li><strong>Graph 适用边界自检</strong>——上下文塞不下 / 不同节点不同模型 / 局部重跑 才考虑 Graph</li>
+  <li><strong>不炒冷饭</strong>——评估新概念标准 = “能解决 Seetong 哪 1 个真问题”</li>
+  <li><strong>技术是手段，解决问题才是目的</strong>——新架构引入前先答”Seetong 最痛问题 + 这架构能解决吗”</li>
+</ol>
+
+<h2 id="关联与备注">关联与备注</h2>
+
+<p><strong>关联</strong>：[[01-ai-agents/AI-团队协作-Loop-SDD]] [[02-ai-coding/叶小钗-AI原生组织方法论-2026版]] [[02-ai-coding/生产级Agent全景]] 同作者主线；[[01-ai-agents/AdrianPunk115-Graph-Engineering-从0到1小白完整教程]] [[01-ai-agents/图工程-Graph-Engineering-来了-LangChain说不是新东西]] 同期 Graph；[[01-ai-agents/万字长文拆解Agent-架构设计-四-多-Agent-协作]] Graph 实践；[[01-ai-agents/Harness工程AgentLoop]] [[01-ai-agents/Loop-Engineering-验证才是瓶颈]] Loop 一致。</p>
+
+<p><strong>备注与限制</strong>：作者个人观点无实验数据；立场偏保守与同期鼓吹 Graph 相反，Seetong 借鉴应交叉对照；7/18 Steinberger 推文只是提问不代表 OpenClaw 已转向 Graph；本文最大元判断 = “Loop vs Graph 是个伪命题”——不应陷入”哪个新就用哪个”循环。</p>

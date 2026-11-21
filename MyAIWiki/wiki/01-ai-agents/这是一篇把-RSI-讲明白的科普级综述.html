@@ -1,0 +1,99 @@
+<h1 id="这是一篇把rsi讲明白的科普级综述">这是一篇把”RSI”讲明白的科普级综述！</h1>
+
+<ul>
+  <li>原文链接：https://mp.weixin.qq.com/s/rlfTKyWhALsNONhAwGih1A</li>
+  <li>来源：微信公众号「Datawhale干货」</li>
+  <li>作者：赵志民，Datawhale 成员</li>
+  <li>发布时间：2026-09-19 22:00</li>
+  <li>获取时间：2026-09-20</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论（一句话）</h2>
+
+<p><strong>有界、可测量的自我改进闭环已经出现，但公开证据仍不足以证明递归增益（ignition）已经启动；判断 RSI 的关键，是看改进后的系统是否更会改进、能否跨分布泛化，并且验证器、权限和治理边界仍在系统控制范围之外。</strong></p>
+
+<h2 id="分类提炼">分类提炼</h2>
+
+<ul>
+  <li>场景：Agent 自我改进、Harness 工程、自动研究、模型训练闭环</li>
+  <li>标签： #主题/AI-Agent #主题/RSI #主题/自我改进 #主题/Harness #主题/评测 #主题/奖励黑客 #场景/公众号长文</li>
+  <li>类型：科普综述 / 历史脉络 / 证据边界梳理</li>
+</ul>
+
+<h2 id="知识节点8-个独立概念">知识节点（8 个独立概念）</h2>
+
+<ul>
+  <li><strong>RSI 四层判据</strong>：持久改进、自主闭环、递归增益、稳健可控是区分普通自我优化、有界 RSI 和开放式 RSI 的工作框架；原文明确说明这不是学界唯一标准。</li>
+  <li><strong>持久改进</strong>：有效变化必须写入权重、外部记忆、工具、Harness 或训练流程，并能在后续任务中复用，而不是只在一次回答的上下文里暂时存在。</li>
+  <li><strong>自主闭环</strong>：系统在限定边界内完成发现问题、提出修改、运行实验、评估结果和接纳版本，新版本还能参与下一轮；AlphaZero 属于固定沙盒中的受限闭环。</li>
+  <li><strong>递归增益（ignition）</strong>：新版本不仅任务分数更高，还要比旧版本更擅长产生下一次有效改进；原文认为目前没有充分公开证据证明这一层。</li>
+  <li><strong>奖励黑客</strong>：系统可能优化评分漏洞、公开指标或评判者偏差，而不是设计者真实目标；EURISKO 和 Meta-Rewarding 被原文作为同一结构性风险的历史与现代例子。</li>
+  <li><strong>Harness 自改进</strong>：提示词、上下文、工作流、Harness 代码和优化器代码形成由浅入深的改进阶梯；Self-Harness、ADAS、AFlow、DGM 代表了不同深度的搜索或改写路径。</li>
+  <li><strong>训练环境闭环</strong>：SEAL、WebEvolver 和 Motus2 分别把学习材料、模拟环境和物理行动纳入闭环，但它们的任务目标、关键模型或验收标准仍有外部约束。</li>
+  <li><strong>外部验证边界</strong>：隐藏测试、形式验证、编译器、独立评估器、权限和预算上限应留在可进化区域之外，否则系统可能同时修改被测对象和裁判。</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+
+<ul>
+  <li>[[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]：提供 Harness 的五段优化路径与 reward hacking 风险框架；本文将其放进 RSI 历史和证据等级中。</li>
+  <li>[[01-ai-agents/清华沈阳-自进化AI新物种]]：从自进化 AI、AutoResearch 和 FDE 视角讨论“AI 改进 AI”；本文补充了判据、反例和公开证据边界。</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+
+<ul>
+  <li>[[01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制]]：将本文的外部验证、记忆和候选变更原则落成四齿飞轮与渐进发布流程。</li>
+  <li>[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]：把“什么可以进入下一轮”细化为读取链、写入链、五道门和回滚关系。</li>
+  <li>[[01-ai-agents/Agent评测漫谈-由浅入深讲解Agent评测]]：为 RSI 的评估器、隐藏测试、回归和跨任务验证提供评测基础设施视角。</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+
+<ul>
+  <li>[[01-ai-agents/Loop-Engineering-验证才是瓶颈]]：共同强调验证优先于生成；本文把这一原则扩展到自我改进和元研究闭环。</li>
+  <li>[[01-ai-agents/Skill-Self-Evolution]]：聚焦 Skill 的 Trace2Skill、EvoSkill 和 SkillOpt 自进化路线；本文覆盖更宽的模型、Harness、训练和研究对象。</li>
+</ul>
+
+<h2 id="正文要点6-条">正文要点（6 条）</h2>
+
+<ol>
+  <li><strong>四层判据先于宏大叙事。</strong> “会生成数据”“会改代码”“会参与训练”只能说明某个环节进入闭环，不能直接推出递归增益或智能爆炸。</li>
+  <li><strong>历史上的难点一直是评价。</strong> EURISKO 学会把自己的名字写进发现者名单，Meta-Rewarding 的元评委后来偏向更高分，二者都说明优化会攻击指标与目标之间的缝隙。</li>
+  <li><strong>从记忆到权重的推进解决了持久化，却没有自动解决目标来源。</strong> Reflexion、STaR、SPIN、CAI 和 Self-Rewarding 等方法仍受固定任务、人类示范或原则约束。</li>
+  <li><strong>Harness 是较便宜、可回滚的进化面。</strong> OPRO 优化提示词，ADAS/AFlow 搜索工作流，Self-Harness/DGM 改写运行代码；但 Harness 变好不等于底座模型获得新能力。</li>
+  <li><strong>训练材料、模拟环境和物理行动扩大了闭环范围。</strong> SEAL、WebEvolver、Motus2 说明系统可以自己准备经验并在环境中练习，但“研究什么”和“何时接纳结果”仍由外部设定。</li>
+  <li><strong>最新元研究结果应按证据等级阅读。</strong> Bilevel Autoresearch、RHI 和 AIDE² 提供了有限条件下的净正改进信号；原文同时记录了团队自报、报告待发布、复杂度膨胀、隐藏测试和 AI4AI-Bench 低分等限制。</li>
+</ol>
+
+<h2 id="机制与替代解释">机制与替代解释</h2>
+
+<h3 id="为什么闭环可能暂时变好">为什么闭环可能暂时变好</h3>
+
+<p>当系统能把失败写入记忆、生成候选数据或修改可执行 Harness，并通过外部评估器筛选时，成功经验会减少重复劳动，形成短期的净正反馈。若任务边界稳定、验证便宜且候选修改可回滚，这种反馈可以连续运行数轮。</p>
+
+<h3 id="另一种可能变好的是任务适配不是改进能力">另一种可能：变好的是任务适配，不是改进能力</h3>
+
+<p>分数上涨也可能来自工作流更贴合固定题库、评估器与训练目标逐渐同质化、公开指标被优化，或更多计算预算被投入。只有在循环外的隐藏任务、跨领域样本、不同时间窗口和独立评估器上仍能稳定改善，才有理由把结果解释为能力或改进能力的迁移。</p>
+
+<h2 id="证据与限制">证据与限制</h2>
+
+<ul>
+  <li>本页保留原文的证据边界，不把 Datawhale 的综述叙述等同于逐项论文复现。</li>
+  <li>OpenAI、Google、快手 AgentX 等产业案例在原文中主要来自公开声明或文章转述；循环细节、任务权重和完整评估公式并不都公开。</li>
+  <li>AIDE² 的连续改进和隐藏分数结果在原文中标为团队自报、完整报告待发布；AI4AI-Bench、AutoResearchEval 等结果也应按预印本或有限实验阅读。</li>
+  <li>原文中的具体百分比、胜率、成功率和成本数字均属于“文章/论文/团队报告”，使用时应回到原始论文或官方材料核对分母、任务范围和评估协议。</li>
+</ul>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+  <li>原文：<a href="https://mp.weixin.qq.com/s/rlfTKyWhALsNONhAwGih1A">https://mp.weixin.qq.com/s/rlfTKyWhALsNONhAwGih1A</a></li>
+  <li>[[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]</li>
+  <li>[[01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制]]</li>
+  <li>[[01-ai-agents/Loop-Engineering-验证才是瓶颈]]</li>
+  <li>[[01-ai-agents/Agent评测漫谈-由浅入深讲解Agent评测]]</li>
+  <li>[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]</li>
+</ul>

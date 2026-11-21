@@ -1,0 +1,71 @@
+<!-- 童年跳房子大挑战 - 游戏主页 -->
+<view class="game-container">
+  <!-- 状态栏 -->
+  <view class="status-bar">
+    <view class="score-box">
+      <text class="label">分数</text>
+      <text class="value">{{score}}</text>
+    </view>
+    <view class="combo-box" wx:if="{{combo > 1}}">
+      <text>{{combo}}连击</text>
+    </view>
+    <view class="time-box">
+      <text class="label">剩余</text>
+      <text class="value {{timeLeft <= 10 ? 'warning' : ''}}">{{timeLeft}}秒</text>
+    </view>
+  </view>
+
+  <!-- 提示 -->
+  <view class="hint-box" wx:if="{{hintVisible}}">
+    <text>{{hintText}}</text>
+  </view>
+
+  <!-- 准备遮罩 -->
+  <view class="mask" wx:if="{{gameStatus === 'ready'}}" bindtap="startGame">
+    <view class="mask-content">
+      <text class="mask-title">准备开始！</text>
+      <text class="mask-sub">点击任意位置开始游戏</text>
+    </view>
+  </view>
+
+  <!-- 结束遮罩 -->
+  <view class="mask" wx:if="{{gameStatus === 'ended'}}">
+    <view class="mask-content">
+      <text class="mask-title">游戏结束！</text>
+      <text class="mask-sub">{{score}}分</text>
+    </view>
+  </view>
+
+  <!-- 游戏格子 -->
+  <view class="game-grid">
+    <view class="grid-row">
+      <view class="tile {{tiles[0].status}}" data-id="0" bindtap="onTileTap">
+        <text>1</text>
+      </view>
+      <view class="tile {{tiles[1].status}}" data-id="1" bindtap="onTileTap">
+        <text>2</text>
+      </view>
+    </view>
+    <view class="grid-row">
+      <view class="tile {{tiles[2].status}}" data-id="2" bindtap="onTileTap">
+        <text>3</text>
+      </view>
+      <view class="tile {{tiles[3].status}}" data-id="3" bindtap="onTileTap">
+        <text>4</text>
+      </view>
+    </view>
+    <view class="grid-row">
+      <view class="tile {{tiles[4].status}}" data-id="4" bindtap="onTileTap">
+        <text>5</text>
+      </view>
+      <view class="tile {{tiles[5].status}}" data-id="5" bindtap="onTileTap">
+        <text>6</text>
+      </view>
+    </view>
+    <view class="grid-row single">
+      <view class="tile tile-top {{tiles[6].status}}" data-id="6" bindtap="onTileTap">
+        <text>7</text>
+      </view>
+    </view>
+  </view>
+</view>

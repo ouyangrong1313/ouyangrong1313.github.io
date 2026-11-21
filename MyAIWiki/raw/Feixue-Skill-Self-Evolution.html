@@ -1,0 +1,431 @@
+<h1 id="如何更科学方向可控的实现-skill-的自进化">如何更科学、方向可控的实现 Skill 的”自进化”？</h1>
+
+<blockquote>
+  <p>阿里妹导读</p>
+
+  <p>文章内容基于作者个人技术实践与独立思考，旨在分享经验，仅代表个人观点。</p>
+</blockquote>
+
+<h2 id="背景">背景</h2>
+
+<p>现如今，Agent Skills 已经成为 Agent 架构中非常重要的组成部分，是一种知识和工具的资源集合包，Agent 的最终效果与 Skill 的质量有着极高的相关度。</p>
+
+<p>在 Agent Skills 的发展最早期的阶段，大家基本上主要就通过人工手写 Skill，这就需要投入大量的精力来进行撰写、调试、优化，效率较低且很难规模化。之后，许多 Agent 的工具或平台都提供了各式各样的 Skill Creator，通过 AI 辅助的方式去帮助用户自动生成 Skill，这在一定程度上提升了 Skill 的生产效率。再后来，就像我前段时间在《深度解析 Hermes Agent 如何实现”自进化”》中所写的那样，Agent 实现”自进化”的核心方式之一，就是 <strong>“Skill 的自动沉淀”</strong>：每执行完一轮 Agent，就会有 Agent 的运行轨迹（Trajectory）数据，模型基于这个轨迹的上下文去做判断，是否需要将当前的轨迹总结、沉淀为一个全新的 Skill，或者是否需要去更新一个已有的 Skill。</p>
+
+<p>然而，在大家应用 Hermes Agent 的过程中，是不是也经常会遇到很多类似如下的问题：</p>
+
+<ul>
+  <li>为什么自动沉淀的 Skill 质量不高？对 Agent 的效果帮助不大</li>
+  <li>为什么 Skill 更新后，反而比原来的版本效果更差了？</li>
+  <li>原本精简清爽的 Skill，经过几次自动迭代后，变的越冗长复杂、难以阅读</li>
+</ul>
+
+<p>那么，今天我们就重点来探讨一下 Skill 自进化中遇到的这些坑以及有哪些好的解法。</p>
+
+<h2 id="skill-自进化有哪些难点">Skill 自进化有哪些难点</h2>
+
+<p>使用 Hermes 等目前各类 Agent 工具本身提供的方式去做 Skill 的自进化，出现上述这些问题现象是非常正常的。因为目前的 Skill 自我沉淀机制，大部分都是基于<strong>单通 Agent 对话轨迹</strong>来进行的。这意味着，当前这一轮对话 Session 中任务完成的效果，直接决定了这个 Skill 进化的方向。如果这一轮轨迹本身存在偶然性、特殊性，甚至是极端 Case，那么基于此生成的 Skill 就有可能会”带偏”进化的方向。</p>
+
+<p>在个人场景下应用这种 Skill 自动沉淀模式，问题其实还不算大。但在企业级场景中，情况就完全不同了。</p>
+
+<p>很多企业级 Agent 都是每天在线上承接同一类或多类重复任务，会积累垂直领域内海量的、不同用户的 Query。虽然它们虽然是同一个任务类型，其运行逻辑、流程应该也是高度趋同的，但由于用户 Query 之间存在差异，因此 Agent 中间产生的结果不同，在层层累积之后，最终执行轨迹和结论也可能会有较大差异，而且还会出现各类边界情况和长尾场景。如果我们简单地根据每一轮的轨迹运行情况，就直接在线上进行 Skill 的沉淀或更新，极易导致 Skill 质量”飘忽不定”，稳定性大幅降低。</p>
+
+<p>这其实与早期的 Prompt 调优也有着很大的相似性：以前在做提示词调优的时候，如果你只是简单地把 badcase 丢给模型，让它根据这些个案去优化提示词，很容易就出现”顾此失彼”的现象。模型为了迎合当前的 badcase，甚至会去过拟合（Overfitting）。</p>
+
+<blockquote>
+  <p><strong>这种受个例影响而不断”找补式的优化”，并不是一种好的优化方式。</strong> Skill 的自进化如果缺乏科学、有效的机制，单纯的基于个例轨迹来实现自动更新，同样很容易让 Skill”过拟合”，陷入局部情况，甚至”越优化越差”。</p>
+</blockquote>
+
+<h3 id="离线优化--在线验证企业级标准做法">离线优化 + 在线验证（企业级标准做法）</h3>
+
+<p>在企业级的线上任务中应用 Agent Skill 时，我们通常不太敢让其直接实现真正意义上进行 Online 的自进化。更稳妥的做法是采取 Offline 的优化策略：</p>
+
+<ol>
+  <li><strong>离线收集轨迹数据</strong>：在离线环境中收集 Agent 执行轨迹，手动进行 Skill 的更新、进化和维护模拟</li>
+  <li><strong>人工审核与评测验证</strong>：优化后的 Skill 必须经过人工审核和确认，甚至很多场景会建立一套完善的回归评测体系</li>
+  <li><strong>灰度切流上线</strong>：只有在离线验证 Skill 确认无误后，才敢去替换线上的版本，并且还要灰度切流</li>
+</ol>
+
+<p>这种”离线优化 + 在线验证”的流程，尽可能去保障了企业级服务的稳定性和可靠性，但如果有大量的这些 Skill 需要优化和验证，也都每个像这样人工深度参与，就严重制约生产力，很难”规模化”。<strong>严格来说，这种”离线优化”并不是真正意义上的”自进化”，而是由人指导、在离线环境中进行的，Agent 本身并没有具备自主判断和修正的能力，核心的决策权依然在人的手中。</strong></p>
+
+<p>这就引出了本文想要深入探讨的核心话题：<strong>如何更科学、更可控、更保质保量的实现 Skill 自进化？</strong> 我们追求的不再是那种”无脑”的、方向不稳定的盲目自进化，而是一种能够在保证质量前提下，真正释放人力、实现闭环优化的智能机制。</p>
+
+<h2 id="trace2skill归纳法的聚合式进化">Trace2Skill：”归纳法”的聚合式进化</h2>
+
+<p>第一个要介绍的论文是来自阿里千问团队的《Trace2Skill: Distill Trajectory-Local Lessons into Transferable Agent Skills》。</p>
+
+<p>Trace2Skill 的核心思路在于强化”归纳能力”。它让一支”分析师小分队”并行地看大量的 Agent 执行轨迹，把每条轨迹里学到的零碎经验合并成一份完整、无冲突的 Skill 文档。它模仿了人的工作方式：<strong>先广泛积累领域知识，再一次性写出一份成熟的操作手册，而不是边干边改，整理出一堆碎片。</strong></p>
+
+<h3 id="核心实现三个关键步骤">核心实现：三个关键步骤</h3>
+
+<h4 id="1-轨迹生成trace-generation">1. 轨迹生成（Trace Generation）</h4>
+
+<p>构建高质量的”数据原材料”：</p>
+
+<ul>
+  <li><strong>初始输入</strong>：给定一份初始 Skill，比如是 S0（可以是人工编写的，也可以是模型生成的初始草稿）</li>
+  <li><strong>轨迹生成</strong>：让 Agent 通过 ReAct 的方式在一批用户任务上运行，产生大量的执行轨迹。这个过程是完全可以并行的</li>
+  <li><strong>正负样本分离</strong>：根据执行结果是否正确，将轨迹严格划分为成功集 T+ 和失败集 T−</li>
+</ul>
+
+<p>实践中，使用一个 122B 参数的 LLM 生成 200 条包含 50+ 个轮次的 Agent 轨迹，所需时间不到两个小时。</p>
+
+<h4 id="2-并行提案parallel-proposal">2. 并行提案（Parallel Proposal）</h4>
+
+<p>这是 Trace2Skill 非常创新性的部分。它不再让一个 LLM 处理所有信息，而是为每一条轨迹独立分配一个 Sub-Agent 的分析师，输出一个针对该轨迹的”补丁提案”（Patch Proposal）。采用不对称的角色设计策略：</p>
+
+<ul>
+  <li><strong>Success Analyst (A+)</strong>：针对成功集 T+ 进行分析，一次性调用 LLM
+    <ul>
+      <li>成功的案例通常比较容易识别和分析</li>
+      <li>分析师只需清理轨迹噪声，提取出可泛化的成功行为模式，直接写成补丁即可</li>
+      <li>高效、低成本，因为成功路径往往具有较高的一致性</li>
+    </ul>
+  </li>
+  <li><strong>Error Analyst (A−)</strong>：针对失败集 T− 进行分析，采用 ReAct 多轮循环推理
+    <ul>
+      <li>失败的原因千奇百怪，单次 LLM 调用极易产生幻觉或误判</li>
+      <li>A− 需要能够读取输入输出文件、对比 Ground Truth，并通过迭代验证假设来寻找真正的根因</li>
+      <li><strong>质量门控</strong>：如果经过多轮推理仍无法找到明确根因，该条轨迹会被直接丢弃</li>
+      <li><strong>隔离性</strong>：所有分析师都基于同一份冻结的初始 Skill S0 进行分析，互不干扰</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="3-无冲突归纳conflict-free-induction">3. 无冲突归纳（Conflict-Free Induction）</h4>
+
+<p>将分散的补丁池 p 合并成一份最终的更新 p∗。这是层次归并（Hierarchical Merge）过程：</p>
+
+<ul>
+  <li><strong>递归合并</strong>：每层最多 Bmerge 个补丁合成一个，逐层递归向上，直到合并为最终版本</li>
+  <li><strong>单一模型</strong>：整个合并过程由同一个 LLM 充当”合并器”，负责去重、解决冲突、保留独特见解</li>
+  <li><strong>硬约束（Hard Constraints）</strong>：
+    <ul>
+      <li><strong>引用检查</strong>：如果补丁引用了不存在的文件或变量，直接拒绝</li>
+      <li><strong>冲突标记</strong>：如果同一文件的同一行被多个补丁多次编辑，标记为冲突并暂缓处理</li>
+      <li><strong>格式校验</strong>：最终生成的 Skill 必须通过严格的格式校验器检查</li>
+    </ul>
+  </li>
+</ul>
+
+<p>在合并过程中，<strong>如果合并器发现那些在多个补丁中反复出现的模式，就会被保留并升级为通用原则；而那些只出现一两次的个例的修改，就很可能是个例或噪声，则会被果断丢弃</strong>。</p>
+
+<blockquote>
+  <p>阿里云服务领域的例子：如果我们打算总结”ECS 无法远程连接”这一类问题的通用解决方案，仅看 1~2 个工单，是非常难抽象出完整的、具有普遍性的诊断思路的。但如果我们把这一类工单放在一起看，可以从大量相似轨迹中抽取出”最大公约数”的核心内容（如”CPU/内存跑高”、”磁盘写满”、”端口不通”、”安全组拦截”等）。</p>
+</blockquote>
+
+<h3 id="结论与思考">结论与思考</h3>
+
+<h4 id="1-轻量级的高度可迁移方案">1. 轻量级的高度可迁移方案</h4>
+
+<p>Trace2Skill 可以把复杂的 Agent 经验打包成一份高度可迁移的 Skill，不需要更新模型参数，也不需要引入复杂的外部 RAG 检索模块，只需要使用开源级的模型就可以完成从 Agent 轨迹中构建 Skill。</p>
+
+<h4 id="2-轨迹分析做出来的-skill-真的能泛化">2. 轨迹分析做出来的 Skill 真的能泛化</h4>
+
+<p>Trace2Skill 的实验结果有力地挑战了一个传统假设：”经验本质上是任务特定的，必须通过情景记忆（Episodic Memory）库检索”的假设。<strong>这说明，一个高质量的 Skill 里的逻辑规则比零散的记忆（Memory）更具泛化性。</strong></p>
+
+<h4 id="3-设计哲学像人类专家一样先观察后总结">3. 设计哲学：像人类专家一样”先观察，后总结”</h4>
+
+<p>“先看够多 → 再写一份完整文档”。让 Agent 先充分阅读和分析大量轨迹，经过深度的归纳推理后，输出一份结构完整、逻辑自洽的 Skill 文档。这种”批处理式”的知识沉淀，往往比”流式”的反应更能捕捉到任务的本质规律。</p>
+
+<h4 id="4-局限性与展望">4. 局限性与展望</h4>
+
+<ul>
+  <li><strong>因果贡献难以定量</strong>：目前还无法精确量化 Skill 中某个具体补丁（Patch）对最终效果提升的贡献值</li>
+  <li><strong>使用率追踪缺失</strong>：缺乏细粒度的监控手段来追踪各段落在实际运行中的真实调用率和有效性</li>
+  <li><strong>缺乏验证机制</strong>：Skill 的构造过程已经比较像人类专家了，但验证还是需要人来做，没有自动化的验证机制</li>
+</ul>
+
+<h2 id="evoskill自验证的自然选择">EvoSkill：”自验证”的自然选择</h2>
+
+<p>如果说 Trace2Skill 是通过”归纳法”将经验聚合成静态的 Skill，那么 EvoSkill 则引入了动态的”验证”过程。EvoSkill 是由 Sentient Labs 发布的一款开源 Skill 自进化项目，论文标题《EvoSkill: Automated Skill Discovery for Multi-Agent Systems》。</p>
+
+<h3 id="从构建--验证的架构设计">从”构建 → 验证”的架构设计</h3>
+
+<p>这种从”构建 → 验证”机制的设计灵感，高度抽象了人类专家在离线优化 Skill 时的思维过程。EvoSkill 的核心在于将自进化的 LLM 拆解为三个角色明确的 Sub-Agent，形成一个 Pipeline：</p>
+
+<ul>
+  <li><strong>执行者（Executor）</strong>：负责”跑”。基于当前待优化的 Skill，去执行具体任务，并产生完整的 Agent 运行轨迹和最终答案</li>
+  <li><strong>提案者（Proposer）</strong>：负责”诊”。深入分析执行者产生的轨迹，判断结果是否正确。如果失败，它需要精准定位问题根源，并提出具体的优化方向和改进提案</li>
+  <li><strong>搭建者（Builder）</strong>：负责”改”。它接收分析师提出的优化建议，真正动手编写或修改 Skill 文档</li>
+</ul>
+
+<p>在这个架构之上，EvoSkill 建立了一套严格的验证机制：</p>
+
+<ul>
+  <li><strong>生成与执行</strong>：搭建者完成 Skill 修改后，系统会在一个独立的验证集（Validation Set）上重新运行该 Skill</li>
+  <li><strong>效果比对</strong>：系统会自动比对优化前后的性能指标。只有当新 Skill 在验证集上的表现确实优于旧版本时这次进化才会被确认保留</li>
+  <li><strong>负向反馈记录</strong>：如果验证结果显示效果没有提升甚至下降，EvoSkill 并不会直接丢弃这次尝试，而是将这一”失败案例”记录下来，这些记录会成为分析师后续学习的宝贵数据</li>
+</ul>
+
+<h3 id="进化过程的算法实现">进化过程的算法实现</h3>
+
+<p>EvoSkill 采用了一种基于”<strong>前沿集合（Frontier）</strong>“的迭代算法。<strong>Frontier 集合 G 是一个容量固定为 k 的”精英池”，始终保留当前迭代中得分最高的 k 个程序（Program）。</strong> 这个 Program 是 Agent 能力的完整载体，包括封装了的系统提示词（System Prompt）和累积的各种 Skills 库，本质上类似 RL 里的策略（Policy）。</p>
+
+<p>整体进化过程是一个 Loop，每一轮迭代 t 都严格遵循以下步骤：</p>
+
+<ol>
+  <li><strong>选择父代</strong>：从前沿集合 G 中轮询选择一个父程序 p</li>
+  <li><strong>挖掘失败</strong>：在训练集上运行 p，收集得分低于阈值的失败样本集 F</li>
+  <li><strong>诊断提案（Proposer）</strong>：Proposer Agent 结合失败集 F 和历史记录，分析执行轨迹与能力差距，输出文本形式的优化提案 π</li>
+  <li><strong>落地构建（Skill-Builder）</strong>：Skill-Builder Agent 将提案 π 具体化为候选程序 p~（即在父程序基础上新增或修订技能）</li>
+  <li><strong>严格验证</strong>：在独立的预留验证集 V 上评估 p~。若其得分高于 G 中最弱的成员，则 p~ 进入集合并取代最弱者；否则丢弃</li>
+  <li><strong>历史沉淀</strong>：无论成败，都将提案、得分及判决结果记入历史库 H，供后续迭代参考</li>
+</ol>
+
+<blockquote>
+  <p><strong>这样做的好处是可以做正向筛选，使用固定容量的前沿集合机制，确保了只有真正带来性能提升的 Skill 才能被保留</strong>，防止无效优化导致的退化。而针对失败的尝试并非无用，它们作为”反面教材”存入历史库 H，帮助 Proposer Agent 学会识别无效的优化路径，从而越进化越聪明。</p>
+</blockquote>
+
+<p>通过这种”<strong>执行 → 提案 → 构建 → 验证</strong>“的闭环，EvoSkill 就实现了 Skill 的自动化迭代。<strong>它不仅是在更新成功经验或者修补了一些失败错误，更是在不断的这种验证和选择过程中，让 Agent 逐渐摸索出更通用、更优的解题策略。</strong></p>
+
+<h3 id="结论与思考-1">结论与思考</h3>
+
+<h4 id="1-从体感到量化打破不可持续的瓶颈">1. 从”体感”到”量化”：打破不可持续的瓶颈</h4>
+
+<p>很多 Agent 开发者在初期构建 Agent 时，依赖的是”人的体感”——我觉得这个 Prompt 改得更好了。<strong>在企业级场景下，靠体感是不可持续且无法规模化（Scaling）的。</strong></p>
+
+<p>当任务复杂度上升，人的主观判断会出现偏差，甚至产生”我觉得写得很清楚，但模型理解有误”的认知错位。如果没有一套客观、可量化的验证机制，我们就无法区分是”Skill 本身的质量下降”还是”线上环境的其他因素导致了指标波动”，这种模糊性会导致迭代变得盲目且不稳定。</p>
+
+<h4 id="2-可验证性决定迭代速度数据飞轮的关键">2. 可验证性决定迭代速度：数据飞轮的关键</h4>
+
+<p>不知道大家有没有发现，尤其是进入 2026 年后的这几个月，Claude Ops、GPT、Qwen 等头部 LLM 迭代和发布速度越来越快。其中一个比较核心原因就在<strong>模型效果的衡量，越来越可验证</strong>。例如 AI Coding 场景，代码能否跑通、单元测试是否通过，这些都是验证成本较低且结果比较客观的场景。</p>
+
+<p><strong>Agent 也是同理，构建一套高质量、自动化的验证评估体系，才是 Agent 效果能”起飞”的前提。</strong> 一旦验证闭环打通，数据飞轮才能真正转动起来：</p>
+
+<blockquote>
+  <p>“Agent 产生轨迹” → “自动化验证给出即时反馈” → “根据反馈快速调整 Skill” → “新 Skill 再次进入验证循环”</p>
+</blockquote>
+
+<p>只有在这样的模式下，迭代速度才能从”人力驱动”转变为”算力驱动”，实现质的飞跃。</p>
+
+<h2 id="skillopt将-skill-进化对标为模型训练">SkillOpt：将 Skill 进化对标为”模型训练”</h2>
+
+<p>如果说 EvoSkill 是通过”自验证”式和优胜劣汰来进化，那么 SkillOpt 则走了一条更硬核的路线：<strong>它将 Skill 的优化过程，直接对标为 LLM 的参数训练过程。</strong> SkillOpt 是由微软公司联合上海交大、同济、复旦等多所高校一起提出的 Skill 优化新范式，论文标题《SkillOpt: Executive Strategy for Self-Evolving Agent Skills》。</p>
+
+<h3 id="skill-是外部可训练参数">Skill 是”外部可训练参数”</h3>
+
+<p>在传统的深度学习范式里，模型主要是通过梯度下降（Gradient Descent）不断更新模型的权重（Weights），以最小化损失函数。而 SkillOpt 则创造性地提出了一个类比：</p>
+
+<ul>
+  <li>把”Skill 文本”类比为”模型权重”</li>
+  <li>把”基于反馈的文本重构”类比为”梯度更新”</li>
+  <li>把”LLM 驱动的改写引擎”类比为”优化器（Optimizer）”</li>
+</ul>
+
+<p>在这种视角下，<strong>Skill 不再仅仅是一段静态的提示词，而被视为一种”外部的、可训练的文本参数”</strong>。SkillOpt 引入了一个专门的”优化器 Agent”，它像 SGD 或 Adam 优化器一样，根据验证集上的表现（即”Loss”），不断地对 Skill 文本进行微调、重写和迭代，直到收敛到一个高质量的状态。</p>
+
+<blockquote>
+  <p>传统的 Prompt 优化往往依赖于人工调试，缺乏明确的方向感。而 SkillOpt 通过引入”训练范式”，带来了两个关键优势：</p>
+  <ul>
+    <li><strong>方向明确</strong>：每一次 Skill 的修改，都是基于明确的”误差信号”</li>
+    <li><strong>系统化迭代</strong>：摒弃了零敲碎打的修补，将整个 Skill 作为一个整体对象进行系统性优化。同时还引入了文本领域的”学习率”（Learning Rate），能够控制每次 Skill 优化的粒度</li>
+  </ul>
+</blockquote>
+
+<h3 id="六大核心组件详解">六大核心组件详解</h3>
+
+<h4 id="1-前向传播证据收集forward-passrollout-evidence">1. 前向传播：证据收集（Forward Pass：Rollout Evidence）</h4>
+
+<p>让目标模型在训练集上执行任务（默认 Batch Size=40）：</p>
+
+<ul>
+  <li>批量执行，全量记录（任务上下文、消息历史、工具调用、观察结果、验证器反馈）</li>
+  <li>解耦设计：支持累积多个 Batch 后再统一进行反思</li>
+</ul>
+
+<h4 id="2-反向传播小批量反思backward-passminibatch-reflection">2. 反向传播：小批量反思（Backward Pass：Minibatch Reflection）</h4>
+
+<p>优化器模型（Optimizer）接收前向传播产生的轨迹，并进行结构化分析：</p>
+
+<ul>
+  <li><strong>分组与分片</strong>：将轨迹分为”成功”和”失败”两组，并进一步切分为 Minibatch（默认大小 8）</li>
+  <li><strong>为什么用 Minibatch</strong>：单个轨迹容易导致过拟合，产生过于具体的修补（Over-specific Fix）；而 Minibatch 能暴露反复出现的程序性错误（Procedural Errors）</li>
+  <li><strong>原子化编辑</strong>：每个 Minibatch 产出一组结构化的原子编辑操作，比如追加、添加、删除、替换等</li>
+  <li><strong>层次化合并</strong>：先分别合并 Failure 和 Success 组的编辑建议，最后再做全局合并，且遵循”Failure 优先于 Success”的原则</li>
+</ul>
+
+<h4 id="3-学习率约束有界文本更新bounded-text-updates">3. 学习率约束：有界文本更新（Bounded Text Updates）</h4>
+
+<p>这是 SkillOpt 与传统”无约束 Prompt 重写”最大的区别：</p>
+
+<ul>
+  <li><strong>核心创新</strong>：每一步迭代只允许 Lt 条编辑生效，相当于深度学习中的学习率（Learning Rate）控制</li>
+  <li><strong>避免灾难性遗忘</strong>：无约束的重写容易清掉原有有用规则、引入逻辑冲突或过拟合到局部失败案例</li>
+  <li><strong>调度策略</strong>：支持 Cosine（默认）、Constant、Linear 和 Autonomous 四种调度方式</li>
+  <li><strong>编辑模式</strong>：默认采用 Patch 模式（局部微调），也可切换为 Rewrite 模式（整体重写）</li>
+</ul>
+
+<h4 id="4-验证门控--负反馈缓冲validation-gate--rejected-edit-buffer">4. 验证门控 + 负反馈缓冲（Validation Gate + Rejected-Edit Buffer）</h4>
+
+<ul>
+  <li><strong>严格优于才接受</strong>：候选 Skill 必须在独立的验证集 Dsel 上运行，只有当得分严格高于当前最优 Skill 时才被接受（平局也被拒绝）</li>
+  <li><strong>负反馈价值化</strong>：被拒绝的编辑并不会被丢弃，而是连同其导致的分数跌幅一起存入 Rejected-Edit Buffer，被喂给后续的优化器</li>
+</ul>
+
+<h4 id="5-慢更新--元更新动量机制epoch-wise-slowmeta-update">5. 慢更新 + 元更新：动量机制（Epoch-Wise Slow/Meta Update）</h4>
+
+<ul>
+  <li><strong>四类样本归因</strong>：每个 Epoch 结束时，用同一批训练样本分别在”上一 Epoch Skill”和”当前 Skill”下重跑，将结果归为四类：Improvements / Regressions / Persistent Failures / Stable Successes</li>
+  <li><strong>受保护区域更新</strong>：优化器会将纵向的指导原则写入 Skill 中的受保护区域，常规的步级编辑无法修改这部分内容</li>
+  <li><strong>Meta-Skill</strong>：维护一份仅对优化器可见、不随 Skill 部署的”元记忆”，记录”哪些编辑模式好用”、”哪些被频繁拒绝”、”哪些失败一直未解决”</li>
+</ul>
+
+<h4 id="6-harness-无关部署harness-agnostic-deployment">6. Harness 无关部署（Harness-Agnostic Deployment）</h4>
+
+<ul>
+  <li><strong>轻量适配</strong>：通过轻量级适配器接口，同一套优化器逻辑可以无缝运行于直接对话、Codex CLI、Claude Code CLI 等多种执行 Harness 框架</li>
+  <li><strong>极简产物</strong>：最终的部署产物仅仅是一个 best_skill.md 文件（通常 300 ~ 2000 Tokens），不包含任何复杂的依赖或外部模块</li>
+</ul>
+
+<h3 id="结论与思考-2">结论与思考</h3>
+
+<ul>
+  <li><strong>Skill 应当被像参数一样训练</strong>——SkillOpt 是首个系统性、可控的文本空间优化器</li>
+  <li><strong>关键设计</strong>：边界化的学习率、验证 gate、rejected-edit buffer 等都被消融实验证明是必需的</li>
+  <li><strong>产物是真正可部署的</strong>：best_skill.md 是个三百到两千 token 的小文档，可以跨模型、跨 harness、跨任务迁移</li>
+  <li><strong>不足</strong>：只自进化调优了 best_skill.md 这个单 Skill 文档，对于其他的文件（比如 References 里的 Markdown 文件，或者 Resources 中的脚本代码等文件）没有考虑到自进化中</li>
+</ul>
+
+<h2 id="三者的对比">三者的对比</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>对比项</th>
+      <th>Trace2Skill</th>
+      <th>EvoSkill</th>
+      <th>SkillOpt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>优化对象</td>
+      <td>单份 SKILL.md + Reference md 文档</td>
+      <td>可多个 Skill 文档</td>
+      <td>单份 best_skill.md 文档</td>
+    </tr>
+    <tr>
+      <td>数据采集</td>
+      <td>一次性跑完训练集，全部轨迹送进合并器</td>
+      <td>每轮跑训练 batch，收集失败样本</td>
+      <td>每步跑 rollout batch（默认 40），区分成功/失败</td>
+    </tr>
+    <tr>
+      <td>更新粒度</td>
+      <td>并行跑 patch，层次化合并所有 patch</td>
+      <td>每轮一个新 Skill 或一次编辑</td>
+      <td>每步多个 bounded 原子编辑（新增/修改/替换）</td>
+    </tr>
+    <tr>
+      <td>验证过程</td>
+      <td>编程式格式校验 + 冲突检测（无显式验证）</td>
+      <td>验证集得分超过前沿集合最弱者才进入</td>
+      <td>严格大于当前最优才被接受（平局也拒绝）</td>
+    </tr>
+    <tr>
+      <td>失败信号利用</td>
+      <td>通过 Multi-turn Agentic Error Analyst 找根因</td>
+      <td>Proposer 读 Trace GroundTruth 找根因</td>
+      <td>分 minibatch 反思失败，被拒编辑进 buffer 作负反馈</td>
+    </tr>
+    <tr>
+      <td>学习率</td>
+      <td>❌ 一次成型</td>
+      <td>❌ 每次一个 Skill</td>
+      <td>✅ 每次 Lt 条</td>
+    </tr>
+    <tr>
+      <td>动量</td>
+      <td>❌</td>
+      <td>❌</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>元学习</td>
+      <td>❌</td>
+      <td>累计反馈历史 H（帮 Proposer 不重复出错）</td>
+      <td>Meta Skill（只给优化器看，沉淀调优经验）</td>
+    </tr>
+    <tr>
+      <td>执行 Harness</td>
+      <td>ReAct 即可</td>
+      <td>需要底座 Harness</td>
+      <td>Chat / Codex / Claude Code 等 Harness 无关</td>
+    </tr>
+    <tr>
+      <td>模型分离</td>
+      <td>同一模型自给自足</td>
+      <td>同一模型扮演三个角色</td>
+      <td>优化器、目标模型 分离</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="三个学派的核心差异">三个学派的核心差异</h3>
+
+<h4 id="trace2skill归纳推理学派">Trace2Skill：归纳推理学派</h4>
+
+<ul>
+  <li>核心假设：好的 Skill 应该来自对大量轨迹的归纳，单条轨迹的教训不可靠</li>
+  <li>关键动作：并行处理 + 层次化合并</li>
+  <li>类比：就像专家开会，大家分头看不同案例，然后开会合并意见，”被多人提到的”才进最终报告</li>
+  <li>优势：一次成型，效率高，最终 Skill 简洁可读</li>
+  <li>风险：合并器要够强，否则会丢细节</li>
+</ul>
+
+<h4 id="evoskill自验证选择学派">EvoSkill：自验证选择学派</h4>
+
+<ul>
+  <li>核心假设：Skill 应该慢慢长出来，每轮针对一个具体失败提出改进，能跑赢前沿集合就保留</li>
+  <li>关键动作：前沿集合 + 失败驱动提案 + 累计反馈历史</li>
+  <li>类比：自然选择进化，每一代基因有突变（产生新 Skill），适应度（验证分数）高的才能延续下来</li>
+  <li>优势：自然生长出一个 Skill 库，每个 Skill 都对应一个具体的失败模式，可解释性更强</li>
+  <li>风险：每轮只改一处，收敛慢、需要不少迭代；不同轮次跑的结果差异大</li>
+</ul>
+
+<h4 id="skillopt训练优化器学派">SkillOpt：训练优化器学派</h4>
+
+<ul>
+  <li>核心假设：Skill 应该被像神经网络参数一样训练，要有严格的约束来保证稳定收敛</li>
+  <li>关键动作：学习率约束 + 验证 gate + 负反馈 buffer + 元学习</li>
+  <li>类比：带 momentum + early stopping 的 SGD，每步只动一点点，被拒的更新留作负样本，每轮 epoch 做长期巩固</li>
+  <li>优势：可控性最强；每个组件都有明确的解释，并且与神经网络学习对标</li>
+  <li>风险：组件太多，并且强依赖一个稳定的验证集和打分函数</li>
+</ul>
+
+<h2 id="总结">总结</h2>
+
+<p>这三种范式代表了 Agent Skill 进化正在从”经验主义”走向”科学工程”路径：</p>
+
+<ul>
+  <li><strong>Trace2Skill 是归纳法的代表</strong>，它通过”由点及面”的思维，将分散的单点轨迹提炼为通用的核心思考，解决了从 0 到 1 的快速启动问题</li>
+  <li><strong>EvoSkill 是自动化离线 Pipeline 的进阶</strong>，它引入了”分析-验证-更新”的闭环，让 Skill 具备了基于反馈的自进化能力，解决了静态规则无法适应动态场景的痛点</li>
+  <li><strong>SkillOpt 则是训练范式的极致体现</strong>，它在验证的基础上，引入了学习率、动量等更科学的约束机制，通过小步迭代和简单门控，实现了效果的可控性与稳定性最大化</li>
+</ul>
+
+<h3 id="选型建议">选型建议</h3>
+
+<blockquote>
+  <p><strong>整体来看，引入验证机制的方案会优于纯归纳方案</strong>，因为后者在验证的过程中，会引导 Agent 不断走向了进化的正确方向。但同时，随着方法复杂度的提升，计算成本和迭代周期也在显著增加。因此，还是需要根据实际业务情况来决策使用哪种方案：</p>
+</blockquote>
+
+<ul>
+  <li>如果你的场景相对简单，追求快速落地，并且规律性比较明显，<strong>Trace2Skill 的性价比可能最高</strong></li>
+  <li>如果你对 Skill 的效果有明确要求，且拥有完善的自动化评估体系，那么 <strong>EvoSkill、SkillOpt 就更适合</strong></li>
+  <li><strong>也许，混合策略可能是比较好的解法</strong>，比如用 Trace2Skill 快速生成基线，用 EvoSkill 持续扩充技能库，再对核心瓶颈模块使用 SkillOpt 进行精细打磨</li>
+</ul>
+
+<p><strong>Agent 的构建方法论将从”玄学调试”真正走向”科学工程”。</strong></p>
+
+<h2 id="references">References</h2>
+
+<ul>
+  <li>[1] Trace2Skill 论文：https://arxiv.org/pdf/2603.25158</li>
+  <li>[2] Trace2Skill Github：https://github.com/Qwen-Applications/Trace2Skill</li>
+  <li>[3] EvoSkill 论文：https://arxiv.org/pdf/2603.02766</li>
+  <li>[4] EvoSkill Github：https://github.com/sentient-agi/EvoSkill</li>
+  <li>[5] SkillOpt 官网：https://microsoft.github.io/SkillOpt/</li>
+  <li>[6] SkillOpt 论文：https://arxiv.org/pdf/2605.23904</li>
+  <li>[7] SkillOpt Github：https://github.com/microsoft/SkillOpt</li>
+</ul>

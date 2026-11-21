@@ -1,0 +1,84 @@
+<h1 id="warp-ceo-的-claude-实战用双-skill-把人类反馈编译为-agent-改进">Warp CEO 的 Claude 实战：用双 Skill 把人类反馈编译为 Agent 改进</h1>
+
+<ul>
+  <li>原文链接：https://mp.weixin.qq.com/s/vIJ5uP5dcUd87Smi2BuP-w</li>
+  <li>原始案例：https://claude.com/blog/how-warp-builds-self-improving-agents-on-claude</li>
+  <li>来源：Datawhale 对 Warp CEO 案例的整理</li>
+  <li>获取时间：2026-09-01</li>
+</ul>
+
+<h2 id="核心结论一句话">核心结论（一句话）</h2>
+
+<blockquote>
+  <p>可持续改进不是让 Agent 从一次对话自动“记住”，而是将可解释的人类反馈交给独立 improver，生成可审查、可回滚的最小 Skill 变更，并以验证与人类审批决定是否进入默认行为。</p>
+</blockquote>
+
+<h2 id="分类提炼">分类提炼</h2>
+
+<ul>
+  <li>场景：code review、issue triage、spec-writing 等可反馈 Agent</li>
+  <li>类型：基于文件的 Skill 改进工作流与客户案例</li>
+  <li>标签： #主题/AI-Agent #主题/自我改进 #主题/Skill #主题/人类反馈 #主题/Harness #场景/公众号长文</li>
+</ul>
+
+<h2 id="知识节点">知识节点</h2>
+
+<ul>
+  <li><strong>反馈蒸发</strong>：只在会话里纠正 Agent 不会改变下一轮行为，导致同类错误重复出现。</li>
+  <li><strong>双Skill闭环</strong>：base skill 承担任务执行，improver skill 按计划聚合反馈并提出更新建议。</li>
+  <li><strong>最小变更PR</strong>：候选经验应收敛为对具体 Skill 的小型 PR，而不是无边界重写 prompt。</li>
+  <li><strong>程序性知识</strong>：稳定的任务规范应放入可版本化、可审查、可复用的 Skill，而非动态 Memory。</li>
+  <li><strong>解释型反馈</strong>：反馈同时说明期望行为和理由，才能使 Agent 在相邻场景中泛化。</li>
+  <li><strong>渐进披露</strong>：Skill 应保持小，详细资源与脚本按需引用，避免把完整知识库一次塞入上下文。</li>
+  <li><strong>验证门禁</strong>：反馈源、回归证据和人工 review 共同防止错误经验成为长期默认规则。</li>
+  <li><strong>共享改进器</strong>：共性改进逻辑可由少数 improver 复用，领域差异再叠加局部权重。</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游（基于 / 来自）</h3>
+
+<ul>
+  <li>[[01-ai-agents/Skill-Self-Evolution]]：提供从任务轨迹归纳、验证和优化 Skill 的研究路径。</li>
+  <li>[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]：为候选改动提供基线、评分器和稳定性检查方法。</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游（应用于 / 验证于）</h3>
+
+<ul>
+  <li>[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]：把反馈候选如何准入、读取、发布和回滚扩展为受治理经验系统。</li>
+  <li>[[01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制]]：将这类 Skill PR 放入评测、记忆、候选发布和控制面的全链路飞轮。</li>
+</ul>
+
+<h3 id="同级横向--并列">同级（横向 / 并列）</h3>
+
+<ul>
+  <li>[[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]]：从 Harness 视角解释为何评测与不可编辑的控制边界应位于自改进循环之外。</li>
+</ul>
+
+<h2 id="正文要点">正文要点</h2>
+
+<ol>
+  <li>Warp 的案例说明，部分正确的 code review Agent 仍可能因噪声严重损害体验；手动调 prompt 或增加 AGENTS.md 只能局部修补，核心缺口是反馈未跨会话沉淀。</li>
+  <li>base skill 保存领域指令，improver skill 从积累的人类反馈、原始建议及任务上下文中识别系统性问题，并只建议最小的 base skill 编辑。</li>
+  <li>Skill 作为文件资产进入正常 PR 流程。这样每次“学到”的规则都有变更说明、review、批准、版本历史与回滚路径。</li>
+  <li><code class="language-plaintext highlighter-rouge">ready to spec</code> 漏标案例表明，带理由的维护者反馈可被转成精确的判定条件；improver 将它制成候选规则，而非把单个事件直接写成永久结论。</li>
+  <li>高质量 Skill 写原则并解释原因，保持短小并按需加载资源；反馈入口则应嵌入已有工作环境，减少人为收集成本。</li>
+  <li>自我改进应预设反馈会错。可验证任务优先建立 harness 和确定性检查；不可验证任务限制专家反馈，并让最终审查保持人类控制。</li>
+</ol>
+
+<h2 id="备注">备注</h2>
+
+<ul>
+  <li>Warp 的“约 80% 正确率”、产品用户规模、融资额、运行范围与改进效果来自客户案例转述，未独立复核。</li>
+  <li>该模式适合稳定、可验证、低副作用的任务先行。直接将反馈自动写入高风险或开放式任务规范，可能放大偏差。</li>
+</ul>
+
+<h2 id="相关链接">相关链接</h2>
+
+<ul>
+  <li>[[01-ai-agents/一篇讲透Agent自进化飞轮怎么搭-评测→记忆→落地→控制]]</li>
+  <li>[[01-ai-agents/若飞-Agent-记忆与可验证自我改进怎么设计]]</li>
+  <li>[[01-ai-agents/Skill-Self-Evolution]]</li>
+  <li>[[01-ai-agents/腾讯-AI-Agent-Skill-测评方案落地]]</li>
+</ul>
