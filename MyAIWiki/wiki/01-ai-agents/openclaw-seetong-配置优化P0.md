@@ -51,8 +51,8 @@ source: 综合 OpenClaw 实战经验 + 清华沈阳《自进化 AI》+ EvoSkill 
 | 8 | **iOS 真实设备约束** | 未经授权绝不动 xcodebuild / pod install / 模拟器 / 真机 | 用户 Seetong-AGENTS.md 既有 |
 | 9 | **OC 崩溃风险优先于功能正确性** | Review 时按 B-N-T-O-R（Bounds / Nil / Thread / Observer / Retain cycle）顺序检查 | 用户 Seetong-AGENTS.md 既有 + OC 实战踩坑 |
 | 10 | **现有栈复用 > 引入新抽象** | 改前先查 BaseViewController / STNetworkManager / QMUITips / Realm / Masonry / MJExtension | 用户 Seetong-AGENTS.md 既有 |
-| 11 | **知识沉淀分离** | App 仓库只放执行规则；专题知识去 MyAIWiki | 用户 Seetong-AGENTS.md 既有 + Claude Code 一周年 |
-| 12 | **MCP 数据路由** | Seetong 数据源严格走已配 MCP（seetong-feedback / umeng-app / sensors-analyst / mcp-server-tapd），不直接 curl | 用户 openclaw.json 既有 4 个 MCP |
+| 11 | **知识沉淀分离** | 项目专属执行流程、工具集成和可复用操作经验放到 APP-AI/项目仓库；通用概念与外部来源知识留在 MyAIWiki | 用户规则更新（2026-11-26） |
+| 12 | **MCP 数据路由** | Seetong 数据源严格走已配置 MCP，不直接 curl；TAPD 缺陷状态与评论操作详规迁至 `Seetong-App-AI/skills/tapd-assistant/references/tapd-comment-sync-playbook.md` | 用户 openclaw.json 既有 MCP；本次操作经验迁移 |
 
 ---
 
