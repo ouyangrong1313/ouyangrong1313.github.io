@@ -1,0 +1,54 @@
+<h1 id="harness-记忆与验证闭环速读">Harness 记忆与验证闭环：速读</h1>
+
+<blockquote>
+  <p><strong>一句话</strong>：把“写得快”升级为“真正提效”，关键是让跨会话知识可发现、交付每步有证据、等待本次任务终态，并在独立审查后有界回退。</p>
+</blockquote>
+
+<table>
+  <thead>
+    <tr>
+      <th>断点</th>
+      <th>作者的 Harness 做法</th>
+      <th>不能跳过的核验</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>新会话从零探索</td>
+      <td>只记三类连接性知识，用两级索引定位，hook 强制先读</td>
+      <td>索引命中率、误拦率、同步开销</td>
+    </tr>
+    <tr>
+      <td>提交即宣告完成</td>
+      <td>平台／提交／等待／本地验证四类 skill 组成 <code class="language-plaintext highlighter-rouge">close-loop</code></td>
+      <td>本次构建、MR、部署和实际结果各有回执</td>
+    </tr>
+    <tr>
+      <td>AI 自审或循环无界</td>
+      <td>独立审查／验证、精确制品交接、最多三轮</td>
+      <td>回退后重走完整验证，超限停下</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="三个反直觉点">三个反直觉点</h2>
+
+<ul>
+  <li>知识库不是“多写文档”，而是只记录代码无法直接透露的连接性事实；读过不等于采用过。</li>
+  <li>任务触发后必须等对应运行终态；“最后一次成功”可能是旧产物，反而让闭环失真。</li>
+  <li>多 Agent 不应成为默认流程；小改顺序完成，大改才用隔离角色和精确制品交接。</li>
+</ul>
+
+<h2 id="可直接试的动作">可直接试的动作</h2>
+
+<ol>
+  <li>选一个 Seetong 跨端问题，记录一条阴性知识和一条跨系统关联，挂到模块索引；下次同类任务先查索引并计时对比。</li>
+  <li>质量日报和 GitLab MR 将“已生成、已校验、已部署、已送达”分开记账，缺 ACK 不报完成。</li>
+  <li>对跨度较大的任务让审查者只读，要求指出 <code class="language-plaintext highlighter-rouge">文件:行</code>、反例和验证方式；最多三轮，超限如实上报。</li>
+</ol>
+
+<h2 id="来源与边界">来源与边界</h2>
+
+<p><a href="./腾讯云开发者-Harness记忆与验证闭环.md">完整编译页</a> · <a href="../../raw/2026-09-腾讯云开发者-Harness记忆与验证闭环.md">清洗原文</a> · <a href="https://mp.weixin.qq.com/s/SVm_GONXEElhEsX6CXylKg">公众号原文</a></p>
+
+<p>腾讯云开发者，焦成杰，2026-09-23 08:30。文章是作者实践分享，未提供独立复现实验或端到端效率对照；hook 的强制范围、成熟度阈值和三轮循环需在本团队小范围验证。</p>

@@ -1,0 +1,84 @@
+<!--
+  童年跳房子大挑战 - 结算页
+  pages/result/result.wxml
+-->
+<view class="container">
+  <!-- 顶部装饰 -->
+  <view class="header-decor">
+    <view class="star star-1">⭐</view>
+    <view class="star star-2">⭐</view>
+    <view class="star star-3">⭐</view>
+  </view>
+
+  <!-- 结果卡片 -->
+  <view class="result-card">
+    <!-- 新纪录标识 -->
+    <view class="new-record" wx:if="{{isNewRecord}}">
+      <text>🎉 新纪录！🎉</text>
+    </view>
+
+    <!-- 标题 -->
+    <view class="result-title">
+      <text wx:if="{{mode === 'challenge'}}">挑战结束</text>
+      <text wx:if="{{mode === 'pk'}}">PK结果</text>
+    </view>
+
+    <!-- 分数展示 -->
+    <view class="score-section">
+      <text class="score-label">你的得分</text>
+      <view class="score-circle">
+        <text class="score-value">{{score}}</text>
+        <text class="score-unit">分</text>
+      </view>
+    </view>
+
+    <!-- PK结果 -->
+    <view class="pk-section" wx:if="{{mode === 'pk' && pkResult}}">
+      <view class="pk-result {{pkResult}}">
+        <text wx:if="{{pkResult === 'win'}}">🏆 你赢了！</text>
+        <text wx:if="{{pkResult === 'lose'}}">😅 惜败！</text>
+        <text wx:if="{{pkResult === 'draw'}}">🤝 平局！</text>
+      </view>
+      <view class="pk-info">
+        <text>对手得分：{{pkScore}}分</text>
+      </view>
+    </view>
+
+    <!-- 最高分 -->
+    <view class="high-score-section">
+      <text class="high-score-label">历史最高</text>
+      <text class="high-score-value">{{highestScore}}分</text>
+    </view>
+  </view>
+
+  <!-- 操作按钮 -->
+  <view class="btn-section">
+    <button class="btn-share" open-type="share">
+      <text class="btn-icon">📤</text>
+      <text>分享给好友挑战</text>
+    </button>
+
+    <button class="btn-again" bindtap="playAgain">
+      <text class="btn-icon">🔄</text>
+      <text>再玩一次</text>
+    </button>
+
+    <button class="btn-home" bindtap="goHome">
+      <text class="btn-icon">🏠</text>
+      <text>返回首页</text>
+    </button>
+  </view>
+
+  <!-- 分享文案展示 -->
+  <view class="share-preview">
+    <text class="preview-label">分享文案：</text>
+    <text class="preview-text">{{shareText}}</text>
+  </view>
+
+  <!-- 底部装饰 -->
+  <view class="footer-decor">
+    <view class="confetti confetti-1"></view>
+    <view class="confetti confetti-2"></view>
+    <view class="confetti confetti-3"></view>
+  </view>
+</view>

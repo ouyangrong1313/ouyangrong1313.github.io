@@ -1,0 +1,194 @@
+<h1 id="字节跳动洪定坤ai-coding-的实践与探索--digest">字节跳动洪定坤:AI Coding 的实践与探索 — Digest</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<blockquote>
+  <p><strong>“用得越多,挑战越大”</strong> — 字节 AI 代码贡献率 1 年增 6 倍、token 增 5 倍、合入率增 2 倍;真正的瓶颈是<strong>指标失真、Vibe Coding 不可交付、人人都是程序员带来协作失序</strong>;解法是<strong>关注三件事(指标/治理/协作)+ 三种实践(原型驱动 / 系统化 AI Development / 组织化建设)</strong>。</p>
+</blockquote>
+
+<h2 id="核心命题">核心命题</h2>
+
+<p>字节内部对 AI Coding 的关注重心从”产出量”转移到”全局效率 + 工程化交付 + 跨角色协作”,从工具视角升级为<strong>研发范式重塑</strong>视角。</p>
+
+<h2 id="关键数据必须看">关键数据(必须看)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>指标</th>
+      <th>过去 1 年变化</th>
+      <th>备注</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>AI 代码贡献率</td>
+      <td>增长 6 倍</td>
+      <td>字节全公司</td>
+    </tr>
+    <tr>
+      <td>Token 消耗</td>
+      <td>增长 5 倍</td>
+      <td>每月仍高速增长</td>
+    </tr>
+    <tr>
+      <td>AI 代码合入率</td>
+      <td>增长 2 倍</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>TRAE AI 代码占比</td>
+      <td>90%+</td>
+      <td>TRAE 团队过去半年</td>
+    </tr>
+    <tr>
+      <td>TRAE 人均需求吞吐率</td>
+      <td>1.6 倍(60% 提升)</td>
+      <td>与 10x 写代码速度严重不匹配</td>
+    </tr>
+    <tr>
+      <td>TRAE Token 日均</td>
+      <td>5.6 万亿</td>
+      <td>增 50 倍</td>
+    </tr>
+    <tr>
+      <td>900 次实验正确率</td>
+      <td>80%+ (无 Harness)</td>
+      <td>3 模型 × 3 框架 × 100 次</td>
+    </tr>
+    <tr>
+      <td>900 次实验正确率</td>
+      <td>~90% (有 Harness)</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>900 次实验可交付性</td>
+      <td>40-60 (无 Harness) → 80 (有 Harness)</td>
+      <td>UI/交互/可维护性/性能/兼容性</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>核心反直觉</strong>:写代码快 10 倍 ≠ 整体效率提升 10 倍;90% AI 代码 ≠ 1.6x 吞吐;正确率 80% ≠ 可交付 80%(差距可拉到 40 分)。</p>
+
+<h2 id="三大挑战原文核心">三大挑战(原文核心)</h2>
+
+<ol>
+  <li><strong>指标陷阱</strong> — “AI 代码贡献率”做成 KPI 反而扭曲行为。TRAE 90% AI 代码、人均吞吐 1.6x、AI 写代码 10x 速度 → <strong>10x vs 1.6x 巨大落差说明单一指标失真</strong></li>
+  <li><strong>Vibe Coding 边界</strong> — 900 次实验:<strong>正确率 80%+ 但可交付性 40-60</strong>,模型+框架组合表现高度随机(异常处理/组件复用/历史影响/工程规范都不达标)</li>
+  <li><strong>人人都是程序员 协作失序</strong> — 产品同学 Vibe Coding 完想直接上线 → 代码能跑但有性能/扩展性/权限安全问题 → <strong>代码生成门槛降 ≠ 系统复杂度降</strong></li>
+</ol>
+
+<h2 id="三大关注全文最核心总结">三大关注(全文最核心总结)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>维度</th>
+      <th>关注点</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>指标</td>
+      <td>找到更合理指标衡量 AI 是否<strong>全局</strong>提升效率</td>
+    </tr>
+    <tr>
+      <td>治理</td>
+      <td>用更合理方式让 Vibe Coding 走向真正软件工程</td>
+    </tr>
+    <tr>
+      <td>协作</td>
+      <td>让产品/设计/运营/研发更合理参与代码生产</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="三大实践字节内部已落地">三大实践(字节内部已落地)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>实践</th>
+      <th>一句话</th>
+      <th>关键动作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>原型驱动开发</strong></td>
+      <td>替代”文档驱动”,用可交互原型沟通</td>
+      <td>TRAE 已落地;/feedback 原型当场演示;设计师可直接出高保真还原图</td>
+    </tr>
+    <tr>
+      <td><strong>系统化 AI Development</strong></td>
+      <td>AI 贯穿全流程,不止写代码</td>
+      <td>写 Spec → 写代码 → Browser Use 自验 → Bugfix → 提交 → 发布,全 AI 跑</td>
+    </tr>
+    <tr>
+      <td><strong>组织化建设</strong></td>
+      <td>把个人能力沉淀为标准/工具/技能</td>
+      <td>TRAE 5.6 万亿 Token/天;TRAE Work 企业版;与火山引擎联合输出</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="harness-在字节视角下的具体含义">Harness 在字节视角下的具体含义</h2>
+
+<blockquote>
+  <p>字节把 Harness 叫做”<strong>基建</strong>“,包括:</p>
+  <ul>
+    <li>上下文工程(Context Engineering)</li>
+    <li>架构约束(团队规范)</li>
+    <li>团队知识沉淀(Memory)</li>
+    <li>技术债梳理</li>
+  </ul>
+</blockquote>
+
+<p>—— 这与现有 02-ai-coding 主题(Harness=骨架)不同:<strong>字节视角 Harness=基建(地基),不是骨架(工程框架)</strong></p>
+
+<h2 id="关键金句">关键金句</h2>
+
+<ul>
+  <li><strong>“用得越来越多,我们对 AI Coding 的’挑战’有了更真实的体感”</strong></li>
+  <li><strong>“过度重视单一的指标、单一的 AI 代码贡献率,可能会让你没有找到更好的、全局的优化方法”</strong></li>
+  <li><strong>“你感觉 Vibe Coding 快了,但是如果不把这些做好,实际未必快,甚至会慢”</strong></li>
+  <li><strong>“代码生成门槛下降,不代表系统复杂度下降”</strong></li>
+  <li><strong>“原型只是第一步。要真正进入企业研发,还需要把这些共识继续沉淀成一些可复现、可验证、可维护的工程流程”</strong></li>
+  <li><strong>“Coding 部分是用 AI 做,但后面大量工作还是传统的方式和传统的流程,人在大量地介入”</strong></li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游基于--来自">上游(基于 / 来自)</h3>
+<ul>
+  <li>字节 TRAE 工具平台 1 年实战(2025.7 → 2026.6)</li>
+  <li>AI Coding 行业从”工具试用”进入”企业落地”阶段(2026)</li>
+</ul>
+
+<h3 id="下游应用于--验证于">下游(应用于 / 验证于)</h3>
+<ul>
+  <li>[[Vibe Coding]] 的可交付性问题(本文 900 次实验补完数据)</li>
+  <li>[[从Prompt-Context到Harness-工程的三次进化与终局之战]] 的 Harness 主线(本文 Harness=基建 的视角补完)</li>
+  <li>[[0xCodez-Agent-Harness-14-Steps]] 的 Harness 14 步(本文强调”上下文工程/架构约束/团队知识/技术债”作为基建)</li>
+  <li>[[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]] 的 Spec/Spec 落地(本文”系统化 AI Development”写 Spec 之后跑全流程)</li>
+  <li>[[Anthropic万字长文三个判断和一个阳谋]] 的字节 vs Anthropic 行业判断对照</li>
+</ul>
+
+<h3 id="同级横向--并列">同级(横向 / 并列)</h3>
+<ul>
+  <li>[[面向Skills编程-淘宝企业购端到端研发提效实践]] — 阿里淘系同口径(都谈企业级 AI Coding 落地)</li>
+  <li>[[Claude-Code团队5条工作原则-Fiona-Fung分享]] — Anthropic 团队实践对照</li>
+  <li>[[54万行代码的顿悟-Markdown才是新编程方式]] — 个人/工程层范式</li>
+  <li>[[AI-Coding的顿悟时刻]] — 个人/工程层范式</li>
+</ul>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li><strong>数据可信度</strong>:6 倍 / 5 倍 / 2 倍 / 5.6 万亿 Token 等核心数字均为字节官方公开数据(2026-06-23 火山引擎 Force 大会),可信度高</li>
+  <li><strong>900 次实验</strong>未公开 3 个模型和 3 个框架的具体名单(只说”主流”),无法跨研究复现</li>
+  <li><strong>TRAE 团队 90% AI 代码 / 1.6x 吞吐</strong>是单团队数据,需注意”做 AI Coding 工具的团队本身可能用得更激进”幸存者偏差</li>
+  <li><strong>“原型驱动 + 系统化 AI Development”</strong> 的实操流程(AI 写 Spec → Browser Use 自验 → 自动提交)为现场口述,具体技术栈和工时未公开</li>
+  <li><strong>本文无代码片段、无工具截图</strong>,读者如需复现需关注 TRAE 后续公开材料</li>
+</ul>

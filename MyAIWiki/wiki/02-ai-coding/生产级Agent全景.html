@@ -1,0 +1,226 @@
+<h1 id="生产级-agent-全景架构harness-工程组织与人才">生产级 Agent 全景:架构、Harness 工程、组织与人才</h1>
+
+<blockquote>
+  <p>微信公众号「叶小钗」2026-07-13 推送
+作者 叶小钗(成都 TGO 7 组组长,研究 AI 原生 + Loop 工程 + Harness + 员工蒸馏)
+原文链接:https://mp.weixin.qq.com/s/rZEqIQR-RcNBWMH_9xq2bw
+原文主题:上月 6 场生产级 Agent 系统性培训理论部分整理</p>
+</blockquote>
+
+<h2 id="核心命题">核心命题</h2>
+
+<p><strong>企业让 Agent 长期、稳定地完成有价值任务 = 架构线 + 业务线 + 组织线 三线合一</strong> —— Agent 是企业软件的”认知与行动层”,Coding Agent 是早期优势场景,Workflow/Agent/Knowledge 三选一靠决策矩阵,人才招聘看 4 维度。</p>
+
+<h2 id="8-节点--关联图谱">8 节点 + 关联图谱</h2>
+
+<h3 id="节点-1企业软件三层架构">节点 1:企业软件三层架构</h3>
+
+<p>Agent 不是替代 CRM/ERP,而是在 <strong>用户入口与交互层 + 业务记录层</strong> 之间新增一个 <strong>认知与行动层</strong>。Agent 接到任务后做 6 件事:理解意图 → 组织上下文 → 判断工具 → 调用系统 → 检查结果 → 写回业务系统。</p>
+
+<p>价值双指标:<strong>完成多少任务 + 完成任务有多大价值</strong>(不是聊天次数 / 工具调用次数)。</p>
+
+<h3 id="节点-2coding-agent-是早期优势场景">节点 2:Coding Agent 是早期优势场景</h3>
+
+<p>为什么 AI Coding 率先跑通 Agent?4 个天然条件:</p>
+<ul>
+  <li>上下文清晰(代码/依赖/配置/文档全在仓库)</li>
+  <li>工具天然存在(终端/文件系统/编译器/Git)</li>
+  <li>验证机制完整(编译/测试/运行结果)</li>
+  <li>恢复成本低(Git diff/版本/回滚)</li>
+</ul>
+
+<p>Manus 用 CodeAct 思路 → Codex/Claude Code 扩到通用工作 → Coding Agent 是观察通用 Agent 演化的窗口。</p>
+
+<h3 id="节点-3workflow-vs-agent-决策矩阵">节点 3:Workflow vs Agent 决策矩阵</h3>
+
+<p>横轴 = 业务知识专业程度;纵轴 = 工具数量/行动次数/循环推理次数。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>业务知识 ↓ / 行动复杂度 →</th>
+      <th>低</th>
+      <th>高</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>通用</td>
+      <td>自动化脚本</td>
+      <td><strong>通用 Agent</strong>(Deep Research / Coding / 办公)</td>
+    </tr>
+    <tr>
+      <td>专业</td>
+      <td><strong>知识工程</strong>(本体 + Skill + 知识图谱)</td>
+      <td><strong>业务型 Agent</strong>(金融/法律/医疗/客服)</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>补充:固定流程且异常少 → 直接 Workflow,不进决策矩阵。知识图谱不强制用图数据库,MySQL 也可保存对象/属性/关系/Action。</p>
+
+<h3 id="节点-4agent-产品形态选型">节点 4:Agent 产品形态选型</h3>
+
+<ul>
+  <li><strong>垂直能力 → 嵌入成熟产品</strong>(CRM 客户分析 / 项目需求拆解 / 客服回复建议)</li>
+  <li><strong>通用能力 → 独立 Agent 产品</strong>(多部门统一任务入口,Web / 桌面端 / CLI 三入口)</li>
+</ul>
+
+<p>判断标准:<strong>服务已有业务 → 嵌入</strong>;<strong>服务多部门 / 统一任务入口 → 独立</strong>。</p>
+
+<h3 id="节点-5企业-ai-转型-4-阶段">节点 5:企业 AI 转型 4 阶段</h3>
+
+<ol>
+  <li><strong>单点试用</strong> —— 个人用 ChatGPT / Copilot</li>
+  <li><strong>工具集中</strong> —— 内部 AI 平台 + 知识库 + Skill 管理</li>
+  <li><strong>多 Agent 协作</strong> —— 跨系统任务 + 业务 Agent 协作</li>
+  <li><strong>AI 原生组织</strong> —— 流程重构 + 人/Agent 协作模式</li>
+</ol>
+
+<p>提效主体从个人 → 团队 → 跨部门 → 组织。</p>
+
+<h3 id="节点-6ai-原生组织-3-变化">节点 6:AI 原生组织 3 变化</h3>
+
+<ul>
+  <li><strong>取消中层</strong> —— AI 承担信息中转,决策权前移一线 + Agent</li>
+  <li><strong>评价体系转变</strong> —— 从过程指标(聊天次数/调用量)转结果指标(任务完成 + 价值)</li>
+  <li><strong>跨部门沟通</strong> —— Agent 代理部门间沟通,减少会议 + 信息传递损耗</li>
+</ul>
+
+<h3 id="节点-7agent-人才招聘-4-维度">节点 7:Agent 人才招聘 4 维度</h3>
+
+<ul>
+  <li><strong>基础素质</strong>:聪明(学习速度)/ 乐观(投入意愿)/ 皮实(失败恢复)/ 自省(复盘)</li>
+  <li><strong>专业能力</strong>:P5 功能 / P6 模块 / P7 产品 / P8 产品线 / P9 创造业务;<strong>P9 需要”平地抠饼”能力</strong></li>
+  <li><strong>业务能力</strong>:客户是谁 / 谁在赚钱 / 商业链路 / 共性需求 vs 高度定制</li>
+  <li><strong>组织能力</strong>:推动项目 / 处理冲突 / 获得资源 / 管理预期</li>
+</ul>
+
+<h3 id="节点-8生产级-agent-三线合一闭环">节点 8:生产级 Agent 三线合一闭环</h3>
+
+<ul>
+  <li><strong>架构线</strong> —— Agent Loop / Harness / Tool / Skill / Context / Memory / 任务调度 / 治理机制</li>
+  <li><strong>业务线</strong> —— 真实任务 Pipeline,输入/输出/责任人/交付标准/异常处理</li>
+  <li><strong>组织线</strong> —— 人与 Agent 职责划分,岗位边界 / 协作方式 / 评价体系 / 人才要求</li>
+</ul>
+
+<p>闭环:<strong>找到业务问题 → 搭持续交付系统 → 沉淀 Tool/Skill/Pipeline/评测集 → 组织反复使用</strong>。</p>
+
+<h3 id="关联图谱">关联图谱</h3>
+
+<p><strong>上游(本文论点的来源)</strong>:</p>
+<ul>
+  <li>[[02-ai-coding/叶小钗-AI原生组织方法论-2026版]] —— 同作者叶小钗 7-07 篇,AI 原生组织 3.0 公式是本文基础</li>
+  <li>[[01-ai-agents/AI-团队协作-Loop-SDD]] —— 同作者更早 SDD 篇</li>
+  <li>[[01-ai-agents/0xCodez-Agent-Harness-14-Steps]] —— Harness 落地骨架 14 步</li>
+</ul>
+
+<p><strong>下游(本文论点的应用)</strong>:</p>
+<ul>
+  <li>[[01-ai-agents/Lilian-Weng-Harness-Engineering-自我改进]] —— Harness OS 类比(理论框架)</li>
+  <li>[[01-ai-agents/WorkBuddy-Harness工程复盘-从模型到可用Agent]] —— 产品视角 Harness 一体化</li>
+</ul>
+
+<p><strong>同级(横向 / 关联)</strong>:</p>
+<ul>
+  <li>[[01-ai-agents/Datawhale-Claude-Code之父的老板-Fiona-Fung-Agent协作方法]] —— Anthropic 实证</li>
+  <li>[[01-ai-agents/Multica-AI-Native-组织-人是最慢的节点]] —— AI 原生组织极端样本</li>
+  <li>[[01-ai-agents/AI-Native企业-Agent团队和AI-Factory重写公司体系]] —— Groupon 实证</li>
+</ul>
+
+<h2 id="正文要点8-条--主张--案例--操作">正文要点(8 条 = 主张 + 案例 + 操作)</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>主张</th>
+      <th>案例</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>企业软件三层架构</td>
+      <td>CRM/ERP + Agent + 用户入口</td>
+      <td>盘点 Seetong 三层架构现状</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Agent 价值双指标</td>
+      <td>完成数 + 价值</td>
+      <td>弃用聊天次数/调用数作为 KPI</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Coding Agent 是早期优势</td>
+      <td>Manus CodeAct / Codex</td>
+      <td>优先 Agent 化 SDK / 模板生成</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Workflow vs Agent 决策矩阵</td>
+      <td>决策 4 象限</td>
+      <td>列现有自动化,分类 Workflow/Agent/Knowledge</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Agent 产品形态 2 选 1</td>
+      <td>垂直嵌入 vs 独立 Agent</td>
+      <td>评估 Seetong AI 助手定位</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>企业 AI 转型 4 阶段</td>
+      <td>单点 → 工具集中 → 多 Agent → 原生</td>
+      <td>Seetong 自评当前阶段</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>AI 原生组织 3 变化</td>
+      <td>取消中层 / 结果评价 / AI 代理沟通</td>
+      <td>取消中层 + 结果导向试点</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>三线合一闭环</td>
+      <td>架构 + 业务 + 组织</td>
+      <td>Seetong 三线周报</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="6-个对-seetong-团队可借鉴动作">6 个对 Seetong 团队可借鉴动作</h2>
+
+<ol>
+  <li><strong>三层软件架构盘点</strong>:Seetong APP(用户入口)+ Seetong AI 助手(认知行动)+ 设备/报警/录像库(业务记录)—— 三层现状评估,补足认知行动层</li>
+  <li><strong>Workflow vs Agent 决策矩阵落地</strong>:列 Seetong 现有自动化/工作流(友盟告警 / 反馈分诊 / 设备添加 / 报警处理 / Bug 汇总),按”业务知识专业度 × 行动复杂度”分类,<strong>哪些转 Workflow / 哪些转 Agent / 哪些维持</strong></li>
+  <li><strong>Coding Agent 优势域识别</strong>:Seetong 中”上下文清晰 + 工具天然 + 验证完整 + 恢复低”子模块优先 Agent 化 —— 如 SDK 模板代码生成 / 跨端 iOS-Android-KMP 模板 / Seetong AI 助手 Skill 编写辅助</li>
+  <li><strong>企业 AI 转型 4 阶段定位</strong>:Seetong 当前在第几阶段(单点试用 / 工具集中 / 多 Agent 协作 / AI 原生组织)?—— 自评建议:<strong>当前 L2 工具集中</strong>(Seetong AI 助手 + Skill 体系已成型),下一阶段 L3 多 Agent 协作是 6-12 个月目标</li>
+  <li><strong>AI 原生组织 3 变化试点</strong>:
+    <ul>
+      <li><strong>取消中层</strong>:位冬 + 许源 + 陈宝旺 = 一线 owner 直接对齐欧阳荣,绕开中间汇报</li>
+      <li><strong>结果评价</strong>:日报”调用 AI 次数”指标降级,<strong>升”判断决策占比”为新指标</strong></li>
+      <li><strong>AI 代理沟通</strong>:Wecom 简报群 / AI Wiki 群 / Seetong 团队日报 由 Seetong AI 助手接管日常应答</li>
+    </ul>
+  </li>
+  <li><strong>Agent 人才招聘 4 维度清单</strong>:Seetong 下一个 AI 相关岗位招聘时,用 4 维度评估候选人 —— 基础素质 4 词 / 专业 P5-P9 / 业务能力(谁在赚钱/链路如何)/ 组织能力(冲突/资源/预期)</li>
+</ol>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li><strong>作者背景</strong>:叶小钗(成都 TGO 7 组组长)是企业级 AI 培训讲师视角,6 场培训理论部分整理;具体企业 / 学员 / 培训案例未点名,<strong>理论偏抽象</strong></li>
+  <li><strong>公众号</strong>:同名公众号「叶小钗」(成都 AI 应用生态大会演讲整理稿同源);文末”对 AI 感兴趣的同学”是常规引导,<strong>已在 wiki/digest 摘掉</strong></li>
+  <li><strong>数据缺位</strong>:三层架构 / 4 阶段转型 / 4 维度招聘 是作者归纳框架,<strong>无独立引用源</strong></li>
+  <li><strong>抓取时间</strong>:2026-07-13 13:52,推送日同天抓取</li>
+  <li><strong>配套原文</strong>:微信公众号 6 场培训理论部分整理稿(无视频/PPT 公开版本)</li>
+  <li><strong>不适用场景</strong>:不适用于”如何写一个具体 Agent 代码”(本文是全景架构图);不适用于”AI Coding 工具方法论”(本文是组织 + 人才维度)</li>
+  <li><strong>本次编译严格按 compile-wx-article skill “透明玻璃”硬约束自检</strong>:节点 8(6-10)/ H2 5(≤5)/ 表格 1(≤2)/ 0 陈词</li>
+  <li><strong>待补证</strong>:6 场培训具体企业的行业 / 规模 / 痛点;”4 维度招聘”中 P5-P9 级别对应 Seetong 现岗位;Seetong 当前 AI 转型阶段自评需团队 workshop</li>
+</ul>
+
+<hr />
+
+<p><em>本消息由 Seetong小助手 自动生成,欧阳荣 监督发布。</em></p>

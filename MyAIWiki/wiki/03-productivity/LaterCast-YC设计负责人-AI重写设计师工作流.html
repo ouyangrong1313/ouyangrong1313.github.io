@@ -1,0 +1,115 @@
+<h1 id="yc-设计负责人ai-正在重写设计师的工作流">YC 设计负责人：AI 正在重写设计师的工作流</h1>
+
+<ul>
+  <li>原文链接：https://mp.weixin.qq.com/s/AoSfMdoczU1Fsa1XTczNHg</li>
+  <li>中文来源：微信公众号「晚点再听LaterCast」</li>
+  <li>一手来源：Y Combinator Design Review《YC’s Head of Design Shows You How To Design With AI》</li>
+  <li>核心人物：E Bufar（Y Combinator 设计负责人）</li>
+  <li>发布时间：2026-07-15</li>
+  <li>获取时间：2026-07-16 15:29 Asia/Shanghai</li>
+</ul>
+
+<h2 id="核心结论">核心结论</h2>
+
+<blockquote>
+  <p>设计师的工作流正在从“熟练操作工具”转向“把意图说清楚、把上下文准备好、再为自己造出一组随时可以丢弃的工具”——AI 不是替代设计判断，而是把第一次尝试的成本压低，让判断、取舍和想象力更早发生。</p>
+</blockquote>
+
+<p><strong>分类理由</strong>：本文是“设计工作流 / PM-设计-工程协作 / 上下文工程 / 工具自造 / 品牌代码化”方法论，核心是工作姿势变化而非宏观行业趋势。放 <code class="language-plaintext highlighter-rouge">03-productivity</code> 比 <code class="language-plaintext highlighter-rouge">06-ai-tech</code> 更贴切，与 [[03-productivity/与AI一起做产品的六条原则]]、[[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]] 同主线，补完现有 <code class="language-plaintext highlighter-rouge">03-productivity</code> 主线偏“AI 时代产品决策 / 角色重塑”维度里缺位的“设计师工作流如何被 AI 改写”视角。</p>
+
+<h2 id="知识节点8-个独立概念">知识节点（8 个独立概念）</h2>
+
+<ul>
+  <li><strong>语音外化意图</strong>：设计师不再先打字或拖拽，而是先把连续意图说出来，让 Agent 落实成页面和交互。</li>
+  <li><strong>Paxel 工作流观察</strong>：通过读取 Claude、Codex、Cursor 的编码记录，把个人使用习惯变成可回看的回顾卡片。</li>
+  <li><strong>human vs machine 双界面</strong>：同一产品要同时服务人和 Agent；对人给视觉节奏，对 Agent 给可读内容和安全提示。</li>
+  <li><strong>disposable design</strong>：为了探索局部问题，临时造一个只服务自己的工具，任务完成后就丢掉。</li>
+  <li><strong>soul.md 长期记忆</strong>：项目背景、讨论、manifesto、偏好、后续决策沉成长期上下文，成为 Agent 真正理解项目气质的入口。</li>
+  <li><strong>16 版本探索</strong>：AI 把第一次尝试成本压低后，设计师把时间转向比较、筛选和组合，而非从零手工做第一稿。</li>
+  <li><strong>边界与手工保留</strong>：AI 参与越深，越需要有人决定哪些部分必须保留手工打磨与慢工时间。</li>
+  <li><strong>品牌代码反馈回路</strong>：品牌资产一旦进入代码，就具备可复用、可调参、可持续扩展的结构。</li>
+</ul>
+
+<h2 id="关联图谱">关联图谱</h2>
+
+<h3 id="上游">上游</h3>
+<ul>
+  <li>[[03-productivity/与AI一起做产品的六条原则]]（同为 AI 时代产品 / 设计工作方式变迁）</li>
+  <li>[[03-productivity/WonderLearner-Alice-Claude-Code之父的新洞察-揭示AI对团队岗位的真正冲击]]（角色与分工变化的同级补充）</li>
+</ul>
+
+<h3 id="下游">下游</h3>
+<ul>
+  <li>Seetong 的 PM / 设计 / 工程协作方式重写</li>
+  <li>项目长期记忆文件（<code class="language-plaintext highlighter-rouge">soul.md</code> / <code class="language-plaintext highlighter-rouge">design.md</code> / <code class="language-plaintext highlighter-rouge">content.md</code>）实践</li>
+  <li>human / machine 双界面设计</li>
+</ul>
+
+<h3 id="同级">同级</h3>
+<ul>
+  <li>[[06-ai-tech/用AI解决真正的业务问题]]（为问题找 AI，不为 AI 找问题）</li>
+  <li>[[06-ai-tech/OpenAI-AI原生组织-4条工作原则]]（把意图和上下文说清楚，对应组织侧“Update quickly / Find a way”）</li>
+</ul>
+
+<h2 id="正文要点与-seetong-借鉴动作合并表">正文要点与 Seetong 借鉴动作（合并表）</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>段落</th>
+      <th>关键观察</th>
+      <th>Seetong 借鉴动作</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>设计师先把键盘放下</strong></td>
+      <td>思考速度比打字快，设计师先用语音外化意图，再让 Agent 拆解执行；判断更早发生在成品出现之前</td>
+      <td><strong>语音→原型试点</strong>：选 1 个低风险页面，让 PM/设计直接说出意图，由 Agent 先生成可视化草稿</td>
+    </tr>
+    <tr>
+      <td><strong>Paxel 把编码过程变成可观察数据</strong></td>
+      <td>经验从模糊感觉变成可讨论模式；个人工作记录可回放、可比较、可复盘</td>
+      <td><strong>工作流回放</strong>：把 Seetong AI 助手 / Codex / Claude Code 的使用习惯做成小型 Wrapped，复盘谁最有效、什么时段最差</td>
+    </tr>
+    <tr>
+      <td><strong>同一套网站为人和机器各做一份</strong></td>
+      <td>面向 Agent 的界面，核心不是视觉而是准确内容、上下文和安全提示</td>
+      <td><strong>双界面思维</strong>：对后台配置页、日志页、知识页考虑 human / machine 两个入口，给 Agent 提供轻量读取版本</td>
+    </tr>
+    <tr>
+      <td><strong>一切可改，设计师就开始造自己的工具</strong></td>
+      <td>真正的新肌肉不是会不会用某个工具，而是能否在局部不对时立刻做一个 disposable 工具来调</td>
+      <td><strong>先造再决定</strong>：把最痛的局部问题先做成 disposable 工具，用 1 周验证值不值得产品化</td>
+    </tr>
+    <tr>
+      <td><strong>上下文越完整，Agent 越像合作者</strong></td>
+      <td><code class="language-plaintext highlighter-rouge">soul.md</code> 把背景、讨论、manifesto、设计偏好沉成长期记忆；上下文越完整，输出越贴近项目气质</td>
+      <td><strong>项目长期记忆文件</strong>：给 Seetong 重点项目补 <code class="language-plaintext highlighter-rouge">soul.md</code> / <code class="language-plaintext highlighter-rouge">design.md</code> / <code class="language-plaintext highlighter-rouge">content.md</code> 分层上下文</td>
+    </tr>
+    <tr>
+      <td><strong>16 个版本的价值在于快速排除</strong></td>
+      <td>AI 让多方向并行探索成为低成本动作，设计师时间转向筛选、组合和保留</td>
+      <td><strong>批量探索而非一稿定型</strong>：关键界面先让 Agent 出 8-16 个方向，再做选择，不要过早押注单一路线</td>
+    </tr>
+    <tr>
+      <td><strong>AI 参与越深，人的取舍越重要</strong></td>
+      <td>有些部分必须保留手工打磨；越容易生成，越需要人为项目设边界</td>
+      <td><strong>边界清单</strong>：每个项目明确哪些部分允许 AI 快速探索，哪些部分必须由人慢工打磨</td>
+    </tr>
+    <tr>
+      <td><strong>品牌进入代码反馈回路</strong></td>
+      <td>品牌资产一旦代码化，就获得可复用、可调参、可持续扩展的结构</td>
+      <td><strong>品牌代码化试点</strong>：把 Seetong 的一套活动页 / 视觉模板做成参数化系统，而不是每次重做</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="备注与限制">备注与限制</h2>
+
+<ul>
+  <li>原文是 LaterCast 对 Y Combinator Design Review 的中文整理，不是逐字 transcript。</li>
+  <li>文中的 Conductor、Paper.design、Aqua、Paxel、Sodazine、Startup School 是 E Bufar 实战里的具体工具 / 项目，不是抽象概念。</li>
+  <li>LaterCast 的价值不在逐字转写，而在于把这几个案例串成“设计工作流正在被重写”的方法论主线。</li>
+  <li>待补证：Conductor / Paper.design / Aqua 的具体产品边界与官网说明，本次未独立交叉；Paxel 的 single-player → multi-player 演进仍是项目早期判断，不是已验证产品路线。</li>
+</ul>

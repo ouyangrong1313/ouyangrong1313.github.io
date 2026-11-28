@@ -1,0 +1,85 @@
+<!--
+  童年跳房子大挑战 - 规则页
+  pages/rules/rules.wxml
+-->
+<view class="container">
+  <!-- 返回按钮 -->
+  <view class="header">
+    <button class="btn-back" bindtap="goBack">
+      <text>← 返回</text>
+    </button>
+    <text class="page-title">游戏规则</text>
+    <view class="placeholder"></view>
+  </view>
+
+  <!-- 规则卡片 -->
+  <view class="rules-card">
+    <!-- 基本规则 -->
+    <view class="rule-section">
+      <view class="rule-icon">🎮</view>
+      <view class="rule-title">游戏玩法</view>
+      <view class="rule-content">
+        <text decode="{{true}}">点击屏幕任意位置跳跃，\n用手指点击下方的格子来移动位置。\n60秒内尽可能多得分！</text>
+      </view>
+    </view>
+
+    <!-- 计分规则 -->
+    <view class="rule-section">
+      <view class="rule-icon">⭐</view>
+      <view class="rule-title">计分规则</view>
+      <view class="rule-content">
+        <view class="score-rule">
+          <text class="rule-item">✓ 踩中格子：+10分</text>
+          <text class="rule-item">✓ 连续踩中：最高+5分奖励</text>
+          <text class="rule-item">✗ 踩空格子：-5分</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 跳房子格子 -->
+    <view class="rule-section">
+      <view class="rule-icon">🏠</view>
+      <view class="rule-title">跳房子图示</view>
+      <view class="hopscotch-demo">
+        <view class="demo-row">
+          <view class="demo-tile tile-1">1</view>
+          <view class="demo-tile tile-2">2</view>
+        </view>
+        <view class="demo-row">
+          <view class="demo-tile tile-3">3</view>
+          <view class="demo-tile tile-4">4</view>
+        </view>
+        <view class="demo-row">
+          <view class="demo-tile tile-5">5</view>
+          <view class="demo-tile tile-6">6</view>
+        </view>
+        <view class="demo-row single">
+          <view class="demo-tile tile-7">7</view>
+        </view>
+      </view>
+    </view>
+
+    <!-- PK规则 -->
+    <view class="rule-section">
+      <view class="rule-icon">👥</view>
+      <view class="rule-title">好友PK</view>
+      <view class="rule-content">
+        <text decode="{{true}}">分享你的成绩给好友，\n邀请他们来挑战你的分数！\n超过好友即可获胜！</text>
+      </view>
+    </view>
+
+    <!-- 温馨提示 -->
+    <view class="rule-section tips">
+      <view class="rule-icon">💡</view>
+      <view class="rule-title">小贴士</view>
+      <view class="rule-content">
+        <text decode="{{true}}">• 集中注意力，看准再跳\n• 连续踩中得分更高哦\n• 踩空了也别慌，稳住心态</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 开始按钮 -->
+  <button class="btn-start-game" bindtap="startGame">
+    <text>我已知晓，开始游戏</text>
+  </button>
+</view>

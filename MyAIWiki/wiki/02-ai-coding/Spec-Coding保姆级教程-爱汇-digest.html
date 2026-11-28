@@ -1,0 +1,103 @@
+<h1 id="spec-coding-保姆级教程---digest">Spec Coding 保姆级教程 - Digest</h1>
+
+<h2 id="一句话总结">一句话总结</h2>
+
+<p>Spec-Kit 把”规格”升级为可执行指令（constitution → specify → clarify → plan → tasks → implement 六步流水线），让通用 AI 助手从”打字员”变按图施工的”靠谱工程师”，终结 Vibe Coding 反复拉扯。</p>
+
+<h2 id="节点速查--关键数字">节点速查 + 关键数字</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>节点</th>
+      <th>一句话</th>
+      <th>关键数字</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Spec-Kit</td>
+      <td>GitHub 开源 AI 编程工作流框架（34k+ Star）</td>
+      <td>上线几个月狂揽 34k+ Star</td>
+    </tr>
+    <tr>
+      <td>SDD</td>
+      <td>规格驱动开发，规格成为唯一真理</td>
+      <td>颠覆”代码为王”的传统开发</td>
+    </tr>
+    <tr>
+      <td>Vibe-Coding</td>
+      <td>感觉式编程，无规格反复试错</td>
+      <td>项目一复杂就崩</td>
+    </tr>
+    <tr>
+      <td>六步流水线</td>
+      <td>constitution→specify→clarify→plan→tasks→implement</td>
+      <td>6 命令（5 必选 + 1 可选）</td>
+    </tr>
+    <tr>
+      <td>/constitution</td>
+      <td>写入技术栈/风格/测试等约束</td>
+      <td>项目宪法，所有 AI 调用受限</td>
+    </tr>
+    <tr>
+      <td>/specify</td>
+      <td>转自然语言需求为结构化 spec.md</td>
+      <td>自动建版本目录 + git 分支</td>
+    </tr>
+    <tr>
+      <td>/clarify</td>
+      <td>AI 主动反问消除模糊（可选）</td>
+      <td>反向环节最被低估</td>
+    </tr>
+    <tr>
+      <td>/plan</td>
+      <td>生成 plan.md + data-model.md + contracts/ + research.md</td>
+      <td>4 个产物文件</td>
+    </tr>
+    <tr>
+      <td>/tasks</td>
+      <td>拆解为可勾选任务清单</td>
+      <td>支持 YOLO 或单任务 review</td>
+    </tr>
+    <tr>
+      <td>/implement</td>
+      <td>按 tasks.md 严格施工</td>
+      <td>支持 Claude Code/Copilot/Gemini/通义千问等</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="关键金句与反直觉">关键金句与反直觉</h2>
+
+<ul>
+  <li><strong>“Vibe Coding 已死，Spec Coding 当立！”</strong>（文章终结论断）</li>
+  <li><strong>“代码为规格服务，而不是规格为代码服务”</strong>（SDD 根本翻转）</li>
+  <li><strong>“规格不再是写完就扔的静态文档，而是可以被执行、被验证的’源代码’“</strong></li>
+  <li><strong><code class="language-plaintext highlighter-rouge">/constitution</code> 是被低估的杠杆</strong>：团队 3 年沉淀的代码风格/架构约定可一次性写入宪法</li>
+  <li><strong>“从打字员变成能够理解意图、参与设计的工程师伙伴”</strong>（AI 协作范式）</li>
+  <li><strong>反直觉 1</strong>：Spec-Kit 不是新 AI 工具而是 harness —— 不替代 Claude Code，是给它加工作流约束；换 AI 厂商不用换工作流</li>
+  <li><strong>反直觉 2</strong>：<code class="language-plaintext highlighter-rouge">/clarify</code> 比 <code class="language-plaintext highlighter-rouge">/specify</code> 更影响产出 —— 跳过消歧看似省时间，实际在 plan/tasks 阶段带来指数级返工</li>
+</ul>
+
+<h2 id="seetong-借鉴动作">Seetong 借鉴动作</h2>
+
+<ul>
+  <li><strong>iOS 端沉淀</strong> <code class="language-plaintext highlighter-rouge">constitution.md</code>：把 QMUI 强制用法 + ST 类前缀 + ViewController 命名约定 + ARC/MRC 边界一次性写入，让 Claude Code 改 Seetong 代码自动遵守</li>
+  <li><strong>Android 端试点</strong> <code class="language-plaintext highlighter-rouge">specify init .</code>：挑非核心功能（如告警规则 UI）跑完整流水线，验证老项目渐进集成可行性</li>
+  <li><strong>Bug 模板升级</strong>：把 <code class="language-plaintext highlighter-rouge">/tasks</code> 思想套到 issue 模板，强制按”复现→根因→验证→影响”4 段拆</li>
+  <li><strong>三端 + 2 SDK 共享宪法</strong>：iOS/Android/SDK + C/C++ 共用一份宪法，把约定变可复用资产</li>
+</ul>
+
+<h2 id="强关联--备注">强关联 + 备注</h2>
+
+<ul>
+  <li><strong>横评</strong> → [[AI编程三剑客-SpecKit-OpenSpec-Superpowers深度对比]]：Spec-Kit vs OpenSpec vs Superpowers</li>
+  <li><strong>企业落地</strong> → [[AI原生研发落地实践-Spec-Kit和BMAD跑了一遍SDD]]：Spec-Kit vs BMAD</li>
+  <li><strong>范式表达</strong> → [[Anthropic发布AI-Native软件开发流程-时代变了-该换套模式了]]：提交产物版本化</li>
+  <li><strong>互补视角</strong> → [[大淘宝技术-AI-Coding-环境与验证驱动]]：Spec 定”做什么”，环境/验证定”做得对不对”</li>
+  <li><strong>方法论上游</strong> → [[AICoding之后-如何让Agent进入企业研发全链路-得物推荐的Harness实践]]：Harness 把 SDD 接入 PDCA</li>
+  <li><strong>备注</strong>：工具入门教程未深入<strong>评估指标</strong>（任务完成度、宪法遵守率）；与同类横评<strong>未独立验证</strong>，建议交叉参考</li>
+</ul>
+
+<p><strong>透明玻璃自检</strong>：wiki 7.3K(≤8K)/ digest 3.8K(≤4K)/ 节点 10(6-10)/ H2 5 wiki / H2 5 digest(≤5)/ 表格 1 wiki / 表格 1 digest(≤2)/ 0 陈词 ⭐⭐⭐</p>
